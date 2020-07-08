@@ -22,7 +22,7 @@
     "underscore": "^1.10.2",
     "express-session": "^1.17.1",
     "memorystore": "^1.6.2",
-    "tumblr.js": "^2.0.0",
+    "tumblr.js": "^1.1.1",
     "grant-express": "^4.7.0",
     "tracery-grammar": "^2.7.4",
     "chart.js": "^2.9.3",
@@ -33,7 +33,10 @@
     "bufferutil": "^4.0.1",
     "utf-8-validate": "^5.0.2",
     "body-parser": "^1.19.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "dotenv": "^8.2.0",
+    "base64-stream": "^1.0.0",
+    "concat-stream": "^2.0.0"
   },
   "engines": {
     "node": "13.x"

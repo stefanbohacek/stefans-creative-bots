@@ -22,15 +22,15 @@ const bots = [
   {
     script: '/bots/raindotgifbot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
+  },
+  {
+    script: '/bots/helloworld__bot.js',
+    interval: cronSchedules.EVERY_SIX_HOURS
   }
 ];
 
-let nycviewsbot = require( __dirname + '/bots/nycviewsbot.js' );
-
 let listener = app.listen( process.env.PORT, function(){
   if ( bots && bots.length > 0 ){
-    console.log( `🤖 your bot${ bots.length === 1 ? ' is' : 's are' } running on port ${ listener.address().port }` );
-
     bots.forEach( function( bot ){
       let botInterval;
 
@@ -48,6 +48,7 @@ let listener = app.listen( process.env.PORT, function(){
       } ) ).start();
     } );
 
+    console.log( `🤖 your bot${ bots.length === 1 ? ' is' : 's are' } running on port ${ listener.address().port }` );
   } else {
     console.log( '🚫 no bots to schedule' );
   }

@@ -1,5 +1,6 @@
 const fs = require( 'fs' ),
       path = require( 'path' ),
+      fetch = require('node-fetch'),
       request = require( 'request' ),
       exec  = require( 'child_process' );
 
@@ -57,7 +58,7 @@ module.exports = {
                 image_url = img_data.url;
   
             if ( image_url && deleted_images.indexOf( img_data.uuid ) === -1 && helpers.extensionCheck( image_url ) ){
-              let file_name = helpers.getFilenameFromUrl( image_url ).split( '%2F' )[1];
+              let file_name = helpers.getFilenameFromURL( image_url ).split( '%2F' )[1];
               console.log( `- ${file_name}` );
               img_urls.push( image_url );
             }
@@ -74,7 +75,7 @@ module.exports = {
         extensions = ['.png', '.jpg', '.jpeg', '.gif'];
     return extensions.indexOf( file_extension ) !== -1;
   },
-  getFilenameFromUrl: function( url ) {
+  getFilenameFromURL: function( url ) {
     return url.substring( url.lastIndexOf( '/' ) + 1 );
   },
   loadImage: function( url, cb ) {
@@ -108,10 +109,24 @@ module.exports = {
       exec.exec( 'refresh' );
     } );
   },
-  downloadFile: function( uri, filename, cb ){
-    request.head( uri, function( err, res, body ){
-      request( uri ).pipe( fs.createWriteStream( filename ) ).on( 'close', cb );
-    } );
+  downloadFile: function( uri, cb ){
+    // request.head( uri, function( err, res, body ){
+    //   request( uri ).pipe( fs.createWriteStream( filename ) ).on( 'close', cb );
+    // } );
+    
+    try {
+        fetch( uri )
+            .then( res => res.buffer() )
+            .then( buffer => {
+              console.log( buffer )
+              if ( cb ){
+                cb( null, buffer );
+              }
+        } );
+    } catch ( err ) {
+        console.log( err );
+    }
+
   },
   removeFile: function( filePath ){
     setTimeout( function(){

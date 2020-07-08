@@ -14,8 +14,8 @@ const twitter = new TwitterClient( {
 } );
 
 const mastodon = new mastodonClient( {
-   access_token: process.env.RAINDOTGIFBOT_MASTODON_ACCESS_TOKEN,
-   api_url: process.env.RAINDOTGIFBOT_MASTODON_API
+  access_token: process.env.RAINDOTGIFBOT_MASTODON_ACCESS_TOKEN,
+  api_url: process.env.RAINDOTGIFBOT_MASTODON_API
 } );
 
 const tumblr = new tumblrClient( {

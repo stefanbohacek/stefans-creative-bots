@@ -29,11 +29,13 @@ class TwitterClient {
         } );
       }
   }
-  postImage( text, image_base64, cb ){
+  postImage( text, imageBase64, cb, inReplyToID ){
+    console.log( 'postImage inReplyToID', inReplyToID );
+    
     if ( this.client ){
       let client = this.client;
       
-      this.client.post( 'media/upload', { media_data: image_base64 }, function ( err, data, response ) {
+      this.client.post( 'media/upload', { media_data: imageBase64 }, function ( err, data, response ) {
         if ( err ){
           console.log( 'error:\n', err );
           if ( cb ){
@@ -42,11 +44,17 @@ class TwitterClient {
         }
         else{
           console.log( 'tweeting the image...' );
-          client.post( 'statuses/update', {
+
+          let tweetObj = {
             status: text,
             media_ids: new Array( data.media_id_string )
-          },
-          function( err, data, response ) {
+          };
+
+          if ( inReplyToID ){
+            tweetObj.in_reply_to_status_id = inReplyToID;
+          }
+
+          client.post( 'statuses/update', tweetObj, function( err, data, response ) {
             if ( data && data.id_str && data.user && data.user.screen_name ){
               console.log( 'tweeted', `https://twitter.com/${ data.user.screen_name }/status/${ data.id_str }` );
             }
@@ -61,11 +69,11 @@ class TwitterClient {
       } ); 
     }
   }
-  updateProfileImage( image_base64, cb ){
+  updateProfileImage( imageBase64, cb ){
     if ( this.client ){
       console.log( 'updating profile image...' );
       this.client.post( 'account/update_profile_image', {
-        image: image_base64
+        image: imageBase64
       }, function( err, data, response ) {
         if ( err ){
           console.log( 'Twitter API error', err );

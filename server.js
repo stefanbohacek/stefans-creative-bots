@@ -26,29 +26,43 @@ const bots = [
   {
     script: '/bots/helloworld__bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
+  },
+  {
+    script: '/bots/pollockdotexe.js',
+    interval: cronSchedules.EVERY_SIX_HOURS
   }
 ];
+
+/** For testing. **/
+// const bot = require( __dirname + '/bots/pollockdotexe.js' );
+// bot();
 
 let listener = app.listen( process.env.PORT, function(){
   if ( bots && bots.length > 0 ){
     bots.forEach( function( bot ){
-      let botInterval;
+      if ( bot.interval ){
+        let botInterval;
 
-      for (const schedule in cronSchedules) {
-        if ( cronSchedules[schedule] === bot.interval ){
-          botInterval = schedule;
+        for (const schedule in cronSchedules) {
+          if ( cronSchedules[schedule] === bot.interval ){
+            botInterval = schedule;
+          }
         }
+        
+        if ( botInterval.length === 0 ){
+          botInterval = bot.interval;
+        }
+
+        console.log( `🕒 scheduling ${ bot.script }: ${ botInterval }` );
+        const script = require( __dirname + bot.script );
+
+        ( new CronJob( bot.interval, function() {
+          script();
+        } ) ).start();        
       }
-
-      console.log( `🕒 scheduling ${ bot.script }: ${ botInterval }` );
-      const script = require( __dirname + bot.script );
-
-      ( new CronJob( bot.interval, function() {
-        script();
-      } ) ).start();
     } );
 
-    console.log( `🤖 your bot${ bots.length === 1 ? ' is' : 's are' } running on port ${ listener.address().port }` );
+    console.log( `🤖 your bot${ bots.length === 1 ? ' has' : 's have' } been scheduled` );
   } else {
     console.log( '🚫 no bots to schedule' );
   }

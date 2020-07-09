@@ -6,7 +6,6 @@ const fs = require( 'fs' ),
       Canvas = require( 'canvas' ),
       GIFEncoder = require( 'gifencoder' ),
       concat = require( 'concat-stream' ),
-      { Base64Encode } = require('base64-stream'),
       helpers = require( __dirname + '/../helpers/helpers.js' );
 
 module.exports = function( options, cb ){
@@ -15,10 +14,7 @@ module.exports = function( options, cb ){
   let width = options.width || 800;
   let height = options.height || 500;
 
-  const data = [];   
   const encoder = new GIFEncoder( width, height );
-  const stream = encoder.createReadStream();
-
 
   encoder.createReadStream().pipe( concat( ( data ) => {
     if ( cb ){

@@ -71,7 +71,7 @@ class MastodonClient {
       } );
     }
   }
-  postImage( text, image_base64, cb ){
+  postImage( text, image_base64, cb, inReplyToID ){
     if ( this.client ){
       let client = this.client;
       
@@ -87,12 +87,17 @@ class MastodonClient {
           }
           else{
             console.log( 'tooting the image...' );
-            client.post( 'statuses', {
+
+            let tootObj = {
               status: text,
-              // media_ids: new Array( data.media_id_string )
               media_ids: new Array( data.id )
-            },
-            function( err, data, response ) {
+            };
+
+            if ( inReplyToID ){
+              tootObj.in_reply_to_id = inReplyToID;
+            }
+
+            client.post( 'statuses', tootObj, function( err, data, response ) {
               if ( err ){
                 console.log( 'mastodon.postImage error:', err );
               } else{

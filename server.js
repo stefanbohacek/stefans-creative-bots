@@ -30,11 +30,15 @@ const bots = [
   {
     script: '/bots/pollockdotexe.js',
     interval: cronSchedules.EVERY_SIX_HOURS
+  },
+  {
+    script: '/bots/hypno__bot.js',
+    interval: cronSchedules.EVERY_SIX_HOURS
   }
 ];
 
 /** For testing. **/
-// const bot = require( __dirname + '/bots/pollockdotexe.js' );
+// const bot = require( __dirname + '/bots/hypno__bot.js' );
 // bot();
 
 let listener = app.listen( process.env.PORT, function(){

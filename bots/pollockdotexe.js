@@ -1,5 +1,3 @@
-/* Based on glitch.com/edit/#!/generative-art-bot. */
-
 const helpers = require(__dirname + '/../helpers/helpers.js'),
       generators = {
         pollock: require(__dirname + '/../generators/pollock.js')

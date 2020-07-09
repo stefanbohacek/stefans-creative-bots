@@ -30,8 +30,6 @@ class TwitterClient {
       }
   }
   postImage( text, imageBase64, cb, inReplyToID ){
-    console.log( 'postImage inReplyToID', inReplyToID );
-    
     if ( this.client ){
       let client = this.client;
       

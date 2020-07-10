@@ -31,8 +31,8 @@ module.exports = function(){
         helloTranslations.shift(); // Remove the table header
 
         if (!err && helloTranslations && helloTranslations.length > 0 ){
-          /* For testing. */ const randomTranslation = helloTranslations[69];
-          // const randomTranslation = helpers.randomFromArray( helloTranslations );
+          // /* For testing. */ const randomTranslation = helloTranslations[69];
+          const randomTranslation = helpers.randomFromArray( helloTranslations );
 
           console.log( randomTranslation );
 

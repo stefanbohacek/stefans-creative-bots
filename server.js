@@ -1,5 +1,3 @@
-/* Setting things up. */
-
 if ( !process.env.PROJECT_NAME || !process.env.PROJECT_ID ){
   require( 'dotenv' ).config();
 }
@@ -34,11 +32,15 @@ const bots = [
   {
     script: '/bots/hypno__bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
-  }
+  },
+  {
+    script: '/bots/last100bills.js',
+    interval: cronSchedules.EVERY_DAY_MORNING
+  }  
 ];
 
 /** For testing. **/
-// const bot = require( __dirname + '/bots/hypno__bot.js' );
+// const bot = require( __dirname + '/bots/last100bills.js' );
 // bot();
 
 let listener = app.listen( process.env.PORT, function(){

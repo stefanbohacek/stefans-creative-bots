@@ -67,5 +67,6 @@ app.get( '/disconnect', function( request, res ) {
 } );
 
 app.use( express.static( 'public' ) );
+app.use( express.static( 'views' ) );
 
 module.exports = app;

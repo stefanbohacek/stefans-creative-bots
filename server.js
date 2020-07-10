@@ -36,11 +36,15 @@ const bots = [
   {
     script: '/bots/last100bills.js',
     interval: cronSchedules.EVERY_DAY_MORNING
+  },
+  {
+    script: '/bots/wyrf_bot.js',
+    interval: cronSchedules.EVERY_SIX_HOURS
   }  
 ];
 
 /** For testing. **/
-// const bot = require( __dirname + '/bots/last100bills.js' );
+// const bot = require( __dirname + '/bots/wyrf_bot.js' );
 // bot();
 
 let listener = app.listen( process.env.PORT, function(){

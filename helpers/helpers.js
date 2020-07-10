@@ -8,6 +8,14 @@ module.exports = {
   randomFromArray: function( arr ) {
     return arr[Math.floor( Math.random() * arr.length )]; 
   },
+  randomFromArrayUnique: function(arr, count) {
+    var new_arr = [];
+    for (var i = 0; i < count; i++){
+      arr.sort(function(){return Math.round(Math.random());});
+      new_arr.push(arr.pop());
+    }
+    return new_arr;
+  },  
   getRandomInt: function( min, max ) {
     return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
   },

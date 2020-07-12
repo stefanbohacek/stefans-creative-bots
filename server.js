@@ -44,8 +44,9 @@ const bots = [
 ];
 
 /** For testing. **/
-// const bot = require( __dirname + '/bots/wyrf_bot.js' );
+// const bot = require( __dirname + '/bots/last100bills.js' );
 // bot();
+
 
 let listener = app.listen( process.env.PORT, function(){
   if ( bots && bots.length > 0 ){

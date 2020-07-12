@@ -10,43 +10,86 @@ const path = require( 'path' ),
 
 const bots = [
   {
+    name: 'Views from New York',
+    description: 'Views from the great city of NYC 🗽',
+    thumbnail: 'https://botwiki.org/wp-content/uploads/2020/03/views-from-new-york-1585658499.png',
+    about_url: 'https://botwiki.org/bot/views-from-new-york/',
     script: '/bots/nycviewsbot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   {
+    name: '@southpoleviews',
+    description: 'Views from the South Pole.',
+    thumbnail: 'https://botwiki.org/wp-content/uploads/2018/08/-southpoleviews.png',
+    about_url: 'https://botwiki.org/bot/southpoleviews/',
     script: '/bots/southpoleviews.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   {
+    name: 'rain.gif',
+    description: '',
+    thumbnail: '',
+    // about_url: '',
     script: '/bots/raindotgifbot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   {
+    name: '',
+    description: '',
+    thumbnail: '',
+    about_url: '',
     script: '/bots/helloworld__bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   {
+    name: '',
+    description: '',
+    thumbnail: '',
+    about_url: '',
     script: '/bots/pollockdotexe.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   // {
-  //   script: '/bots/hypno__bot.js',
+  // name: '',
+  // description: '',
+  // thumbnail: '',
+  // preview: [
+  //   '',
+  //   ''
+  // ],
+  // about_url: '',
+  // script: '/bots/hypno__bot.js',
   //   interval: cronSchedules.EVERY_SIX_HOURS
   // },
   {
+    name: '',
+    description: '',
+    thumbnail: '',
+    about_url: '',
     script: '/bots/last100bills.js',
     interval: cronSchedules.EVERY_DAY_MORNING
   },
   {
+    name: '',
+    description: '',
+    thumbnail: '',
+    about_url: '',
     script: '/bots/wyrf_bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   }  
 ];
 
+bots.forEach( function( bot ){
+  if ( !bot.name ){
+    bot.name = bot.script.replace( '/bots/', '' ).replace( '.js', '' );
+  }
+} );
+
+app.set( 'bots', bots );
+
 /** For testing. **/
 // const bot = require( __dirname + '/bots/southpoleviews.js' );
 // bot();
-
 
 console.log( '🕒 server time: ', ( new Date() ).toTimeString() );
 

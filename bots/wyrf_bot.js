@@ -8,7 +8,7 @@ const twitter = new TwitterClient( {
   consumer_secret: process.env.WYRF_BOT_TWITTER_CONSUMER_SECRET,
   access_token: process.env.WYRF_BOT_TWITTER_ACCESS_TOKEN,
   access_token_secret: process.env.WYRF_BOT_TWITTER_ACCESS_TOKEN_SECRET
-} );
+}, true );
 
 module.exports = function(){
   const options = [],

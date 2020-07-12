@@ -29,10 +29,10 @@ const bots = [
     script: '/bots/pollockdotexe.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
-  {
-    script: '/bots/hypno__bot.js',
-    interval: cronSchedules.EVERY_SIX_HOURS
-  },
+  // {
+  //   script: '/bots/hypno__bot.js',
+  //   interval: cronSchedules.EVERY_SIX_HOURS
+  // },
   {
     script: '/bots/last100bills.js',
     interval: cronSchedules.EVERY_DAY_MORNING
@@ -47,6 +47,7 @@ const bots = [
 // const bot = require( __dirname + '/bots/last100bills.js' );
 // bot();
 
+console.log( '🕒 server time: ', ( new Date() ).toTimeString() );
 
 let listener = app.listen( process.env.PORT, function(){
   if ( bots && bots.length > 0 ){
@@ -64,7 +65,7 @@ let listener = app.listen( process.env.PORT, function(){
           botInterval = bot.interval;
         }
 
-        console.log( `🕒 scheduling ${ bot.script }: ${ botInterval }` );
+        console.log( `⌛ scheduling ${ bot.script }: ${ botInterval }` );
         const script = require( __dirname + bot.script );
 
         ( new CronJob( bot.interval, function() {

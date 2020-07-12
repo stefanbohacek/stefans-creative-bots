@@ -14,7 +14,7 @@ const bots = [
     description: 'Views from the great city of NYC 🗽',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2020/03/views-from-new-york-1585658499.png',
     about_url: 'https://botwiki.org/bot/views-from-new-york/',
-    script: '/bots/nycviewsbot.js',
+    script: 'bots/nycviewsbot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   {
@@ -22,7 +22,7 @@ const bots = [
     description: 'Views from the South Pole.',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2018/08/-southpoleviews.png',
     about_url: 'https://botwiki.org/bot/southpoleviews/',
-    script: '/bots/southpoleviews.js',
+    script: 'bots/southpoleviews.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   {
@@ -30,7 +30,7 @@ const bots = [
     description: '🌧🌧🌧',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2018/07/rain.gif.png',
     about_url: 'https://botwiki.org/bot/rain-gif/',
-    script: '/bots/raindotgifbot.js',
+    script: 'bots/raindotgifbot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   {
@@ -38,7 +38,7 @@ const bots = [
     description: 'Hello from around the world',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2019/02/hello--world-.png',
     about_url: 'https://botwiki.org/bot/hello-world/',
-    script: '/bots/helloworld__bot.js',
+    script: 'bots/helloworld__bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   {
@@ -46,7 +46,7 @@ const bots = [
     description: 'A robot painter, very Pollock-like.',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2018/06/pollock.exe.png',
     about_url: 'https://botwiki.org/bot/pollock-exe/',
-    script: '/bots/pollockdotexe.js',
+    script: 'bots/pollockdotexe.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   // {
@@ -58,7 +58,7 @@ const bots = [
   //   ''
   // ],
   // about_url: '',
-  // script: '/bots/hypno__bot.js',
+  // script: 'bots/hypno__bot.js',
   //   interval: cronSchedules.EVERY_SIX_HOURS
   // },
   {
@@ -66,7 +66,7 @@ const bots = [
     description: 'Breakdown of the last 100 bills introduced in the US government.',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2018/05/last100bills-1.png',
     about_url: 'https://botwiki.org/bot/last100bills/',
-    script: '/bots/last100bills.js',
+    script: 'bots/last100bills.js',
     interval: cronSchedules.EVERY_DAY_MORNING
   },
   {
@@ -74,14 +74,14 @@ const bots = [
     description: 'If you *had* to choose.',
     thumbnail: '',
     about_url: 'https://twitter.com/wyrf_bot',
-    script: '/bots/wyrf_bot.js',
+    script: 'bots/wyrf_bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   }  
 ];
 
 bots.forEach( function( bot ){
   if ( !bot.name ){
-    bot.name = bot.script.replace( '/bots/', '' ).replace( '.js', '' );
+    bot.name = bot.script.replace( 'bots/', '' ).replace( '.js', '' );
   }
 } );
 
@@ -110,7 +110,7 @@ let listener = app.listen( process.env.PORT, function(){
         }
 
         console.log( `⌛ scheduling ${ bot.script }: ${ botInterval }` );
-        const script = require( __dirname + bot.script );
+        const script = require( __dirname + '/' + bot.script );
 
         ( new CronJob( bot.interval, function() {
           script();

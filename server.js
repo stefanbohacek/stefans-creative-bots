@@ -27,25 +27,25 @@ const bots = [
   },
   {
     name: 'rain.gif',
-    description: '',
-    thumbnail: '',
-    // about_url: '',
+    description: '🌧🌧🌧',
+    thumbnail: 'https://botwiki.org/wp-content/uploads/2018/07/rain.gif.png',
+    about_url: 'https://botwiki.org/bot/rain-gif/',
     script: '/bots/raindotgifbot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   {
-    name: '',
-    description: '',
-    thumbnail: '',
-    about_url: '',
+    name: 'Hello, world!',
+    description: 'Hello from around the world',
+    thumbnail: 'https://botwiki.org/wp-content/uploads/2019/02/hello--world-.png',
+    about_url: 'https://botwiki.org/bot/hello-world/',
     script: '/bots/helloworld__bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
   {
-    name: '',
-    description: '',
-    thumbnail: '',
-    about_url: '',
+    name: 'pollock.exe',
+    description: 'A robot painter, very Pollock-like.',
+    thumbnail: 'https://botwiki.org/wp-content/uploads/2018/06/pollock.exe.png',
+    about_url: 'https://botwiki.org/bot/pollock-exe/',
     script: '/bots/pollockdotexe.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
@@ -62,18 +62,18 @@ const bots = [
   //   interval: cronSchedules.EVERY_SIX_HOURS
   // },
   {
-    name: '',
-    description: '',
-    thumbnail: '',
-    about_url: '',
+    name: '@last100bills',
+    description: 'Breakdown of the last 100 bills introduced in the US government.',
+    thumbnail: 'https://botwiki.org/wp-content/uploads/2018/05/last100bills-1.png',
+    about_url: 'https://botwiki.org/bot/last100bills/',
     script: '/bots/last100bills.js',
     interval: cronSchedules.EVERY_DAY_MORNING
   },
   {
-    name: '',
-    description: '',
+    name: 'Would you rather fight?',
+    description: 'If you *had* to choose.',
     thumbnail: '',
-    about_url: '',
+    about_url: 'https://twitter.com/wyrf_bot',
     script: '/bots/wyrf_bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   }  

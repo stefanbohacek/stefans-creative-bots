@@ -44,8 +44,9 @@ const bots = [
 ];
 
 /** For testing. **/
-// const bot = require( __dirname + '/bots/last100bills.js' );
+// const bot = require( __dirname + '/bots/southpoleviews.js' );
 // bot();
+
 
 console.log( '🕒 server time: ', ( new Date() ).toTimeString() );
 

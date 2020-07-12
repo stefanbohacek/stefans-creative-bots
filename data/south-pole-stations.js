@@ -23,27 +23,27 @@ module.exports = [
     {
       name: 'Casey station',
       url: 'http://www.antarctica.gov.au/webcams/casey',
-      element: '#content_div_40792 img'
+      element: '#content-close img'
     },
     {
       name: 'Davis station',
       url: 'http://www.antarctica.gov.au/webcams/davis',
-      element: '#content_div_40809 img'
+      element: '#content-close img'
     },
     {
       name: 'Macquarie Island station',
       url: 'http://www.antarctica.gov.au/webcams/macquarie-island',
-      element: '#content_div_40844 img'
+      element: '#content-close img'
     },
     {
       name: 'Mawson station',
       url: 'http://www.antarctica.gov.au/webcams/mawson',
-      element: '#content_div_40826 img'
+      element: '#content-close img'
     },
     {
       name: 'Aurora Australis icebreaker',
       url: 'http://www.antarctica.gov.au/webcams/aurora',
-      element: '#aurora'
+      element: '#content-close img'
     },
     // {
     //   name: 'Ny-Ålesund webcam',
@@ -60,11 +60,11 @@ module.exports = [
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/king-edward-point-webcam/',
       element: '.entry-content img[width="640"]'
     },
-    {
-      name: 'RRS Ernest Shackleton',
-      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-ernest-shackleton-webcam/',
-      element: '.entry-content img[width="640"]'
-    },
+    // {
+    //   name: 'RRS Ernest Shackleton',
+    //   url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-ernest-shackleton-webcam/',
+    //   element: '.entry-content img[width="640"]'
+    // },
     {
       name: 'RRS James Clark Ross',
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/',

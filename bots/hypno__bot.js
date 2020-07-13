@@ -14,8 +14,12 @@ const twitter = new TwitterClient( {
 } );
 
 module.exports = function(){
+  const color = helpers.getRandomHex();
+
   const statusText = '',
         options = {
+          color: color,
+          background: helpers.shadeColor(helpers.invertColor( color ), 0.5),
           width: 640,
           height: 480,
         };

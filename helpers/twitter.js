@@ -227,7 +227,7 @@ class TwitterClient {
     }      
   }
   
-  postPoll( statustext, entries, duration ){
+  pollLegacy( statustext, entries, duration ){
     const client = this.client;
     
     console.log( client );

@@ -49,18 +49,14 @@ const bots = [
     script: 'bots/pollockdotexe.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
-  // {
-  // name: '',
-  // description: '',
-  // thumbnail: '',
-  // preview: [
-  //   '',
-  //   ''
-  // ],
-  // about_url: '',
-  // script: 'bots/hypno__bot.js',
-  //   interval: cronSchedules.EVERY_SIX_HOURS
-  // },
+  {
+    name: '@hypno__bot',
+    description: 'Your eyelids are getting heavy...',
+    thumbnail: 'https://botwiki.org/wp-content/uploads/2018/04/hypno__bot.png',
+    about_url: 'https://botwiki.org/bot/hypno__bot/',
+    script: 'bots/hypno__bot.js',
+    interval: cronSchedules.EVERY_SIX_HOURS
+  },
   {
     name: '@last100bills',
     description: 'Breakdown of the last 100 bills introduced in the US government.',
@@ -76,7 +72,15 @@ const bots = [
     about_url: 'https://twitter.com/wyrf_bot',
     script: 'bots/wyrf_bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
-  }  
+  },
+  {
+    name: '@emoji__polls?',
+    description: 'Choose your favorite emoji!',
+    thumbnail: 'https://botwiki.org/wp-content/uploads/2018/02/emoji__polls-v3.png',
+    about_url: 'https://botwiki.org/bot/emoji__polls/',
+    script: 'bots/emoji__polls.js',
+    interval: cronSchedules.EVERY_SIX_HOURS
+  }    
 ];
 
 bots.forEach( function( bot ){
@@ -88,7 +92,7 @@ bots.forEach( function( bot ){
 app.set( 'bots', bots );
 
 /** For testing. **/
-// const bot = require( __dirname + '/bots/southpoleviews.js' );
+// const bot = require( __dirname + '/bots/emoji__polls.js' );
 // bot();
 
 console.log( '🕒 server time: ', ( new Date() ).toTimeString() );

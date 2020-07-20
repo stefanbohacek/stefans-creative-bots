@@ -93,7 +93,7 @@ app.set( 'bots', bots );
 
 /** For testing. **/
 // const bot = require( __dirname + '/bots/emoji__polls.js' );
-// bot();
+ //bot();
 
 console.log( '🕒 server time: ', ( new Date() ).toTimeString() );
 
@@ -116,9 +116,9 @@ let listener = app.listen( process.env.PORT, function(){
         console.log( `⌛ scheduling ${ bot.script }: ${ botInterval }` );
         const script = require( __dirname + '/' + bot.script );
 
-        ( new CronJob( bot.interval, function() {
-          script();
-        } ) ).start();        
+        const job = new CronJob( bot.interval, function() { script() } );
+        job.start();
+        console.log( '📅 next run:', job.nextDates().fromNow() );
       }
     } );
 

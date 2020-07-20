@@ -23,7 +23,7 @@ module.exports = function(){
 
   console.log( { tweetText, options } );
 
-  twitter.postPoll(
+  twitter.pollLegacy(
     tweetText,
     options
   ).then( function( tweet ){

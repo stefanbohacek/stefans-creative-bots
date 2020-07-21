@@ -21,9 +21,16 @@
       {{/if}}      
       <p>
         {{#if about_url}}
-          <a href="{{about_url}}" class="btn btn-dark">Learn more</a>
+          <a href="{{about_url}}" class="btn btn-dark mt-2">Learn more</a>
         {{/if}}      
-        <a href="https://glitch.com/edit/#!/{{@root.project_name}}?path={{script}}" class="btn btn-light">View source</a>
+        {{#if links}}
+          {{#each links}}
+            <a href="{{this.url}}" class="btn btn-light mt-2">{{this.title}}</a>
+          {{/each}}
+          
+        {{/if}}      
+
+        <a href="https://glitch.com/edit/#!/{{@root.project_name}}?path={{script}}" class="btn btn-light mt-2">View source</a>
       </p>
     </div>
   </div>

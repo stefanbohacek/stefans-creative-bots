@@ -5,6 +5,7 @@ if ( !process.env.PROJECT_NAME || !process.env.PROJECT_ID ){
 const path = require( 'path' ),
       express = require( 'express' ),
       app = require(__dirname + '/app.js'),
+      helpers = require(__dirname + '/helpers/helpers.js'),
       CronJob = require( 'cron' ).CronJob,
       cronSchedules = require( __dirname + '/helpers/cron-schedules.js' );
 
@@ -14,6 +15,20 @@ const bots = [
     description: 'Views from the great city of NYC 🗽',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2020/03/views-from-new-york-1585658499.png',
     about_url: 'https://botwiki.org/bot/views-from-new-york/',
+    links: [
+      {
+        title: 'Follow on Twitter',
+        url: 'https://twitter.com/nycviewsbot'
+      },
+      // {
+      //   title: 'Follow on botsin.space',
+      //   url: 'https://botsin.space/@nycviewsbot'
+      // },
+      // {
+      //   title: 'Follow on Tumblr',
+      //   url: 'https://nycviewsbot.tumblr.com/'
+      // }
+    ],
     script: 'bots/nycviewsbot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
@@ -22,6 +37,16 @@ const bots = [
     description: 'Views from the South Pole.',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2018/08/-southpoleviews.png',
     about_url: 'https://botwiki.org/bot/southpoleviews/',
+    links: [
+      {
+        title: 'Follow on Twitter',
+        url: 'https://twitter.com/southpoleviews'
+      },
+      // {
+      //   title: 'Follow on botsin.space',
+      //   url: 'https://botsin.space/@southpoleviews'
+      // }
+    ],
     script: 'bots/southpoleviews.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
@@ -30,6 +55,20 @@ const bots = [
     description: '🌧🌧🌧',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2018/07/rain.gif.png',
     about_url: 'https://botwiki.org/bot/rain-gif/',
+    links: [
+      {
+        title: 'Follow on Twitter',
+        url: 'https://twitter.com/raindotgifbot'
+      },
+      // {
+      //   title: 'Follow on botsin.space',
+      //   url: 'https://botsin.space/@rain'
+      // },
+      // {
+      //   title: 'Follow on Tumblr',
+      //   url: 'https://raindotgif.tumblr.com/'
+      // }
+    ],
     script: 'bots/raindotgifbot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
@@ -38,6 +77,16 @@ const bots = [
     description: 'Hello from around the world',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2019/02/hello--world-.png',
     about_url: 'https://botwiki.org/bot/hello-world/',
+    links: [
+      {
+        title: 'Follow on Twitter',
+        url: 'https://twitter.com/helloworld__bot'
+      },
+      // {
+      //   title: 'Follow on botsin.space',
+      //   url: 'https://botsin.space/@helloworld'
+      // }
+    ],
     script: 'bots/helloworld__bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
@@ -46,6 +95,16 @@ const bots = [
     description: 'A robot painter, very Pollock-like.',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2018/06/pollock.exe.png',
     about_url: 'https://botwiki.org/bot/pollock-exe/',
+    links: [
+      {
+        title: 'Follow on Twitter',
+        url: 'https://twitter.com/pollockdotexe'
+      },
+      // {
+      //   title: 'Follow on botsin.space',
+      //   url: 'https://botsin.space/@pollockdotexe'
+      // }
+    ],
     script: 'bots/pollockdotexe.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
@@ -54,6 +113,12 @@ const bots = [
     description: 'Your eyelids are getting heavy...',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2018/04/hypno__bot.png',
     about_url: 'https://botwiki.org/bot/hypno__bot/',
+    links: [
+      {
+        title: 'Follow on Twitter',
+        url: 'https://twitter.com/hypno__bot'
+      }
+    ],
     script: 'bots/hypno__bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
@@ -62,6 +127,12 @@ const bots = [
     description: 'Breakdown of the last 100 bills introduced in the US government.',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2018/05/last100bills-1.png',
     about_url: 'https://botwiki.org/bot/last100bills/',
+    links: [
+      {
+        title: 'Follow on Twitter',
+        url: 'https://twitter.com/last100bills'
+      }
+    ],
     script: 'bots/last100bills.js',
     interval: cronSchedules.EVERY_DAY_MORNING
   },
@@ -69,7 +140,13 @@ const bots = [
     name: 'Would you rather fight?',
     description: 'If you *had* to choose.',
     thumbnail: '',
-    about_url: 'https://twitter.com/wyrf_bot',
+    // about_url: 'https://twitter.com/wyrf_bot',
+    links: [
+      {
+        title: 'Follow on Twitter',
+        url: 'https://twitter.com/wyrf_bot'
+      }
+    ],
     script: 'bots/wyrf_bot.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   },
@@ -78,6 +155,16 @@ const bots = [
     description: 'Choose your favorite emoji!',
     thumbnail: 'https://botwiki.org/wp-content/uploads/2018/02/emoji__polls-v3.png',
     about_url: 'https://botwiki.org/bot/emoji__polls/',
+    links: [
+      {
+        title: 'Follow on Twitter',
+        url: 'https://twitter.com/emoji__polls'
+      },
+      // {
+      //   title: 'Follow on botsin.space',
+      //   url: 'https://botsin.space/@emoji__polls'
+      // }
+    ],
     script: 'bots/emoji__polls.js',
     interval: cronSchedules.EVERY_SIX_HOURS
   }    
@@ -107,8 +194,7 @@ if ( bots && bots.length > 0 ){
       if ( botInterval.length === 0 ){
         botInterval = bot.interval;
       } else {
-        botInterval = botInterval.replace( /_/g, ' ' );
-        botInterval = botInterval.charAt(0).toUpperCase() + botInterval.slice(1).toLowerCase()
+        botInterval = helpers.capitalizeFirstLetter( botInterval.replace( /_/g, ' ' ) );
       }
       
       bot.interval_human = botInterval;

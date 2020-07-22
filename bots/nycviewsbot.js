@@ -37,8 +37,8 @@ module.exports = function(){
     if ( data && data.title && data.location){
       console.log( data )
       const webcamTitle = data.title;
-      const windyWebcamUrl = `https://www.windy.com/-Webcams/United-States/Minnesota/Delhi/New-York/webcams/${data.id}`;
-      const googleMapsUrl = `https://www.google.com/maps/search/${data.location.latitude},${data.location.longitude}`;
+      const windyWebcamUrl = `📷 https://www.windy.com/-Webcams/United-States/Minnesota/Delhi/New-York/webcams/${data.id}`;
+      const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${data.location.latitude},${data.location.longitude}`;
 
       let text = `${webcamTitle}\n${windyWebcamUrl}\n${googleMapsUrl}`;
 

@@ -1,4 +1,5 @@
 const helpers = require(__dirname + '/../helpers/helpers.js'),
+      cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
       generators = {
         pollock: require(__dirname + '/../generators/pollock.js')
       },    
@@ -18,24 +19,42 @@ const mastodon = new mastodonClient( {
    api_url: process.env.POLLOCKDOTEXE_MASTODON_API
 } );
 
-module.exports = function(){
-  const statusText = '🎨🤖',
-        options = {
-          width: 1184,
-          height: 506,
-        };
+module.exports = {
+  active: true,
+  name: 'pollock.exe',
+  description: 'A robot painter, very Pollock-like.',
+  thumbnail: 'https://botwiki.org/wp-content/uploads/2018/06/pollock.exe.png',
+  about_url: 'https://botwiki.org/bot/pollock-exe/',
+  links: [
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/pollockdotexe'
+    },
+    // {
+    //   title: 'Follow on botsin.space',
+    //   url: 'https://botsin.space/@pollockdotexe'
+    // }
+  ],
+  interval: cronSchedules.EVERY_SIX_HOURS,
+  script: function(){
+    const statusText = '🎨🤖',
+          options = {
+            width: 1184,
+            height: 506,
+          };
 
-  generators.pollock( options, function( err, imageDataGIF, imageDataStatic ){
-    twitter.postImage( statusText, imageDataStatic, function( err, data, response ){
-      if ( data.id_str ){
-        twitter.postImage( statusText, imageDataGIF, null, data.id_str );
-      }
-    } );
+    generators.pollock( options, function( err, imageDataGIF, imageDataStatic ){
+      twitter.postImage( statusText, imageDataStatic, function( err, data, response ){
+        if ( data.id_str ){
+          twitter.postImage( statusText, imageDataGIF, null, data.id_str );
+        }
+      } );
 
-    mastodon.postImage( statusText, imageDataStatic, function( err, data, response ){
-      if ( data.id ){
-        mastodon.postImage( statusText, imageDataGIF, null, data.id );
-      }
-    } );
-  } );  
+      mastodon.postImage( statusText, imageDataStatic, function( err, data, response ){
+        if ( data.id ){
+          mastodon.postImage( statusText, imageDataGIF, null, data.id );
+        }
+      } );
+    } ); 
+  } 
 };

@@ -1,4 +1,5 @@
 const helpers = require(__dirname + '/../helpers/helpers.js'),
+      cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
       generators = {
         spiral: require(__dirname + '/../generators/spiral.js')
       },    
@@ -13,18 +14,32 @@ const twitter = new TwitterClient( {
   access_token_secret: process.env.HYPNOBOT_TWITTER_ACCESS_TOKEN_SECRET
 } );
 
-module.exports = function(){
-  const color = helpers.getRandomHex();
+module.exports = {
+  active: true,
+  name: '@hypno__bot',
+  description: 'Your eyelids are getting heavy...',
+  thumbnail: 'https://botwiki.org/wp-content/uploads/2018/04/hypno__bot.png',
+  about_url: 'https://botwiki.org/bot/hypno__bot/',
+  links: [
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/hypno__bot'
+    }
+  ],
+  interval: cronSchedules.EVERY_SIX_HOURS,
+  script: function(){
+    const color = helpers.getRandomHex();
 
-  const statusText = '',
-        options = {
-          color: color,
-          background: helpers.shadeColor(helpers.invertColor( color ), 0.5),
-          width: 640,
-          height: 480,
-        };
+    const statusText = '',
+          options = {
+            color: color,
+            background: helpers.shadeColor(helpers.invertColor( color ), 0.5),
+            width: 640,
+            height: 480,
+          };
 
-  generators.spiral( options, function( err, imageData ){
-    twitter.postImage( statusText, imageData );
-  } );  
+    generators.spiral( options, function( err, imageData ){
+      twitter.postImage( statusText, imageData );
+    } );  
+  }
 };

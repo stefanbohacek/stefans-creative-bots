@@ -1,4 +1,5 @@
 const helpers = require(__dirname + '/../helpers/helpers.js'),
+      cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
       generators = {
         rain: require(__dirname + '/../generators/rain.js'),
       },    
@@ -26,20 +27,42 @@ const tumblr = new tumblrClient( {
   token_secret: process.env.RAINDOTGIFBOT_TUMBLR_CONSUMER_TOKEN_SECRET
 } );
 
-module.exports = function(){
-  const statusText = helpers.randomFromArray([
-          '🌧️',
-          '🌧️🌧️',
-          '🌧️🌧️🌧️'
-        ]),
-        options = {
-          width: 640,
-          height: 480,
-        };
+module.exports = {
+  active: true,
+  name: 'rain.gif',
+  description: '🌧🌧🌧',
+  thumbnail: 'https://botwiki.org/wp-content/uploads/2018/07/rain.gif.png',
+  about_url: 'https://botwiki.org/bot/rain-gif/',
+  links: [
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/raindotgifbot'
+    },
+    // {
+    //   title: 'Follow on botsin.space',
+    //   url: 'https://botsin.space/@rain'
+    // },
+    // {
+    //   title: 'Follow on Tumblr',
+    //   url: 'https://raindotgif.tumblr.com/'
+    // }
+  ],
+  interval: cronSchedules.EVERY_SIX_HOURS,
+  script: function(){
+    const statusText = helpers.randomFromArray([
+            '🌧️',
+            '🌧️🌧️',
+            '🌧️🌧️🌧️'
+          ]),
+          options = {
+            width: 640,
+            height: 480,
+          };
 
-  generators.rain( options, function( err, imageData ){
-    twitter.postImage( statusText, imageData );
-    mastodon.postImage( statusText, imageData );      
-    tumblr.postImage( statusText, imageData );        
-  } );
+    generators.rain( options, function( err, imageData ){
+      twitter.postImage( statusText, imageData );
+      mastodon.postImage( statusText, imageData );      
+      tumblr.postImage( statusText, imageData );        
+    } );
+  }
 };

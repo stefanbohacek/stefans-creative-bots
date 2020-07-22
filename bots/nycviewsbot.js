@@ -1,4 +1,5 @@
 const helpers = require(__dirname + '/../helpers/helpers.js'),
+      cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
       windyAPI = require(__dirname + '/../helpers/windy.js'),
       TwitterClient = require(__dirname + '/../helpers/twitter.js'),    
       mastodonClient = require(__dirname + '/../helpers/mastodon.js'), 
@@ -24,34 +25,56 @@ const tumblr = new tumblrClient( {
   token_secret: process.env.NYCVIEWSBOT_TUMBLR_API_ACCESS_SECRET
 } );
 
-module.exports = function(){
-  const location = {
-    lat: 40.712776,
-    long: -74.005974,
-    radius: 15
-  };
-  console.log( location );
-  
-  windyAPI.getWebcamPicture( process.env.NYCVIEWSBOT_WINDY_API_KEY, location, function( err, data ){
+module.exports = {
+  active: true,
+  name: 'Views from New York',
+  description: 'Views from the great city of NYC 🗽',
+  thumbnail: 'https://botwiki.org/wp-content/uploads/2020/03/views-from-new-york-1585658499.png',
+  about_url: 'https://botwiki.org/bot/views-from-new-york/',
+  links: [
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/nycviewsbot'
+    },
+    // {
+    //   title: 'Follow on botsin.space',
+    //   url: 'https://botsin.space/@nycviewsbot'
+    // },
+    // {
+    //   title: 'Follow on Tumblr',
+    //   url: 'https://nycviewsbot.tumblr.com/'
+    // }
+  ],
+  interval: cronSchedules.EVERY_SIX_HOURS,
+  script: function(){
+    const location = {
+      lat: 40.712776,
+      long: -74.005974,
+      radius: 15
+    };
+    console.log( location );
+    
+    windyAPI.getWebcamPicture( process.env.NYCVIEWSBOT_WINDY_API_KEY, location, function( err, data ){
 
-    if ( data && data.title && data.location){
-      console.log( data )
-      const webcamTitle = data.title;
-      const windyWebcamUrl = `📷 https://www.windy.com/-Webcams/United-States/Minnesota/Delhi/New-York/webcams/${data.id}`;
-      const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${data.location.latitude},${data.location.longitude}`;
+      if ( data && data.title && data.location){
+        console.log( data )
+        const webcamTitle = data.title;
+        const windyWebcamUrl = `📷 https://www.windy.com/-Webcams/United-States/Minnesota/Delhi/New-York/webcams/${data.id}`;
+        const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${data.location.latitude},${data.location.longitude}`;
 
-      let text = `${webcamTitle}\n${windyWebcamUrl}\n${googleMapsUrl}`;
+        let text = `${webcamTitle}\n${windyWebcamUrl}\n${googleMapsUrl}`;
 
-      helpers.loadImage( data.image.current.preview, function( err, imgData ){
-        if ( err ){
-          console.log( err );     
-        }
-        else{
-          twitter.postImage( text, imgData );
-          mastodon.postImage( text, imgData );
-          tumblr.postImage( text, imgData );
-        }
-      } ); 
-    }
-  } );  
+        helpers.loadImage( data.image.current.preview, function( err, imgData ){
+          if ( err ){
+            console.log( err );     
+          }
+          else{
+            twitter.postImage( text, imgData );
+            mastodon.postImage( text, imgData );
+            tumblr.postImage( text, imgData );
+          }
+        } ); 
+      }
+    } );  
+  }
 };

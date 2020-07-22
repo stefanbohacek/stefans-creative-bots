@@ -4,6 +4,7 @@
 const request = require( 'request' ),
       ChartjsNode = require( 'chartjs-node' ),
       helpers = require(__dirname + '/../helpers/helpers.js'),
+      cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
       TwitterClient = require(__dirname + '/../helpers/twitter.js');
 
 const twitter = new TwitterClient( {
@@ -13,123 +14,137 @@ const twitter = new TwitterClient( {
   access_token_secret: process.env.LAST100BILLS_TWITTER_ACCESS_TOKEN_SECRET
 } );
 
-module.exports = function(){
-  console.log( 'making a chart...' );
-
-  const datasetUrl = 'https://www.govtrack.us/api/v2/bill?order_by=-current_status_date',
-        datasetName = 'Last 100 bills in the US government',
-        datasetLabels = ['group', 'value'];
-
-  request( datasetUrl, function ( error, response, body ){
-    let bodyParsed;
-
-    try{
-      bodyParsed = JSON.parse( body );
-    } catch( err ){
-      console.log( 'ERROR: unable to parse data', err );
-      return false;
+module.exports = {
+  active: true,
+  name: '@last100bills',
+  description: 'Breakdown of the last 100 bills introduced in the US government.',
+  thumbnail: 'https://botwiki.org/wp-content/uploads/2018/05/last100bills-1.png',
+  about_url: 'https://botwiki.org/bot/last100bills/',
+  links: [
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/last100bills'
     }
+  ],
+  interval: cronSchedules.EVERY_DAY_MORNING,
+  script: function(){
+    console.log( 'making a chart...' );
 
-    if ( bodyParsed ){
+    const datasetUrl = 'https://www.govtrack.us/api/v2/bill?order_by=-current_status_date',
+          datasetName = 'Last 100 bills in the US government',
+          datasetLabels = ['group', 'value'];
 
-      /* Set up your data.  */
+    request( datasetUrl, function ( error, response, body ){
+      let bodyParsed;
 
-      let introduced_count = 0,
-          pass_over_house_count = 0,
-          passed_bill_count = 0,
-          passed_concurrentres_count = 0,
-          passed_simpleres_count = 0,
-          reported_count = 0,
-          enacted_signed_count = 0;
+      try{
+        bodyParsed = JSON.parse( body );
+      } catch( err ){
+        console.log( 'ERROR: unable to parse data', err );
+        return false;
+      }
 
-      bodyParsed.objects.forEach(function(bill){
-        if (bill.current_status === 'introduced'){
-          introduced_count ++;
-        } else if (bill.current_status === 'pass_over_house'){
-          pass_over_house_count ++; 
-        } else if (bill.current_status === 'passed_bill'){
-          passed_bill_count ++; 
-        } else if (bill.current_status === 'passed_concurrentres'){
-          passed_concurrentres_count ++; 
-        } else if (bill.current_status === 'passed_simpleres'){
-          passed_simpleres_count ++; 
-        } else if (bill.current_status === 'reported'){
-          reported_count ++; 
-        } else if (bill.current_status === 'enacted_signed'){
-          enacted_signed_count ++; 
-        }
-      });  
+      if ( bodyParsed ){
 
-     const data = [
-          ['Introduced', introduced_count],
-          ['Passed House', pass_over_house_count],
-          ['Passed House & Senate', passed_bill_count],
-          ['Concurrent Resolution', passed_concurrentres_count],
-          ['Simple Resolution', passed_simpleres_count],
-          ['Ordered Reported', reported_count],
-          ['Enacted', enacted_signed_count]
-      ];
+        /* Set up your data.  */
 
-      /* Set up the chart.js options, see chartjs.org for documentation. */
+        let introduced_count = 0,
+            pass_over_house_count = 0,
+            passed_bill_count = 0,
+            passed_concurrentres_count = 0,
+            passed_simpleres_count = 0,
+            reported_count = 0,
+            enacted_signed_count = 0;
 
-      const chartJsOptions = {
-          plugins: {
-            beforeDraw: function ( chart, easing ) {
-              var ctx = chart.chart.ctx;
-              ctx.save();
-              ctx.fillStyle = '#ffffff';
-              ctx.fillRect( 0, 0, chart.width, chart.height );
-              ctx.restore(  );
-            }
-          },
-        
-          type: 'bar',
-          data: {
-              labels: data.map( function( item ){
-                return item[0];
-              } ),
-              datasets: [{
-                  label: datasetName,
-                  data: data.map( function( item ){
-                    return item[1];
-                  } ),
-                  backgroundColor: 'rgb(255, 99, 132)',
-                  borderColor: 'rgb(255, 99, 132)',
-                  borderWidth: 1
-              }]
-          },
-          options: {
-              scales: {
-                  yAxes: [{
-                      ticks: {
-                          beginAtZero: true
-                      }
-                  }]
-              }
+        bodyParsed.objects.forEach(function(bill){
+          if (bill.current_status === 'introduced'){
+            introduced_count ++;
+          } else if (bill.current_status === 'pass_over_house'){
+            pass_over_house_count ++; 
+          } else if (bill.current_status === 'passed_bill'){
+            passed_bill_count ++; 
+          } else if (bill.current_status === 'passed_concurrentres'){
+            passed_concurrentres_count ++; 
+          } else if (bill.current_status === 'passed_simpleres'){
+            passed_simpleres_count ++; 
+          } else if (bill.current_status === 'reported'){
+            reported_count ++; 
+          } else if (bill.current_status === 'enacted_signed'){
+            enacted_signed_count ++; 
           }
-      };
+        });  
 
-      let chartNode = new ChartjsNode( 600, 600 );
-      
-      chartNode.drawChart( chartJsOptions )
-        .then( () => {
-            return chartNode.getImageBuffer( 'image/png' );
-        } )
-        .then( buffer => {
-            Array.isArray( buffer )
+       const data = [
+            ['Introduced', introduced_count],
+            ['Passed House', pass_over_house_count],
+            ['Passed House & Senate', passed_bill_count],
+            ['Concurrent Resolution', passed_concurrentres_count],
+            ['Simple Resolution', passed_simpleres_count],
+            ['Ordered Reported', reported_count],
+            ['Enacted', enacted_signed_count]
+        ];
 
-            const text = helpers.randomFromArray( [
-              'The last 100 bills in the US #government, analyzed!',
-              'Looking at the last 100 bills in the US #government.',
-              'The last 100 bills in one chart!',
-              'Analyzing the last 100 bills in the US #government.',
-              'Breaking down the last 100 bills in the US #government.'
-            ] ) + ' #dataviz #civictech';
+        /* Set up the chart.js options, see chartjs.org for documentation. */
 
-            const imgData = buffer.toString( 'base64' );
+        const chartJsOptions = {
+            plugins: {
+              beforeDraw: function ( chart, easing ) {
+                var ctx = chart.chart.ctx;
+                ctx.save();
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect( 0, 0, chart.width, chart.height );
+                ctx.restore(  );
+              }
+            },
+          
+            type: 'bar',
+            data: {
+                labels: data.map( function( item ){
+                  return item[0];
+                } ),
+                datasets: [{
+                    label: datasetName,
+                    data: data.map( function( item ){
+                      return item[1];
+                    } ),
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        };
+
+        let chartNode = new ChartjsNode( 600, 600 );
         
-            twitter.postImage( text, imgData );
-        } );   
-    }
-  } );
+        chartNode.drawChart( chartJsOptions )
+          .then( () => {
+              return chartNode.getImageBuffer( 'image/png' );
+          } )
+          .then( buffer => {
+              Array.isArray( buffer )
+
+              const text = helpers.randomFromArray( [
+                'The last 100 bills in the US #government, analyzed!',
+                'Looking at the last 100 bills in the US #government.',
+                'The last 100 bills in one chart!',
+                'Analyzing the last 100 bills in the US #government.',
+                'Breaking down the last 100 bills in the US #government.'
+              ] ) + ' #dataviz #civictech';
+
+              const imgData = buffer.toString( 'base64' );
+          
+              twitter.postImage( text, imgData );
+          } );   
+      }
+    } );
+  }
 };

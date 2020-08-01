@@ -27,10 +27,10 @@ module.exports = {
       title: 'Follow on Twitter',
       url: 'https://twitter.com/emoji__polls'
     },
-    // {
-    //   title: 'Follow on botsin.space',
-    //   url: 'https://botsin.space/@emoji__polls'
-    // }
+    {
+      title: 'Follow on botsin.space',
+      url: 'https://botsin.space/@emoji__polls'
+    }
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: function(){
@@ -41,7 +41,7 @@ module.exports = {
       options.push(emoji.pop());
     }
     
-    const text = options.join(' ');
+    const text = options.join(' ') + ' #emoji';
     console.log( { text, options } );
     
     twitter.pollLegacy( text, options );

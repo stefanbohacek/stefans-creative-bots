@@ -31,10 +31,10 @@ module.exports = {
       title: 'Follow on Twitter',
       url: 'https://twitter.com/southpoleviews'
     },
-    // {
-    //   title: 'Follow on botsin.space',
-    //   url: 'https://botsin.space/@southpoleviews'
-    // }
+    {
+      title: 'Follow on botsin.space',
+      url: 'https://botsin.space/@southpoleviews'
+    }
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: function(){

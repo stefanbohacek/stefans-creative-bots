@@ -38,14 +38,14 @@ module.exports = {
       title: 'Follow on Twitter',
       url: 'https://twitter.com/raindotgifbot'
     },
-    // {
-    //   title: 'Follow on botsin.space',
-    //   url: 'https://botsin.space/@rain'
-    // },
-    // {
-    //   title: 'Follow on Tumblr',
-    //   url: 'https://raindotgif.tumblr.com/'
-    // }
+    {
+      title: 'Follow on botsin.space',
+      url: 'https://botsin.space/@rain'
+    },
+    {
+      title: 'Follow on Tumblr',
+      url: 'https://raindotgif.tumblr.com/'
+    }
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: function(){

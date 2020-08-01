@@ -30,14 +30,14 @@ module.exports = {
       title: 'Follow on Twitter',
       url: 'https://twitter.com/pollockdotexe'
     },
-    // {
-    //   title: 'Follow on botsin.space',
-    //   url: 'https://botsin.space/@pollockdotexe'
-    // }
+    {
+      title: 'Follow on botsin.space',
+      url: 'https://botsin.space/@pollockdotexe'
+    }
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: function(){
-    const statusText = '🎨🤖',
+    const statusText = '🎨🤖 #generativeart',
           options = {
             width: 1184,
             height: 506,

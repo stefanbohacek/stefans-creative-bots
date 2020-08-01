@@ -33,10 +33,10 @@ module.exports = {
       title: 'Follow on Twitter',
       url: 'https://twitter.com/helloworld__bot'
     },
-    // {
-    //   title: 'Follow on botsin.space',
-    //   url: 'https://botsin.space/@helloworld'
-    // }
+    {
+      title: 'Follow on botsin.space',
+      url: 'https://botsin.space/@helloworld'
+    }
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: function(){
@@ -106,7 +106,7 @@ module.exports = {
                 position: 'center center'
               }    
             ], { width, height }, function( err, imageData ){
-              const statusText = `Hello from ${ countryName }!`
+              const statusText = `Hello from ${ countryName }! #helloworld`
               
               console.log( 'statusText', statusText );
 

@@ -2,8 +2,6 @@ const fs = require( 'fs' ),
       path = require( 'path' ),
       Canvas = require( 'canvas' ),
       GIFEncoder = require( 'gifencoder' ),
-      img_path_png = '.data/temp.png',
-      img_path_gif = '.data/temp.gif',
       helpers = require( __dirname + '/../helpers/helpers.js' );
 
 module.exports = function( overlays, options, cb ){
@@ -17,7 +15,6 @@ module.exports = function( overlays, options, cb ){
     return new Promise( function( resolve ){
       if ( overlay.url ){
         const overlayUrlClean = overlay.url.split('?')[0];
-        const imgPath = path.join(__dirname, '../../.data/', helpers.getFilenameFromURL(overlayUrlClean));
 
         helpers.downloadFile( overlay.url, function( err, buffer ){
           if ( err ) {

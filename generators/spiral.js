@@ -8,7 +8,7 @@ const fs = require( 'fs' ),
       helpers = require( __dirname + '/../helpers/helpers.js' );
 
 module.exports = function( options, cb ){
-  /*  http://jsfiddle.net/X2gp3/ */
+  /* http://jsfiddle.net/X2gp3/ */
 
   console.log( 'drawing a spiral...' );
 

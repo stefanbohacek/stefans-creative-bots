@@ -1,7 +1,6 @@
 const fs = require( 'fs' ),
       path = require( 'path' ),
       Canvas = require( 'canvas' ),
-      GIFEncoder = require( 'gifencoder' ),
       helpers = require( __dirname + '/../helpers/helpers.js' );
 
 module.exports = function( overlays, options, cb ){

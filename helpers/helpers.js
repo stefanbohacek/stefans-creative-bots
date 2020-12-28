@@ -11,13 +11,18 @@ module.exports = {
   randomFromArray: function( arr ) {
     return arr[Math.floor( Math.random() * arr.length )]; 
   },
-  randomFromArrayUnique: function(arr, count) {
-    var new_arr = [];
-    for (var i = 0; i < count; i++){
-      arr.sort(function(){return Math.round(Math.random());});
-      new_arr.push(arr.pop());
+  randomFromArrayUnique: function(arr, n) {
+    let result = new Array(n),
+        len = arr.length,
+        taken = new Array(len);
+    if (n > len)
+        throw new RangeError("getRandom: more elements taken than available");
+    while (n--) {
+        let x = Math.floor(Math.random() * len);
+        result[n] = arr[x in taken ? taken[x] : x];
+        taken[x] = --len in taken ? taken[len] : len;
     }
-    return new_arr;
+    return result;
   },  
   getRandomInt: function( min, max ) {
     return Math.floor( Math.random() * ( max - min + 1 ) ) + min;

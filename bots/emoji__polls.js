@@ -34,16 +34,9 @@ module.exports = {
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: function(){
-    let options = [];
-
-    for (let i = 0; i < 4; i++){
-      emoji.sort(function(){return Math.round(Math.random());});
-      options.push(emoji.pop());
-    }
-    
+    const options = helpers.randomFromArrayUnique( emoji, 4 );
     const text = options.join(' ') + ' #emoji';
     console.log( { text, options } );
-    
     twitter.pollLegacy( text, options );
     mastodon.poll( text, options );
 

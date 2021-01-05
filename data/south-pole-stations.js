@@ -20,16 +20,16 @@ module.exports = [
       page_url: 'https://www.usap.gov/videoclipsandmaps/',
       element: '#img-boreSite'
     },
-    {
-      name: 'Casey station',
-      url: 'http://www.antarctica.gov.au/webcams/casey',
-      element: '#content-close img'
-    },
-    {
-      name: 'Davis station',
-      url: 'http://www.antarctica.gov.au/webcams/davis',
-      element: '#content-close img'
-    },
+    // {
+    //   name: 'Casey station',
+    //   url: 'http://www.antarctica.gov.au/webcams/casey',
+    //   element: '#content-close img'
+    // },
+    // {
+    //   name: 'Davis station',
+    //   url: 'http://www.antarctica.gov.au/webcams/davis',
+    //   element: '#content-close img'
+    // },
     {
       name: 'Macquarie Island station',
       url: 'http://www.antarctica.gov.au/webcams/macquarie-island',
@@ -40,16 +40,16 @@ module.exports = [
       url: 'http://www.antarctica.gov.au/webcams/mawson',
       element: '#content-close img'
     },
-    {
-      name: 'Aurora Australis icebreaker',
-      url: 'http://www.antarctica.gov.au/webcams/aurora',
-      element: '#content-close img'
-    },
     // {
-    //   name: 'Ny-Ålesund webcam',
-    //   url: 'https://www.bas.ac.uk/data/our-data/images/webcams/ny-alesund/',
-    //   element: '.wp-image-15729'
+    //   name: 'Aurora Australis icebreaker',
+    //   url: 'http://www.antarctica.gov.au/webcams/aurora',
+    //   element: '#content-close img'
     // },
+    {
+      name: 'Ny-Ålesund webcam',
+      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/ny-alesund/',
+      element: '.wp-image-15729'
+    },
     {
       name: 'Bird Island research station',
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/bird-island-webcam/',

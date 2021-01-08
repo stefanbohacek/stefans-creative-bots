@@ -4,7 +4,8 @@
   "description": "Beep beep tweet!",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "npm install puppeteer; node node_modules/puppeteer/install.js"
   },
   "dependencies": {
     "base64-stream": "^1.0.0",
@@ -32,10 +33,11 @@
     "mastodon": "^1.2.2",
     "memorystore": "^1.6.2",
     "node-fetch": "^2.6.0",
+    "node-gyp": "^7.1.2",
     "pluralize": "^8.0.0",
     "pngjs": "^4.0.0",
     "poisson-disc-sampler": "^1.1.0",
-    "puppeteer": "^1.4.0",
+    "puppeteer": "^1.20.0",
     "q": "1.0.1",
     "request": "^2.88.2",
     "roughjs": "^4.1.4",
@@ -43,8 +45,7 @@
     "tumblr.js": "^1.1.1",
     "twit": "^2.1.0",
     "underscore": "^1.10.2",
-    "utf-8-validate": "^5.0.2",
-    "node-gyp": "^7.1.2"
+    "utf-8-validate": "^5.0.2"
   },
   "engines": {
     "node": "12.x"

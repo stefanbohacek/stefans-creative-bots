@@ -15,7 +15,7 @@ const twitter = new TwitterClient( {
 } );
 
 module.exports = {
-  active: true,
+  active: false,
   name: '@last100bills',
   description: 'Breakdown of the last 100 bills introduced in the US government.',
   thumbnail: 'https://botwiki.org/wp-content/uploads/2018/05/last100bills-1.png',

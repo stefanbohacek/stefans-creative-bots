@@ -1,4 +1,5 @@
 const request = require( 'request' ),
+      he = require( 'he' ),
       helpers = require(__dirname + '/../helpers/helpers.js'),
       cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
       TwitterClient = require(__dirname + '/../helpers/twitter.js');
@@ -42,8 +43,8 @@ module.exports = {
 
       if ( bodyParsed && bodyParsed.length ){
         const bot = {
-          name: bodyParsed[0].title.rendered,
-          description: bodyParsed[0].excerpt.rendered,
+          name: he.decode( bodyParsed[0].title.rendered ),
+          description: he.decode( bodyParsed[0].excerpt.rendered ),
           url: bodyParsed[0].link,
           tags: bodyParsed[0].tags_full,
         };

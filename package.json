@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "npm install puppeteer; node node_modules/puppeteer/install.js"
+    "postinstall": "pnpm install puppeteer; node node_modules/puppeteer/install.js"
   },
   "dependencies": {
     "base64-stream": "^1.0.0",

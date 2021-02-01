@@ -1,9 +1,14 @@
-<div class="container-fluid ml-auto mr-auto">
+<div class="container ml-auto mr-auto">
   <h1 class="text-center mt-5 mb-5">Bot showcase 🤖🎨</h1>
+  <p class="text-center">
+    Here's a collection of most of my currently active creative bots across Twitter, Mastodon, and Tumblr. See also: <a href="https://botwiki.org/author/stefan/">botwiki.org</a>.
+  </p>
+</div>
+<div class="container-fluid ml-auto mr-auto mt-5">
   {{#if bots}}
     <div class="row list">
     {{#each bots}}
-      <div class="col-sm-12 col-md-6 col-lg-3 list-item">
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 list-item">
       {{> bot
         name=this.name
         description=this.description

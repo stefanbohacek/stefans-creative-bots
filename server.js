@@ -15,6 +15,9 @@ const path = require( 'path' ),
 // const bot = require( __dirname + '/bots/southpoleviews.js' );
 // bot.script();
 
+// https://github.com/fourtonfish/stefans-creative-bots/commit/d4bacb18d5b8c5521297fdd24eddbf763d8d317b#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5
+// node node_modules/puppeteer/install.js
+
 const files = fs.readdirSync( __dirname + '/bots' );
 let bots = [];
 

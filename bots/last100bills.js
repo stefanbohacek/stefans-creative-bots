@@ -143,9 +143,11 @@ module.exports = {
               'Breaking down the last 100 bills in the US #government.'
             ] ) + ' #dataviz #civictech';
 
-            const imgData = buffer.toString( 'base64' );
+            const image = buffer.toString( 'base64' );
+            
+            const alt = `${ introduced_count } bills have been introduced, ${ pass_over_house_count } bills passed the House,  ${ passed_bill_count } bills passed the House & the Senate, ${ passed_concurrentres_count + passed_simpleres_count } bills have been agreed to, ${ reported_count } bills are being considered, and ${ enacted_signed_count } bills have been  enacted.`;
 
-            twitter.postImage( text, imgData );
+            twitter.postImageWithAltText( { text, image, alt } );
 
           } );
         } );

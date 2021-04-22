@@ -2,7 +2,7 @@
 /* Static version: https://stefans-creative-bots.glitch.me/last100bills.html */
 
 const request = require( 'request' ),
-      ChartjsNode = require( 'chartjs-node' ),
+      ChartjsNode = require( 'node-chartjs-v12' ),
       helpers = require(__dirname + '/../helpers/helpers.js'),
       cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
       TwitterClient = require(__dirname + '/../helpers/twitter.js');
@@ -15,7 +15,7 @@ const twitter = new TwitterClient( {
 } );
 
 module.exports = {
-  active: false,
+  active: true,
   name: '@last100bills',
   description: 'Breakdown of the last 100 bills introduced in the US government.',
   thumbnail: 'https://botwiki.org/wp-content/uploads/2018/05/last100bills-1.png',
@@ -125,25 +125,31 @@ module.exports = {
 
         let chartNode = new ChartjsNode( 600, 600 );
         
-        chartNode.drawChart( chartJsOptions )
-          .then( () => {
-              return chartNode.getImageBuffer( 'image/png' );
-          } )
-          .then( buffer => {
-              Array.isArray( buffer )
+        
+        chartNode.makeChart( chartJsOptions )
+        .then( res => {
+          chartNode.drawChart();
 
-              const text = helpers.randomFromArray( [
-                'The last 100 bills in the US #government, analyzed!',
-                'Looking at the last 100 bills in the US #government.',
-                'The last 100 bills in one chart!',
-                'Analyzing the last 100 bills in the US #government.',
-                'Breaking down the last 100 bills in the US #government.'
-              ] ) + ' #dataviz #civictech';
+          chartNode.toBuffer().then( function( blob ){
+            let buffer = blob;
 
-              const imgData = buffer.toString( 'base64' );
-          
-              twitter.postImage( text, imgData );
-          } );   
+            Array.isArray( buffer )
+
+            const text = helpers.randomFromArray( [
+              'The last 100 bills in the US #government, analyzed!',
+              'Looking at the last 100 bills in the US #government.',
+              'The last 100 bills in one chart!',
+              'Analyzing the last 100 bills in the US #government.',
+              'Breaking down the last 100 bills in the US #government.'
+            ] ) + ' #dataviz #civictech';
+
+            const imgData = buffer.toString( 'base64' );
+
+            twitter.postImage( text, imgData );
+
+          } );
+        } );
+
       }
     } );
   }

@@ -4,7 +4,6 @@ dependencies:
   bufferutil: 4.0.3
   canvas: 2.7.0
   chart.js: 2.9.4
-  chartjs-node: 1.7.1
   cheerio: 0.22.0
   color-scheme: 1.0.1
   concat-stream: 2.0.0
@@ -23,6 +22,7 @@ dependencies:
   jsdom: 16.5.2
   mastodon: 1.2.2
   memorystore: 1.6.6
+  node-chartjs-v12: 1.0.4
   node-fetch: 2.6.1
   node-gyp: 7.1.2
   node-gyp-build: 4.2.3
@@ -51,10 +51,6 @@ packages:
     optional: true
     resolution:
       integrity: sha512-A1b8SU4D10uoPjwb0lnHmmu8wZhR9d+9o2PKBQT2jU5YPTKsxac6M2qGAdY7VcL+dHHhARVUDmeg0rOrcd9EjA==
-  /abab/1.0.4:
-    dev: false
-    resolution:
-      integrity: sha1-X6rZwsB/YN12dw9xzwJbYqY8/U4=
   /abab/2.0.5:
     dev: false
     resolution:
@@ -72,12 +68,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-Il80Qs2WjYlJIBNzNkK6KYqlVMTbZLXgHx2oT0pU/fjRHyEp+PEfEPY0R3WCwAGVOtauxh1hOxNgIf5bv7dQpA==
-  /acorn-globals/1.0.9:
-    dependencies:
-      acorn: 2.7.0
-    dev: false
-    resolution:
-      integrity: sha1-VbtemGkVB7dFedBRNBMhfDgMVM8=
   /acorn-globals/6.0.0:
     dependencies:
       acorn: 7.4.1
@@ -91,13 +81,6 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha512-OPdCF6GsMIP+Az+aWfAAOEt2/+iVDKE7oy6lJ098aoe59oAmK76qV6Gw60SbZ8jHuG2wH058GF4pLFbYamYrVA==
-  /acorn/2.7.0:
-    dev: false
-    engines:
-      node: '>=0.4.0'
-    hasBin: true
-    resolution:
-      integrity: sha1-q259nYhqrKiwhbwzEreaGYQz8Oc=
   /acorn/7.4.1:
     dev: false
     engines:
@@ -112,6 +95,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-LWCF/Wn0nfHOmJ9rzQApGnxnvgfROzGilS8936rqN/lfcYkY9MYZzdMqN+2NJ4SlTc+m5HiSa+kNfDtI64dwUA==
+  /acorn/8.1.1:
+    dev: false
+    engines:
+      node: '>=0.4.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-xYiIVjNuqtKXMxlRMDc6mZUhXehod4a3gbZ1qRlM7icK4EbxUFNLhWoPblCvFtB2Y9CIqHP3CF/rdxLItaQv8g==
   /agent-base/6.0.2:
     dependencies:
       debug: 4.3.1
@@ -152,10 +142,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-5hYdAkZlcG8tOLujVDTgCT+uPX0VnpAH28gWsLfzpXYm7wP6mp5Q/gYyR7YQ0cKVJcXJnl3j2kpBan13PtQf6w==
-  /array-equal/1.0.0:
-    dev: false
-    resolution:
-      integrity: sha1-jCpe8kcv2ep0KwTHenUJO6J1fJM=
   /array-flatten/1.1.1:
     dev: false
     resolution:
@@ -281,15 +267,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==
-  /canvas/1.6.13:
+  /canvas/2.6.1:
     dependencies:
       nan: 2.14.2
+      node-pre-gyp: 0.11.0
+      simple-get: 3.1.0
     dev: false
     engines:
-      node: '>=0.8.0'
+      node: '>=6'
     requiresBuild: true
     resolution:
-      integrity: sha512-XAfzfEOHZ3JIPjEV+WSI6PpISgUta3dgmndWbsajotz+0TQOX/jDpp2kawjRERatOGv9sMMzk5auB3GKEKA6hg==
+      integrity: sha512-S98rKsPcuhfTcYbtF53UIJhcbgIAK533d1kJKMwsMwAIFgfd58MOyxRud3kktlzWiEkFliaJtvyZCBtud/XVEA==
   /canvas/2.7.0:
     dependencies:
       nan: 2.14.2
@@ -325,18 +313,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-haqOg1+Yebys/Ts/9bLo/BqUcONQOdr/hoEr2LLTRl6C5LXctUdHxsCYfvQVg5JIxITrfCNUDr4ntqmQk9+/0w==
-  /chartjs-node/1.7.1:
-    dependencies:
-      bluebird: 3.7.2
-      canvas: 1.6.13
-      debug: 2.6.9
-      jsdom: 9.8.3
-      stream-buffers: 3.0.2
-    dev: false
-    peerDependencies:
-      chart.js: <=2.7.*
-    resolution:
-      integrity: sha512-sbFUoxid/3UmoY2/B25MRfQ0Nf/rC9NrRh9+865h3+17srpAiqC1JrDVMR3WnyQofBJmU/9OiDNNPayyzZxFcQ==
   /cheerio/0.22.0:
     dependencies:
       css-select: 1.2.0
@@ -438,10 +414,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-ExO0774ikEObIAEV9kDo50o+79VCUdEB6n6lzKgGwupcVeRlhrj3qGAfwq8G6uBJjkqLrhT0qEYFcWng8z1z0g==
-  /content-type-parser/1.0.2:
-    dev: false
-    resolution:
-      integrity: sha512-lM4l4CnMEwOLHAHr/P6MEZwZFPJFtAAKgL6pogbXmVZggIqXhdB6RbBtPOTsw2FcXwYhehRGERJmRrjOiIB8pQ==
   /content-type/1.0.4:
     dev: false
     engines:
@@ -489,12 +461,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-p3pvU7r1MyyqbTk+WbNJIgJjG2VmTIaB10rI93LzVPrmDJKkzKYMtxxyAvQXR/NS6otuzveI7+7BBq3SjBS2mw==
-  /cssstyle/0.2.37:
-    dependencies:
-      cssom: 0.3.8
-    dev: false
-    resolution:
-      integrity: sha1-VBCXI0yyUTyDzu06zdwn/yeYfVQ=
   /cssstyle/2.3.0:
     dependencies:
       cssom: 0.3.8
@@ -707,20 +673,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
-  /escodegen/1.14.3:
-    dependencies:
-      esprima: 4.0.1
-      estraverse: 4.3.0
-      esutils: 2.0.3
-      optionator: 0.8.3
-    dev: false
-    engines:
-      node: '>=4.0'
-    hasBin: true
-    optionalDependencies:
-      source-map: 0.6.1
-    resolution:
-      integrity: sha512-qFcX0XJkdg+PB3xjZZG/wKSuT1PnQWx57+TVSjIMmILd2yC/6ByYElPwJnslDsuWuSAp4AwJGumarAAmJch5Kw==
   /escodegen/2.0.0:
     dependencies:
       esprima: 4.0.1
@@ -742,12 +694,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
-  /estraverse/4.3.0:
-    dev: false
-    engines:
-      node: '>=4.0'
-    resolution:
-      integrity: sha512-39nnKffWz8xN1BU/2c79n9nB9HDzo0niYUqx6xyqUnyoAnQyyWpOTdZEeiCch8BBu515t4wp9ZmgVfVhn9EBpw==
   /estraverse/5.2.0:
     dev: false
     engines:
@@ -1102,12 +1048,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
-  /html-encoding-sniffer/1.0.2:
-    dependencies:
-      whatwg-encoding: 1.0.5
-    dev: false
-    resolution:
-      integrity: sha512-71lZziiDnsuabfdYiUeWdCVyKuqwWi23L8YeIgV9jSSZHCtb6wB1BKWooH7L3tn4/FuZJMVWyNaIDr4RGmaSYw==
   /html-encoding-sniffer/2.0.1:
     dependencies:
       whatwg-encoding: 1.0.5
@@ -1297,31 +1237,43 @@ packages:
       canvas: ^2.5.0
     resolution:
       integrity: sha512-JxNtPt9C1ut85boCbJmffaQ06NBnzkQY/MWO3YxPW8IWS38A26z+B1oBvA9LwKrytewdfymnhi4UNH3/RAgZrg==
-  /jsdom/9.8.3:
+  /jsdom/16.5.3/canvas@2.6.1:
     dependencies:
-      abab: 1.0.4
-      acorn: 2.7.0
-      acorn-globals: 1.0.9
-      array-equal: 1.0.0
-      content-type-parser: 1.0.2
-      cssom: 0.3.8
-      cssstyle: 0.2.37
-      escodegen: 1.14.3
-      html-encoding-sniffer: 1.0.2
-      iconv-lite: 0.4.24
-      nwmatcher: 1.4.4
-      parse5: 1.5.1
+      abab: 2.0.5
+      acorn: 8.1.1
+      acorn-globals: 6.0.0
+      canvas: 2.6.1
+      cssom: 0.4.4
+      cssstyle: 2.3.0
+      data-urls: 2.0.0
+      decimal.js: 10.2.1
+      domexception: 2.0.1
+      escodegen: 2.0.0
+      html-encoding-sniffer: 2.0.1
+      is-potential-custom-element-name: 1.0.1
+      nwsapi: 2.2.0
+      parse5: 6.0.1
       request: 2.88.2
-      sax: 1.2.4
+      request-promise-native: /request-promise-native/1.0.9/request@2.88.2
+      saxes: 5.0.1
       symbol-tree: 3.2.4
-      tough-cookie: 2.5.0
-      webidl-conversions: 3.0.1
+      tough-cookie: 4.0.0
+      w3c-hr-time: 1.0.2
+      w3c-xmlserializer: 2.0.0
+      webidl-conversions: 6.1.0
       whatwg-encoding: 1.0.5
-      whatwg-url: 3.1.0
-      xml-name-validator: 2.0.1
+      whatwg-mimetype: 2.3.0
+      whatwg-url: 8.5.0
+      ws: 7.4.5
+      xml-name-validator: 3.0.0
     dev: false
+    engines:
+      node: '>=10'
+    id: registry.npmjs.org/jsdom/16.5.3
+    peerDependencies:
+      canvas: ^2.5.0
     resolution:
-      integrity: sha1-/eKcEJwyoRMeC2xlkU5kGY+Xw3A=
+      integrity: sha512-Qj1H+PEvUsOtdPJ056ewXM4UJPCi4hhLA8wpiz9F2YvsRBhuFsXxtrIFAgGBDynQA9isAMGE91PfUYbdMPXuTA==
   /json-schema-traverse/0.4.1:
     dev: false
     resolution:
@@ -1600,6 +1552,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+  /node-chartjs-v12/1.0.4:
+    dependencies:
+      canvas: 2.6.1
+      jsdom: /jsdom/16.5.3/canvas@2.6.1
+    dev: false
+    engines:
+      node: '>=12.0.0'
+    peerDependencies:
+      chart.js: 2.9.4
+    resolution:
+      integrity: sha512-ldHABh+rUFI0mnC4/R7TTrMdGvs1jJkJmcd3Xd0FqQdrrakKEFn7p4qj2SiGM62wRlyZzWmNwJ+ibYPDxx3zHA==
   /node-fetch/2.6.1:
     dev: false
     engines:
@@ -1629,6 +1592,23 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-CbpcIo7C3eMu3dL1c3d0xw449fHIGALIJsRP4DDPHpyiW8vcriNY7ubh9TE4zEKfSxscY7PjeFnshE7h75ynjQ==
+  /node-pre-gyp/0.11.0:
+    dependencies:
+      detect-libc: 1.0.3
+      mkdirp: 0.5.5
+      needle: 2.6.0
+      nopt: 4.0.3
+      npm-packlist: 1.4.8
+      npmlog: 4.1.2
+      rc: 1.2.8
+      rimraf: 2.7.1
+      semver: 5.7.1
+      tar: 4.4.13
+    deprecated: 'Please upgrade to @mapbox/node-pre-gyp: the non-scoped node-pre-gyp package is deprecated and only the @mapbox scoped package will recieve updates in the future'
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-TwWAOZb0j7e9eGaf9esRx3ZcLaE5tQ2lvYy1pb5IAaG1a2e2Kv5Lms1Y4hpj+ciXJRofIxxlt5haeQ/2ANeE0Q==
   /node-pre-gyp/0.15.0:
     dependencies:
       detect-libc: 1.0.3
@@ -1712,10 +1692,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
-  /nwmatcher/1.4.4:
-    dev: false
-    resolution:
-      integrity: sha512-3iuY4N5dhgMpCUrOVnuAdGrgxVqV2cJpM+XNccjR2DKOB1RUP0aA+wGXEiNziG/UKboFyGBIoKOaNlJxx8bciQ==
   /nwsapi/2.2.0:
     dev: false
     resolution:
@@ -1812,10 +1788,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
-  /parse5/1.5.1:
-    dev: false
-    resolution:
-      integrity: sha1-m387DeMr543CQBsXVzzK8Pb1nZQ=
   /parse5/6.0.1:
     dev: false
     resolution:
@@ -2314,12 +2286,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
-  /stream-buffers/3.0.2:
-    dev: false
-    engines:
-      node: '>= 0.10.0'
-    resolution:
-      integrity: sha512-DQi1h8VEBA/lURbSwFtEHnSTb9s2/pwLEaFuNhXwy1Dx3Sa0lOuYT2yNUr4/j2fs8oCAMANtrZ5OrPZtyVs3MQ==
   /strict-uri-encode/1.1.0:
     dev: false
     engines:
@@ -2460,10 +2426,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-tHdtEpQCMrc1YLrMaqXXcj6AxhYi/xgit6mZu1+EDWUn+qhUf8wMQoFIy9NXuq23zAwtcB0t/MjACGR18pcRbg==
-  /tr46/0.0.3:
-    dev: false
-    resolution:
-      integrity: sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
   /tr46/2.0.2:
     dependencies:
       punycode: 2.1.1
@@ -2624,10 +2586,6 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-4tzD0mF8iSiMiNs30BiLO3EpfGLZUT2MSX/G+o7ZywDzliWQ3OPtTZ0PTC3B3ca1UAf4cJMHB+2Bf56EriJuRA==
-  /webidl-conversions/3.0.1:
-    dev: false
-    resolution:
-      integrity: sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=
   /webidl-conversions/5.0.0:
     dev: false
     engines:
@@ -2650,13 +2608,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==
-  /whatwg-url/3.1.0:
-    dependencies:
-      tr46: 0.0.3
-      webidl-conversions: 3.0.1
-    dev: false
-    resolution:
-      integrity: sha1-e9yuSQ+SGu9kUftnOexrvY6Qe/Y=
   /whatwg-url/8.5.0:
     dependencies:
       lodash: 4.17.21
@@ -2705,10 +2656,15 @@ packages:
       utf-8-validate: ^5.0.2
     resolution:
       integrity: sha512-Qm8k8ojNQIMx7S+Zp8u/uHOx7Qazv3Yv4q68MiWWWOJhiwG5W3x7iqmRtJo8xxrciZUY4vRxUTJCKuRnF28ZZw==
-  /xml-name-validator/2.0.1:
+  /ws/7.4.5:
     dev: false
+    engines:
+      node: '>=8.3.0'
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
     resolution:
-      integrity: sha1-TYuPHszTQZqjYgYb7O9RXh5VljU=
+      integrity: sha512-xzyu3hFvomRfXKH8vOFMU3OguG6oOvhXMo3xsGy3xWExqaM2dxBbVxuD99O7m3ZUFMvvscsZDqxfgMaRr/Nr1g==
   /xml-name-validator/3.0.0:
     dev: false
     resolution:
@@ -2745,7 +2701,6 @@ specifiers:
   bufferutil: ^4.0.1
   canvas: ^2.7.0
   chart.js: ^2.9.3
-  chartjs-node: ^1.7.1
   cheerio: ^0.22.0
   color-scheme: ^1.0.1
   concat-stream: ^2.0.0
@@ -2764,6 +2719,7 @@ specifiers:
   jsdom: ^16.2.2
   mastodon: ^1.2.2
   memorystore: ^1.6.2
+  node-chartjs-v12: ^1.0.4
   node-fetch: ^2.6.0
   node-gyp: ^7.1.2
   node-gyp-build: ^4.2.3

@@ -1,6 +1,6 @@
 {
   "name": "glitch-twitterbot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Beep beep tweet!",
   "main": "server.js",
   "scripts": {
@@ -31,6 +31,7 @@
     "jsdom": "^16.2.2",
     "mastodon": "^1.2.2",
     "memorystore": "^1.6.2",
+    "node-chartjs-v12": "^1.0.4",
     "node-fetch": "^2.6.0",
     "node-gyp": "^7.1.2",
     "node-gyp-build": "^4.2.3",
@@ -46,10 +47,10 @@
     "twit": "^2.1.0",
     "underscore": "^1.10.2",
     "utf-8-validate": "^5.0.2",
-    "node-chartjs-v12": "^1.0.4"
+    "tough-cookie": "^4.0.0"
   },
   "engines": {
-    "node": "12.x"
+    "node": "12.0"
   },
   "repository": {
     "url": ""

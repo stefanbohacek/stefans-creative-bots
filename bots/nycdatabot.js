@@ -256,7 +256,11 @@ module.exports = {
     {
       title: 'Follow on Twitter',
       url: 'https://twitter.com/nycdatabot'
-    }
+    },
+    {
+      title: 'Follow on botsin.space',
+      url: 'https://botsin.space/@nycdatabot'
+    }    
   ],
   interval: cronSchedules.EVERY_THREE_HOURS,
   script: function(){

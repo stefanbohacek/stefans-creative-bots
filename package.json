@@ -47,7 +47,8 @@
     "twit": "^2.1.0",
     "underscore": "^1.10.2",
     "utf-8-validate": "^5.0.2",
-    "tough-cookie": "^4.0.0"
+    "tough-cookie": "^4.0.0",
+    "us-zips": "^4.0.1"
   },
   "engines": {
     "node": "12.0"

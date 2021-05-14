@@ -17,7 +17,7 @@ module.exports = {
   name: '@nycdatabot',
   description: 'Explore NYC with data.',
   thumbnail: 'https://botwiki.org/wp-content/uploads/2021/05/data-of-new-york-1620941593.png',
-  // about_url: 'https://botwiki.org/bot/last100bills/',
+  about_url: 'https://botwiki.org/bot/data-of-new-york/',
   links: [
     {
       title: 'Follow on Twitter',
@@ -66,9 +66,9 @@ module.exports = {
 
       const dataset = helpers.randomFromArray( datasets );
 
-      const datasetUrl = `https://data.cityofnewyork.us/resource/${ dataset.resource.id }.json`
-            datasetName = dataset.resource.name;
-            datasetLabels = dataset.resource.columns_name;
+      const datasetUrl = `https://data.cityofnewyork.us/resource/${ dataset.resource.id }.json`,
+            datasetName = dataset.resource.name,
+            datasetLabels = dataset.resource.columns_name,
             datasetPermalink = dataset.permalink;
 
       console.log( 'loading data...', { datasetName, dataType, datasetUrl, datasetPermalink } );
@@ -138,59 +138,9 @@ module.exports = {
                 }
               );
 
-
-              // request.get({
-              //     'uri': mapUrl,
-              //     'encoding': null
-              //   },
-              //   function( err, resp, body ){
-
-              //     console.log( 'error:', err );
-                  
-              //     console.log( {
-              //       'body': body,
-              //       'buffer': Buffer.from( body )
-              //     } );
-
-
-              //     twitter.postImageWithAltText( {
-              //       text: `${ datasetName } Source: ${datasetPermalink}`,
-              //       // image: body.toString('base64'),
-              //       image: body,
-              //       // image: "data:" + response.headers['content-type'] + ';base64,' + Buffer.from( body ).toString( 'base64' ),
-              //       // image:  `data:image/${type};base64,`+body.toString('base64'),
-              //       // image: "data:" + response.headers['content-type'] + ';base64,' + Buffer.from( body ).toString( 'base64' ),
-              //       alt: datasetName
-              //     } );
-
-              //   }
-              // );
-
-
-              // request.get({
-              //     'uri': mapUrl,
-              //     'encoding': null
-              //   },
-              //   function( err, resp, body ){
-
-              //     console.log( 'error:', err );
-
-              //     twitter.postImageWithAltText( {
-              //       text: `${ datasetName } Source: ${datasetPermalink}`,
-              //       // image: body.toString('base64'),
-              //       image: body,
-              //       // image:  `data:image/${type};base64,`+body.toString('base64'),
-              //       // image: "data:" + response.headers['content-type'] + ';base64,' + Buffer.from( body ).toString( 'base64' ),
-              //       alt: datasetName
-              //     } );
-
-              //   }
-              // );
-
-
-
               break;
             case 'datasets':
+              // TODO: Only map data is currently being processed.
               /* Set up your data.  */
 
               let introduced_count = 0,
@@ -302,14 +252,8 @@ module.exports = {
               } );
               break;
           }
-
         }
       } );
-
-
-
     } );
-
-
   }
 };

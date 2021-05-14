@@ -38,6 +38,7 @@ dependencies:
   tumblr.js: 1.1.1
   twit: 2.2.11
   underscore: 1.13.1
+  us-zips: 4.0.2
   utf-8-validate: 5.0.5
 packages:
   /@types/node/15.0.3:
@@ -2528,6 +2529,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
+  /us-zips/4.0.2:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-ITciRwQnRUkngVennzsZdMmREcsIRAXavm0Uh2vpTYeQGbrtmZstk0McOMDxHo1n4HteXtRkmSWAqhkW2RswiQ==
   /utf-8-validate/5.0.5:
     dependencies:
       node-gyp-build: 4.2.3
@@ -2720,4 +2727,5 @@ specifiers:
   tumblr.js: ^1.1.1
   twit: ^2.1.0
   underscore: ^1.10.2
+  us-zips: ^4.0.1
   utf-8-validate: ^5.0.2

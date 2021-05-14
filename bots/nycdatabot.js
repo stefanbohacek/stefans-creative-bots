@@ -4,13 +4,19 @@ const request = require( 'request' ),
       ChartjsNode = require( 'node-chartjs-v12' ),
       helpers = require(__dirname + '/../helpers/helpers.js'),
       cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
-      TwitterClient = require(__dirname + '/../helpers/twitter.js');
+      TwitterClient = require(__dirname + '/../helpers/twitter.js'),
+      mastodonClient = require(__dirname + '/../helpers/mastodon.js');
 
 const twitter = new TwitterClient( {
   consumer_key: process.env.NYCDATABOT_TWITTER_CONSUMER_KEY,
   consumer_secret: process.env.NYCDATABOT_TWITTER_CONSUMER_SECRET,
   access_token: process.env.NYCDATABOT_TWITTER_ACCESS_TOKEN,
   access_token_secret: process.env.NYCDATABOT_TWITTER_ACCESS_TOKEN_SECRET
+} );
+
+const mastodon = new mastodonClient( {
+ access_token: process.env.NYCDATABOT_MASTODON_ACCESS_TOKEN_SECRET,
+ api_url: process.env.NYCDATABOT_MASTODON_API
 } );
 
 function makeMap( datasetName, datasetPermalink, data, cb ){
@@ -49,9 +55,11 @@ function makeMap( datasetName, datasetPermalink, data, cb ){
       const imageType = imageResponse.headers['content-type'];
       const base64 = new Buffer( imageBody, 'binary').toString( 'base64' );
       const dataURI = 'data:' + imageType + ';base64,' + base64;
+    
+      const statusText = `${ datasetName }\nSource: ${datasetPermalink}\n#nyc #dataviz`;
 
       twitter.postImageWithAltText( {
-        text: `${ datasetName }\nSource: ${datasetPermalink}\n#nyc #dataviz`,
+        text: statusText,
         // image: body.toString('base64'),
         image: base64,
         // image: "data:" + response.headers['content-type'] + ';base64,' + Buffer.from( body ).toString( 'base64' ),
@@ -59,6 +67,8 @@ function makeMap( datasetName, datasetPermalink, data, cb ){
         // image: "data:" + response.headers['content-type'] + ';base64,' + Buffer.from( body ).toString( 'base64' ),
         alt: datasetName
       } );
+    
+      mastodon.postImage( statusText, base64 );
     }
   );
 }

@@ -144,7 +144,7 @@ function findDataset(){
   const dataSource = 'data.cityofnewyork.us';
   const dataType = helpers.randomFromArray( [
     'datasets',
-    // 'map'
+    'map'
   ] );
 
   const dataLimit = '1000';

@@ -19,6 +19,29 @@ const mastodon = new mastodonClient( {
  api_url: process.env.NYCDATABOT_MASTODON_API
 } );
 
+function getLongLat( datapoint ){
+  let dp = false;
+
+  if ( datapoint.longitude && datapoint.latitude && ( parseFloat( datapoint.longitude ) !== 0 && parseFloat( datapoint.latitude ) !== 0 ) ){
+    dp = {
+      longitude: datapoint.longitude,
+      latitude: datapoint.latitude
+    };
+  } else if ( datapoint.lon && datapoint.lat && ( parseFloat( datapoint.lon ) !== 0 && parseFloat( datapoint.lat ) !== 0 ) ){
+    dp = {
+      longitude: datapoint.lon,
+      latitude: datapoint.lat
+    };
+  } else if ( datapoint.location && datapoint.location.longitude && datapoint.location.latitude && ( parseFloat( datapoint.location.longitude ) !== 0 && parseFloat( datapoint.location.latitude ) !== 0 ) ){
+    dp = {
+      longitude: datapoint.location.longitude,
+      latitude: datapoint.location.latitude
+    };
+  }
+
+  return dp;
+}
+
 function makeMap( datasetName, datasetPermalink, data, cb ){
   /*
     https://docs.mapbox.com/help/glossary/static-images-api/
@@ -35,12 +58,10 @@ function makeMap( datasetName, datasetPermalink, data, cb ){
   data = helpers.randomFromArrayUnique( data, 100 );
 
   data.forEach( function( datapoint ){
-    if ( datapoint.longitude && datapoint.latitude ){
-      markers.push( `pin-s+555555(${ datapoint.longitude },${ datapoint.latitude })` )
-    } else if ( datapoint.lon && datapoint.lat ){
-      markers.push( `pin-s+555555(${ datapoint.lon },${ datapoint.lat })` )
-    } else if ( datapoint.location && datapoint.location.longitude && datapoint.location.latitude ){
-      markers.push( `pin-s+555555(${ datapoint.location.longitude },${ datapoint.location.latitude })` )
+    const location = getLongLat( datapoint );
+
+    if ( location ){
+      markers.push( `pin-s+555555(${ location.longitude },${ location.latitude })` )
     }
   } );
 
@@ -60,11 +81,7 @@ function makeMap( datasetName, datasetPermalink, data, cb ){
 
       twitter.postImageWithAltText( {
         text: statusText,
-        // image: body.toString('base64'),
         image: base64,
-        // image: "data:" + response.headers['content-type'] + ';base64,' + Buffer.from( body ).toString( 'base64' ),
-        // image:  `data:image/${type};base64,`+body.toString('base64'),
-        // image: "data:" + response.headers['content-type'] + ';base64,' + Buffer.from( body ).toString( 'base64' ),
         alt: datasetName
       } );
     
@@ -193,7 +210,8 @@ function findDataset(){
           datasetLabels = dataset.resource.columns_name,
           datasetPermalink = dataset.permalink;
 
-    console.log( 'loading data...', { datasetName, dataType, datasetUrl, datasetPermalink } );
+    dUrl = 'https://data.cityofnewyork.us/resource/smn3-rzf9.json';
+    console.log( 'loading data...', { datasetName, dataType, dUrl, datasetPermalink } );
 
     request( datasetUrl, function ( error, response, body ){
       let bodyParsed;

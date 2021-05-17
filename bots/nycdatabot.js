@@ -210,8 +210,7 @@ function findDataset(){
           datasetLabels = dataset.resource.columns_name,
           datasetPermalink = dataset.permalink;
 
-    dUrl = 'https://data.cityofnewyork.us/resource/smn3-rzf9.json';
-    console.log( 'loading data...', { datasetName, dataType, dUrl, datasetPermalink } );
+    console.log( 'loading data...', { datasetName, dataType, datasetUrl, datasetPermalink } );
 
     request( datasetUrl, function ( error, response, body ){
       let bodyParsed;

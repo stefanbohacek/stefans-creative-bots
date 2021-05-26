@@ -19,6 +19,65 @@ const mastodon = new mastodonClient( {
  api_url: process.env.NYCDATABOT_MASTODON_API
 } );
 
+
+function locationInRange( location, centerPoint, km ) {
+  km = km || 50;
+
+  var ky = 40000 / 360;
+  var kx = Math.cos( Math.PI * centerPoint.latitude / 180.0 ) * ky;
+  var dx = Math.abs( centerPoint.longitude - location.longitude ) * kx;
+  var dy = Math.abs( centerPoint.latitude - location.latitude ) * ky;
+  return Math.sqrt( dx * dx + dy * dy ) <= km;
+}
+
+
+function cleanupLocationData( locationData ){
+
+  let locationDataClean = [],
+      latitudes = [],
+      longitudes = [];
+
+  locationData.forEach( function( location ){
+    latitudes.push( parseFloat( location.latitude ) );
+    longitudes.push( parseFloat( location.longitude ) );
+  } );
+
+  const centerPoint = {
+    latitude: median( latitudes ),
+    longitude: median( longitudes )
+  };
+
+  // console.log( {latitudes, longitudes, centerPoint} );
+
+  locationData.forEach( function( location ){
+    if ( locationInRange( location, centerPoint, 50 ) ){
+      locationDataClean.push( location );
+    }
+  } );
+
+  return locationDataClean;
+}
+
+function median( values ){
+  if ( values.length === 0 ) return 0;
+
+  values.sort( function( a,b ){
+    return a - b;
+  } );
+
+  const half = Math.floor( values.length / 2 );
+
+  if ( values.length % 2 ){
+    return values[half];
+  }
+
+  return ( values[half - 1] + values[half] ) / 2.0;
+}
+
+function isBetween( x, min, max ){
+  return x >= min && x <= max;
+}
+
 function getLongLat( datapoint ){
   let dp = false;
 
@@ -52,8 +111,9 @@ function makeMap( datasetName, datasetPermalink, data, cb ){
 
   */
 
-  console.log( 'making a map...' );  
-  let markers = [];
+  console.log( 'making a map...' );
+  let locationData = [],
+      markers = [];
 
   data = helpers.randomFromArrayUnique( data, 100 );
 
@@ -61,8 +121,14 @@ function makeMap( datasetName, datasetPermalink, data, cb ){
     const location = getLongLat( datapoint );
 
     if ( location ){
-      markers.push( `pin-s+555555(${ location.longitude },${ location.latitude })` )
+      locationData.push( { longitude: location.longitude, latitude: location.latitude } );
     }
+  } );
+
+  locationData = cleanupLocationData( locationData );
+
+  locationData.forEach( function( location ){
+    markers.push( `pin-s+555555(${ location.longitude },${ location.latitude })` )
   } );
 
   const mapUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v10/static/${ markers.join( ',' ) }/auto/900x600?access_token=${ process.env.MAPBOX_ACCESS_TOKEN }`;
@@ -206,6 +272,7 @@ function findDataset(){
     const dataset = helpers.randomFromArray( datasets );
 
     const datasetUrl = `https://data.cityofnewyork.us/resource/${ dataset.resource.id }.json`,
+    // const datasetUrl = 'https://data.cityofnewyork.us/resource/tn4g-ski5.json',
           datasetName = dataset.resource.name,
           datasetLabels = dataset.resource.columns_name,
           datasetPermalink = dataset.permalink;

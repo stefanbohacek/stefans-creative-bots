@@ -346,7 +346,7 @@ module.exports = {
       url: 'https://botsin.space/@nycdatabot'
     }    
   ],
-  interval: cronSchedules.EVERY_THREE_HOURS,
+  interval: cronSchedules.EVERY_SIX_HOURS,
   script: function(){
     findDataset();
   }

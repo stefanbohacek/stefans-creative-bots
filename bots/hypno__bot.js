@@ -14,6 +14,11 @@ const twitter = new TwitterClient( {
   access_token_secret: process.env.HYPNOBOT_TWITTER_ACCESS_TOKEN_SECRET
 } );
 
+const mastodon = new mastodonClient( {
+    access_token: process.env.HYPNOBOT_MASTODON_ACCESS_TOKEN,
+    api_url: process.env.HYPNOBOT_MASTODON_API
+  } );
+
 module.exports = {
   active: true,
   name: '@hypno__bot',
@@ -40,6 +45,7 @@ module.exports = {
 
     generators.spiral( options, function( err, imageData ){
       twitter.postImage( statusText, imageData );
+      mastodon.postImage( statusText, imageData );
     } );  
   }
 };

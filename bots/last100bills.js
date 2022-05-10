@@ -5,13 +5,19 @@ const request = require( 'request' ),
       ChartjsNode = require( 'node-chartjs-v12' ),
       helpers = require(__dirname + '/../helpers/helpers.js'),
       cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
-      TwitterClient = require(__dirname + '/../helpers/twitter.js');
+      TwitterClient = require(__dirname + '/../helpers/twitter.js'),
+      mastodonClient = require(__dirname + '/../helpers/mastodon.js');
 
 const twitter = new TwitterClient( {
   consumer_key: process.env.LAST100BILLS_TWITTER_CONSUMER_KEY,
   consumer_secret: process.env.LAST100BILLS_TWITTER_CONSUMER_SECRET,
   access_token: process.env.LAST100BILLS_TWITTER_ACCESS_TOKEN,
   access_token_secret: process.env.LAST100BILLS_TWITTER_ACCESS_TOKEN_SECRET
+} );
+
+const mastodon = new mastodonClient( {
+  access_token: process.env.LAST100BILLS_MASTODON_ACCESS_TOKEN,
+  api_url: process.env.LAST100BILLS_MASTODON_API
 } );
 
 module.exports = {
@@ -148,6 +154,7 @@ module.exports = {
             const alt = `${ introduced_count } bills have been introduced, ${ pass_over_house_count } bills passed the House,  ${ passed_bill_count } bills passed the House & the Senate, ${ passed_concurrentres_count + passed_simpleres_count } bills have been agreed to, ${ reported_count } bills are being considered, and ${ enacted_signed_count } bills have been  enacted.`;
 
             twitter.postImageWithAltText( { text, image, alt } );
+            mastodon.postImage( text, image );
 
           } );
         } );

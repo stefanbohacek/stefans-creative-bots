@@ -69,5 +69,30 @@ module.exports = [
       name: 'RRS James Clark Ross',
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/',
       element: '.entry-content img[width="640"]'
+    },
+    {
+      name: 'RRS Sir David Attenborough Webcam',
+      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/',
+      element: '.entry-content img[width="1920"]'
+    },
+    {
+      name: 'Halley VI Station Webcam Archive',
+      url: 'https://legacy.bas.ac.uk/webcams/archive/cam.php?cam=5&position=1',
+      element: '.webcam_image main img'
+    },
+    {
+      name: 'King Edward Point webcam',
+      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/king-edward-point-webcam/',
+      element: '.entry-content img[width="640"]'
+    },
+    {
+      name: 'Rothera webcam',
+      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rothera-webcam/',
+      element: '.entry-content img[width="640"]'
+    },
+    {
+      name: 'Halley VI webcam',
+      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/halley-vi-webcam/',
+      element: '.entry-content img[width="1920"]'
     }
 ];

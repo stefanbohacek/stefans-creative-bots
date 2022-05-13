@@ -45,13 +45,13 @@ module.exports = {
 
     generators.pollock( options, function( err, imageDataGIF, imageDataStatic ){
       twitter.postImage( statusText, imageDataStatic, function( err, data, response ){
-        if ( data.id_str ){
+        if ( data && data.id_str ){
           twitter.postImage( statusText, imageDataGIF, null, data.id_str );
         }
       } );
 
       mastodon.postImage( statusText, imageDataStatic, function( err, data, response ){
-        if ( data.id ){
+        if ( data && data.id ){
           mastodon.postImage( statusText, imageDataGIF, null, data.id );
         }
       } );

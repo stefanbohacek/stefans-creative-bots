@@ -29,6 +29,10 @@ module.exports = {
     {
       title: 'Follow on Twitter',
       url: 'https://twitter.com/hypno__bot'
+    },
+    {
+      title: 'Follow on Mastodon',
+      url: 'https://botsin.space/@hypno__bot'
     }
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,

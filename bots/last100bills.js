@@ -30,6 +30,10 @@ module.exports = {
     {
       title: 'Follow on Twitter',
       url: 'https://twitter.com/last100bills'
+    },
+    {
+      title: 'Follow on Mastodon',
+      url: 'https://botsin.space/@last100bills'
     }
   ],
   interval: cronSchedules.EVERY_DAY_MORNING,

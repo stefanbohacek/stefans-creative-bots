@@ -65,11 +65,11 @@ module.exports = [
     //   url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-ernest-shackleton-webcam/',
     //   element: '.entry-content img[width="640"]'
     // },
-    {
-      name: 'RRS James Clark Ross',
-      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/',
-      element: '.entry-content img[width="640"]'
-    },
+    // {
+    //   name: 'RRS James Clark Ross',
+    //   url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/',
+    //   element: '.entry-content img[width="640"]'
+    // },
     {
       name: 'RRS Sir David Attenborough Webcam',
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/',

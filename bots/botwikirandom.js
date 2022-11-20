@@ -27,7 +27,11 @@ module.exports = {
     {
       title: 'Follow on Twitter',
       url: 'https://twitter.com/botwikirandom'
-    }
+    },
+    {
+      title: 'Follow on Mastodon',
+      url: 'https://botsin.space/@botwikirandom'
+    } 
   ],
   interval: cronSchedules.EVERY_THREE_HOURS,
   script: function(){

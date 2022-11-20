@@ -1,6 +1,6 @@
 const helpers = require(__dirname + '/../helpers/helpers.js'),
-      cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
-      emoji = require( __dirname + '/../data/emoji.js' ),
+      cronSchedules = require(__dirname + '/../helpers/cron-schedules.js'),
+      emoji = require(__dirname + '/../data/emoji.js' ),
       TwitterClient = require(__dirname + '/../helpers/twitter.js'),    
       mastodonClient = require(__dirname + '/../helpers/mastodon.js');
 

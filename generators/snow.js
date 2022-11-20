@@ -53,10 +53,10 @@ module.exports = function( options, cb ){
   ctx.lineWidth = 1;
   ctx.lineCap = 'round';
 
-  var mf = 100; //max flakes
-  var flakes = [];
+  let mf = helpers.getRandomInt(80, 210);
+  let flakes = [];
 
-  for(var i = 0; i < mf; i++){
+  for(let i = 0; i < mf; i++){
     flakes.push({
       x: Math.random()*width,
       y: Math.random()*height,
@@ -71,27 +71,27 @@ module.exports = function( options, cb ){
     ctx.fillStyle = color;
     ctx.fill();
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
 
     ctx.fillStyle = 'white';
     ctx.beginPath();
-    for(var i = 0; i < mf; i++){
-      var f = flakes[i];
+    for(let i = 0; i < mf; i++){
+      let f = flakes[i];
       ctx.moveTo(f.x, f.y);
       ctx.arc(f.x, f.y, f.r, 0, Math.PI*2, true);
     }
     ctx.fill();
-    moveFlakes();
+    move();
   }
 
-  var angle = 0;
-  function moveFlakes(){
-    angle += 0.01;
-    for(var i = 0; i < mf; i++){
-      var f = flakes[i];
+  let angle = helpers.getRandomRange(-0.8, 0.8, 3);
+  let direction = helpers.getRandomRange(-1, 1, 3);
 
-      f.y += Math.pow(f.d, 2) + 1;
-      f.x += Math.sin(angle) * 2;
+  function move(){
+    for(let i = 0; i < mf; i++){
+      let f = flakes[i];
+
+      f.y += Math.pow(f.d, 2) + direction;
+      f.x += angle;
 
       if(f.y > height){
         flakes[i] = {x: Math.random()*width, y: 0, r: f.r, d: f.d};

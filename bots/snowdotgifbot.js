@@ -15,10 +15,10 @@ const mastodon = new mastodonClient( {
 
 module.exports = {
   active: true,
-  name: 'rain.gif',
+  name: 'snow.gif',
   description: '🌨️',
-  thumbnail: 'https://botwiki.org/wp-content/uploads/2018/07/rain.gif.png',
-  about_url: 'https://botwiki.org/bot/rain-gif/',
+  thumbnail: 'https://botwiki.org/wp-content/uploads/2022/11/snowdotgif-botsinspace.png',
+  about_url: 'https://botwiki.org/bot/snow-gif/',
   links: [
     {
       title: 'Follow on botsin.space',

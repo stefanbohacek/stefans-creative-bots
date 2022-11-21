@@ -6,19 +6,30 @@ const fs = require( 'fs' ),
       cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
       stations = require( __dirname + '/../data/south-pole-stations.js' ),
       TwitterClient = require( __dirname + '/../helpers/twitter.js' ),    
-      mastodonClient = require( __dirname + '/../helpers/mastodon.js' );
+      mastodonClient = require( __dirname + '/../helpers/mastodon.js' ),
+      tumblrClient = require(__dirname + '/../helpers/tumblr.js');
 
 const twitter = new TwitterClient( {
   consumer_key: process.env.SOUTHPOLEVIEWSBOT_TWITTER_CONSUMER_KEY,
   consumer_secret: process.env.SOUTHPOLEVIEWSBOT_TWITTER_CONSUMER_SECRET,
   access_token: process.env.SOUTHPOLEVIEWSBOT_TWITTER_ACCESS_TOKEN,
   access_token_secret: process.env.SOUTHPOLEVIEWSBOT_TWITTER_ACCESS_TOKEN_SECRET
-}  );
+} );
 
 const mastodon = new mastodonClient( {
    access_token: process.env.SOUTHPOLEVIEWSBOT_MASTODON_ACCESS_TOKEN,
    api_url: process.env.SOUTHPOLEVIEWSBOT_MASTODON_API
-}  );
+} );
+
+
+const tumblr = new tumblrClient( {
+  tumblr_name: process.env.SOUTHPOLEVIEWS_TUMBLR_BLOG_NAME,  
+  consumer_key: process.env.SOUTHPOLEVIEWS_TUMBLR_CONSUMER_KEY,
+  consumer_secret: process.env.SOUTHPOLEVIEWS_TUMBLR_CONSUMER_SECRET,
+  token: process.env.SOUTHPOLEVIEWS_TUMBLR_CONSUMER_TOKEN,
+  token_secret: process.env.SOUTHPOLEVIEWS_TUMBLR_CONSUMER_TOKEN_SECRET
+} );
+
 
 module.exports = {
   active: true,
@@ -34,6 +45,10 @@ module.exports = {
     {
       title: 'Follow on botsin.space',
       url: 'https://botsin.space/@southpoleviews'
+    },
+    {
+      title: 'Follow on Tumblr',
+      url: 'https://southpoleviews.tumblr.com/'
     }
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
@@ -77,6 +92,7 @@ module.exports = {
             const text = `${station.name} via ${station.url}`;
             twitter.postImage( text, imgData  );
             mastodon.postImage( text, imgData  );
+            tumblr.postImage( text, imgData );
           } );
 
         } else {

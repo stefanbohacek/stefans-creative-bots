@@ -28,8 +28,8 @@ const grant = new Grant( {
     access_url: 'https://www.tumblr.com/oauth/access_token',
     oauth: 1,
     /* Change these based on which bot you need to authenticate. */
-    key: process.env.BOT_1_TUMBLR_CONSUMER_KEY,
-    secret: process.env.BOT_1_TUMBLR_CONSUMER_SECRET,
+    key: process.env.SOUTHPOLEVIEWS_TUMBLR_CONSUMER_KEY,
+    secret: process.env.SOUTHPOLEVIEWS_TUMBLR_CONSUMER_SECRET,
   }
 } );
 

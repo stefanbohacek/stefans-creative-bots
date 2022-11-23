@@ -342,7 +342,7 @@ module.exports = {
       url: 'https://twitter.com/nycdatabot'
     },
     {
-      title: 'Follow on botsin.space',
+      title: 'Follow on Mastodon',
       url: 'https://botsin.space/@nycdatabot'
     }    
   ],

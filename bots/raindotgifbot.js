@@ -39,7 +39,7 @@ module.exports = {
       url: 'https://twitter.com/raindotgifbot'
     },
     {
-      title: 'Follow on botsin.space',
+      title: 'Follow on Mastodon',
       url: 'https://botsin.space/@rain'
     },
     {

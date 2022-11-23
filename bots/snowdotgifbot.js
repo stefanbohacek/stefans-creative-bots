@@ -21,7 +21,7 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/snow-gif/',
   links: [
     {
-      title: 'Follow on botsin.space',
+      title: 'Follow on Mastodon',
       url: 'https://botsin.space/@snow'
     }
   ],

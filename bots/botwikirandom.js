@@ -34,12 +34,12 @@ module.exports = {
     } 
   ],
   interval: cronSchedules.EVERY_THREE_HOURS,
-  script: function(){
+  script: () => {
     console.log('picking a random bot from Botwiki... ');
 
     const botwikiURL = 'https://botwiki.org/wp-json/wp/v2/bot?filter[orderby]=rand&filter[posts_per_page]=1';
 
-    request(botwikiURL, function (error, response, body){
+    request(botwikiURL, (error, response, body) => {
       let bodyParsed;
 
       try{

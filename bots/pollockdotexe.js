@@ -44,17 +44,37 @@ module.exports = {
           };
 
     generators.pollock( options, function( err, imageDataGIF, imageDataStatic ){
-      twitter.postImage( statusText, imageDataStatic, function( err, data, response ){
+      twitter.postImage({
+        status: statusText,
+        image: imageDataStatic,
+        alt_text: 'Animated generative art in the style of Jackson Pollock.',
+      }, function( err, data, response ){
         if ( data && data.id_str ){
-          twitter.postImage( statusText, imageDataGIF, null, data.id_str );
+          twitter.postImage({
+            status: statusText,
+            image: imageDataGIF,
+            alt_text: 'Generative art in the style of Jackson Pollock',
+            in_reply_to_status_id: data.id_str
+          });    
         }
-      } );
+      });
 
-      mastodon.postImage( statusText, imageDataStatic, function( err, data, response ){
+      mastodon.postImage({
+        status: statusText,
+        image: imageDataStatic,
+        alt_text: 'Animated generative art in the style of Jackson Pollock.',
+      }, function( err, data, response ){
         if ( data && data.id ){
-          mastodon.postImage( statusText, imageDataGIF, null, data.id );
+          mastodon.postImage({
+            status: statusText,
+            image: imageDataGIF,
+            alt_text: 'Generative art in the style of Jackson Pollock',
+            in_reply_to_id: data.id
+          });
         }
-      } );
+      });  
     } ); 
+
+
   } 
 };

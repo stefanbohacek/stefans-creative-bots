@@ -1,26 +1,26 @@
-const fs = require( 'fs' ),
-      he = require( 'he' ),    
-      csvParse = require( 'csv-parse' ),
+const fs = require('fs'),
+      he = require('he'),    
+      csvParse = require('csv-parse'),
       helpers = require(__dirname + '/../helpers/helpers.js'),
       generators = {
         overlay: require(__dirname + '/../generators/overlay.js'),
       },    
-      cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
+      cronSchedules = require(__dirname + '/../helpers/cron-schedules.js'),
       TwitterClient = require(__dirname + '/../helpers/twitter.js'),    
       mastodonClient = require(__dirname + '/../helpers/mastodon.js'), 
       tumblrClient = require(__dirname + '/../helpers/tumblr.js');
 
-const twitter = new TwitterClient( {
+const twitter = new TwitterClient({
   consumer_key: process.env.HELLOWORLDBOT_TWITTER_CONSUMER_KEY,
   consumer_secret: process.env.HELLOWORLDBOT_TWITTER_CONSUMER_SECRET,
   access_token: process.env.HELLOWORLDBOT_TWITTER_ACCESS_TOKEN,
   access_token_secret: process.env.HELLOWORLDBOT_TWITTER_ACCESS_TOKEN_SECRET
-} );
+});
 
-const mastodon = new mastodonClient( {
+const mastodon = new mastodonClient({
  access_token: process.env.HELLOWORLDBOT_MASTODON_ACCESS_TOKEN,
  api_url: process.env.HELLOWORLDBOT_MASTODON_API
-} );
+});
 
 module.exports = {
   active: true,
@@ -39,22 +39,22 @@ module.exports = {
     }
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
-  script: function(){
-    fs.readFile( 'data/hello.csv', 'utf8', function( err, csvData ) {
-      if ( !err && csvData ){
-        csvParse( csvData , {
+  script: () => {
+    fs.readFile('data/hello.csv', 'utf8', (err, csvData) => {
+      if (!err && csvData){
+        csvParse(csvData , {
           comment: '#'
-        }, function( err, helloTranslations ){
+        }, (err, helloTranslations) => {
           helloTranslations.shift(); // Remove the table header
 
-          if (!err && helloTranslations && helloTranslations.length > 0 ){
+          if (!err && helloTranslations && helloTranslations.length > 0){
             // /* For testing. */ const randomTranslation = helloTranslations[69];
-            const randomTranslation = helpers.randomFromArray( helloTranslations );
+            const randomTranslation = helpers.randomFromArray(helloTranslations);
 
-            console.log( randomTranslation );
+            console.log(randomTranslation);
 
             const languageCode = randomTranslation[2],
-                  helloTranslation = he.decode( randomTranslation[3] ),
+                  helloTranslation = he.decode(randomTranslation[3]),
                   countryName = randomTranslation[1],
                   countryLat = randomTranslation[4],
                   countryLong = randomTranslation[5],
@@ -69,19 +69,19 @@ module.exports = {
 
             let fontFileName, fontFamily;
 
-            if ( languageCode === 'ja' ){
+            if (languageCode === 'ja'){
               fontFileName = 'Noto_Sans_JP-700-2.otf';
               fontFamily = 'Noto Sans JP';
-            } else if ( languageCode === 'zh' || languageCode === 'zh-hk' ){
+            } else if (languageCode === 'zh' || languageCode === 'zh-hk'){
               fontFileName = 'Noto_Sans_TC-700-9.otf';
               fontFamily = 'Noto Sans TC';
-            } else if ( languageCode === 'ar' || languageCode.indexOf( 'ar-') !== -1 ){
+            } else if (languageCode === 'ar' || languageCode.indexOf('ar-') !== -1){
               fontFileName = 'Cairo-700-3.ttf';
               fontFamily = 'Cairo';
-            } else if ( languageCode === 'bn' ){
+            } else if (languageCode === 'bn'){
               fontFileName = 'Hind_Siliguri-700-5.ttf';
               fontFamily = 'Hind Siliguri';
-            } else if ( languageCode === 'ka' ){
+            } else if (languageCode === 'ka'){
               fontFileName = 'Baloo_Tamma-400-1.ttf';
               fontFamily = 'Baloo Tamma';
             } else {
@@ -105,18 +105,27 @@ module.exports = {
                 style: '#fff',
                 position: 'center center'
               }    
-            ], { width, height }, function( err, imageData ){
+            ], { width, height }, (err, imageData) => {
               const statusText = `Hello from ${ countryName }! #helloworld`
               
-              console.log( 'statusText', statusText );
+              console.log('statusText', statusText);
 
-              twitter.postImage( statusText, imageData );
-              mastodon.postImage( statusText, imageData );      
+              twitter.postImage({
+                status: statusText,
+                image: imageData,
+                alt_text: `Map of ${ countryName } overlayed with a translation of the word "hello".`,
+              });
+
+              mastodon.postImage({
+                status: statusText,
+                image: imageData,
+                alt_text: `Map of ${ countryName } overlayed with a translation of the word "hello".`,
+              });
               
             });
           }
-        } );
+        });
       }
-    } );
+    });
   }
 };

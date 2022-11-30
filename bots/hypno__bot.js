@@ -1,5 +1,5 @@
 const helpers = require(__dirname + '/../helpers/helpers.js'),
-      cronSchedules = require( __dirname + '/../helpers/cron-schedules.js' ),
+      cronSchedules = require(__dirname + '/../helpers/cron-schedules.js'),
       generators = {
         spiral: require(__dirname + '/../generators/spiral.js')
       },    
@@ -7,17 +7,17 @@ const helpers = require(__dirname + '/../helpers/helpers.js'),
       mastodonClient = require(__dirname + '/../helpers/mastodon.js'), 
       tumblrClient = require(__dirname + '/../helpers/tumblr.js');
 
-const twitter = new TwitterClient( {
+const twitter = new TwitterClient({
   consumer_key: process.env.HYPNOBOT_TWITTER_CONSUMER_KEY,
   consumer_secret: process.env.HYPNOBOT_TWITTER_CONSUMER_SECRET,
   access_token: process.env.HYPNOBOT_TWITTER_ACCESS_TOKEN,
   access_token_secret: process.env.HYPNOBOT_TWITTER_ACCESS_TOKEN_SECRET
-} );
+});
 
-const mastodon = new mastodonClient( {
+const mastodon = new mastodonClient({
     access_token: process.env.HYPNOBOT_MASTODON_ACCESS_TOKEN,
     api_url: process.env.HYPNOBOT_MASTODON_API
-  } );
+  });
 
 module.exports = {
   active: true,
@@ -36,20 +36,29 @@ module.exports = {
     }
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
-  script: function(){
+  script: () => {
     const color = helpers.getRandomHex();
 
     const statusText = '',
           options = {
             color: color,
-            background: helpers.shadeColor(helpers.invertColor( color ), 0.5),
+            background: helpers.shadeColor(helpers.invertColor(color), 0.5),
             width: 640,
             height: 480,
           };
 
-    generators.spiral( options, function( err, imageData ){
-      twitter.postImage( statusText, imageData );
-      mastodon.postImage( statusText, imageData );
-    } );  
+    generators.spiral(options, (err, imageData) => {
+      twitter.postImage({
+        status: statusText,
+        image: imageData,
+        alt_text: `Animated spiral.`,
+      });
+
+      mastodon.postImage({
+        status: statusText,
+        image: imageData,
+        alt_text: `Animated spiral.`,
+      });
+    });  
   }
 };

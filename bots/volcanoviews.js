@@ -38,13 +38,19 @@ module.exports = {
     }
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
-  script: function(){
+  script: () => {
     const volcano = helpers.randomFromArray(volcanoes);
     console.log(volcano);
 
-    helpers.loadImage(volcano.url, function(err, imgData){
+    helpers.loadImage(volcano.url, (err, imgData) => {
       const text = `${volcano.name} via ${volcano.page_url}`;
-      mastodon.postImage(`${text} #volcano #nature`, imgData);
+
+      mastodon.postImage({
+        status: `${text} #volcano #nature`,
+        image: imgData,
+        alt_text: 'Webcam view of a volcano.',
+      });
+
       // tumblr.postImage(text, imgData);
     });
   } 

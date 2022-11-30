@@ -12,7 +12,7 @@ const twitter = new TwitterClient({
 }, true);
 
 module.exports = {
-  active: true,
+  active: false,
   name: 'Would you rather fight?',
   description: 'If you *had* to choose.',
   thumbnail: '',
@@ -37,11 +37,11 @@ module.exports = {
 
     console.log({ tweetText, options });
 
-    twitter.pollLegacy(
-      tweetText,
-      options
-   ).then((tweet) => {
-      console.log(`https://twitter.com/${ tweet.user.screen_name }/status/${ tweet.id_str }`);
-    });    
+   //  twitter.pollLegacy(
+   //    tweetText,
+   //    options
+   // ).then((tweet) => {
+   //    console.log(`https://twitter.com/${ tweet.user.screen_name }/status/${ tweet.id_str }`);
+   //  });    
   }
 };

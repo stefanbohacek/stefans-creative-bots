@@ -15,6 +15,26 @@ const path = require( 'path' ),
 // const bot = require( __dirname + '/bots/volcanoviews.js' );
 // bot.script();
 
+// const allBots = [
+//     'botwikirandom',
+//     'emoji__polls',
+//     'helloworld__bot',
+//     'hypno__bot',
+//     'last100bills',
+//     'nycdatabot',
+//     'nycviewsbot',
+//     'pollockdotexe',
+//     'raindotgifbot',
+//     'snowdotgifbot',
+//     'southpoleviews',
+//     'volcanoviews'    
+// ];
+
+// allBots.forEach(bot => {
+//     bot = require( __dirname + `/bots/${bot}.js` );
+//     bot.script();
+// });
+
 // https://github.com/fourtonfish/stefans-creative-bots/commit/d4bacb18d5b8c5521297fdd24eddbf763d8d317b#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5
 // node node_modules/puppeteer/install.js
 

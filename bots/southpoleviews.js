@@ -90,8 +90,21 @@ module.exports = {
 
           helpers.loadImage(imgURL, (err, imgData) => {
             const text = `${station.name} via ${station.url}`;
-            twitter.postImage(text, imgData );
-            mastodon.postImage(text, imgData );
+
+
+
+            twitter.postImage({
+              status: text,
+              image: imgData,
+              alt_text: 'Animdated GIF of rain.',
+            });
+            
+            mastodon.postImage({
+              status: text,
+              image: imgData,
+              alt_text: 'Animdated GIF of rain.',
+            });
+
             tumblr.postImage(text, imgData);
           });
 

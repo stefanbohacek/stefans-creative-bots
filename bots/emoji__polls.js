@@ -37,7 +37,7 @@ module.exports = {
     const options = helpers.randomFromArrayUnique(emoji, 4);
     const text = options.join(' ') + ' #emoji';
     console.log({ text, options });
-    twitter.pollLegacy(text, options);
+    // twitter.pollLegacy(text, options);
     mastodon.poll(text, options);
 
     // const optionsObj = {

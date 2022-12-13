@@ -35,7 +35,7 @@ module.exports = {
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: () => {
     const options = helpers.randomFromArrayUnique(emoji, 4);
-    const text = options.join(' ') + ' #emoji';
+    const text = options.join(' ') + ' #emoji #poll';
     console.log({ text, options });
     // twitter.pollLegacy(text, options);
     mastodon.poll(text, options);

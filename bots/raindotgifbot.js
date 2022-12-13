@@ -63,7 +63,7 @@ module.exports = {
       twitter.postImage({
         status: statusText,
         image: imageData,
-        alt_text: 'Animdated GIF of rain.',
+        alt_text: 'Animated GIF of rain.',
       });
       
       mastodon.postImage({

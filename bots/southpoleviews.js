@@ -96,13 +96,13 @@ module.exports = {
             twitter.postImage({
               status: text,
               image: imgData,
-              alt_text: 'Animdated GIF of rain.',
+              alt_text: `View from the ${station.name}.`,
             });
             
             mastodon.postImage({
               status: text,
               image: imgData,
-              alt_text: 'Animdated GIF of rain.',
+              alt_text: `View from the ${station.name}.`,
             });
 
             tumblr.postImage(text, imgData);

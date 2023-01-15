@@ -1,18 +1,18 @@
-if ( !process.env.PROJECT_NAME || !process.env.PROJECT_ID ){
-  require( 'dotenv' ).config();
+if (!process.env.PROJECT_NAME || !process.env.PROJECT_ID){
+  require('dotenv').config();
 }
 
-const path = require( 'path' ),
-      fs = require( 'fs' ),
-      express = require( 'express' ),
+const path = require('path'),
+      fs = require('fs'),
+      express = require('express'),
       app = require(__dirname + '/app.js'),
       helpers = require(__dirname + '/helpers/helpers.js'),
-      CronJob = require( 'cron' ).CronJob,
-      cronSchedules = require( __dirname + '/helpers/cron-schedules.js' );
+      CronJob = require('cron').CronJob,
+      cronSchedules = require(__dirname + '/helpers/cron-schedules.js');
 
 /* All bots will be automatically loaded from the "bots" folder. For testing a single bot: */
 
-// const bot = require( __dirname + '/bots/southpoleviews.js' );
+// const bot = require(__dirname + '/bots/southpoleviews.js');
 // bot.script();
 
 // const allBots = [
@@ -31,58 +31,58 @@ const path = require( 'path' ),
 // ];
 
 // allBots.forEach(bot => {
-//     bot = require( __dirname + `/bots/${bot}.js` );
+//     bot = require(__dirname + `/bots/${bot}.js`);
 //     bot.script();
 // });
 
 // https://github.com/fourtonfish/stefans-creative-bots/commit/d4bacb18d5b8c5521297fdd24eddbf763d8d317b#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5
 // node node_modules/puppeteer/install.js
 
-const files = fs.readdirSync( __dirname + '/bots' );
+const files = fs.readdirSync(__dirname + '/bots');
 let bots = [];
 
-files.forEach( function( file ){
-  const bot = require( __dirname + '/bots/' + file );
+files.forEach((file) => {
+  const bot = require(__dirname + '/bots/' + file);
 
-  if ( bot.active ){
+  if (bot.active){
     bot.file = file;
 
-    if ( !bot.name ){
-      bot.name = bot.file.replace( '.js', '' );
+    if (!bot.name){
+      bot.name = bot.file.replace('.js', '');
     }
     
-    if ( bot.interval ){
+    if (bot.interval){
       let botInterval;
 
       for (const schedule in cronSchedules) {
-        if ( cronSchedules[schedule] === bot.interval ){
+        if (cronSchedules[schedule] === bot.interval){
           botInterval = schedule;
         }
       }
       
-      if ( botInterval.length === 0 ){
+      if (botInterval.length === 0){
         botInterval = bot.interval;
       } else {
-        botInterval = helpers.capitalizeFirstLetter( botInterval.replace( /_/g, ' ' ) );
+        botInterval = helpers.capitalizeFirstLetter(botInterval.replace(/_/g, ' '));
       }
       
       bot.interval_human = botInterval;
 
-      console.log( `⌛ scheduling ${ bot.name } (${file}): ${ botInterval }` );
+      console.log(`⌛ scheduling ${ bot.name } (${file}): ${ botInterval }`);
 
-      const job = new CronJob( bot.interval, function() { bot.script() } );
+      const job = new CronJob(bot.interval, () => { bot.script() });
       bot.cronjob = job;
 
       job.start();
-      console.log( '📅 next run:', job.nextDates().fromNow() );
-      bots.push( bot );
+      console.log('📅 next run:', job.nextDates().fromNow());
+      bots.push(bot);
     }
   }
-} );
+});
 
-app.set( 'bots', bots );
+app.set('bots', bots);
 
-let listener = app.listen( process.env.PORT, function(){
-  console.log( '🤖 bots have been scheduled' );
-  console.log( '🕒 server time: ', ( new Date() ).toTimeString() );
-} );
+let listener = app.listen(process.env.PORT, () => {
+  console.log('🤖 bots have been scheduled');
+  console.log('🕒 server time: ', (new Date()).toTimeString());
+});

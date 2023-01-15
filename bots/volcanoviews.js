@@ -25,8 +25,8 @@ module.exports = {
   active: true,
   name: '@volcanoviews',
   description: 'Views of volcanoes.',
-  // thumbnail: 'https://botwiki.org/wp-content/uploads/2018/08/-volcanoviews.png',
-  // about_url: 'https://botwiki.org/bot/volcanoviews/',
+  thumbnail: 'https://botwiki.org/wp-content/uploads/2022/12/views-of-volcanoes-1670623386.png',
+  about_url: 'https://botwiki.org/bot/views-of-volcanoes/',
   links: [
     {
       title: 'Follow on Mastodon',

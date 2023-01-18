@@ -12,7 +12,7 @@ const path = require('path'),
 
 /* All bots will be automatically loaded from the "bots" folder. For testing a single bot: */
 
-// const bot = require(__dirname + '/bots/southpoleviews.js');
+// const bot = require(__dirname + '/bots/introspectorbot.js');
 // bot.script();
 
 // const allBots = [

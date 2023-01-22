@@ -32,10 +32,6 @@ module.exports = {
   thumbnail: 'https://botwiki.org/wp-content/uploads/2018/02/Introspectorbot.png',
   about_url: 'https://botwiki.org/bot/introspectorbot/',
   links: [
-    {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/INTROSPECTORBOT'
-    },
     // {
     //   title: 'Follow on Mastodon',
     //   url: 'TODO'
@@ -43,7 +39,11 @@ module.exports = {
     // {
     //   title: 'Follow on Tumblr',
     //   url: 'TODO'
-    // }
+    // },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/INTROSPECTORBOT'
+    }
   ],
   interval: cronSchedules.EVERY_DAY_MORNING,
   script: () => {

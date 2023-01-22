@@ -28,13 +28,13 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/last100bills/',
   links: [
     {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/last100bills'
-    },
-    {
       title: 'Follow on Mastodon',
       url: 'https://botsin.space/@last100bills'
-    }
+    },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/last100bills'
+    }    
   ],
   interval: cronSchedules.EVERY_DAY_MORNING,
   script: () => {

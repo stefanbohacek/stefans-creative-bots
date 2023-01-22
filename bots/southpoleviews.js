@@ -39,17 +39,17 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/southpoleviews/',
   links: [
     {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/southpoleviews'
-    },
-    {
       title: 'Follow on Mastodon',
       url: 'https://botsin.space/@southpoleviews'
     },
     {
       title: 'Follow on Tumblr',
       url: 'https://southpoleviews.tumblr.com/'
-    }
+    },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/southpoleviews'
+    }    
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: () => {
@@ -89,9 +89,7 @@ module.exports = {
           }
 
           helpers.loadImage(imgURL, (err, imgData) => {
-            const text = `${station.name} via ${station.url}`;
-
-
+            const text = `${station.name} via ${station.url} #SouthPole #antarctica #view #webcam`;
 
             twitter.postImage({
               status: text,

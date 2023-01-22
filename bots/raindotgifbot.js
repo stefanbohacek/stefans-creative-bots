@@ -35,24 +35,24 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/rain-gif/',
   links: [
     {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/raindotgifbot'
-    },
-    {
       title: 'Follow on Mastodon',
       url: 'https://botsin.space/@rain'
     },
     {
       title: 'Follow on Tumblr',
       url: 'https://raindotgif.tumblr.com/'
-    }
+    },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/raindotgifbot'
+    }    
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: () => {
     const statusText = helpers.randomFromArray([
-            '🌧️ #rain',
-            '🌧️🌧️ #rain',
-            '🌧️🌧️🌧️ #rain'
+            '🌧️ #rain #weather #gif',
+            '🌧️🌧️ #rain #weather #gif',
+            '🌧️🌧️🌧️ #rain #weather #gif'
           ]),
           options = {
             width: 640,

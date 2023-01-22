@@ -30,13 +30,13 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/hello-world/',
   links: [
     {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/helloworld__bot'
-    },
-    {
       title: 'Follow on Mastodon',
       url: 'https://botsin.space/@helloworld'
-    }
+    },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/helloworld__bot'
+    }    
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: () => {

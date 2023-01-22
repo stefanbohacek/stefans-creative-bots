@@ -272,12 +272,12 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/data-of-new-york/',
   links: [
     {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/nycdatabot'
-    },
-    {
       title: 'Follow on Mastodon',
       url: 'https://botsin.space/@nycdatabot'
+    },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/nycdatabot'
     }    
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,

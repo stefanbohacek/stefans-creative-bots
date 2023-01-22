@@ -28,9 +28,9 @@ module.exports = {
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: () => {
     const statusText = helpers.randomFromArray([
-            '🌨️ #snow',
-            '🌨️🌨️ #snow',
-            '🌨️🌨️🌨️ #snow'
+            '🌨️ #snow #weather #gif',
+            '🌨️🌨️ #snow #weather #gif',
+            '🌨️🌨️🌨️ #snow #weather #gif'
           ]),
           options = {
             width: 640,

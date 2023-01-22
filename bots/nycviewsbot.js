@@ -33,17 +33,17 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/views-from-new-york/',
   links: [
     {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/nycviewsbot'
-    },
-    {
       title: 'Follow on Mastodon',
       url: 'https://botsin.space/@nycviewsbot'
     },
     {
       title: 'Follow on Tumblr',
       url: 'https://nycviewsbot.tumblr.com/'
-    }
+    },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/nycviewsbot'
+    }    
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: () => {
@@ -62,7 +62,7 @@ module.exports = {
         const windyWebcamUrl = `📷 https://www.windy.com/-Webcams/United-States/Minnesota/Delhi/New-York/webcams/${data.id}`;
         const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${data.location.latitude},${data.location.longitude}`;
 
-        let text = `${webcamTitle}\n${windyWebcamUrl}\n${googleMapsUrl} #nyc`;
+        let text = `${webcamTitle}\n${windyWebcamUrl}\n${googleMapsUrl} #nyc #webcam #city`;
 
         helpers.loadImage(data.image.current.preview, (err, imgData) => {
           if (err){

@@ -24,13 +24,13 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/emoji__polls/',
   links: [
     {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/emoji__polls'
-    },
-    {
       title: 'Follow on Mastodon',
       url: 'https://botsin.space/@emoji__polls'
-    }
+    },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/emoji__polls'
+    }    
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: () => {

@@ -27,17 +27,17 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/pollock-exe/',
   links: [
     {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/pollockdotexe'
-    },
-    {
       title: 'Follow on Mastodon',
       url: 'https://botsin.space/@pollockdotexe'
-    }
+    },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/pollockdotexe'
+    }    
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: function(){
-    const statusText = '🎨🤖 #generativeart',
+    const statusText = '🎨🤖 #GenerativeArt',
           options = {
             width: 1184,
             height: 506,

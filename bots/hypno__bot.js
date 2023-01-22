@@ -27,19 +27,19 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/hypno__bot/',
   links: [
     {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/hypno__bot'
-    },
-    {
       title: 'Follow on Mastodon',
       url: 'https://botsin.space/@hypno__bot'
-    }
+    },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/hypno__bot'
+    }    
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: () => {
     const color = helpers.getRandomHex();
 
-    const statusText = '',
+    const statusText = '#hypnosis #spiral #gif #GenerativeArt',
           options = {
             color: color,
             background: helpers.shadeColor(helpers.invertColor(color), 0.5),

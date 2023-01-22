@@ -25,13 +25,13 @@ module.exports = {
   about_url: 'https://botwiki.org/bot/random-bots-from-botwiki/',
   links: [
     {
-      title: 'Follow on Twitter',
-      url: 'https://twitter.com/botwikirandom'
-    },
-    {
       title: 'Follow on Mastodon',
       url: 'https://botsin.space/@botwikirandom'
-    } 
+    },
+    {
+      title: 'Follow on Twitter',
+      url: 'https://twitter.com/botwikirandom'
+    }
   ],
   interval: cronSchedules.EVERY_THREE_HOURS,
   script: () => {
@@ -65,10 +65,12 @@ module.exports = {
 
         if (bot.tags && bot.tags.indexOf('generative') != -1 && bot.tags.indexOf('images') != -1){
             text += ' #generativeart';    
-        } 
+        }
+        
+        text += ' #bots #CreativeBots #CreativeCoding';
         
         twitter.tweet(text);
-        mastodon.toot(text + ' #bots');
+        mastodon.toot(text);
       }
     });
   }

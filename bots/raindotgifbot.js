@@ -43,7 +43,7 @@ module.exports = {
       url: 'https://raindotgif.tumblr.com/'
     },
     {
-      title: 'Follow on Twitter',
+      title: 'Twitter archive',
       url: 'https://twitter.com/raindotgifbot'
     }    
   ],
@@ -60,11 +60,11 @@ module.exports = {
           };
 
     generators.rain(options, (err, imageData) => {
-      twitter.postImage({
-        status: statusText,
-        image: imageData,
-        alt_text: 'Animated GIF of rain.',
-      });
+//       twitter.postImage({
+//         status: statusText,
+//         image: imageData,
+//         alt_text: 'Animated GIF of rain.',
+//       });
       
       mastodon.postImage({
         status: statusText,

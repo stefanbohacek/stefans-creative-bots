@@ -47,7 +47,7 @@ module.exports = {
       url: 'https://southpoleviews.tumblr.com/'
     },
     {
-      title: 'Follow on Twitter',
+      title: 'Twitter archive',
       url: 'https://twitter.com/southpoleviews'
     }    
   ],
@@ -91,11 +91,11 @@ module.exports = {
           helpers.loadImage(imgURL, (err, imgData) => {
             const text = `${station.name} via ${station.url} #SouthPole #antarctica #view #webcam`;
 
-            twitter.postImage({
-              status: text,
-              image: imgData,
-              alt_text: `View from the ${station.name}.`,
-            });
+//             twitter.postImage({
+//               status: text,
+//               image: imgData,
+//               alt_text: `View from the ${station.name}.`,
+//             });
             
             mastodon.postImage({
               status: text,

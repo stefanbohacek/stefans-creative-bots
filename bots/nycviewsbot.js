@@ -41,7 +41,7 @@ module.exports = {
       url: 'https://nycviewsbot.tumblr.com/'
     },
     {
-      title: 'Follow on Twitter',
+      title: 'Twitter archive',
       url: 'https://twitter.com/nycviewsbot'
     }    
   ],
@@ -69,11 +69,11 @@ module.exports = {
             console.log(err);     
           }
           else{
-            twitter.postImage({
-              status: text,
-              image: imgData,
-              alt_text: `Webcam view from ${webcamTitle}`,
-            });
+            // twitter.postImage({
+            //   status: text,
+            //   image: imgData,
+            //   alt_text: `Webcam view from ${webcamTitle}`,
+            // });
 
             mastodon.postImage({
               status: text,

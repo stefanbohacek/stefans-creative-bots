@@ -29,7 +29,7 @@ module.exports = {
       url: 'https://botsin.space/@botwikirandom'
     },
     {
-      title: 'Follow on Twitter',
+      title: 'Twitter archive',
       url: 'https://twitter.com/botwikirandom'
     }
   ],
@@ -69,7 +69,7 @@ module.exports = {
         
         text += ' #bots #CreativeBots #CreativeCoding';
         
-        twitter.tweet(text);
+        // twitter.tweet(text);
         mastodon.toot(text);
       }
     });

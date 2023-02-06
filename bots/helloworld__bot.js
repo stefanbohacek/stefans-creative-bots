@@ -34,7 +34,7 @@ module.exports = {
       url: 'https://botsin.space/@helloworld'
     },
     {
-      title: 'Follow on Twitter',
+      title: 'Twitter archive',
       url: 'https://twitter.com/helloworld__bot'
     }    
   ],
@@ -110,11 +110,11 @@ module.exports = {
               
               console.log('statusText', statusText);
 
-              twitter.postImage({
-                status: statusText,
-                image: imageData,
-                alt_text: `Map of ${ countryName } overlayed with a translation of the word "hello".`,
-              });
+              // twitter.postImage({
+              //   status: statusText,
+              //   image: imageData,
+              //   alt_text: `Map of ${ countryName } overlayed with a translation of the word "hello".`,
+              // });
 
               mastodon.postImage({
                 status: statusText,

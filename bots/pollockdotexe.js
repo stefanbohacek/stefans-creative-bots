@@ -31,7 +31,7 @@ module.exports = {
       url: 'https://botsin.space/@pollockdotexe'
     },
     {
-      title: 'Follow on Twitter',
+      title: 'Twitter archive',
       url: 'https://twitter.com/pollockdotexe'
     }    
   ],
@@ -44,20 +44,20 @@ module.exports = {
           };
 
     generators.pollock( options, function( err, imageDataGIF, imageDataStatic ){
-      twitter.postImage({
-        status: statusText,
-        image: imageDataStatic,
-        alt_text: 'Animated generative art in the style of Jackson Pollock.',
-      }, function( err, data, response ){
-        if ( data && data.id_str ){
-          twitter.postImage({
-            status: statusText,
-            image: imageDataGIF,
-            alt_text: 'Generative art in the style of Jackson Pollock',
-            in_reply_to_status_id: data.id_str
-          });    
-        }
-      });
+      // twitter.postImage({
+      //   status: statusText,
+      //   image: imageDataStatic,
+      //   alt_text: 'Animated generative art in the style of Jackson Pollock.',
+      // }, function( err, data, response ){
+      //   if ( data && data.id_str ){
+      //     twitter.postImage({
+      //       status: statusText,
+      //       image: imageDataGIF,
+      //       alt_text: 'Generative art in the style of Jackson Pollock',
+      //       in_reply_to_status_id: data.id_str
+      //     });    
+      //   }
+      // });
 
       mastodon.postImage({
         status: statusText,

@@ -31,7 +31,7 @@ module.exports = {
       url: 'https://botsin.space/@hypno__bot'
     },
     {
-      title: 'Follow on Twitter',
+      title: 'Twitter archive',
       url: 'https://twitter.com/hypno__bot'
     }    
   ],
@@ -48,11 +48,11 @@ module.exports = {
           };
 
     generators.spiral(options, (err, imageData) => {
-      twitter.postImage({
-        status: statusText,
-        image: imageData,
-        alt_text: `Animated spiral.`,
-      });
+      // twitter.postImage({
+      //   status: statusText,
+      //   image: imageData,
+      //   alt_text: `Animated spiral.`,
+      // });
 
       mastodon.postImage({
         status: statusText,

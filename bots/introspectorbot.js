@@ -41,7 +41,7 @@ module.exports = {
     //   url: 'TODO'
     // },
     {
-      title: 'Follow on Twitter',
+      title: 'Twitter archive',
       url: 'https://twitter.com/INTROSPECTORBOT'
     }
   ],
@@ -56,11 +56,11 @@ module.exports = {
         
         const statusText = '';
 
-        twitter.postImage({
-          status: statusText,
-          image: imageData,
-          alt_text: 'Animated GIF of rain.',
-        });
+        // twitter.postImage({
+        //   status: statusText,
+        //   image: imageData,
+        //   alt_text: 'Animated GIF of rain.',
+        // });
         
         // mastodon.postImage({
         //   status: statusText,

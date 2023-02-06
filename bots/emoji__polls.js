@@ -28,7 +28,7 @@ module.exports = {
       url: 'https://botsin.space/@emoji__polls'
     },
     {
-      title: 'Follow on Twitter',
+      title: 'Twitter archive',
       url: 'https://twitter.com/emoji__polls'
     }    
   ],

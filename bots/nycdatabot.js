@@ -145,11 +145,11 @@ const makeMap = (datasetName, datasetPermalink, data, cb) => {
     
       const statusText = `${ datasetName }\nSource: ${datasetPermalink}\n#nyc #data #dataviz`;
 
-      twitter.postImage({
-        status: statusText,
-        image: base64,
-        alt_text: datasetName,
-      });
+      // twitter.postImage({
+      //   status: statusText,
+      //   image: base64,
+      //   alt_text: datasetName,
+      // });
       
       mastodon.postImage({
         status: statusText,
@@ -276,7 +276,7 @@ module.exports = {
       url: 'https://botsin.space/@nycdatabot'
     },
     {
-      title: 'Follow on Twitter',
+      title: 'Twitter archive',
       url: 'https://twitter.com/nycdatabot'
     }    
   ],

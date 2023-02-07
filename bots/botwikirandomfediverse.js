@@ -22,7 +22,7 @@ module.exports = {
   name: '@botwikirandomfediverse',
   description: 'Explore Botwiki one fediverse bot at a time.',
   thumbnail: 'https://botwiki.org/wp-content/uploads/2021/01/botwikirandom.png',
-  about_url: 'https://botwiki.org/bot/random-bots-from-botwiki/',
+  // about_url: 'https://botwiki.org/bot/random-bots-from-botwiki/',
   links: [
     {
       title: 'Follow on Mastodon',
@@ -45,25 +45,32 @@ module.exports = {
         return false;
       }
       
-      // console.log(bodyParsed[0])
-
       if (bodyParsed && bodyParsed.length){
-        const bot = {
-          name: he.decode(bodyParsed[0].title.rendered),
-          description: he.decode(bodyParsed[0].excerpt.rendered),
-          url: bodyParsed[0].link,
-          tags: bodyParsed[0].tags_full,
-        };
+        console.log('debug:@botwikirandomfediverse', {
+          'title': bodyParsed[0].title.rendered,
+          'url': bodyParsed[0].meta.bot_url,
+          'networks': bodyParsed[0].network
+        });
 
-        let text = `${bot.description}\n\n${bot.url}`;
-
-        if (bot.tags && bot.tags.indexOf('generative') != -1 && bot.tags.indexOf('images') != -1){
-            text += ' #generativeart';    
+        if (bodyParsed[0].network.indexOf('2586') !== -1){
+          const bot = {
+            name: he.decode(bodyParsed[0].title.rendered),
+            description: he.decode(bodyParsed[0].excerpt.rendered),
+            url: bodyParsed[0].link,
+            tags: bodyParsed[0].tags_full,
+          };
+  
+  
+          let text = `${bot.description}\n\n${bot.url}`;
+  
+          if (bot.tags && bot.tags.indexOf('generative') != -1 && bot.tags.indexOf('images') != -1){
+              text += ' #generativeart';    
+          }
+          
+          text += ' #bots #CreativeBots #CreativeCoding #fediverse';
+          
+          mastodon.toot(text);
         }
-        
-        text += ' #bots #CreativeBots #CreativeCoding #fediverse';
-        
-        mastodon.toot(text);
       }
     });
   }

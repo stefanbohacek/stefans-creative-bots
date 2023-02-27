@@ -40,12 +40,6 @@ module.exports = {
       }
 
       if (bodyParsed && bodyParsed.length) {
-        console.log("debug:@botwikirandomfediverse", {
-          title: bodyParsed[0].title.rendered,
-          url: bodyParsed[0].meta.bot_url,
-          networks: bodyParsed[0].network,
-        });
-
         const bot = {
           name: he.decode(bodyParsed[0].title.rendered),
           description: he.decode(bodyParsed[0].excerpt.rendered),

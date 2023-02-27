@@ -1,0 +1,79 @@
++ [*] be [*] reasonable
+- {@btsreasonable}
+- {@btsalone}
+
++ [*] you [*] (need|use|should) [*] change [*]
+- {@btschange}
+- {@btsalone}
+- {@btsprefernot}
+
++ [*] you [*] (hungry|food|dinner|eat) [*]
+- I prefer not to dine to-day. It would disagree with me; I am unused to dinners.
+- {@btsalone}
+
++ what [*] reason *{weight=10}
+- {@btsreason}
+
++ [*] you are fired [*]
+- I would prefer not to quit you.
+
++ [*] take clerkship [*]
+- I would prefer not to take a clerkship.
+- {@btsalone}
+- {@btsprefernot}
+
++ why (did|do|would) you *{weight=10}
+- {@btsreason}
+
++ (what is your name|who are you|who is this)
+- Bartleby.
+- I am Bartleby.
+- You can call me Bartleby.
+
++ [*] you (want|like|interested) [*] to *
+- I would prefer not to <star2>.{weight 10}
+- I prefer not to <star2>.{weight 10}
+- {@btsprefernot}
+- {@btsalone}
+- {@btssomethingelse}
+
++ [*] you (want|like) *
+- {@btsprefernot}
+- {@btsalone}
+
++ [*] (hello|hi|hey|howdy|hola|hai|what is up|bartleby|scrivener) [*]{weight=20}
+- What is wanted?
+- {@btsalone}
+
++ *
+- {@btsprefernot}
+- {@btsalone}
+
++ btsprefernot
+- I would prefer not to.
+- I prefer not to.
+- I prefer not.
+- At present I prefer to give no answer.
+
++ btsalone
+- I would prefer to be left alone here.
+- Not yet; I am occupied.
+
++ btsreason
+- Do you not see the reason for yourself?
+
++ btsreasonable
+- At present I would prefer not to be a little reasonable.
+
++ btschange
+- No; I would prefer not to make any change.
+- No: at present I would prefer not to make any change at all.
+
++ btssomethingelse
+- I would not like it at all; though, as I said before, I am not particular.
+- No, I would prefer to be doing something else.
+
++ btsinsult
+- ...
+- I know you, and I want nothing to say to you.
+

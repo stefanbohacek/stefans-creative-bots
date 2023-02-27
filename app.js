@@ -28,8 +28,8 @@ const grant = new Grant({
     access_url: 'https://www.tumblr.com/oauth/access_token',
     oauth: 1,
     /* Change these based on which bot you need to authenticate. */
-    key: process.env.SOUTHPOLEVIEWS_TUMBLR_CONSUMER_KEY,
-    secret: process.env.SOUTHPOLEVIEWS_TUMBLR_CONSUMER_SECRET,
+    key: process.env.BOT_1_TUMBLR_CONSUMER_KEY,
+    secret: process.env.BOT_1_TUMBLR_CONSUMER_SECRET,
   }
 });
 
@@ -51,8 +51,8 @@ app.use(grant);
 
 app.use('/images', express.static(__dirname + '/.data/'));
 
-app.get('/', function(req, res) {
-  if (req.session && req.session.grant) {
+app.get('/', (req, res) => {
+  if (req.session && req.session.grant){
     if (req.session.grant.response){
       console.log('grant', req.session.grant.response);
     }
@@ -60,10 +60,12 @@ app.get('/', function(req, res) {
   let bots = req.app.get('bots');
 
   if (bots && bots.length > 0){
-    bots.forEach(function(bot){
-      try{
-          bot.next_run = helpers.capitalizeFirstLetter(bot.cronjob.nextDates().fromNow());    
-      } catch(err){ console.log(err) };
+    bots.forEach((bot) => {
+      if (bot.cronjob){
+        try{
+            bot.next_run = helpers.capitalizeFirstLetter(bot.cronjob.nextDates().fromNow());    
+        } catch(err){ console.log(err) };
+      }
     })
   }
 
@@ -71,25 +73,24 @@ app.get('/', function(req, res) {
     bots.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1);
   } catch(err){ console.log(err) }
   
-  
   res.render('home', {
     project_name: process.env.PROJECT_NAME,
     bots: bots,
     generative_placeholders_color: helpers.getRandomRange(0, 99),
-    footer_scripts: process.env.FOOTER_SCRIPTS
+    footer_scripts: process.env.FOOTER_SCRIPTS    
   });
 });
 
-app.get('/connect-tumblr', function(req, res) {
+app.get('/connect-tumblr', (req, res) => {
   res.sendFile(__dirname + '/views/connect-tumblr.html')
 });
 
-app.get('/callback', function(req, res) {
+app.get('/callback', (req, res) => {
   res.redirect('/');
 });
 
-app.get('/disconnect', function(request, res) {
-  request.session.destroy(function(err) {
+app.get('/disconnect', (request, res) => {
+  request.session.destroy((err) => {
     res.redirect('/');
   });
 });

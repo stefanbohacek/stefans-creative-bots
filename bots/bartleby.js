@@ -4,6 +4,10 @@ const RiveScript = require('rivescript'),
       cronSchedules = require(__dirname + '/../helpers/cron-schedules.js'),
       mastodonClient = require(__dirname + '/../helpers/mastodon.js');
 
+/*
+  This bot uses RiveScript to handle responses, see the rivescript/bartleby folder and learn more at rivescript.com.
+*/
+
 bartleby.loadDirectory(__dirname + '/../rivescript/bartleby').then(loadingDone).catch(loadingError);
 
 function loadingDone(batchNum) {

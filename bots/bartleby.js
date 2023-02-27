@@ -24,6 +24,7 @@ module.exports = {
   clients: {mastodon},
   name: 'Bartleby, the Scrivener',
   description: 'I would prefer not to.',
+  about_url: 'https://botwiki.org/bot/bartleby_scrvnr/',
   reply: async (postID, from, messageText, fullMessage) => {
     console.log(`new message from ${from}: ${messageText}`);
     const messageTextLowercase = messageText.toLowerCase();

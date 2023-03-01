@@ -1,0 +1,166 @@
+const fs = require("fs"),
+  helpers = require(__dirname + "/../helpers/helpers.js"),
+  capitals = require(__dirname + "/../data/capitals.js"),
+  mastodonClient = require(__dirname + "/../helpers/mastodon.js");
+
+const savedDataPath = __dirname + "/../.data/what_capital.json";
+
+let savedData = {
+  country: "",
+  capital: "",
+  scores: {},
+};
+
+if (fs.existsSync(savedDataPath)) {
+  savedData = JSON.parse(fs.readFileSync(savedDataPath, "utf8"));
+}
+
+console.log("loading saved data...", savedData);
+// console.log(JSON.parse(savedData));
+
+const mastodon = new mastodonClient({
+  access_token: process.env.WHAT_CAPITAL_MASTODON_ACCESS_TOKEN_SECRET,
+  api_url: process.env.WHAT_CAPITAL_MASTODON_API,
+});
+
+const saveData = () => {
+  fs.writeFileSync(savedDataPath, JSON.stringify(savedData, null, 2), "utf8");
+};
+
+const updateScores = (user) => {
+  if (savedData.scores.hasOwnProperty(user)) {
+    savedData.scores[user] = savedData.scores[user] + 1;
+  } else {
+    savedData.scores[user] = 1;
+  }
+  saveData();
+};
+
+const pickNewCapital = () => {
+  const capital = helpers.randomFromArray(capitals);
+  const flagUrl = `https://static.stefanbohacek.dev/images/flags/${capital.country.replace(
+    / /g,
+    "_"
+  )}.png`;
+
+  console.log("picking new capital", {
+    capital,
+    flagUrl,
+  });
+
+  savedData.capital = capital.capital;
+  savedData.country = capital.country;
+  saveData();
+
+  helpers.loadImage(flagUrl, (err, imgData) => {
+    if (err) {
+      console.log(err);
+    } else {
+      let altText = capital.flag_description;
+
+      if (capital.flag_description.length > 1000) {
+        altText = capital.flag_description.slice(0, 2) + "...";
+      }
+
+      mastodon.postImage({
+        status: "What is the capital of this country?",
+        image: imgData,
+        alt_text: `An unspecified country flag: ${altText}`,
+      });
+    }
+  });
+};
+
+const checkAnswer = (answer) => {
+  answer = answer
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "");
+  const correctAnswer = savedData.capital
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "");
+  return answer.includes(correctAnswer);
+};
+
+const getLeaderboard = () => {
+  let topScores = {};
+
+  for (let account in savedData.scores) {
+    const scoreStr = savedData.scores[account].toString();
+
+    if (scoreStr in topScores) {
+      topScores[scoreStr].push(account);
+    } else {
+      topScores[scoreStr] = [account];
+    }
+  }
+
+  console.log(topScores);
+
+  let leaderboard = [];
+
+  for (let score in topScores) {
+    const s = {};
+
+    s.score = score;
+    s.accounts = topScores[score];
+
+    leaderboard.push(s);
+  }
+
+  leaderboard = leaderboard.sort((a, b) => b.score - a.score);
+  const medals = ["🥇", "🥈", "🥉"];
+  const topThree = leaderboard.slice(0, 3);
+
+  return `\n\n${
+    topThree
+      .map(
+        (top, index) =>
+          `${medals[index]} ${top.accounts.map((a) => `${a}`).join(", ")}: ${
+            top.score
+          } pt(s)`
+      )
+      .join("\n")
+  }`;
+};
+
+if (!savedData.capital) {
+  pickNewCapital();
+}
+
+module.exports = {
+  active: true,
+  clients: { mastodon },
+  name: "What's the capital?",
+  description: "Identify the capital based on a country flag.",
+  about_url: "https://botwiki.org/bot/what_capital/",
+  reply: async (postID, from, messageText, fullMessage) => {
+    console.log(
+      `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`
+    );
+
+    let reply = "";
+
+    if (
+      fullMessage.data.status.visibility === "public" ||
+      fullMessage.data.status.visibility === "unlisted"
+    ) {
+      if (checkAnswer(messageText)) {
+        updateScores(from);
+        reply = `Yes, ${savedData.capital} is the capital of ${
+          savedData.country
+        }, correct! ${getLeaderboard()}`;
+        pickNewCapital();
+      } else {
+        reply = "That doesn't seem correct, sorry!";
+      }
+    } else {
+      reply = "Sorry, do you mind responding publicly?";
+    }
+
+    console.log(`reply: ${reply}`);
+    mastodon.reply(fullMessage, reply);
+  },
+};

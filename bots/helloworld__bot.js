@@ -106,7 +106,7 @@ module.exports = {
                 position: 'center center'
               }    
             ], { width, height }, (err, imageData) => {
-              const statusText = `Hello from ${ countryName }! #helloworld`
+              const statusText = `Hello from ${ countryName }! #HelloWorld`
               
               console.log('statusText', statusText);
 

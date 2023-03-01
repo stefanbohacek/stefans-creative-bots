@@ -1,8 +1,15 @@
 const RiveScript = require('rivescript'),
-      bartleby = new RiveScript(),
+      bartleby = new RiveScript({debug: false, _debug: false}),
       helpers = require(__dirname + '/../helpers/helpers.js'),
       cronSchedules = require(__dirname + '/../helpers/cron-schedules.js'),
       mastodonClient = require(__dirname + '/../helpers/mastodon.js');
+
+/*
+  This bot uses RiveScript to handle responses, see the rivescript/bartleby folder and learn more at rivescript.com.
+*/
+
+bartleby.debug = false;
+bartleby.say = () => {};
 
 bartleby.loadDirectory(__dirname + '/../rivescript/bartleby').then(loadingDone).catch(loadingError);
 
@@ -26,7 +33,7 @@ module.exports = {
   description: 'I would prefer not to.',
   about_url: 'https://botwiki.org/bot/bartleby_scrvnr/',
   reply: async (postID, from, messageText, fullMessage) => {
-    console.log(`new message from ${from}: ${messageText}`);
+    console.log(`new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`);
     const messageTextLowercase = messageText.toLowerCase();
     const reply = await bartleby.reply('local-user', messageTextLowercase);
     console.log(`reply: ${reply}`);

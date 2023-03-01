@@ -154,7 +154,7 @@ module.exports = {
         }, correct! ${getLeaderboard()}`;
         pickNewCapital();
       } else {
-        reply = "That doesn't seem correct, sorry!";
+        reply = "That doesn't seem correct, sorry! Or perhaps a new flag was posted?";
       }
     } else {
       reply = "Sorry, do you mind responding publicly?";

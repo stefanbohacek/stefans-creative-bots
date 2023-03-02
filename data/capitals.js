@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "country": "Afghanistan",
     "capital": "Kabul",

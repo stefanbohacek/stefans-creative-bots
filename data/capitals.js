@@ -1,4 +1,4 @@
-module.exports = [
+[
   {
     "country": "Afghanistan",
     "capital": "Kabul",
@@ -792,7 +792,7 @@ module.exports = [
   {
     "country": "Saint Vicent and the Grenadines",
     "capital": "Kingstown",
-    "flag_description": "a yellow three-masted sailing ship facing the hoist side rides on a blue background with scattered, white, wavy lines under the ship; a continuous black-over-white wavy line divides the ship from the white wavy lines; on the hoist side, a vertical band is divided into three parts: the top part (called ikkurina) is red with a green diagonal cross extending to the corners overlaid by a white cross dividing the rectangle into four sections; the middle part has a white background with an ermine pattern; the third part has a red background with two stylized yellow lions outlined in black, one above the other; these three heraldic arms represent settlement by colonists from the Basque Country (top), Brittany, and Normandy; the blue on the main portion of the flag symbolizes the Atlantic Ocean and the stylized ship represents the Grande Hermine in which Jacques Cartier \"discovered\" the islands in 1536"
+    "flag_description": "three vertical bands of blue (hoist side), gold (double width), and green; the gold band bears three green diamonds arranged in a V pattern, which stands for Vincent; the diamonds recall the islands as \"the Gems of the Antilles\" and are set slightly lowered in the gold band to reflect the nation's position in the Antilles; blue conveys the colors of a tropical sky and crystal waters, yellow signifies the golden Grenadine sands, and green represents lush vegetation"
   },
   {
     "country": "Samoa",

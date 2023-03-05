@@ -1019,4 +1019,4 @@ module.exports = [
     "capital": "Harare",
     "flag_description": "seven equal horizontal bands of green (top), yellow, red, black, red, yellow, and green with a white isosceles triangle edged in black with its base on the hoist side; a yellow * bird representing the long history of the country is superimposed on a red five-pointed star in the center of the triangle, which symbolizes peace; green represents agriculture, yellow mineral wealth, red the blood shed to achieve independence, and black stands for the native people"
   }
-]
+];

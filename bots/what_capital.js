@@ -63,7 +63,7 @@ const pickNewCapital = () => {
       }
 
       mastodon.postImage({
-        status: "What is the capital of this country?",
+        status: "What is the capital of this country or territory?",
         image: imgData,
         alt_text: `An unspecified country flag: ${altText}`,
       });

@@ -17,7 +17,7 @@ module.exports = [
   {
     "country": "American Samoa",
     "capital": "Pago Pago",
-    "flag_description": "blue, with a white triangle edged in red that is based on the fly side and extends to the hoist side; a brown and white American bald eagle flying toward the hoist side is carrying 2 traditional * symbols of authority, a war club known as a \"fa'alaufa'i\" (upper; left talon), and a coconut-fiber fly whisk known as a \"fue\" (lower; right talon); the combination of symbols broadly mimics that seen on the US Great Seal and reflects the relationship between the US and American Samoa"
+    "flag_description": "blue, with a white triangle edged in red that is based on the fly side and extends to the hoist side; a brown and white American bald eagle flying toward the hoist side is carrying 2 traditional * symbols of authority, a war club known as a \"fa'alaufa'i\" (upper; left talon), and a coconut-fiber fly whisk known as a \"fue\" (lower; right talon); the combination of symbols broadly mimics that seen on the US Great Seal and reflects the relationship between the US and *"
   },
   {
     "country": "Andorra",
@@ -47,7 +47,7 @@ module.exports = [
   {
     "country": "Armenia",
     "capital": "Yerevan",
-    "flag_description": "three equal horizontal bands of red (top), blue, and orange; the color red recalls the blood shed for liberty, blue the Armenian skies as well as hope, and orange the land and the courage of the workers who farm it"
+    "flag_description": "three equal horizontal bands of red (top), blue, and orange; the color red recalls the blood shed for liberty, blue the * skies as well as hope, and orange the land and the courage of the workers who farm it"
   },
   {
     "country": "Aruba",
@@ -92,7 +92,7 @@ module.exports = [
   {
     "country": "Belarus",
     "capital": "Minsk",
-    "flag_description": "red horizontal band (top) and green horizontal band one-half the width of the red band; a white vertical stripe on the hoist side bears Belarusian national ornamentation in red; the red band color recalls past struggles from oppression, the green band represents hope and the many forests of the country"
+    "flag_description": "red horizontal band (top) and green horizontal band one-half the width of the red band; a white vertical stripe on the hoist side bears * national ornamentation in red; the red band color recalls past struggles from oppression, the green band represents hope and the many forests of the country"
   },
   {
     "country": "Belgium",
@@ -132,12 +132,12 @@ module.exports = [
   {
     "country": "British Virgin Islands",
     "capital": "Road Town",
-    "flag_description": "blue with the flag of the UK in the upper hoist-side quadrant and the Virgin Islander coat of arms centered in the outer half of the flag; the coat of arms depicts a woman flanked on either side by a vertical column of six oil lamps above a scroll bearing the Latin word VIGILATE (Be Watchful); the islands were named by COLUMBUS in 1493 in honor of Saint Ursula and her 11 virgin followers (some sources say 11,000) who reputedly were martyred by the Huns in the 4th or 5th century; the figure on the banner holding a lamp represents the saint; the other lamps symbolize her followers"
+    "flag_description": "blue with the flag of the UK in the upper hoist-side quadrant and the * coat of arms centered in the outer half of the flag; the coat of arms depicts a woman flanked on either side by a vertical column of six oil lamps above a scroll bearing the Latin word VIGILATE (Be Watchful); the islands were named by COLUMBUS in 1493 in honor of Saint Ursula and her 11 virgin followers (some sources say 11,000) who reputedly were martyred by the Huns in the 4th or 5th century; the figure on the banner holding a lamp represents the saint; the other lamps symbolize her followers"
   },
   {
     "country": "Brunei",
     "capital": "Bandar Seri Begawan",
-    "flag_description": "yellow with two diagonal bands of white (top, almost double width) and black starting from the upper hoist side; the national emblem in red is superimposed at the center; yellow is the color of royalty and symbolizes the sultanate; the white and black bands denote Brunei's chief ministers; the emblem includes five main components: a swallow-tailed flag, the royal umbrella representing the monarchy, the wings of four feathers symbolizing justice, tranquility, prosperity, and peace, the two upraised hands signifying the government's pledge to preserve and promote the welfare of the people, and the crescent moon denoting Islam, the state religion; the state motto \"Always render service with God's guidance\" appears in yellow Arabic script on the crescent; a ribbon below the crescent reads \"Brunei, the Abode of Peace"
+    "flag_description": "yellow with two diagonal bands of white (top, almost double width) and black starting from the upper hoist side; the national emblem in red is superimposed at the center; yellow is the color of royalty and symbolizes the sultanate; the white and black bands denote *'s chief ministers; the emblem includes five main components: a swallow-tailed flag, the royal umbrella representing the monarchy, the wings of four feathers symbolizing justice, tranquility, prosperity, and peace, the two upraised hands signifying the government's pledge to preserve and promote the welfare of the people, and the crescent moon denoting Islam, the state religion; the state motto \"Always render service with God's guidance\" appears in yellow Arabic script on the crescent; a ribbon below the crescent reads \"Brunei, the Abode of Peace"
   },
   {
     "country": "Bulgaria",
@@ -422,7 +422,7 @@ module.exports = [
   {
     "country": "Hungary",
     "capital": "Budapest",
-    "flag_description": "three equal horizontal bands of red (top), white, and green; the flag dates to the national movement of the 18th and 19th centuries, and fuses the medieval colors of the Hungarian coat of arms with the revolutionary tricolor form of the French flag; folklore attributes virtues to the colors: red for strength, white for faithfulness, and green for hope; alternatively, the red is seen as being for the blood spilled in defense of the land, white for freedom, and green for the pasturelands that make up so much of the country"
+    "flag_description": "three equal horizontal bands of red (top), white, and green; the flag dates to the national movement of the 18th and 19th centuries, and fuses the medieval colors of the * coat of arms with the revolutionary tricolor form of the French flag; folklore attributes virtues to the colors: red for strength, white for faithfulness, and green for hope; alternatively, the red is seen as being for the blood spilled in defense of the land, white for freedom, and green for the pasturelands that make up so much of the country"
   },
   {
     "country": "Iceland",
@@ -1012,7 +1012,7 @@ module.exports = [
   {
     "country": "Zambia",
     "capital": "Lusaka",
-    "flag_description": "green field with a panel of three vertical bands of red (hoist side), black, and orange below a soaring orange eagle, on the outer edge of the flag; green stands for the country's natural resources and vegetation, red symbolizes the struggle for freedom, black the people of Zambia, and orange the country's mineral wealth; the eagle represents the people's ability to rise above the nation's problems"
+    "flag_description": "green field with a panel of three vertical bands of red (hoist side), black, and orange below a soaring orange eagle, on the outer edge of the flag; green stands for the country's natural resources and vegetation, red symbolizes the struggle for freedom, black the people of *, and orange the country's mineral wealth; the eagle represents the people's ability to rise above the nation's problems"
   },
   {
     "country": "Zimbabwe",

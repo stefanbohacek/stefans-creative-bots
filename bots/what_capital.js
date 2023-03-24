@@ -63,7 +63,7 @@ const pickNewCapital = () => {
       }
 
       mastodon.postImage({
-        status: "What is the capital of this country or territory?",
+        status: "What is the capital of this country or territory? #quiz #geography #flags #country",
         image: imgData,
         alt_text: `An unspecified country flag: ${altText}`,
       });
@@ -135,7 +135,14 @@ module.exports = {
   clients: { mastodon },
   name: "What's the capital?",
   description: "Identify the capital based on a country flag.",
+  thumbnail: "https://botwiki.org/wp-content/uploads/2018/02/what_capital-mastodon.png",
   about_url: "https://botwiki.org/bot/what_capital/",
+  links: [
+    {
+      title: 'Follow on Mastodon',
+      url: 'https://botsin.space/@what_capital'
+    }
+  ],
   reply: async (postID, from, messageText, fullMessage) => {
     console.log(
       `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`

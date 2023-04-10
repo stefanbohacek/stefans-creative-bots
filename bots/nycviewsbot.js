@@ -1,16 +1,8 @@
 const helpers = require(__dirname + '/../helpers/helpers.js'),
       cronSchedules = require(__dirname + '/../helpers/cron-schedules.js'),
-      windyAPI = require(__dirname + '/../helpers/windy.js'),
-      TwitterClient = require(__dirname + '/../helpers/twitter.js'),    
+      webcams = require(__dirname + '/../data/webcams-nyc.js'),
       mastodonClient = require(__dirname + '/../helpers/mastodon.js'), 
       tumblrClient = require(__dirname + '/../helpers/tumblr.js');
-
-const twitter = new TwitterClient({
-  consumer_key: process.env.NYCVIEWSBOT_TWITTER_CONSUMER_KEY,
-  consumer_secret: process.env.NYCVIEWSBOT_TWITTER_CONSUMER_SECRET,
-  access_token: process.env.NYCVIEWSBOT_TWITTER_ACCESS_TOKEN,
-  access_token_secret: process.env.NYCVIEWSBOT_TWITTER_ACCESS_TOKEN_SECRET
-});
 
 const mastodon = new mastodonClient({
   access_token: process.env.NYCVIEWSBOT_MASTODON_ACCESS_TOKEN,
@@ -47,43 +39,25 @@ module.exports = {
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
   script: () => {
-    const location = {
-      lat: 40.712776,
-      long: -74.005974,
-      radius: 15
-    };
-    console.log(location);
+    const webcam = helpers.randomFromArray(webcams);
+    console.log(webcam);
     
-    windyAPI.getWebcamPicture(process.env.NYCVIEWSBOT_WINDY_API_KEY, location, (err, data) => {
+    const webcamUrl = `📷 https://www.windy.com/-Webcams/United-States/Minnesota/Delhi/New-York/webcams/${webcam.id}`;
+    const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${webcam.latitude},${webcam.longitude}`;
+    let text = `${webcam.title}\n${webcamUrl}\n${googleMapsUrl} #nyc #webcam #city`;
 
-      if (data && data.title && data.location){
-        console.log(data)
-        const webcamTitle = data.title;
-        const windyWebcamUrl = `📷 https://www.windy.com/-Webcams/United-States/Minnesota/Delhi/New-York/webcams/${data.id}`;
-        const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${data.location.latitude},${data.location.longitude}`;
-
-        let text = `${webcamTitle}\n${windyWebcamUrl}\n${googleMapsUrl} #nyc #webcam #city`;
-
-        helpers.loadImage(data.image.current.preview, (err, imgData) => {
-          if (err){
-            console.log(err);     
-          }
-          else{
-            // twitter.postImage({
-            //   status: text,
-            //   image: imgData,
-            //   alt_text: `Webcam view from ${webcamTitle}`,
-            // });
-
-            mastodon.postImage({
-              status: text,
-              image: imgData,
-              alt_text: `Webcam view from ${webcamTitle}`,
-            });
-            
-            tumblr.postImage(text, imgData);
-          }
-        }); 
+    helpers.loadImage(webcam.url, (err, imgData) => {
+      if (err){
+        console.log(err);     
+      }
+      else{
+        mastodon.postImage({
+          status: text,
+          image: imgData,
+          alt_text: `Webcam view from ${webcam.title}`,
+        });
+        
+        tumblr.postImage(text, imgData);
       }
     });  
   }

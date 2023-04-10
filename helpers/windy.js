@@ -8,6 +8,7 @@ const request = require('request'),
 
 module.exports = {
   getWebcamPicture: (apiKey, location, cb) => {
+    console.log('getWebcamPicture', apiKey, location);
     
     if (!location || !location.lat || !location.long){
       if (cb){
@@ -23,13 +24,16 @@ module.exports = {
 
     const radius = location.radius || 50;
 
-    const apiUrl = `https://api.windy.com/api/webcams/v2/list/limit=${limit},${offset}/nearby=${location.lat},${location.long},${radius}?show=webcams:location,image&key=${apiKey}&limit=${limit},${offset}`
+    const apiUrl = `https://api.windy.com/api/webcams/v2/list/limit=${limit},${offset}/nearby=${location.lat},${location.long},${radius}?show=webcams:location,image&key=${apiKey}&limit=${limit},${offset}`;
+
+    console.log({apiUrl});
     
     request(apiUrl, (error, response, body) => {
       try{
-        data = JSON.parse(body)
+        data = JSON.parse(body);
+        console.log('webcams', data.result.webcams);
       } catch(err){
-        /* noop */
+        console.log('error:', err);
       }
       
       if (data && data.result && data.result.total){
@@ -41,24 +45,6 @@ module.exports = {
         cb(error, data);
         return false;
       }
-      
-      const apiUrl = `https://api.windy.com/api/webcams/v2/list/limit=${limit},${offset}/nearby=${location.lat},${location.long},${radius}?show=webcams:location,image&key=${process.env.WINDY_API_KEY}&limit=${limit},${offset}`
-
-      request(apiUrl, (error, response, body) => {
-        try{
-          data = JSON.parse(body)
-        } catch(err){
-          /* noop */
-        }
-        
-        if (data.result && data.result.webcams){
-          data = helpers.randomFromArray(data.result.webcams);
-        }
-
-        if (cb){
-          cb(error, data);
-        }
-      });      
     });
   }
 };

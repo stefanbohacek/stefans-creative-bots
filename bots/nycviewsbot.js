@@ -42,7 +42,7 @@ module.exports = {
     const webcam = helpers.randomFromArray(webcams);
     console.log(webcam);
     
-    const webcamUrl = `📷 https://www.windy.com/-Webcams/United-States/Minnesota/Delhi/New-York/webcams/${webcam.id}`;
+    const webcamUrl = `📷 https://www.windy.com/-Webcams/webcams/${webcam.id}`;
     const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${webcam.latitude},${webcam.longitude}`;
     let text = `${webcam.title}\n${webcamUrl}\n${googleMapsUrl} #nyc #webcam #city`;
 

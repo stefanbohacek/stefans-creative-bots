@@ -32,6 +32,12 @@ module.exports = {
   name: 'Bartleby, the Scrivener',
   description: 'I would prefer not to.',
   about_url: 'https://botwiki.org/bot/bartleby_scrvnr/',
+  links: [
+    {
+      title: "Follow on Mastodon",
+      url: "https://botsin.space/@bartleby",
+    },
+  ],  
   reply: async (postID, from, messageText, fullMessage) => {
     console.log(`new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`);
     const messageTextLowercase = messageText.toLowerCase();

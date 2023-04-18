@@ -16,6 +16,9 @@ const path = require("path"),
 // const bot = require(__dirname + '/bots/nycviewsbot.js');
 // bot.script();
 
+const bot = require(__dirname + '/bots/mastodon_roadmap.js');
+bot.script();
+
 // const allBots = [
 //     'botwikirandom',
 //     'emoji__polls',

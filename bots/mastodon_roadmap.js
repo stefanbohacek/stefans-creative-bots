@@ -1,4 +1,5 @@
 const fs = require("fs"),
+  helpers = require(__dirname + "/../helpers/helpers.js"),
   cheerio = require("cheerio"),
   puppeteer = require("puppeteer"),
   cronSchedules = require(__dirname + "/../helpers/cron-schedules.js"),
@@ -40,14 +41,14 @@ const getItems = (html, section) => {
 
 module.exports = {
   active: true,
-  name: "What's coming to Mastodon?",
+  name: "@mastodonroadmap",
   description: "Posting when new items are added to Mastodon's public roadmap.",
   thumbnail: "",
   // about_url: '',
   links: [
     {
       title: "Follow on Mastodon",
-      url: "https://twitter.com/wyrf_bot",
+      url: "https://botsin.space/@mastodonroadmap",
     },
   ],
   interval: cronSchedules.EVERY_THIRTY_MINUTES,
@@ -70,41 +71,48 @@ module.exports = {
           const inProgressCurrent = getItems(html, 'In Progress');
           const plannedCurrent = getItems(html, 'Planned');
           const exploringCurrent = getItems(html, 'Exploring');
+          const recentlyCompletedCurrent = getItems(html, 'Recently completed');
       
           console.log('checking Mastodon roadmap...');
           
           console.log(`found ${inProgressCurrent.length} item(s) under "in-progress"`);
           console.log(`found ${plannedCurrent.length} item(s) under "planned"`);
           console.log(`found ${exploringCurrent.length} item(s) under "exploring"`);
+          console.log(`found ${recentlyCompletedCurrent.length} item(s) under "recently completed"`);
       
           const dataPath = `${__dirname}/../.data/mastodon-roadmap`;
       
-          let inProgressSaved = [], plannedSaved = [], exploringSaved = [];
-          let inProgressNew = [], plannedNew = [], exploringNew = [];
+          let inProgressSaved = [], plannedSaved = [], exploringSaved = [], recentlyCompletedSaved = [];
+          let inProgressNew = [], plannedNew = [], exploringNew = [], recentlyCompletedNew = [];
       
           if(!fs.existsSync(dataPath)){
             fs.mkdirSync(dataPath);
             inProgressSaved = inProgressCurrent;
             plannedSaved = plannedCurrent;
             exploringSaved =  exploringCurrent;           
+            recentlyCompletedSaved =  recentlyCompletedCurrent;           
           } else {
             inProgressSaved = JSON.parse(fs.readFileSync(`${dataPath}/inProgress.json`, 'utf8'));
             plannedSaved = JSON.parse(fs.readFileSync(`${dataPath}/planned.json`, 'utf8'));
             exploringSaved = JSON.parse(fs.readFileSync(`${dataPath}/exploring.json`, 'utf8'));
+            recentlyCompletedSaved = JSON.parse(fs.readFileSync(`${dataPath}/recentlyCompleted.json`, 'utf8'));
       
             const inProgressIDs = inProgressSaved.map(item => item.id);
             const plannedIDs = plannedSaved.map(item => item.id);
             const exploringIDs = exploringSaved.map(item => item.id);
+            const recentlyCompletedIDs = recentlyCompletedSaved.map(item => item.id);
       
             inProgressNew = inProgressCurrent.filter(item => !inProgressIDs.includes(item.id));
             plannedNew = plannedCurrent.filter(item => !plannedIDs.includes(item.id));
             exploringNew = exploringCurrent.filter(item => !exploringIDs.includes(item.id));
+            recentlyCompletedNew = exploringCurrent.filter(item => !recentlyCompletedIDs.includes(item.id));
       
             console.log('checking new items...');
       
             console.log(`found ${inProgressNew.length} item(s) under "in-progress"`, inProgressNew);
             console.log(`found ${plannedNew.length} item(s) under "planned"`, plannedNew);
             console.log(`found ${exploringNew.length} item(s) under "exploring"`, exploringNew);
+            console.log(`found ${recentlyCompletedNew.length} item(s) under "recently completed"`, recentlyCompletedNew);
 
             let text = '';
 
@@ -114,19 +122,28 @@ module.exports = {
                 `;
 
             }
+
             if (plannedNew.length){
                 text += `
                 Planned:\n\n${plannedNew.map(item => `- ${item.id}: ${item.label}`).join('\n')}
                 `;
             }
+
             if (exploringNew.length){
                 text += `
                 Exploring:\n\n${exploringNew.map(item => `- ${item.id}: ${item.label}`).join('\n')}
                 `;
             }
 
+            if (recentlyCompletedNew.length){
+                text += `
+                Exploring:\n\n${recentlyCompletedNew.map(item => `- ${item.id}: ${item.label}`).join('\n')}
+                `;
+            }
+
             if (text.length){
-                mastodon.toot(`${text}\n\nhttps://joinmastodon.org/roadmap #mastodon #roadmap`);
+              console.log(`${helpers.truncate(text, 400)}\n\nhttps://joinmastodon.org/roadmap #mastodon #roadmap`);
+              mastodon.toot(`${helpers.truncate(text, 400)}\n\nhttps://joinmastodon.org/roadmap #mastodon #roadmap`);
             }
           }
 
@@ -139,6 +156,10 @@ module.exports = {
           });
 
           fs.writeFileSync(`${dataPath}/exploring.json`, JSON.stringify(exploringSaved.concat(exploringNew)), 'utf8', (error) => {
+            console.log(error);
+          });
+
+          fs.writeFileSync(`${dataPath}/recentlyCompleted.json`, JSON.stringify(recentlyCompletedSaved.concat(recentlyCompletedNew)), 'utf8', (error) => {
             console.log(error);
           });
         });

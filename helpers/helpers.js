@@ -8,6 +8,9 @@ module.exports = {
   capitalizeFirstLetter: (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();    
   },  
+  truncate: (str, n) => {
+    return (str.length > n) ? str.slice(0, n-1) + '…' : str;
+  },
   randomFromArray: (arr) => {
     return arr[Math.floor(Math.random() * arr.length)]; 
   },

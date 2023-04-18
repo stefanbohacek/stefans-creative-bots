@@ -138,11 +138,6 @@ module.exports = {
             console.log(error);
           });
 
-          console.log(`saving ${dataPath}/exploring.json...`,{
-            exploringSaved,
-            exploringNew
-          });
-
           fs.writeFileSync(`${dataPath}/exploring.json`, JSON.stringify(exploringSaved.concat(exploringNew)), 'utf8', (error) => {
             console.log(error);
           });

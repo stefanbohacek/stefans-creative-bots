@@ -57,7 +57,7 @@ module.exports = {
           alt_text: `Webcam view from ${webcam.title}`,
         });
         
-        tumblr.postImage(text, imgData);
+        // tumblr.postImage(text, imgData);
       }
     });  
   }

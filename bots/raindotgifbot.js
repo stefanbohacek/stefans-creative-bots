@@ -72,7 +72,7 @@ module.exports = {
         alt_text: 'Animdated GIF of rain.',
       });
 
-      tumblr.postImage(statusText, imageData);        
+      // tumblr.postImage(statusText, imageData);        
     });
   }
 };

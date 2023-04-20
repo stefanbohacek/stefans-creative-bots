@@ -103,7 +103,7 @@ module.exports = {
               alt_text: `View from the ${station.name}.`,
             });
 
-            tumblr.postImage(text, imgData);
+            // tumblr.postImage(text, imgData);
           });
 
         } else {

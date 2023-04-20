@@ -39,6 +39,7 @@ class TumblrClient {
         caption: text,
         data64: imageBase64
       }, (err, data) => {
+        console.log(err)
         console.log('tumblrd', `https://${ client.tumblr_name }.tumblr.com/post/${ data.id_string }`)
         if (cb){
           cb(err, data);

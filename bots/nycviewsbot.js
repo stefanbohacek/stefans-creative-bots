@@ -37,7 +37,7 @@ module.exports = {
       url: 'https://twitter.com/nycviewsbot'
     }    
   ],
-  interval: cronSchedules.EVERY_SIX_HOURS,
+  interval: cronSchedules.EVERY_FOUR_HOURS,
   script: () => {
     const webcam = helpers.randomFromArray(webcams);
     console.log(webcam);

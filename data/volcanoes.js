@@ -119,24 +119,24 @@ module.exports = [
     url: 'https://volcanoes.usgs.gov/cams/M1cam/images/M.jpg',
     element: '#panorama img'
   },
-  {
-    name: 'Vent Area of Mauna Loa\'s Northeast Rift Zone',
-    page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=M4cam',
-    url: 'https://volcanoes.usgs.gov/cams/M4cam/images/M.jpg',
-    element: '#panorama img'
-  },
-  {
-    name: 'Vent Area of Mauna Loa\'s Northeast Rift Zone',
-    page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=M5cam',
-    url: 'https://volcanoes.usgs.gov/cams/M5cam/images/M.jpg',
-    element: '#panorama img'
-  },
-  {
-    name: 'Vent Area of Mauna Loa\'s Northeast Rift Zone',
-    page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=M6cam',
-    url: 'https://volcanoes.usgs.gov/cams/M6cam/images/M.jpg',
-    element: '#panorama img'
-  },
+  // {
+  //   name: 'Vent Area of Mauna Loa\'s Northeast Rift Zone',
+  //   page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=M4cam',
+  //   url: 'https://volcanoes.usgs.gov/cams/M4cam/images/M.jpg',
+  //   element: '#panorama img'
+  // },
+  // {
+  //   name: 'Vent Area of Mauna Loa\'s Northeast Rift Zone',
+  //   page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=M5cam',
+  //   url: 'https://volcanoes.usgs.gov/cams/M5cam/images/M.jpg',
+  //   element: '#panorama img'
+  // },
+  // {
+  //   name: 'Vent Area of Mauna Loa\'s Northeast Rift Zone',
+  //   page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=M6cam',
+  //   url: 'https://volcanoes.usgs.gov/cams/M6cam/images/M.jpg',
+  //   element: '#panorama img'
+  // },
   {
     name: 'Mauna Loa\'s Summit and Northeast Rift Zone from Mauna Kea',
     page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=MKcam',

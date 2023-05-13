@@ -124,20 +124,17 @@ module.exports = {
             }
 
             if (plannedNew.length){
-                text += `
-                Planned:\n\n${plannedNew.map(item => `- ${item.id}: ${item.label}`).join('\n')}
+                text += `\nPlanned:\n\n${plannedNew.map(item => `- ${item.id}: ${item.label}`).join('\n')}
                 `;
             }
 
             if (exploringNew.length){
-                text += `
-                Exploring:\n\n${exploringNew.map(item => `- ${item.id}: ${item.label}`).join('\n')}
+                text += `\nExploring:\n\n${exploringNew.map(item => `- ${item.id}: ${item.label}`).join('\n')}
                 `;
             }
 
             if (recentlyCompletedNew.length){
-                text += `
-                Exploring:\n\n${recentlyCompletedNew.map(item => `- ${item.id}: ${item.label}`).join('\n')}
+                text += `\nRecently completed:\n\n${recentlyCompletedNew.map(item => `- ${item.id}: ${item.label}`).join('\n')}
                 `;
             }
 

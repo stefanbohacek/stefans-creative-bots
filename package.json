@@ -43,7 +43,7 @@
     "request": "^2.88.2",
     "roughjs": "^4.1.4",
     "tracery-grammar": "^2.7.4",
-    "tumblr.js": "^3.0.1",
+    "tumblr.js": "^3.0.0",
     "twit": "^2.1.0",
     "underscore": "^1.10.2",
     "utf-8-validate": "^5.0.2",

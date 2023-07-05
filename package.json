@@ -51,7 +51,8 @@
     "us-zips": "^4.0.1",
     "mastodon-api-v1": "^1.0.0",
     "html-to-text": "^8.x",
-    "rivescript": "^2.2.1"
+    "rivescript": "^2.2.1",
+    "csvtojson": "^2.0.10"
   },
   "engines": {
     "node": "12.x"

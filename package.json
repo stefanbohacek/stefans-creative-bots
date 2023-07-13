@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "node node_modules/puppeteer/install.js"
+    "postinstall": "node node_modules/puppeteer/install.js; pip3 install yt-dlp==2023.7.6"
   },
   "dependencies": {
     "base64-stream": "^1.0.0",

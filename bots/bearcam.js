@@ -17,9 +17,9 @@ module.exports = {
   active: true,
   name: "@bearcam",
   description: "Watching some bears.",
-  // thumbnail:
-  // "https://botwiki.org/wp-content/uploads/2023/07/-exoplanets-1688591006.png",
-  // about_url: "https://botwiki.org/bot/exoplanets/",
+  thumbnail:
+  "https://botwiki.org/wp-content/uploads/2023/07/-bearcam-1689222972.png",
+  about_url: "https://botwiki.org/bot/bearcam/",
   links: [
     {
       title: "Follow on Mastodon",
@@ -31,11 +31,10 @@ module.exports = {
     (async () => {
       const webcam = helpers.randomFromArray(webcams);
       console.log('downloading preview...', webcam);
-      const description = `Live view from ${webcam.name}. ${webcam.url}`;
-
-      const url = webcam.youtube_embed_url;
-
+      const statusText = `${webcam.name}: ${webcam.url}\n\n${webcam.tags}`;
+      const url = webcam.youtube_url;
       // const cmd = `yt-dlp --downloader ffmpeg --downloader-args "ffmpeg:-t 1" "${url}" -o bearcam.mp4`;
+
       const cmd = `yt-dlp`;
 
       const args = [
@@ -66,9 +65,9 @@ module.exports = {
           });
 
           mastodon.postImage({
-            status: `${description} #bears #bearcam`,
+            status: statusText,
             image: video,
-            alt_text: ``,
+            alt_text: webcam.description,
           });
 
           try{

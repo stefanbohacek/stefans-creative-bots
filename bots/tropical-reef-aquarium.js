@@ -16,9 +16,9 @@ module.exports = {
   active: true,
   name: "Tropical reef aquarium",
   description: "Watching some fish.",
-  // thumbnail:
-  // "https://botwiki.org/wp-content/uploads/THUMBNAIL.png",
-  // about_url: "https://botwiki.org/bot/tropicalreefaquarium/",
+  thumbnail:
+  "https://botwiki.org/wp-content/uploads/2023/07/tropical-reef-aquarium-1689247814.png",
+  about_url: "https://botwiki.org/bot/tropical-reef-aquarium/",
   links: [
     {
       title: "Follow on Mastodon",

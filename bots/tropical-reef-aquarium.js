@@ -13,7 +13,7 @@ const mastodon = new mastodonClient({
 });
 
 module.exports = {
-  active: false,
+  active: true,
   name: "Tropical reef aquarium",
   description: "Watching some fish.",
   // thumbnail:

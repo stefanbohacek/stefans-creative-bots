@@ -30,7 +30,7 @@ module.exports = {
     (async () => {
       const webcam = {
         name: "Tropical reef aquarium in Long Beach, California",
-        description: "A short clip from a webcam inside of a tropical reef aquarium. Typically you can see a lot of small colorful fish swimming around a coral reef.",
+        description: "A short clip from a webcam inside of a tropical reef aquarium. Typically you can see a lot of colorful fish of various sizes swimming around a coral reef.",
         url: "https://explore.org/livecams/aquarium-of-the-pacific/pacific-aquarium-tropical-reef-camera",
         youtube_url: "https://www.youtube.com/watch?v=DHUnz4dyb54",
         tags: '#fish #corals #aquarium'

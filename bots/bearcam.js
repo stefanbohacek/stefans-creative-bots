@@ -29,52 +29,56 @@ module.exports = {
   interval: cronSchedules.EVERY_HOUR,
   script: async () => {
     (async () => {
-      const webcam = helpers.randomFromArray(webcams);
-      console.log('downloading preview...', webcam);
-      const statusText = `${webcam.name}: ${webcam.url}\n\n${webcam.tags}`;
-      const url = webcam.youtube_url;
-      // const cmd = `yt-dlp --downloader ffmpeg --downloader-args "ffmpeg:-t 1" "${url}" -o bearcam.mp4`;
-
-      const cmd = `yt-dlp`;
-
-      const args = [
-        '--downloader', 'ffmpeg',
-        '--downloader-args', 'ffmpeg:-t 10',
-        url,
-        '-o', 'bearcam.mp4',
-        '--force-overwrites'
-      ];
-    
-      const proc = spawn(cmd, args);
-
-      proc.stdout.on('data', function(data) {
-          // console.log(data);
-      });
+      try {
+        const webcam = helpers.randomFromArray(webcams);
+        console.log('downloading preview...', webcam);
+        const statusText = `${webcam.name}: ${webcam.url}\n\n${webcam.tags}`;
+        const url = webcam.youtube_url;
+        // const cmd = `yt-dlp --downloader ffmpeg --downloader-args "ffmpeg:-t 1" "${url}" -o bearcam.mp4`;
+  
+        const cmd = `yt-dlp`;
+  
+        const args = [
+          '--downloader', 'ffmpeg',
+          '--downloader-args', 'ffmpeg:-t 10',
+          url,
+          '-o', 'bearcam.mp4',
+          '--force-overwrites'
+        ];
       
-      proc.stderr.setEncoding("utf8")
-
-      proc.stderr.on('data', function(data) {
-          // console.log(data);
-      });
-      
-      proc.on('close', async () => {
-          console.log('finished downloading video...');
-
-          const video = await fs.readFileSync(__dirname + "/../bearcam.mp4", {
-            encoding: "base64",
-          });
-
-          mastodon.postImage({
-            status: statusText,
-            image: video,
-            alt_text: webcam.description,
-          });
-
-          try{
-            fs.unlink(__dirname + "/../bearcam.mp4");
-            fs.unlink(__dirname + "/../bearcam.mp4.webm");
-          } catch { /* noop */ }
-      });
+        const proc = spawn(cmd, args);
+  
+        proc.stdout.on('data', function(data) {
+            // console.log(data);
+        });
+        
+        proc.stderr.setEncoding("utf8")
+  
+        proc.stderr.on('data', function(data) {
+            // console.log(data);
+        });
+        
+        proc.on('close', async () => {
+            console.log('finished downloading video...');
+  
+            const video = await fs.readFileSync(__dirname + "/../bearcam.mp4", {
+              encoding: "base64",
+            });
+  
+            mastodon.postImage({
+              status: statusText,
+              image: video,
+              alt_text: webcam.description,
+            });
+  
+            try{
+              fs.unlink(__dirname + "/../bearcam.mp4");
+              fs.unlink(__dirname + "/../bearcam.mp4.webm");
+            } catch (error) { /* noop */ }
+        });        
+      } catch (error) {
+        console.log('@bearcam error', error);
+      }
     })();
   },
 };

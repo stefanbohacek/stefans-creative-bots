@@ -106,7 +106,7 @@ module.exports = {
                 position: 'center center'
               }    
             ], { width, height }, (err, imageData) => {
-              const statusText = `Hello from ${ countryName }! #HelloWorld ${countryName.replaceAll(' ', '')}`
+              const statusText = `Hello from ${ countryName }! #HelloWorld ${countryName.replace(/\s+/g, '')}`
               
               console.log('statusText', statusText);
 

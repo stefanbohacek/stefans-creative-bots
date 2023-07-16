@@ -14,12 +14,12 @@ module.exports = [
       page_url: 'https://www.usap.gov/videoclipsandmaps/',
       element: '#img-palmer'
     },
-    {
-      name: 'McMurdo station, Observation Hill',
-      url: 'https://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm?t=1',
-      page_url: 'https://www.usap.gov/videoclipsandmaps/',
-      element: '#img-boreSite'
-    },
+    // {
+    //   name: 'McMurdo station, Observation Hill',
+    //   url: 'https://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm?t=1',
+    //   page_url: 'https://www.usap.gov/videoclipsandmaps/',
+    //   element: '#img-boreSite'
+    // },
     {
       name: 'Casey station',
       url: 'https://www.antarctica.gov.au/antarctic-operations/webcams/casey/',
@@ -45,11 +45,11 @@ module.exports = [
     //   url: 'http://www.antarctica.gov.au/webcams/aurora',
     //   element: 'figure.featured img'
     // },
-    // {
-    //   name: 'Ny-Ålesund webcam',
-    //   url: 'https://www.bas.ac.uk/data/our-data/images/webcams/ny-alesund/',
-    //   element: '.wp-image-15729'
-    // },
+    {
+      name: 'Ny-Ålesund webcam',
+      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/ny-alesund/',
+      element: '.wp-image-15729'
+    },
     {
       name: 'Bird Island research station',
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/bird-island-webcam/',
@@ -65,11 +65,11 @@ module.exports = [
     //   url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-ernest-shackleton-webcam/',
     //   element: '.entry-content img[width="640"]'
     // },
-    // {
-    //   name: 'RRS James Clark Ross',
-    //   url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/',
-    //   element: '.entry-content img[width="640"]'
-    // },
+    {
+      name: 'RRS James Clark Ross',
+      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/',
+      element: '.entry-content img[width="640"]'
+    },
     {
       name: 'RRS Sir David Attenborough Webcam',
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/',

@@ -36,6 +36,7 @@ module.exports = {
           const url = `https://eyes.nasa.gov/apps/exo/#/planet/${planetNameSlug}`;
           const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
           const page = await browser.newPage();
+          await page.setDefaultNavigationTimeout(120000);
 
           console.log("loading exoplanet data...", {
             url,
@@ -56,7 +57,8 @@ module.exports = {
           );
 
           page.on("load", async (response) => {
-            await page.waitForTimeout(100000);
+            await page.waitForSelector("#entrySubtitleId", { timeout: 120000 });
+            await page.waitForTimeout(5000);
 
             const html = await page.evaluate(() => document.body.innerHTML);
             let element;
@@ -151,6 +153,8 @@ module.exports = {
           await page.setViewport({ width: 720, height: 720 });
           await page.goto(url, {
             // waitUntil: "networkidle0",
+            waitUntil: "domcontentloaded",
+            timeout: 120000,
           });
         });
     })();

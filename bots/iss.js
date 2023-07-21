@@ -41,7 +41,7 @@ module.exports = {
         };
 
         console.log(`downloading preview (${fileName})...`, webcam);
-        let statusText = webcam.url;
+        let statusText = `Life feed: ${webcam.url}`;
         const url = webcam.youtube_url;
         // const cmd = `yt-dlp --downloader ffmpeg --downloader-args "ffmpeg:-t 1" "${url}" -o ${fileName}`;
 
@@ -94,7 +94,7 @@ module.exports = {
               bodyParsed.iss_position.latitude &&
               bodyParsed.iss_position.longitude
             ) {
-              statusText += `\n\nCurrent location: http://www.openstreetmap.org/?mlat=${bodyParsed.iss_position.latitude}&mlon=${bodyParsed.iss_position.longitude}&zoom=2`;
+              statusText += `\nCurrent location: http://www.openstreetmap.org/?mlat=${bodyParsed.iss_position.latitude}&mlon=${bodyParsed.iss_position.longitude}&zoom=2`;
             }
 
             statusText += `\n\n${webcam.tags}`;            

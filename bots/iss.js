@@ -1,4 +1,5 @@
 const fs = require("fs"),
+  request = require("request"),
   helpers = require(__dirname + "/../helpers/helpers.js"),
   cronSchedules = require(__dirname + "/../helpers/cron-schedules.js"),
   puppeteer = require("puppeteer"),
@@ -32,14 +33,15 @@ module.exports = {
     (async () => {
       try {
         const webcam = {
-            description: "Live video of Earth streaming from an external camera mounted on the International Space Station. The camera is looking toward Earth with an occasional solar panel passing through the view.",
-            url: "https://eol.jsc.nasa.gov/ESRS/HDEV",
-            youtube_url: 'https://www.youtube.com/watch?v=KG6SL6Mf7ak',
-            tags: '#iss #space #earth #nasa #esa #jaxa #csa'
+          description:
+            "Live video of Earth streaming from an external camera mounted on the International Space Station. The camera is looking toward Earth with an occasional solar panel passing through the view.",
+          url: "https://eol.jsc.nasa.gov/ESRS/HDEV",
+          youtube_url: "https://www.youtube.com/watch?v=KG6SL6Mf7ak",
+          tags: "#iss #space #earth #nasa #esa #jaxa #csa",
         };
 
         console.log(`downloading preview (${fileName})...`, webcam);
-        const statusText = `${webcam.url}\n\n${webcam.tags}`;
+        let statusText = webcam.url;
         const url = webcam.youtube_url;
         // const cmd = `yt-dlp --downloader ffmpeg --downloader-args "ffmpeg:-t 1" "${url}" -o ${fileName}`;
 
@@ -75,18 +77,41 @@ module.exports = {
             encoding: "base64",
           });
 
-          mastodon.postImage({
-            status: statusText,
-            image: video,
-            alt_text: webcam.description,
-          });
+          const apiURL = "http://api.open-notify.org/iss-now.json";
 
-          try {
-            fs.unlink(__dirname + `/../${fileName}`);
-            fs.unlink(__dirname + `/../${fileName}.webm`);
-          } catch (error) {
-            /* noop */
-          }
+          request(apiURL, (error, response, body) => {
+            let bodyParsed;
+
+            try {
+              bodyParsed = JSON.parse(body);
+            } catch (err) {
+              console.log("ERROR: unable locate ISS", err);
+            }
+
+            if (
+              bodyParsed &&
+              bodyParsed.iss_position &&
+              bodyParsed.iss_position.latitude &&
+              bodyParsed.iss_position.longitude
+            ) {
+              statusText += `\n\nCurrent location: http://www.openstreetmap.org/?mlat=${bodyParsed.iss_position.latitude}&mlon=${bodyParsed.iss_position.longitude}&zoom=2`;
+            }
+
+            statusText += `\n\n${webcam.tags}`;            
+
+            mastodon.postImage({
+              status: statusText,
+              image: video,
+              alt_text: webcam.description,
+            });
+
+            try {
+              fs.unlink(__dirname + `/../${fileName}`);
+              fs.unlink(__dirname + `/../${fileName}.webm`);
+            } catch (error) {
+              /* noop */
+            }
+          });
         });
       } catch (error) {
         console.log(`${fileName.replace(".mp4", "")} error`, error);

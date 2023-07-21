@@ -1,30 +1,30 @@
 const fs = require("fs"),
   helpers = require(__dirname + "/../helpers/helpers.js"),
   cronSchedules = require(__dirname + "/../helpers/cron-schedules.js"),
-  webcams = require(__dirname + "/../data/bearcams.js"),
+  webcams = require(__dirname + "/../data/african-wildlife-webcams.js"),
   mastodonClient = require(__dirname + "/../helpers/mastodon.js");
 
 const spawn = require("child_process").spawn;
 const { exec } = require("child_process");
 
 const mastodon = new mastodonClient({
-  access_token: process.env.BEARCAM_ACCESS_TOKEN_SECRET,
-  api_url: process.env.BEARCAM_API,
+  access_token: process.env.AFRICAN_WILDLIFE_ACCESS_TOKEN_SECRET,
+  api_url: process.env.AFRICAN_WILDLIFE_API,
 });
 
-const fileName = "bearcam.mp4";
+const fileName = "africanwildlife.mp4";
 
 module.exports = {
   active: true,
-  name: "@bearcam",
-  description: "Watching some bears.",
-  thumbnail:
-  "https://botwiki.org/wp-content/uploads/2023/07/-bearcam-1689222972.png",
-  about_url: "https://botwiki.org/bot/bearcam/",
+  name: "@africanwildlife",
+  description: "Watching the African wildlife.",
+  // thumbnail:
+  // "https://botwiki.org/wp-content/uploads/2023/07/-bearcam-1689222972.png",
+  // about_url: "https://botwiki.org/bot/africanwildlife/",
   links: [
     {
       title: "Follow on Mastodon",
-      url: "https://botsin.space/@bearcam",
+      url: "https://botsin.space/@africanwildlife",
     },
   ],
   interval: cronSchedules.EVERY_HOUR,

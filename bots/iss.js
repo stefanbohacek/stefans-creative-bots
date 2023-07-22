@@ -1,6 +1,7 @@
 const fs = require("fs"),
   request = require("request"),
   helpers = require(__dirname + "/../helpers/helpers.js"),
+  webcams = require(__dirname + "/../data/iss.js"),
   cronSchedules = require(__dirname + "/../helpers/cron-schedules.js"),
   puppeteer = require("puppeteer"),
   mastodonClient = require(__dirname + "/../helpers/mastodon.js");
@@ -32,15 +33,9 @@ module.exports = {
   script: async () => {
     (async () => {
       try {
-        const webcam = {
-          description:
-            "Live video of Earth streaming from an external camera mounted on the International Space Station. The camera is looking toward Earth with an occasional solar panel passing through the view.",
-          url: "https://eol.jsc.nasa.gov/ESRS/HDEV",
-          youtube_url: "https://www.youtube.com/watch?v=KG6SL6Mf7ak",
-          tags: "#iss #space #earth #nasa #esa #jaxa #csa",
-        };
-
+        const webcam = helpers.randomFromArray(webcams);
         console.log(`downloading preview (${fileName})...`, webcam);
+ 
         let statusText = `Live feed: ${webcam.url}`;
         const url = webcam.youtube_url;
         // const cmd = `yt-dlp --downloader ffmpeg --downloader-args "ffmpeg:-t 1" "${url}" -o ${fileName}`;

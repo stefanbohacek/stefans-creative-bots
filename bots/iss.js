@@ -41,7 +41,7 @@ module.exports = {
         };
 
         console.log(`downloading preview (${fileName})...`, webcam);
-        let statusText = `Life feed: ${webcam.url}`;
+        let statusText = `Live feed: ${webcam.url}`;
         const url = webcam.youtube_url;
         // const cmd = `yt-dlp --downloader ffmpeg --downloader-args "ffmpeg:-t 1" "${url}" -o ${fileName}`;
 

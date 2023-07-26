@@ -9,8 +9,6 @@ const mastodon = new mastodonClient({
   api_url: process.env.PIRATE_FLAGS_API,
 });
 
-
-
 const makeFlag = async () => {
   const url = `https://static.stefanbohacek.dev/pirate-flags/`;
   const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
@@ -20,12 +18,7 @@ const makeFlag = async () => {
   console.log("making a new pirate flag...");
 
   process.on("unhandledRejection", (reason, p) => {
-    console.error(
-      "Unhandled Rejection at: Promise",
-      p,
-      "reason:",
-      reason
-    );
+    console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
     browser.close();
   });
 
@@ -44,7 +37,6 @@ const makeFlag = async () => {
     } finally {
       await browser.close();
     }
-
   });
 
   await page.setViewport({ width: 1030, height: 760 });
@@ -53,7 +45,7 @@ const makeFlag = async () => {
     waitUntil: "domcontentloaded",
     timeout: 120000,
   });
-}
+};
 
 const waveFlag = async () => {
   const url = `https://static.stefanbohacek.dev/pirate-flags/flag.html?img=https://stefans-creative-bots.glitch.me/images/pirate-flag.jpg`;
@@ -64,12 +56,7 @@ const waveFlag = async () => {
   console.log("waving the pirate flag...");
 
   process.on("unhandledRejection", (reason, p) => {
-    console.error(
-      "Unhandled Rejection at: Promise",
-      p,
-      "reason:",
-      reason
-    );
+    console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
     browser.close();
   });
 
@@ -111,18 +98,15 @@ const waveFlag = async () => {
     waitUntil: "domcontentloaded",
     timeout: 120000,
   });
-}
-
-
-
+};
 
 module.exports = {
   active: true,
   name: "@pirateflags",
   description: "Arr!",
-  // thumbnail:
-  //   "https://botwiki.org/wp-content/uploads/2023/07/-exoplanets-1688591006.png",
-  // about_url: "https://botwiki.org/bot/pirate-flags/",
+  thumbnail:
+    "https://botwiki.org/wp-content/uploads/2023/07/pirate-flags-1690400779.png",
+  about_url: "https://botwiki.org/bot/pirate-flags/",
   links: [
     {
       title: "Follow on Mastodon",

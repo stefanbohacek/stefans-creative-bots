@@ -1,7 +1,7 @@
 const fs = require("fs"),
   helpers = require(__dirname + "/../helpers/helpers.js"),
   cronSchedules = require(__dirname + "/../helpers/cron-schedules.js"),
-  webcams = require(__dirname + "/../data/bearcams.js"),
+  webcams = require(__dirname + "/../data/webcams-bearcams.js"),
   mastodonClient = require(__dirname + "/../helpers/mastodon.js");
 
 const spawn = require("child_process").spawn;

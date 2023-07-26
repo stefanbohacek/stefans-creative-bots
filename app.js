@@ -15,6 +15,11 @@ app.set('view engine', 'handlebars');
 
 app.use(bodyParser.json());
 
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 const grant = new Grant({
   server: {
     protocol: 'https',

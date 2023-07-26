@@ -18,9 +18,9 @@ module.exports = {
   active: true,
   name: "@africanwildlife",
   description: "Watching the African wildlife.",
-  // thumbnail:
-  // "https://botwiki.org/wp-content/uploads/2023/07/-bearcam-1689222972.png",
-  // about_url: "https://botwiki.org/bot/africanwildlife/",
+  thumbnail:
+  "https://botwiki.org/wp-content/uploads/2023/07/african-wildlife-1690293481.png",
+  about_url: "https://botwiki.org/bot/african-wildlife/",
   links: [
     {
       title: "Follow on Mastodon",

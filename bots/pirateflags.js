@@ -67,6 +67,18 @@ const waveFlag = async () => {
   page.on("load", async (response) => {
     await page.waitForSelector("#renderArea", { timeout: 120000 });
     await page.waitForTimeout(5000);
+    
+    const pirateTalk = helpers.randomFromArray([
+      `A${"a".repeat(helpers.getRandomInt(1, 7))}${"r".repeat(
+        helpers.getRandomInt(1, 7)
+      )}${"g".repeat(helpers.getRandomInt(1, 7))}${"h".repeat(
+        helpers.getRandomInt(1, 7)
+      )}!`,
+      "Ahoy!",
+      "Ahoy, matey!",
+      "All hands on deck!",
+      "Avast ye!",
+    ]);
 
     let description = `A randomly generated pirate flag. Elements of the flag include skeletons, skulls, pirates, crossed bones, hourglasses, hearts, and swords.`;
 
@@ -78,7 +90,7 @@ const waveFlag = async () => {
         .then(function (data) {
           let base64Encode = `data:image/png;base64,${data}`;
           mastodon.postImage({
-            status: `Arr!\n\n#pirates #flags`,
+            status: `${pirateTalk}\n\n#pirates #flags`,
             image: data,
             alt_text: description,
           });

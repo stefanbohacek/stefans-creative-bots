@@ -1,7 +1,7 @@
 const fs = require("fs"),
   request = require("request"),
   helpers = require(__dirname + "/../helpers/helpers.js"),
-  webcams = require(__dirname + "/../data/iss.js"),
+  webcams = require(__dirname + "/../data/webcams-iss.js"),
   cronSchedules = require(__dirname + "/../helpers/cron-schedules.js"),
   puppeteer = require("puppeteer"),
   mastodonClient = require(__dirname + "/../helpers/mastodon.js");

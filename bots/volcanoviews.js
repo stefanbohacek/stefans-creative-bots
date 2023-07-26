@@ -4,7 +4,7 @@ const fs = require('fs'),
       puppeteer = require('puppeteer'),
       helpers = require(__dirname + '/../helpers/helpers.js'),
       cronSchedules = require(__dirname + '/../helpers/cron-schedules.js'),
-      volcanoes = require(__dirname + '/../data/volcanoes.js'),
+      volcanoes = require(__dirname + '/../data/webcams-volcanoes.js'),
       mastodonClient = require(__dirname + '/../helpers/mastodon.js'),
       tumblrClient = require(__dirname + '/../helpers/tumblr.js');
 

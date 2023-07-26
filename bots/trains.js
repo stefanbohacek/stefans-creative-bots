@@ -1,30 +1,30 @@
 const fs = require("fs"),
   helpers = require(__dirname + "/../helpers/helpers.js"),
   cronSchedules = require(__dirname + "/../helpers/cron-schedules.js"),
-  webcams = require(__dirname + "/../data/webcams-african-wildlife.js"),
+  webcams = require(__dirname + "/../data/webcams-trains.js"),
   mastodonClient = require(__dirname + "/../helpers/mastodon.js");
 
 const spawn = require("child_process").spawn;
 const { exec } = require("child_process");
 
 const mastodon = new mastodonClient({
-  access_token: process.env.AFRICAN_WILDLIFE_ACCESS_TOKEN_SECRET,
-  api_url: process.env.AFRICAN_WILDLIFE_API,
+  access_token: process.env.TRAINS_ACCESS_TOKEN_SECRET,
+  api_url: process.env.TRAINS_API,
 });
 
-const fileName = "africanwildlife.mp4";
+const fileName = "trains.mp4";
 
 module.exports = {
   active: true,
-  name: "@africanwildlife",
-  description: "Watching the African wildlife.",
-  thumbnail:
-  "https://botwiki.org/wp-content/uploads/2023/07/african-wildlife-1690293481.png",
-  about_url: "https://botwiki.org/bot/african-wildlife/",
+  name: "@trains",
+  description: "Riding trains.",
+  // thumbnail:
+  // "https://botwiki.org/wp-content/uploads/2023/07/-bearcam-1689222972.png",
+  // about_url: "https://botwiki.org/bot/trains/",
   links: [
     {
       title: "Follow on Mastodon",
-      url: "https://botsin.space/@africanwildlife",
+      url: "https://botsin.space/@trains",
     },
   ],
   interval: cronSchedules.EVERY_HOUR,
@@ -33,7 +33,7 @@ module.exports = {
       try {
         const webcam = helpers.randomFromArray(webcams);
         console.log(`downloading preview (${fileName})...`, webcam);
-        const statusText = `${webcam.name}: ${webcam.url}\n\n${webcam.tags}`;
+        const statusText = `${webcam.name}\n${webcam.youtube_url}\n\n${webcam.tags}`;
         const url = webcam.youtube_url;
         // const cmd = `yt-dlp --downloader ffmpeg --downloader-args "ffmpeg:-t 1" "${url}" -o ${fileName}`;
 

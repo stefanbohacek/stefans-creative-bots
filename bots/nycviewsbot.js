@@ -44,7 +44,14 @@ module.exports = {
     const webcam = helpers.randomFromArray(webcams);
     console.log(webcam);
 
-    const webcamUrl = `📷 https://www.windy.com/-Webcams/webcams/${webcam.id}`;
+    let webcamUrl;
+
+    if (webcam.windy_id){
+      webcamUrl = `📷 https://www.windy.com/-Webcams/webcams/${webcam.windy_id}`;
+    } else {
+      webcamUrl = `📷 ${webcam.link}`;
+    }
+
     const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${webcam.latitude},${webcam.longitude}`;
 
     const owmApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${webcam.latitude}&lon=${webcam.longitude}&units=imperial&APPID=${process.env.OWM_APP_ID}`;

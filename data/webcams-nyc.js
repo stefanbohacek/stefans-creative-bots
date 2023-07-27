@@ -1,5 +1,14 @@
 module.exports = [
   {
+    id: null,
+    title: "Statue of Liberty TorchCam",
+    description:
+      "This webcam usually shows a view from the top of the Statue of Liberty, facing downwards.",
+    url: "https://www.earthcam.com/cams/includes/image.php?img=2Kv8cKEDQm3%2Fxc8S6M0JlA%3D%3D&logo=0&playbutton=0&s=1",
+    latitude: 40.6892,
+    longitude: -74.0445,
+  },  
+  {
     id: 1639820559,
     title: "New York › South-West",
     description:

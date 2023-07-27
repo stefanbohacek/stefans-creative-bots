@@ -6,6 +6,20 @@ module.exports = [
     youtube_url: "https://www.youtube.com/watch?v=g7CJ3pm-e7s",
     tags: "#trains #live #norway #webcam",
   },
+  {
+    name: "Train trips through Sweden and Norway",
+    description: "A short clip from a webcam at the front of a train riding through Norway and Sweden.",
+    url: "",
+    youtube_url: "https://www.youtube.com/watch?v=_oUGgixxywc",
+    tags: "#trains #live #norway #sweden #webcam",
+  },
+  {
+    name: "Train trips through Sweden and Norway",
+    description: "A short clip from a webcam at the front of a train riding through Norway and Sweden.",
+    url: "",
+    youtube_url: "https://www.youtube.com/watch?v=luDmzcrr92I",
+    tags: "#trains #live #norway #sweden #webcam",
+  },
   // {
   //   name: "World Famous Horseshoe Curve, Altoona, Pennsylvania, USA",
   //   description: "A short clip from a webcam overlooking a train station.",

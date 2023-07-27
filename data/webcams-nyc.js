@@ -1,6 +1,6 @@
 module.exports = [
   {
-    id: null,
+    link: 'https://www.earthcam.com/usa/newyork/statueofliberty/?cam=liberty_crown',
     title: "Statue of Liberty TorchCam",
     description:
       "This webcam usually shows a view from the top of the Statue of Liberty, facing downwards.",
@@ -9,7 +9,7 @@ module.exports = [
     longitude: -74.0445,
   },  
   {
-    id: 1639820559,
+    windy_id: 1639820559,
     title: "New York › South-West",
     description:
       "This webcam usually shows a view of the lower Manhattan with its tall buildings and skyscrapers.",
@@ -18,7 +18,7 @@ module.exports = [
     longitude: -74.006015,
   },
   // {
-  //     "id": 1483960779,
+  //     "windy_id": 1483960779,
   //     "title": "New York: Brooklyn Bridge - Ped Walkway",
   //     "description": "This webcam usually shows DESCRIPTION.",
   //     "url": "https://images-webcams.windy.com/79/1483960779/current/preview/1483960779.jpg",
@@ -26,7 +26,7 @@ module.exports = [
   //     "longitude": -74.000735
   // },
   {
-    id: 1577050386,
+    windy_id: 1577050386,
     title: "Manhattan Community Board 1 › North",
     description:
       "This webcam usually shows a view of the Brooklyn Bridge, with Brooklyn closer to the webcam, and Manhattan further away.",
@@ -35,7 +35,7 @@ module.exports = [
     longitude: -73.995946,
   },
   // {
-  //     "id": 1598737294,
+  //     "windy_id": 1598737294,
   //     "title": "Manhattan Community Board 1",
   //     "description": "This webcam usually shows DESCRIPTION.",
   //     "url": "https://images-webcams.windy.com/94/1598737294/current/preview/1598737294.jpg",
@@ -43,7 +43,7 @@ module.exports = [
   //     "longitude": -74.04444
   // },
   // {
-  //     "id": 1598376882,
+  //     "windy_id": 1598376882,
   //     "title": "Manhattan Community Board 1 › North-East: Statue of Liberty Museum - Statue of Liberty View Point",
   //     "description": "This webcam usually shows DESCRIPTION.",
   //     "url": "https://images-webcams.windy.com/82/1598376882/current/preview/1598376882.jpg",
@@ -51,7 +51,7 @@ module.exports = [
   //     "longitude": -74.044551
   // },
   // {
-  //     "id": 1613941569,
+  //     "windy_id": 1613941569,
   //     "title": "Manhattan Community Board 5",
   //     "description": "This webcam usually shows DESCRIPTION.",
   //     "url": "https://images-webcams.windy.com/69/1613941569/current/preview/1613941569.jpg",
@@ -59,7 +59,7 @@ module.exports = [
   //     "longitude": -73.985289
   // },
   {
-    id: 1649876051,
+    windy_id: 1649876051,
     title: "Weehawken: 1560 Broadway - Times Square",
     description:
       "This webcam usually shows a close-up view of the buildings and billboard ads at the Times Square.",

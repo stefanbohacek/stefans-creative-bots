@@ -115,7 +115,7 @@ const waveFlag = async () => {
 module.exports = {
   active: true,
   name: "@pirateflags",
-  description: "Arr!",
+  description: "Arrgh!",
   thumbnail:
     "https://botwiki.org/wp-content/uploads/2023/07/pirate-flags-1690400779.png",
   about_url: "https://botwiki.org/bot/pirate-flags/",

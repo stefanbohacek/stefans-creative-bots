@@ -227,7 +227,7 @@ module.exports = [
   {
     "country": "Croatia",
     "capital": "Zagreb",
-    "flag_description": "three equal horizontal bands of red (top), white, and blue - the Pan-Slav colors - superimposed by the Croatian coat of arms; the coat of arms consists of one main shield (a checkerboard of 13 red and 12 silver (white) fields) surmounted by five smaller shields that form a crown over the main shield; the five small shields represent five historic regions (from left to right): *, Dubrovnik, Dalmatia, Istria, and Slavonia"
+    "flag_description": "three equal horizontal bands of red (top), white, and blue - the Pan-Slav colors - superimposed by the * coat of arms; the coat of arms consists of one main shield (a checkerboard of 13 red and 12 silver (white) fields) surmounted by five smaller shields that form a crown over the main shield; the five small shields represent five historic regions (from left to right): *, Dubrovnik, Dalmatia, Istria, and Slavonia"
   },
   {
     "country": "Cuba",

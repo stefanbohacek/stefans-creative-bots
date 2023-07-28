@@ -28,12 +28,21 @@ const saveData = () => {
 };
 
 const updateScores = (user) => {
-  if (savedData.scores.hasOwnProperty(user)) {
-    savedData.scores[user] = savedData.scores[user] + 1;
+  const admins = [
+    'stefan@stefanbohacek.online',
+    'botwiki@mastodon.social',
+  ];
+  
+  if (admins.indexOf(user) === -1){
+    if (savedData.scores.hasOwnProperty(user)) {
+      savedData.scores[user] = savedData.scores[user] + 1;
+    } else {
+      savedData.scores[user] = 1;
+    }
+    saveData();
   } else {
-    savedData.scores[user] = 1;
+    console.log('what_capital: skipping answer from admin');
   }
-  saveData();
 };
 
 const pickNewCapital = () => {
@@ -50,7 +59,6 @@ const pickNewCapital = () => {
 
   savedData.capital = capital.capital;
   savedData.country = capital.country;
-  saveData();
 
   helpers.loadImage(flagUrl, (err, imgData) => {
     if (err) {
@@ -66,6 +74,10 @@ const pickNewCapital = () => {
         status: "What is the capital of this country or territory? #quiz #geography #flags #country",
         image: imgData,
         alt_text: `An unspecified country flag: ${altText}`,
+      }, (error, data) => {
+        console.log('question posted', data.id);
+        savedData.current_question = data.id;
+        saveData();
       });
     }
   });
@@ -154,14 +166,20 @@ module.exports = {
       fullMessage.data.status.visibility === "public" ||
       fullMessage.data.status.visibility === "unlisted"
     ) {
-      if (checkAnswer(messageText)) {
-        updateScores(from);
-        reply = `Yes, ${savedData.capital} is the capital of ${
-          savedData.country
-        }, correct! ${getLeaderboard()}`;
-        pickNewCapital();
+      const inReplyToId = fullMessage.data.status.in_reply_to_id;
+
+      if (savedData.current_question !== inReplyToId){
+        reply = `Please make sure to reply directly to the latest question: https://botsin.space/@what_capital/${savedData.current_question}`;
       } else {
-        reply = "That doesn't seem correct, sorry! Or perhaps a new flag was posted?";
+        if (checkAnswer(messageText)) {
+          updateScores(from);
+          reply = `Yes, ${savedData.capital} is the capital of ${
+            savedData.country
+          }, correct! ${getLeaderboard()}`;
+          pickNewCapital();
+        } else {
+          reply = "That doesn't seem correct, sorry!";
+        }
       }
     } else {
       reply = "Sorry, do you mind responding publicly?";

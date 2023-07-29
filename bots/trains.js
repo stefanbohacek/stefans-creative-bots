@@ -13,6 +13,7 @@ const mastodon = new mastodonClient({
 });
 
 const fileName = "trains.mp4";
+let filePath = `${__dirname}/../.data/${fileName}.webm`;
 
 module.exports = {
   active: true,
@@ -37,19 +38,30 @@ module.exports = {
         const url = webcam.youtube_url;
         // const cmd = `yt-dlp --downloader ffmpeg --downloader-args "ffmpeg:-t 1" "${url}" -o ${fileName}`;
 
+        let startTime = '';
+
+        if (webcam.video_start && webcam.video_end){
+            // const seconds = helpers.getRandomInt(webcam.video_start, webcam.video_end);
+            const seconds = helpers.getRandomInt(webcam.video_start, webcam.video_start + 180);
+            const randomTimestamp = new Date(seconds * 1000).toISOString().slice(11, 19);
+            console.log(randomTimestamp);
+            startTime = `-ss ${randomTimestamp} `;
+        }
+
         const cmd = `yt-dlp`;
 
         const args = [
           "--downloader",
           "ffmpeg",
           "--downloader-args",
-          "ffmpeg:-t 10",
+          `ffmpeg:${startTime}-t 10`,
           url,
           "-o",
-          fileName,
+          filePath,
           "--force-overwrites",
         ];
 
+        console.log({args: args.join(' ')});
         const proc = spawn(cmd, args);
 
         proc.stdout.on("data", function (data) {
@@ -65,7 +77,12 @@ module.exports = {
         proc.on("close", async () => {
           console.log(`finished downloading video (${fileName})...`);
 
-          const video = await fs.readFileSync(__dirname + `/../${fileName}`, {
+
+          if (!fs.existsSync(filePath)){
+            filePath += '.webm';
+          }
+
+          const video = await fs.readFileSync(filePath, {
             encoding: "base64",
           });
 
@@ -76,8 +93,7 @@ module.exports = {
           });
 
           try {
-            fs.unlink(__dirname + `/../${fileName}`);
-            fs.unlink(__dirname + `/../${fileName}.webm`);
+            // fs.unlink(filePath);
           } catch (error) {
             /* noop */
           }
@@ -86,5 +102,5 @@ module.exports = {
         console.log(`${fileName.replace(".mp4", "")} error`, error);
       }
     })();
-  },
+  }
 };

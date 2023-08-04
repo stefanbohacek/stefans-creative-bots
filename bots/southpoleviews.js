@@ -52,15 +52,17 @@ module.exports = {
     }    
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
+    // interval: cronSchedules.EVERY_HOUR,
   script: () => {
     const station = helpers.randomFromArray(stations);
-    console.log(station);
+    console.log('@southpoleviews', station);
     
     (async() => {
       // const browser = await puppeteer.launch();
       const browser = await puppeteer.launch({args: ['--no-sandbox']});
 
       const page = await browser.newPage();
+      await page.setDefaultNavigationTimeout(120000)
 
       process.on('unhandledRejection', (reason, p) => {
         console.error('Unhandled Rejection at: Promise', p, 'reason:', reason);
@@ -107,15 +109,14 @@ module.exports = {
           });
 
         } else {
-          console.log('image element not found', station);
+          console.log('@southpoleviews error: image element not found', station);
         }
-        
       });
       try{
         await page.goto(station.url, {waitUntil: 'networkidle0'});
       }
       catch (error) {
-        console.log(error);
+        console.log('@southpoleviews error', error, station);
         browser.close();
       }
 

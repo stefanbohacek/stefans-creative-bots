@@ -52,7 +52,7 @@ module.exports = {
     }    
   ],
   interval: cronSchedules.EVERY_SIX_HOURS,
-    // interval: cronSchedules.EVERY_HOUR,
+  // interval: cronSchedules.EVERY_HOUR,
   script: () => {
     const station = helpers.randomFromArray(stations);
     console.log('@southpoleviews', station);

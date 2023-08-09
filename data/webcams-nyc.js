@@ -13,7 +13,7 @@ module.exports = [
     description:
       "This webcam usually shows a view of the New York skyline with the World Trade Center skyscraper showing prominently.",
     link: 'https://www.earthcam.com/usa/newyork/skyline/?cam=skyline_g',
-    url: "https://www.earthcam.com/cams/includes/image.php?img=xMXhcQOChmwtRpphWBrVFQ%3D%3D&202308091400&logo=0&playbutton=0&s=1",
+    url: "https://www.earthcam.com/cams/includes/image.php?img=xMXhcQOChmwtRpphWBrVFQ%3D%3D&logo=0&playbutton=0&s=1",
     latitude: 40.7115,
     longitude: -74.0127,
   },  
@@ -22,7 +22,7 @@ module.exports = [
     description:
       "This webcam usually shows a view of the Statue of Liberty in New York.",
     link: 'https://www.earthcam.com/usa/newyork/statueofliberty/?cam=liberty_str',
-    url: "https://www.earthcam.com/cams/includes/image.php?img=0ZBptCfiZkejwMkBr07QRw%3D%3D&202308091500&logo=0&playbutton=0&s=1",
+    url: "https://www.earthcam.com/cams/includes/image.php?img=0ZBptCfiZkejwMkBr07QRw%3D%3D&logo=0&playbutton=0&s=1",
     latitude: 40.689247,
     longitude: -74.044502,
   },  
@@ -31,7 +31,7 @@ module.exports = [
     description:
       "This webcam usually shows a view of the New York skyline.",
     link: 'https://www.earthcam.com/usa/newyork/rockefellercenter/?cam=rockefellerobservatory',
-    url: "https://www.earthcam.com/cams/includes/image.php?img=FxiZuOzKkdq5wr44wir%2FCw%3D%3D&202308091600&logo=0&playbutton=0&s=1",
+    url: "https://www.earthcam.com/cams/includes/image.php?img=FxiZuOzKkdq5wr44wir%2FCw%3D%3D&logo=0&playbutton=0&s=1",
     latitude: 40.7594,
     longitude: -73.9800,
   },  

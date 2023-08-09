@@ -75,11 +75,11 @@ module.exports = [
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/',
       element: '.entry-content img[width="1920"]'
     },
-    {
-      name: 'Halley VI Station Webcam Archive',
-      url: 'https://legacy.bas.ac.uk/webcams/archive/cam.php?cam=5&position=1',
-      element: '.webcam_image main img'
-    },
+//    {
+//      name: 'Halley VI Station Webcam Archive',
+//      url: 'https://legacy.bas.ac.uk/webcams/archive/cam.php?cam=5&position=1',
+ //     element: '.webcam_image main img'
+  //  },
     {
       name: 'King Edward Point webcam',
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/king-edward-point-webcam/',

@@ -28,7 +28,7 @@ module.exports = {
       url: "https://botsin.space/@trains",
     },
   ],
-  interval: cronSchedules.EVERY_HOUR,
+  interval: cronSchedules.EVERY_HOUR_35,
   script: async () => {
     (async () => {
       try {

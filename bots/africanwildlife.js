@@ -27,7 +27,7 @@ module.exports = {
       url: "https://botsin.space/@africanwildlife",
     },
   ],
-  interval: cronSchedules.EVERY_HOUR,
+  interval: cronSchedules.EVERY_HOUR_45,
   script: async () => {
     (async () => {
       try {

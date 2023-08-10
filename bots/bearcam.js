@@ -27,7 +27,7 @@ module.exports = {
       url: "https://botsin.space/@bearcam",
     },
   ],
-  interval: cronSchedules.EVERY_HOUR,
+  interval: cronSchedules.EVERY_HOUR_5,
   script: async () => {
     (async () => {
       try {

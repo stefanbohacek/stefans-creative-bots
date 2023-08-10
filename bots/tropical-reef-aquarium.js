@@ -25,7 +25,7 @@ module.exports = {
       url: "https://botsin.space/@tropicalreefaquarium",
     },
   ],
-  interval: cronSchedules.EVERY_HOUR,
+  interval: cronSchedules.EVERY_HOUR_25,
   script: async () => {
     (async () => {
       try {

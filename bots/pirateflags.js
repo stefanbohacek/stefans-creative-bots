@@ -133,7 +133,7 @@ module.exports = {
       url: "https://botsin.space/@pirateflags",
     },
   ],
-  interval: cronSchedules.EVERY_THREE_HOURS,
+  interval: cronSchedules.EVERY_THREE_HOURS_5,
   script: async () => {
     (async () => {
       await makeFlag();

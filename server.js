@@ -91,8 +91,7 @@ files.forEach((file) => {
         );
       }
 
-      bot.interval_human = botInterval;
-
+      bot.interval_human = botInterval.replace(/[0-9]/g, "");
       console.log(`⌛ scheduling ${bot.name} (${file}): ${botInterval}`);
 
       const job = new CronJob(bot.interval, () => {

@@ -13,9 +13,9 @@ module.exports = {
   active: true,
   name: "@skies",
   description: "Views of skies.",
-  // thumbnail:
-  //   "https://botwiki.org/wp-content/uploads/2020/03/views-from-new-york-1585658499.png",
-  // about_url: "https://botwiki.org/bot/views-from-new-york/",
+  thumbnail:
+    "https://botwiki.org/wp-content/uploads/2023/08/-skies-1691854577.png",
+  about_url: "https://botwiki.org/bot/skies/",
   links: [
     {
       title: "Follow on Mastodon",

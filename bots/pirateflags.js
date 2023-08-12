@@ -71,7 +71,7 @@ const waveFlag = async () => {
 
     page.on("load", async (response) => {
       await page.waitForSelector("#renderArea", { timeout: 120000 });
-      await page.waitForTimeout(5000);
+      await page.waitForTimeout(15000);
 
       const pirateTalk = helpers.randomFromArray([
         `A${"a".repeat(helpers.getRandomInt(1, 7))}${"r".repeat(

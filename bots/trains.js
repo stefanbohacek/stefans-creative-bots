@@ -19,9 +19,9 @@ module.exports = {
   active: true,
   name: "@trains",
   description: "Riding trains.",
-  // thumbnail:
-  // "https://botwiki.org/wp-content/uploads/2023/07/-bearcam-1689222972.png",
-  // about_url: "https://botwiki.org/bot/trains/",
+  thumbnail:
+  "https://botwiki.org/wp-content/uploads/2023/08/trains-1691854906.png",
+  about_url: "https://botwiki.org/bot/trains/",
   links: [
     {
       title: "Follow on Mastodon",

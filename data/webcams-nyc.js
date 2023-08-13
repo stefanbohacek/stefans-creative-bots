@@ -1,5 +1,14 @@
 module.exports = [
   {
+    title: "Brooklyn Bridge",
+    description:
+      "This webcam usually shows a view of skyscrapers with Brooklyn Bridge in the background.",
+    link: "https://www.earthcam.com/usa/newyork/brooklynbridge/?cam=gzcchd",
+    url: "https://www.earthcam.com/cams/includes/image.php?img=dTOIb7mOrFEv1Jq3C%2FtGng&logo=0&playbutton=0&s=1",
+    latitude: 40.7061,
+    longitude: -73.9969,
+  },
+  {
     title: "Statue of Liberty TorchCam",
     description:
       "This webcam usually shows a view from the top of the Statue of Liberty, facing downwards.",

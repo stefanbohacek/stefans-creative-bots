@@ -115,7 +115,14 @@ module.exports = {
               }
   
               if (randomPlanet.pl_bmasse) {
-                description += `\nPlanet mass: ${randomPlanet.pl_bmasse} Earths`;
+                let planetMass;
+
+                if (randomPlanet.pl_bmasse > 1){
+                  planetMass = Math.round(randomPlanet.pl_bmasse)
+                } else {
+                  planetMass = Math.round(randomPlanet.pl_bmasse * 100) / 100
+                }
+                description += `\nPlanet mass: ${planetMass} Earths`;
               }
   
               if (randomPlanet.pl_orbper) {

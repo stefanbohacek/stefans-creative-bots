@@ -111,11 +111,11 @@ module.exports = {
               }
   
               if (randomPlanet.pl_rade) {
-                description += `\nPlanet radius: ${randomPlanet.pl_rade} x Jupiter`;
+                description += `\nPlanet radius: ${randomPlanet.pl_rade} x Earth`;
               }
   
               if (randomPlanet.pl_bmasse) {
-                description += `\nPlanet mass: ${randomPlanet.pl_bmasse} Jupiters`;
+                description += `\nPlanet mass: ${randomPlanet.pl_bmasse} Earths`;
               }
   
               if (randomPlanet.pl_orbper) {

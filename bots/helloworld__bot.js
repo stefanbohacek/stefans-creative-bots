@@ -106,7 +106,7 @@ module.exports = {
                 position: 'center center'
               }    
             ], { width, height }, (err, imageData) => {
-              const statusText = `Hello from ${ countryName }! #HelloWorld ${countryName.replace(/\s+/g, '')}`
+              const statusText = `Hello from ${ countryName }! #HelloWorld #${countryName.replace(/\s+/g, '')}`
               
               console.log('statusText', statusText);
 
@@ -119,7 +119,7 @@ module.exports = {
               mastodon.postImage({
                 status: statusText,
                 image: imageData,
-                alt_text: `Map of ${ countryName } overlayed with a translation of the word "hello".`,
+                alt_text: `Map of ${ countryName } overlayed with a translation of the word "hello": ${helloTranslation}.`,
               });
               
             });

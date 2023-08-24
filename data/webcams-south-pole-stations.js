@@ -46,11 +46,6 @@ module.exports = [
     //   element: 'figure.featured img'
     // },
     {
-      name: 'Ny-Ålesund webcam',
-      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/ny-alesund/',
-      element: '.wp-image-15729'
-    },
-    {
       name: 'Bird Island research station',
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/bird-island-webcam/',
       element: '.entry-content img[width="640"]'

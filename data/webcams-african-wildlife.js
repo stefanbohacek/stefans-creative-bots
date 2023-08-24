@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: "The Namib Desert, Namibia",
+    description: "A live view from a webcam at a watering hole. The camera captures various African wildlife, including gazelles, ostriches, zebras, hyenas, cheetahs, leopards, jackals, and foxes.",
+    url: "https://gondwana-collection.com/namib-desert-live-stream",
+    youtube_url: "https://www.youtube.com/watch?v=ydYDqZQpim8",
+    tags: '#africa #namibia #SouthAfrica #NamibDesert #wildlife #live #webcam'
+  },  
+  {
     name: "Laikipia County, Kenya",
     description: "A live view from a webcam in Laikipia County, Kenya. The camera occassionaly pans and zooms around, showing trees, bushes, and various wildlife, including monkeys, and giraffes.",
     url: "https://explore.org/livecams/african-wildlife/african-animal-lookout-camera",

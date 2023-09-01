@@ -153,7 +153,7 @@ const botScript = async () => {
                     break;
                 }
 
-                const statusText = `${station.name}\n\n${weather}\nStation: ${stationURL}\nLocation: http://www.openstreetmap.org/?mlat=${station.lat}&mlon=${station.lng}&zoom=2\n#sea #ocean #water #webcam`;
+                const statusText = `${station.name}\n\n${weather}\nStation: ${stationURL}\nLocation: http://www.openstreetmap.org/?mlat=${station.lat}&mlon=${station.lng}&zoom=2\n\n#sea #ocean #water #webcam`;
 
                 mastodon.postImage({
                   status: statusText,

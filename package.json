@@ -52,7 +52,8 @@
     "mastodon-api-v1": "^1.0.0",
     "html-to-text": "^8.x",
     "rivescript": "^2.2.1",
-    "csvtojson": "^2.0.10"
+    "csvtojson": "^2.0.10",
+    "colorthief": "^2.4.0"
   },
   "engines": {
     "node": "12.x"

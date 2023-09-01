@@ -16,9 +16,9 @@ module.exports = {
   active: true,
   name: "@sea",
   description: "Views from the middle of an ocean.",
-  // thumbnail:
-  // "https://botwiki.org/wp-content/uploads/2023/07/-bearcam-1689222972.png",
-  // about_url: "https://botwiki.org/bot/bearcam/",
+  thumbnail:
+  "https://botwiki.org/wp-content/uploads/2023/08/at-sea-1693537253.png",
+  about_url: "https://botwiki.org/bot/at-sea/",
   links: [
     {
       title: "Follow on Mastodon",

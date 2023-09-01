@@ -2,6 +2,7 @@ const fs = require('fs'),
       path = require('path'),
       fetch = require('node-fetch'),
       request = require('request'),
+      client = require('https'),
       exec  = require('child_process');
 
 module.exports = {
@@ -171,6 +172,14 @@ module.exports = {
         console.log(err);
     }
 
+  },
+  downloadImage: (url, filepath, cb) => {
+    client.get(url, (res) => {
+      res.pipe(fs.createWriteStream(filepath));
+      if (cb){
+        cb(filepath);
+      }
+    });
   },
   removeFile: (filePath) => {
     setTimeout(() => {

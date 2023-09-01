@@ -2,7 +2,8 @@ const fs = require("fs"),
   request = require("request"),
   helpers = require(__dirname + "/../helpers/helpers.js"),
   cronSchedules = require(__dirname + "/../helpers/cron-schedules.js"),
-  mastodonClient = require(__dirname + "/../helpers/mastodon.js");
+  mastodonClient = require(__dirname + "/../helpers/mastodon.js"),
+  ColorThief = require("colorthief");
 
 const spawn = require("child_process").spawn;
 const { exec } = require("child_process");
@@ -12,62 +13,70 @@ const mastodon = new mastodonClient({
   api_url: process.env.AT_SEA_API,
 });
 
-module.exports = {
-  active: true,
-  name: "@sea",
-  description: "Views from the middle of an ocean.",
-  thumbnail:
-  "https://botwiki.org/wp-content/uploads/2023/08/at-sea-1693537253.png",
-  about_url: "https://botwiki.org/bot/at-sea/",
-  links: [
-    {
-      title: "Follow on Mastodon",
-      url: "https://botsin.space/@sea",
-    },
-  ],
-  interval: cronSchedules.EVERY_HOUR_5,
-  script: async () => {
-    const stationList = `https://www.ndbc.noaa.gov/buoycams.php`;
-    const stationExclude = [46080, 46029, 42003];
+const botScript = async () => {
+  const stationList = `https://www.ndbc.noaa.gov/buoycams.php`;
+  const stationExclude = [46080, 46029, 42003];
 
-    const spawn = require("child_process").spawn;
-    const { exec } = require("child_process");
+  const spawn = require("child_process").spawn;
+  const { exec } = require("child_process");
 
-    request(stationList, (error, response, body) => {
-      let stations = JSON.parse(body);
-      stations = stations.filter(
-        (station) => stationExclude.indexOf(station.id) === -1
-      );
-      const station = helpers.randomFromArray(stations);
-      const imageWidth = station.width / 6;
+  request(stationList, (error, response, body) => {
+    let stations = JSON.parse(body);
+    stations = stations.filter(
+      (station) => stationExclude.indexOf(station.id) === -1
+    );
+    const station = helpers.randomFromArray(stations);
+    const imageWidth = station.width / 6;
 
-      console.log("picking a station at sea...", station);
+    console.log("picking a station at sea...", station);
 
-      const stationURL = `https://www.ndbc.noaa.gov/station_page.php?station=${station.id}`;
-      const imageURL = `https://www.ndbc.noaa.gov/buoycam.php?station=${station.id}`;
+    const stationURL = `https://www.ndbc.noaa.gov/station_page.php?station=${station.id}`;
+    const imageURL = `https://www.ndbc.noaa.gov/buoycam.php?station=${station.id}`;
 
-      const fileName = "buoycam";
-      const fileExt = "jpg";
-      const filePath = `${__dirname}/../tmp/${fileName}.${fileExt}`;
+    const fileName = "buoycam";
+    const fileExt = "jpg";
+    const filePath = `${__dirname}/../tmp/${fileName}.${fileExt}`;
 
-      helpers.downloadImage(imageURL, filePath, () => {
-        const imagemagickCommand = `convert ${filePath} -crop ${imageWidth}x270 ${__dirname}/../tmp/buoycam-cropped.jpg`;
+    helpers.downloadImage(imageURL, filePath, () => {
+      const imagemagickCommand = `convert ${filePath} -crop ${imageWidth}x270 ${__dirname}/../tmp/buoycam-cropped.jpg`;
 
-        exec(imagemagickCommand, async (error, stdout, stderr) => {
-          if (error) {
-            console.log(`@sea error: ${error.message}`);
+      exec(imagemagickCommand, async (error, stdout, stderr) => {
+        if (error) {
+          console.log(`@sea error: ${error.message}`);
+        }
+        if (stderr) {
+          console.log(`@sea stderr: ${stderr}`);
+        }
+        //   console.log(`stdout: ${stdout}`);
+
+        // const croppedFilePath = `${__dirname}/../tmp/${fileName}-cropped-${helpers.getRandomInt(
+        //   0,
+        //   5
+        // )}.${fileExt}`;
+
+        let okayPictures = [];
+
+        const forLoop = async (_) => {
+          for (let i = 0; i <= 5; i++) {
+            const croppedFilePath = `${__dirname}/../tmp/${fileName}-cropped-${i}.${fileExt}`;
+            const color = await ColorThief.getColor(croppedFilePath);
+            const hex = helpers.rgbToHex(...color);
+            const luminosity = helpers.getLuminosity(hex);
+
+            if (luminosity > 40) {
+              okayPictures.push(croppedFilePath);
+            }
           }
-          if (stderr) {
-            console.log(`@sea stderr: ${stderr}`);
-          }
-          //   console.log(`stdout: ${stdout}`);
+        };
 
-          const croppedFilePath = `${__dirname}/../tmp/${fileName}-cropped-${helpers.getRandomInt(
-            0,
-            5
-          )}.${fileExt}`;
+        await forLoop();
 
-          const image = await fs.readFileSync(croppedFilePath, {
+        console.log({ okayPictures });
+
+        if (okayPictures.length) {
+          const selectedImagePath = helpers.randomFromArray(okayPictures);
+
+          const image = await fs.readFileSync(selectedImagePath, {
             encoding: "base64",
           });
 
@@ -157,8 +166,27 @@ module.exports = {
               }
             }
           });
-        });
+        } else {
+          botScript();
+        }
       });
     });
-  },
+  });
+};
+
+module.exports = {
+  active: true,
+  name: "@sea",
+  description: "Views from the middle of an ocean.",
+  // thumbnail:
+  // "https://botwiki.org/wp-content/uploads/2023/07/-bearcam-1689222972.png",
+  // about_url: "https://botwiki.org/bot/bearcam/",
+  links: [
+    {
+      title: "Follow on Mastodon",
+      url: "https://botsin.space/@sea",
+    },
+  ],
+  interval: cronSchedules.EVERY_HOUR_5,
+  script: botScript,
 };

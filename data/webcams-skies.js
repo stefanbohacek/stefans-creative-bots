@@ -9,6 +9,15 @@ module.exports = [
     longitude: 9.2166658,
   },
   {
+    title: "Wittenbeck, Germany",
+    description:
+      "This webcam usually shows a view of the sky with trees in the foreground.",
+    url: "https://images-webcams.windy.com/49/1247936049/current/full/1247936049.jpg",
+    link: "https://www.windy.com/-Webcams/Germany/Mecklenburg-Vorpommern/Wittenbeck/K%C3%BChlungsborn-Panorama-Ost-IAP/webcams/1247936049?54.098,-1.406,5",
+    latitude: 54.126680,
+    longitude: 11.789600,
+  },
+  {
     title: "Hampstead, London, England",
     description:
       "This webcam usually shows a view of the sky with trees in the foreground.",

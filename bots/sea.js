@@ -63,7 +63,7 @@ const botScript = async () => {
             const hex = helpers.rgbToHex(...color);
             const luminosity = helpers.getLuminosity(hex);
 
-            if (luminosity > 20) {
+            if (luminosity > 30) {
               okayPictures.push(croppedFilePath);
             }
           }

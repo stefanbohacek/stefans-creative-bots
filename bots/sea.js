@@ -23,7 +23,7 @@ const botScript = async () => {
   request(stationList, (error, response, body) => {
     let stations = JSON.parse(body);
     stations = stations.filter(
-      (station) => stationExclude.indexOf(station.id) === -1
+      (station) => stationExclude.indexOf(station.id) === -1 && station.width
     );
     const station = helpers.randomFromArray(stations);
     const imageWidth = station.width / 6;

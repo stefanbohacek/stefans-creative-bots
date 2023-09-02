@@ -25,11 +25,11 @@ module.exports = [
       url: 'https://www.antarctica.gov.au/antarctic-operations/webcams/casey/',
       element: 'figure.featured img'
     },
-    {
-      name: 'Davis station',
-      url: 'https://www.antarctica.gov.au/antarctic-operations/webcams/davis/',
-      element: 'figure.featured img'
-    },
+    // {
+    //   name: 'Davis station',
+    //   url: 'https://www.antarctica.gov.au/antarctic-operations/webcams/davis/',
+    //   element: 'figure.featured img'
+    // },
     {
       name: 'Macquarie Island station',
       url: 'https://www.antarctica.gov.au/antarctic-operations/webcams/macquarie-island/',

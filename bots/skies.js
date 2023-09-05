@@ -44,7 +44,8 @@ module.exports = {
       if (!error) {
         try {
           const responseJSON = JSON.parse(body);
-          const temperature = `It's ${Math.round(responseJSON.main.temp)} °F.`;
+          const temperatureFahrenheit = Math.round(responseJSON.main.temp);
+          const temperature = `It's ${temperatureFahrenheit} °F/${helpers.fahrenheitToCelsius(temperatureFahrenheit)}°C.`;
 
           switch (responseJSON.weather[0].main) {
             case "Clear":

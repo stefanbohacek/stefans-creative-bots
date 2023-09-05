@@ -231,5 +231,5 @@ module.exports = {
       }
     }, 30000);
   },
-  fahrenheitToCelsius: (fahrenheit) => (fahrenheit - 32) * 5/9,
+  fahrenheitToCelsius: (fahrenheit) => Math.round((fahrenheit - 32) * 5/9),
 };

@@ -1,13 +1,142 @@
 const request = require("request"),
+  fs = require("fs"),
   helpers = require(__dirname + "/../helpers/helpers.js"),
   cronSchedules = require(__dirname + "/../helpers/cron-schedules.js"),
   webcams = require(__dirname + "/../data/webcams-skies.js"),
-  mastodonClient = require(__dirname + "/../helpers/mastodon.js");
+  mastodonClient = require(__dirname + "/../helpers/mastodon.js"),
+  ColorThief = require("colorthief");
 
 const mastodon = new mastodonClient({
   access_token: process.env.SKIES_ACCESS_TOKEN_SECRET,
   api_url: process.env.SKIES_API,
 });
+
+const botScript = async () => {
+  const webcam = helpers.randomFromArray(webcams);
+  console.log(webcam);
+
+  let webcamUrl;
+
+  if (webcam.windy_id) {
+    webcamUrl = `📷 https://www.windy.com/-Webcams/webcams/${webcam.windy_id}`;
+  } else {
+    webcamUrl = `📷 ${webcam.link}`;
+  }
+
+  const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${webcam.latitude},${webcam.longitude}`;
+
+  const owmApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${webcam.latitude}&lon=${webcam.longitude}&units=imperial&APPID=${process.env.OWM_APP_ID}`;
+  let weather = null;
+
+  request(owmApiUrl, (error, response, body) => {
+    if (!error) {
+      try {
+        const responseJSON = JSON.parse(body);
+        const temperatureFahrenheit = Math.round(responseJSON.main.temp);
+        const temperature = `It's ${temperatureFahrenheit} °F/${helpers.fahrenheitToCelsius(
+          temperatureFahrenheit
+        )}°C.`;
+
+        switch (responseJSON.weather[0].main) {
+          case "Clear":
+            weather = `It's a clear day. ${temperature}`;
+            break;
+
+          case "Clouds":
+            weather = `It's a cloudy day. ${temperature}`;
+            break;
+
+          case "Rain":
+            weather = `It's a rainy day. ${temperature}`;
+            break;
+
+          case "Thunderstorm":
+            weather = `It's a stormy day. ${temperature}`;
+            break;
+
+          case "Drizzle":
+            weather = `It's drizzling. ${temperature}`;
+            break;
+
+          case "Snow":
+            weather = `It's a snowy day. ${temperature}`;
+            break;
+
+          case "Mist":
+            weather = `It's a misty day. ${temperature}`;
+            break;
+
+          case "Smoke":
+            weather = `It's a smoky day. ${temperature}`;
+            break;
+
+          case "Haze":
+            weather = `It's a hazey day. ${temperature}`;
+            break;
+
+          case "Dust":
+            weather = `It's a dusty day. ${temperature}`;
+            break;
+
+          case "Fog":
+            weather = `It's a foggy day. ${temperature}`;
+            break;
+
+          case "Sand":
+            weather = `It's a sandy day. ${temperature}`;
+            break;
+
+          case "Dust":
+            weather = `It's a dusty day. ${temperature}`;
+            break;
+
+          case "Ash":
+            weather = `It's an ashy day. ${temperature}`;
+            break;
+
+          case "Tornado":
+            weather = `There's a tornado in New York?? ${temperature}`;
+            break;
+        }
+
+        const fileName = "skies";
+        const fileExt = "jpg";
+        const filePath = `${__dirname}/../tmp/${fileName}.${fileExt}`;
+
+        helpers.downloadImage(webcam.url, filePath, async () => {
+          const color = await ColorThief.getColor(filePath);
+          const hex = helpers.rgbToHex(...color);
+          const luminosity = helpers.getLuminosity(hex);
+
+          if (luminosity > 30) {
+            const status = `${webcam.title}\n${webcamUrl}\n${googleMapsUrl} #sky #skies #view #webcam`;
+            let description = webcam.description;
+
+            if (weather) {
+              description = `${description} ${weather}`;
+            }
+
+            const image = await fs.readFileSync(filePath, {
+              encoding: "base64",
+            });
+
+            mastodon.postImage({
+              status,
+              image,
+              alt_text: description,
+            });
+
+            // tumblr.postImage(text, imgData);
+          } else {
+            botScript();
+          }
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  });
+};
 
 module.exports = {
   active: true,
@@ -20,119 +149,8 @@ module.exports = {
     {
       title: "Follow on Mastodon",
       url: "https://botsin.space/@skies",
-    }
+    },
   ],
   interval: cronSchedules.EVERY_HOUR,
-  script: () => {
-    const webcam = helpers.randomFromArray(webcams);
-    console.log(webcam);
-
-    let webcamUrl;
-
-    if (webcam.windy_id){
-      webcamUrl = `📷 https://www.windy.com/-Webcams/webcams/${webcam.windy_id}`;
-    } else {
-      webcamUrl = `📷 ${webcam.link}`;
-    }
-
-    const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${webcam.latitude},${webcam.longitude}`;
-
-    const owmApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${webcam.latitude}&lon=${webcam.longitude}&units=imperial&APPID=${process.env.OWM_APP_ID}`;
-    let weather = null;
-
-    request(owmApiUrl, (error, response, body) => {
-      if (!error) {
-        try {
-          const responseJSON = JSON.parse(body);
-          const temperatureFahrenheit = Math.round(responseJSON.main.temp);
-          const temperature = `It's ${temperatureFahrenheit} °F/${helpers.fahrenheitToCelsius(temperatureFahrenheit)}°C.`;
-
-          switch (responseJSON.weather[0].main) {
-            case "Clear":
-              weather = `It's a clear day. ${temperature}`;
-              break;
-
-            case "Clouds":
-              weather = `It's a cloudy day. ${temperature}`;
-              break;
-
-            case "Rain":
-              weather = `It's a rainy day. ${temperature}`;
-              break;
-
-            case "Thunderstorm":
-              weather = `It's a stormy day. ${temperature}`;
-              break;
-
-            case "Drizzle":
-              weather = `It's drizzling. ${temperature}`;
-              break;
-
-            case "Snow":
-              weather = `It's a snowy day. ${temperature}`;
-              break;
-
-            case "Mist":
-              weather = `It's a misty day. ${temperature}`;
-              break;
-
-            case "Smoke":
-              weather = `It's a smoky day. ${temperature}`;
-              break;
-
-            case "Haze":
-              weather = `It's a hazey day. ${temperature}`;
-              break;
-
-            case "Dust":
-              weather = `It's a dusty day. ${temperature}`;
-              break;
-
-            case "Fog":
-              weather = `It's a foggy day. ${temperature}`;
-              break;
-
-            case "Sand":
-              weather = `It's a sandy day. ${temperature}`;
-              break;
-
-            case "Dust":
-              weather = `It's a dusty day. ${temperature}`;
-              break;
-
-            case "Ash":
-              weather = `It's an ashy day. ${temperature}`;
-              break;
-
-            case "Tornado":
-              weather = `There's a tornado in New York?? ${temperature}`;
-              break;
-          }
-
-          helpers.loadImage(webcam.url, (err, imgData) => {
-            if (err) {
-              console.log(err);
-            } else {
-              const text = `${webcam.title}\n${webcamUrl}\n${googleMapsUrl} #sky #skies #view #webcam`;
-              let description = webcam.description;
-
-              if (weather) {
-                description = `${description} ${weather}`;
-              }
-
-              mastodon.postImage({
-                status: text,
-                image: imgData,
-                alt_text: description,
-              });
-
-              // tumblr.postImage(text, imgData);
-            }
-          });
-        } catch (err) {
-          console.log(err);
-        }
-      }
-    });
-  },
+  script: botScript,
 };

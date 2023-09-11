@@ -34,13 +34,13 @@ module.exports = [
     youtube_url: "https://www.youtube.com/watch?v=1y9QA1ttEes",
     tags: '#water #underwater #fish #animals #nature #live #webcam'
   },
-  {
-    name: "MEGA Lab, Hawaii, United States",
-    description: "Live streaming underwater webcam in Hawaii, United States. The underwater cam and a smart buoy monitor the ocean temperature and coral reef health. The location is just off the coast of Kona on the west of Hawaii.",
-    url: "https://www.youtube.com/@EVNautilus",
-    youtube_url: "https://www.youtube.com/watch?v=e3gesqRHJIk",
-    tags: '#water #underwater #fish #animals #nature #live #webcam'
-  },
+  // {
+  //   name: "MEGA Lab, Hawaii, United States",
+  //   description: "Live streaming underwater webcam in Hawaii, United States. The underwater cam and a smart buoy monitor the ocean temperature and coral reef health. The location is just off the coast of Kona on the west of Hawaii.",
+  //   url: "https://www.youtube.com/@EVNautilus",
+  //   youtube_url: "https://www.youtube.com/watch?v=e3gesqRHJIk",
+  //   tags: '#water #underwater #fish #animals #nature #live #webcam'
+  // },
   {
     name: "Utopia Village, Utila, Honduras, Western Caribbean",
     description: "Live streaming underwater webcam in Honduras, Western Caribbean. The webcam shows reef fish and marine life in the turquoise waters of the Meso-American reef. The webcam is located at Utopia Village in Utila.",

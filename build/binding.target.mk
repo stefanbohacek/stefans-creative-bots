@@ -9,8 +9,11 @@ DEFS_Debug := \
 	'-DV8_DEPRECATION_WARNINGS=1' \
 	'-DV8_DEPRECATION_WARNINGS' \
 	'-DV8_IMMINENT_DEPRECATION_WARNINGS' \
+	'-D_GLIBCXX_USE_CXX11_ABI=1' \
 	'-D_LARGEFILE_SOURCE' \
 	'-D_FILE_OFFSET_BITS=64' \
+	'-D__STDC_FORMAT_MACROS' \
+	'-DOPENSSL_NO_PINSHARED' \
 	'-DOPENSSL_THREADS' \
 	'-DBUILDING_NODE_EXTENSION' \
 	'-DDEBUG' \
@@ -35,16 +38,16 @@ CFLAGS_C_Debug :=
 CFLAGS_CC_Debug := \
 	-fno-rtti \
 	-fno-exceptions \
-	-std=gnu++1y
+	-std=gnu++14
 
 INCS_Debug := \
-	-I/app/.cache/node-gyp/12.0.0/include/node \
-	-I/app/.cache/node-gyp/12.0.0/src \
-	-I/app/.cache/node-gyp/12.0.0/deps/openssl/config \
-	-I/app/.cache/node-gyp/12.0.0/deps/openssl/openssl/include \
-	-I/app/.cache/node-gyp/12.0.0/deps/uv/include \
-	-I/app/.cache/node-gyp/12.0.0/deps/zlib \
-	-I/app/.cache/node-gyp/12.0.0/deps/v8/include
+	-I/app/.cache/node-gyp/16.14.2/include/node \
+	-I/app/.cache/node-gyp/16.14.2/src \
+	-I/app/.cache/node-gyp/16.14.2/deps/openssl/config \
+	-I/app/.cache/node-gyp/16.14.2/deps/openssl/openssl/include \
+	-I/app/.cache/node-gyp/16.14.2/deps/uv/include \
+	-I/app/.cache/node-gyp/16.14.2/deps/zlib \
+	-I/app/.cache/node-gyp/16.14.2/deps/v8/include
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=binding' \
@@ -53,8 +56,11 @@ DEFS_Release := \
 	'-DV8_DEPRECATION_WARNINGS=1' \
 	'-DV8_DEPRECATION_WARNINGS' \
 	'-DV8_IMMINENT_DEPRECATION_WARNINGS' \
+	'-D_GLIBCXX_USE_CXX11_ABI=1' \
 	'-D_LARGEFILE_SOURCE' \
 	'-D_FILE_OFFSET_BITS=64' \
+	'-D__STDC_FORMAT_MACROS' \
+	'-DOPENSSL_NO_PINSHARED' \
 	'-DOPENSSL_THREADS' \
 	'-DBUILDING_NODE_EXTENSION'
 
@@ -76,16 +82,16 @@ CFLAGS_C_Release :=
 CFLAGS_CC_Release := \
 	-fno-rtti \
 	-fno-exceptions \
-	-std=gnu++1y
+	-std=gnu++14
 
 INCS_Release := \
-	-I/app/.cache/node-gyp/12.0.0/include/node \
-	-I/app/.cache/node-gyp/12.0.0/src \
-	-I/app/.cache/node-gyp/12.0.0/deps/openssl/config \
-	-I/app/.cache/node-gyp/12.0.0/deps/openssl/openssl/include \
-	-I/app/.cache/node-gyp/12.0.0/deps/uv/include \
-	-I/app/.cache/node-gyp/12.0.0/deps/zlib \
-	-I/app/.cache/node-gyp/12.0.0/deps/v8/include
+	-I/app/.cache/node-gyp/16.14.2/include/node \
+	-I/app/.cache/node-gyp/16.14.2/src \
+	-I/app/.cache/node-gyp/16.14.2/deps/openssl/config \
+	-I/app/.cache/node-gyp/16.14.2/deps/openssl/openssl/include \
+	-I/app/.cache/node-gyp/16.14.2/deps/uv/include \
+	-I/app/.cache/node-gyp/16.14.2/deps/zlib \
+	-I/app/.cache/node-gyp/16.14.2/deps/v8/include
 
 OBJS :=
 

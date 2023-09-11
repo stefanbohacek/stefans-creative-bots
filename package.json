@@ -4,14 +4,14 @@
   "description": "Beep beep tweet!",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node --trace-warnings server.js",
     "postinstall": "node node_modules/puppeteer/install.js; pip3 install yt-dlp==2023.7.6"
   },
   "dependencies": {
     "base64-stream": "^1.0.0",
     "body-parser": "^1.19.0",
     "bufferutil": "^4.0.1",
-    "canvas": "^2.7.0",
+    "canvas": "^2.11.2",
     "chart.js": "^2.9.3",
     "cheerio": "^0.22.0",
     "color-scheme": "^1.0.1",
@@ -56,7 +56,7 @@
     "colorthief": "^2.4.0"
   },
   "engines": {
-    "node": "12.x"
+    "node": "16.x"
   },
   "repository": {
     "url": ""

@@ -33,7 +33,7 @@ module.exports = {
       try {
         const webcam = helpers.randomFromArray(webcams);
         console.log(`downloading preview (${fileName})...`, webcam);
-        const statusText = `${webcam.name}: ${webcam.url}\n\n${webcam.tags}`;
+        const status = `${webcam.name}\n\nLive: ${webcam.youtube_url}\n\n${webcam.tags}`;
         const url = webcam.youtube_url;
         // const cmd = `yt-dlp --downloader ffmpeg --downloader-args "ffmpeg:-t 1" "${url}" -o ${fileName}`;
 
@@ -70,7 +70,7 @@ module.exports = {
           });
 
           mastodon.postImage({
-            status: statusText,
+            status,
             image: video,
             alt_text: webcam.description,
           });

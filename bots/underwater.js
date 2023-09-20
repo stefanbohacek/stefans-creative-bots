@@ -18,9 +18,9 @@ module.exports = {
   active: true,
   name: "@underwater",
   description: "Watching some fish.",
-  // thumbnail:
-  // "https://botwiki.org/wp-content/uploads/2023/07/-underwater-1689222972.png",
-  // about_url: "https://botwiki.org/bot/underwater/",
+  thumbnail:
+  "https://botwiki.org/wp-content/uploads/2023/09/-underwater-1694440432.png",
+  about_url: "https://botwiki.org/bot/underwater/",
   links: [
     {
       title: "Follow on Mastodon",

@@ -65,11 +65,11 @@ module.exports = [
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/',
       element: '.entry-content img[width="640"]'
     },
-    {
-      name: 'RRS Sir David Attenborough Webcam',
-      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/',
-      element: '.entry-content img[width="1920"]'
-    },
+    // {
+    //   name: 'RRS Sir David Attenborough Webcam',
+    //   url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/',
+    //   element: '.entry-content img[width="1920"]'
+    // },
 //    {
 //      name: 'Halley VI Station Webcam Archive',
 //      url: 'https://legacy.bas.ac.uk/webcams/archive/cam.php?cam=5&position=1',

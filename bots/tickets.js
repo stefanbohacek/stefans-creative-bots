@@ -9,7 +9,15 @@ const findTicket = async (page) => {
 
   try {
     const pageNumber = helpers.getRandomInt(1, 348);
-    let url = `https://www.gbticket.com/busca.php?ordem=&pag=${pageNumber}&buscar=&onde=&recente=`;
+    // let url = `https://www.gbticket.com/busca.php?ordem=&pag=${pageNumber}&buscar=&onde=&recente=`;
+
+    let url;
+
+    if (helpers.getRandomInt(1, 2) === 1){
+        url = `https://www.gbticket.com/categoria_produto.php?codcategoriaproduto=115&ordem=&pag=${pageNumber}`;
+    } else {
+        url = `https://www.gbticket.com/categoria_produto.php?codcategoriaproduto=2&ordem=&pag=${pageNumber}`;
+    }
 
     console.log("searching for tickets...", {
       url,

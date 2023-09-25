@@ -11,14 +11,16 @@ const findTicket = async (page) => {
     let url, pageNumber, maxPageNumber;
     // let url = `https://www.gbticket.com/busca.php?ordem=&pag=${pageNumber}&buscar=&onde=&recente=`;
 
-    if (helpers.getRandomInt(1, 2) === 1){
-        maxPageNumber = 64;
-        pageNumber = helpers.getRandomInt(1, maxPageNumber);
-        url = `https://www.gbticket.com/categoria_produto.php?codcategoriaproduto=115&ordem=&pag=${pageNumber}`;
-      } else {
-        maxPageNumber = 269;
-        pageNumber = helpers.getRandomInt(1, maxPageNumber);
-        url = `https://www.gbticket.com/categoria_produto.php?codcategoriaproduto=2&ordem=&pag=${pageNumber}`;
+    if (helpers.getRandomInt(1, 4) === 1){
+      // UK tickets
+      maxPageNumber = 269;
+      pageNumber = helpers.getRandomInt(1, maxPageNumber);
+      url = `https://www.gbticket.com/categoria_produto.php?codcategoriaproduto=2&ordem=&pag=${pageNumber}`;
+    } else {
+      // non-UK tickets
+      maxPageNumber = 64;
+      pageNumber = helpers.getRandomInt(1, maxPageNumber);
+      url = `https://www.gbticket.com/categoria_produto.php?codcategoriaproduto=115&ordem=&pag=${pageNumber}`;
     }
 
     console.log("searching for tickets...", {

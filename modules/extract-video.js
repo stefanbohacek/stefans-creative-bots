@@ -22,7 +22,7 @@ const extractVideo = async (url, filename, seconds) => {
       '--force-overwrites'
     ];
     response = await execPromise(`${cmd} ${args.join(' ')}`);
-    console.log(response.stdout, response.stderr);
+    // console.log(response.stdout, response.stderr);
   } catch (error) {
     console.log(error);
   }

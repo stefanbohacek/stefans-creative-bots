@@ -174,9 +174,12 @@ const botScript = async () => {
               .join("\n")}
               `;
           }
-          mastodon.post({
-            status: `${text}\n\n#mastodon #roadmap`,
-          });
+          
+          if (text && text.length){
+            mastodon.post({
+              status: `${text}\n\n#mastodon #roadmap`,
+            });
+          }
         }
 
         fs.writeFileSync(

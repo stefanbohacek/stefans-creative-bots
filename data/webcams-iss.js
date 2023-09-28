@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     description:
       "Live video of Earth streaming from an external camera mounted on the International Space Station. The camera is looking toward Earth with an occasional solar panel passing through the view.",

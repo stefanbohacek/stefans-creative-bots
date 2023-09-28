@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "reply": true,
+  "name": "Bartleby, the Scrivener",
+  "description": "I would prefer not to.",
+  "about_url": "https://botwiki.org/bot/bartleby_scrvnr/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@bartleby"
+    }
+  ]
+}

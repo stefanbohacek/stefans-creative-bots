@@ -1,0 +1,18 @@
+{
+  "active": true,
+  "name": "pollock.exe",
+  "description": "A robot painter, very Pollock-like.",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2018/06/pollock.exe.png",
+  "about_url": "https://botwiki.org/bot/pollock-exe/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@pollockdotexe"
+    },
+    {
+      "title": "Twitter archive",
+      "url": "https://twitter.com/pollockdotexe"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

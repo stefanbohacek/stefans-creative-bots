@@ -1,0 +1,13 @@
+{
+  "active": false,
+  "name": "Would you rather fight?",
+  "description": "If you *had* to choose.",
+  "thumbnail": "",
+  "links": [
+    {
+      "title": "Follow on Twitter",
+      "url": "https://twitter.com/wyrf_bot"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

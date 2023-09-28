@@ -1,0 +1,14 @@
+{
+  "active": true,
+  "name": "@botwikirandomfediverse",
+  "description": "Explore Botwiki one fediverse bot at a time.",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2021/01/botwikirandom.png",
+  "about_url": "https://botwiki.org/bot/botwikirandom/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@botwikirandomfediverse"
+    }
+  ],
+  "interval": "EVERY_THREE_HOURS"
+}

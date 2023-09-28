@@ -1,0 +1,18 @@
+{
+  "active": true,
+  "name": "@botwikirandom",
+  "description": "Explore Botwiki one bot at a time.",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2021/01/botwikirandom.png",
+  "about_url": "https://botwiki.org/bot/botwikirandom/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@botwikirandom"
+    },
+    {
+      "title": "Twitter archive",
+      "url": "https://twitter.com/botwikirandom"
+    }
+  ],
+  "interval": "EVERY_THREE_HOURS"
+}

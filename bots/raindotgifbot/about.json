@@ -1,0 +1,22 @@
+{
+  "active": true,
+  "name": "rain.gif",
+  "description": "🌧🌧🌧",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2018/07/rain.gif.png",
+  "about_url": "https://botwiki.org/bot/rain-gif/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@rain"
+    },
+    {
+      "title": "Tumblr archive",
+      "url": "https://raindotgif.tumblr.com/"
+    },
+    {
+      "title": "Twitter archive",
+      "url": "https://twitter.com/raindotgifbot"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

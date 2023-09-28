@@ -24,8 +24,7 @@ const checkBotPoolFn = (app) => {
       //     bots: bots.map(bot => bot.about.name)
       // });
 
-      //TODO: Enable bot.
-      // bot.script.default();
+      bot.script.default();
 
       pool = [...new Set(pool)];
       app.set("pool", pool);
@@ -46,8 +45,6 @@ const checkBotPool = (app) => {
     } catch (err) {
       pool = [];
     }
-
-    console.log({ poolFilePath, pool });
   }
 
   pool = [...new Set(pool)];

@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     name: 'Halemaʻumaʻu and lava lake from The down-dropped block',
     page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=B1cam',

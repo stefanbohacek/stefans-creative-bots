@@ -1,0 +1,14 @@
+{
+  "active": true,
+  "name": "@pirateflags",
+  "description": "Arrgh!",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2023/07/pirate-flags-1690400779.png",
+  "about_url": "https://botwiki.org/bot/pirate-flags/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@pirateflags"
+    }
+  ],
+  "interval": "EVERY_THREE_HOURS"
+}

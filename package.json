@@ -1,8 +1,9 @@
 {
-  "name": "glitch-twitterbot",
+  "name": "stefans-creative-bots",
   "version": "1.0.0",
   "description": "Beep beep tweet!",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node --trace-warnings server.js",
     "postinstall": "node node_modules/puppeteer/install.js; pip3 install yt-dlp==2023.7.6"
@@ -12,16 +13,15 @@
     "body-parser": "^1.19.0",
     "bufferutil": "^4.0.1",
     "canvas": "^2.11.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^3.9.1",
     "cheerio": "^0.22.0",
     "color-scheme": "^1.0.1",
     "concat-stream": "^2.0.0",
-    "cron": "^1.8.2",
-    "csv-parse": "^4.10.1",
-    "dotenv": "^8.2.0",
+    "cron": "^2.4.3",
+    "csv-parse": "^5.5.0",
     "express": "^4.14.0",
-    "express-handlebars": "^5.0.0",
-    "express-session": "^1.17.1",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
     "get-google-fonts": "^1.2.2",
     "gifencoder": "^2.0.1",
     "glitch-canvas": "^1.1.8",
@@ -31,8 +31,7 @@
     "jsdom": "^16.2.2",
     "mastodon-api": "^1.2.2",
     "memorystore": "^1.6.2",
-    "node-chartjs-v12": "^1.0.4",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.7.0",
     "node-gyp": "^7.1.2",
     "node-gyp-build": "^4.2.3",
     "pluralize": "^8.0.0",
@@ -53,7 +52,9 @@
     "html-to-text": "^8.x",
     "rivescript": "^2.2.1",
     "csvtojson": "^2.0.10",
-    "colorthief": "^2.4.0"
+    "colorthief": "^2.4.0",
+    "chartjs-node-canvas": "^4.1.6",
+    "moment": "^2.29.4"
   },
   "engines": {
     "node": "16.x"

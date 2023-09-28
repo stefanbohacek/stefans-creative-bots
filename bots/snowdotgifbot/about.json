@@ -1,0 +1,14 @@
+{
+  "active": true,
+  "name": "snow.gif",
+  "description": "🌨️",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2022/11/snowdotgif-botsinspace.png",
+  "about_url": "https://botwiki.org/bot/snow-gif/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@snow"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

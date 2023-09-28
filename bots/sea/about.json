@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@sea",
+  "description": "Views from the middle of an ocean.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@sea"
+    }
+  ],
+  "interval": "EVERY_HOUR"
+}

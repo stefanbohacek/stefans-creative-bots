@@ -1,0 +1,14 @@
+{
+  "active": false,
+  "name": "@introspectorbot",
+  "description": "A bot that looks at itself",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2018/02/Introspectorbot.png",
+  "about_url": "https://botwiki.org/bot/introspectorbot/",
+  "links": [
+    {
+      "title": "Twitter archive",
+      "url": "https://twitter.com/INTROSPECTORBOT"
+    }
+  ],
+  "interval": "EVERY_DAY_MORNING"
+}

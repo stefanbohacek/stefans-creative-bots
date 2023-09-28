@@ -1,0 +1,15 @@
+{
+  "active": true,
+  "name": "@iss",
+  "description": "Live from space!",
+  "thumbnail":
+    "https://botwiki.org/wp-content/uploads/2023/07/iss-live-1690040716.png",
+  "about_url": "https://botwiki.org/bot/iss-live/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@iss"
+    }
+  ],
+  "interval": "EVERY_HOUR"
+}

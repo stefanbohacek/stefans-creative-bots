@@ -1,6 +1,6 @@
 // source: https://lib2.colostate.edu/wildlife/atoz.php?letter=ALL
 
-module.exports = [
+export default [
   'aardwolf',
   'African black crake',
   'African buffalo',

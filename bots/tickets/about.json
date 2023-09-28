@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@tickets",
+  "description": "All aboard!",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@tickets"
+    }
+  ],
+  "interval": "EVERY_THREE_HOURS"
+}

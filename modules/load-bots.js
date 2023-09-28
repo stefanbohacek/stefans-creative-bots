@@ -1,0 +1,52 @@
+import fs from "fs";
+import { readFileSync } from "fs";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import scheduleBot from "./schedule-bot.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const loadBots = async (app) => {
+  const botDirs = fs.readdirSync("bots");
+  console.log({ botDirs });
+  let bots = [];
+
+  for (const bot of botDirs) {
+    if (fs.lstatSync(`bots/${bot}`).isDirectory()) {
+      let aboutJSON = `${__dirname}/../bots/${bot}/about.json`;
+      if (fs.existsSync(aboutJSON)) {
+        const data = await readFileSync(aboutJSON);
+        const about = JSON.parse(data);
+        const scriptPath = `${__dirname}/../bots/${bot}/bot.js`;
+        const botScript = await import(scriptPath);
+
+        // console.log({ about });
+
+        let botInfo = {
+          about,
+          script_path: scriptPath,
+          script: botScript,
+        };
+
+        if (process.env.PROJECT_NAME) {
+          botInfo.about.source_url = `https://glitch.com/edit/#!/${process.env.PROJECT_NAME}?path=bots%2F${bot}/bot.js`;
+        } else if (process.env.SOURCE_URL_BASE) {
+          botInfo.about.source_url = `${process.env.SOURCE_URL_BASE}/${bot}/bot.js`;
+        }
+
+        if (about.active) {
+          const job = await scheduleBot(botInfo, app);
+          botInfo.cronjob = job;
+          bots.push(botInfo);
+        }
+      }
+    }
+  }
+
+  // console.log("reading bots...", bots.map(bot => bot.about.name));
+
+  return bots;
+};
+
+export default loadBots;

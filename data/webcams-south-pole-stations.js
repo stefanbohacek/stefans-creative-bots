@@ -1,7 +1,7 @@
 /*
 Some sites don't use full URL for the img src attribute and need page_url to be used as a prefix.
 */
-module.exports = [
+export default [
     {
       name: 'Amundsen-Scott South Pole station',
       url: 'https://www.usap.gov/videoclipsandmaps/spWebCam.cfm',
@@ -25,11 +25,11 @@ module.exports = [
       url: 'https://www.antarctica.gov.au/antarctic-operations/webcams/casey/',
       element: 'figure.featured img'
     },
-    // {
-    //   name: 'Davis station',
-    //   url: 'https://www.antarctica.gov.au/antarctic-operations/webcams/davis/',
-    //   element: 'figure.featured img'
-    // },
+    {
+      name: 'Davis station',
+      url: 'https://www.antarctica.gov.au/antarctic-operations/webcams/davis/',
+      element: 'figure.featured img'
+    },
     {
       name: 'Macquarie Island station',
       url: 'https://www.antarctica.gov.au/antarctic-operations/webcams/macquarie-island/',
@@ -65,11 +65,11 @@ module.exports = [
       url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/',
       element: '.entry-content img[width="640"]'
     },
-    // {
-    //   name: 'RRS Sir David Attenborough Webcam',
-    //   url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/',
-    //   element: '.entry-content img[width="1920"]'
-    // },
+    {
+      name: 'RRS Sir David Attenborough Webcam',
+      url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/',
+      element: '.entry-content img[width="1920"]'
+    },
 //    {
 //      name: 'Halley VI Station Webcam Archive',
 //      url: 'https://legacy.bas.ac.uk/webcams/archive/cam.php?cam=5&position=1',

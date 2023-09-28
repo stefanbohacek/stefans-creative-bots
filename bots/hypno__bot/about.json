@@ -1,0 +1,18 @@
+{
+  "active": true,
+  "name": "@hypno__bot",
+  "description": "Your eyelids are getting heavy...",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2018/04/hypno__bot.png",
+  "about_url": "https://botwiki.org/bot/hypno__bot/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@hypno__bot"
+    },
+    {
+      "title": "Twitter archive",
+      "url": "https://twitter.com/hypno__bot"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

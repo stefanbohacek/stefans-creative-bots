@@ -1,0 +1,14 @@
+{
+  "active": true,
+  "reply": true,
+  "name": "What's the capital?",
+  "description": "Identify the capital based on a country flag.",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2018/02/what_capital-mastodon.png",
+  "about_url": "https://botwiki.org/bot/what_capital/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@what_capital"
+    }
+  ]
+}

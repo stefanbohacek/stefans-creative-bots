@@ -1,0 +1,15 @@
+{
+  "active": true,
+  "name": "@exoplanets",
+  "description": "Explore distant worlds.",
+  "thumbnail":
+    "https://botwiki.org/wp-content/uploads/2023/07/-exoplanets-1688591006.png",
+  "about_url": "https://botwiki.org/bot/exoplanets/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@exoplanets"
+    }
+  ],
+  "interval": "EVERY_FOUR_HOURS"
+}

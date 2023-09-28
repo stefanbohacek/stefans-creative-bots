@@ -1,0 +1,15 @@
+{
+  "active": true,
+  "name": "@bearcam",
+  "description": "Watching some bears.",
+  "thumbnail":
+    "https://botwiki.org/wp-content/uploads/2023/07/-bearcam-1689222972.png",
+  "about_url": "https://botwiki.org/bot/bearcam/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@bearcam"
+    }
+  ],
+  "interval": "EVERY_HOUR"
+}

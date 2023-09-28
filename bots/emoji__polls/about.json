@@ -1,0 +1,18 @@
+{
+  "active": true,
+  "name": "@emoji__polls",
+  "description": "Choose your favorite emoji!",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2018/02/emoji__polls-v3.png",
+  "about_url": "https://botwiki.org/bot/emoji__polls/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@emoji__polls"
+    },
+    {
+      "title": "Twitter archive",
+      "url": "https://twitter.com/emoji__polls"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

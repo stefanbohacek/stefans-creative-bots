@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@mastodonroadmap",
+  "description": "Posting when new items are added to Mastodon's public roadmap.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@mastodonroadmap"
+    }
+  ],
+  "interval": "EVERY_THIRTY_MINUTES"
+}

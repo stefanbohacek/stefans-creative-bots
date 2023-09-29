@@ -2,43 +2,19 @@
   Based on https://codepen.io/ruigewaard/pen/JHDdF
 */
 
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-
-import fs from 'fs';
 import Canvas from 'canvas';
 import GIFEncoder from 'gifencoder';
 import concat from 'concat-stream';
-import { Base64Encode } from 'base64-stream';
-
-
-
-// import randomFromArray from __dirname + "/modules/random-from-array.js";
-// import getRandomInt from __dirname + "/modules/random-from-array.js";
-
-
-// const script = 'subfolder/other.mjs';
-// const anotherScript = new URL(script, import.meta.url);
-// const module = await import(anotherScript);
 
 import randomFromArray from  "../random-from-array.js";
 import getRandomInt from  "../random-from-array.js";
 
-
 export default (options, cb) => {
   console.log('making it rain...');
 
-  let width = options.width || 800;
-  let height = options.height || 500;
-
-  const data = [];   
+  const width = options.width || 800;
+  const height = options.height || 500;
   const encoder = new GIFEncoder(width, height);
-  const stream = encoder.createReadStream();
-
 
   encoder.createReadStream().pipe(concat((data) => {
     if (cb){
@@ -68,12 +44,11 @@ export default (options, cb) => {
   ];
 
   let color = randomFromArray(skyColor);
+  console.log('picking sky color...', color);
 
-  //ctx.strokeStyle = 'rgba(174,194,224,0.5)';
   ctx.strokeStyle = 'rgba(255,255,255,0.5)';
   ctx.lineWidth = 1;
   ctx.lineCap = 'round';
-
 
   let init = [];
   let maxParts = getRandomInt(50, 100);
@@ -85,7 +60,7 @@ export default (options, cb) => {
       l: Math.random() * 1/maxParts*200,
       xs: -4 + Math.random() * 4 + 5,
       ys: Math.random() * getRandomInt(10, 30) + getRandomInt(10, 30)
-    })
+    });
   }
 
   let particles = [];
@@ -94,12 +69,17 @@ export default (options, cb) => {
     particles[b] = init[b];
   }
 
+  console.log({maxParts});
+  console.log({particles});
+
   const draw = () => {
+    console.log('drawing...');
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, width, height);
 
     for (let c = 0; c < particles.length; c++){
       let p = particles[c];
+      ctx.fillStyle = "white";
       ctx.beginPath();
       ctx.moveTo(p.x, p.y);
       ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
@@ -109,6 +89,7 @@ export default (options, cb) => {
   }
 
   const move = () => {
+    console.log('moving...');
     for (let b = 0; b < particles.length; b++){
       let p = particles[b];
       p.x += p.xs;
@@ -121,6 +102,7 @@ export default (options, cb) => {
   }
 
   for (let i = 0; i < 48; i++){
+    console.log('looping...');
     draw();
     encoder.addFrame(ctx);
   }

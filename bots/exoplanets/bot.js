@@ -2,6 +2,7 @@ import puppeteer from "puppeteer";
 import csv from "csvtojson";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
+import getImageLuminosity from "./../../modules/get-image-luminosity.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 
 import { dirname } from "path";
@@ -136,11 +137,19 @@ const botScript = async () => {
               const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;
               await page.screenshot({ path: screenshotPath });
 
-              mastodon.postImage({
-                status: `${description}\n\n${url}\n\n#space #exoplanets`,
-                image: screenshotPath,
-                alt_text: `A computer-generated representation of the ${planetName} exoplanet.`,
-              });
+              const luminosity = await getImageLuminosity(screenshotPath);
+
+
+              if (luminosity > 40) {
+                mastodon.postImage({
+                  status: `${description}\n\n${url}\n\n#space #exoplanets`,
+                  image: screenshotPath,
+                  alt_text: `A computer-generated representation of the ${planetName} exoplanet.`,
+                });
+              } else {
+                console.log('exoplanets: image too dark, retrying...');
+                await botScript();
+              }              
             } catch (err) {
               console.log(`Error: ${err.message}`);
             } finally {

@@ -1,2 +1,2 @@
-import bot from './bots/exoplanets/bot.js';
+import bot from './bots/pirateflags/bot.js';
 bot();

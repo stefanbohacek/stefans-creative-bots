@@ -53,12 +53,14 @@ const postImageFn = (client, options, cb) => {
 };
 
 const postImage = async (client, options, cb) => {
-  console.log("posting image...", options.image);
-
   /* Support both image file path and image data */
   if (fs.existsSync(options.image)) {
+    console.log("posting image...", options.image);
+
     postImageFn(client, options, cb);
   } else {
+    console.log("posting image...");
+
     const imgFilePath = `${__dirname}/../../temp/temp-${Date.now()}-${getRandomInt(
       1,
       Number.MAX_SAFE_INTEGER

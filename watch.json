@@ -2,13 +2,17 @@
   "install": {
     "include": [
       "^package\\.json$"
+    ],
+    "exclude": [
+      "^watch\\.json"
     ]
   },
   "restart": {
     "exclude": [
       "^src/",
       "^public/",
-      "^dist/"
+      "^dist/",
+      "^test.js"
     ],
     "include": [
       "\\.js$",

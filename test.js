@@ -1,2 +1,2 @@
-import bot from './bots/tickets/bot.js';
+import bot from './bots/iss/bot.js';
 bot();

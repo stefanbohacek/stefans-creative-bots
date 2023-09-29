@@ -9,7 +9,6 @@ const __dirname = dirname(__filename);
 
 const loadBots = async (app) => {
   const botDirs = fs.readdirSync("bots");
-  console.log({ botDirs });
   let bots = [];
 
   for (const bot of botDirs) {

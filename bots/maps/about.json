@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@maps",
+  "description": "Exploring historical maps.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@maps"
+    }
+  ],
+  "interval": "EVERY_THREE_HOURS"
+}

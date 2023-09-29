@@ -113,15 +113,15 @@ export default [
       lon: 135.0000,
     },
   },
-  {
-    name: "RRS Sir David Attenborough Webcam",
-    url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",
-    element: '.entry-content img[width="1920"]',
-    location: {
-      lat: 82.8628,
-      lon: 135.0000,
-    },
-  },
+  // {
+  //   name: "RRS Sir David Attenborough Webcam",
+  //   url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",
+  //   element: '.entry-content img[width="1920"]',
+  //   location: {
+  //     lat: 82.8628,
+  //     lon: 135.0000,
+  //   },
+  // },
   // {
   //   name: "Halley VI Station Webcam Archive",
   //   url: "https://legacy.bas.ac.uk/webcams/archive/cam.php?cam=5&position=1",

@@ -1,2 +1,2 @@
-import bot from './bots/skies/bot.js';
+import bot from './bots/maps/bot.js';
 bot();

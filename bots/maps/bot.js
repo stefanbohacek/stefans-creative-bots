@@ -42,7 +42,7 @@ const botScript = async () => {
         alt_text: description
       });
     } catch (error) {
-      /* noop */
+      console.log("maps error", error);
     }
   } else {
     botScript();

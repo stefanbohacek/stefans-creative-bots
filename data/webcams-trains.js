@@ -6,13 +6,13 @@ export default [
     youtube_url: "https://www.youtube.com/watch?v=g7CJ3pm-e7s",
     tags: "#trains #live #norway #webcam",
   },
-  {
-    "name": "Train trips through Sweden and Norway",
-    "description": "A short clip from a webcam at the front of a train.",
-    url: "",
-    youtube_url: "https://www.youtube.com/watch?v=_oUGgixxywc",
-    tags: "#trains #live #norway #sweden #webcam",
-  },
+  // {
+  //   "name": "Train trips through Sweden and Norway",
+  //   "description": "A short clip from a webcam at the front of a train.",
+  //   url: "",
+  //   youtube_url: "https://www.youtube.com/watch?v=_oUGgixxywc",
+  //   tags: "#trains #live #norway #sweden #webcam",
+  // },
   {
     "name": "Train trips through Sweden and Norway",
     "description": "A short clip from a webcam at the front of a train.",

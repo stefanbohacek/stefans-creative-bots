@@ -42,10 +42,11 @@ const scheduleBot = async (bot, app) => {
     const job = new CronJob(bot.about.interval_cron, async () => {
       console.log(`adding ${bot.about.name} to the pool...`);
       let pool = app.get("pool");
-      pool.push(bot.about.name);
-
-      pool = [...new Set(pool)];
-      app.set("pool", pool);
+      if (pool) {
+        pool.push(bot.about.name);
+        pool = [...new Set(pool)];
+        app.set("pool", pool);
+      }
     });
 
     job.start();

@@ -2,82 +2,78 @@
   Based on https://codepen.io/ruigewaard/pen/JHDdF
 */
 
-import Canvas from 'canvas';
-import GIFEncoder from 'gifencoder';
-import concat from 'concat-stream';
+import Canvas from "canvas";
+import GIFEncoder from "gifencoder";
+import concat from "concat-stream";
 
-import randomFromArray from  "../random-from-array.js";
-import getRandomInt from  "../random-from-array.js";
+import randomFromArray from "../random-from-array.js";
+import getRandomInt from "../get-random-int.js";
 
 export default (options, cb) => {
-  console.log('making it rain...');
+  console.log("making it rain...");
 
   const width = options.width || 800;
   const height = options.height || 500;
   const encoder = new GIFEncoder(width, height);
 
-  encoder.createReadStream().pipe(concat((data) => {
-    if (cb){
-      cb(null, data.toString('base64'));
-    }
-  }));
+  encoder.createReadStream().pipe(
+    concat((data) => {
+      if (cb) {
+        cb(null, data.toString("base64"));
+      }
+    })
+  );
 
   encoder.start();
-  encoder.setRepeat(0);   // 0 for repeat, -1 for no-repeat
-  encoder.setDelay(30);   // frame delay in milliseconds
+  encoder.setRepeat(0); // 0 for repeat, -1 for no-repeat
+  encoder.setDelay(30); // frame delay in milliseconds
   encoder.setQuality(10); // image quality, 10 is default.
 
   let canvas = Canvas.createCanvas(width, height);
-  let ctx = canvas.getContext('2d');
+  let ctx = canvas.getContext("2d");
 
   const skyColor = [
-    '#061928',
-    '#2c3e50',
-    '#2980b9',
-    '#34495e',
-    '#5D8CAE',
-    '#1B4F72',
-    '#21618C',
-    '#013243',
-    '#2C3E50',
-    '#044F67'
+    "#061928",
+    "#2c3e50",
+    "#2980b9",
+    "#34495e",
+    "#5D8CAE",
+    "#1B4F72",
+    "#21618C",
+    "#013243",
+    "#2C3E50",
+    "#044F67",
   ];
 
   let color = randomFromArray(skyColor);
-  console.log('picking sky color...', color);
-
-  ctx.strokeStyle = 'rgba(255,255,255,0.5)';
-  ctx.lineWidth = 1;
-  ctx.lineCap = 'round';
-
   let init = [];
   let maxParts = getRandomInt(50, 100);
 
-  for (let a = 0; a < maxParts; a++){
+  ctx.strokeStyle = "rgba(255,255,255,0.5)";
+  ctx.lineWidth = 1;
+  ctx.lineCap = "round";
+
+  for (let a = 0; a < maxParts; a++) {
     init.push({
       x: Math.random() * width,
       y: Math.random() * height,
-      l: Math.random() * 1/maxParts*200,
+      l: ((Math.random() * 1) / maxParts) * 200,
       xs: -4 + Math.random() * 4 + 5,
-      ys: Math.random() * getRandomInt(10, 30) + getRandomInt(10, 30)
+      ys: Math.random() * getRandomInt(10, 30) + getRandomInt(10, 30),
     });
   }
 
   let particles = [];
 
-  for (let b = 0; b < maxParts; b++){
+  for (let b = 0; b < maxParts; b++) {
     particles[b] = init[b];
   }
 
-  console.log({maxParts});
-  console.log({particles});
-
   const draw = () => {
-    console.log('drawing...');
     ctx.fillStyle = color;
     ctx.fillRect(0, 0, width, height);
 
-    for (let c = 0; c < particles.length; c++){
+    for (let c = 0; c < particles.length; c++) {
       let p = particles[c];
       ctx.fillStyle = "white";
       ctx.beginPath();
@@ -86,27 +82,25 @@ export default (options, cb) => {
       ctx.stroke();
     }
     move();
-  }
+  };
 
   const move = () => {
-    console.log('moving...');
-    for (let b = 0; b < particles.length; b++){
+    for (let b = 0; b < particles.length; b++) {
       let p = particles[b];
       p.x += p.xs;
       p.y += p.ys;
-      if(p.x > width || p.y > height){
+      if (p.x > width || p.y > height) {
         p.x = Math.random() * width;
         p.y = -20;
       }
     }
-  }
+  };
 
-  for (let i = 0; i < 48; i++){
-    console.log('looping...');
+  for (let i = 0; i < 48; i++) {
     draw();
     encoder.addFrame(ctx);
   }
 
   encoder.finish();
-  console.log('gif finished...');
-}
+  console.log("gif finished...");
+};

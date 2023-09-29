@@ -89,7 +89,7 @@ const waveFlag = async () => {
         "Avast ye!",
       ]);
 
-      let description = `A randomly generated pirate flag. Elements of the flag include skeletons, skulls, pirates, crossed bones, hourglasses, hearts, and swords.`;
+      let description = `A randomly generated pirate flag. Elements of the flag may include skeletons, skulls, pirates, crossed bones, hourglasses, hearts, and swords.`;
 
       try {
         const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;

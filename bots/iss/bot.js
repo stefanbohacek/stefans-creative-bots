@@ -11,7 +11,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const botID = "trains";
+const botID = "iss";
 
 const botScript = async () => {
  await (async () => {
@@ -41,6 +41,7 @@ const botScript = async () => {
       status += `\n\n${webcam.tags}`;
 
       await extractVideo(webcam.youtube_url, `${botID}.mp4`, 10);
+      console.log('path check', __dirname + `/../../temp/${botID}.mp4`);
 
       mastodon.postImage({
         status,

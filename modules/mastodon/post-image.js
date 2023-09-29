@@ -56,7 +56,10 @@ const postImage = async (client, options, cb) => {
   /* Support both image file path and image data */
   if (fs.existsSync(options.image)) {
     console.log("posting image...", options.image);
-
+    postImageFn(client, options, cb);
+  } else if (fs.existsSync(`${options.image}.webm`)) {
+    options.image = `${options.image}.webm`;
+    console.log("posting image...", options.image);
     postImageFn(client, options, cb);
   } else {
     console.log("posting image...");

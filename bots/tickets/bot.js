@@ -119,7 +119,8 @@ const botScript = async () => {
 
     console.log({ link, ticket });
 
-    const imgPath = __dirname + `/../.data/${botID}.jpg`;
+    const imgPath = `${__dirname}/../../temp/${botID}.jpg`;
+
     await downloadFile(ticket.ticket, imgPath);
     const status = `${ticket.name}\n${ticket.description}\nVia ${link} #trains #tickets #transit #travel`;
 

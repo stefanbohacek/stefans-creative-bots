@@ -1,2 +1,2 @@
-import bot from './bots/raindotgifbot/bot.js';
+import bot from './bots/tickets/bot.js';
 bot();

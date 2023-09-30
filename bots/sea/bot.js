@@ -53,8 +53,6 @@ const botScript = async () => {
       const croppedFilePath = `${__dirname}/../../temp/${fileName}-cropped-${i}.${fileExt}`;
       const luminosity = await getImageLuminosity(croppedFilePath);
 
-      console.log({croppedFilePath, luminosity})
-
       if (luminosity > 40) {
         okayPictures.push(croppedFilePath);
       }

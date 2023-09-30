@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import mastodonClient from "./../../modules/mastodon/index.js";
 
-import webcams from "./../../data/webcams-iss.js";
+import webcams from "./../../data/webcams/iss.js";
 import extractVideo from "./../../modules/extract-video.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 

@@ -1,5 +1,6 @@
 import fs from "fs";
 import getRandomInt from "../get-random-int.js";
+import truncate from "../truncate.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -12,7 +13,7 @@ const postImageFn = (client, options, cb) => {
     "media",
     {
       file: fs.createReadStream(options.image),
-      description: options.alt_text,
+      description: truncate(options.alt_text, 1000),
     },
     (err, data, response) => {
       if (err) {

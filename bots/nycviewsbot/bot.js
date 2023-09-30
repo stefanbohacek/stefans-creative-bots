@@ -1,4 +1,4 @@
-import webcams from "./../../data/webcams-nyc.js";
+import webcams from "./../../data/webcams/nyc.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
 import downloadFile from './../../modules/download-file.js';

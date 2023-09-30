@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer";
-import stations from "./../../data/webcams-south-pole-stations.js";
+import stations from "./../../data/webcams/south-pole-stations.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import downloadFile from "./../../modules/download-file.js";
 import randomFromArray from "./../../modules/random-from-array.js";

@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-import webcams from "./../../data/webcams-skies.js";
+import webcams from "./../../data/webcams/skies.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
 import getWeather from "./../../modules/get-weather.js";

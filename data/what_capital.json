@@ -1,6 +1,11 @@
 {
   "country": "Lebanon",
   "capital": "Beirut",
-  "scores": {},
+  "scores": {
+    "siemp@mastodon.social": 1,
+    "gligongdaxue@mastodon.scot": 4,
+    "Curiosa2Blue@mstdn.social": 1,
+    "prijks@trivia.town": 2
+  },
   "current_question": "111144732021206883"
 }

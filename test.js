@@ -1,2 +1,2 @@
-import bot from './bots/test/bot.js';
+import bot from './bots/nycviewsbot/bot.js';
 bot();

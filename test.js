@@ -1,2 +1,2 @@
-import bot from './bots/nycviewsbot/bot.js';
+import bot from './bots/southpoleviews/bot.js';
 bot();

@@ -3,6 +3,7 @@ import stations from "./../../data/webcams/south-pole-stations.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import downloadFile from "./../../modules/download-file.js";
 import randomFromArray from "./../../modules/random-from-array.js";
+import getImageLuminosity from "./../../modules/get-image-luminosity.js";
 import getWeather from "./../../modules/get-weather.js";
 
 import { dirname } from "path";
@@ -62,24 +63,31 @@ const botScript = async () => {
       const filePath = `${__dirname}/../../temp/${botID}.jpg`;
       await downloadFile(imageURL, filePath);
 
-      let description = `View from the ${station.name}.`;
-      let weather;
+      const luminosity = await getImageLuminosity(filePath);
 
-      if (station.location) {
-        weather = await getWeather(station.location.lat, station.location.lon);
-
-        if (weather && weather.description_full) {
-          description += ` ${weather.description_full}`;
+      if (luminosity > 40) {
+        let description = `View from the ${station.name}.`;
+        let weather;
+  
+        if (station.location) {
+          weather = await getWeather(station.location.lat, station.location.lon);
+  
+          if (weather && weather.description_full) {
+            description += ` ${weather.description_full}`;
+          }
         }
+  
+        const status = `${station.name} via ${station.url} #SouthPole #antarctica #view #webcam`;
+  
+        mastodon.postImage({
+          status,
+          image: filePath,
+          alt_text: description,
+        });
+      } else {
+        console.log('@southpoleviews: image too dark, retrying...');
+        await botScript();
       }
-
-      const status = `${station.name} via ${station.url} #SouthPole #antarctica #view #webcam`;
-
-      mastodon.postImage({
-        status,
-        image: filePath,
-        alt_text: description,
-      });
     } else {
       console.log("@southpoleviews error: image element not found", station);
     }

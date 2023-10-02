@@ -40,13 +40,13 @@ const botScript = async () => {
       await downloadFile(imageURL, filePath);
 
       const source = `https://www.davidrumsey.com/luna/servlet/detail/${map.id}`;
-      const status = `${attributes.full_title} ${source}\n\n#map #maps #HistoricalMaps`;
+      const status = `${attributes.full_title.replaceAll('\"', '"')} ${source}\n\n#map #maps #HistoricalMaps`;
       const description = attributes.pub_note || ""
 
       mastodon.postImage({
         status,
         image: filePath,
-        alt_text: description,
+        alt_text: description.replaceAll('\"', '"'),
       });
     } catch (error) {
       console.log("maps error", error);

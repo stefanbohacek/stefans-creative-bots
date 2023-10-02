@@ -11,6 +11,7 @@ const botScript = async () => {
         api_url: process.env.WIKIPEDIATOPEDITS_BOT_API,
       });
 
+
       let dateYesterday = new Date();
       dateYesterday.setDate(dateYesterday.getDate() - 1);
       const date = dateYesterday.toISOString().split("T")[0].replaceAll("-", "");
@@ -19,7 +20,10 @@ const botScript = async () => {
       const response = await fetch(url);
       const data = await response.json();
 
-      const status = data.map(item => `- ${item.title}: ${item.revisions} revisions ${item.url}`).join('\n') + '\n\n#wikipedia #stats';
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      dateYesterdayFormatted = dateYesterday.toLocaleDateString('en-us', options);
+
+      const status = `${dateYesterdayFormatted}\n\n` + data.map(item => `- ${item.title}: ${item.revisions} revisions ${item.url}`).join('\n') + '\n\n#wikipedia #stats';
       
       mastodon.post({
         status,

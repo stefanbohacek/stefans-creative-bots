@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@wikipediatopedits",
+  "description": "Keeping track of Wikipedia pages with most edits.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@wikipediatopedits"
+    }
+  ],
+  "interval": "EVERY_DAY_MORNING"
+}

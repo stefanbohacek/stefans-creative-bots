@@ -21,7 +21,7 @@ const botScript = async () => {
       const data = await response.json();
 
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-      dateYesterdayFormatted = dateYesterday.toLocaleDateString('en-us', options);
+      let dateYesterdayFormatted = dateYesterday.toLocaleDateString('en-us', options);
 
       const status = `${dateYesterdayFormatted}\n\n` + data.map(item => `- ${item.title}: ${item.revisions} revisions ${item.url}`).join('\n') + '\n\n#wikipedia #stats';
       

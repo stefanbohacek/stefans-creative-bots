@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node --trace-warnings server.js",
-    "postinstall": "node node_modules/puppeteer/install.js; pip3 install yt-dlp==2023.7.6"
+    "postinstall": "node node_modules/puppeteer/install.js; pip3 install yt-dlp==2023.7.6; rm /app/node_modules/canvas/build/Release/librsvg-2.so.2"
   },
   "dependencies": {
     "base64-stream": "^1.0.0",
@@ -42,8 +42,6 @@
     "request": "^2.88.2",
     "roughjs": "^4.1.4",
     "tracery-grammar": "^2.7.4",
-    "tumblr.js": "^3.0.0",
-    "twit": "^2.1.0",
     "underscore": "^1.10.2",
     "utf-8-validate": "^5.0.2",
     "tough-cookie": "^4.0.0",

@@ -1,0 +1,14 @@
+{
+  "active": true,
+  "name": "Vzvzvz!",
+  "description": "Sounds from around the world.",
+  "__thumbnail": "https://botwiki.org/wp-content/uploads/2019/02/hello--world-.png",
+  "__about_url": "https://botwiki.org/bot/hello-world/",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@vzvzvz"
+    }
+  ],
+  "interval": "EVERY_FOUR_HOURS"
+}

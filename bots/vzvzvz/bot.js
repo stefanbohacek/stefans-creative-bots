@@ -144,7 +144,7 @@ const botScript = async () => {
                 ],
                 { width, height },
                 (err, image) => {
-                  const status = `The sound of "${action}" in ${language}!`;
+                  const status = `The sound of "${action}" in ${language}!\n#language #linguistics #onomatopoeia #maps`;
 
                   mastodon.postImage({
                     status,

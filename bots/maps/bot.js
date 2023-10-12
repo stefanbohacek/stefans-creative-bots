@@ -17,7 +17,7 @@ const botScript = async () => {
   });
 
   const response = await fetch(
-    "https://www.davidrumsey.com/luna/servlet/as/fetchMediaSearch?&lc=RUMSEY~8~1&q=what=Atlas+Map&bs=1&fullData=true&random=true"
+    "https://www.davidrumsey.com/luna/servlet/as/fetchMediaSearch?&lc=RUMSEY~8~1&q=WHAT=%22Atlas%20Map%22&bs=1&fullData=true&random=true"
   );
   let map = await response.json();
   map = map[0];

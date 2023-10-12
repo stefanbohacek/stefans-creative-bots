@@ -1,0 +1,2443 @@
+export default [
+  {
+    "label": "consuming food or drink",
+    "data": [
+      {
+        "language": ["Afrikaans"],
+        "biting": ["nom", " gomf"],
+        "drinking": ["gloeg gloeg gloeg"]
+      },
+      {
+        "language": ["Albanian"],
+        "biting": ["ham", " kërr", " krrëk"],
+        "eating food": ["ham-ham", " njam-njam"],
+        "drinking": ["llup", " gllup"],
+        "brushing teeth": ["fësh-fësh", " fër-fër"]
+      },
+      {
+        "language": ["Arabic"],
+        "biting": ["hum-hum"],
+        "eating food": ["humm"],
+        "drinking": ["شرب (sharib)"]
+      },
+      {
+        "language": ["Azerbaijani"],
+        "eating food": ["nəm nəm"],
+        "drinking": ["qurt qurt"],
+        "brushing teeth": ["fıç fıç"]
+      },
+      {
+        "language": ["Basque"],
+        "biting": ["kosk", " hozk"],
+        "eating food": ["mauka mauka"],
+        "drinking": ["zurrut"],
+        "swallowing": ["klik"]
+      },
+      {
+        "language": ["Batak"],
+        "eating food": ["nyaum nyaum"],
+        "swallowing": ["guk"]
+      },
+      {
+        "language": ["Bengali"],
+        "eating food": [
+          "গব গব (gob gob)",
+          " গবা গব (goba gob)",
+          " সপা সপ (sopa sop)"
+        ],
+        "drinking": ["dhak dhak"],
+        "swallowing": ["dhnok gela"]
+      },
+      {
+        "language": ["Bulgarian"],
+        "biting": ["хрус (hrus)", " мляс (mlias)"],
+        "eating food": ["ам ам (am am)"],
+        "drinking": ["гльок гльок (glyok glyok)"],
+        "swallowing": ["гъл (gull)"]
+      },
+      {
+        "language": ["Catalan"],
+        "biting": ["nyac"],
+        "eating food": ["nyam nyam"],
+        "drinking": ["glup"],
+        "swallowing": ["glu glu"]
+      },
+      {
+        "language": ["Chinese", " Cantonese"],
+        "eating food": [
+          "嗦嗦 (sok4 sok2) (for crunchy foods)\n\nzep1 zep1 (in general)"
+        ],
+        "swallowing": ["嗗 (gut2", " gut4", " gut6)"]
+      },
+      {
+        "language": ["Chinese", " Mandarin"],
+        "drinking": ["咕咚 咕咚 (gū-dōng gū-dōng)", " 咕嚕咕嚕 (gū-lū gū-lū)"],
+        "brushing teeth": ["唰 (shua)[citation needed]"]
+      },
+      {
+        "language": ["Croatian"],
+        "biting": ["gric"],
+        "eating food": ["njam njam"],
+        "drinking": ["glp glp", " glu glu"],
+        "swallowing": ["gut"]
+      },
+      {
+        "language": ["Czech"],
+        "biting": ["chřup [xr̝up]", " chroup [xroup]"],
+        "eating food": ["ham", " ňam ňam [ɲam]", " mňam mňam [mɲam]"],
+        "drinking": ["glo glo"]
+      },
+      {
+        "language": ["Danish"],
+        "biting": ["haps [hɑb̥s][dan 1]"],
+        "eating food": ["nam nam", " mam mam"],
+        "drinking": ["slurk", " glub"],
+        "swallowing": ["glub", " gulp"]
+      },
+      {
+        "language": ["Dutch"],
+        "biting": ["hap"],
+        "eating food": ["jam jam"],
+        "drinking": ["slurp", " klok klok klok"],
+        "swallowing": ["slik"]
+      },
+      {
+        "language": ["English"],
+        "biting": ["chomp"],
+        "eating food": ["yum yum", " nom nom"],
+        "drinking": ["slurp", " glug"],
+        "swallowing": ["gulp"]
+      },
+      {
+        "language": ["Estonian"],
+        "biting": ["amps"],
+        "eating food": ["näm näm", " nämm nämm"],
+        "drinking": ["kull kull"],
+        "swallowing": ["lonks"]
+      },
+      {
+        "language": ["Finnish"],
+        "biting": ["rousk"],
+        "eating food": ["nam nam", " nami nami"],
+        "swallowing": ["klup"]
+      },
+      {
+        "language": ["French"],
+        "biting": ["miam", " crounche"],
+        "eating food": ["miam miam"],
+        "drinking": ["glouglouglou"],
+        "swallowing": ["gloups"]
+      },
+      {
+        "language": ["German"],
+        "biting": ["mampf"],
+        "eating food": ["mampf mampf", " hamm hamm"],
+        "drinking": ["schlürf", " gluck"],
+        "swallowing": ["schluck"]
+      },
+      {
+        "language": ["Gujarati"],
+        "drinking": ["gudgud"]
+      },
+      {
+        "language": ["Hebrew"],
+        "eating food": ["אָממ אָממ (amm amm)"],
+        "swallowing": ["שלוּק (shluk)"],
+        "brushing teeth": [
+          "צחצוח (tsikhtsúakh) (שקשוק shikshúk refers to \"shaking teeth\")"
+        ]
+      },
+      {
+        "language": ["Hungarian"],
+        "biting": ["hamm"],
+        "eating food": ["nyam-nyam", " csám-csám"],
+        "drinking": ["glu-glu", " glugy-glugy"],
+        "brushing teeth": ["sika-sika"]
+      },
+      {
+        "language": ["Icelandic"],
+        "biting": ["kjams"],
+        "eating food": ["nammi namm"],
+        "drinking": ["glúgg glúgg"]
+      },
+      {
+        "language": ["Indonesian"],
+        "biting": ["krauk"],
+        "eating food": ["nyam nyam"],
+        "drinking": ["glek glek", " gluk gluk"],
+        "swallowing": ["glek"],
+        "brushing teeth": ["sruk sruk"]
+      },
+      {
+        "language": ["Italian"],
+        "biting": ["gnam"],
+        "eating food": ["gnam gnam"],
+        "drinking": ["glu glu"],
+        "swallowing": ["glu glu"]
+      },
+      {
+        "language": ["Japanese"],
+        "biting": ["ムシャムシャ (musha-musha) [jpn 1]"],
+        "eating food": [
+          "モグモグ (mogu mogu)",
+          "[jpn 2] パクパク (paku paku)[jpn 3]"
+        ],
+        "drinking": ["ゴクゴク (goku goku)"],
+        "swallowing": ["ごくっ (goku)[jpn 4]"],
+        "brushing teeth": ["シャカシャカ (shaka shaka)"]
+      },
+      {
+        "language": ["Kazakh"],
+        "drinking": ["лық-лық (lyq-lyq)", " сылқ-сылқ (sylq-sylq)"],
+        "swallowing": ["сылқ (sylq)"]
+      },
+      {
+        "language": ["Korean"],
+        "biting": ["와작와작 (wajak-wajak)"],
+        "eating food": [
+          "냠냠 (nyam nyam)",
+          " 얌얌 (yam yam)",
+          " 쩝쩝 (jjeop jjeop)"
+        ],
+        "drinking": ["꿀꺽 꿀꺽 (kkul kkeok kkul kkeok)"],
+        "swallowing": ["꿀꺽 (kkul kkeok)"],
+        "brushing teeth": ["치카치카 (chika chika)"]
+      },
+      {
+        "language": ["Kyrgyz"],
+        "eating food": ["шам-шум (sham-shum)"]
+      },
+      {
+        "language": ["Latvian"],
+        "biting": ["am"],
+        "eating food": ["ņam ņam"],
+        "drinking": ["gul gul"]
+      },
+      {
+        "language": ["Lithuanian"],
+        "eating food": ["niam niam"],
+        "drinking": ["kliuk kliuk"]
+      },
+      {
+        "language": ["Malay"],
+        "biting": ["ngap ngap"],
+        "eating food": ["nyam nyam nyam"],
+        "drinking": ["glup glup", " teguk"]
+      },
+      {
+        "language": ["Malayalam"],
+        "eating food": [
+          "ഞംഞം (njam-njam)",
+          " കറുമുറു (karu-muru) (hard/crunchy)"
+        ],
+        "swallowing": ["ഗ്ലപ് ഗ്ലപ്(glap-glap)"]
+      },
+      {
+        "language": ["Marathi"],
+        "biting": ["कुर्रुम-कुर्रुम (krum-krum)"],
+        "eating food": ["मम् मम् (mam mam)"],
+        "drinking": ["गट-गट (gaT gaT)"],
+        "swallowing": ["गटक (gatak)"]
+      },
+      {
+        "language": ["Nepali"],
+        "biting": [
+          "लापलुप(pronounced [ˈlaplup])",
+          " कर्याम-कुरुम(pronounced [kʌɾjam kuɾum])"
+        ],
+        "eating food": ["क्वाप्प(pronounced [kwapːʌ])"],
+        "drinking": [
+          "घट-घट(pronounced [ˈɡʱʌʈɡʱʌʈ])",
+          " कल-कल(pronounced [kʌlkʌl])"
+        ]
+      },
+      {
+        "language": ["Norwegian"],
+        "eating food": ["nam nam"],
+        "drinking": ["glugg glugg"]
+      },
+      {
+        "language": ["Persian"],
+        "drinking": ["qolop-qolop"]
+      },
+      {
+        "language": ["Polish"],
+        "biting": ["chap", " am", " chrup (crunch)"],
+        "eating food": ["mniam mniam", " chrup chrup (if hard)", " mlask"],
+        "drinking": ["gul gul"],
+        "swallowing": ["gul gul"],
+        "brushing teeth": ["szuru szuru", " szuru buru"]
+      },
+      {
+        "language": ["Portuguese"],
+        "biting": ["nhac", " nhoc"],
+        "eating food": ["nham nham"],
+        "drinking": ["glup glup"]
+      },
+      {
+        "language": ["Romanian"],
+        "biting": ["hap", " haț"],
+        "eating food": ["miam miam", " niam niam", " pleasc-pleasc"],
+        "drinking": ["gâl-gâl"],
+        "swallowing": ["gogâlț"]
+      },
+      {
+        "language": ["Russian"],
+        "biting": ["хрум (khrum)"],
+        "eating food": ["ам (am) (quick)", " ням-ням (njam-njam)"],
+        "drinking": ["бульк бульк (bulk-bulk)"]
+      },
+      {
+        "language": ["Serbian"],
+        "biting": ["гриц (gric) [grits]"],
+        "eating food": ["њам-њам (njam-njam)"]
+      },
+      {
+        "language": ["Slovak"],
+        "biting": ["chrum"],
+        "eating food": ["mňam", " ham"],
+        "drinking": ["glo", " glo-glo"]
+      },
+      {
+        "language": ["Spanish"],
+        "biting": ["ñam"],
+        "eating food": ["ñam ñam"],
+        "drinking": ["glu glu glu", " glup"],
+        "swallowing": ["glup"]
+      },
+      {
+        "language": ["Swedish"],
+        "biting": ["nam-nam"],
+        "eating food": ["nam nam"],
+        "drinking": ["glugg glugg", " klunk klunk"],
+        "swallowing": ["gulp"]
+      },
+      {
+        "language": ["Tagalog"],
+        "eating food": ["nam nam"],
+        "swallowing": ["lunók"],
+        "brushing teeth": ["tsuka tsuka"]
+      },
+      {
+        "language": ["Tamil"],
+        "eating food": ["karukk murukk (mainly used to indicate crunching)"]
+      },
+      {
+        "language": ["Thai"],
+        "biting": ["งั่บ (ngap)", " ง่ำ (ngam)"],
+        "eating food": ["ง่ำ ง่ำ (ngam ngam)"],
+        "drinking": ["อึ้ก (uek)", " เอื้อก (ueak)"],
+        "swallowing": ["อึก อึก (uek uek)"]
+      },
+      {
+        "language": ["Turkish"],
+        "biting": ["hart", " hurt"],
+        "eating food": ["ham hum", " nam nam"],
+        "drinking": ["hüüp", " lıkır lıkır"],
+        "swallowing": ["gulp"],
+        "brushing teeth": ["fıtı fıtı"]
+      },
+      {
+        "language": ["Ukrainian"],
+        "biting": [
+          "ам (am)",
+          " ням (niam)",
+          " хрум (khrum) (if crunchy)",
+          " кусь (kus)"
+        ],
+        "eating food": [
+          "ням-ням (niam-niam)",
+          " хрусь-хрусь (khrus-khrus) (if crunchy)",
+          " хлам-хлам (khlam-khlam) (if hastily)",
+          " хряп-хряп (khriap-khriap) (if hastily)"
+        ],
+        "drinking": [
+          "бульк-бульк (bulk-bulk)",
+          " глип-глип (glyp-glyp)",
+          " ґлаґ-ґлаґ (glug-glug)"
+        ],
+        "swallowing": ["ґольґ (golg)"],
+        "brushing teeth": [
+          "шурх-шурх (shurkh-shurkh)",
+          " шорх-шорх (shorkh-shorkh)"
+        ]
+      },
+      {
+        "language": ["Vietnamese"],
+        "biting": ["ngoạm"],
+        "eating food": ["măm măm", " nhăm nhăm", " nhồm nhoàm", " chàm chạp"],
+        "drinking": ["ực ực", " ừng ực"]
+      }
+    ]
+  },
+  {
+    "label": "bodily functions and involuntary sounds",
+    "data": [
+      {
+        "language": ["Afrikaans"],
+        "heart beating": ["doef doef"],
+        "flatulence": ["poep"],
+        "sneezing": ["atiesjoe"],
+        "snoring": ["snork"]
+      },
+      {
+        "language": ["Albanian"],
+        "heart beating": ["pam-pam", " bam-bam"],
+        "belching": ["grrom"],
+        "coughing": ["këm-këm", " gam-gam"],
+        "flatulence": ["përrpërr"],
+        "sneezing": ["tësh", " açu", " eçu"],
+        "snoring": ["gërr", " grro"]
+      },
+      {
+        "language": ["Arabic"],
+        "heart beating": ["tum tum", " رطم رطم (raṭama-raṭama)"],
+        "flatulence": ["draat", " fassi", " or tooz[ara 1]"],
+        "sneezing": ["hatchu[ara 1]"]
+      },
+      {
+        "language": ["Armenian"],
+        "heart beating": ["dchk-dchk", " lck-lck"],
+        "flatulence": ["thurr", " tuss"],
+        "yawning": ["haptchi"]
+      },
+      {
+        "language": ["Azerbaijani"],
+        "heart beating": ["gup-gup"],
+        "coughing": ["öhö-öhö"],
+        "flatulence": ["zart", " zırt"],
+        "snoring": ["xor"]
+      },
+      {
+        "language": ["Basque"],
+        "heart beating": [
+          "bun-bun-bun",
+          " danba-danba",
+          " pal-pal",
+          " pil-pil",
+          " pilpil-pulpul",
+          " pilpiri-palpara",
+          " pir-pir",
+          " pupa",
+          " sast-sast",
+          " tak",
+          " taktak",
+          " taka-taka",
+          " tanka",
+          " tanp-tanp",
+          " tanpa-tanpa",
+          " tapa-tapa",
+          " taup-taup",
+          " taupa-taupa",
+          " tik-tik",
+          " tis-tas",
+          " trapata",
+          " tunpa; (strongly) punpa; (nervously) panp-panp"
+        ],
+        "belching": ["broust", " korrok", " kurrunk", " zarra"],
+        "coughing": [
+          "aju-aju",
+          " atxu-atxu",
+          " eiu",
+          " eju",
+          " keju-keju",
+          " kuj-kuj",
+          " tuju-tuju",
+          " ugh"
+        ],
+        "flatulence": [
+          "par",
+          " parra",
+          " parrat",
+          " pirri",
+          " pirrit",
+          " pirrit-parrat",
+          " porrot",
+          " prrrrrrut",
+          " puiiiit",
+          " purrut",
+          " tarrat",
+          " tirri eta tarra",
+          " tirri-tarra",
+          " tirrit tarrat",
+          " turrut"
+        ],
+        "sneezing": [
+          "atija",
+          " atije",
+          " atrija",
+          " atxi",
+          " atxis",
+          " atxix",
+          " atxufa",
+          " hatifa",
+          " hatxiu"
+        ],
+        "snoring": [
+          "gurrunga",
+          " korroka",
+          " korronga",
+          " korronka",
+          " korrox",
+          " korroxka",
+          " kurrun",
+          " kurrunka",
+          " pzzz",
+          " rru-rru",
+          " ru-ru-ru",
+          " zirri-zorro",
+          " zorro-zorro",
+          " zurru",
+          " zurrun",
+          " zurruzta",
+          " zzzzz"
+        ],
+        "yawning": ["uaaa"]
+      },
+      {
+        "language": ["Batak"],
+        "heart beating": ["bar-bar-bar"],
+        "belching": ["org"],
+        "flatulence": ["put"],
+        "sneezing": ["atcim"],
+        "snoring": ["korrrr"]
+      },
+      {
+        "language": ["Bengali"],
+        "heart beating": [
+          "দুরদুর (durdur)",
+          " দুরুদুরু (duruduru)",
+          " লাব ডুব (lāb dub)",
+          " dhuk-puk"
+        ],
+        "sneezing": ["হাঁচি (hąci)", " hąccho"],
+        "snoring": ["bhnosh bhnosh", " ঘ ঘ (gho gho)"],
+        "yawning": ["hai"]
+      },
+      {
+        "language": ["Bulgarian"],
+        "heart beating": ["туп-туп (tup tup)"],
+        "belching": ["уриг (urig)"],
+        "flatulence": ["пръц (prats)"],
+        "sneezing": ["апчих (apchih)", " ких (kih)"],
+        "snoring": ["хърр (hurr)"]
+      },
+      {
+        "language": ["Catalan"],
+        "heart beating": ["tu-tum tu-tum", " pu-pum pu-pum"],
+        "belching": ["rot"],
+        "coughing": ["cof", " cof"],
+        "flatulence": ["prut"],
+        "sneezing": ["atxim", " atxem"],
+        "snoring": ["rrrr", " rau-rau"],
+        "yawning": ["uà", " uaah"]
+      },
+      {
+        "language": ["Cebuano"],
+        "yawning": ["hahay"]
+      },
+      {
+        "language": ["Chinese", " Cantonese"],
+        "heart beating": ["卜卜 (buk4 buk4)"],
+        "belching": ["oek4 or oet4 [œʔ²¹]"],
+        "coughing": ["kem4 (kem2)"],
+        "flatulence": ["but4", " but4 but4"],
+        "sneezing": ["乞嗤 (hāt-chī)"],
+        "snoring": ["got4 syu4", " got4 got2 seng1", " goet4 goet2 seng1"]
+      },
+      {
+        "language": ["Chinese", " Mandarin"],
+        "heart beating": ["怦怦 (pēng pēng)[zho 1]"],
+        "sneezing": ["阿嚏 (ā tì)[zho 2]"],
+        "snoring": ["呼噜 (hū lu)[zho 3]"]
+      },
+      {
+        "language": ["Croatian"],
+        "heart beating": ["tup tup", " bum bum"],
+        "coughing": ["kah"],
+        "flatulence": ["prd"],
+        "sneezing": ["apćih", " apćiha"],
+        "snoring": ["zzz"],
+        "yawning": ["zijev"]
+      },
+      {
+        "language": ["Czech"],
+        "heart beating": ["buch buch"],
+        "belching": ["krk"],
+        "flatulence": ["prd"],
+        "sneezing": ["hepčí [ˈɦɛpt͡ʃiː]"],
+        "snoring": ["chrrr"],
+        "yawning": ["zív"]
+      },
+      {
+        "language": ["Danish"],
+        "heart beating": ["dunk dunk", " bank bank"],
+        "belching": ["bøvs [bœwˀs]", "[dan 2] ræb [ʁεˀb][dan 3]"],
+        "flatulence": ["prut", " fis"],
+        "sneezing": ["atju", " hatju"],
+        "snoring": ["snork"],
+        "yawning": ["gab"]
+      },
+      {
+        "language": ["Dutch"],
+        "heart beating": ["boenk boenk", " boem boem", " klop", " klop"],
+        "belching": ["burp"],
+        "coughing": ["uche", " uche"],
+        "flatulence": ["prot"],
+        "sneezing": ["hatsjoe", " hatsjie"],
+        "snoring": ["snurk", " zzz"],
+        "yawning": ["gaap"]
+      },
+      {
+        "language": ["English"],
+        "heart beating": ["thump thump", " lub dub", " ba-bump"],
+        "belching": ["burp"],
+        "coughing": ["cough cough"],
+        "flatulence": ["fart", " toot"],
+        "sneezing": ["achoo"],
+        "snoring": ["zzz", " honk-shoo"],
+        "yawning": ["yawn", " ho-hum"]
+      },
+      {
+        "language": ["Estonian"],
+        "heart beating": ["tuks tuks"],
+        "belching": ["krooks"],
+        "coughing": ["köh köh"],
+        "flatulence": ["puuks"],
+        "sneezing": ["atsihh", " atsih", " aptsihh", " aptsih"],
+        "snoring": ["norr"]
+      },
+      {
+        "language": ["Finnish"],
+        "heart beating": ["tu-tum", " pu-pum"],
+        "belching": ["röyh"],
+        "coughing": ["köh köh"],
+        "flatulence": ["prut", " prööt"],
+        "sneezing": [
+          "atshii",
+          " atshiu",
+          " atsiuh",
+          " ätshii",
+          " ätshiu",
+          " ätsiuh"
+        ],
+        "snoring": ["krooh pyyh"],
+        "yawning": ["haukotus[citation needed]"]
+      },
+      {
+        "language": ["French"],
+        "heart beating": ["boum boum"],
+        "belching": ["beurp"],
+        "coughing": ["koff koff", " teu-heu"],
+        "flatulence": ["prout"],
+        "sneezing": ["atchoum", " atchi", " atcha"],
+        "snoring": ["ron pchi", " (rrr) zzz"],
+        "yawning": ["ouaaah"]
+      },
+      {
+        "language": ["German"],
+        "heart beating": ["ba-dumm", " bumm bumm", " poch poch"],
+        "belching": ["rülps"],
+        "flatulence": ["pups"],
+        "sneezing": ["hatschi", " hatschu"],
+        "snoring": ["chrr-pfüüh", " schnarch", " zzz", " chhhh"],
+        "yawning": ["gähn"]
+      },
+      {
+        "language": ["Greek"],
+        "heart beating": ["ντουκ ντουκ (duk-duk)"],
+        "coughing": ["βήχα βήχα (vikha vikha)"],
+        "sneezing": ["αψ(ι)ου (aps(i)u)"]
+      },
+      {
+        "language": ["Hebrew"],
+        "heart beating": ["בּוּם־בּוּם (bum-búm)"],
+        "belching": ["גְּרֶפְּס (greps)"],
+        "flatulence": ["פּוּק (pook)", " פלוץ (flotz)"],
+        "sneezing": ["אַפְּצִ'י apchi[heb 1]"],
+        "snoring": ["חְררר (xrrr)"]
+      },
+      {
+        "language": ["Hindi"],
+        "heart beating": ["daṛak (pronounced [d̪əˈɽək])"],
+        "sneezing": ["achhee"]
+      },
+      {
+        "language": ["Hungarian"],
+        "heart beating": ["ta-tamm"],
+        "belching": ["böff"],
+        "coughing": ["köh-köh"],
+        "flatulence": ["pú"],
+        "sneezing": ["hapci"],
+        "snoring": ["hrr pityipű"]
+      },
+      {
+        "language": ["Icelandic"],
+        "heart beating": ["dúnk dúnk"],
+        "sneezing": ["atsjú"]
+      },
+      {
+        "language": ["Indonesian"],
+        "heart beating": ["dag-dig-dug", " deg-deg"],
+        "belching": ["erk"],
+        "coughing": ["uhuk-uhuk"],
+        "flatulence": ["pret", " prett", " tuut"],
+        "sneezing": ["hacciihh"],
+        "snoring": ["grookkk"],
+        "yawning": ["hoam"]
+      },
+      {
+        "language": ["Italian"],
+        "heart beating": ["tu tump"],
+        "belching": ["rutt"],
+        "flatulence": ["prot"],
+        "sneezing": ["etciú"],
+        "snoring": ["ronf", " zzz"]
+      },
+      {
+        "language": ["Japanese"],
+        "heart beating": [
+          "(nervous excitement) ドキドキ (doki doki)",
+          " (suspense",
+          " thrill)[jpn 5]"
+        ],
+        "belching": ["ゲップ (geppu)"],
+        "flatulence": ["ブ (bu)", " プ (pu)"],
+        "sneezing": ["ハクション (hakushon)[jpn 6]"],
+        "snoring": ["ぐうぐう gu-gu[jpn 7]"],
+        "yawning": ["フワアーア fuwaāa"]
+      },
+      {
+        "language": ["Kannada"],
+        "heart beating": ["dub bub", " dava dava"]
+      },
+      {
+        "language": ["Kazakh"],
+        "heart beating": ["дүрс-дүрс (du'rs-du'rs)"],
+        "flatulence": ["парт (part)", " парт-пұрт (part-purt)"],
+        "sneezing": ["әпшу (apshu)"],
+        "snoring": ["қорр (qorr)", " қорр-қорр (qorr-qorr)"]
+      },
+      {
+        "language": ["Korean"],
+        "heart beating": ["두근두근 (dugeun dugeun)"],
+        "belching": ["꺼억 (kkeo-eok)"],
+        "coughing": ["콜록 (kollok)"],
+        "flatulence": ["뿡 (ppung)"],
+        "sneezing": ["에취 (echwi)"],
+        "snoring": ["드르렁 (deureureong)"],
+        "yawning": ["하암 (haam)"]
+      },
+      {
+        "language": ["Latin"],
+        "belching": ["ruct"],
+        "flatulence": ["prox"]
+      },
+      {
+        "language": ["Latvian"],
+        "heart beating": ["tuk-tuk"],
+        "sneezing": ["ačī", " apčī"],
+        "yawning": ["žāv"]
+      },
+      {
+        "language": ["Lithuanian"],
+        "heart beating": ["tuk tuk"],
+        "flatulence": ["pirst"],
+        "sneezing": ["apčiū", " apči"]
+      },
+      {
+        "language": ["Macedonian"],
+        "heart beating": ["туп туп (tup tup)"],
+        "sneezing": ["апчиха (apchiha)"]
+      },
+      {
+        "language": ["Malay"],
+        "heart beating": ["dup dap dup dap"],
+        "belching": ["ə~kk", " bəkk"],
+        "flatulence": ["pro~t", " pret", " poot"],
+        "sneezing": ["achom", " achum"],
+        "snoring": ["krrohh krrohh", " dengkur"],
+        "yawning": ["haaa", " nguap"]
+      },
+      {
+        "language": ["Marathi"],
+        "heart beating": ["धड धड (dhad dhad)", " धक-धक (dhak dhak)"],
+        "flatulence": ["ढुस्स (dhuss)", " ढुम (dhum)"],
+        "sneezing": ["आच्छीं (acchin)", " आच्छू (acchoo)"],
+        "snoring": ["घोर (ghor)", " घुर्र (ghurr)"]
+      },
+      {
+        "language": ["Navajo"],
+        "heart beating": ["tsʼidog"]
+      },
+      {
+        "language": ["Nepali"],
+        "heart beating": ["ढुक-ढुक(pronounced [ɖʱukɖʱuk])"],
+        "belching": ["ढ्याउ(pronounced [ɖʱjau̯])"],
+        "coughing": ["ख्याक-ख्याक([kʰjakkʰjak])"],
+        "flatulence": ["ह्वास्स([ɦwasːʌ])"],
+        "sneezing": ["हाच्छ्यु(pronounced [ˈɦat͡st͡sʰju])"],
+        "snoring": ["घुर-घुर([ɡʱurɡʱur])"],
+        "yawning": ["हाई([ɦai̯])"]
+      },
+      {
+        "language": ["Norwegian"],
+        "heart beating": ["dunk dunk"],
+        "sneezing": ["aatsjoo"]
+      },
+      {
+        "language": ["Persian"],
+        "heart beating": ["tāp-o-tūp", " tāp-tāp"],
+        "belching": ["ārūγ"],
+        "flatulence": ["pup"],
+        "sneezing": ["achu"],
+        "snoring": ["xor-o-pof", " xor-nāse"]
+      },
+      {
+        "language": ["Polish"],
+        "heart beating": ["bum bum", " bu-bum"],
+        "belching": ["bek"],
+        "flatulence": ["prrr(yt)", " prut"],
+        "sneezing": ["a-psik"],
+        "snoring": ["chrrr", " chrrr-pśśś"],
+        "yawning": ["ziew"]
+      },
+      {
+        "language": ["Portuguese"],
+        "heart beating": ["tun-tum"],
+        "belching": ["burp[por 1]"],
+        "flatulence": ["pum"],
+        "sneezing": ["atchim", " atchô[por 1]"],
+        "snoring": ["zzz"],
+        "yawning": ["uah"]
+      },
+      {
+        "language": ["Romanian"],
+        "belching": ["râg (a râgâi = to burp)"],
+        "flatulence": ["pârț"],
+        "sneezing": ["hapciu"],
+        "snoring": ["sfor"]
+      },
+      {
+        "language": ["Russian"],
+        "heart beating": ["тук-тук (tuk-tuk)"],
+        "flatulence": ["пук (puk)"],
+        "sneezing": ["апчхи (apchkhi)"],
+        "snoring": ["хр-р-р (khrrr)"]
+      },
+      {
+        "language": ["Serbian"],
+        "heart beating": ["туп-туп (tup-tup)"],
+        "flatulence": ["трт (trt)"],
+        "sneezing": ["апћиха (apćiha)"]
+      },
+      {
+        "language": ["Sinhalese"],
+        "sneezing": ["හචිස් (hacis)"]
+      },
+      {
+        "language": ["Slovak"],
+        "belching": ["grg"],
+        "sneezing": ["hapčí"]
+      },
+      {
+        "language": ["Slovene"],
+        "sneezing": ["ačih", " ačiha"]
+      },
+      {
+        "language": ["Spanish"],
+        "heart beating": ["bum bum bum", " tucutún tucutún"],
+        "coughing": ["tjum", " tjum"],
+        "flatulence": ["prt"],
+        "sneezing": ["achu", " achís", " achú"],
+        "snoring": ["szzz"]
+      },
+      {
+        "language": ["Swedish"],
+        "heart beating": ["du-dunk", " du-dunk"],
+        "belching": ["rap"],
+        "flatulence": ["prutt"],
+        "sneezing": ["atjoo"],
+        "snoring": ["snark"],
+        "yawning": ["gäsp"]
+      },
+      {
+        "language": ["Tagalog"],
+        "heart beating": ["dub dub dub dub", " tibók tibók"],
+        "belching": ["ebb"],
+        "flatulence": ["purorót", " utót"],
+        "sneezing": ["hatsíng", " bahíng"],
+        "snoring": ["kok-sss"],
+        "yawning": ["hikab"]
+      },
+      {
+        "language": ["Tamil"],
+        "heart beating": ["lappu-tappu"],
+        "flatulence": ["karukk murukk"],
+        "sneezing": ["a-choo"]
+      },
+      {
+        "language": ["Telugu"],
+        "heart beating": ["lab-dab"],
+        "flatulence": ["para para"],
+        "sneezing": ["Haatch"]
+      },
+      {
+        "language": ["Thai"],
+        "heart beating": ["ตุ้บ ตุ้บ (tup tup)", " ตึ้ก ตั้ก (tuek tak)"],
+        "belching": ["เอิ่ก (oek)"],
+        "coughing": ["แค่ก แค่ก (khaek khaek)"],
+        "flatulence": ["ปู้ด (puut)", " ป้าด (pät)"],
+        "sneezing": ["ฮัดเช่ย (hatchoei)", " ฮัดชิ่ว (hatchiw)"],
+        "snoring": ["ครอก ฟี้ (khrok fi)", " ครอก ครอก (khrok khrok)"],
+        "yawning": ["หาว (hao)"]
+      },
+      {
+        "language": ["Turkish"],
+        "heart beating": ["güm güm", " küt küt", " güp güp"],
+        "belching": ["gark"],
+        "coughing": ["öhö öhö"],
+        "flatulence": ["zart", " zort", " pırt"],
+        "sneezing": ["hapşu"],
+        "snoring": ["hor"]
+      },
+      {
+        "language": ["Urdu"],
+        "heart beating": ["dhakdhak"]
+      },
+      {
+        "language": ["Vietnamese"],
+        "heart beating": ["thình thịch", " bình bịch"],
+        "belching": ["ợ"],
+        "coughing": ["ho", ""],
+        "flatulence": ["phẹt", " bủm", " địt"],
+        "sneezing": ["hắt xì", " ắt xì"],
+        "snoring": ["khò", " khò khò"],
+        "yawning": ["oáp", " ngáp"]
+      }
+    ]
+  },
+  {
+    "label": "cries of distress",
+    "data": [
+      {
+        "language": ["Afrikaans"],
+        "baby crying": ["wê"]
+      },
+      {
+        "language": ["Albanian"],
+        "baby crying": ["ua-ua", " uëë"],
+        "scream": ["au", " oh", " ai", ""]
+      },
+      {
+        "language": ["Arabic"],
+        "baby crying": ["وع وع (wa'-wa' )"],
+        "scream": ["أي (ai)[ara 2]"]
+      },
+      {
+        "language": ["Azerbaijani"],
+        "baby crying": ["ingə"],
+        "scream": ["uf", " of", " ox"]
+      },
+      {
+        "language": ["Basque"],
+        "scream": ["ai", " aiei", " epa"]
+      },
+      {
+        "language": ["Batak"],
+        "baby crying": ["nguek nguek"],
+        "scream": ["alale"],
+        "shriek": ["ei"]
+      },
+      {
+        "language": ["Belarusian"],
+        "scream": ["ай (aj)"]
+      },
+      {
+        "language": ["Bengali"],
+        "baby crying": ["ওয়া ওয়া oaa oaa"]
+      },
+      {
+        "language": ["Bulgarian"],
+        "baby crying": ["уаа уаа (uaa uaa)"],
+        "scream": ["ай (aj)", " ау (au)", " ох (oh)", " ой (oj)"]
+      },
+      {
+        "language": ["Catalan"],
+        "baby crying": ["enguè", " engüè", " engú"],
+        "scream": ["ai", " au", " ui", " uix", " oi"],
+        "shriek": ["hiii", " crii"]
+      },
+      {
+        "language": ["Chinese", " Cantonese"],
+        "baby crying": ["哇哇 (waa1 waa1)"],
+        "scream": ["哎呀 (aai1 jaa3)"]
+      },
+      {
+        "language": ["Chinese", " Mandarin"],
+        "baby crying": ["哇哇 (wā wā)[zho 4]"],
+        "scream": ["啊 (ā)", " 噢 (ō)", " 哎呀 (āiyā)", " 哎哟 (āiyō)"]
+      },
+      {
+        "language": ["Croatian"],
+        "scream": ["jao", " joj", " uaijh", " au", " auč"]
+      },
+      {
+        "language": ["Czech"],
+        "baby crying": ["bé bé [bɛːbɛː]"],
+        "scream": ["au", " jau"]
+      },
+      {
+        "language": ["Danish"],
+        "baby crying": ["vræl [ˈvʁεːˀl][dan 4]"],
+        "scream": ["av"]
+      },
+      {
+        "language": ["Dutch"],
+        "scream": ["au", " auw"],
+        "shriek": ["iek"]
+      },
+      {
+        "language": ["English"],
+        "baby crying": ["wah-wah[eng 1]"],
+        "scream": [
+          "ah",
+          " arghh ow",
+          " ouch",
+          " yeow",
+          " yow",
+          " agh",
+          " eek",
+          " yikes",
+          " oof"
+        ],
+        "shriek": ["gah", " eek", " yikes"]
+      },
+      {
+        "language": ["Estonian"],
+        "baby crying": ["ää-ää"],
+        "scream": ["ai", " oi"]
+      },
+      {
+        "language": ["Finnish"],
+        "baby crying": ["byääh", " yää"],
+        "scream": ["au", " ai", " auts"],
+        "shriek": ["iik", " kääk"]
+      },
+      {
+        "language": ["French"],
+        "baby crying": ["ouin ouin"],
+        "scream": [
+          "aïe",
+          " ouille",
+          " ayoye (Quebec)",
+          " ouch (Quebec)",
+          " aw (Quebec)",
+          " ouaille (Belgium)"
+        ],
+        "shriek": ["hii"]
+      },
+      {
+        "language": ["Galician"],
+        "scream": ["ai"]
+      },
+      {
+        "language": ["German"],
+        "baby crying": ["wäh-wäh"],
+        "scream": ["au", " aua", " ah", " autsch"],
+        "shriek": ["uwah", " waah", " ieh"]
+      },
+      {
+        "language": ["Greek"],
+        "baby crying": ["ουά-ουά (ouá-ouá) /uaua/[gre 1]"],
+        "scream": ["ωχ (òkh)"]
+      },
+      {
+        "language": ["Haitian Creole"],
+        "scream": ["ay"]
+      },
+      {
+        "language": ["Hebrew"],
+        "scream": ["אָח (àx)", "[heb 2] אָי (ài)", " אױ װײ (oy vey)"]
+      },
+      {
+        "language": ["Hindi"],
+        "scream": ["आहा (àhhà)", " वाह-वाह (hhàvh-hhàvh)"]
+      },
+      {
+        "language": ["Hungarian"],
+        "baby crying": ["oá oá"],
+        "scream": ["aú", " á", " jaj"]
+      },
+      {
+        "language": ["Icelandic"],
+        "scream": ["ái", " ói", " æi"]
+      },
+      {
+        "language": ["Indonesian"],
+        "baby crying": ["owe-owe"],
+        "scream": ["aduh", " ai", " aih", " awww"],
+        "shriek": ["wao", " huwah"]
+      },
+      {
+        "language": ["Irish"],
+        "scream": ["aigh"]
+      },
+      {
+        "language": ["Italian"],
+        "baby crying": ["uè-uè"],
+        "scream": ["ahi", " ahia", " ohi"],
+        "shriek": ["aah", " iih"]
+      },
+      {
+        "language": ["Japanese"],
+        "baby crying": ["オギャ- (ogyaa)[jpn 8]"],
+        "scream": ["ギャー (gyā)"],
+        "shriek": ["きゃあ (kyaa)[jpn 9]"]
+      },
+      {
+        "language": ["Kazakh"],
+        "baby crying": ["іңгә-іңгә (in'ga-in'ga)"]
+      },
+      {
+        "language": ["Korean"],
+        "baby crying": ["응애-응애 (eung'ae-eung'ae)"],
+        "scream": ["아 (a)", " 아야 (aya)", " 꺄 (kkya)"],
+        "shriek": ["으악 (eu-ak)"]
+      },
+      {
+        "language": ["Kyrgyz"],
+        "baby crying": ["ыңаа-ыңаа (yngaa-yngaa)"]
+      },
+      {
+        "language": ["Latvian"],
+        "scream": ["vai", " au", " ā"],
+        "shriek": ["ai"]
+      },
+      {
+        "language": ["Lithuanian"],
+        "scream": ["ai", " oi"]
+      },
+      {
+        "language": ["Macedonian"],
+        "scream": ["уф (uf)"]
+      },
+      {
+        "language": ["Malay"],
+        "baby crying": ["uwek-uwek", " wek-wek"],
+        "scream": [
+          "aduh",
+          " adoi",
+          " adoiyai",
+          " opocot",
+          " alamak",
+          " omakkau",
+          " aaah",
+          " haish"
+        ],
+        "shriek": ["iish", " eee", " iyek"]
+      },
+      {
+        "language": ["Marathi"],
+        "baby crying": ["वँ वँ (waan waan)"],
+        "scream": ["आ आ (aa aa)", " आऽई (aaee)"],
+        "shriek": ["आऽई (aaee)", " ईऽ (ee)"]
+      },
+      {
+        "language": ["Navajo"],
+        "scream": ["ayá"]
+      },
+      {
+        "language": ["Nepali"],
+        "scream": ["आ([aː])", " ऐया([ʌi̯jaː])"]
+      },
+      {
+        "language": ["Norwegian"],
+        "scream": ["au"]
+      },
+      {
+        "language": ["Pashtu"],
+        "scream": ["ooauy", " why"]
+      },
+      {
+        "language": ["Persian"],
+        "baby crying": ["vang-vang"],
+        "scream": ["آخ (āx)", " وای (vāy)"],
+        "shriek": ["آی (āy)"]
+      },
+      {
+        "language": ["Polish"],
+        "baby crying": ["łee"],
+        "scream": [
+          "ała (stressed on the last syllable)",
+          " ła",
+          " ał",
+          " auuu",
+          " auć",
+          " aj"
+        ],
+        "shriek": ["aaa"]
+      },
+      {
+        "language": ["Portuguese"],
+        "baby crying": ["buá buá[por 1]"],
+        "scream": ["ah", " au", " ui[por 1]"],
+        "shriek": ["ai[por 1]"]
+      },
+      {
+        "language": ["Romanian"],
+        "baby crying": ["oa-oa", " ue-ue"],
+        "scream": ["au", " ai", " aa", " ah"]
+      },
+      {
+        "language": ["Russian"],
+        "baby crying": ["уа-уа (ua-ua)"],
+        "scream": ["ой (oj)", " ай (aj)", " ох (okh)"],
+        "shriek": ["уи-и-и (wi-i-i) (of pig)"]
+      },
+      {
+        "language": ["Serbian"],
+        "baby crying": ["кме-кме (kme-kme)"],
+        "scream": ["jao", " joj", " uaijh", " au", " auč", " jao", " ауу"]
+      },
+      {
+        "language": ["Slovak"],
+        "scream": ["au"]
+      },
+      {
+        "language": ["Slovenian"],
+        "scream": ["auč"]
+      },
+      {
+        "language": ["Spanish"],
+        "baby crying": ["buá buá", " ro ro"],
+        "scream": ["au", " ay"]
+      },
+      {
+        "language": ["Sinhalese"],
+        "baby crying": ["oha oha"]
+      },
+      {
+        "language": ["Swedish"],
+        "baby crying": ["uää-uää"],
+        "scream": ["aj", " oj"],
+        "shriek": ["ii"]
+      },
+      {
+        "language": ["Tagalog"],
+        "baby crying": ["uwá"],
+        "scream": ["aráy", " ay", " arúy"]
+      },
+      {
+        "language": ["Thai"],
+        "baby crying": ["อุแว้ อุแว้ (uwae uwae)", " แง้ แง้ (ngae ngae)"],
+        "scream": ["อ๊าก (ak)", " ;ว๊าก (wak)", " โอ๊ย (oi)", " อ๊าย (ai)"],
+        "shriek": ["อู๊ย (ui)", " โอ๊ย (oi)", " อ๊าย (ai)"]
+      },
+      {
+        "language": ["Turkish"],
+        "baby crying": ["ıngaa"],
+        "scream": ["ah", " ahh", " of", " öf", " üf"],
+        "shriek": ["ciyak"]
+      },
+      {
+        "language": ["Ukrainian"],
+        "scream": ["ай (aj)", " йой (joj)", " ой (oj)"]
+      },
+      {
+        "language": ["Urdu"],
+        "scream": ["آہ (-ààh)", " ooauy"]
+      },
+      {
+        "language": ["Uropi"],
+        "scream": ["aw"]
+      },
+      {
+        "language": ["Vietnamese"],
+        "baby crying": ["oa oa", " oe oe"],
+        "scream": ["a", " á", " ối", " oái"],
+        "shriek": ["híc"]
+      },
+      {
+        "language": ["Yiddish"],
+        "scream": ["אוי (oy)"]
+      }
+    ]
+  },
+  {
+    "label": "interrupted speech",
+    "data": [
+      {
+        "language": ["Afrikaans"],
+        "hushing": ["sjoes", " sjuut"],
+        "stuttering": ["hakkel"]
+      },
+      {
+        "language": ["Albanian"],
+        "hushing": ["shh", " shët"],
+        "pausing or thinking": ["ëëë", " ëmm"],
+        "stuttering": ["gaga", " gëgë"]
+      },
+      {
+        "language": ["Arabic"],
+        "hushing": ["suh", " hoss"],
+        "pausing or thinking": ["يعني (y'ani)"],
+        "stuttering": ["tahtaha"]
+      },
+      {
+        "language": ["Armenian"],
+        "hushing": ["լուռ (loor)", " սուս (soos)"],
+        "pausing or thinking": ["ըը", " ըհը (uhh", " uhu)"],
+        "stuttering": ["թօթօ (to-to)"]
+      },
+      {
+        "language": ["Basque"],
+        "hushing": ["ixo"],
+        "pausing or thinking": ["ba..."],
+        "stuttering": ["ele-mele"]
+      },
+      {
+        "language": ["Batak"],
+        "stuttering": ["a-ak"]
+      },
+      {
+        "language": ["Bengali"],
+        "stuttering": ["থৎমৎ (thôtomôto)"]
+      },
+      {
+        "language": ["Bulgarian"],
+        "hushing": ["шът (shut", " sh't)"],
+        "pausing or thinking": ["ъъъ (aaa)"]
+      },
+      {
+        "language": ["Catalan"],
+        "hushing": ["xxt", " xst", " pst", " xit", " xist"],
+        "pausing or thinking": ["ai", " au", " ui", " uix"]
+      },
+      {
+        "language": ["Chinese", " Cantonese"],
+        "hushing": ["殊 (syu4)"],
+        "pausing or thinking": ["嗯 (m6", " m3)"],
+        "stuttering": ["甩甩咳咳 (lak1 lak1 kak1 kak1)"]
+      },
+      {
+        "language": ["Chinese", " Mandarin"],
+        "hushing": ["噓 (xū)[zho 5]"],
+        "pausing or thinking": ["嗯 (èn)"]
+      },
+      {
+        "language": ["Croatian"],
+        "hushing": ["ššš", " pssst"]
+      },
+      {
+        "language": ["Czech"],
+        "hushing": ["pš [pʃ]"],
+        "pausing or thinking": ["é [e:]/[ʔ]", " hmmm", " mmm"],
+        "stuttering": ["bla bla"]
+      },
+      {
+        "language": ["Danish"],
+        "hushing": [
+          "ssh",
+          " sshy",
+          " schyy all pronounced [ʃː(ʷ)]",
+          "[dan 5] tys [tˢys]",
+          "[dan 6] hys [hys][dan 7]"
+        ],
+        "pausing or thinking": ["øh"]
+      },
+      {
+        "language": ["Dutch"],
+        "hushing": ["ssst"],
+        "pausing or thinking": ["eh"],
+        "stuttering": ["hakkel", " stotter"]
+      },
+      {
+        "language": ["English"],
+        "hushing": ["hush", " shh", "shush"],
+        "pausing or thinking": ["uh", " um", " er", " erm", " hmmm", " mmm"]
+      },
+      {
+        "language": ["Estonian"],
+        "hushing": ["kuss", " tšš"],
+        "pausing or thinking": ["ee"]
+      },
+      {
+        "language": ["Finnish"],
+        "hushing": ["shh", " hys"],
+        "pausing or thinking": ["öö"]
+      },
+      {
+        "language": ["French"],
+        "hushing": ["chut"],
+        "pausing or thinking": ["heu", " euh"]
+      },
+      {
+        "language": ["German"],
+        "hushing": ["pst", " pscht"],
+        "pausing or thinking": ["äh", " ähm"],
+        "stuttering": ["Hawa", " hawa", " babababa"]
+      },
+      {
+        "language": ["Greek"],
+        "hushing": [
+          "σσσ (ssss)",
+          " σσουτ (ssut)",
+          " σιωπή (sjopí",
+          " “silence”)"
+        ],
+        "pausing or thinking": ["μα (ma)", " ε (eh)"]
+      },
+      {
+        "language": ["Hebrew"],
+        "hushing": ["שְשש (shh)"],
+        "pausing or thinking": ["אהמ (ehm)"],
+        "stuttering": ["גִּמְגּוּם (gimgum)"]
+      },
+      {
+        "language": ["Hungarian"],
+        "hushing": ["pissz", " psszt"],
+        "pausing or thinking": ["hm", " hmm", " őő"]
+      },
+      {
+        "language": ["Icelandic"],
+        "hushing": ["uss", " suss"]
+      },
+      {
+        "language": ["Indonesian"],
+        "hushing": ["ssst"],
+        "pausing or thinking": ["hmmm"],
+        "stuttering": ["a ak"]
+      },
+      {
+        "language": ["Italian"],
+        "hushing": ["shh"],
+        "pausing or thinking": ["mmm", " ehm"]
+      },
+      {
+        "language": ["Japanese"],
+        "hushing": ["シー (shh)"],
+        "pausing or thinking": ["アーノ (āno)", " エート (ēto)"]
+      },
+      {
+        "language": ["Korean"],
+        "hushing": ["쉿 (swit)"],
+        "pausing or thinking": ["어 (eo)", " 음 (eum)", " 그 (keu)"],
+        "stuttering": [
+          "어쩌고저쩌고(eojjeogojeojjeogo)",
+          " 이러쿵저러쿵(ireokungjeoreokung)"
+        ]
+      },
+      {
+        "language": ["Latvian"],
+        "hushing": ["kuš", " ššš"],
+        "pausing or thinking": ["mmm", " hmm"]
+      },
+      {
+        "language": ["Lithuanian"],
+        "hushing": ["ša", " ššš"]
+      },
+      {
+        "language": ["Malay"],
+        "hushing": ["shhht"],
+        "pausing or thinking": ["aaa", " amm"],
+        "stuttering": ["ha ha"]
+      },
+      {
+        "language": ["Marathi"],
+        "hushing": ["शूऽऽ (ssshhhoo)", " चुप (chup)"],
+        "pausing or thinking": ["हम्ऽ (hmm)"],
+        "stuttering": ["तत पप (tata papa)"]
+      },
+      {
+        "language": ["Norwegian"],
+        "hushing": ["hysj"],
+        "pausing or thinking": ["ø", " øh"]
+      },
+      {
+        "language": ["Persian"],
+        "hushing": ["hīs"],
+        "pausing or thinking": ["hmm"],
+        "stuttering": ["tete-pete"]
+      },
+      {
+        "language": ["Polish"],
+        "hushing": ["ćśśś"],
+        "pausing or thinking": ["hmmm", " yyy", " eee"],
+        "stuttering": ["y-yh"]
+      },
+      {
+        "language": ["Portuguese"],
+        "hushing": ["chi", " chit", " si", " xiu", " psiu[por 1]"],
+        "pausing or thinking": ["ããã", " âââ", " hmm[por 1]"]
+      },
+      {
+        "language": ["Romanian"],
+        "hushing": ["sst", " șșt", " șșș"],
+        "pausing or thinking": ["ăăă"],
+        "stuttering": ["bâl-bâl"]
+      },
+      {
+        "language": ["Russian"],
+        "hushing": ["тс-с (ts-s)", " ш-ш (sh-sh)", " цыц (tsyts)"],
+        "pausing or thinking": ["хм (hm)", " эм (em)"],
+        "stuttering": ["ик (ik)"]
+      },
+      {
+        "language": ["Serbian"],
+        "hushing": ["пссст (pssst)", " шшш (shhh)"]
+      },
+      {
+        "language": ["Sinhalese"],
+        "stuttering": ["බැක් බැක් (bäk bäk)"]
+      },
+      {
+        "language": ["Slovak"],
+        "hushing": ["čššš", " pssst"],
+        "pausing or thinking": ["hmmm"],
+        "stuttering": ["bla bla bla"]
+      },
+      {
+        "language": ["Spanish"],
+        "hushing": ["chitón", " cht"],
+        "pausing or thinking": ["mmm"]
+      },
+      {
+        "language": ["Swedish"],
+        "hushing": ["schh"],
+        "pausing or thinking": ["öh"]
+      },
+      {
+        "language": ["Tagalog"],
+        "hushing": ["tsut"],
+        "stuttering": ["sasasasa"]
+      },
+      {
+        "language": ["Tamil"],
+        "hushing": ["oosshhh"]
+      },
+      {
+        "language": ["Thai"],
+        "hushing": ["จุ๊จุ๊ (chu chu)", " ชู่ (chuu)"],
+        "pausing or thinking": ["เอ่อ (oe)", " อืม (uem)"],
+        "stuttering": ["ตะ ตะ ตะ (ta ta ta)"]
+      },
+      {
+        "language": ["Turkish"],
+        "hushing": ["şişt", " şişş"],
+        "pausing or thinking": ["ııı", " ee", " hmm"],
+        "stuttering": ["kekelemek"]
+      },
+      {
+        "language": ["Ukrainian"],
+        "hushing": ["цить (tsyt)"],
+        "stuttering": ["гик (hyk)"]
+      },
+      {
+        "language": ["Uropi"],
+        "hushing": ["cit", " ccc"]
+      },
+      {
+        "language": ["Vietnamese"],
+        "hushing": ["suỵt", " xuýt"],
+        "pausing or thinking": ["hmm", " hừmm"],
+        "stuttering": ["lắp bắp"]
+      }
+    ]
+  },
+  {
+    "label": "expressions of positive emotions",
+    "data": [
+      {
+        "language": ["Afrikaans"],
+        "laughter": ["ha ha"],
+        "kiss": ["mwa"]
+      },
+      {
+        "language": ["Albanian"],
+        "laughter": ["ha ha", " hu hu", " he he"],
+        "kiss": ["puç", " mpuç"]
+      },
+      {
+        "language": ["Arabic"],
+        "laughter": ["hà hà[ara 1]"],
+        "kiss": ["mwa"]
+      },
+      {
+        "language": ["Armenian"],
+        "laughter": ["քա քա (ka ka)", " չա չա (cha cha)"]
+      },
+      {
+        "language": ["Asturian"],
+        "laughter": ["ḥa ḥa", " ḥe ḥe"]
+      },
+      {
+        "language": ["Basque"],
+        "laughter": ["kar kar"],
+        "kiss": ["pa"]
+      },
+      {
+        "language": ["Batak"],
+        "laughter": ["kakak"],
+        "kiss": ["ummah"]
+      },
+      {
+        "language": ["Bengali"],
+        "laughter": ["ha ha", " hee hee", " ho ho"],
+        "kiss": ["cummo", " umma"]
+      },
+      {
+        "language": ["Bosnian"],
+        "laughter": ["ha ha", " he he", " hi hi"],
+        "kiss": ["cmok", " pusa"]
+      },
+      {
+        "language": ["Bulgarian"],
+        "laughter": ["хаха (haha)", " хехехе (hehe)", " хихи (hihi)"],
+        "kiss": ["цун (tsun)", " мляс (mlyas)"]
+      },
+      {
+        "language": ["Catalan"],
+        "laughter": [
+          "haha",
+          " hehe",
+          " hihi",
+          " hoho",
+          " clac clac",
+          " clec clec"
+        ],
+        "kiss": ["muà", " muac", " txuic", " xuic"]
+      },
+      {
+        "language": ["Chinese", " Cantonese"],
+        "laughter": ["哈哈 (haa1 haa1)"]
+      },
+      {
+        "language": ["Chinese", " Mandarin"],
+        "laughter": [
+          "哈哈 (hā hā)",
+          "[zho 6] 呵呵 (hē hē)",
+          "[zho 7] 嘻嘻 (xī xī)",
+          "[zho 8] 嘿嘿 (hēi hēi)"
+        ],
+        "kiss": ["boh 啵 (This word is a modern creation)[citation needed]"]
+      },
+      {
+        "language": ["Croatian"],
+        "laughter": ["ha ha", " he he", " hi hi"],
+        "kiss": ["cmok"]
+      },
+      {
+        "language": ["Czech"],
+        "laughter": ["ha ha", " cha cha [xa xa]", " chi chi [xi xi]"]
+      },
+      {
+        "language": ["Danish"],
+        "laughter": ["ha ha", " hi hi", " hæ hæ", " ho ho", " ti hi"],
+        "kiss": ["møs"]
+      },
+      {
+        "language": ["Dutch"],
+        "laughter": ["haha", " hihi"],
+        "kiss": ["smak", " mwah"]
+      },
+      {
+        "language": ["English"],
+        "laughter": ["haha", " heh-heh", " hoho", " (tee)heehee"],
+        "kiss": ["mwah", " smooch", " smack"]
+      },
+      {
+        "language": ["Estonian"],
+        "laughter": ["haha", " hahhah", " hehe", " hehheh", " hihi"],
+        "kiss": ["mopsti"]
+      },
+      {
+        "language": ["Finnish"],
+        "laughter": [
+          "haha",
+          " hahhah",
+          " hehe",
+          " hehheh",
+          " hihi (girly)",
+          " höhö (unintelligent)"
+        ],
+        "kiss": ["muisk"]
+      },
+      {
+        "language": ["French"],
+        "laughter": ["haha", " héhé", " hihi", " hoho"],
+        "kiss": ["mouah", " smack"]
+      },
+      {
+        "language": ["German"],
+        "laughter": ["haha", " hihi"],
+        "kiss": ["muah", " schmatz"]
+      },
+      {
+        "language": ["Greek"],
+        "laughter": ["χαχα (haha)", " χεχε (hehe)"],
+        "kiss": ["μα (ma)", " ματς (mats)", " μουτς (mouts)"]
+      },
+      {
+        "language": ["Hebrew"],
+        "laughter": ["חָה־חָה (xà xà)[heb 3]"],
+        "kiss": ["מוּאָה (mwa)"]
+      },
+      {
+        "language": ["Hindi"],
+        "kiss": ["mmuah"]
+      },
+      {
+        "language": ["Hungarian"],
+        "laughter": ["haha", " hehe", " hihi", " höhö"],
+        "kiss": ["cupp"]
+      },
+      {
+        "language": ["Icelandic"],
+        "laughter": ["haha", " hehe", " (tittering or laughter) híhí"]
+      },
+      {
+        "language": ["Indonesian"],
+        "laughter": ["haha", " hehe", " wakaka", " 'wkwkwk'"],
+        "kiss": ["muahhh", " cupp"]
+      },
+      {
+        "language": ["Italian"],
+        "laughter": ["ah ah", " eh eh", " ih ih", " uh uh"],
+        "kiss": ["muah"]
+      },
+      {
+        "language": ["Japanese"],
+        "laughter": ["あはは (ahaha)", " フフ (fu fu)"],
+        "kiss": ["チュー (chū)"]
+      },
+      {
+        "language": ["Kazakh"],
+        "laughter": ["қарқ-қарқ (qarq-qarq)"],
+        "kiss": ["шөп (sho'p)"]
+      },
+      {
+        "language": ["Korean"],
+        "laughter": ["하하 (haha)", " 케케 (keke)"],
+        "kiss": ["쪽 (jjok)"]
+      },
+      {
+        "language": ["Latvian"],
+        "laughter": ["ha ha"],
+        "kiss": ["buč"]
+      },
+      {
+        "language": ["Lithuanian"],
+        "laughter": ["cha cha"],
+        "kiss": ["pakšt"]
+      },
+      {
+        "language": ["Macedonian"],
+        "kiss": ["цмок (tsmoc)"]
+      },
+      {
+        "language": ["Malay"],
+        "laughter": ["kahkah", " haha", " kiki", " bahahah"],
+        "kiss": ["muah"]
+      },
+      {
+        "language": ["Malayalam"],
+        "laughter": ["ഹഹഹ/ഹിഹിഹി(hahaha/hihihi)"],
+        "kiss": ["ഉമ്മ (umma)"]
+      },
+      {
+        "language": ["Marathi"],
+        "laughter": ["हा हा (ha ha)", " खो खो (kho kho) (loud laughter)"],
+        "kiss": ["उम्ऽमा (umma)"]
+      },
+      {
+        "language": ["Navajo"],
+        "kiss": ["ts'oos", " k'oos"]
+      },
+      {
+        "language": ["Nepali"],
+        "laughter": ["हाहा (haha [ɦaɦa])", " ahaha"],
+        "kiss": ["म्म्वाँ([mːwã])"]
+      },
+      {
+        "language": ["Norwegian"],
+        "laughter": ["ha-ha", " he-he", " hi-hi", " ho-ho"],
+        "kiss": ["smask"]
+      },
+      {
+        "language": ["Persian"],
+        "laughter": ["hā-hā", " he-he", " qāh-qāh"],
+        "kiss": ["m", " mp", " māč-o-mūč"]
+      },
+      {
+        "language": ["Polish"],
+        "laughter": ["haha", " hihi", " hehe", " hoho"],
+        "kiss": ["cmok"]
+      },
+      {
+        "language": ["Portuguese"],
+        "laughter": ["haha", " kaka", " huehua[por 1]"],
+        "kiss": ["splish splash", " smac", " chuac"]
+      },
+      {
+        "language": ["Romanian"],
+        "laughter": ["ha-ha", " hi-hi"],
+        "kiss": ["smac", " ţoc", " mua"]
+      },
+      {
+        "language": ["Russian"],
+        "laughter": ["хаха (haha)", " хихи (hihi)", " хехе (hèhè)"],
+        "kiss": ["чмок (chmoк)"]
+      },
+      {
+        "language": ["Serbian"],
+        "laughter": ["хаха (haha)", " хихи (hihi)", " хехе (hehe)"],
+        "kiss": ["цмок (cmok)"]
+      },
+      {
+        "language": ["Sinhalese"],
+        "kiss": ["උම්ම (umma)"]
+      },
+      {
+        "language": ["Slovak"],
+        "laughter": ["ha ha", " cha cha", " hi hi"],
+        "kiss": ["cmuk"]
+      },
+      {
+        "language": ["Slovene"],
+        "kiss": ["cmok"]
+      },
+      {
+        "language": ["Somali"],
+        "laughter": ["k(h)a k(h)a"]
+      },
+      {
+        "language": ["Spanish"],
+        "laughter": ["jaja", " jeje", " jiji", " jojo", " juju"],
+        "kiss": ["mua", " muac", " chuik (South America)"]
+      },
+      {
+        "language": ["Swedish"],
+        "laughter": ["haha", "hehe", "hoho", "hihi", "höhö", "håhå"],
+        "kiss": ["smack"]
+      },
+      {
+        "language": ["Tagalog"],
+        "laughter": ["haha", " hehe", " hihi"],
+        "kiss": ["tsup", " mwah"]
+      },
+      {
+        "language": ["Tamil"],
+        "laughter": ["hihi"],
+        "kiss": ["umma"]
+      },
+      {
+        "language": ["Telugu"],
+        "laughter": ["haha"],
+        "kiss": ["umma"]
+      },
+      {
+        "language": ["Thai"],
+        "laughter": ["ฮ่า ๆ ๆ (hahaha)"],
+        "kiss": ["จุ๊บ (chup)", " จ๊วบ (chuap)"]
+      },
+      {
+        "language": ["Turkish"],
+        "laughter": [
+          "haha",
+          " hehe",
+          " hihi (girly)",
+          " kikir (girly",
+          " sarcastic)",
+          " hoho (sarcastic)"
+        ],
+        "kiss": ["muck /mudʒ(u)k/"]
+      },
+      {
+        "language": ["Ukrainian"],
+        "laughter": [
+          "ги ги [hihi]",
+          "ги-ги-ги",
+          "га-га [haha]",
+          "ге-ге [hehe]",
+          "гі-гі [hihi]",
+          "кха [kkha]",
+          "і-хи-хи-х [i khi khi kh]",
+          "haha",
+          "іх [ikh]",
+          "[khe khe]",
+          "[khi:]",
+          "[kha:]"
+        ],
+        "kiss": ["цьом (tsiom)"]
+      },
+      {
+        "language": ["Vietnamese"],
+        "laughter": [
+          "ha ha",
+          " hi hi",
+          " hô hô",
+          " keke",
+          " ka ka",
+          " hehe",
+          " hi hô",
+          " hêlo duke huê"
+        ],
+        "kiss": ["chụt"]
+      }
+    ]
+  },
+  {
+    "label": "other animals",
+    "data": [
+      {
+        "language": ["Afrikaans"],
+        "bee buzzing": ["zoem"],
+        "frog croaking": ["kwaak"],
+        "snake hissing": ["sis"]
+      },
+      {
+        "language": ["Albanian"],
+        "bee buzzing": ["bëzz", " zhh", " vzvzvz"],
+        "frog croaking": ["krra-krra"],
+        "snake hissing": ["pss"]
+      },
+      {
+        "language": ["Arabic"],
+        "bee buzzing": ["طنين (taneen)", " دوي (dwii)[ara 3]"],
+        "frog croaking": ["نقيق (naqiq)[ara 3]"],
+        "snake hissing": ["فحيح (fahih)[ara 13]"]
+      },
+      {
+        "language": ["Armenian", ""],
+        "bee buzzing": ["բզզ (bezuzz)", " բզզէ (bezuzze)"]
+      },
+      {
+        "language": ["Basque"],
+        "bee buzzing": ["brun-brun"],
+        "frog croaking": ["kro-kro"],
+        "snake hissing": ["zi-zi"]
+      },
+      {
+        "language": ["Batak"],
+        "bee buzzing": ["ngung-ngung"]
+      },
+      {
+        "language": ["Bengali"],
+        "bee buzzing": ["gun gun"],
+        "frog croaking": [
+          "মক মক (môk môk)",
+          " কট কট (kôṭ kôṭ)",
+          " ghangor ghang"
+        ],
+        "snake hissing": ["phnosh"]
+      },
+      {
+        "language": ["Bulgarian", ""],
+        "bee buzzing": ["бззз (bzzz)"],
+        "frog croaking": ["ква ква (kva kva)"],
+        "snake hissing": ["ссс (sss)"]
+      },
+      {
+        "language": ["Catalan"],
+        "bee buzzing": ["bzzz", " zum-zum", " nyee"],
+        "frog croaking": ["ruac ruac", " roac roac", " rac rac"],
+        "snake hissing": ["sss", " hss"]
+      },
+      {
+        "language": ["Chinese", " Cantonese"],
+        "bee buzzing": ["嗡嗡嗡 (jung1 jung1 jung1)"],
+        "frog croaking": ["呱呱 (gwek4 gwek2)"]
+      },
+      {
+        "language": ["Chinese", " Mandarin"],
+        "bee buzzing": ["嗡嗡 (wēng wēng)[zho 18]"],
+        "frog croaking": ["呱呱 (guā guā)[zho 11]"],
+        "snake hissing": ["嘶嘶 (sī sī)"]
+      },
+      {
+        "language": ["Croatian"],
+        "bee buzzing": ["zum zum", " bzzz"],
+        "frog croaking": ["kre kre"],
+        "snake hissing": ["hsss"]
+      },
+      {
+        "language": ["Czech"],
+        "bee buzzing": ["bzzz"],
+        "frog croaking": ["kvá kvá"],
+        "snake hissing": ["sss"]
+      },
+      {
+        "language": ["Danish"],
+        "bee buzzing": ["sum"],
+        "frog croaking": ["kvæk kvæk", "[dan 10] græbæk[citation needed]"]
+      },
+      {
+        "language": ["Dutch"],
+        "frog croaking": ["kwaak kwaak"]
+      },
+      {
+        "language": ["English"],
+        "bee buzzing": [
+          "buzz",
+          " bzzz",
+          " (in rural English (as mentioned in Joel Chandler Harris's \"Uncle Remus\" stories)",
+          " zoon)"
+        ],
+        "frog croaking": ["(USA) ribbit", " gribbit; (Britain) croak"],
+        "snake hissing": ["hiss", " sss"]
+      },
+      {
+        "language": ["Estonian"],
+        "bee buzzing": ["summ-summ-summ"],
+        "frog croaking": ["krooks krooks"]
+      },
+      {
+        "language": ["Finnish"],
+        "bee buzzing": ["surr", " surrur"],
+        "frog croaking": ["kurr kurr", " kroak"]
+      },
+      {
+        "language": ["French"],
+        "bee buzzing": ["bzzz"],
+        "frog croaking": ["croa croa"],
+        "snake hissing": ["siff"]
+      },
+      {
+        "language": ["Galician"],
+        "frog croaking": ["cro cro"]
+      },
+      {
+        "language": ["German"],
+        "bee buzzing": ["summ"],
+        "frog croaking": ["gribbit", " quaak"],
+        "snake hissing": ["zisch"]
+      },
+      {
+        "language": ["Greek"],
+        "frog croaking": [
+          "brekekekex koax koax (ancient",
+          " likely Rana ridibunda)",
+          " κουάξ κουάξ (kuaks kuaks)"
+        ]
+      },
+      {
+        "language": ["Hebrew"],
+        "bee buzzing": ["בְּזזז (bzzz)", " זוּם־זוּם (zum zum)"],
+        "frog croaking": ["קְוָה־קְוָה (qwà qwà)[heb 4]"],
+        "snake hissing": ["סְסס (sss)"]
+      },
+      {
+        "language": ["Hindi"],
+        "frog croaking": ["tarr tarr"],
+        "snake hissing": ["hiss"]
+      },
+      {
+        "language": ["Hungarian"],
+        "bee buzzing": ["zümm"],
+        "frog croaking": ["brekeke", " brekk", " kutykurutty", " kvákk"],
+        "snake hissing": ["sssz"]
+      },
+      {
+        "language": ["Indonesian"],
+        "bee buzzing": ["nguing"],
+        "frog croaking": ["krok krok"]
+      },
+      {
+        "language": ["Italian"],
+        "bee buzzing": ["bzzz", " zumm"],
+        "frog croaking": ["cra cra", " cri cri"],
+        "snake hissing": ["pisss"]
+      },
+      {
+        "language": ["Japanese"],
+        "bee buzzing": ["ブーン (būn)"],
+        "frog croaking": ["ケロケロ (kero kero)"],
+        "snake hissing": ["シャー (shā)"]
+      },
+      {
+        "language": ["Kazakh"],
+        "frog croaking": ["бақ-бақ (baq-baq)"]
+      },
+      {
+        "language": ["Korean"],
+        "bee buzzing": ["붕 (bung)", " 윙 (wing)", " 웽 (weng)"],
+        "frog croaking": ["개굴개굴 (gaegul gaegul)"]
+      },
+      {
+        "language": ["Latgalian"],
+        "frog croaking": ["kvak kvak", " kvā kvā", " kvarr kvarr"]
+      },
+      {
+        "language": ["Latvian"],
+        "bee buzzing": ["bzz", " zumm"],
+        "frog croaking": ["kvā kvā"]
+      },
+      {
+        "language": ["Lithuanian"],
+        "frog croaking": ["kva kva"]
+      },
+      {
+        "language": ["Macedonian"],
+        "frog croaking": ["кре кре (crè crè)"]
+      },
+      {
+        "language": ["Marathi"],
+        "bee buzzing": ["zzz"],
+        "frog croaking": ["डरांव-डरांव (darav-darav)"],
+        "snake hissing": ["फुस्स (phusss)"]
+      },
+      {
+        "language": ["Norwegian"],
+        "bee buzzing": ["sum sum"],
+        "frog croaking": ["kvekk kvekk", " kvakk kvakk"]
+      },
+      {
+        "language": ["Nepali"],
+        "bee buzzing": ["bhun bhun", " bhununu"]
+      },
+      {
+        "language": ["Persian"],
+        "bee buzzing": ["vez-vez"],
+        "frog croaking": ["qūr-qūr"],
+        "snake hissing": ["fūke", " fūff"]
+      },
+      {
+        "language": ["Polish"],
+        "bee buzzing": ["bzzz", " zzz"],
+        "frog croaking": ["kum kum", " rech rech"],
+        "snake hissing": ["sss"]
+      },
+      {
+        "language": ["Portuguese"],
+        "bee buzzing": ["zum zum", " bzzz"],
+        "frog croaking": ["croac croac"],
+        "snake hissing": ["sss"]
+      },
+      {
+        "language": ["Romanian"],
+        "bee buzzing": ["bâzzz"],
+        "frog croaking": ["oac oac"],
+        "snake hissing": ["sss"]
+      },
+      {
+        "language": ["Russian"],
+        "bee buzzing": ["жжж (zhhh)"],
+        "frog croaking": ["ква ква (kva kva)"],
+        "snake hissing": ["шшш (shhh)"]
+      },
+      {
+        "language": ["Serbian"],
+        "bee buzzing": ["zum zum", " bzz"],
+        "frog croaking": ["кре кре (kre kre)"]
+      },
+      {
+        "language": ["Sinhalese"],
+        "frog croaking": ["බක බක baka baka"]
+      },
+      {
+        "language": ["Slovene"],
+        "frog croaking": ["kvak kvak", " rega kvak"]
+      },
+      {
+        "language": ["Spanish"],
+        "bee buzzing": ["zum"],
+        "frog croaking": ["croac croac"],
+        "snake hissing": ["sss"]
+      },
+      {
+        "language": ["Swedish"],
+        "bee buzzing": ["surr surr"],
+        "frog croaking": ["kvack kvack", " ko ack ack ack", " kväk"],
+        "snake hissing": ["väs"]
+      },
+      {
+        "language": ["Tagalog"],
+        "bee buzzing": ["zzz"],
+        "frog croaking": ["kokak kokak"],
+        "snake hissing": ["sss"]
+      },
+      {
+        "language": ["Telugu"],
+        "frog croaking": ["beka beka"],
+        "snake hissing": ["buss"]
+      },
+      {
+        "language": ["Thai"],
+        "bee buzzing": ["หึ่ง ๆ (hueng hueng)"],
+        "frog croaking": ["อ๊บ ๆ (op op)"],
+        "snake hissing": ["ฟ่อ (fo)"]
+      },
+      {
+        "language": ["Turkish"],
+        "bee buzzing": ["vızz"],
+        "frog croaking": ["vrak vrak"],
+        "snake hissing": ["tısss"]
+      },
+      {
+        "language": ["Ukrainian"],
+        "frog croaking": [
+          "ква-ква (kva kva)",
+          "[uk 1] кум-кум (kum kum)",
+          "[uk 2] квок-квок (kvok kvok)[uk 2]"
+        ]
+      },
+      {
+        "language": ["Vietnamese"],
+        "frog croaking": ["ồm ộp", " ộp ộp"]
+      }
+    ]
+  },
+  {
+    "label": "strikes",
+    "data": [
+      {
+        "language": ["Afrikaans"],
+        "dull strike": ["doef"],
+        "falling strike": ["plof"],
+        "sharp strike": ["klingel", " kletter"],
+        "wet strike": ["plons", " plas", " spat"]
+      },
+      {
+        "language": ["Albanian"],
+        "dull strike": ["pum", " bam", " llau"],
+        "falling strike": ["pum", " pëlltaf", " përrtaf"],
+        "sharp strike": ["tink", " ting"],
+        "wet strike": ["plluq", " pëlltuq", " pllaf"]
+      },
+      {
+        "language": ["Arabic"],
+        "wet strike": ["بلوف (blūf)"]
+      },
+      {
+        "language": ["Bulgarian"],
+        "dull strike": ["туп (toup)", " хлоп (khlop)"],
+        "falling strike": ["пльос (plyos)", " шляп (shlyap)"],
+        "sharp strike": ["дзън (dzun)"],
+        "wet strike": ["пльок (plyok)"]
+      },
+      {
+        "language": ["Catalan"],
+        "sharp strike": ["cling", " clang", " cataclinc-cataclanc"],
+        "wet strike": ["xap", " xof", " patatxap"]
+      },
+      {
+        "language": ["Chinese", " Cantonese"],
+        "sharp strike": ["乒鈴嘭唥 (bìhng līng baang làahng)"]
+      },
+      {
+        "language": ["Chinese", " Mandarin"],
+        "sharp strike": [
+          "哐啷",
+          "[zho 19] (kuāng lāng)",
+          " 哐当[citation needed] (kuāng dāng)"
+        ],
+        "wet strike": ["啪唧 (pā jī)"]
+      },
+      {
+        "language": ["Croatian"],
+        "dull strike": ["tup"],
+        "falling strike": ["pljas", " tres", " bum", " tup[hr 1]"],
+        "sharp strike": ["zvek", " zvec"],
+        "wet strike": ["šljap"]
+      },
+      {
+        "language": ["Czech"],
+        "falling strike": ["žuch"],
+        "sharp strike": ["cink"],
+        "wet strike": ["plesk"]
+      },
+      {
+        "language": ["Danish"],
+        "dull strike": ["bump", " dunk"],
+        "wet strike": ["plask"]
+      },
+      {
+        "language": ["Dutch"],
+        "falling strike": ["plof", " plop"],
+        "sharp strike": [
+          "klink",
+          " ring",
+          " klingel",
+          " rinkel",
+          " kletter",
+          " tingel"
+        ],
+        "wet strike": ["plons"]
+      },
+      {
+        "language": ["English"],
+        "dull strike": ["knock", " bump", " rap", " thud", " boom", " thump"],
+        "falling strike": ["plop", " splat", " thud", " thunk", " thonk"],
+        "sharp strike": [
+          "clang",
+          " clink",
+          " clank",
+          " clunk",
+          " chink",
+          " dink",
+          " tink",
+          " plink",
+          " ding",
+          " ring",
+          " ping",
+          " ting",
+          " jingle",
+          " jangle",
+          " tinkle",
+          " pow",
+          " conk"
+        ],
+        "wet strike": ["splash", " splish", " splosh", " splat"]
+      },
+      {
+        "language": ["Estonian"],
+        "wet strike": ["lärts", " plärts"]
+      },
+      {
+        "language": ["Finnish"],
+        "dull strike": ["tök", " pöksis"],
+        "sharp strike": ["kilin", " kolin"],
+        "wet strike": ["loiskis", " mäts"]
+      },
+      {
+        "language": ["French"],
+        "falling strike": ["floc"],
+        "sharp strike": ["paf", " bim", " bam"],
+        "wet strike": ["plouf"]
+      },
+      {
+        "language": ["German"],
+        "dull strike": ["klopf", " plumps", " platsch"],
+        "falling strike": ["plumps", " patsch", " plump"],
+        "sharp strike": [
+          "klang",
+          " kling",
+          " klirr",
+          " klimper",
+          " klingel",
+          " bimmel"
+        ],
+        "wet strike": ["patsch", " platsch", " klatsch", " schwapp"]
+      },
+      {
+        "language": ["Hebrew"],
+        "sharp strike": ["זְבֶּנְג[heb 7] (zbang)"]
+      },
+      {
+        "language": ["Hungarian"],
+        "falling strike": ["puff", " paff"],
+        "wet strike": ["platty", " placcs"]
+      },
+      {
+        "language": ["Indonesian"],
+        "falling strike": ["bruk", " gedebuk"],
+        "sharp strike": ["jieb"],
+        "wet strike": ["crot", " byur"]
+      },
+      {
+        "language": ["Italian"],
+        "wet strike": ["plop"]
+      },
+      {
+        "language": ["Japanese"],
+        "dull strike": ["ドン (don)", " ズン (zun)"],
+        "falling strike": ["ぽとり(potori)"],
+        "sharp strike": ["カーン (kān)"],
+        "wet strike": ["びちゃっ (bicha)"]
+      },
+      {
+        "language": ["Korean"],
+        "dull strike": ["퍽 (peok)"],
+        "falling strike": ["턱 (teok)"],
+        "sharp strike": ["쨍 (jjaeng)", " 팅 (ting)"],
+        "wet strike": ["철푸덕 (cheolpudeok)", " 철퍽 (cheolpeok)"]
+      },
+      {
+        "language": ["Kyrgyz"],
+        "wet strike": ["чалп (chalp)"]
+      },
+      {
+        "language": ["Malay"],
+        "wet strike": ["trushh", " shushh", " pishh"]
+      },
+      {
+        "language": ["Persian"],
+        "dull strike": ["bāmp"],
+        "falling strike": ["dāmb"],
+        "sharp strike": ["jiring"],
+        "wet strike": ["čolop-čolop", " pešenge"]
+      },
+      {
+        "language": ["Polish"],
+        "dull strike": ["łup"],
+        "falling strike": ["dup", " łubudu (longer", " louder)"],
+        "wet strike": ["plask"]
+      },
+      {
+        "language": ["Portuguese"],
+        "dull strike": ["puf", " pluft", " pum"],
+        "falling strike": ["ploft", " paft", " catapluft", " pimba"],
+        "wet strike": ["tchibum[por 1]"]
+      },
+      {
+        "language": ["Romanian"],
+        "dull strike": ["buf"],
+        "falling strike": ["pleosc", " fleoșc"],
+        "sharp strike": ["jap", " harsht", " trosc"]
+      },
+      {
+        "language": ["Russian"],
+        "dull strike": ["бац (bats)"],
+        "falling strike": ["хлоп (khlop)", " шлёп (shlyop)"],
+        "sharp strike": ["дзынь (dzyn’)", " звяк (zvyak)", " клац (klatz)"],
+        "wet strike": ["бултых (bultykh)", " плюх (plyukh)"]
+      },
+      {
+        "language": ["Spanish"],
+        "dull strike": ["toc"],
+        "falling strike": ["plaf", " paf"],
+        "sharp strike": ["tintin", " tilín"],
+        "wet strike": ["splash", " plaf"]
+      },
+      {
+        "language": ["Swedish"],
+        "dull strike": ["dunk", " duns"],
+        "wet strike": ["plask"]
+      },
+      {
+        "language": ["Tagalog"],
+        "falling strike": ["blag", " bug"],
+        "wet strike": ["plok"]
+      },
+      {
+        "language": ["Tamil"],
+        "wet strike": ["chatak"]
+      },
+      {
+        "language": ["Thai"],
+        "dull strike": ["ตึง (tueng)", " ตึ้ง (tueng)"],
+        "falling strike": ["โครม (khrohm)"],
+        "sharp strike": ["ติ๊ง (ting)", " ปิ๊ง (ping)"],
+        "wet strike": ["โพล๊ะ (plo)", " แผละ (plae)"]
+      },
+      {
+        "language": ["Turkish"],
+        "dull strike": ["pof", " pot"],
+        "falling strike": ["pat"],
+        "sharp strike": ["çang", " çing"],
+        "wet strike": ["şap", " şop"]
+      },
+      {
+        "language": ["Uropi"],
+        "wet strike": ["plac"]
+      },
+      {
+        "language": ["Vietnamese"],
+        "falling strike": ["bịch"],
+        "sharp strike": ["keng", " beng"],
+        "wet strike": ["bẹp", " phọp"]
+      }
+    ]
+  }
+]

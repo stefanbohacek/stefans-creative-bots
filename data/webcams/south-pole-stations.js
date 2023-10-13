@@ -22,16 +22,7 @@ export default [
       lon: 64.0538,
     },
   },
-  // {
-  //   name: 'McMurdo station, Observation Hill',
-  //   url: 'https://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm?t=1',
-  //   page_url: 'https://www.usap.gov/videoclipsandmaps/',
-  //   element: '#img-boreSite',
-  // location: {
-  //   lat: 11111,
-  //   lon: 11111
-  // }
-  // },
+
   {
     name: "Casey station",
     url: "https://www.antarctica.gov.au/antarctic-operations/webcams/casey/",
@@ -68,15 +59,6 @@ export default [
       lon: 62.8742,
     },
   },
-  // {
-  //   name: 'Aurora Australis icebreaker',
-  //   url: 'http://www.antarctica.gov.au/webcams/aurora',
-  //   element: 'figure.featured img',
-  // location: {
-  //   lat: 11111,
-  //   lon: 11111
-  // }
-  // },
   {
     name: "Bird Island research station",
     url: "https://www.bas.ac.uk/data/our-data/images/webcams/bird-island-webcam/",
@@ -95,42 +77,25 @@ export default [
       lon: 36.4937,
     },
   },
-  // {
-  //   name: 'RRS Ernest Shackleton',
-  //   url: 'https://www.bas.ac.uk/data/our-data/images/webcams/rrs-ernest-shackleton-webcam/',
-  //   element: '.entry-content img[width="640"]',
-  // location: {
-  //   lat: 11111,
-  //   lon: 11111
-  // }
-  // },
+
   {
     name: "RRS James Clark Ross",
     url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/",
     element: '.entry-content img[width="640"]',
     location: {
       lat: 82.8628,
-      lon: 135.0000,
+      lon: 135.0,
     },
   },
-  // {
-  //   name: "RRS Sir David Attenborough Webcam",
-  //   url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",
-  //   element: '.entry-content img[width="1920"]',
-  //   location: {
-  //     lat: 82.8628,
-  //     lon: 135.0000,
-  //   },
-  // },
-  // {
-  //   name: "Halley VI Station Webcam Archive",
-  //   url: "https://legacy.bas.ac.uk/webcams/archive/cam.php?cam=5&position=1",
-  //   element: ".webcam_image main img",
-  //   location: {
-  //     lat: 11111,
-  //     lon: 11111,
-  //   },
-  // },
+  {
+    name: "RRS Sir David Attenborough Webcam",
+    url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",
+    element: '.entry-content img[width="1920"]',
+    location: {
+      lat: 82.8628,
+      lon: 135.0,
+    },
+  },
   {
     name: "King Edward Point webcam",
     url: "https://www.bas.ac.uk/data/our-data/images/webcams/king-edward-point-webcam/",
@@ -149,13 +114,41 @@ export default [
       lon: 68.1267,
     },
   },
-  {
-    name: "Halley VI webcam",
-    url: "https://www.bas.ac.uk/data/our-data/images/webcams/halley-vi-webcam/",
-    element: '.entry-content img[width="1920"]',
-    location: {
-      lat: 75.5674,
-      lon: 25.5165,
-    },
-  },
+  // {
+  //   name: "Halley VI webcam",
+  //   url: "https://www.bas.ac.uk/data/our-data/images/webcams/halley-vi-webcam/",
+  //   element: '.entry-content img[width="1920"]',
+  //   location: {
+  //     lat: 75.5674,
+  //     lon: 25.5165,
+  //   },
+  // },
+  // {
+  //   name: "RRS Ernest Shackleton",
+  //   url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-ernest-shackleton-webcam/",
+  //   element: '.entry-content img[width="640"]',
+  //   location: {
+  //     lat: 11111,
+  //     lon: 11111,
+  //   },
+  // },
+  // {
+  //   name: "Aurora Australis icebreaker",
+  //   url: "http://www.antarctica.gov.au/webcams/aurora",
+  //   element: "figure.featured img",
+  //   location: {
+  //     lat: 11111,
+  //     lon: 11111,
+  //   },
+  // },
+  // {
+  //   name: "McMurdo station, Observation Hill",
+  //   url: "https://www.usap.gov/videoclipsandmaps/mcmwebcam.cfm?t=1",
+  //   page_url: "https://www.usap.gov/videoclipsandmaps/",
+  //   element: "#img-boreSite",
+  //   location: {
+  //     lat: 11111,
+  //     lon: 11111,
+  //   },
+  // },
 ];

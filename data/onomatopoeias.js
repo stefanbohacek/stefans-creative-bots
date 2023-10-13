@@ -67,7 +67,7 @@ export default [
         "eating food": [
           "嗦嗦 (sok4 sok2) (for crunchy foods)\n\nzep1 zep1 (in general)"
         ],
-        "swallowing": ["嗗 (gut2", " gut4", " gut6)"]
+        "swallowing": ["嗗 (gut2, gut4, gut6)"]
       },
       {
         "language": ["Chinese", " Mandarin"],

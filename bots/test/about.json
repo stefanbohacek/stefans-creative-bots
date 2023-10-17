@@ -1,5 +1,6 @@
 {
   "active": false,
+  "hide": true,
   "name": "@test",
   "description": "This is a testing account.",
   "interval": "EVERY_HOUR"

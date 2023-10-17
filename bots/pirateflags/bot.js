@@ -1,9 +1,8 @@
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
 
 import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
@@ -31,25 +30,24 @@ const makeFlag = async () => {
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
     );
 
-    page.on("load", async (response) => {
-      await page.waitForSelector("img.mw-100", { timeout: 120000 });
-      await page.waitForTimeout(5000);
-
-      try {
-        await page.screenshot({ path: `temp/pirate-flag.jpg` });
-      } catch (err) {
-        console.log(`Error: ${err.message}`);
-      } finally {
-        await browser.close();
-      }
-    });
-
     await page.setViewport({ width: 1030, height: 760 });
+    console.log(`visiting ${url} ...`);
     await page.goto(url, {
       // waitUntil: "networkidle0",
       waitUntil: "domcontentloaded",
       timeout: 120000,
     });
+
+    await page.waitForSelector("img.mw-100", { timeout: 120000 });
+    await page.waitForTimeout(120000);
+
+    try {
+      await page.screenshot({ path: `temp/pirate-flag.jpg` });
+    } catch (err) {
+      console.log(`Error: ${err.message}`);
+    } finally {
+      await browser.close();
+    }
   } catch (error) {
     console.log("@pirateflags error", error);
   }
@@ -73,53 +71,50 @@ const waveFlag = async () => {
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
     );
 
-    page.on("load", async (response) => {
-      await page.waitForSelector("#renderArea", { timeout: 120000 });
-      await page.waitForTimeout(15000);
-
-      const pirateTalk = randomFromArray([
-        `A${"a".repeat(getRandomInt(1, 7))}${"r".repeat(
-          getRandomInt(1, 7)
-        )}${"g".repeat(getRandomInt(1, 7))}${"h".repeat(
-          getRandomInt(1, 7)
-        )}!`,
-        "Ahoy!",
-        "Ahoy, matey!",
-        "All hands on deck!",
-        "Avast ye!",
-      ]);
-
-      let description = `A randomly generated pirate flag. Elements of the flag may include skeletons, skulls, pirates, crossed bones, hourglasses, hearts, and swords.`;
-
-      try {
-        const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;
-        await page.screenshot({ path: screenshotPath });
-
-        const mastodon = new mastodonClient({
-          access_token: process.env.PIRATE_FLAGS_ACCESS_TOKEN_SECRET,
-          api_url: process.env.PIRATE_FLAGS_API,
-        });
-
-        mastodon.postImage({
-          status: `${pirateTalk}\n\n#pirates #flags`,
-          image: screenshotPath,
-          alt_text: description,
-        });
-      } catch (err) {
-        console.log(`Error: ${err.message}`);
-      } finally {
-        await browser.close();
-      }
-
-      console.log(description);
-    });
-
     await page.setViewport({ width: 1024, height: 700 });
+    console.log(`visiting ${url} ...`);
     await page.goto(url, {
       // waitUntil: "networkidle0",
       waitUntil: "domcontentloaded",
       timeout: 120000,
     });
+
+    await page.waitForSelector("#renderArea", { timeout: 120000 });
+    await page.waitForTimeout(120000);
+
+    const pirateTalk = randomFromArray([
+      `A${"a".repeat(getRandomInt(1, 7))}${"r".repeat(
+        getRandomInt(1, 7)
+      )}${"g".repeat(getRandomInt(1, 7))}${"h".repeat(getRandomInt(1, 7))}!`,
+      "Ahoy!",
+      "Ahoy, matey!",
+      "All hands on deck!",
+      "Avast ye!",
+    ]);
+
+    let description = `A randomly generated pirate flag. Elements of the flag may include skeletons, skulls, pirates, crossed bones, hourglasses, hearts, and swords.`;
+
+    try {
+      const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;
+      await page.screenshot({ path: screenshotPath });
+
+      const mastodon = new mastodonClient({
+        access_token: process.env.PIRATE_FLAGS_ACCESS_TOKEN_SECRET,
+        api_url: process.env.PIRATE_FLAGS_API,
+      });
+
+      mastodon.postImage({
+        status: `${pirateTalk}\n\n#pirates #flags`,
+        image: screenshotPath,
+        alt_text: description,
+      });
+    } catch (err) {
+      console.log(`Error: ${err.message}`);
+    } finally {
+      await browser.close();
+    }
+
+    console.log(description);
   } catch (error) {
     console.log("@pirateflags error", error);
   }

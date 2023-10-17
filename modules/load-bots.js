@@ -34,9 +34,12 @@ const loadBots = async (app) => {
           botInfo.about.source_url = `${process.env.SOURCE_URL_BASE}/${bot}/bot.js`;
         }
 
-        if (!about.hide) {
+        if (about.active) {
           const job = await scheduleBot(botInfo, app);
           botInfo.cronjob = job;
+        }
+
+        if (!about.hide) {
           bots.push(botInfo);
         }
       }

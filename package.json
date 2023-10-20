@@ -23,6 +23,7 @@
     "cron": "^2.4.3",
     "csv-parse": "^5.5.0",
     "csvtojson": "^2.0.10",
+    "dotenv": "^16.3.1",
     "express": "^4.14.0",
     "express-handlebars": "^7.1.2",
     "express-session": "^1.17.3",

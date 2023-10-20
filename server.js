@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import app from "./app.js";
 import loadBots from "./modules/load-bots.js";
 import checkBotPool from "./modules/check-bot-pool.js";

@@ -1,2 +1,5 @@
-import bot from './bots/aerial/bot.js';
+import dotenv from 'dotenv';
+dotenv.config();
+
+import bot from './bots/galaxy/bot.js';
 bot();

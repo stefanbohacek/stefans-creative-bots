@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@galaxy",
+  "description": "Exploring galaxies.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@galaxy"
+    }
+  ],
+  "interval": "EVERY_THREE_HOURS"
+}

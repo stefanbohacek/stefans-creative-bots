@@ -48,6 +48,15 @@ export default (overlays, options, cb) => {
         console.log('overlaying text...');
 
         img.fontSize = img.fontSize || 14;
+
+        //TODO: refactor this
+
+        if (img.text.length > 7){
+          img.fontSize = 10;
+        } else if (img.text.length > 10){
+          img.fontSize = 8;
+        }
+
         img.fontFamily = img.fontFamily || 'serif';
 
         if (img.fontFileName){

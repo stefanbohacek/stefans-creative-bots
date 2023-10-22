@@ -103,7 +103,7 @@ const botScript = async () => {
                 const status = `Hello from ${countryName}! #HelloWorld #${countryName.replace(
                   /\s+/g,
                   ""
-                )}`;
+                )} #language #linguistics`;
 
                 console.log("status", status);
 

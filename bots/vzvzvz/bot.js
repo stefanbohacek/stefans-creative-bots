@@ -43,7 +43,7 @@ const botScript = async () => {
   const languageData = languages.filter((l) => l["language"][0] === language);
   //   console.log({languageData});
 
-  if (languageData) {
+  if (languageData && languageData.length) {
     fs.readFile("data/hello.csv", "utf8", (err, csvData) => {
       if (!err && csvData) {
         parse(
@@ -119,20 +119,26 @@ const botScript = async () => {
                   fontFamily = "Pridi";
                 }
 
+                let fontSize = 200;
+
+                if (randomSound[action].length > 5){
+                  fontSize = Math.floor(5/randomSound[action].length * 200);
+                }
+
                 overlayGenerator(
                   [
                     {
                       url: map_url,
                       x: 0,
                       y: 0,
-                      width: width,
-                      height: height,
+                      width,
+                      height,
                     },
                     {
                       text: randomSound[action],
-                      fontSize: 200,
-                      fontFileName: fontFileName,
-                      fontFamily: fontFamily,
+                      fontSize,
+                      fontFileName,
+                      fontFamily,
                       style: "#fff",
                       position: "center center",
                     },

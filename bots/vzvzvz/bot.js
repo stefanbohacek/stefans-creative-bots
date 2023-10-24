@@ -122,7 +122,7 @@ const botScript = async () => {
                 let fontSize = 200;
 
                 if (randomSound[action].length > 5){
-                  fontSize = Math.max(100, Math.floor(5/randomSound[action].length * 200));
+                  fontSize = Math.max(75, Math.floor(5/randomSound[action].length * 200));
                 }
 
                 overlayGenerator(

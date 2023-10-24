@@ -22,7 +22,7 @@ const botScript = async () => {
     mastodon.postImage({
       status,
       image,
-      alt_text: "Animdated GIF of rain.",
+      alt_text: "Animated GIF of rain.",
     });
   });
 };

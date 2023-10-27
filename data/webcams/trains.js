@@ -14,7 +14,7 @@ export default [
   {
     "name": "Train trips through Sweden and Norway",
     "description": "A short clip from a webcam at the front of a train.",
-    url: "https://www.youtube.com/watch?v=luDmzcrr92I",
+    "youtube_url": "https://www.youtube.com/watch?v=luDmzcrr92I",
     "tags": "#trains #live #norway #sweden #webcam",
   },
   // {

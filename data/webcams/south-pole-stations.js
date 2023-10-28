@@ -77,16 +77,16 @@ export default [
       lon: 36.4937,
     },
   },
-
-  {
-    name: "RRS James Clark Ross",
-    url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/",
-    element: '.entry-content img[width="640"]',
-    location: {
-      lat: 82.8628,
-      lon: 135.0,
-    },
-  },
+// posts old images
+//   {
+//     name: "RRS James Clark Ross",
+//     url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/",
+//     element: '.entry-content img[width="640"]',
+//     location: {
+//       lat: 82.8628,
+//       lon: 135.0,
+//     },
+//   },
   {
     name: "RRS Sir David Attenborough Webcam",
     url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",

@@ -131,7 +131,7 @@ const botScript = async () => {
     mastodon.postImage({
       status,
       image: imgData,
-      alt_text: `Picture of a train ticket from attached website, usually a train or bus.`,
+      alt_text: `Picture of a public transportation ticket from attached website, usually for a train or bus.`,
     });
 
     await browser.close();

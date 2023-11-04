@@ -1,5 +1,14 @@
 export default [
   {
+    "title": "Kilauea Summit, Hawaii",
+    description:
+    "This webcam usually shows a view of the sky with a grassy patch of land in the foreground.",
+    url: "https://volcanoes.usgs.gov/cams/KPcam/images/M.jpg",
+    link: "https://www.usgs.gov/observatories/hawaiian-volcano-observatory/kpcam-kilauea-summit-mauna-loa-strip-road",
+    latitude: 22.204241,
+    longitude: -159.390030,
+  },  
+  {
     "title": "Blefjell, Norway",
     description:
     "This webcam usually shows a view of the sky with a singular tree on the right side of the image, and more trees further in the distance.",

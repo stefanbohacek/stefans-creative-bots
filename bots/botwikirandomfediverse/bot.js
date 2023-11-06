@@ -19,6 +19,20 @@ const botScript = async () => {
 
   const botUrlsMeta = data[0].meta.bot_url.split("\r\n");
   let botUrls;
+  
+//   let botUrls = [];
+
+// botUrlsMeta.forEach(async (botUrl) => {
+//   const u = new URL(botUrl);
+//   const req = await fetch(`https://${u.host}/.well-known/nodeinfo`);
+//   console.log(req.status);
+
+//   if (req.status === 200){
+//     botUrls.push(`${u.pathname.replace('/@', '@')}@${u.host}`);
+//   } else {
+
+//   }
+// });
 
   if (botUrlsMeta.length === 0){
     botUrls = "";

@@ -13,10 +13,19 @@ const botScript = async () => {
   const botwikiURL =
     "https://botwiki.org/wp-json/wp/v2/bot?filter[orderby]=rand&filter[posts_per_page]=1";
 
-  const apiURL = "http://api.open-notify.org/iss-now.json";
-
   const response = await fetch(botwikiURL);
   const data = await response.json();
+
+  const botUrlsMeta = data[0].meta.bot_url.split("\r\n");
+  let botUrls;
+
+  if (botUrlsMeta.length === 0){
+    botUrls = "";
+  } else if (botUrlsMeta.length === 1){
+    botUrls = `\n\nFollow: ${botUrlsMeta[0]}`;
+  } else {
+    botUrls = `\n\nFollow:\n${botUrlsMeta.map(botUrl => `- ${botUrl}`).join("\n")}`;
+  }
 
   if (data && data.length) {
     const bot = {
@@ -28,7 +37,7 @@ const botScript = async () => {
 
     console.log(bot);
 
-    let status = `${bot.description}\n\n${bot.url}`;
+    let status = `${bot.description}\n\nLearn more: ${bot.url}${botUrls}\n\n`;
 
     if (
       bot.tags &&

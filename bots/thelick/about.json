@@ -1,0 +1,12 @@
+{
+  "active": false,
+  "name": "@thelick",
+  "description": "Playing The Lick.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@thelick"
+    }
+  ],
+  "interval": "EVERY_FOUR_HOURS"
+}

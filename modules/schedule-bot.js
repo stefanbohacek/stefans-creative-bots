@@ -5,6 +5,8 @@ import cronSchedules from "./cron-schedules.js";
 import capitalizeFirstLetter from "./capitalize-first-letter.js";
 
 const scheduleBot = async (bot, app) => {
+  const intervalBots = [];
+
   if (bot.about.reply) {
     const { reply, clients } = await import(bot.script_path);
 
@@ -27,33 +29,44 @@ const scheduleBot = async (bot, app) => {
   }
 
   if (bot.about.interval) {
-    for (const schedule in cronSchedules) {
-      if (schedule === bot.about.interval) {
-        bot.about.interval_cron = cronSchedules[schedule];
+    if (bot.about.interval === "EVERY_SECOND"){
+      console.log(bot)
+      
+      const botScript = await import(bot.script_path);
+      console.log(botScript)
+      
+      setInterval(async () => {
+        bot.script.default();
+      }, 1000);
+    } else {
+      for (const schedule in cronSchedules) {
+        if (schedule === bot.about.interval) {
+          bot.about.interval_cron = cronSchedules[schedule];
+        }
       }
+  
+      bot.about.interval_human = capitalizeFirstLetter(
+        bot.about.interval.replace(/_/g, " ")
+      );
+  
+      console.log(`⌛ scheduling ${bot.about.name}: ${bot.about.interval}`);
+  
+      const job = new CronJob(bot.about.interval_cron, async () => {
+        console.log(`adding ${bot.about.name} to the pool...`);
+        let pool = app.get("pool");
+        if (pool) {
+          pool.push(bot.about.name);
+          pool = [...new Set(pool)];
+          app.set("pool", pool);
+        }
+      });
+  
+      job.start();
+      const nextRun = moment(job.nextDates().ts).fromNow();
+      // console.log(bot.about);
+      console.log("📅 next run:", nextRun);
+      return job;
     }
-
-    bot.about.interval_human = capitalizeFirstLetter(
-      bot.about.interval.replace(/_/g, " ")
-    );
-
-    console.log(`⌛ scheduling ${bot.about.name}: ${bot.about.interval}`);
-
-    const job = new CronJob(bot.about.interval_cron, async () => {
-      console.log(`adding ${bot.about.name} to the pool...`);
-      let pool = app.get("pool");
-      if (pool) {
-        pool.push(bot.about.name);
-        pool = [...new Set(pool)];
-        app.set("pool", pool);
-      }
-    });
-
-    job.start();
-    const nextRun = moment(job.nextDates().ts).fromNow();
-    // console.log(bot.about);
-    console.log("📅 next run:", nextRun);
-    return job;
   }
 };
 

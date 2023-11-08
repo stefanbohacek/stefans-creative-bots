@@ -1,4 +1,5 @@
 const schedules = {
+  EVERY_SECOND: '*/1 * * * * *',
   EVERY_FIVE_SECONDS: '*/5 * * * * *',
   EVERY_TEN_SECONDS: '*/10 * * * * *',  
   EVERY_FIFTEEN_SECONDS: '*/15 * * * * *',

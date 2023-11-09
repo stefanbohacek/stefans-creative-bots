@@ -10,6 +10,7 @@ const __dirname = dirname(__filename);
 const loadBots = async (app) => {
   const botDirs = fs.readdirSync("bots");
   let bots = [];
+  let botCount = 0;
 
   for (const bot of botDirs) {
     if (fs.lstatSync(`bots/${bot}`).isDirectory()) {
@@ -35,6 +36,7 @@ const loadBots = async (app) => {
         }
 
         if (about.active) {
+          botCount++;
           const job = await scheduleBot(botInfo, app);
           botInfo.cronjob = job;
         }
@@ -46,6 +48,7 @@ const loadBots = async (app) => {
     }
   }
 
+  console.log(`🤖 scheduled ${botCount.toLocaleString()} bot(s)`);
   // console.log("reading bots...", bots.map(bot => bot.about.name));
 
   return bots;

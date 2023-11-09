@@ -56,7 +56,8 @@
     "tracery-grammar": "^2.7.4",
     "underscore": "^1.10.2",
     "us-zips": "^4.0.1",
-    "utf-8-validate": "^5.0.2"
+    "utf-8-validate": "^5.0.2",
+    "xml-js": "^1.6.11"
   },
   "engines": {
     "node": "16.x"

@@ -1,7 +1,7 @@
 {
   "active": true,
   "name": "@nycdatabot",
-  "description": "Explore NYC with data.",
+  "description": "Explore the city of New York through data.",
   "thumbnail": "https://botwiki.org/wp-content/uploads/2021/05/data-of-new-york-1620941593.png",
   "about_url": "https://botwiki.org/bot/data-of-new-york/",
   "links": [

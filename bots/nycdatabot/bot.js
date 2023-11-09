@@ -3,6 +3,7 @@ import usZips from "us-zips";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import downloadFile from "./../../modules/download-file.js";
 import randomFromArray from "./../../modules/random-from-array.js";
+import getRandomInt from "./../../modules/get-random-int.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -155,7 +156,7 @@ const makeMap = async (datasetName, datasetPermalink, data, cb) => {
   mastodon.postImage({
     status,
     image: filePath,
-    alt_text: datasetName,
+    alt_text: `A map with locations from the ${datasetName} dataset. Please visit the link for full details.`,
   });
 };
 
@@ -177,7 +178,7 @@ const findDataset = async () => {
   const dataType = randomFromArray(["datasets", "map"]);
 
   const dataLimit = "1000";
-  const discoveryUrl = `http://api.us.socrata.com/api/catalog/v1?domains=${dataSource}&search_context=${dataSource}&only=${dataType}&limit=${dataLimit}`;
+  const discoveryUrl = `http://api.us.socrata.com/api/catalog/v1?domains=${dataSource}&search_context=${dataSource}&only=${dataType}&limit=${dataLimit}&offset=${getRandomInt(0,351)}`;
 
   console.log(`finding a dataset in the ${dataSource} domain (${dataType})`);
 

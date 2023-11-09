@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@njdatabot",
+  "description": "Explore the state of New Jersey through data.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@njdatabot"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

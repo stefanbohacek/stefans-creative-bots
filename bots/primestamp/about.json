@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "name": "@primestamp",
   "description": "Looking for timestamps that are prime numbers!",
   "links": [

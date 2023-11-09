@@ -1,6 +1,7 @@
 tmp
 temp
 temp.*
+.pki
 *.jpg
 *.png
 *.mp3

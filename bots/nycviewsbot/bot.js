@@ -1,17 +1,17 @@
 import webcams from "./../../data/webcams/nyc.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
-import downloadFile from './../../modules/download-file.js';
+import downloadFile from "./../../modules/download-file.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import getWeather from "./../../modules/get-weather.js";
 
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const botID = 'nycviewsbot';
+const botID = "nycviewsbot";
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -31,13 +31,12 @@ const botScript = async () => {
   const filePath = `${__dirname}/../../temp/${botID}.jpg`;
   await downloadFile(webcam.url, filePath);
 
-  const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${webcam.latitude},${webcam.longitude}`;
+  const mapURL = `🗺️ https://www.openstreetmap.org/?mlat=${webcam.latitude}&mlon=${webcam.longitude}#map=12/${webcam.latitude}/${webcam.longitude}`;
   const weather = await getWeather(webcam.latitude, webcam.longitude);
-
-  const status = `${webcam.title}\n${webcamUrl}\n${googleMapsUrl} #nyc #webcam #city`;
+  const status = `${webcam.title}\n${webcamUrl}\n${mapURL} #nyc #webcam #city`;
   let description = webcam.description;
 
-  if (weather && weather.description_full){
+  if (weather && weather.description_full) {
     description += ` ${weather.description_full}`;
   }
 
@@ -46,8 +45,7 @@ const botScript = async () => {
     image: filePath,
     alt_text: description,
   });
-  return true; 
-}
-
+  return true;
+};
 
 export default botScript;

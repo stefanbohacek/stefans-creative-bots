@@ -1,5 +1,5 @@
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -9,10 +9,10 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 
 import getWeather from "./../../modules/get-weather.js";
 import getImageLuminosity from "./../../modules/get-image-luminosity.js";
-import downloadFile from './../../modules/download-file.js';
+import downloadFile from "./../../modules/download-file.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 
-const botID = 'skies';
+const botID = "skies";
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -38,21 +38,21 @@ const botScript = async () => {
   if (luminosity > 40) {
     const weather = await getWeather(webcam.latitude, webcam.longitude);
     let description = webcam.description;
-  
-    if (weather && weather.description_full){
+
+    if (weather && weather.description_full) {
       description += ` ${weather.description_full}`;
     }
-   
-    const googleMapsUrl = `🗺️ https://www.google.com/maps/search/${webcam.latitude},${webcam.longitude}`;
-    const status = `${webcam.title}\n${webcamUrl}\n${googleMapsUrl} #sky #skies #view #webcam`;
-  
+
+    const mapURL = `🗺️ https://www.openstreetmap.org/?mlat=${webcam.latitude}&mlon=${webcam.longitude}#map=6/${webcam.latitude}/${webcam.longitude}`;
+    const status = `${webcam.title}\n${webcamUrl}\n${mapURL} #sky #skies #view #webcam`;
+
     mastodon.postImage({
       status,
       image: filePath,
       alt_text: description,
-    });  
+    });
   } else {
-    console.log('skies: image too dark, retrying...');
+    console.log("skies: image too dark, retrying...");
     await botScript();
   }
 

@@ -102,10 +102,10 @@ const getLongLat = (datapoint) => {
         location.longitude = parseFloat(locationArray[1].replace("(", ""));
         // console.log("location parsed", { location });
       } else {
-        console.log("location data not found");
+        // console.log("location data not found");
       }
     } else {
-      console.log("location data not found");
+      // console.log("location data not found");
     }
   }
   // console.log("getLongLat END", { location });
@@ -159,7 +159,7 @@ const makeMap = async (datasetName, datasetPermalink, data, cb) => {
 
     const mastodon = new mastodonClient({
       access_token: process.env.NJ_DATA_BOT_MASTODON_ACCESS_TOKEN_SECRET,
-      api_url: process.env.NJDATABOT_MASTODON_API,
+      api_url: process.env.NJ_DATA_BOT_MASTODON_API,
     });
 
     const status = `${datasetName}\nSource: ${datasetPermalink}\n#nj #data #dataviz`;

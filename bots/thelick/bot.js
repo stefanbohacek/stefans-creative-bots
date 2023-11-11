@@ -76,7 +76,7 @@ const botScript = async () => {
 
     const instrument = randomFromArray(instruments);
     // const instrument = instruments.filter(
-    //   (i) => (i.name === "xylophone with hard rubber mallets (rolled)")
+    //   (i) => (i.name === "marimba with dead strokes")
     // )[0];
 
     let theLickNotes = [];
@@ -88,14 +88,20 @@ const botScript = async () => {
       }
     });
 
-    const delay = getRandomRange(0.05, 0.9);
+    let delay = getRandomRange(0.05, 0.9);
     const execPromise = util.promisify(exec);
     let cmdArgs = [];
     let cmdFilter = [`[0][1]acrossfade=d=${delay}:c1=tri:c2=tri[a01];`];
 
     theLickNotes.forEach((note, index) => {
+      delay = getRandomRange(0.05, 0.9)
       cmdArgs.push("-i");
       cmdArgs.push(`"${path.join("/app/data/notes", instrument.name, note)}"`);
+
+      console.log({
+        note,
+        delay
+      });
 
       if (index === theLickNotes.length - 3) {
         cmdFilter.push(

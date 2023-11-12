@@ -2,6 +2,9 @@
   "active": true,
   "name": "@thelick",
   "description": "Playing The Lick.",
+  "thumbnail":
+    "https://botwiki.org/wp-content/uploads/2023/11/the-lick-1699407568.png",
+  "about_url": "https://botwiki.org/bot/the-lick/",  
   "links": [
     {
       "title": "Follow on Mastodon",

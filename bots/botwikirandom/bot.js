@@ -37,7 +37,7 @@ const botScript = async () => {
 
     console.log(bot);
 
-    let status = `${bot.description}\n\nLearn more: ${bot.url}${botUrls}\n\n`;
+    let status = `${bot.description}\n\n${bot.url}${botUrls}\n\n`;
 
     if (
       bot.tags &&

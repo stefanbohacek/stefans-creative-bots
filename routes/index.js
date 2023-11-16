@@ -43,6 +43,9 @@ router.get("/", (req, res) => {
     bots,
     active_bots: activeBots,
     inactive_bots: inactiveBots,
+    active_bots_count: activeBots.length.toLocaleString(),
+    inactive_bots_count: inactiveBots.length.toLocaleString(),
+    bots_count_total: (activeBots.length + inactiveBots.length).toLocaleString(),
     generative_placeholders_color: getRandomRange(0, 99),
     footer_scripts: process.env.FOOTER_SCRIPTS,
   });

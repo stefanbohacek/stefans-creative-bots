@@ -35,9 +35,14 @@ router.get("/", (req, res) => {
     console.log(err);
   }
 
+  const activeBots = bots.filter((b) => b.about.active);
+  const inactiveBots = bots.filter((b) => !b.about.active);
+
   res.render("home", {
     project_name: process.env.PROJECT_NAME,
     bots,
+    active_bots: activeBots,
+    inactive_bots: inactiveBots,
     generative_placeholders_color: getRandomRange(0, 99),
     footer_scripts: process.env.FOOTER_SCRIPTS,
   });

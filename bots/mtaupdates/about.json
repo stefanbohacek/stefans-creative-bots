@@ -1,0 +1,14 @@
+{
+  "active": true,
+  "name": "MTA Subway Alerts",
+  "description": "Updates about New York's public transit.",
+  "about_url": "https://stefanbohacek.com/blog/turn-an-email-subscription-into-a-mastodon-bot-with-pipedream-com/",
+  "thumbnail": "https://stefanbohacek.com/wp-content/uploads/2023/04/mtaupdates-mastodon-bot-pipedream-email.png",
+  "source_url": "https://pipedream.com/new?h=tch_OQlfnY",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@mtaupdates"
+    }
+  ]
+}

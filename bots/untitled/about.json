@@ -1,0 +1,15 @@
+{
+  "active": false,
+  "name": "UNTITLED",
+  "description": "Inspired by the work of Mark Rothko and Benjamin Kovach.",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2018/09/untitled-artist.png",
+  "about_url": "https://botwiki.org/bot/untitled-artist/",
+  "source_url": null,
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@untitled"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

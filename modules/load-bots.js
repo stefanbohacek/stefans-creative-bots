@@ -19,7 +19,10 @@ const loadBots = async (app) => {
         const data = await readFileSync(aboutJSON);
         const about = JSON.parse(data);
         const scriptPath = `${__dirname}/../bots/${bot}/bot.js`;
-        const botScript = await import(scriptPath);
+        let botScript = false;
+        if (fs.existsSync(scriptPath)) {
+          botScript = await import(scriptPath);
+        }
 
         // console.log({ about });
 
@@ -28,14 +31,16 @@ const loadBots = async (app) => {
           script_path: scriptPath,
           script: botScript,
         };
-
-        if (process.env.PROJECT_NAME) {
-          botInfo.about.source_url = `https://glitch.com/edit/#!/${process.env.PROJECT_NAME}?path=bots/${bot}/bot.js`;
-        } else if (process.env.SOURCE_URL_BASE) {
-          botInfo.about.source_url = `${process.env.SOURCE_URL_BASE}/${bot}/bot.js`;
+        
+        if (!botInfo.about.source_url && botInfo.about.source_url !== null){
+          if (process.env.PROJECT_NAME) {
+            botInfo.about.source_url = `https://glitch.com/edit/#!/${process.env.PROJECT_NAME}?path=bots/${bot}/bot.js`;
+          } else if (process.env.SOURCE_URL_BASE) {
+            botInfo.about.source_url = `${process.env.SOURCE_URL_BASE}/${bot}/bot.js`;
+          }
         }
 
-        if (about.active) {
+        if (about.active && botScript) {
           botCount++;
           const job = await scheduleBot(botInfo, app);
           botInfo.cronjob = job;

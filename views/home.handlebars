@@ -1,67 +1,75 @@
 <div class="container ml-auto mr-auto">
-  <h1 class="text-center mt-5 mb-5"><a href="https://stefanbohacek.online/@stefan">Stefan</a>'s creative bot showcase <span class="text-nowrap">🤖🎨</span></h1>
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="text-center mt-5 mb-5">
+        <a href="https://stefanbohacek.online/@stefan">Stefan</a>'s creative bot
+        showcase <span class="text-nowrap">🤖🎨</span>
+      </h1>
+      <p>
+        This page lists all the
+        <a href="https://stefanbohacek.com/project/creative-bots/"
+          >creative bots</a
+        >
+        I've made. Most of them are hosted on <a href="https://glitch.com/about">Glitch</a>, a link to an external code
+        source is available otherwise.
+      </p>
+      <p>
+        If you want to learn more about creative botmaking, and maybe make your
+        own bot, here's a few links where you can learn more:
+      </p>
+      <ul>
+        <li>
+          <a href="https://botwiki.org/">Botwiki</a>: examples of creative
+          online bots and resources for making them
+        </li>
+        <li>
+          <a href="https://botmakers.org/">Botmakers</a>: a place to discuss fun
+          and creative online bots and learn how to make them
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 <div class="container-fluid ml-auto mr-auto mt-5 pt-5">
   {{#if bots}}
-    <div class="row list">
-    {{#each bots}}
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 list-item">
-      {{> bot
-        name=this.about.name
-        description=this.about.description
-        thumbnail=this.about.thumbnail
-        preview=this.about.preview
-        about_url=this.about.about_url
-        source_url=this.about.source_url
-        links=this.about.links
-        file=this.about.file
-        interval=this.about.interval
-        interval_human=this.about.interval_human
-        next_run=this.about.next_run
-        last_run=this.about.last_run
-      }}
-      </div>
-    {{/each}}
+  <div class="row list">
+    {{#each active_bots}}
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 list-item">
+      {{> bot name=this.about.name description=this.about.description
+      thumbnail=this.about.thumbnail preview=this.about.preview
+      about_url=this.about.about_url source_url=this.about.source_url
+      links=this.about.links file=this.about.file interval=this.about.interval
+      interval_human=this.about.interval_human next_run=this.about.next_run
+      last_run=this.about.last_run }}
     </div>
-  {{else}} 
-    <p>See this project's <a href="https://glitch.com/edit/#!/creative-bots?path=README.md">source code</a> for instructions.</p>
-  {{/if}} 
-  <div class="container ml-auto mr-auto">
-    <div class="row">
-      <div class="col-sm-12">
-        <p>
-            A few more bots hosted elsewhere:
-        </p>
-        <ul>
-          <li>
-            <a rel="me" href="https://botsin.space/@dedication_bot">Book dedications bot</a>
-          </li>
-          <li>
-            <a rel="me" href="https://botsin.space/@mtaupdates">MTA Subway Alerts</a>
-          </li>
-          <li>
-            <a rel="me" href="https://botsin.space/@happymoonbot">@happymoonbot</a>
-          </li>
-        </ul>
-      </div>
-    </div>  
-    <div class="row">
-      <div class="col-sm-12">
-        <p>
-          And here are some tools and resources to make your own:
-        </p>
-        <ul>
-          <li>
-            <a href="https://botwiki.org/">Botwiki</a>
-          </li>
-          <li>
-            <a href="https://botmakers.org/">Botmakers</a>
-          </li>
-          <li>
-            <a href="https://stefanbohacek.com/project/creative-bots/">more about this showcase</a>
-          </li>
-        </ul>
-      </div>
-    </div>  
+    {{/each}}
   </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="container ml-auto mr-auto">
+        <h2 class="text-center mt-5 mb-5">Inactive bots</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row list">
+    {{#each inactive_bots}}
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 list-item">
+      {{> bot name=this.about.name description=this.about.description
+      thumbnail=this.about.thumbnail preview=this.about.preview
+      about_url=this.about.about_url source_url=this.about.source_url
+      links=this.about.links file=this.about.file interval=this.about.interval
+      interval_human=this.about.interval_human next_run=this.about.next_run
+      last_run=this.about.last_run }}
+    </div>
+    {{/each}}
+  </div>
+  {{else}}
+  <p>
+    See this project's
+    <a href="https://glitch.com/edit/#!/creative-bots?path=README.md"
+      >source code</a
+    >
+    for instructions.
+  </p>
+  {{/if}}
 </div>

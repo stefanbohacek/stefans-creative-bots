@@ -31,8 +31,6 @@
            {{#if about.last_run}}
               <li><span title="Last run">📅</span> {{about.last_run}}</li>
            {{/if}}      
-        {{else}}
-          <li><span title="This bot is not actively posting">🚫</span> Inactive</li>
         {{/if}}
         </ul>
       </div>
@@ -46,7 +44,9 @@
               <a rel="me" href="{{this.url}}" class="btn btn-light mt-2">{{this.title}}</a>
             {{/each}}
           {{/if}}      
-          <a rel="me" href="{{about.source_url}}" class="btn btn-light mt-2">View source</a>
+          {{#if about.source_url}}
+              <a rel="me" href="{{about.source_url}}" class="btn btn-light mt-2">View source</a>
+          {{/if}}      
         </p>
       </div>
     </div>

@@ -10,8 +10,10 @@
         <a href="https://stefanbohacek.com/project/creative-bots/"
           >creative bots</a
         >
-        I've made. Most of them are hosted on <a href="https://glitch.com/about">Glitch</a>, a link to an external code
-        source is available otherwise.
+        I've made (<a href="#active-bots">{{active_bots_count}} active</a>,
+        <a href="#inactive-bots">{{inactive_bots_count}} inactive</a>, {{bots_count_total}} in total). Most of
+        them are hosted on <a href="https://glitch.com/about">Glitch</a>, a link
+        to an external code source is available otherwise.
       </p>
       <p>
         If you want to learn more about creative botmaking, and maybe make your
@@ -32,7 +34,7 @@
 </div>
 <div class="container-fluid ml-auto mr-auto mt-5 pt-5">
   {{#if bots}}
-  <div class="row list">
+  <div id="active-bots" class="row list">
     {{#each active_bots}}
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 list-item">
       {{> bot name=this.about.name description=this.about.description
@@ -47,7 +49,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="container ml-auto mr-auto">
-        <h2 class="text-center mt-5 mb-5">Inactive bots</h2>
+        <h2 id="inactive-bots" class="text-center mt-5 mb-5">Inactive bots</h2>
       </div>
     </div>
   </div>

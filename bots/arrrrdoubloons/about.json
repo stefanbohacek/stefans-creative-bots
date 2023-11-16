@@ -1,0 +1,15 @@
+{
+  "active": false,
+  "name": "Arr! Doubloons!",
+  "description": "Booty!",
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2018/05/arrrrdoubloons.png",
+  "about_url": "https://botwiki.org/bot/arrrrdoubloons/",
+  "source_url": null,
+  "links": [
+    {
+      "title": "Twitter archive",
+      "url": "https://twitter.com/arrrrdoubloons"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

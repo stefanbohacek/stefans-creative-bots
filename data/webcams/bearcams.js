@@ -27,13 +27,13 @@ export default [
     youtube_url: "https://www.youtube.com/watch?v=nzzBwdxfpqo",
     tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
   },
-  {
-    "name": "River Watch Bear Cam",
-    "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a river with bears in it.",
-    url: "https://explore.org/livecams/brown-bears/river-watch-brown-bear-salmon-cams",
-    youtube_url: "https://www.youtube.com/watch?v=Ly4v1lMvyPk",
-    tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
-  },
+  // {
+  //   "name": "River Watch Bear Cam",
+  //   "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a river with bears in it.",
+  //   url: "https://explore.org/livecams/brown-bears/river-watch-brown-bear-salmon-cams",
+  //   youtube_url: "https://www.youtube.com/watch?v=Ly4v1lMvyPk",
+  //   tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
+  // },
   {
     "name": "Dumpling Mountain - Katmai National Park",
     "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a view from a mountain.",

@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@lighthouses",
+  "description": "Lighthouses around the world.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@lighthouses"
+    }   
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

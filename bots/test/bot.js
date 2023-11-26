@@ -81,7 +81,7 @@ const botScript = async () => {
     mastodon.postImage({
       status: lighthouse.status,
       image: filePath,
-      alt_text: "A photo of a lighthouse overlayed on a map.",
+      alt_text: "A photo of a lighthouse overlaid on a map.",
     });
   } else {
     botScript();

@@ -1,14 +1,91 @@
+import fetch from "node-fetch";
 import mastodonClient from "./../../modules/mastodon/index.js";
+import randomFromArray from "./../../modules/random-from-array.js";
+import downloadFile from "./../../modules/download-file.js";
+import consoleLog from "./../../modules/consolelog.js";
+
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const getLighthouses = async () => {
+  let lighthouses = [];
+  const apiUrl =
+    "https://www.overpass-api.de/api/interpreter?data=%0A%09%09%09%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3B%0A%09%09%09(%0A%09%09%09%20%20node%5B%22seamark%3Alight%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20node%5B%22seamark%3Alight%3A1%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20way%5B%22seamark%3Alight%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20way%5B%22seamark%3Alight%3A1%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09)%3B%0A%09%09%09out%20body%3B%0A%09%09%09%3E%3B%0A%09%09%09out%20skel%20qt%3B%0A%09%09";
+
+  const response = await fetch(apiUrl);
+  const data = await response.json();
+  if (data && data.elements && data.elements.length > 0) {
+    lighthouses = data.elements.filter(
+      (lighthouse) => lighthouse.tags && lighthouse.tags.wikidata
+    );
+  }
+  return lighthouses;
+};
+
+const pickLighthouse = async (lighthouses) => {
+  const lighthouse = randomFromArray(lighthouses);
+  const apiUrl = `https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/${lighthouse.tags.wikidata}`;
+  const response = await fetch(apiUrl);
+  const data = await response.json();
+
+  let wikipediaUrl;
+
+  if (
+    data?.statements?.P18 &&
+    data.statements?.P18.length > 0 &&
+    data?.statements?.P625 &&
+    data.statements?.P625.length > 0
+  ) {
+    const label = data.labels.en;
+    const description = data.descriptions.en;
+    const image = encodeURIComponent(data.statements.P18[0].value.content);
+    const lat = data.statements.P625[0].value.content.latitude;
+    const long = data.statements.P625[0].value.content.longitude;
+    let imageUrl = `https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/${image}&width=300`;
+
+    // consoleLog({ label, description, image, imageUrl });
+
+    imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
+      imageUrl
+    )}(${long},${lat})/${long},${lat},5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
+
+    // console.log("data?.sitelinks", data?.sitelinks);
+
+    if (data?.sitelinks?.enwiki?.url) {
+      wikipediaUrl = `\n${data.sitelinks.enwiki.url}`;
+    }
+
+    const status = `${label}, ${description}${wikipediaUrl}\n\n#lighthouse #map`;
+    return { status, imageUrl };
+  } else {
+    return pickLighthouse(lighthouses);
+  }
+};
 
 const botScript = async () => {
-  const mastodon = new mastodonClient({
-    access_token: process.env.MASTODON_TEST_TOKEN,
-    api_url: process.env.MASTODON_TEST_TOKEN_API,
-  });
- 
-  const status = "1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 2: Quisque ultrices rhoncus elit, in porta mauris varius nec. 3: Ut dapibus vestibulum eros, at auctor augue ornare nec. 4: Donec sed sem molestie, suscipit arcu a, egestas urna. 5: Cras vitae sapien aliquam, pharetra nisl at, condimentum metus. 6: Vestibulum posuere tincidunt risus, ac congue diam sodales quis. 7: Mauris iaculis, orci non pulvinar suscipit, urna nunc tempor est, ut ornare tortor nisl sed est. 8: Aenean quis mollis ex. 9: Phasellus sem mi, lobortis non augue et, consequat rhoncus purus. 10: Vestibulum at arcu id ipsum consequat fringilla congue sit amet sem. 11: Praesent odio est, lacinia et mattis. 12: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 13: Quisque ultrices rhoncus elit, in porta mauris varius nec. 14: Ut dapibus vestibulum eros, at auctor augue ornare nec. 15: Donec sed sem molestie, suscipit arcu a, egestas urna. 16: Cras vitae sapien aliquam, pharetra nisl at, condimentum metus. 17: Vestibulum posuere tincidunt risus, ac congue diam sodales quis. 18: Mauris iaculis, orci non pulvinar suscipit, urna nunc tempor est, ut ornare tortor nisl sed est. 19: Aenean quis mollis ex. 20: Phasellus sem mi, lobortis non augue et, consequat rhoncus purus. 21: Vestibulum at arcu id ipsum consequat fringilla congue sit amet sem. 22: Praesent odio est, lacinia et mattis. 23: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 24: Quisque ultrices rhoncus elit, in porta mauris varius nec. 25: Ut dapibus vestibulum eros, at auctor augue ornare nec. 26: Donec sed sem molestie, suscipit arcu a, egestas urna. 27: Cras vitae sapien aliquam, pharetra nisl at, condimentum metus. 28: Vestibulum posuere tincidunt risus, ac congue diam sodales quis. 29: Mauris iaculis, orci non pulvinar suscipit, urna nunc tempor est, ut ornare tortor nisl sed est. 30: Aenean quis mollis ex. 31: Phasellus sem mi, lobortis non augue et, consequat rhoncus purus. 32: Vestibulum at arcu id ipsum consequat fringilla congue sit amet sem. 33: Praesent odio est, lacinia et mattis.";
-  
-  mastodon.post({status});
+  const lighthouses = await getLighthouses();
+  const lighthouse = await pickLighthouse(lighthouses);
+
+  if (lighthouse && lighthouse.status && lighthouse.imageUrl) {
+    const filePath = `${__dirname}/../../temp/lighthouse.jpg`;
+    await downloadFile(lighthouse.imageUrl, filePath);
+
+    const mastodon = new mastodonClient({
+      access_token: process.env.MASTODON_TEST_TOKEN,
+      api_url: process.env.MASTODON_TEST_API,
+    });
+
+    mastodon.postImage({
+      status: lighthouse.status,
+      image: filePath,
+      alt_text: "A photo of a lighthouse overlayed on a map.",
+    });
+  } else {
+    botScript();
+  }
 
   return true;
 };

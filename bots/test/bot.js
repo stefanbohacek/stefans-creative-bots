@@ -31,7 +31,7 @@ const pickLighthouse = async (lighthouses) => {
   const response = await fetch(apiUrl);
   const data = await response.json();
 
-  let wikipediaUrl;
+  let wikipediaUrl = "";
 
   if (
     data?.statements?.P18 &&
@@ -61,7 +61,7 @@ const pickLighthouse = async (lighthouses) => {
     const status = `${label}, ${description}${wikipediaUrl}\n\n#lighthouse #map`;
     return { status, imageUrl };
   } else {
-    return pickLighthouse(lighthouses);
+    return await pickLighthouse(lighthouses);
   }
 };
 

@@ -58,7 +58,7 @@ const pickLighthouse = async (lighthouses) => {
       wikipediaUrl = `\n${data.sitelinks.enwiki.url}`;
     }
 
-    const status = `${label}, ${description}${wikipediaUrl}\n\n#lighthouse #map`;
+    const status = `${label}, ${description}.${wikipediaUrl}\n\n#lighthouse #map`;
     return { status, imageUrl };
   } else {
     return await pickLighthouse(lighthouses);

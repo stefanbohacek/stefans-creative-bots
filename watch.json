@@ -12,7 +12,8 @@
       "^src/",
       "^public/",
       "^dist/",
-      "^test.js"
+      "^test.js",
+      "^bots/test/bot.js"
     ],
     "include": [
       "\\.js$",

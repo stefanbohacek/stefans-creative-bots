@@ -11,7 +11,7 @@ export default (options, cb) => {
 
   console.log('drawing a spiral...');
 
-  let framesTotal = 12,
+  let framesTotal = 16,
       spiralThickness = getRandomRange(4, 20),
       encoder = new GIFEncoder(options.width, options.height),
       counter = 0,
@@ -71,7 +71,11 @@ export default (options, cb) => {
       }
 
     }
-    encoder.addFrame(ctx);
+
+    encoder.addFrame(ctx);    
+    if (frame === framesTotal){
+      encoder.setDelay(0);
+    }
   }
 
   encoder.finish();

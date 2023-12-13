@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@threadsfederated",
+  "description": "Are Threads federated yet?",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@threadsfederated"
+    }
+  ],
+  "interval": "EVERY_FIVE_MINUTES"
+}

@@ -45,7 +45,7 @@ const botScript = async () => {
           });
 
           mastodon.post({
-            status: `Threads are now federated! ${threadsPostUrl}\n\n#fediverse #threads #activitypub`,
+            status: `Posts from Threads can now be seen in the fediverse. ${threadsPostUrl}\n\n#fediverse #threads #activitypub`,
           });
         }
       }

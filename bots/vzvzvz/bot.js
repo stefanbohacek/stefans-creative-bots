@@ -140,6 +140,7 @@ const botScript = async () => {
                       fontFileName,
                       fontFamily,
                       style: "#fff",
+                      strokeStyle: "#424242",
                       position: "center center",
                     },
                   ],

@@ -7,10 +7,9 @@ import randomFromArray from "./../../modules/random-from-array.js";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 
-import { parse } from 'csv-parse';
+import { parse } from "csv-parse";
 
 // import {generate, parse, transform, stringify} from 'csv/sync';
-
 
 // const csvParse = require("csv-parse");
 // const mastodon = new mastodonClient({
@@ -95,6 +94,7 @@ const botScript = async () => {
                   fontFileName: fontFileName,
                   fontFamily: fontFamily,
                   style: "#fff",
+                  strokeStyle: "#424242",
                   position: "center center",
                 },
               ],

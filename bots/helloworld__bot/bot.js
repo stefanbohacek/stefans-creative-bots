@@ -110,13 +110,13 @@ const botScript = async () => {
                 // twitter.postImage({
                 //   status,
                 //   image: image,
-                //   alt_text: `Map of ${ countryName } overlayed with a translation of the word "hello".`,
+                //   alt_text: `Map of ${ countryName } overlaid with a translation of the word "hello".`,
                 // });
 
                 mastodon.postImage({
                   status,
                   image,
-                  alt_text: `Map of ${countryName} overlayed with a translation of the word "hello": ${helloTranslation}.`,
+                  alt_text: `Map of ${countryName} overlaid with a translation of the word "hello": ${helloTranslation}.`,
                 });
               }
             );

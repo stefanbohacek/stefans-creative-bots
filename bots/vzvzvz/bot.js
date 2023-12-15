@@ -151,7 +151,7 @@ const botScript = async () => {
                     mastodon.postImage({
                       status,
                       image,
-                      alt_text: `Map of ${countryName} overlayed with "${randomSound[action]}".`,
+                      alt_text: `Map of ${countryName} overlaid with "${randomSound[action]}".`,
                     });
                   }
                 );

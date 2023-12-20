@@ -16,7 +16,7 @@ const botScript = async () => {
   await (async () => {
     const mastodon = new mastodonClient({
       access_token: process.env.EXOPLANETS_ACCESS_TOKEN_SECRET,
-      api_url: process.env.EXOPLANETS_API,
+      api_url: process.env.BOTSINSPACE_API_URL,
     });
     csv()
       .fromFile(__dirname + "/../../data/exoplanets.csv")

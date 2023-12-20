@@ -97,7 +97,7 @@ const botScript = async () => {
   (async () => {
     const mastodon = new mastodonClient({
       access_token: process.env.TICKETS_BOT_ACCESS_TOKEN_SECRET,
-      api_url: process.env.TICKETS_BOT_API,
+      api_url: process.env.BOTSINSPACE_API_URL,
     });
 
     const browser = await puppeteer.launch({ args: ["--no-sandbox"] });

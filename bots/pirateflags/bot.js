@@ -100,7 +100,7 @@ const waveFlag = async () => {
 
       const mastodon = new mastodonClient({
         access_token: process.env.PIRATE_FLAGS_ACCESS_TOKEN_SECRET,
-        api_url: process.env.PIRATE_FLAGS_API,
+        api_url: process.env.BOTSINSPACE_API_URL,
       });
 
       mastodon.postImage({

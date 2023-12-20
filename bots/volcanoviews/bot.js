@@ -16,7 +16,7 @@ const botID = 'volcanoviews';
 const botScript = async () => {
   const mastodon = new mastodonClient({
     access_token: process.env.VOLCANOVIEWS_MASTODON_ACCESS_TOKEN,
-    api_url: process.env.VOLCANOVIEWS_MASTODON_API,
+    api_url: process.env.BOTSINSPACE_API_URL,
   });
 
   const webcam = randomFromArray(webcams);

@@ -16,7 +16,7 @@ const __dirname = dirname(__filename);
 const botScript = async () => {
   const mastodon = new mastodonClient({
     access_token: process.env.AT_SEA_ACCESS_TOKEN_SECRET,
-    api_url: process.env.AT_SEA_API,
+    api_url: process.env.BOTSINSPACE_API_URL,
   });
   
   const stationList = `https://www.ndbc.noaa.gov/buoycams.php`;

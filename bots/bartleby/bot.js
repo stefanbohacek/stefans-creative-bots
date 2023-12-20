@@ -31,7 +31,7 @@ function loadingError(batchNum, error) {
 
 const mastodon = new mastodonClient({
   access_token: process.env.BARTLEBY_MASTODON_ACCESS_TOKEN_SECRET,
-  api_url: process.env.BARTLEBY_MASTODON_API,
+  api_url: process.env.BOTSINSPACE_API_URL,
 });
 
 const clients = { mastodon };

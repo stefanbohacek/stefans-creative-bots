@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch from "node-fetch";
 import he from "he";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
@@ -6,7 +6,7 @@ const botScript = async () => {
   const mastodon = new mastodonClient({
     access_token:
       process.env.RANDOM_FROM_BOTWIKI_FEDIVERSE_MASTODON_ACCESS_TOKEN,
-    api_url: process.env.RANDOM_FROM_BOTWIKI_FEDIVERSE_MASTODON_API,
+    api_url: process.env.BOTSINSPACE_API_URL,
   });
 
   console.log("picking a random bot from Botwiki... ");
@@ -19,27 +19,29 @@ const botScript = async () => {
 
   const botUrlsMeta = data[0].meta.bot_url.split("\r\n");
   let botUrls;
-  
-//   let botUrls = [];
 
-// botUrlsMeta.forEach(async (botUrl) => {
-//   const u = new URL(botUrl);
-//   const req = await fetch(`https://${u.host}/.well-known/nodeinfo`);
-//   console.log(req.status);
+  //   let botUrls = [];
 
-//   if (req.status === 200){
-//     botUrls.push(`${u.pathname.replace('/@', '@')}@${u.host}`);
-//   } else {
+  // botUrlsMeta.forEach(async (botUrl) => {
+  //   const u = new URL(botUrl);
+  //   const req = await fetch(`https://${u.host}/.well-known/nodeinfo`);
+  //   console.log(req.status);
 
-//   }
-// });
+  //   if (req.status === 200){
+  //     botUrls.push(`${u.pathname.replace('/@', '@')}@${u.host}`);
+  //   } else {
 
-  if (botUrlsMeta.length === 0){
+  //   }
+  // });
+
+  if (botUrlsMeta.length === 0) {
     botUrls = "";
-  } else if (botUrlsMeta.length === 1){
+  } else if (botUrlsMeta.length === 1) {
     botUrls = `\n\nFollow: ${botUrlsMeta[0]}`;
   } else {
-    botUrls = `\n\nFollow:\n${botUrlsMeta.map(botUrl => `- ${botUrl}`).join("\n")}`;
+    botUrls = `\n\nFollow:\n${botUrlsMeta
+      .map((botUrl) => `- ${botUrl}`)
+      .join("\n")}`;
   }
 
   if (data && data.length) {

@@ -5,7 +5,7 @@ import randomFromArray from "./../../modules/random-from-array.js";
 const botScript = async () => {
   const mastodon = new mastodonClient({
     access_token: process.env.RAINDOTGIFBOT_MASTODON_ACCESS_TOKEN,
-    api_url: process.env.RAINDOTGIFBOT_MASTODON_API,
+    api_url: process.env.BOTSINSPACE_API_URL,
   });
 
   const status = randomFromArray([

@@ -5,7 +5,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 const botScript = async () => {
   const mastodon = new mastodonClient({
     access_token: process.env.RANDOM_FROM_BOTWIKI_MASTODON_ACCESS_TOKEN,
-    api_url: process.env.RANDOM_FROM_BOTWIKI_MASTODON_API,
+    api_url: process.env.BOTSINSPACE_API_URL,
   });
 
   console.log("picking a random bot from Botwiki... ");

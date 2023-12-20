@@ -11,12 +11,12 @@ export default [
   //   "youtube_url": "https://www.youtube.com/watch?v=_oUGgixxywc",
   //   "tags": "#trains #live #norway #sweden #webcam",
   // },
-  {
-    "name": "Train trips through Sweden and Norway",
-    "description": "A short clip from a webcam at the front of a train.",
-    "youtube_url": "https://www.youtube.com/watch?v=luDmzcrr92I",
-    "tags": "#trains #live #norway #sweden #webcam",
-  },
+  // {
+  //   "name": "Train trips through Sweden and Norway",
+  //   "description": "A short clip from a webcam at the front of a train.",
+  //   "youtube_url": "https://www.youtube.com/watch?v=luDmzcrr92I",
+  //   "tags": "#trains #live #norway #sweden #webcam",
+  // },
   // {
   //   "name": "Train journey to the Norwegian Arctic Circle on the Nordland Line (Nordlandsbanen) in winter",
   //   "description": "A short clip from a webcam at the front of a train.",

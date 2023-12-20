@@ -19,7 +19,7 @@ const botScript = async () => {
   await (async () => {
     const mastodon = new mastodonClient({
       access_token: process.env.SOUTHPOLEVIEWSBOT_MASTODON_ACCESS_TOKEN,
-      api_url: process.env.SOUTHPOLEVIEWSBOT_MASTODON_API,
+      api_url: process.env.BOTSINSPACE_API_URL,
     });
     
     const station = randomFromArray(stations);

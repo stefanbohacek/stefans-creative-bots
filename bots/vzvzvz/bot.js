@@ -10,7 +10,7 @@ import { parse } from "csv-parse";
 const botScript = async () => {
   const mastodon = new mastodonClient({
     access_token: process.env.VZVZVZ_BOT_MASTODON_ACCESS_TOKEN,
-    api_url: process.env.VZVZVZ_BOT_MASTODON_API,
+    api_url: process.env.BOTSINSPACE_API_URL,
   });
 
   const category = randomFromArray(onomatopoeias);

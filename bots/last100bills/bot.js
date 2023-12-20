@@ -9,7 +9,7 @@ import randomFromArray from "./../../modules/random-from-array.js";
 const botScript = async () => {
   const mastodon = new mastodonClient({
     access_token: process.env.LAST100BILLS_MASTODON_ACCESS_TOKEN,
-    api_url: process.env.LAST100BILLS_MASTODON_API,
+    api_url: process.env.BOTSINSPACE_API_URL,
   });
 
   console.log("making a chart...");

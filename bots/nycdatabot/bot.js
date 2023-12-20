@@ -148,7 +148,7 @@ const makeMap = async (datasetName, datasetPermalink, data, cb) => {
 
   const mastodon = new mastodonClient({
     access_token: process.env.NYCDATABOT_MASTODON_ACCESS_TOKEN_SECRET,
-    api_url: process.env.NYCDATABOT_MASTODON_API,
+    api_url: process.env.BOTSINSPACE_API_URL,
   });
 
   const status = `${datasetName}\nSource: ${datasetPermalink}\n#nyc #data #dataviz`;

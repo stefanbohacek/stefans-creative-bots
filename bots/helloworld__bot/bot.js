@@ -20,7 +20,7 @@ import { parse } from "csv-parse";
 const botScript = async () => {
   const mastodon = new mastodonClient({
     access_token: process.env.HELLOWORLDBOT_MASTODON_ACCESS_TOKEN,
-    api_url: process.env.HELLOWORLDBOT_MASTODON_API,
+    api_url: process.env.BOTSINSPACE_API_URL,
   });
 
   fs.readFile("data/hello.csv", "utf8", (err, csvData) => {

@@ -33,6 +33,7 @@
     "glitch-canvas": "^1.1.8",
     "grant-express": "^4.7.0",
     "he": "^1.2.0",
+    "hh-mm-ss": "^1.2.0",
     "html-entities": "^1.2.1",
     "html-to-text": "^8.x",
     "indefinite": "^2.4.3",

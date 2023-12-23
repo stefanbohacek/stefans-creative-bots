@@ -1,7 +1,6 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
-
+import extractVideoLive from "./../../modules/extract-video-live.js";
 import extractVideo from "./../../modules/extract-video.js";
-
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -28,7 +27,7 @@ const botScript = async () => {
       };
 
       const status = `${webcam.name}: ${webcam.url}\n\n${webcam.tags}`;
-      await extractVideo(webcam.youtube_url, `${botID}.mp4`, 10);
+      await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
 
       mastodon.postImage({
         status,

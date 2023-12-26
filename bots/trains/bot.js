@@ -21,7 +21,7 @@ const botScript = async () => {
         api_url: process.env.BOTSINSPACE_API_URL,
       });
 
-      const webcam = randomFromArray(webcams);
+      const webcam = randomFromArray(webcams.filter(webcam => webcam.video_start === undefined));
       const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
 
       if (webcam.video_start && webcam.video_end){

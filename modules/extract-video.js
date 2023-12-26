@@ -20,19 +20,32 @@ const extractVideo = async (url, filename, startSeconds, endSeconds, seconds) =>
   
   console.log('downloading video...', url);
 
-  let response = {};
+  let cmd, args, response = {};
+
   try {
-    const cmd = `yt-dlp`;
-    const args = [
+    cmd = `yt-dlp`;
+    args = [
       '-f', '18',
       '--external-downloader', 'ffmpeg',
-      '--external-downloader-args', `'ffmpeg_i:-output_ts_offset ${startSeconds} -t ${seconds}'`,
+      '--external-downloader-args', `'ffmpeg_i:-ss ${videoStart} -t ${seconds}'`,
       `"${url}"`,
+      '-o', `${__dirname}/../temp/${filename}.tmp`,
+      '--force-overwrites'
+    ];
+    console.log("cmd+args", [cmd, ...args].join(" "));
+    response = await execPromise(`${cmd} ${args.join(' ')}`);
+
+    cmd = `ffmpeg`;
+    args = [
+      '-ss', `${videoStart}`,
+      '-to', `${videoEnd}`,
+      '-i', `${__dirname}/../temp/${filename}.tmp`,
       '-o', `${__dirname}/../temp/${filename}`,
       '--force-overwrites'
     ];
     console.log("cmd+args", [cmd, ...args].join(" "));
     response = await execPromise(`${cmd} ${args.join(' ')}`);
+
     // console.log(response.stdout, response.stderr);
   } catch (error) {
     console.log(error);

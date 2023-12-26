@@ -1,6 +1,7 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 
 import webcams from "./../../data/webcams/trains.js";
+import extractVideoLive from "./../../modules/extract-video-live.js";
 import extractVideo from "./../../modules/extract-video.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 
@@ -20,9 +21,14 @@ const botScript = async () => {
         api_url: process.env.BOTSINSPACE_API_URL,
       });
 
-      const webcam = randomFromArray(webcams);
+      const webcam = randomFromArray(webcams.filter(webcam => webcam.video_start === undefined));
       const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
-      await extractVideo(webcam.youtube_url, `${botID}.mp4`, 10);
+
+      if (webcam.video_start && webcam.video_end){
+        await extractVideo(webcam.youtube_url, `${botID}.mp4`, webcam.video_start, webcam.video_end, 10);
+      } else {
+        await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
+      }
 
       mastodon.postImage({
         status,

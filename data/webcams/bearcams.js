@@ -20,13 +20,13 @@ export default [
     youtube_url: "https://www.youtube.com/watch?v=b6HFyBmGx28",
     tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
   },
-  {
-    "name": "Kat's River View",
-    "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a river with bears in it.",
-    url: "https://explore.org/livecams/brown-bears/brown-bear-salmon-cam-lower-river",
-    youtube_url: "https://www.youtube.com/watch?v=nzzBwdxfpqo",
-    tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
-  },
+  // {
+  //   "name": "Kat's River View",
+  //   "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a river with bears in it.",
+  //   url: "https://explore.org/livecams/brown-bears/brown-bear-salmon-cam-lower-river",
+  //   youtube_url: "https://www.youtube.com/watch?v=nzzBwdxfpqo",
+  //   tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
+  // },
   // {
   //   "name": "River Watch Bear Cam",
   //   "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a river with bears in it.",

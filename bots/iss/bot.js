@@ -2,6 +2,7 @@ import fetch from 'node-fetch';
 import mastodonClient from "./../../modules/mastodon/index.js";
 
 import webcams from "./../../data/webcams/iss.js";
+import extractVideoLive from "./../../modules/extract-video-live.js";
 import extractVideo from "./../../modules/extract-video.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 
@@ -40,7 +41,7 @@ const botScript = async () => {
 
       status += `\n\n${webcam.tags}`;
 
-      await extractVideo(webcam.youtube_url, `${botID}.mp4`, 10);
+      await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
       console.log('path check', __dirname + `/../../temp/${botID}.mp4`);
 
       mastodon.postImage({

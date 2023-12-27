@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@happynameday",
+  "description": "Happy name day!",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@happynameday"
+    }
+  ],
+  "interval": "EVERY_DAY_MORNING"
+}

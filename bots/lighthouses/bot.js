@@ -62,7 +62,7 @@ const pickLighthouse = async (lighthouses) => {
       wikipediaUrl = `\nhttps://www.wikidata.org/wiki/${lighthouse.tags.wikidata}`;
     }
 
-    const status = `${label}, ${description}.${wikipediaUrl}\n\n#lighthouse #map`;
+    const status = `${label ? `${label}, `: ''} ${description}.${wikipediaUrl}\n\n#lighthouse #map`;
     return { status, imageUrl };
   } else {
     return await pickLighthouse(lighthouses);

@@ -1,6 +1,8 @@
 import fetch from "node-fetch";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import progressbar from "./../../modules/generators/progressbar.js";
+import dayOfYear from "./../../modules/day-of-year.js";
+import isLeapYear from "./../../modules/is-leap-year.js";
 
 const botScript = async () => {
   await (async () => {
@@ -10,8 +12,8 @@ const botScript = async () => {
         api_url: process.env.BOTSINSPACE_API_URL,
       });
 
-      const progress = 66.66;
-
+      const days = isLeapYear() ? 366 : 365;
+      const progress = 100 * (dayOfYear()-1/days);
       const status = `Testing.`;
       console.log(status, progress);
 

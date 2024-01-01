@@ -3,6 +3,11 @@ Some sites don't use full URL for the img src attribute and need page_url to be 
 */
 export default [
   {
+    name: "Neumayer Station III",
+    image_url: "https://www.awi.de/NM_WebCam/neumayerW.0650.jpg",
+    url: "https://www.awi.de/en/expedition/stations/neumayer-station-iii.html",
+  },
+  {
     name: "Troll research station",
     image_url: "https://trollcam.npolar.no/TrollWebCam1HD.jpg",
     url: "https://www.npolar.no/en/troll/webcam/",

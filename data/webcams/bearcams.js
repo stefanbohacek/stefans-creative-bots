@@ -42,18 +42,18 @@ export default [
   //   youtube_url: "https://www.youtube.com/watch?v=Ly4v1lMvyPk",
   //   tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
   // },
-  // {
-  //   "name": "Dumpling Mountain - Katmai National Park",
-  //   "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a view from a mountain.",
-  //   url: "https://explore.org/livecams/brown-bears/dumpling-mountain-brown-bear-salmon-cams",
-  //   youtube_url: "https://www.youtube.com/watch?v=dXp23eXXTOU",
-  //   tags: '#bearcam #KatmaiNationalPark #alaska #live'
-  // },
-  // {
-  //   "name": "Naknek River",
-  //   "description": "A short clip with highlights from a webcam near a river in Katmai National Park, Alaska.",
-  //   url: "https://explore.org/livecams/brown-bears/alaska-naknek-river",
-  //   youtube_url: "https://www.youtube.com/watch?v=7B8ArsmXPyk",
-  //   tags: '#bearcam #KatmaiNationalPark #alaska'
-  // }
+  {
+    "name": "Dumpling Mountain - Katmai National Park",
+    "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a view from a mountain.",
+    url: "https://explore.org/livecams/brown-bears/dumpling-mountain-brown-bear-salmon-cams",
+    youtube_url: "https://www.youtube.com/watch?v=dXp23eXXTOU",
+    tags: '#bearcam #KatmaiNationalPark #alaska #live'
+  },
+  {
+    "name": "Naknek River",
+    "description": "A short clip with highlights from a webcam near a river in Katmai National Park, Alaska.",
+    url: "https://explore.org/livecams/brown-bears/alaska-naknek-river",
+    youtube_url: "https://www.youtube.com/watch?v=7B8ArsmXPyk",
+    tags: '#bearcam #KatmaiNationalPark #alaska'
+  }
 ];

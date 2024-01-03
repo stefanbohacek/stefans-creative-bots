@@ -12,6 +12,7 @@ const postImageFn = (client, options, cb) => {
   client.post(
     "media",
     {
+      // filename: options.image,
       file: fs.createReadStream(options.image),
       description: truncate(options.alt_text, 1000),
     },

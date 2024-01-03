@@ -26,7 +26,7 @@ const botScript = async () => {
       const webcam = randomFromArray(webcams);
       const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
 
-      if (webcam.video_start && webcam.video_end) {
+      if ("video_start" in webcam && "video_end" in webcam) {
         const url = `https://tools.stefanbohacek.dev/video-dl/?platform=youtube&id=${
           webcam.youtube_id
         }&start=${getRandomInt(

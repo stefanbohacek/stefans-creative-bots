@@ -22,6 +22,7 @@ export default [
   // },
   {
     name: "Brooks Falls - Katmai National Park (Highlights 2023)",
+    "description": "A short clip from a webcam in Katmai National Park, Alaska. Typically shows a river with bears in it.",    
     youtube_url: "https://www.youtube.com/watch?v=rgYXPHkl824",
     youtube_id: "rgYXPHkl824",
     video_start: 0,

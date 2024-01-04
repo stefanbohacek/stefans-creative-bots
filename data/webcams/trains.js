@@ -17,6 +17,7 @@ export default [
   },
   {
     name: "Train journey to the Norwegian Arctic Circle on the Nordland Line (Nordlandsbanen) in summer",
+    description: "A short clip from a webcam at the front of a train.",
     youtube_url: "https://www.youtube.com/watch?v=yCtt26c_AOg",
     youtube_id: "yCtt26c_AOg",
     video_start: 617,
@@ -25,6 +26,7 @@ export default [
   },
   {
     name: "Train journey to the Norwegian Arctic Circle on the Nordland Line (Nordlandsbanen) in spring",
+    description: "A short clip from a webcam at the front of a train.",
     youtube_url: "https://www.youtube.com/watch?v=cNiN7gOcNI4",
     youtube_id: "cNiN7gOcNI4",
     video_start: 1020,

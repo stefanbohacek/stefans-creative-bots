@@ -46,6 +46,8 @@ const botScript = async () => {
       } else {
         await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
       }
+      
+      console.log({status, alt_text: webcam.description});
 
       mastodon.postImage({
         status,

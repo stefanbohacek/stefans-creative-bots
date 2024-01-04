@@ -22,10 +22,10 @@ const botScript = async () => {
         api_url: process.env.BOTSINSPACE_API_URL,
       });
 
-      // const webcam = randomFromArray(webcams);
-      const webcam = randomFromArray(
-        webcams.filter((webcam) => webcam.video_start === undefined)
-      );
+      const webcam = randomFromArray(webcams);
+      // const webcam = randomFromArray(
+      //   webcams.filter((webcam) => webcam.video_start === undefined)
+      // );
 
       console.log(webcam);
       const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;

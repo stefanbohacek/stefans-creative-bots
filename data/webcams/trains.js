@@ -4,7 +4,7 @@ export default [
     description: "A short clip from a webcam at the front of a train.",
     youtube_url: "https://www.youtube.com/watch?v=g7CJ3pm-e7s",
     youtube_id: "g7CJ3pm-e7s",
-    tags: "#trains #live #norway #webcam",
+    tags: "#trains #norway #webcam",
   },
   {
     name: "Train journey to the Norwegian Arctic Circle on the Nordland Line (Nordlandsbanen) in winter",
@@ -13,7 +13,7 @@ export default [
     youtube_id: "3rDjPLvOShM",
     video_start: 376,
     video_end: 35580,
-    tags: "#trains #live #norway #webcam",
+    tags: "#trains #norway #webcam",
   },
   {
     name: "Train journey to the Norwegian Arctic Circle on the Nordland Line (Nordlandsbanen) in summer",
@@ -22,7 +22,7 @@ export default [
     youtube_id: "yCtt26c_AOg",
     video_start: 617,
     video_end: 35460,
-    tags: "#trains #live #norway #webcam",
+    tags: "#trains #norway #webcam",
   },
   {
     name: "Train journey to the Norwegian Arctic Circle on the Nordland Line (Nordlandsbanen) in spring",
@@ -31,7 +31,7 @@ export default [
     youtube_id: "cNiN7gOcNI4",
     video_start: 1020,
     video_end: 35040,
-    tags: "#trains #live #norway #webcam",
+    tags: "#trains #norway #webcam",
   },
   {
     name: "Scenic train ride from Bergen to Oslo, Norway",
@@ -40,7 +40,7 @@ export default [
     youtube_id: "xisVS_DKpJg",
     video_start: 1780,
     video_end: 21600,
-    tags: "#trains #live #webcam",
+    tags: "#trains #webcam",
   },
   {
     name: "Train ride from St. Moritz, Switzerland to Tirano, Italy (Bernina pass)",
@@ -49,7 +49,7 @@ export default [
     youtube_id: "Mw9qiV7XlFs",
     video_start: 420,
     video_end: 6000,
-    tags: "#trains #live #webcam",
+    tags: "#trains #webcam",
   },
   {
     name: "Train ride from St. Moritz, Switzerland to Tirano, Italy (Bernina pass, winter)",
@@ -58,7 +58,7 @@ export default [
     youtube_id: "XsVJ8PCV-0M",
     video_start: 300,
     video_end: 6840,
-    tags: "#trains #live #webcam",
+    tags: "#trains #webcam",
   },
   {
     name: "Train journey through the Alps, Switzerland",
@@ -67,14 +67,14 @@ export default [
     youtube_id: "ADt_RisXY0U",
     video_start: 0,
     video_end: 20700,
-    tags: "#trains #live #webcam",
+    tags: "#trains #webcam",
   },
   // {
   //   "name": "Train trips through Sweden and Norway",
   //   "description": "A short clip from a webcam at the front of a train.",
   //   "youtube_url": "https://www.youtube.com/watch?v=_oUGgixxywc",
   // youtube_id: "_oUGgixxywc",
-  //   "tags": "#trains #live #norway #sweden #webcam",
+  //   "tags": "#trains #norway #sweden #webcam",
   //  "deleted": true
   // },
   // {
@@ -82,7 +82,7 @@ export default [
   //   "description": "A short clip from a webcam at the front of a train.",
   //   "youtube_url": "https://www.youtube.com/watch?v=luDmzcrr92I",
   // youtube_id: "luDmzcrr92I",
-  //   "tags": "#trains #live #norway #sweden #webcam",
+  //   "tags": "#trains #norway #sweden #webcam",
   //  "deleted": true
   // },
 ];

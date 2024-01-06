@@ -38,7 +38,7 @@ export default [
     description: "A short clip from a webcam at the front of a train.",
     youtube_url: "https://www.youtube.com/watch?v=xisVS_DKpJg",
     youtube_id: "xisVS_DKpJg",
-    video_start: 1780,
+    video_start: 3023,
     video_end: 21600,
     tags: "#trains #webcam",
   },

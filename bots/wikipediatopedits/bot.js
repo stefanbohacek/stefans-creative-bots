@@ -16,6 +16,7 @@ const botScript = async () => {
       dateYesterday.setDate(dateYesterday.getDate() - 1);
       const date = dateYesterday.toISOString().split("T")[0].replaceAll("-", "");
       const url = `https://wikipedia.stefanbohacek.dev/top-edits/?date=${date}`;
+      console.log(url);
 
       const response = await fetch(url);
       const data = await response.json();

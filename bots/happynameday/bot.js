@@ -24,7 +24,8 @@ const botScript = async () => {
           nameDays.push(...respJSON.nameday[country].split(",").filter(name => name !== "n/a"));
         }
 
-        nameDays = [...new Set(nameDays)].map(name => pluralize(name.trim()));
+        // nameDays = [...new Set(nameDays)].map(name => pluralize(name.trim()));
+        nameDays = [...new Set(nameDays.map(name => pluralize(name.trim())))];
 
 
         const status = `Happy name day to all the ${oxfordComma(nameDays)}!\n\n#nameDay #HappyNameDay`

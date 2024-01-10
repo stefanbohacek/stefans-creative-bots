@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@vibecheck",
+  "description": "How's your day going?",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@vibecheck"
+    }
+  ],
+  "interval": "EVERY_DAY_AFTERNOON"
+}

@@ -7,7 +7,7 @@ const botScript = async () => {
   });
 
   const options = ["Great!", "Could be better."];
-  const status = "How's your day going? #vibe #vibecheck #poll";
+  const status = "How's your day going? #vibe #VibeCheck #poll";
   console.log({ status, options });
   mastodon.postPoll(status, options);
 };

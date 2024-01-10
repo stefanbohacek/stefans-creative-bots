@@ -1,3 +1,6 @@
+// time is in UTC, subtract 5 hours for EST
+// '0 8 * * *' would be every day at 8-5 = 3am
+
 const schedules = {
   EVERY_SECOND: '*/1 * * * * *',
   EVERY_FIVE_SECONDS: '*/5 * * * * *',
@@ -15,10 +18,10 @@ const schedules = {
   EVERY_SIX_HOURS: '15 */6 * * *',
   EVERY_TWELVE_HOURS: '1 */12 * * *',
   EVERY_DAY_MIDNIGHT: '0 0 * * *',
-  EVERY_DAY_MORNING: '0 8 * * *',
-  EVERY_DAY_NOON: '0 12 * * *',
-  EVERY_DAY_AFTERNOON: '0 14 * * *',
-  EVERY_DAY_EVENING: '0 19 * * *'
+  EVERY_DAY_MORNING: '0 13 * * *',
+  EVERY_DAY_NOON: '0 17 * * *',
+  EVERY_DAY_AFTERNOON: '0 19 * * *',
+  EVERY_DAY_EVENING: '0 0 * * *'
 };
 
 // const schedules = {

@@ -162,7 +162,7 @@ const botScript = async () => {
         api_url: process.env.BOTSINSPACE_API_URL,
       });
 
-      const status = `The Lick played on ${a(instrument.name)}.\n\n#TheLick #music`;
+      const status = `The Lick played on ${instrument.name}.\n\n#TheLick #music`;
 
       mastodon.postImage({
         status,

@@ -70,7 +70,7 @@ export default [
       {
         language: ["Chinese", "Mandarin"],
         drinking: ["咕咚 咕咚 (gū-dōng gū-dōng)", "咕嚕咕嚕 (gū-lū gū-lū)"],
-        "brushing teeth": ["唰 (shua)[citation needed]"],
+        "brushing teeth": ["唰 (shua)"],
       },
       {
         language: ["Croatian"],
@@ -603,7 +603,7 @@ export default [
         flatulence: ["prut", "prööt"],
         sneezing: ["atshii", "atshiu", "atsiuh", "ätshii", "ätshiu", "ätsiuh"],
         snoring: ["krooh pyyh"],
-        yawning: ["haukotus[citation needed]"],
+        yawning: ["haukotus"],
       },
       {
         language: ["French"],
@@ -1589,7 +1589,7 @@ export default [
           "[zho 7] 嘻嘻 (xī xī)",
           "[zho 8] 嘿嘿 (hēi hēi)",
         ],
-        kiss: ["boh 啵 (This word is a modern creation)[citation needed]"],
+        kiss: ["boh 啵 (This word is a modern creation)"],
       },
       {
         language: ["Croatian"],
@@ -1939,7 +1939,7 @@ export default [
       {
         language: ["Danish"],
         "bee buzzing": ["sum"],
-        "frog croaking": ["kvæk kvæk", "[dan 10] græbæk[citation needed]"],
+        "frog croaking": ["kvæk kvæk", "[dan 10] græbæk"],
       },
       {
         language: ["Dutch"],
@@ -2199,7 +2199,7 @@ export default [
         "sharp strike": [
           "哐啷",
           "[zho 19] (kuāng lāng)",
-          "哐当[citation needed] (kuāng dāng)",
+          "哐当 (kuāng dāng)",
         ],
         "wet strike": ["啪唧 (pā jī)"],
       },

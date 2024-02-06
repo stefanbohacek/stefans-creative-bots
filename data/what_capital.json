@@ -1,11 +1,12 @@
 {
-  "country": "Lebanon",
-  "capital": "Beirut",
+  "country": "Tanzania",
+  "capital": "Dodoma",
   "scores": {
     "siemp@mastodon.social": 1,
     "gligongdaxue@mastodon.scot": 4,
     "Curiosa2Blue@mstdn.social": 1,
-    "prijks@trivia.town": 2
+    "prijks@trivia.town": 2,
+    "jorgecandeias@mastodon.social": 6
   },
-  "current_question": "111144732021206883"
+  "current_question": "111836917486788265"
 }

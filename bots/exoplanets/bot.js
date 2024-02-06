@@ -27,7 +27,11 @@ const botScript = async () => {
           const planetNameSlug = planetName.replace(/ /g, "_");
 
           const url = `https://eyes.nasa.gov/apps/exo/#/planet/${planetNameSlug}`;
-          const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+          // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+          const browser = await puppeteer.connect({
+            browserWSEndpoint: process.env.BROWSERLESS_URL,
+          });
+          
           const page = await browser.newPage();
           await page.setDefaultNavigationTimeout(120000);
 

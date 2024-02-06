@@ -100,7 +100,10 @@ const botScript = async () => {
       api_url: process.env.BOTSINSPACE_API_URL,
     });
 
-    const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+    // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+    const browser = await puppeteer.connect({
+      browserWSEndpoint: process.env.BROWSERLESS_URL,
+    });
 
     process.on("unhandledRejection", (reason, p) => {
       console.error("Unhandled Rejection at: Promise", p, "reason:", reason);

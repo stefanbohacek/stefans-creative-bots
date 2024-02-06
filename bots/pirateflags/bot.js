@@ -15,7 +15,11 @@ const flagUrlBase = "https://stefans-creative-bots.glitch.me";
 const makeFlag = async () => {
   try {
     const url = "https://static.stefanbohacek.dev/pirate-flags/";
-    const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+    // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+    const browser = await puppeteer.connect({
+      browserWSEndpoint: process.env.BROWSERLESS_URL,
+    });
+
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(120000);
 
@@ -56,7 +60,11 @@ const makeFlag = async () => {
 const waveFlag = async () => {
   try {
     const url = `https://static.stefanbohacek.dev/pirate-flags/flag.html?img=${flagUrlBase}/images/pirate-flag.jpg`;
-    const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+    // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+    const browser = await puppeteer.connect({
+      browserWSEndpoint: process.env.BROWSERLESS_URL,
+    });
+
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(120000);
 

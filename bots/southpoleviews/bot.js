@@ -24,7 +24,11 @@ const botScript = async () => {
     
     const station = randomFromArray(stations);
     // const station = randomFromArray(stations.filter(s => s.name === "Troll research station"));
-    const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+    // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+    const browser = await puppeteer.connect({
+      browserWSEndpoint: process.env.BROWSERLESS_URL
+    });
+
     let imageURL;
 
     if (station.image_url){

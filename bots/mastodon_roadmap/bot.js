@@ -42,7 +42,11 @@ const botScript = async () => {
         api_url: process.env.BOTSINSPACE_API_URL,
       });
 
-      const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+      // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+      const browser = await puppeteer.connect({
+        browserWSEndpoint: process.env.BROWSERLESS_URL,
+      });
+
       const page = await browser.newPage();
       await page.setDefaultNavigationTimeout(120000);
 
@@ -174,8 +178,8 @@ const botScript = async () => {
               .join("\n")}
               `;
           }
-          
-          if (text && text.length){
+
+          if (text && text.length) {
             mastodon.post({
               status: `${text}\n\n#mastodon #roadmap`,
             });

@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "This dataset does not exist",
+  "description": "These datasets probably don't exist.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@thisdatasetdoesnotexist"
+    }
+  ],
+  "interval": "EVERY_TWO_HOURS"
+}

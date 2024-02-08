@@ -1,3 +1,5 @@
+// PIRATEFLAGS
+
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -12,83 +14,40 @@ import getRandomInt from "./../../modules/get-random-int.js";
 const botID = "pirateflags";
 const flagUrlBase = "https://stefans-creative-bots.glitch.me";
 
-const makeFlag = async () => {
+const makeFlag = async (page) => {
   try {
     const url = "https://static.stefanbohacek.dev/pirate-flags/";
-    // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
-    const browser = await puppeteer.connect({
-      browserWSEndpoint: process.env.BROWSERLESS_URL,
-    });
-
-    const page = await browser.newPage();
-    await page.setDefaultNavigationTimeout(120000);
-
-    console.log("making a new pirate flag...");
-
-    process.on("unhandledRejection", (reason, p) => {
-      console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-      browser.close();
-    });
-
-    page.setUserAgent(
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-    );
-
-    await page.setViewport({ width: 1030, height: 760 });
     console.log(`visiting ${url} ...`);
     await page.goto(url, {
       // waitUntil: "networkidle0",
       waitUntil: "domcontentloaded",
-      timeout: 120000,
+      // timeout: 120000,
     });
 
-    await page.waitForSelector("img.mw-100", { timeout: 120000 });
-    await page.waitForTimeout(120000);
+    await page.waitForSelector("img.mw-100", { timeout: 30000 });
+    // await page.waitForTimeout(30000);
 
     try {
       await page.screenshot({ path: `temp/pirate-flag.jpg` });
     } catch (err) {
-      console.log(`Error: ${err.message}`);
-    } finally {
-      await browser.close();
+      console.log(`@pirateflags makeFlag screenshot error on line ${err.lineNumber}: ${err.message}`);
     }
-  } catch (error) {
-    console.log("@pirateflags error", error);
+  } catch (err) {
+    console.log(`@pirateflags makeFlag error on line ${err.lineNumber}: ${err.message}`);
   }
 };
 
-const waveFlag = async () => {
+const waveFlag = async (page) => {
   try {
     const url = `https://static.stefanbohacek.dev/pirate-flags/flag.html?img=${flagUrlBase}/images/pirate-flag.jpg`;
-    // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
-    const browser = await puppeteer.connect({
-      browserWSEndpoint: process.env.BROWSERLESS_URL,
-    });
-
-    const page = await browser.newPage();
-    await page.setDefaultNavigationTimeout(120000);
-
-    console.log("waving the pirate flag...");
-
-    process.on("unhandledRejection", (reason, p) => {
-      console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-      browser.close();
-    });
-
-    page.setUserAgent(
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-    );
-
-    await page.setViewport({ width: 1024, height: 700 });
     console.log(`visiting ${url} ...`);
     await page.goto(url, {
       // waitUntil: "networkidle0",
       waitUntil: "domcontentloaded",
-      timeout: 120000,
+      // timeout: 30000,
     });
 
-    await page.waitForSelector("#renderArea", { timeout: 120000 });
-    await page.waitForTimeout(120000);
+    await page.waitForSelector("#renderArea", { timeout: 30000 });
 
     const pirateTalk = randomFromArray([
       `A${"a".repeat(getRandomInt(1, 7))}${"r".repeat(
@@ -117,21 +76,44 @@ const waveFlag = async () => {
         alt_text: description,
       });
     } catch (err) {
-      console.log(`Error: ${err.message}`);
-    } finally {
-      await browser.close();
+      console.log(`@pirateflags waveFlag screenshot error on line ${err.lineNumber}: ${err.message}`);
     }
 
     console.log(description);
-  } catch (error) {
-    console.log("@pirateflags error", error);
+  } catch (err) {
+    console.log(`@pirateflags waveFlag error on line ${err.lineNumber}: ${err.message}`);
   }
 };
 
 const botScript = async () => {
   await (async () => {
-    await makeFlag();
-    await waveFlag();
+    try {
+      const browser = await puppeteer.connect({
+        browserWSEndpoint: process.env.BROWSERLESS_URL,
+      });
+
+      const page = await browser.newPage();
+      await page.setDefaultNavigationTimeout(30000);
+  
+      console.log("making a new pirate flag...");
+  
+      process.on("unhandledRejection", (reason, p) => {
+        console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
+        browser.close();
+      });
+  
+      page.setUserAgent(
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+      );
+  
+      await page.setViewport({ width: 1030, height: 760 });
+  
+      await makeFlag(page);
+      await waveFlag(page);
+      await browser.close();
+    } catch (err) {
+      console.log(`@pirateflags botScript error on line ${err.lineNumber}: ${err.message}`);
+    }
   })();
 };
 

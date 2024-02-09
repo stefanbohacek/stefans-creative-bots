@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "name": "@maps",
   "description": "Exploring historical maps.",
   "links": [
@@ -8,5 +8,5 @@
       "url": "https://botsin.space/@maps"
     }
   ],
-  "interval": "EVERY_THREE_HOURS"
+  "interval": "EVERY_FOUR_HOURS"
 }

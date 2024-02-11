@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "reply": true,
+  "hide": true,
+  "name": "WikiLinks bot prototype",
+  "description": "Work in progress",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@wikilinks"
+    }
+  ]
+}

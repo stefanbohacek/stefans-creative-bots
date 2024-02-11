@@ -24,11 +24,6 @@ const mastodon = new mastodonClient({
   api_url: process.env.BOTSINSPACE_API_URL,
 });
 
-// const mastodon = new mastodonClient({
-//   access_token: process.env.MASTODON_TEST_TOKEN,
-//   api_url: process.env.MASTODON_TEST_TOKEN_API,
-// });
-
 const clients = { mastodon };
 
 if (fs.existsSync(savedDataPath)) {

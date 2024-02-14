@@ -40,8 +40,8 @@ const pickLighthouse = async (lighthouses) => {
     data?.statements?.P625 &&
     data.statements?.P625.length > 0
   ) {
-    const label = data.labels.en;
-    const description = data.descriptions.en;
+    const label = data.labels.en || "";
+    const description = data.descriptions.en || "";
     const image = encodeURIComponent(data.statements.P18[0].value.content);
     const lat = data.statements.P625[0].value.content.latitude;
     const long = data.statements.P625[0].value.content.longitude;
@@ -62,7 +62,7 @@ const pickLighthouse = async (lighthouses) => {
       wikipediaUrl = `\nhttps://www.wikidata.org/wiki/${lighthouse.tags.wikidata}`;
     }
 
-    const status = `${label ? `${label}, `: ''} ${description}.${wikipediaUrl}\n\n#lighthouse #map`;
+    const status = `${label ? `${label}, `: ''} ${description ? `${description}. `: ''} ${wikipediaUrl}\n\n#lighthouse #map`;
     return { status, imageUrl };
   } else {
     return await pickLighthouse(lighthouses);

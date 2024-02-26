@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@mastodon_mobile_apps",
+  "description": "Keep track of latest updates to Mastodon's official mobile apps.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@mastodon_mobile_apps"
+    }
+  ],
+  "interval": "EVERY_FIVE_MINUTES"
+}

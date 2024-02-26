@@ -20,12 +20,14 @@ const botScript = async () => {
       "app": "Mastodon for Android",
       "platform": "Android",
       "github_repo": "mastodon/mastodon-android",
+      "app_download": "https://play.google.com/store/apps/details?id=org.joinmastodon.android",
       "current_version": ""
     },
     {
       "app": "Mastodon for iOS",
       "platform": "iOS",
       "github_repo": "mastodon/mastodon-ios",
+      "app_download": "https://apps.apple.com/us/app/mastodon-for-iphone-and-ipad/id1571998974",
       "current_version": ""
     }
   ];
@@ -54,7 +56,7 @@ const botScript = async () => {
         
         app.current_version = currentRelease.tag_name;
         let status = `New ${app.platform} release!\n\n${currentRelease.body ? currentRelease.body : ""}`;
-        status += `\n\nhttps://github.com/${app.github_repo}/releases\n\n#mastodon #update #release #${app.platform.toLowerCase()}`;
+        status += `\n\n- https://github.com/${app.github_repo}/releases\n- ${app.app_download}\n\n#mastodon #update #release #${app.platform.toLowerCase()}`;
         console.log(status);
         mastodon.post({ status });
 

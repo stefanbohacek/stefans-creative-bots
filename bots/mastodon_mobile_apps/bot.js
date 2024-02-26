@@ -7,6 +7,7 @@ const __dirname = dirname(__filename);
 import fs from 'fs';
 import fetch from 'node-fetch';
 import mastodonClient from "./../../modules/mastodon/index.js";
+import truncate from "./../../modules/truncate.js";
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -55,7 +56,7 @@ const botScript = async () => {
         console.log(`found new ${app.platform} version: ${currentRelease.tag_name}`);
         
         app.current_version = currentRelease.tag_name;
-        let status = `New ${app.platform} release!\n\n${currentRelease.body ? currentRelease.body : ""}`;
+        let status = `New ${app.platform} release!\n\n${currentRelease.body ? truncate(currentRelease.body, 400) : ""}`;
         status += `\n\n- https://github.com/${app.github_repo}/releases\n- ${app.app_download}\n\n#mastodon #update #release #${app.platform.toLowerCase()}`;
         console.log(status);
         mastodon.post({ status });

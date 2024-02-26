@@ -25,7 +25,7 @@ const makeFlag = async (page) => {
     });
 
     await page.waitForSelector("img.mw-100", { timeout: 30000 });
-    // await page.waitForTimeout(30000);
+    await page.waitForTimeout(10000);
 
     try {
       await page.screenshot({ path: `temp/pirate-flag.jpg` });

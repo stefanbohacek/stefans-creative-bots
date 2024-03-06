@@ -53,7 +53,7 @@ const botScript = async () => {
       const currentRelease = data[0];
 
       if (app.current_version !== currentRelease.tag_name){
-        console.log(`found new ${app.platform} version: ${currentRelease.tag_name}`);
+        console.log(`found new ${app.platform} version: ${currentRelease.tag_name} (current: ${app.current_version})`);
         
         app.current_version = currentRelease.tag_name;
         let status = `New ${app.platform} release!\n\n${currentRelease.body ? truncate(currentRelease.body, 400) : ""}`;
@@ -62,7 +62,7 @@ const botScript = async () => {
         mastodon.post({ status });
 
       } else {
-        console.log(`no new ${app.platform} version found`);
+        console.log(`no new ${app.platform} version found (current: ${app.current_version})`);
       }
     }
   }, Promise.resolve());

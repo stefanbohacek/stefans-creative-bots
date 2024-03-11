@@ -36,17 +36,38 @@ const botScript = async () => {
   if (imageURL) {
     try {
       const attributes = JSON.parse(map.attributes);
+
+      console.log({
+        "map.date": map.date,
+        "attributes.country": attributes.country,
+      });
+
       const filePath = `${__dirname}/../../temp/${botID}`;
       await downloadFile(imageURL, filePath);
 
       const source = `https://www.davidrumsey.com/luna/servlet/detail/${map.id}`;
-      const status = `${attributes.full_title.replaceAll('\"', '"')} ${source}\n\n#map #maps #HistoricalMaps`;
-      const description = attributes.pub_note || ""
+      const status = `${attributes.full_title.replaceAll(
+        '"',
+        '"'
+      )} ${source}\n\n#map #maps #HistoricalMaps`;
+      // const description = attributes.pub_note || ""
+      const mapAge = map.date ? ` ${map.date} ` : "n old ";
+      let mapArea = "";
+
+      if (attributes.country && attributes.country.length) {
+        if (Array.isArray(attributes.country)) {
+          mapArea = ` of ${attributes.country.join(", ")}`;
+        } else {
+          mapArea = ` of ${attributes.country}`;
+        }
+      }
+
+      const description = `A${mapAge}map${mapArea} from the website linked in the post.`;
 
       mastodon.postImage({
         status,
         image: filePath,
-        alt_text: description.replaceAll('\"', '"'),
+        alt_text: description,
       });
     } catch (error) {
       console.log("maps error", error);

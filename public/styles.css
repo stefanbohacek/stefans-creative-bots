@@ -1,8 +1,8 @@
-section{
+section {
   margin: 0 auto;
 }
 
-.bot-showcase img{
+.bot-showcase img {
   object-fit: cover;
   width: 100%;
   height: 300px;
@@ -18,10 +18,18 @@ section{
   margin-bottom: 20px;
 }
 
-#back-to-top{
+#back-to-top {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
   padding: 1rem;
   background-color: #272d33;
+}
+
+.fediverse-post {
+  max-width: 500px;
+}
+
+.fediverse-post .invisible {
+  display: none;
 }

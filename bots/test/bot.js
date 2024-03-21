@@ -1,48 +1,6 @@
-// import fetch from "node-fetch";
-// import mastodonClient from "./../../modules/mastodon/index.js";
-// import progressbar from "./../../modules/generators/progressbar.js";
-// import dayOfYear from "./../../modules/day-of-year.js";
-// import isLeapYear from "./../../modules/is-leap-year.js";
-
-// const botScript = async () => {
-//   await (async () => {
-//     try {
-//       const mastodon = new mastodonClient({
-//         access_token: process.env.YEAR_BOT_MASTODON_TOKEN,
-//         api_url: process.env.BOTSINSPACE_API_URL,
-//       });
-
-//       const days = isLeapYear() ? 366 : 365;
-//       const progress = 100 * (dayOfYear()-1/days);
-//       const status = `Testing.`;
-//       console.log(status, progress);
-
-//       progressbar(
-//         {
-//           progress,
-//           // color: "red",
-//           // background: "blue"
-//         },
-//         (err, image) => {
-//           mastodon.postImage({
-//             status,
-//             image,
-//             alt_text: `Progress bar that's ${progress}% full.`,
-//           });
-//         }
-//       );
-//     } catch (error) {
-//       console.log("@year error:", error);
-//     }
-//   })();
-// };
-
-// export default botScript;
-
-
-
 import fetch from "node-fetch";
 import mastodonClient from "./../../modules/mastodon/index.js";
+import overlayGenerator from "./../../modules/generators/overlay.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import downloadFile from "./../../modules/download-file.js";
 import consoleLog from "./../../modules/consolelog.js";
@@ -88,13 +46,12 @@ const pickLighthouse = async (lighthouses) => {
     const image = encodeURIComponent(data.statements.P18[0].value.content);
     const lat = data.statements.P625[0].value.content.latitude;
     const long = data.statements.P625[0].value.content.longitude;
-    let imageUrl = `https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/${image}&width=300`;
+    let imageURL = `https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/${image}&width=300`;
 
-    // consoleLog({ label, description, image, imageUrl });
+    // consoleLog({ label, description, image, imageURL });
+    
+    const mapURL = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/(${long},${lat})/${long},${lat},5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
 
-    imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
-      imageUrl
-    )}(${long},${lat})/${long},${lat},5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
 
     // console.log("data?.sitelinks", data?.sitelinks);
     console.log("lighthouse.tags.wikidata", lighthouse.tags.wikidata);
@@ -106,7 +63,7 @@ const pickLighthouse = async (lighthouses) => {
     }
 
     const status = `${label ? `${label}, `: ''} ${description ? `${description}. `: ''} ${wikipediaUrl}\n\n#lighthouse #map`;
-    return { status, imageUrl };
+    return { status, imageURL, mapURL };
   } else {
     return await pickLighthouse(lighthouses);
   }
@@ -116,20 +73,46 @@ const botScript = async () => {
   const lighthouses = await getLighthouses();
   const lighthouse = await pickLighthouse(lighthouses);
 
-  if (lighthouse && lighthouse.status && lighthouse.imageUrl) {
-    const filePath = `${__dirname}/../../temp/lighthouse.jpg`;
-    await downloadFile(lighthouse.imageUrl, filePath);
+  if (lighthouse && lighthouse.status && lighthouse.imageURL) {
+    const width = 900;
+    const height = 720;
 
-    const mastodon = new mastodonClient({
-      access_token: process.env.MASTODON_TEST_TOKEN,
-      api_url: process.env.BOTSINSPACE_API_URL,
-    });
+    overlayGenerator(
+      [
+        {
+          url: lighthouse.mapURL,
+          x: 0,
+          y: 0,
+          width: width,
+          height: height,
+        },
+        {
+          url: lighthouse.imageURL,
+          x: 0,
+          y: 0,
+          width: 300,
+          // height: height,
+        },
+      ],
+      { width, height },
+      (err, image) => {
+        const status = lighthouse.status;
 
-    mastodon.postImage({
-      status: lighthouse.status,
-      image: filePath,
-      alt_text: "A photo of a lighthouse overlaid on a map.",
-    });
+        console.log("status", status);
+
+        const mastodon = new mastodonClient({
+          access_token: process.env.LIGHTHOUSES_BOT_MASTODON_ACCESS_TOKEN,
+          api_url: process.env.BOTSINSPACE_API_URL,
+        });
+    
+        mastodon.postImage({
+          status,
+          image,
+          alt_text: "A photo of a lighthouse overlaid on a map.",
+        });
+      }
+    );    
+
   } else {
     botScript();
   }

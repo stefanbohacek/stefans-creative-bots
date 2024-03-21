@@ -18,7 +18,7 @@ const schedules = {
   EVERY_SIX_HOURS: '15 */6 * * *',
   EVERY_TWELVE_HOURS: '1 */12 * * *',
   EVERY_DAY_MIDNIGHT: '0 0 * * *',
-  EVERY_DAY_MORNING: '0 12 * * *',
+  EVERY_DAY_MORNING: '0 10 * * *',
   EVERY_DAY_NOON: '0 17 * * *',
   EVERY_DAY_AFTERNOON: '0 19 * * *',
   EVERY_DAY_EVENING: '0 0 * * *'

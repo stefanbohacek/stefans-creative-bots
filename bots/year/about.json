@@ -1,0 +1,7 @@
+{
+  "active": false,
+  "hide": true,
+  "name": "@year",
+  "description": "Work in progress",
+  "interval": "EVERY_DAY_MORNING"
+}

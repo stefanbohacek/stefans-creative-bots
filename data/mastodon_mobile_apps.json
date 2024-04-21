@@ -4,13 +4,13 @@
     "platform": "Android",
     "github_repo": "mastodon/mastodon-android",
     "app_download": "https://play.google.com/store/apps/details?id=org.joinmastodon.android",
-    "current_version": "v2.4.1"
+    "current_version": "v2.5.0"
   },
   {
     "app": "Mastodon for iOS",
     "platform": "iOS",
     "github_repo": "mastodon/mastodon-ios",
     "app_download": "https://apps.apple.com/us/app/mastodon-for-iphone-and-ipad/id1571998974",
-    "current_version": "2024.1"
+    "current_version": "2024.4"
   }
 ]

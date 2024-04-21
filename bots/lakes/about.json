@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "Lakes",
+  "description": "Enjoy views of lakes.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@lakes"
+    }
+  ],
+  "interval": "EVERY_FOUR_HOURS"
+}

@@ -93,15 +93,16 @@ export default [
     latitude: 47.119370,
     longitude: 9.307690,
   },
-  {
-    title: "Lake Naivasha, Kenya.",
-    description:
-      "This webcam usually shows a large lake with mountains in the distance.",
-    link: "https://kenyawebcam.com/cam.pl?cam=naivashacam2&pichr=14",
-    url: "https://kenyawebcam.com/naivashacam2/pic/longonotpic.jpg",
-    latitude: -0.7644,
-    longitude: 36.433651,
-  },
+  // Image doesn't load fully.
+  // {
+  //   title: "Lake Naivasha, Kenya.",
+  //   description:
+  //     "This webcam usually shows a large lake with mountains in the distance.",
+  //   link: "https://kenyawebcam.com/cam.pl?cam=naivashacam2&pichr=14",
+  //   url: "https://kenyawebcam.com/naivashacam2/pic/longonotpic.jpg",
+  //   latitude: -0.7644,
+  //   longitude: 36.433651,
+  // },
   {
     title: "Vierwaldstättersee (Lake Lucerne), Switzerland.",
     description: "This webcam usually shows a view from a steamship that travels around the lake.",

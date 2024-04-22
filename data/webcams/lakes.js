@@ -92,6 +92,14 @@ export default [
     latitude: -0.7644,
     longitude: 36.433651,
   },
+  {
+    title: "Vierwaldstättersee (Lake Lucerne), Switzerland.",
+    description: "This webcam usually shows a view from a steamship that travels around the lake.",
+    link: "https://sgv.roundshot.com/stadtluzern/#/",
+    url: "https://sgv.roundshot.com/download/139753501/?path=stadtluzern",
+    latitude: 46.991901,
+    longitude: 8.502690,
+  },
   // {
   //   title: "TITLE.",
   //   description: "This webcam usually shows DESCRIPTION",

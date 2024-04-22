@@ -84,6 +84,16 @@ export default [
     longitude: -84.144547,
   },
   {
+    title:
+      "Lake Walensee, Switzerland.",
+    description:
+      "This webcam usually shows a view of the lake with a tall mountain behind it, with houses dispersed mostly along the shore. The image may be overlaid with text in German.",
+    link: "https://www.bergfex.com/sommer/walensee/webcams/c5037/",
+    url: "https://images.bergfex.at/webcams/?id=5037&format=4",
+    latitude: 47.119370,
+    longitude: 9.307690,
+  },
+  {
     title: "Lake Naivasha, Kenya.",
     description:
       "This webcam usually shows a large lake with mountains in the distance.",
@@ -99,6 +109,7 @@ export default [
     url: "https://sgv.roundshot.com/download/139753501/?path=stadtluzern",
     latitude: 46.991901,
     longitude: 8.502690,
+    via: "@ckae@swiss.social"
   },
   // {
   //   title: "TITLE.",

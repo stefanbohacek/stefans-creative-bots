@@ -33,7 +33,7 @@ const botScript = async () => {
 
   const mapURL = `🗺️ https://www.openstreetmap.org/?mlat=${webcam.latitude}&mlon=${webcam.longitude}#map=12/${webcam.latitude}/${webcam.longitude}`;
   const weather = await getWeather(webcam.latitude, webcam.longitude);
-  const status = `${webcam.title}\n${webcamUrl}\n${mapURL} #nyc #webcam #city`;
+  const status = `${webcam.title}\n\n${webcamUrl}\n${mapURL}\n\n#nyc #webcam #city`;
   let description = webcam.description;
 
   if (weather && weather.description_full) {

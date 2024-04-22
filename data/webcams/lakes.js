@@ -1,7 +1,7 @@
 export default [
   {
     title:
-      "Lake Michigan, borders of Michigan, Wisconsin, Illinois, and Indiana, United States",
+      "Lake Michigan, borders of Michigan, Wisconsin, Illinois, and Indiana, United States.",
     description:
       "This webcam usually shows a view of the Lake Michigan with a sliver of its beach in the foreground. A long pier with a house at its end crosses the middle of the view.",
     link: "https://www.earthcam.com/usa/michigan/grandhaven/lakemichigan/?cam=lakemichigan",
@@ -10,7 +10,7 @@ export default [
     longitude: -87.222015,
   },
   {
-    title: "Thompson Lake Marina, Casco, Maine, United States",
+    title: "Thompson Lake Marina, Casco, Maine, United States.",
     description:
       "This webcam usually shows a large lake with trees and a few houses in the distance.",
     link: "https://myearthcam.com/thompsonlake",
@@ -20,7 +20,7 @@ export default [
   },
   {
     title:
-      "Lake Tahoe, along the borders of Nevada and California, United States",
+      "Lake Tahoe, along the borders of Nevada and California, United States.",
     description:
       "This webcam usually shows a few tall trees with the lake behind them, and a mountain in the background.",
     link: "https://www.earthcam.com/usa/nevada/laketahoe/?cam=laketahoe",
@@ -29,7 +29,7 @@ export default [
     longitude: -119.977219,
   },
   {
-    title: "Rainy Lake, along the border between the United States and Canada",
+    title: "Rainy Lake, along the border between the United States and Canada.",
     description:
       "This webcam usually shows a large lake with a few trees in the foreground and the background.",
     link: "https://www.earthcam.com/usa/minnesota/internationalfalls/?cam=rainylake",
@@ -38,7 +38,7 @@ export default [
     longitude: -93.574463,
   },
   {
-    title: "Blue Mountain Lake,	Adirondacks, New York, United States",
+    title: "Blue Mountain Lake,	Adirondacks, New York, United States.",
     description:
       "This webcam usually shows a lake in the distance surrounded by trees.",
     link: "https://www.earthcam.com/usa/newyork/indianlake/bluemountainlake/?cam=bluemountainlake",
@@ -47,7 +47,7 @@ export default [
     longitude: -74.414528,
   },
   {
-    title: "Lake Annecy, France",
+    title: "Lake Annecy, France.",
     description:
       "This webcam usually shows a large lake, covered by trees in the foreground, and beautiful mountains in the back.",
     link: "https://en.lac-annecy.com/webcams/",
@@ -56,7 +56,7 @@ export default [
     longitude: 6.12835,
   },
   {
-    title: "Lake Annecy, France",
+    title: "Lake Annecy, France.",
     description:
       "This webcam usually shows a large lake with houses on the further side away from the camera, and mountains behind it.",
     link: "https://en.lac-annecy.com/webcams",
@@ -65,7 +65,7 @@ export default [
     longitude: 6.12835,
   },
   {
-    title: "Sebec Lake, Maine, United States",
+    title: "Sebec Lake, Maine, United States.",
     description:
       "This webcam usually shows a large lake with trees and mountains behind it.",
     link: "https://www.sebeclake.net/index.php/westview",
@@ -74,23 +74,26 @@ export default [
     longitude: -69.3383812,
   },
   {
-    title: "Lake Constance at the borders of Germany, Switzerland, and Austria",
-    description: "This webcam usually shows a view of the lake with tall and colorful buildings on the further side away from camera. The image may be overlaid with text in German.",
+    title:
+      "Lake Constance at the borders of Germany, Switzerland, and Austria.",
+    description:
+      "This webcam usually shows a view of the lake with tall and colorful buildings on the further side away from camera. The image may be overlaid with text in German.",
     link: "https://www.bergfex.com/sommer/konstanz/webcams/c20748/",
     url: "https://images.bergfex.at/webcams/?id=20748&format=4",
-    latitude: 49.790150,
+    latitude: 49.79015,
     longitude: -84.144547,
   },
   {
-    title: "Lake Naivasha, Kenya",
-    description: "This webcam usually shows a large lake with mountains in the distance.",
+    title: "Lake Naivasha, Kenya.",
+    description:
+      "This webcam usually shows a large lake with mountains in the distance.",
     link: "https://kenyawebcam.com/cam.pl?cam=naivashacam2&pichr=14",
     url: "https://kenyawebcam.com/naivashacam2/pic/longonotpic.jpg",
-    latitude: -0.764400,
+    latitude: -0.7644,
     longitude: 36.433651,
   },
   // {
-  //   title: "TITLE",
+  //   title: "TITLE.",
   //   description: "This webcam usually shows DESCRIPTION",
   //   link: "WEBCAMPAGE",
   //   url: "https://www.earthcam.com/cams/includes/image.php?img=WEBCAMIMAGEID&logo=0&playbutton=0&s=1",

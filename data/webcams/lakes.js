@@ -84,14 +84,13 @@ export default [
     longitude: -84.144547,
   },
   {
-    title:
-      "Lake Walensee, Switzerland.",
+    title: "Lake Walensee, Switzerland.",
     description:
       "This webcam usually shows a view of the lake with a tall mountain behind it, with houses dispersed mostly along the shore. The image may be overlaid with text in German.",
     link: "https://www.bergfex.com/sommer/walensee/webcams/c5037/",
     url: "https://images.bergfex.at/webcams/?id=5037&format=4",
-    latitude: 47.119370,
-    longitude: 9.307690,
+    latitude: 47.11937,
+    longitude: 9.30769,
   },
   // Image doesn't load fully.
   // {
@@ -105,12 +104,22 @@ export default [
   // },
   {
     title: "Vierwaldstättersee (Lake Lucerne), Switzerland.",
-    description: "This webcam usually shows a view from a steamship that travels around the lake.",
+    description:
+      "This webcam usually shows a view from a steamship that travels around the lake.",
     link: "https://sgv.roundshot.com/stadtluzern/#/",
     url: "https://sgv.roundshot.com/download/139753501/?path=stadtluzern",
     latitude: 46.991901,
-    longitude: 8.502690,
-    via: "@ckae@swiss.social"
+    longitude: 8.50269,
+    via: "@ckae@swiss.social",
+  },
+  {
+    title: "Schoodic Lake, Maine, United States.",
+    description:
+      "This webcam usually shows a large lake with hills and trees in the distance",
+    link: "https://www.lakeviewpltme.org/schoodic-lake-norway-point-view",
+    url: "https://trcwebcams.org/camera15/thumb15.jpg",
+    latitude: 45.356758,
+    longitude: -68.991524,
   },
   // {
   //   title: "TITLE.",

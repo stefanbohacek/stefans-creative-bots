@@ -12,10 +12,28 @@ const __dirname = dirname(__filename);
 
 const getLighthouses = async () => {
   let lighthouses = [];
-  const apiUrl =
-    "https://www.overpass-api.de/api/interpreter?data=%0A%09%09%09%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3B%0A%09%09%09(%0A%09%09%09%20%20node%5B%22seamark%3Alight%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20node%5B%22seamark%3Alight%3A1%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20way%5B%22seamark%3Alight%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20way%5B%22seamark%3Alight%3A1%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09)%3B%0A%09%09%09out%20body%3B%0A%09%09%09%3E%3B%0A%09%09%09out%20skel%20qt%3B%0A%09%09";
 
-  const response = await fetch(apiUrl);
+  const overpassData = `
+  [out:json][timeout:300];
+  (
+      node["seamark:light:sequence"](-90,-180,90,180);
+      node["seamark:light:1:sequence"](-90,-180,90,180);
+      way["seamark:light:sequence"](-90,-180,90,180);
+      way["seamark:light:1:sequence"](-90,-180,90,180);
+  );
+  out body;
+  >;
+  out skel qt;
+`;
+
+  const overpassUrl = `https://www.overpass-api.de/api/interpreter?data=${encodeURIComponent(
+    overpassData
+  )}`;
+
+  // const overpassUrl =
+  //   "https://www.overpass-api.de/api/interpreter?data=%0A%09%09%09%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3B%0A%09%09%09(%0A%09%09%09%20%20node%5B%22seamark%3Alight%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20node%5B%22seamark%3Alight%3A1%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20way%5B%22seamark%3Alight%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20way%5B%22seamark%3Alight%3A1%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09)%3B%0A%09%09%09out%20body%3B%0A%09%09%09%3E%3B%0A%09%09%09out%20skel%20qt%3B%0A%09%09";
+
+  const response = await fetch(overpassUrl);
   const data = await response.json();
   if (data && data.elements && data.elements.length > 0) {
     lighthouses = data.elements.filter(
@@ -62,7 +80,9 @@ const pickLighthouse = async (lighthouses) => {
       wikipediaUrl = `\nhttps://www.wikidata.org/wiki/${lighthouse.tags.wikidata}`;
     }
 
-    const status = `${label ? `${label}, `: ''} ${description ? `${description}. `: ''} ${wikipediaUrl}\n\n#lighthouse #map`;
+    const status = `${label ? `${label}, ` : ""} ${
+      description ? `${description}. ` : ""
+    } ${wikipediaUrl}\n\n#lighthouse #map`;
     return { status, imageUrl };
   } else {
     return await pickLighthouse(lighthouses);

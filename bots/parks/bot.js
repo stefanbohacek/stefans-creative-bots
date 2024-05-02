@@ -3,6 +3,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import downloadFile from "./../../modules/download-file.js";
 import consoleLog from "./../../modules/consolelog.js";
+import sleep from "./../../modules/sleep.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -50,6 +51,7 @@ const pickPark = async (parks) => {
   let wikipediaUrl = "";
 
   if (
+    data?.statements?.P31[0].value.content === "Q22698" &&   
     data?.statements?.P18 &&
     data.statements?.P18.length > 0 &&
     data?.statements?.P625 &&
@@ -82,6 +84,7 @@ const pickPark = async (parks) => {
     } ${wikipediaUrl}\n\n#parks #outdoors #map`;
     return { status, imageUrl };
   } else {
+    await sleep(2000);
     return await pickPark(parks);
   }
 };
@@ -100,7 +103,7 @@ const botScript = async () => {
     });
 
     mastodon.postImage({
-      status: park.status,
+      status: park.status.replace("  ", " "),
       image: filePath,
       alt_text: "A photo of a park from the linked website, overlaid on a map.",
     });

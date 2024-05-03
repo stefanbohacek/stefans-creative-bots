@@ -3,6 +3,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import downloadFile from "./../../modules/download-file.js";
 import consoleLog from "./../../modules/consolelog.js";
+import sleep from "./../../modules/sleep.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -10,16 +11,13 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const getLighthouses = async () => {
-  let lighthouses = [];
+const getParks = async () => {
+  let parks = [];
 
   const overpassData = `
-  [out:json][timeout:300];
+  [out:json][timeout:1000];
   (
-      node["seamark:light:sequence"](-90,-180,90,180);
-      node["seamark:light:1:sequence"](-90,-180,90,180);
-      way["seamark:light:sequence"](-90,-180,90,180);
-      way["seamark:light:1:sequence"](-90,-180,90,180);
+    node["leisure"="park"](-90,-180,90,180);
   );
   out body;
   >;
@@ -36,23 +34,24 @@ const getLighthouses = async () => {
   const response = await fetch(overpassUrl);
   const data = await response.json();
   if (data && data.elements && data.elements.length > 0) {
-    lighthouses = data.elements.filter(
-      (lighthouse) => lighthouse.tags && lighthouse.tags.wikidata
+    parks = data.elements.filter(
+      (park) => park.tags && park.tags.wikidata
     );
   }
-  // consoleLog(lighthouses)
-  return lighthouses;
+  // consoleLog(parks)
+  return parks;
 };
 
-const pickLighthouse = async (lighthouses) => {
-  const lighthouse = randomFromArray(lighthouses);
-  const apiUrl = `https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/${lighthouse.tags.wikidata}`;
+const pickPark = async (parks) => {
+  const park = randomFromArray(parks);
+  const apiUrl = `https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/${park.tags.wikidata}`;
   const response = await fetch(apiUrl);
   const data = await response.json();
 
   let wikipediaUrl = "";
 
   if (
+    data?.statements?.P31[0].value.content === "Q22698" &&   
     data?.statements?.P18 &&
     data.statements?.P18.length > 0 &&
     data?.statements?.P625 &&
@@ -72,40 +71,41 @@ const pickLighthouse = async (lighthouses) => {
     )}(${long},${lat})/${long},${lat},5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
 
     // console.log("data?.sitelinks", data?.sitelinks);
-    console.log("lighthouse.tags.wikidata", lighthouse.tags.wikidata);
+    console.log("park.tags.wikidata", park.tags.wikidata);
 
     if (data?.sitelinks?.enwiki?.url) {
       wikipediaUrl = `\n${data.sitelinks.enwiki.url}`;
     } else {
-      wikipediaUrl = `\nhttps://www.wikidata.org/wiki/${lighthouse.tags.wikidata}`;
+      wikipediaUrl = `\nhttps://www.wikidata.org/wiki/${park.tags.wikidata}`;
     }
 
     const status = `${label ? `${label}, ` : ""} ${
       description ? `${description}. ` : ""
-    } ${wikipediaUrl}\n\n#lighthouse #map`;
+    } ${wikipediaUrl}\n\n#parks #outdoors #map`;
     return { status, imageUrl };
   } else {
-    return await pickLighthouse(lighthouses);
+    await sleep(2000);
+    return await pickPark(parks);
   }
 };
 
 const botScript = async () => {
-  const lighthouses = await getLighthouses();
-  const lighthouse = await pickLighthouse(lighthouses);
+  const parks = await getParks();
+  const park = await pickPark(parks);
 
-  if (lighthouse && lighthouse.status && lighthouse.imageUrl) {
-    const filePath = `${__dirname}/../../temp/lighthouse.jpg`;
-    await downloadFile(lighthouse.imageUrl, filePath);
+  if (park && park.status && park.imageUrl) {
+    const filePath = `${__dirname}/../../temp/park.jpg`;
+    await downloadFile(park.imageUrl, filePath);
 
     const mastodon = new mastodonClient({
-      access_token: process.env.LIGHTHOUSES_BOT_MASTODON_ACCESS_TOKEN,
+      access_token: process.env.PARKS_BOT_MASTODON_ACCESS_TOKEN,
       api_url: process.env.BOTSINSPACE_API_URL,
     });
 
     mastodon.postImage({
-      status: lighthouse.status,
+      status: park.status.replace("  ", " "),
       image: filePath,
-      alt_text: "A photo of a lighthouse overlaid on a map.",
+      alt_text: "A photo of a park from the linked website, overlaid on a map.",
     });
   } else {
     botScript();

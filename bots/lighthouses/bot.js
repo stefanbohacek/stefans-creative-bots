@@ -63,7 +63,7 @@ const pickLighthouse = async (lighthouses) => {
     const image = encodeURIComponent(data.statements.P18[0].value.content);
     const lat = data.statements.P625[0].value.content.latitude;
     const long = data.statements.P625[0].value.content.longitude;
-    let imageUrl = `https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/${image}&width=300`;
+    let imageUrl = `https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/${image}&width=410`;
 
     // consoleLog({ label, description, image, imageUrl });
 

@@ -12,81 +12,97 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const getParks = async () => {
-  let parks = [];
-
-  const overpassData = `
-  [out:json][timeout:1000];
-  (
-    node["leisure"="park"](-90,-180,90,180);
-  );
-  out body;
-  >;
-  out skel qt;
-`;
-
-  const overpassUrl = `https://www.overpass-api.de/api/interpreter?data=${encodeURIComponent(
-    overpassData
-  )}`;
-
-  // const overpassUrl =
-  //   "https://www.overpass-api.de/api/interpreter?data=%0A%09%09%09%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3B%0A%09%09%09(%0A%09%09%09%20%20node%5B%22seamark%3Alight%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20node%5B%22seamark%3Alight%3A1%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20way%5B%22seamark%3Alight%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20way%5B%22seamark%3Alight%3A1%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09)%3B%0A%09%09%09out%20body%3B%0A%09%09%09%3E%3B%0A%09%09%09out%20skel%20qt%3B%0A%09%09";
-
-  const response = await fetch(overpassUrl);
-  const data = await response.json();
-  if (data && data.elements && data.elements.length > 0) {
-    parks = data.elements.filter(
-      (park) => park.tags && park.tags.wikidata
-    );
+  const query = `
+  SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image
+  {
+    ?item wdt:P31 wd:Q22698 .
+    ?item wdt:P131 ?place .  
+    ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") . 
+    ?item wdt:P18 ?image;
+           p:P625 [
+             ps:P625 ?coord;
+             psv:P625 [
+               wikibase:geoLongitude ?lon;
+               wikibase:geoLatitude ?lat;
+             ] ;
+           ]
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
   }
+  `;
+
+  const apiUrl = `https://query.wikidata.org/sparql?query=${encodeURIComponent(
+    query
+  )}&format=json`;
+  const resp = await fetch(apiUrl);
+  const respJSON = await resp.json();
+  const parks = respJSON?.results?.bindings || [];
   // consoleLog(parks)
   return parks;
 };
 
 const pickPark = async (parks) => {
   const park = randomFromArray(parks);
-  const apiUrl = `https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/${park.tags.wikidata}`;
-  const response = await fetch(apiUrl);
-  const data = await response.json();
 
-  let wikipediaUrl = "";
+  const p = {
+    item: {
+      type: "uri",
+      value: "http://www.wikidata.org/entity/Q1185583",
+    },
+    image: {
+      type: "uri",
+      value:
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Demianiplatz%202006.jpg",
+    },
+    lon: {
+      datatype: "http://www.w3.org/2001/XMLSchema#double",
+      type: "literal",
+      value: "14.984879",
+    },
+    lat: {
+      datatype: "http://www.w3.org/2001/XMLSchema#double",
+      type: "literal",
+      value: "51.154159",
+    },
+    itemLabel: {
+      "xml:lang": "en",
+      type: "literal",
+      value: "Demianiplatz",
+    },
+    placeLabel: {
+      "xml:lang": "en",
+      type: "literal",
+      value: "Görlitz",
+    },
+  };
 
-  if (
-    data?.statements?.P31[0].value.content === "Q22698" &&   
-    data?.statements?.P18 &&
-    data.statements?.P18.length > 0 &&
-    data?.statements?.P625 &&
-    data.statements?.P625.length > 0
-  ) {
-    const label = data.labels.en || "";
-    const description = data.descriptions.en || "";
-    const image = encodeURIComponent(data.statements.P18[0].value.content);
-    const lat = data.statements.P625[0].value.content.latitude;
-    const long = data.statements.P625[0].value.content.longitude;
-    let imageUrl = `https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/${image}&width=410`;
+  const label = park.itemLabel.value || "";
+  const description = park.itemDescription.value || "";
 
-    // consoleLog({ label, description, image, imageUrl });
+  // const image = encodeURIComponent(park.image.value);
+  const image = park.image.value.split(
+    "http://commons.wikimedia.org/wiki/Special:FilePath/"
+  )[1];
+  let imageUrl = `https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/${image}&width=410`;
+  const lat = park.lat.value || "";
+  const long = park.lon.value || "";
 
-    imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
-      imageUrl
-    )}(${long},${lat})/${long},${lat},5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
+  consoleLog({ label, description, image, imageUrl });
 
-    // console.log("data?.sitelinks", data?.sitelinks);
-    console.log("park.tags.wikidata", park.tags.wikidata);
+  imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
+    imageUrl
+  )}(${long},${lat})/${long},${lat},5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
 
-    if (data?.sitelinks?.enwiki?.url) {
-      wikipediaUrl = `\n${data.sitelinks.enwiki.url}`;
-    } else {
-      wikipediaUrl = `\nhttps://www.wikidata.org/wiki/${park.tags.wikidata}`;
-    }
+  consoleLog({ imageUrl });
 
-    const status = `${label ? `${label}, ` : ""} ${
-      description ? `${description}. ` : ""
-    } ${wikipediaUrl}\n\n#parks #outdoors #map`;
-    return { status, imageUrl };
-  } else {
-    await sleep(2000);
-    return await pickPark(parks);
-  }
+  // console.log("data?.sitelinks", data?.sitelinks);
+  // console.log("park.tags.wikidata", park.tags.wikidata);
+  const wikidata = park.item.value.split("/entity/")[1];
+  const wikipediaUrl = `\nhttps://www.wikidata.org/wiki/${wikidata}`;
+
+  const status = `${label ? `${label}, ` : ""} ${
+    description ? `${description}. ` : ""
+  } ${wikipediaUrl}\n\n#parks #outdoors #map`;
+  return { status, imageUrl };
 };
 
 const botScript = async () => {

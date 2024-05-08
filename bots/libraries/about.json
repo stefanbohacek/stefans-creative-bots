@@ -1,0 +1,12 @@
+{
+  "active": false,
+  "name": "@libraries",
+  "description": "Libraries around the world.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@libraries"
+    }   
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

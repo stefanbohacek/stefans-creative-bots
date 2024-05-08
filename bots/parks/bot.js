@@ -42,39 +42,6 @@ const getParks = async () => {
 
 const pickPark = async (parks) => {
   const park = randomFromArray(parks);
-
-  const p = {
-    item: {
-      type: "uri",
-      value: "http://www.wikidata.org/entity/Q1185583",
-    },
-    image: {
-      type: "uri",
-      value:
-        "http://commons.wikimedia.org/wiki/Special:FilePath/Demianiplatz%202006.jpg",
-    },
-    lon: {
-      datatype: "http://www.w3.org/2001/XMLSchema#double",
-      type: "literal",
-      value: "14.984879",
-    },
-    lat: {
-      datatype: "http://www.w3.org/2001/XMLSchema#double",
-      type: "literal",
-      value: "51.154159",
-    },
-    itemLabel: {
-      "xml:lang": "en",
-      type: "literal",
-      value: "Demianiplatz",
-    },
-    placeLabel: {
-      "xml:lang": "en",
-      type: "literal",
-      value: "Görlitz",
-    },
-  };
-
   const label = park.itemLabel.value || "";
   const description = park.itemDescription.value || "";
 

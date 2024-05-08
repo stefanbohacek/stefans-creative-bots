@@ -1,8 +1,7 @@
-import fetch from "node-fetch";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
+import wikidata from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/download-file.js";
-import consoleLog from "./../../modules/consolelog.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -10,103 +9,60 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const getParks = async () => {
-  let parks = [];
-
-  const overpassData = `
-  [out:json][timeout:1000];
-  (
-    node["leisure"="park"](-90,-180,90,180);
-  );
-  out body;
-  >;
-  out skel qt;
-`;
-
-  const overpassUrl = `https://www.overpass-api.de/api/interpreter?data=${encodeURIComponent(
-    overpassData
-  )}`;
-
-  // const overpassUrl =
-  //   "https://www.overpass-api.de/api/interpreter?data=%0A%09%09%09%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3B%0A%09%09%09(%0A%09%09%09%20%20node%5B%22seamark%3Alight%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20node%5B%22seamark%3Alight%3A1%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20way%5B%22seamark%3Alight%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09%20%20way%5B%22seamark%3Alight%3A1%3Asequence%22%5D(-90%2C-180%2C90%2C180)%3B%0A%09%09%09)%3B%0A%09%09%09out%20body%3B%0A%09%09%09%3E%3B%0A%09%09%09out%20skel%20qt%3B%0A%09%09";
-
-  const response = await fetch(overpassUrl);
-  const data = await response.json();
-  if (data && data.elements && data.elements.length > 0) {
-    parks = data.elements.filter(
-      (park) => park.tags && park.tags.wikidata
-    );
-  }
-  // consoleLog(parks)
-  return parks;
-};
-
-const pickPark = async (parks) => {
-  const park = randomFromArray(parks);
-  const apiUrl = `https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/${park.tags.wikidata}`;
-  const response = await fetch(apiUrl);
-  const data = await response.json();
-
-  let wikipediaUrl = "";
-
-  if (
-    data?.statements?.P18 &&
-    data.statements?.P18.length > 0 &&
-    data?.statements?.P625 &&
-    data.statements?.P625.length > 0
-  ) {
-    const label = data.labels.en || "";
-    const description = data.descriptions.en || "";
-    const image = encodeURIComponent(data.statements.P18[0].value.content);
-    const lat = data.statements.P625[0].value.content.latitude;
-    const long = data.statements.P625[0].value.content.longitude;
-    let imageUrl = `https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/${image}&width=300`;
-
-    // consoleLog({ label, description, image, imageUrl });
-
-    imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
-      imageUrl
-    )}(${long},${lat})/${long},${lat},5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
-
-    // console.log("data?.sitelinks", data?.sitelinks);
-    console.log("park.tags.wikidata", park.tags.wikidata);
-
-    if (data?.sitelinks?.enwiki?.url) {
-      wikipediaUrl = `\n${data.sitelinks.enwiki.url}`;
-    } else {
-      wikipediaUrl = `\nhttps://www.wikidata.org/wiki/${park.tags.wikidata}`;
-    }
-
-    const status = `${label ? `${label}, ` : ""} ${
-      description ? `${description}. ` : ""
-    } ${wikipediaUrl}\n\n#parks #outdoors #map`;
-    return { status, imageUrl };
-  } else {
-    return await pickPark(parks);
-  }
-};
-
 const botScript = async () => {
-  const parks = await getParks();
-  const park = await pickPark(parks);
+  const items = await wikidata(`
+    SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
+      ?item wdt:P31 wd:Q28564 .
+      ?item wdt:P131 ?place .  
+      ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") . 
+      ?item wdt:P18 ?image;
+            p:P625 [
+              ps:P625 ?coord;
+              psv:P625 [
+                wikibase:geoLongitude ?lon;
+                wikibase:geoLatitude ?lat;
+              ] ;
+            ]
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+      {
+        ?article schema:about ?item .
+        ?article schema:inLanguage "en" .
+        FILTER (SUBSTR(str(?article), 1, 25) = "https://en.wikipedia.org/")
+      }
+    } 
+  `);
 
-  if (park && park.status && park.imageUrl) {
-    const filePath = `${__dirname}/../../temp/park.jpg`;
-    await downloadFile(park.imageUrl, filePath);
+  const item = randomFromArray(items);
+  console.log(item);
+  let imageUrl = "";
 
-    const mastodon = new mastodonClient({
-      access_token: process.env.PARKS_BOT_MASTODON_ACCESS_TOKEN,
-      api_url: process.env.BOTSINSPACE_API_URL,
-    });
-
-    mastodon.postImage({
-      status: park.status,
-      image: filePath,
-      alt_text: "A photo of a park from the linked website, overlaid on a map.",
-    });
-  } else {
-    botScript();
+  if (item.image) {
+    imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
+      item.image
+    )}(${item.long},${item.lat})/${item.long},${
+      item.lat
+    },5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
   }
+
+  const status = `${item.label ? `${item.label}, ` : ""} ${
+    item.description ? `${item.description}. ` : ""
+  }\n\n${item.wikipediaUrl}\n\n#libraries #books #map`;
+
+  const filePath = `${__dirname}/../../temp/library.jpg`;
+  await downloadFile(imageUrl, filePath);
+
+  const mastodon = new mastodonClient({
+    // access_token: process.env.LIBRARIES_BOT_MASTODON_ACCESS_TOKEN,
+    access_token: process.env.MASTODON_TEST_TOKEN,
+    api_url: process.env.BOTSINSPACE_API_URL,
+  });
+
+  mastodon.postImage({
+    status: status.replace("  ", " "),
+    image: filePath,
+    alt_text:
+      "A photo of or from a library from the linked website, overlaid on a cropped world map where it's located.",
+  });
 
   return true;
 };

@@ -3,6 +3,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 
 import downloadFile from "./../../modules/download-file.js";
 import randomFromArray from "./../../modules/random-from-array.js";
+import getImageLuminosity from "./../../modules/get-image-luminosity.js";
 import getWeather from "./../../modules/get-weather.js";
 
 import { dirname } from "path";
@@ -25,21 +26,27 @@ const botScript = async () => {
   const filePath = `${__dirname}/../../temp/${botID}.jpg`;
   await downloadFile(webcam.url, filePath);
 
-  const mapURL = `🗺️ https://www.openstreetmap.org/?mlat=${webcam.latitude}&mlon=${webcam.longitude}#map=12/${webcam.latitude}/${webcam.longitude}`;
-  const weather = await getWeather(webcam.latitude, webcam.longitude);
-  const status = `${webcam.title}\n\n${webcamUrl}\n${mapURL}\n\n#lake #lakes #outdoors #webcam`;
-  let description = webcam.description;
+  const luminosity = await getImageLuminosity(filePath);
 
-  if (weather && weather.description_full) {
-    description += ` ${weather.description_full}`;
+  if (luminosity > 40) {
+    const mapURL = `🗺️ https://www.openstreetmap.org/?mlat=${webcam.latitude}&mlon=${webcam.longitude}#map=12/${webcam.latitude}/${webcam.longitude}`;
+    const weather = await getWeather(webcam.latitude, webcam.longitude);
+    const status = `${webcam.title}\n\n${webcamUrl}\n${mapURL}\n\n#lake #lakes #outdoors #webcam`;
+    let description = webcam.description;
+  
+    if (weather && weather.description_full) {
+      description += ` ${weather.description_full}`;
+    }
+  
+    mastodon.postImage({
+      status,
+      image: filePath,
+      alt_text: description,
+    });
+    return true;
+  } else {
+    return await botScript();
   }
-
-  mastodon.postImage({
-    status,
-    image: filePath,
-    alt_text: description,
-  });
-  return true;
 };
 
 export default botScript;

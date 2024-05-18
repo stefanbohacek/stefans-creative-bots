@@ -32,6 +32,10 @@ const postImageFn = (client, options, cb) => {
         if (options.in_reply_to_id) {
           statusObj.in_reply_to_id = options.in_reply_to_id;
         }
+        
+        if (options.spoiler_text) {
+          statusObj.spoiler_text = options.spoiler_text;
+        }        
 
         client.post("statuses", statusObj, (err, data, response) => {
           if (err) {

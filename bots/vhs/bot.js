@@ -50,6 +50,7 @@ const botScript = async () => {
 
       mastodon.postImage({
         status,
+        spoiler_text: "May contain flashing images.",
         image: __dirname + `/../../temp/${botID}.mp4`,
         alt_text: webcam.description,
       });

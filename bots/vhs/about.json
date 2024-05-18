@@ -1,0 +1,12 @@
+{
+  "active": false,
+  "name": "@vhs",
+  "description": "Analog noise.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@vhs"
+    }
+  ],
+  "interval": "EVERY_FOUR_HOURS"
+}

@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "name": "@vhs",
   "description": "Analog noise.",
   "links": [
@@ -8,5 +8,5 @@
       "url": "https://botsin.space/@vhs"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_SIX_HOURS"
 }

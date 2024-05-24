@@ -80,7 +80,7 @@ export default [
     video_end: 810,
   },
   {
-    description: "DESCRIPTION",
+    description: "A short clip of an analog VHS noise, mostly a dark screen with some random visual artifacts occasionally popping in.",
     youtube_url: "https://www.youtube.com/watch?v=cmHErUOlxCA",
     youtube_id: "cmHErUOlxCA",
     tags: "#vhs #analog",

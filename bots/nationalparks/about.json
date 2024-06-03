@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@nationalparks",
+  "description": "National parks around the world.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@NationalParks"
+    }   
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

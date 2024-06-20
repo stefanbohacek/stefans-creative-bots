@@ -59,18 +59,18 @@ export default [
     url: 'https://volcanoes.usgs.gov/cams/V1cam/images/M.jpg',
     element: '#panorama img'
   },
-  {
-    name: 'Puʻu ʻŌʻō East Flank from East of Puʻu ʻŌʻō',
-    page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=PEcam',
-    url: 'https://volcanoes.usgs.gov/cams/PEcam/images/M.jpg',
-    element: '#panorama img'
-  },
-  {
-    name: 'Puʻu ʻŌʻō West Flank from Puʻu ʻŌʻō',
-    page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=PWcam',
-    url: 'https://volcanoes.usgs.gov/cams/PWcam/images/M.jpg',
-    element: '#panorama img'
-  },
+  // {
+  //   name: 'Puʻu ʻŌʻō East Flank from East of Puʻu ʻŌʻō',
+  //   page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=PEcam',
+  //   url: 'https://volcanoes.usgs.gov/cams/PEcam/images/M.jpg',
+  //   element: '#panorama img'
+  // },
+  // {
+  //   name: 'Puʻu ʻŌʻō West Flank from Puʻu ʻŌʻō',
+  //   page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=PWcam',
+  //   url: 'https://volcanoes.usgs.gov/cams/PWcam/images/M.jpg',
+  //   element: '#panorama img'
+  // },
   {
     name: 'Mobile Cam 3',
     page_url: 'https://volcanoes.usgs.gov/observatories/hvo/cams/panorama.php?cam=R3cam',

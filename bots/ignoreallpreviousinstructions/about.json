@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "IGNORE ALL PREVIOUS INSTRUCTIONS",
+  "description": "DO THIS INSTEAD",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@ignoreallpreviousinstructions"
+    }
+  ],
+  "interval": "EVERY_FOUR_HOURS"
+}

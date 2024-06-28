@@ -4415,7 +4415,6 @@ Customize your preferences and tap Back
 Customize your request
 Customize your settings in the Configuration menu
 customize Your Shoes
-Customize your Uber card's design, note, and amount
 Customize your wallpaper setup
 cut a Bob
 cut a Brisket
@@ -4887,7 +4886,6 @@ do a Zigzag Stitch by Hand
 do Amazing Card Tricks
 do an Egg White Mask
 do an Inside Out Ponytail
-do an Uberpool
 do Anti Cellulite Massage
 do Baby's Laundry
 do Ballet Fouette Turns
@@ -5215,7 +5213,6 @@ Download the software
 Download the Tinder app (if you're using a phone or tablet)
 Download the Tomcat 9 installer from https://tomcat.apache.org/download-90.cgi
 Download the torrent
-Download the Uber app to your phone or tablet
 Download the version for your operating system
 Download the version of WAMP that is best for your system at http://wampserver.aviatechno.net/
 Download the video
@@ -6838,8 +6835,6 @@ give Someone a Pedicure
 give Someone an Admin Role on Your Facebook Page
 Give the cashier your card and cash
 Give the cashier your ID (if you're in a Walgreens or Duane Reade)
-give Uber Credit As a Gift
-give up Marijuana
 give Your Hamster a Bath
 give Your Parade Shoes That Mirror Finish
 give Yourself a Brazilian Wax
@@ -11693,7 +11688,6 @@ make Sunscreen
 make Supervillains
 Make sure "Denoiser" is selected and "Declipper" and "Declicker" are off
 Make sure "Display hidden files and folders" is enabled
-Make sure all riders have an Uber account
 Make sure all the pre requisitions are met before continuing
 Make sure all wired connections are tight and secure
 Make sure Bluetooth on your phone is on
@@ -13208,7 +13202,6 @@ Open the torrent file in your BitTorrent client
 Open the torrent in your BitTorrent Client and allow the file to finish downloading
 Open the trunk
 Open the Twitch app
-Open the Uber gift card webpage
 Open the Ubuntu Software Center
 Open the unzipped folder and files and find "curl.exe."
 Open the Utilities folder in Finder
@@ -13262,8 +13255,6 @@ Open Traffic Monitor
 Open Translate
 Open Troubleshoot Settings and click Aditional Troubleshooters
 Open Tumblr
-Open Uber
-Open Uber Driver
 Open Ubuntu Software Center
 Open Unarchiver
 Open Unity Hub
@@ -13645,7 +13636,6 @@ Pay 500 gold
 pay a California Highway Patrol Ticket Online
 pay a Verizon Bill on iPhone or iPad
 pay BSNL Telephone Bills Online
-pay for an Uber with Cash
 pay for Apple Music
 pay for Apps on iPhone or iPad
 pay Someone on Venmo
@@ -15234,11 +15224,9 @@ repot a Cactus
 request a Lyft Car for Someone Else
 request a Payment on PayPal
 Request a ride
-request a Ride on Uber
 request a Song on Twitch
 Request the deletion in the chat
 Request the desktop site in your browser
-request Uber XL
 reroof Your House
 Rescan the disk
 rescue Someone Who Has Fallen Through Ice
@@ -15900,7 +15888,6 @@ Scroll down and tap Language & Region
 Scroll down and tap Maps
 Scroll down and tap Music
 Scroll down and tap News Feed Preferences
-Scroll down and tap on Uber
 Scroll down and tap Pages
 Scroll down and tap Sounds
 Scroll down and tap Special Instructions
@@ -16449,7 +16436,6 @@ Select an option for import, then select the file
 Select an option from the "Play a sound when a message is received" menu
 Select an output folder
 Select an SWF file on your computer
-Select an Uber service
 Select an update option
 Select and copy your data
 select and Store Apricots
@@ -16605,7 +16591,6 @@ Select Notepad or TextEdit
 Select Oculus app
 Select OK
 Select OK on the pop-up menu
-Select On
 Select one of the options to help you locate or control the missing iPhone
 Select Only me
 Select Only Me from the "Friend List" drop-down menu
@@ -17622,7 +17607,6 @@ splint a Cat's Broken Leg
 splint a Fracture of the Lower Leg
 split a Cell on Google Sheets on Android
 split a Table in Word
-split an Uber Fare
 split Hardwood Firewood
 split PDF Files
 split Screen on Chromebook
@@ -18456,7 +18440,6 @@ tape Sheetrock
 tape Shin Splints
 taper Trouser Legs
 tarp a Roof
-tat
 teach a Baby to Crawl
 teach a Budgie to Catch Flies
 teach a Cat to Climb a Ladder
@@ -18946,7 +18929,6 @@ Turn off the Show Parked Location slider
 turn Off the Skype Camera on PC or Mac
 Turn off the Wii and remove the SD card
 turn Off Image Previews
-turn Off Uber Notifications on an iPhone
 Turn off unnecessary services
 turn Off Vibrate on iPhone
 Turn off visual effects
@@ -19586,7 +19568,6 @@ Upload videos often
 upload Videos to YouTube Faster
 Upload your own photo or select from the available photos
 Upload your video to YouTube
-upside Down Braid
 Use "-n" to open multiple instances
 Use "br" to add a line break
 Use "chmod +x" to make the downloaded file executable
@@ -19702,8 +19683,6 @@ use Bluetooth Headphones on Android
 use Bluetooth Headphones on Samsung Galaxy
 use Bluetooth Technology
 Use blur, sharpening, and smudge effects
-use Brylcreem
-use Camtasia
 use Canned Tart Cherries
 Use captions and hashtags
 use Cardboard Milk Containers for Seedlings
@@ -19721,20 +19700,11 @@ Use color correction filters to enhance the color, contrast, or brightness of a 
 Use color for both covers and black-and-white for pages
 use Commercial Fertilizer
 use Concrete Form Tubes
-use Copyscape
 use Coursera
-use Crimp Beads
 use Custom Stamps from Microsoft Word in Adobe Acrobat
-use Cygwin
-Use Dig and enter the revealed cave
-Use Dig on the inscription on the north wall and go through the passage
 use Discord on a PC or Mac
-use Dispo
-use Ditto
 use Dropbox on a Mac
-use Dropbox with Yahoo! Mail
-Use EasyBCD to add Ubuntu to the boot menu
-use Ebates
+add Ubuntu to the boot menu
 Use effective language and tags
 Use effects from the Filters menu
 use Emoji on Facebook Messenger on Android
@@ -19755,21 +19725,17 @@ Use Filters such as Blur or Sharpen to enhance the photo
 use Find in Google Chrome
 Use Flash in the center of the chamber
 Use FlashFire to install Android
-use Flax Seed
 Use flint and steel to light the inside of the nether portal frame
 use Font Color Tags in HTML
 Use four bricks and a crafting table to craft brick blocks
 Use frames to create focus
 use Gel to Fix Curly Hair
-use Ghee
 use GIMP
 use Google Calendar
 use Google Chat
 use Google Keep
 use Google Maps Offline
 use Google Photos
-use GParted
-use Greasemonkey
 use Green Eyeshadow to Cover a Red Pimple
 Use ground pound to defeat the worm as Mini-Mario
 use Hair Removal Cream on Your Face
@@ -19780,15 +19746,8 @@ use Handbrake to Rip a DVD
 use Handwriting Input on Windows
 Use hashtags effectively
 use Hashtags on Slack on Android
-use Honey
-use Honey on Mobile Devices
-use Honey's Droplist
-use Houseparty on macOS
 Use HTML5 instead of Flash
-use iCloud
-use Instagram Stories
 use Internal Citations
-use Isomalt
 use Items As Shields in Mario Kart Wii
 use Jack Stands
 use Jamaican Black Castor Oil
@@ -19804,8 +19763,6 @@ use Microsoft FrontPage 2003
 use Microsoft Office by Talking Instead of Typing
 use Microsoft Office PowerPoint
 use Microsoft Virtual PC
-use Minecraft Rtx
-use Monistat 3
 use More of Your Brain
 Use Move Objects mode to place objects anywhere, including on other objects
 use Mozilla Firefox, Portable Edition
@@ -19820,28 +19777,16 @@ use Oil-Based Polyurethane over Water-Based Polyurethane
 use OkCupid
 use Olive Oil to Soften Feet
 Use one of the Lasso Tools, Magic Wand, or Quick Select tool to select the area you want to change
-use Padlet
 use Paper Creatively
 Use pastels for a soothing look
 use Pearl Ex Pigments
 use Pipe Joint Compound
-use PokEdit
 use Portrait Mode in FaceTime
-use Powerbait
 use Predictive Text
 use Prepackaged Concrete Mix
-use Prezi
-Use printme("str") to call the code
-use Procreate Pocket
-use PS4 Second Screen
-use Pushbullet
-use Quick Add on Snapchat
 use Reactions in Discord on iPhone or iPad
-use RealVNC
 Use relevant and popular hashtags in your captions
 Use Restream to stream a Facebook Live to multiple groups
-use Robinhood
-use Roundup
 Use Rufus to create a USB install disk from the ISO file
 Use Run > Run Module to execute the script
 Use sabotages to lure players away from bodies or set traps
@@ -19853,7 +19798,6 @@ use Shiatsu for Flatulence and Bloating
 use Siri on an iPhone
 Use Siri to answer inbound phone calls
 use Siri with AirPods
-use SketchUp
 use Soldering Flux
 use Solver in Microsoft Excel
 use Sour Milk
@@ -19872,7 +19816,6 @@ Use the "Move," "Rotate," and "Scale tools to move vertices, edges, and faces of
 Use the "Move," "Rotate," and "Scale" tools to manipulate the object
 Use the "text-decoration: underline" style
 use the Adjustment Panel on Photoshop
-use the Alexa App
 use the Ankle-Hold Technique During a Diaper Change on a Baby, Infant or Toddler
 Use the arrow keys to scroll through the carousel launcher
 Use the arrow keys to zoom in and out
@@ -19967,7 +19910,6 @@ use Toothpaste to Clean Silver Jewelry
 use TOR on an iPhone
 use Torrents
 Use trending hashtags and sounds in your own videos
-use Uber
 Use UNetbootin to create a bootable USB Windows 10 drive
 use Vaseline
 Use VB code to write your function
@@ -19981,7 +19923,6 @@ use VLC to Stream Audio and Video to Multiple Computers on Your Network Using Mu
 use VMware Workstation
 use Voice Chat in Among US
 use Voltage Testers
-use Waifu2x
 use Wall Plugs and Screws
 use Wallet on an iPhone
 use Watercolor Brush Pens
@@ -19989,7 +19930,6 @@ use Watercolor Pencils
 use WeChat
 use WhatsApp Without a Phone Number
 use Whey Protein
-use Whisper
 use Wicks to Water Plants
 use WiFi Direct on Android
 use Windows Movie Maker
@@ -20008,7 +19948,6 @@ use Your Sony PSP
 Use your special abilites to gain an advantage
 Use your ultimate ability when it's fully charged
 use Your Wii Remote As a Mouse on Windows
-Using your Oculus Quest, press the oval button to open the menu
 Utilize free online tools
 vectorize an Image
 Veer slightly left or right (but close to the line) on your next turn
@@ -20303,20 +20242,11 @@ what to Do with Your Chromebook After End of Life
 WhatsApp users can hide their Last Seen status
 When you have 50 evolution points, buy all bad symptoms at the same time
 whip Evaporated Milk
-whipstitch
 whistle Using an Acorn Cap
-whiten Grout
-whiten Nails
 whiten Teeth With Hydrogen Peroxide
 whiten Your Teeth with Banana Peel
 whitewash Cabinets
-whitewash Trim
 whittle a Chain out of Wood
-why Are Your Beats Not Showing Up on Bluetooth
-why Is My Antenna Not Picking Up Channels
-why Is My Computer Running Windows 10 So Slow
-why Is My Laptop Not Connecting to WiFi
-why Won't My PS4 Controller Connect to the Console
 widen a Doorway
 win a Race in Mario Kart Double Dash
 win a Running Race

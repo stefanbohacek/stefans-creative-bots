@@ -1,0 +1,12 @@
+{
+  "active": false,
+  "name": "@computers",
+  "description": "Computers!",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@computers"
+    }   
+  ],
+  "interval": "EVERY_FOUR_HOURS"
+}

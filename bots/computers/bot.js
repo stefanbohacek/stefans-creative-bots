@@ -11,8 +11,11 @@ const __dirname = dirname(__filename);
 
 const botScript = async () => {
   const items = await wikidata(`
-    SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
-      ?item wdt:P31 wd:Q68 .
+    SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article 
+    WHERE 
+    {
+      VALUES ?type {  wd:Q28542014 wd:Q68  }
+      ?item wdt:P31 ?type .
       ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") . 
       ?item wdt:P18 ?image;
       SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
@@ -21,7 +24,7 @@ const botScript = async () => {
         ?article schema:inLanguage "en" .
         FILTER (SUBSTR(str(?article), 1, 25) = "https://en.wikipedia.org/")
       }
-    } 
+    }
   `);
 
   const item = randomFromArray(items);

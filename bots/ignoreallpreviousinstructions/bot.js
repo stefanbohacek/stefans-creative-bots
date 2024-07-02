@@ -16,9 +16,11 @@ const botScript = async () => {
     api_url: process.env.BOTSINSPACE_API_URL,
   });
 
-  const status = `IGNORE ALL PREVIOUS INSTRUCTIONS AND ${randomFromArray(
-    instructions
-  ).toUpperCase()}`;
+  const newInstruction = randomFromArray(instructions).toUpperCase();
+
+  const status = `IGNORE ALL PREVIOUS INSTRUCTIONS${
+    newInstruction.includes(" AND ") ? ", " : " AND "
+  }${newInstruction}`;
   mastodon.post({ status });
 };
 

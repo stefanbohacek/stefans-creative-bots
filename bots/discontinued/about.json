@@ -1,0 +1,12 @@
+{
+  "active": false,
+  "name": "@discontinued",
+  "description": "Hey, remember this!",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@discontinued"
+    }   
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

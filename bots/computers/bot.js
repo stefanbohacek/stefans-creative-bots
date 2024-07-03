@@ -11,10 +11,10 @@ const __dirname = dirname(__filename);
 
 const botScript = async () => {
   const items = await wikidata(`
-    SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article 
+    SELECT DISTINCT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article 
     WHERE 
     {
-      VALUES ?type {  wd:Q28542014 wd:Q68  }
+      VALUES ?type {  wd:Q28542014 wd:Q68 wd:Q60484681  }
       ?item wdt:P31 ?type .
       ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") . 
       ?item wdt:P18 ?image;

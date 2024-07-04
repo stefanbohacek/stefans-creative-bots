@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  const items = await wikidata( /* sql */`
+  const items = await wikidata(/* sql */ `
     SELECT DISTINCT ?item ?cui ?itemLabel ?itemDescription ?image ?logo ?article 
     WHERE 
     {
@@ -40,8 +40,8 @@ const botScript = async () => {
   await downloadFile(imageUrl, filePath);
 
   const mastodon = new mastodonClient({
-    // access_token: process.env.DISCONTINUED_BOT_MASTODON_ACCESS_TOKEN,
-    access_token: process.env.MASTODON_TEST_TOKEN,
+    // access_token: process.env.MASTODON_TEST_TOKEN,
+    access_token: process.env.DISCONTINUED_BOT_MASTODON_ACCESS_TOKEN,
     api_url: process.env.BOTSINSPACE_API_URL,
   });
 

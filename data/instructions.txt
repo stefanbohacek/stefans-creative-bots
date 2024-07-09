@@ -200,7 +200,6 @@ add Header Row in Excel
 Add heavy whipping cream and vanilla and mix
 add Highlights on Instagram
 add Honors and Awards in LinkedIn
-Add http://androidaba.com/addons/ as the source URL and name the source aba
 add Hyperlinks to Email Messages in Hotmail
 Add Illustrator bullets before each section that you want to separate on your bulleted list
 add Images in Android Studio
@@ -341,8 +340,6 @@ Add your website to the Htdocs folder
 add Zen to Your Workplace
 address Envelopes to Japan
 Address the chat to someone
-Address the email to phonenumber@carrieremaildomain.com
-Address the email to receipts@expensify.com
 adhere Plastic to Wood
 adjust a Muffin Recipe for Jumbo Size Muffins
 adjust a Sagging Door
@@ -649,7 +646,6 @@ Be hilarious and relatable
 be on Love It or List It
 be Passionate
 be Polite when Texting
-be Popular on Tagged.Com
 be Popular, but Safe on deviantArt
 Be prepared to show a valid ID when your delivery arrives
 be Safe in a Foreign Country
@@ -1243,7 +1239,6 @@ change Battery Cables
 change Button Color in Javascript
 change Call Audio Routing on an iPhone
 Change contact information
-change Family Relationships on Ancestry.com
 change Gear Box Oil on a Vintage Vespa Scooter
 Change networks
 Change the "Value Data" field from "0" to "1."
@@ -1388,7 +1383,6 @@ Check if your internet is down
 check if Your iPhone Software is Updated
 Check or uncheck the "notify" box
 Check out all the commands on Twitch Help
-Check out https://www.Virtualdj.com/wiki to learn more
 Check out of the store
 Check out online videos, interactive tutorials, or coding games
 Check PS5 restock information sources
@@ -1518,7 +1512,6 @@ Choose a track to remix
 Choose a video conferencing option, like Zoom, Facebook Messenger Rooms, or Google Meet
 Choose an amount of RAM to allocate
 Choose an email marketing service
-Choose an email provider like Gmail or Outlook.com
 Choose an image folder
 choose an SUV
 Choose Color or Black and White
@@ -2128,7 +2121,6 @@ Click Download Now
 Click Download original video
 Click Download PKM to the left
 Click Download Preview under "Community."
-Click download Shiny 2 and a half from https://github.com/Gannio/Shiny2-and-a-Half/releases/tag/1.5.1
 Click Download to save
 Click DOWNLOAD under the "JDK" heading
 Click Download VirtualBox
@@ -3128,7 +3120,6 @@ Click the downward-facing arrow in the top right corner of the Facebook page
 Click the downward-pointing arrow
 Click the downwards pointing arrow
 Click the downwards-pointing arrow next to the highlight icon
-Click the drop-down menu labeled "Any source" and select youtube.com
 Click the drop-down menu labeled "Any time" and select Custom range
 Click the drop-down menu next to "Destination" and select Save as PDF
 Click the drop-down menu next to "Pages."
@@ -3713,7 +3704,6 @@ Close the printer cover
 Close the top with another observer block and destroy the top layer of building blocks
 Close the window
 Close unnecessary apps
-Close your current Spotify account by going to https://support.spotify.com/us/contact-spotify-support/
 Collaborate
 Collaborate with other TikTok users
 Collaborate with others on the same notes and lists
@@ -4084,7 +4074,6 @@ create a Mood Board
 create a Multi Boot USB Drive with Yumi
 Create a name and password for your wireless network
 create a Nearly Undetectable Backdoor using MSFvenom in Kali Linux
-Create a new account at https://www.spotify.com/us/signup/
 Create a new C project
 Create a new column next to your data set labeled "Max."
 Create a new Composer folder
@@ -4119,7 +4108,6 @@ Create a new project
 create a New User Account in Windows XP
 Create a new virtual machine
 Create a new volume on the unallocated disk area
-Create a new Windows Installation Media from the tool at https://www.microsoft.com/en-us/software-download/windows10
 Create a new world
 create a Notification in Sap
 Create a Null Object
@@ -4138,7 +4126,6 @@ Create a phone number with Google Voice
 create a Photo Album on Facebook
 create a Photo Booth with the Raspberry Pi
 Create a PIN
-Create a PIN at https://my.roku.com/account and sign in
 create a Playlist on Spotify
 Create a post
 Create a post or comment
@@ -4217,7 +4204,6 @@ create Agar
 Create all of the roles you want to assign
 Create an account
 Create an account and sign in
-Create an account at https://adwords.google.com
 Create an account if necessary
 Create an account with an Apple ID, Snapchat account, or phone number
 create an Altar
@@ -5031,7 +5017,6 @@ Download a ZIP or RAR file of characters
 download Adobe After Effects on PC or Mac
 download All iCloud Photos
 download All on Google Photos on PC or Mac
-Download AltServer from https://altstore.io and install it on your computer
 download Amazon Music
 download An App onto an iPhone or iPod Touch
 Download an app that edits JPG images
@@ -5044,60 +5029,39 @@ download an Older Version of Netflix
 Download and extract the zip file
 Download and install
 Download and install "Touchscreen Test" from the App Store
-Download and install Ableton Live from https://www.ableton.com/en/trial/
-Download and install Android Studio from https://developer.android.com/studio
 Download and install Anki if you don't have it
-Download and install AxCrypt from https://www.axcrypt.net/
 Download and install Camtasia
-Download and install Composer from https://getcomposer.org/download/
 Download and install FBReader
 Download and install HandBrake
 Download and install Hiya from the App Store
-Download and install Java Development Kit from https://www.oracle.com/technetwork/java/javase/downloads/index.html
-Download and install KillDisk from http://killdisk.com/killdisk-freeware.htm
 Download and install Minecraft Forge version 1.12.2-14.23.5.2838 from https://files.minecraftforge.net
 Download and install MInecraft; Java Edition
 Download and install MutliWall
-Download and install OnionFruit from https://dragonfruit.network/onionfruit on a Windows computer
-Download and install Origin from https://www.origin.com/usa/en-us/store/download
-Download and install PortableApps from http://portableapps.com/
 Download and install Prey from the App Store or Google Play Store
 Download and install Rufus from https://rufus.ie/
 Download and install Steam Link on your computer
 Download and install SWFFilePlayer on Windows or Elmedia Video Player on Mac
 Download and install the Android SDK Platform Tools
-Download and install the Checkra1n app for Mac from https://checkra.in/
-Download and install the companion app from https://www.downloadhelper.net/install-coapp
 Download and install the Dropbox desktop app
 Download and install the free community edition of ActiveTCL 8.6
 Download and install the Google Chat app from the Google Play Store (Android) or App Store (iOS)
 Download and install the Google Home app on your Android or iPhone
 Download and install the recommended TeX package for your system
-Download and install Ti Connect from https://education.ti.com/en/products/computer-software/ti-connect-sw
 Download and install VLC Media Player from the Google Play Store or App Store, and open it
 Download and install Wine
-Download and install WRF2WMV from https://help.webex.com/en-us/WBX000026388/WRF2WMV-Converter
 Download and install Xcode on your Mac
 Download and install Zelle from the App Store or Google Play
 Download and open GroupMe
 Download and Open Kustom Live Wallpaper (KLWP)
-Download AnyToISO from https://www.crystalidea.com/anytoiso/download
-Download apktool.jar from https://ibotpeaches.github.io/Apktool/ and save it to the APK folder
 download Apps
 download Apps in Windows 7
 download Apps on the Nintendo Switch
 download Asus Aura
 download Audio from Tumblr
-Download BlueMaxima Flashpoint Flash archive from https://bluemaxima.org/flashpoint/downloads/
-Download BlueStacks from https://www.bluestacks.com/download.html
 download Books to a Kindle Fire
-Download CapsLock Goodbye from https://melk.de/melk_software.htm
 Download Catan Universe from The Google Play Store, App Store, or Steam
-Download Checkra1n from https://checkra.in/releases/0.11.0-beta on a Mac
-Download Composer from https://getcomposer.org/download
 Download crouton from GitHub and verify that the file saves to your Downloads folder
 download Cursors for Windows 10
-Download DBAN from http://www.dban.org/
 download Demos from the PlayStation Store
 download Dev C++ (Ide)
 download Directions on Google Maps on Android
@@ -5105,8 +5069,6 @@ Download Discord and create an account
 download eBooks
 download Emails from Gmail on Android
 download Emails from Gmail on PC or Mac
-Download Etcher from https://www.balena.io/etcher/
-download Facebook
 Download FFmpeg from https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z
 download Flash
 download Flowplayer Videos
@@ -5121,17 +5083,13 @@ download Games Onto a Graphing Calculator
 download Google Books
 download Google Contacts on Android
 Download Google Photos
-Download Gsnap from https://www.gvst.co.uk
 download Images from Google Images
 download iTunes
 download iTunes on Windows
-Download Letterbomb from https://please.hackmii.com
 download Lucky Patcher on PC or Mac
 Download MAMP for your operating system
-Download MarageOS from https://www.ticalc.org/archives/files/fileinfo/139/13949.html (TI-84 Plus, TI-84 Plus only)
 download MATLAB on a Mac
 download Microsoft Publisher
-Download Minecraft Blender files at https://nilssoderman.com/downloads/minecraft-blender-rig/
 Download new emoticons
 Download Notepad++ from https://notepad-plus-plus.org
 Download OBS and link your Twitch account to OBS
@@ -5140,21 +5098,17 @@ download Online Games
 Download or purchase a game
 Download or share the attachment
 Download Origin
-Download Origin from http://www.origin.com/download
 download Overwatch
 Download Paper Port or something similar
 download PC Games with Steam
-Download PhotoRec from https://www.cgsecurity.org
 Download phpMyAdmin from https://www.phpmyadmin.net
 Download PicCollage
 download Podcasts
 Download Robinhood from the App Store or Play Store
-Download Roblox from http://www.roblox.com/install/setup.ashx
 download Rockstar Launcher
 Download ROMs and copy them to a USB drive
 download Rules of Survival on PC
 Download Samsung Smart Switch on both your phone and tablet
-Download Signapk.zip from https://forum.xda-developers.com/attachment.php?attachmentid=1846095&d=1364661948
 download Solidworks
 Download Spek from Spek.cc
 Download Story Reposter from the App Store
@@ -5162,14 +5116,12 @@ Download Super Smash Flash 2 from the Super Smash Flash website
 Download SuperSU to your PC
 Download SuperTool ZIP to a computer
 Download TeamViewer
-Download TechnicLauncher from https://www.technicpack.net/download
 Download the 7-Zip program
 Download the amortization schedule from Microsoft
 Download the Android ROM to your Kindle
 Download the app from the App Store or Play Store
 Download the appropriate BIOS update
 Download the archived setup file
-Download the BlueMaxima Flashpoint archive from https://bluemaxima.org/flashpoint/downloads/ to play classic Flash content
 Download the Camera Codec Pack from the Microsoft Store
 Download the certificate
 Download the computer client in addition to the mobile app
@@ -5182,27 +5134,22 @@ Download the Honey app from the Google Play Store (Android) or App Store (iOS)
 Download the Honey app from the Google Play Store or App Store
 Download the installation file for the version of LibreOffice you have
 Download the installation files to your SD card and plug it into your Wii
-Download the installation image from archlinux.com/download
 Download the installer
 Download the installer for the version you want
 Download the installer for your system
-Download the installer from http://cygwin.com
 Download the installer from www.eclipse.org/downloads/packages/installer
 Download the installer from your Autodesk account or education website
 Download the ISO file for the operating system you want to install
 Download the latest installer
 Download the latest version
 Download the latest version of Ubuntu
-Download the latest version of Visual C++ from https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
 Download the Lucky Patcher APK
 Download the Minecraft Forge install file from http://files.minecraftforge.net/
 Download the Minecraft server JAR file
 Download the MySQL Server for your operating system
-Download the official ESPN app or go to http://www.espn.com/ in a web browser
 Download the operating system or buy installation discs
 Download the Outlook plugin for Zoom to connect the two platforms instantaneously and add Zoom meetings from the Outlook app
 Download the PDF file
-Download the Pixelmon mod file from https://reforged.gg/
 Download the PS4 Second Screen app from the Google Play Store or App Store
 Download the RetroPie image to your computer
 Download the Ruffle Flash emulator from https://ruffle.rs/#releases
@@ -5214,7 +5161,6 @@ Download the Tinder app (if you're using a phone or tablet)
 Download the Tomcat 9 installer from https://tomcat.apache.org/download-90.cgi
 Download the torrent
 Download the version for your operating system
-Download the version of WAMP that is best for your system at http://wampserver.aviatechno.net/
 Download the video
 Download the Windows 10 ISO from Microsoft
 Download the Windows 7 USB/DVD download tool
@@ -5694,7 +5640,6 @@ Enable Wi-Fi syncing for your iPhone/iPad
 Enabled Hiya ãƒ¼ 1 and Hiya ãƒ¼ 2
 encrypt Files
 encrypt Wireless
-End the phone number with @providerdomain.com
 Engage with your followers
 Enroll in school, an online course, or coding bootcamp
 Ensure "Auto backup before updating" is checked and select Backup settings
@@ -5720,7 +5665,6 @@ Enter "1" and tap Send
 Enter "100" as the number of sides
 Enter "5" and tap Send
 Enter "adb shell reboot -p" (Command Prompt) or ".\adb shell reboot -p" (Terminal, PowerShell)
-Enter "https://troypoint.com/cyber" then delete files when the installation is complete
 Enter "sudo /usr/sbin/chromeos-install --dst /dev/sda"
 Enter "To" address you can access on your phone
 Enter "Y" when you're prompted
@@ -6226,7 +6170,6 @@ Find a jungle biome
 find a Leak in a Tire
 Find a link or tab
 find a Location Using Coordinates on Google Maps
-Find a mod to install on nexusmods.com
 Find a paid app
 Find a photo
 Find a pumpkin
@@ -6267,7 +6210,6 @@ Find blocked contacts under "BLOCKED CONTACTS."
 find Coal in Minecraft
 Find contact information on the domain's website
 Find Current City in the Search for Friends box
-Find custom cursors to download (you can find some at https://www.deviantart.com/tag/cursor)
 find Duplicate Pictures in Windows 10
 find Elevation on Google Maps on Android
 find Elevation on Google Maps on iPhone or iPad
@@ -6311,7 +6253,6 @@ Find the amount of Depreciation per Year by calculating depreciable cost/asset's
 Find the app you want to install
 find the Bombers in Zelda Majora's Mask
 find the Bottles in Ocarina of Time
-Find the carrier's email domain at https://email2sms.info
 Find the code for a genre
 Find the code for the color
 Find the comment you want to delete, right-click the comment, and click Delete Comment to delete a comment
@@ -6335,7 +6276,6 @@ Find the name of the service you want to restart
 Find the nominal impedance rating on the label
 Find the non-cover photo picture that you want to save
 find the Perimeter of a Trapezoid
-Find the phone's carrier's domain at https://email2sms.info/
 Find the photos on your computer
 Find the post
 Find the post on the person's profile
@@ -6511,7 +6451,6 @@ Follow the on-screen instructions to reset
 Follow the on-screen instructions to restore
 Follow the on-screen instructions to set up Google Assistant
 Follow the on-screen instructions to set up your iPhone
-Follow the on-screen instructions to sign in with your Hotmail.com email address
 Follow the on-screen instructions to start the download
 Follow the on-screen instructions to view content
 Follow the on-screen prompts
@@ -6794,7 +6733,6 @@ Get the Transmute Mineral Ore spell from Halted Stream Camp
 Get the updates
 Get the URL for the video you want to add to your Doc
 Get the URL to the deleted video
-Get the Viber computer app from https://www.viber.com/en/download/ (if you don't have it)
 get the Wet Hair Look
 get Thick Eyebrows
 get Tiktok Coins on Android
@@ -6859,13 +6797,11 @@ Go back to the pivot table tab
 go Back Using the Command Prompt
 Go black and white for a minimalist look
 Go fishing
-Go https://github.com/nefarius/ScpToolkit/releases/tag/v1.6.238.16010 in a web browser
 Go neofuturistic with a neon theme
 Go The Ratway and defeat 5 bandits
 Go through passageway and capture Regirock
 Go through the initial setup process
 Go through The Ratway to Ragged Flagon
-Go to "https://apkpure.com/p/com.bskyb.nowtv.beta"
 Go to a cashier
 Go to a free email service's sign-up page
 Go to a friend's profile page
@@ -6888,8 +6824,6 @@ Go to Edit > Paste
 Go to Edit > Software Sources
 Go to Facebook and log in
 Go to Facebook in your web browser
-Go to Facebook.com on a Mac
-Go to faxzero.com
 Go to File > Add File to Library
 Go to File > Add to Library
 Go to File > Get Info
@@ -6898,221 +6832,27 @@ Go to File > Open
 Go to File > Open archive
 Go to File > Print
 Go to File > Save As
-Go to Gmail.com
 Go to Google Calendar and log in if prompted
 Go to Google Gmail
 Go to Google Maps
 Go to Google Sheets
 Go to HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft
-Go to http://accounts.snapchat.com/ in a web browser and log in
-Go to http://appleid.apple.com
-Go to http://dashboard.wordpress.com/wp-admin/profile.php and log in if prompted
-Go to http://editor.pho.to/
-Go to http://kodi.tv/download
-Go to http://mail.aol.com/ and sign in
 Go to http://slither.io/ or open the Slither.io app on your smartphone or tablet
-Go to http://www.ebay.com/sch/ebayadvsearch/?_sofindtype=25
-Go to http://www.facebook.com
-Go to http://www.netflix.com/browse/genre/CODE
-Go to http://www.paypal.com/login and log in
-Go to http://www.roblox.com/games to play games
-Go to http://www.ucweb.com/ucbrowser/download
-Go to http://www.vpeeker.com/
-Go to http://www.youtube.com/my_videos
-Go to https://account.microsoft.com/account in a web browser
-Go to https://account.viber.com/en/create-account
-Go to https://accounts.craigslist.org/login/home and sign in if prompted
 Go to https://addons.mozilla.org/en-US/firefox/addon/block-website
 Go to https://anchor.fm/ and log in or create a new account
-Go to https://ankiweb.net/shared/info/1164658687 and https://ankiweb.net/shared/info/1519085297
-Go to https://api.whatsapp.com/send?phone=XXXXXXXXXXX where X is the phone number you want to contact
-Go to https://appleid.apple.com/account?localang=en_US#!&page=create
 Go to https://archive.org/web/ in a web browser
-Go to https://bluemaxima.org/flashpoint/downloads/ (Windows only)
-Go to https://business.facebook.com/home to create ads and view statistics
-Go to https://calendar.google.com
-Go to https://calendar.google.com in a web browser
-Go to https://chrome.google.com/webstore/detail/block-site-website-blocke/eiimnmioipafcokbfikbljfdeojpcgbh?hl=en
-Go to https://contacts.google.com/
-Go to https://contacts.google.com/ in a web browser
-Go to https://create.snapchat.com
-Go to https://creativecloud.adobe.com/apps/download/media-encoder in a browser
-Go to https://curl.haxx.se/download.html in a web browser
-Go to https://devforum.roblox.com/c/bug-reports/10 and log in (if needed)
-Go to https://ditto-cp.sourceforge.io/
-Go to https://docs.google.com
-Go to https://docs.google.com/ and sign in
-Go to https://docs.google.com/ and sign in if prompted
-Go to https://docs.google.com/ in a web browser
-Go to https://docs.google.com/document/ and select a document
-Go to https://dotnet.microsoft.com/download in a web browser
-Go to https://downloadcenter.intel.com/download/28679/Intel-Management-Engine-Driver-for-Windows-8-1-and-Windows-10
 Go to https://draw.io in a web browser
-Go to https://drive.google.com
-Go to https://ebay.com in a web browser
-Go to https://etsy.com and log in (if you're prompted)
-Go to https://etsy.com and sign in
-Go to https://facebook.com
-Go to https://facebook.com/recover/initiate
 Go to https://files.minecraftforge.net/ in your web browser
-Go to https://findmymobile.samsung.com/#home on another device
-Go to https://fiverr.com and sign in
 Go to https://ftp.mozilla.org/pub/firefox/releases/
-Go to https://getsupport.apple.com
-Go to https://github.com/lenosisnickerboa/csgosl/releases in a web browser
-Go to https://gmail.com or open the Gmail app and sign in
-Go to https://hebcal.com/ical on your iPhone
-Go to https://help.twitch.tv/s/contactsupport?language=en_US
-Go to https://helpx.adobe.com/creative-cloud/help/uninstall-creative-cloud-desktop-app.html in a web browser
-Go to https://icloud.com/iclouddrive
-Go to https://images.google.com/ in your computer's web browser
-Go to https://imgur.com/ in a web browser
-Go to https://instagram.com in a web browser
-Go to https://jackbox.tv/
-Go to https://mail.yahoo.com
-Go to https://maps.google.com/ in a web browser
-Go to https://medium.com/earn
-Go to https://meetup.com
-Go to https://messenger.com on a computer
-Go to https://my.solidworks.com
-Go to https://myaccount.google.com/
-Go to https://myaccount.payoneer.com/
-Go to https://netflixhelp.s3.amazonaws.com/netflix-4.16-200217-release.apk in a web browser on your Android
-Go to https://ngrok.com/download
-Go to https://nightbot.tv/
-Go to https://panel.preyproject.com/ in a web browser
-Go to https://pdfjoiner.com
-Go to https://pixlr.com/editor/ in a web browser and click Continue with Pixlr Editor
-Go to https://pokedit.com/editor/box-page.php in a web browser
-Go to https://prezi.com and log in to your account
-Go to https://products.office.com
-Go to https://resolutioncenter.ebay.com/ in a web browser
-Go to https://sheets.google.com
-Go to https://smallpdf.com/edit-pdf
-Go to https://snowball-io.io/ or open the app on mobile
-Go to https://socialclub.rockstargames.com/rockstar-games-launcher
-Go to https://spotify.com and sign in if prompted
-Go to https://spotify.me/en in a web browser
-Go to https://spring.io/tools
-Go to https://squadapp.io/watch in a new tab or window
-Go to https://steamcommunity.com/market/ a web browser
-Go to https://store.steampowered.com
-Go to https://stores.office.com/myaccount
-Go to https://support.gameclub.ph/hc/en-us
-Go to https://top.gg/servers/tag/among-us in a web browser
-Go to https://topup.orange.com/
-Go to https://translate.google.com
-Go to https://tube2gram.com in a desktop or mobile web browser
-Go to https://tumblr.com
-Go to https://tumblr.com and login if needed
-Go to https://tv.apple.com in a Chrome tab and sign in
-Go to https://twistedwave.com/online
-Go to https://unrealengine.com and log in
-Go to https://visualstudio.microsoft.com/vs/preview/
-Go to https://voice.google.com in a browser
-Go to https://waifu2x.udp.jp
-Go to https://web.microsoftstream.com/
-Go to https://webcammictest.com/ in a web browser
-Go to https://weibo.com/signup/signup.php
-Go to https://whoer.net/webproxy
-Go to https://wordpress.com
-Go to https://www.activestate.com/products/activetcl/tcl-tk-modules/
-Go to https://www.amazon.com
-Go to https://www.amazon.com/
-Go to https://www.amazon.com/ and sign in (if you're not already)
-Go to https://www.amazon.com/hz/mycd/digital-console/alldevices
-Go to https://www.amazon.com/myh/households
-Go to https://www.aol.com/favorites in your web browser and log in
-Go to https://www.apachefriends.org/index.html
-Go to https://www.apple.com/itunes/download
-Go to https://www.att.com/deviceunlock/ and click Unlock your device
-Go to https://www.bing.com
-Go to https://www.blizzard.com/en-us/apps/battle.net/desktop
-Go to https://www.bluestacks.com/ in a web browser
-Go to https://www.crucial.com/store/systemscanner
-Go to https://www.emulatorgames.net/ in a web browser
-Go to https://www.epicgames.com and login to your primary account
-Go to https://www.epicgames.com and login to your secondary account
-Go to https://www.facebook.com
-Go to https://www.facebook.com and log in
-Go to https://www.facebook.com in a desktop web browser
-Go to https://www.facebook.com or open the Facebook app and log in
-Go to https://www.facebook.com/
-Go to https://www.facebook.com/ and log in
-Go to https://www.facebook.com/ and log in if necessary
-Go to https://www.facebook.com/ and sign in
-Go to https://www.facebook.com/pages/create to create your Page
-Go to https://www.fiverr.com/gigs/promote-fiverr-gig
-Go to https://www.gmail.com in Chrome on your Android
-Go to https://www.google.co.in/inputtools/try
-Go to https://www.groupme.com
-Go to https://www.groupon.com/merchant
-Go to https://www.guerrillamail.com
-Go to https://www.hulu.com
-Go to https://www.icloud.com
-Go to https://www.icloud.com/ in a browser on your Android
-Go to https://www.instagram.com
-Go to https://www.instagram.com/
-Go to https://www.instagram.com/ in a web browser and log in (do not use the smartphone app)
-Go to https://www.joinhoney.com/invite in a web browser and log in if prompted
-Go to https://www.linkedin.com/feed/ in a web browser
-Go to https://www.malwarebytes.com
-Go to https://www.mamp.info/en/downloads/
-Go to https://www.microsoft.com/en-us/software-download/windows10
-Go to https://www.netflix.com/profiles/manage in a web browser
-Go to https://www.office.com
-Go to https://www.office.com/signin
-Go to https://www.outlook.com in your computer's web browser or open the desktop app
-Go to https://www.outlook.com/
-Go to https://www.outlook.com/ in your computer's browser
-Go to https://www.paypal-prepaid.com
-Go to https://www.paypal.com
-Go to https://www.paypal.com/myaccount/settings/
-Go to https://www.paypal.com/myaccount/summary and log in
-Go to https://www.pdfescape.com
-Go to https://www.photopea.com/
-Go to https://www.python.org/downloads
-Go to https://www.roblox.com in a web browser on PC or Mac and log in
-Go to https://www.rulesofsurvivalgame.com
-Go to https://www.shopify.com/admin/apps/import-store and log in (if prompted)
-Go to https://www.sketchup.com
-Go to https://www.skype.com/en/get-skype/ in your browser
-Go to https://www.storysaver.net/ in a web browser
-Go to https://www.teamviewer.com
-Go to https://www.themebeta.com/chrome-theme-creator-online.html
-Go to https://www.tumblr.com
-Go to https://www.twitch.tv
-Go to https://www.twitch.tv/directory in a web browser
-Go to https://www.twitch.tv/prime/fortnite in a web browser
-Go to https://www.virtualbox.org
-Go to https://www.virtualdj.com
-Go to https://www.vmware.com/products/workstation-player.html
-Go to https://www.webex.com/video-recording.html
-Go to https://www.whatsapp.com/download
-Go to https://www.wheeloffortune.com
-Go to https://www.win-rar.com/download.html?&L=0
-Go to https://www.yahoo.com
-Go to https://www.yahoo.com/mail and log in
-Go to https://www.youcompress.com/avi/ in a web browser
-Go to https://www.youtube.com
-Go to https://www.youtube.com/ in a web browser
-Go to https://www.youtube.com/ in a web browser and sign in
-Go to https://www.youtube.com/ in a web browser or open the YouTube app
-Go to https://youtube.com
-Go to https://youtube.com and log in
-Go to https://zoom.us/download
 Go to IGN in a web browser
-Go to images.google.com
 Go to Insert
 Go to Menu > Setup > Puppy Installer
 Go to Microsoft's Recover Your Account page
-Go to my.slack.com/account/settings
 Go to Nether
 Go to New > Layer Via Cut
 Go to one of your friend's profiles
 Go to Options > Activate Microsoft Office
 Go to Options and then Video Settings
-Go to Outlook.com
 Go to Pacifidlog Town
 Go to Settings
 Go to Settings & Privacy > Settings > Security and Login
@@ -7123,7 +6863,6 @@ Go to System Settings from the home screen
 Go to Task Manager or Start Task Manager
 Go to the "Tags" category
 Go to the 4chan homepage
-Go to the AmazonSmile Org Central page at https://org.amazon.com/ref=smi_se_saas_org_org
 Go to the Applications folder
 Go to the body section of an HTML document
 Go to the channel
@@ -7175,12 +6914,8 @@ Go to the website of an eligible Amazon Pay store
 Go to the website with the video you want to download in Firefox
 Go to the Wii Message Board
 Go to the Windows 10 Media Creation Tool website
-Go to tumblr.com
 Go to Walmart
 Go to Webstore Extensions
-Go to www.amazon.com
-Go to www.facebook.com
-Go to www.youtube.com and find your video
 Go to Yahoo! to see if the ads are blocked
 Go to your "My TV" page in the app
 Go to your account page
@@ -7209,9 +6944,6 @@ Go to your Tinder profile
 Go to your Windows Settings > Apps
 Go to YouTube
 Go to YouTube Studio
-Go to Youtube.com
-Go to YouTube.com
-Go to youtube.com and sign in
 Go up the ramp to the door outside Riftweald Manor
 graph in MATLAB
 grill Country Style Ribs
@@ -7962,7 +7694,6 @@ install DD WRT on Your Router
 install DEB Files
 install Debian
 install DIRECTV Satellite TV
-Install Discord from https://discord.com/new/download
 install Dish Network Satellite TV Indoors
 Install Dispo from the App Store
 install DOS
@@ -8106,7 +7837,6 @@ Install TextNow from the App Store or Play Store
 Install the "Invite All Friends on Facebook" extension
 Install the AdBlock extension for Chrome
 Install the app for your watch
-Install the app from https://www.dropbox.com/install
 install the Arabic Language on Android
 Install the Bitmoji app
 Install the Bitmoji extension on Chrome
@@ -8129,7 +7859,6 @@ Install the missing .dll files
 Install the mobile app on your Android, iPhone, or iPad
 Install the mod through the Splinter Cell menu
 install the MySQL Database Server on Your Windows PC
-Install the Oculus ABD driver from https://developer.oculus.com/downloads/package/oculus-developer-hub-win (Windows Only)
 Install the operating system on the partition
 Install the Outlook app on your phone or tablet
 Install the printer drivers
@@ -8520,7 +8249,6 @@ Launch a Lightning Deal
 Launch AltStore on your phone or tablet and close it when you see an error
 Launch Among Us and tap Online
 Launch Android Studio
-Launch appleid.apple.com
 Launch AxCrypt
 Launch Google Earth
 Launch Google Maps
@@ -8705,7 +8433,6 @@ Lock the orientation
 lock Wire Drilled Head Bolts
 lock Your Bike
 Lock your phone
-Log back in to https://contacts.google.com/ and click Import in the menu to the left
 log In
 Log in
 Log in (if you picked a cloud service)
@@ -8713,23 +8440,15 @@ Log in and find a post you want to embed
 Log in and remove the backdoor
 Log in as a guest
 Log in as an administrator
-Log in at https://www.roblox.com/
-Log in at https://www.spotify.com/us/student/
 Log in if prompted
 log In on Telegram on Android
 Log in on the desktop app
 log in to a Microsoft Account
 log in to Discord on Android
 log in to Epic Games on Xbox
-Log in to hotmail.com
-Log in to https://contacts.google.com/ and click a contact
-Log in to https://play.google.com on a computer
-Log in to https://www.dropbox.com/home/
 Log in to IMDB
 log in to Instagram on a PC or Mac
-Log in to Netflix at www.netflix.com
 Log in to OneDrive or your preferred cloud storage account
-Log in to Pinterest.com
 Log in to Reddit
 log in to Slack on PC or Mac
 log in to Spotify
@@ -8759,7 +8478,6 @@ Log in with your EA Games account
 Log in with your Minecraft or Mojang account
 Log into Facebook
 Log into Gmail on a computer
-Log into keep.google.com in a web browser
 Log into Seller Central
 Log into social media
 Log into Steam
@@ -8783,7 +8501,6 @@ Log out of PokÃ©mon Go
 log Out of Slack on Android
 Log out of Snapchat
 Log out of your account on your app
-Login at https://facebook.com and navigate to your page
 login on Telegram on iPhone or iPad
 login to Nintendo Eshop
 Login to SolidWorks
@@ -8810,7 +8527,6 @@ Look for 2 checkmarks next to a sent message
 Look for a blank Snap Score, which may indicate that you've been blocked
 Look for a book
 Look for a message with a grey background next to a blue bar
-Look for and open the new email from Amazon.com
 Look for coal blocks, which look like stone blocks with black spots on them
 Look for greyed-out chats (if you're currently in a conversation with someone you think unmatched you)
 Look for hard-to-believe statements in their profile
@@ -8838,7 +8554,6 @@ Look to the right of the Description tab
 look Unapproachable to Men
 Look up "Samsung (model number)" and your phone model will be in the title of the search result from Samsung
 look up and Interpolate Enthalpy Values for Water Using Steam Tables
-Look up the domain at whois.com
 Look up the domain's IP address on arin.net
 Look up the IMEI number in a database
 Look up their phone number in a reverse lookup search engine
@@ -12385,7 +12100,6 @@ Navigate to C:\Windows\Fonts
 Navigate to Extensions, which might mean going to Settings first
 Navigate to Groupme
 Navigate to HKEY_USERS.DEFAULT\Software\Microsoft\Office
-Navigate to https://google.com in a web browser on your Mac or Windows computer
 Navigate to Make this my home Xbox and press A
 Navigate to Microsoft's Internet Explorer page
 Navigate to MultiVersus > Content > Paks
@@ -12415,7 +12129,6 @@ Navigate to the font you want to make bigger
 Navigate to the footnote reference
 Navigate to the GIF in your file browser
 Navigate to the Highlight you want to save
-Navigate to the http://desmume.org
 Navigate to the image and double-click it
 Navigate to the ISO file
 Navigate to the item listing
@@ -12695,7 +12408,6 @@ Open Facebook Messenger
 Open Facebook on a browser
 Open Facebook on your browser
 Open Facebook on your device
-Open Facebook.com
 Open FaceTime
 open File Explorer
 Open File Explorer
@@ -12749,17 +12461,11 @@ Open Horizon and drag the mod to the flash drive
 open Hotmail
 open HTM Files
 Open http://localhost:8080 in a browser
-Open https://getbootstrap.com
 Open https://jenkins.io/download in your browser
-Open https://www.blizzard.com in your browser
-Open https://www.icoconverter.com
-Open https://www.internetdownloadmanager.com
 Open https://www.latex-project.org
-Open https://www.twitch.tv
 Open Hulu
 Open iCloud and Back up all your local data
 Open iCloud on your Mac or Windows computer (iOS users only)
-Open iCloud.com
 Open IDLE
 Open iexpress
 Open iMovie
@@ -13011,7 +12717,6 @@ Open the Excel document
 Open the Facebook app
 Open the Facebook app and tap the menu
 Open the Facebook app on your smartphone
-Open the Facebook app or go to facebook.com
 Open the FBReader app
 Open the file
 Open the File Explorer
@@ -13115,7 +12820,6 @@ Open the Options menu and click Game Options
 Open the Outlook app
 Open the Output panel
 Open the PayPal app and sign in
-Open the PayPal mobile app or go to https://www.paypal.com/myaccount/summary
 Open the PDF in a reader like Edge or Preview
 Open the PDF in Adobe Reader
 Open the PDF in Chrome
@@ -13246,7 +12950,6 @@ Open TikTok
 Open Tiktok
 Open TikTok and tap +
 Open Tinder
-Open Tinder or go to https://tinder.com/
 open TMP Files
 Open Touchscreen Test
 Open Traffic Monitor
@@ -13293,8 +12996,6 @@ Open Word and make sure the developer tab is visible
 Open Word or PowerPoint
 open WordPad in Windows 10
 open WRF Files
-Open www.showtimeanytime.com/activate in a browser
-Open www.spotify.com in your browser
 Open Xcode on your Mac
 open XML
 open XPS Files
@@ -13308,8 +13009,6 @@ Open your Android's Settings
 Open your applications or software menu
 Open your BitTorrent client and specify a download location in the Settings/Options menu
 Open your browser
-Open your browser and go to http://windowbox.me/multiwall/
-Open your browser and go to https://www.asus.com/campaign/aura/us/index.html
 Open your CD/DVD burning software
 Open your code for editing
 Open your computer case and disconnect all cables from your PSU
@@ -13401,7 +13100,6 @@ Open YouTube
 Open YouTube and log in if necessary
 Open YouTube Studio
 Open YouTube to the video
-Open YouTube.com
 Open Zelle
 Open Zoom
 Open Zoom and join a meeting
@@ -14571,7 +14269,6 @@ Purchase new RAM
 Purchase the book in the Google Play Store
 Purchase the gear you need to record gameplay footage, webcam footage, and audio
 Purchase the label
-Purchase TurboTax from TurboTax.com
 Purchase web monitoring software
 puree Vegetables
 push Start a Motorcycle
@@ -14765,7 +14462,6 @@ Recycle it
 recycle Sawdust in a Compost Pile
 recycle Towels
 redeem an iTunes Gift Card
-Redeem Honey Gold at https://www.joinhoney.com/honeygold/redeem
 Redeem your rewards once you reach 7000 points
 redirect Rainwater From a Downspout
 redline a Document in Microsoft Word
@@ -14797,8 +14493,6 @@ register a TV with Amazon Prime
 Register an account
 register an Official WeChat Account
 Register and pay with your credit card
-Register at https://www.dropbox.com/register
-Register for an account at nexusmods.com
 Register for invite-only PS5 restocks on the PlayStation website with your PlayStation Network account
 register Internet Download Manager (IDM) on PC or Mac
 register on Uconnect
@@ -15095,7 +14789,6 @@ repel Insects With Beer
 Replace "base" with your base number
 Replace "CODE" with the code
 Replace "power" with your exponent
-Replace "providerdomain.com" with the provider's text domain
 Replace "username" with the new admin's username
 replace a Bathroom Fan
 replace a Bathroom Fan Motor
@@ -17363,41 +17056,22 @@ Sign in and allow location services
 Sign in and set up your environment
 Sign in and tap Choose a file to upload
 Sign in anywhere using the same account
-Sign in at https://account.sonymobile.com/en-US/#/signin
-Sign in at https://tngportal.touchngo.com.my/tngPortal/login
 Sign in or confirm your identity
 Sign in or create a new Oracle account
 Sign in or create an account
 Sign in to a workspace
 sign in to Chrome
-Sign in to drive.google.com
-Sign in to Ebay.com
 Sign in to Facebook
 Sign in to Gmail
-Sign in to Gmail.com
-Sign in to Gmail.com on a computer
 Sign in to Google Drive
 sign in to Google Drive on Android
 Sign in to Google Gmail
 Sign in to Google Sheets
-Sign in to http://reddit.com
-Sign in to http://www.reddit.com
-Sign in to https://calendar.google.com
-Sign in to https://contacts.google.com
-Sign in to https://docs.google.com
-Sign in to https://drive.google.com
-Sign in to https://mail.google.com
-Sign in to https://www.dropbox.com
-Sign in to https://www.facebook.com
-Sign in to https://www.google.com/alerts
-Sign in to https://www.groupon.com
-Sign in to https://www.pinterest.com
 sign in to iCloud on an iPhone
 Sign in to Microsoft
 sign in to Office 365
 sign In to Outlook
 Sign in to Reddit
-Sign in to Spotify.com
 Sign in to TechnicLauncher with your Mojang account
 Sign in to the Geico app
 sign in to Xbox Live
@@ -17434,12 +17108,9 @@ Sign in with your Yahoo account
 Sign into (or create a) Google account
 Sign into both using the same RealVNC account
 Sign into Facebook on a phone or tablet
-Sign into https://www.amazon.com
-Sign into https://www.netflix.com
 Sign into iCloud
 sign Into OneNote
 Sign into Skype when prompted
-Sign into Spotify.com
 Sign into the child account
 Sign into the modded profile and start Skyrim
 Sign into your Amazon account
@@ -17447,7 +17118,6 @@ Sign into your Intuit account
 Sign into your router's page
 Sign into YouTube
 Sign into Youtube
-Sign into YouTube.com
 Sign out and sign back in
 sign Out of a Messenger Account on Other Devices
 sign Out of Apple Messages
@@ -17456,7 +17126,6 @@ sign Out of Your Apple ID Account on an iPhone
 sign Out of Your Apple ID for FaceTime on an iPhone
 sign Out of YouTube Music on iPhone or iPad
 Sign up
-Sign up at https://www.joinhoney.com/explore
 Sign up by tapping Not a member? Join Honey when you open the Honey app
 Sign up for a new service and phone number
 Sign up for a Premium plan to increase your earning limits
@@ -17467,7 +17136,6 @@ sign Up for AmazonSmile
 Sign up for an account
 Sign up for an account and license
 Sign up for an account with YouTube or Twitch
-Sign up for GeForce Now at https://www.nvidia.com/en-us/geforce-now/memberships
 sign Up for Honey
 Sign up for the Partner Program
 Sign up or log in
@@ -18675,24 +18343,15 @@ tint Car Windows
 tint Eyebrows
 tint Tail Lights
 tip a Lyft Driver
-To cross-list items from Poshmark to Facebook Marketplace, you'll need to use a cross-listing service
-To delay a single text message, try Scheduled App, or just create a recurring text schedule in Shortcuts and delete it when no longer needed
-To download a photo manually, tap the photo, tap the three dots at the top-right corner, and then tap View in gallery Tap the three horizontal dots at the bottom and select Save
-To link to another file instead of a website, leave the "Address" bar blank and select the file instead
-To make Godzilla in Little Alchemy 1 and Little Alchemy 2, you'll need to combine a dinosaur with a city
-To opt out of AdChoices ads on a phone or tablet, install the AppChoices app and select Opt Out from each company
-To opt out on a computer, go to https://optout.aboutads.info and select which ads to opt out from
-To rotate your home screen on Android, enable home screen rotation in the Home Settings menu
-To run a script from the command prompt, use "cscript scriptname
-To run a script from Windows Explorer, double-click the script
-To run the script from the Run dialog, open the Run dialog, browse for the script, and click OK
-To test your motherboard, turn on your computer, watch for lights on the motherboard, and listen for beep codes
-To use Caps Lock on a Chromebook, press Search + Alt keys
-To use Caps Lock on an Android, iPhone, or iPad, double-tap the up-arrow key
-toast a Girl
-toast Another Player Multiversus
+opt out of AdChoices ads
+go to https://optout.aboutads.info and select which ads to opt out from
+rotate your home screen on Android
+enable home screen rotation in the Home Settings menu
+run a script from the command prompt
+test your motherboard
+turn on your computer
+watch for lights on the motherboard, and listen for beep codes
 toast Bread Without a Toaster
-toast Buns
 toast Pecans
 toast Sesame Oil
 toast Sesame Seeds
@@ -19068,7 +18727,6 @@ Type "Facebook" into the search bar
 Type "has:attachment"
 Type "hotels" and press Enter
 Type "hotels" and tap the search key
-Type "https://www.facebook.com" and click Add page
 Type "invoice" into the search and press Enter
 Type "IW21" into the bar at the top of your screen and press Enter or Return
 Type "locate openjdk" and press Enter to find the Java installation location
@@ -19104,13 +18762,11 @@ Type "sudo updatedb" and press Enter to update the Java database
 Type "swf" into the box to find the game link
 Type "terminal"
 Type "TikTok" in the search bar
-Type "tracert wikihow.com
 Type "unsub" into the search bar
 Type "V-Bucks" into the search
 Type "wechat" into the search bar
 Type "whatsapp" into the search bar
 Type "wincfg" and press Enter
-Type "www.google.com" into the URL bar
 Type "Y" and press Enter when prompted
 Type "Yes" or "No" to answer the questions
 Type "youtube" and tap Search

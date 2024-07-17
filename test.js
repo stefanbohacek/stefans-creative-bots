@@ -5,7 +5,7 @@ dotenv.config();
 // import bot from "./bots/lighthouses/bot.js";
 // import bot from "./bots/test/bot.js";
 // import bot from "./bots/thisdatasetdoesnotexist/bot.js";
-import bot from "./bots/discontinued/bot.js";
+import bot from "./bots/trains/bot.js";
 // import bot from './bots/wikipediatopedits/bot.js';
 
 bot();

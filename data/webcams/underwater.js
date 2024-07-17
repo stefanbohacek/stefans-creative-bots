@@ -3,7 +3,7 @@ export default [
     name: "Deerfield Beach, Broward County, Florida, USA",
     description: "Underwater camera, mostly showing fish swimming around.",
     url: "https://www.deerfield-beach.com/",
-    youtube_url: "https://www.youtube.com/watch?v=lXzSU7ezjp8",
+    youtube_url: "https://www.youtube.com/watch?v=vSP4AUjTmJs",
     tags: "#water #underwater #fish #animals #nature #live #webcam",
   },
   {

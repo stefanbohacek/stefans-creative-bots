@@ -1,3 +1,5 @@
+abandon normal instruments
+accept advice
 accept Christ As Your Savior
 Accept the license terms
 Accept The Storm Gathers quest
@@ -107,6 +109,7 @@ Add an "About" section to your YouTube channel
 add an "E Mail Me!" Link to Your Web Page
 add an Additional Monitor to Your Computer
 add an Artist to a Spotify Playlist
+add an Emoji
 add an Image in Illustrator
 add an iTunes Gift Card to iPhone
 Add and adjust layers
@@ -155,7 +158,6 @@ add Documents in Gmail
 Add each role by entering the corresponding emoji, followed by a space, and then the role name
 add Effects in TikTok
 add Emergency Contacts and Information to Android
-add an Emoji
 add Emojis to Pictures
 add Ethernet Ports to a Router
 add Exercise on a Fitbit
@@ -324,6 +326,7 @@ Add transitions between slides
 add Transitions in iMovie
 Add two more WordArt letters
 add Two Trend Lines in Excel
+add Ubuntu to the boot menu
 add Vegetables to Pasta
 Add wheat to the 1st and 3rd squares on the center row
 add Widgets on Android
@@ -438,6 +441,7 @@ Alternatively, open your profile, then bring up the Settings menu
 Alternatively, type =char(9679) and hit Enter or Return
 Always use a password to protect your computer
 amend Clay Soil
+analyze the spectrum
 Analyze your competitors
 anchor a Boat
 anchor Objects in InDesign
@@ -516,6 +520,7 @@ As long as you are a woman or non-binary person, you can send the first message 
 Ask a question based on something in their bio
 Ask for an iPad for your birthday or holiday
 Ask for work
+ask people to work against their better judgment
 Ask questions before the sale
 Ask Siri
 Ask Siri to play certain songs, change the volume, and use other music controls
@@ -523,6 +528,7 @@ Ask Siri to reply to your text messages
 Ask someone to marry you
 Ask the customer service representative to make your mobile number private
 Ask them questions
+ask your body
 Ask your friends to do the same
 Ask your mobile provider if "Call trap" or "Call trace" is available
 assemble a Clarinet
@@ -610,6 +616,7 @@ bake Thick Cut Bacon
 bake Trout
 bake Your Makeup
 balance a Soda Can at a 45 Degree Angle
+balance the consistency principle with the inconsistency principle
 bathe a Sphynx Cat
 bathe an Angry Cat With Minimal Damage
 batik
@@ -629,6 +636,7 @@ be a Sophisticated and Cultured Male
 be a Successful Wiffle Ball Hitter
 be a Well Groomed Indian Man
 Be active on Instagram
+be an engineer
 be an Environmental Consultant
 be an Executor
 Be aware that Adobe stopped support Flash and all the major web browsers have disabled the Flash Player plug-in
@@ -640,6 +648,7 @@ be Comfortable on Your Period
 be Comfortable While on Your Period (Teens)
 Be convincing during emergency meetings
 be Cool in Seventh Grade
+be dirty
 be Good at Mario Kart Wii
 be Happy With Your Body
 Be hilarious and relatable
@@ -874,6 +883,7 @@ Break melons in jungles
 Break oak leaf blocks
 break Up Concrete
 break WEP Encryption
+breathe more deeply
 breed a Gold Dragon in DragonVale
 breed a Moon Dragon in DragonVale
 breed a Seasonal Dragon in DragonVale
@@ -1032,6 +1042,7 @@ build an Underground Root Cellar
 Build and test
 build Bleachers
 build Brick Columns
+build bridges
 Build community among your customers and potential customers
 build Dirt Jumps
 build Garage Shelving
@@ -1052,6 +1063,7 @@ burn a CD in Ubuntu Linux
 burn a CD Using Mac OS X
 burn a DVD in Windows 7
 burn a DVD on a Mac
+burn bridges
 Burn it to a CD or DVD (or make a bootable flash drive)
 burn MP3 to CD
 burn Mpg to DVD
@@ -1241,6 +1253,7 @@ change Call Audio Routing on an iPhone
 Change contact information
 change Gear Box Oil on a Vintage Vespa Scooter
 Change networks
+change nothing and continue with immaculate consistency
 Change the "Value Data" field from "0" to "1."
 Change the Admin password with net user Admin*
 change the Background on an iPhone
@@ -1271,10 +1284,10 @@ change the Ink Cartridge in an HP Envy 5000
 change the Instagram Background Color
 change the IP Address in the Tor Browser
 change the Keyboard Layout on Windows
+change the Language
 change the Language in a Wikipedia
 change the Language in Word
 change the Language on an iPhone
-change the Language
 Change the multiple pages setting to Book fold
 change the Netflix Language
 change the Notification Sound on Facebook Messenger on a PC or Mac
@@ -1877,10 +1890,10 @@ Click Apps (or System if Apps isn't there)
 Click Apps and Import store
 Click Apps, then click the Apps & features tab
 Click Arc
+Click Archive
 Click Archive Formats
 Click Archive Order
 Click Archive Order to confirm
-Click Archive
 Click Archived Chats
 Click Attach or the paperclip
 Click Attribute Editor
@@ -2181,7 +2194,6 @@ Click Events on the left panel
 Click Existing File or Web Page in the left and enter the URL
 Click Export
 Click Export Contacts
-Click Export
 Click Extensions
 Click Extract
 Click Extract All
@@ -2701,7 +2713,6 @@ Click Print all responses
 Click Print label & instructions
 Click Print or Save
 Click Print Tiles
-Click Print
 Click Printers
 Click Printers & scanners
 Click Process
@@ -3859,7 +3870,14 @@ Connect your router to the switches uplink port
 Connect your smartphone to Wi-Fi instead of 4G
 Connect your social media accounts
 Connect your Switch to a video card
+consider different fading systems
 Consider each of your top friends
+consider the inconsistency principle
+consider the reality of the situation?
+consider transitions
+consider what mistakes you made today
+consider what your closest friend would do
+consult other sources
 Contact a brand you'd like to sponsor
 Contact the driver and inform them of your friend
 Contact the website or company that blocked your IP address
@@ -3874,8 +3892,10 @@ Continue with the installation
 Contract "Sanguinare Vampiris"
 control Green Pond Water Problems
 Control who can find or contact you
+convert a melodic element into a rhythmic element
 convert Celsius to Kelvin
 Convert raster images to vector graphics
+convert the file to a PDF
 Convert your USB drive to NTFS if it's FAT32
 Convert your video to MP4
 cook Arroz Caldo
@@ -4440,6 +4460,7 @@ cut a T Shirt Into a V Neck
 cut a T-Shirt
 cut a T-shirt Cute
 cut a Toddler's Hair
+cut a vital connection
 cut Acrylic Sheets
 cut Aluminum
 cut an A-Line Bob
@@ -4611,6 +4632,7 @@ Declare your variables
 declare Yourself Bankrupt
 Decline a rematch
 declutter
+decorate
 decorate a Box
 decorate a Cheesecake
 decorate a Diya
@@ -4645,6 +4667,7 @@ defeat Neslug in the Monster Arena in Final Fantasy X
 Defeat the Draugr boss and loot his corpse to get the Dragonstone
 Defeat the wolf spirit
 define a Variable in SPSS
+define an area as "safe" and use it as an anchor
 Define the function
 Define the style in your CSS
 Define the viewport size
@@ -4691,6 +4714,8 @@ Design your filter
 Design your poster
 Designate the "North" direction
 Designate your old Android and new iPhone
+destroy -the most important thing
+destroy nothing
 Detach the joy-con controllers
 Detach the joy-cons and attach the straps
 Detach the wires attached from the battery to the mainboard
@@ -4788,7 +4813,9 @@ disassemble a PlayStation 2
 disassemble a Pool Table
 disassemble an Ak 47
 disassemble, Transport, and Reassemble a PC
+discard an axiom
 Disconnect from Bluetooth or AirPlay devices
+disconnect from desire
 Disconnect from the internet
 Disconnect from Wi-Fi and download an app
 Disconnect other computers from the network
@@ -4799,6 +4826,7 @@ Disconnect your Beats headphones or earbuds and connect again
 Disconnect your Bluetooth device from other devices
 Disconnect your controller from other devices
 discourage Skunks in Your Garden
+discover the recipes you are using and abandon them
 discreetly Wear Diapers as a College Student
 discreetly Wear Diapers for Bedwetting as a Camper
 disinfect Laundry
@@ -4816,6 +4844,7 @@ dispose of X Acto Blades
 dissect a Squid
 dissect a Worm
 Dissect and reconstruct the track
+distort time
 distress Jeans with a Razor
 distress Wood
 distress Wood Furniture
@@ -4858,6 +4887,7 @@ do a Quiff with Curly Hair
 Do a reverse-image search on their profile photo
 do a Roly Poly
 do a Simple Mass Balance
+do a simple subtraction
 do a Sleek Ponytail
 do a Snowboard Turn
 do a Stoppie on a Motorcycle
@@ -4887,8 +4917,11 @@ do Exponents in Excel on PC or Mac
 do Fabric Painting
 do Faux Locs
 do Goddess Locs
+do nothing for as long as possible
 do Paper Tole
 Do shoutouts
+do something boring
+do something that you wouldn't normally do
 do the "11Th Card Trick"
 do the Birthday Card Trick
 do the Cup Game
@@ -4901,13 +4934,20 @@ do the Long Tail Cast On
 do the Perfect Step Overs in Soccer
 do the Pokemon Shop Questionnaire
 do the Twenty One Eleven Card Trick
+do the washing up
 Do TikTok challenges and always use their hashtags
 Do visual tasks in front of other players
+don't be afraid of things because they're easy to do
+don't be ashamed of using your own ideas
+don't be frightened of cliches
+don't be frightened to display your talents
 Don't bother unlocking tier 4
+don't break the silence
 Don't click unfamiliar web links
 Don't give out your real email address online
 Don't let anyone see you killing or using vents
 Don't render videos are faster frame rates than they were shot at
+don't stress one thing more than another
 Don't worry about horizontal stripped candies
 Double tap to zoom back out
 double Tongue on Trumpet
@@ -5377,6 +5417,7 @@ dress Like the Doctor from Doctor Who
 dress Up As Ash from Pokemon
 dress Up As Mario from Super Mario Bros
 drill a Hole in Tile Using a Tile Hole Saw
+drink water
 Drive the car in when the garage door opens
 Drive the car to Los Santos Customs in Las Santos or Harmony
 Drop the longer end over the skinny center of the bow
@@ -5542,6 +5583,9 @@ embroider by Hand
 embroider on Crochet
 emcee an Event
 emotionally Cope With Having Disabilities
+emphasize differences
+emphasize repetitions
+emphasize the flaws
 empty a Diaper Genie
 empty a Trash Bin
 empty a Waterbed
@@ -5591,6 +5635,7 @@ enable Function Keys
 enable Gmail Desktop Notifications
 enable Grammarly on Google Docs
 Enable High-Contrast mode
+enable home screen rotation in the Home Settings menu
 Enable HTML email if using a desktop client
 Enable iCloud Backup
 enable Image Preview to Display Pictures in a Folder (Windows 10)
@@ -6058,6 +6103,7 @@ Extract the ZIP or RAR
 Extrude the faces of the mesh
 face Swap on Snapchat
 Face the object
+faced with a choice, do both
 faceTime Without Wi-Fi
 facetune a Video on Android
 factory Reset the Nintendo Switch
@@ -6106,6 +6152,7 @@ fill a Cake
 fill a Punching Bag
 fill Blank Cells in Excel
 fill Color on Indesign
+fill every beat with something
 Fill in the form to sign up
 Fill in the information, such as your name, your Twitch name, your email, and your operating system
 fill Large Holes in Wood
@@ -6222,6 +6269,7 @@ find Glitches
 Find Gsnap in the Effect menu
 find Hidden Photos on an iPhone
 find Jelly World on Neopets
+find lowest common denominator
 find Marginal Cost
 find Molecular Formula
 find Moltres in Pokemon HeartGold and SoulSilver
@@ -6746,6 +6794,7 @@ get to the Isle of Thunder
 get Tyranitar in Pokemon Diamond, Pearl or Platinum
 get Unlimited Diamonds, Gold, and Iron on Minecraft PE
 Get your game on as many digital distributors as possible
+get your neck massaged
 Get your PayPal button
 Get your PayPal link
 give a B12 Injection
@@ -6773,6 +6822,8 @@ give Someone a Pedicure
 give Someone an Admin Role on Your Facebook Page
 Give the cashier your card and cash
 Give the cashier your ID (if you're in a Walgreens or Duane Reade)
+give the game away
+give way to your worst impulse
 give Your Hamster a Bath
 give Your Parade Shoes That Mirror Finish
 give Yourself a Brazilian Wax
@@ -6798,6 +6849,7 @@ go Back Using the Command Prompt
 Go black and white for a minimalist look
 Go fishing
 Go neofuturistic with a neon theme
+go slowly all the way round the outside
 Go The Ratway and defeat 5 bandits
 Go through passageway and capture Regirock
 Go through the initial setup process
@@ -6844,6 +6896,7 @@ Go to https://archive.org/web/ in a web browser
 Go to https://draw.io in a web browser
 Go to https://files.minecraftforge.net/ in your web browser
 Go to https://ftp.mozilla.org/pub/firefox/releases/
+go to https://optout.aboutads.info and select which ads to opt out from
 Go to IGN in a web browser
 Go to Insert
 Go to Menu > Setup > Puppy Installer
@@ -7040,6 +7093,7 @@ have a Successful Family Game Night
 have a Watergun Fight
 have Babies in the Sims Freeplay
 Have cash for your RushCard as well as the load fee
+have courage
 have Flawless Skin in a Week
 have Fun at a Mall
 have Fun During a Long Car Ride (Kids)
@@ -7159,6 +7213,7 @@ Hold your iPhone or iPad over a QR code so it is visible on the screen
 hollow Out a Coconut
 hollow Out Wood
 homeschool Yourself
+honor thy error as a hidden intention
 hook Up an Atari to a Modern Television Set
 hook Up an iPod to a TV
 hook Up at the Beach
@@ -7219,6 +7274,7 @@ how Do I Encrypt My Samsung Phone
 how Do I Reinstall DirectX on Windows 10
 Huit (wheet)
 hull Walnuts
+humanize something free of error
 hunt
 hunt Rabbit
 hypnotize a Chicken
@@ -7293,6 +7349,8 @@ If your iPhone won't turn off, force restart it
 illuminate House Numbers
 illustrate a Children's Book
 image With Windows Deployment Services (WDS)
+imagine the music as a moving chain or caterpillar
+imagine the music as a set of disconnected events
 impart STEM Education to Your Children
 implement an Accounting System
 import a KML File to Google Earth
@@ -8040,6 +8098,7 @@ jump on a Dirt Bike
 jump on Skis
 jump Rope
 jumpstart a Vehicle
+just carry on
 justify Text in Photoshop
 karate Chop
 keep a Baguette Fresh
@@ -8360,11 +8419,13 @@ List the domain with Sedo, Flippa, GoDaddy, and AfterNic
 List the steps that occur between the start and finish
 Listen for a message that says the contact can't be reached
 Listen for any loud noises with the hard drive or CPU fan
+listen in total darkness, or in a very large room, very quietly
 Listen to audio
 listen to iPhone Audio Messages by Raising the Phone to Your Ear
 listen to Kindle Books on Audible
 listen to Podcasts on Android
 Listen to the message
+listen to the quiet voice
 listen to Trees Communicate
 live in a Garage
 live in a Yurt
@@ -8515,10 +8576,13 @@ Long press on the video you want to save
 Long-click and release the graph tool
 Long-press the photo you want to move
 Look at a report(s) for your website's traffic
+look at a very small object; look at its center
 Look at friend suggestions
 Look at number of dislikes
+look at the order in which you do things
 Look at their friends list
 look Beautiful
+look closely at the most embarrassing details and amplify them
 Look directly at the camera but don't sit facing the camera
 look Fab, Fresh and Pretty
 Look for "Seen" next to someone's name
@@ -8733,6 +8797,7 @@ make a Black Russian Cocktail
 make a Black Tooth Grin
 make a Blackberry Pie
 make a Blackhead Remover (Epsom Salts and Iodine Method)
+make a blank valuable by putting it in an exquisite frame
 make a Blanket
 make a Bleach T Shirt
 make a Blindfold
@@ -8931,6 +8996,7 @@ make a Computer Operating System
 make a Computer Screen Go Black With PowerPoint
 make a Cone
 make a Cone Hat
+make a connection
 make a Cookbook Scrapbook
 make a Cookie Monster Cake
 make a Cooler from Insulating Material
@@ -9203,6 +9269,7 @@ make a Light Saber Using Everyday Items
 make a Lip Balm Container
 make a Liquid Into a Solid
 make a Liquid Nitrogen Substitute
+make a list
 make a Log File
 make a Loki Mask
 make a Long Island Iced Tea
@@ -9423,6 +9490,7 @@ make a Strapless Dress
 make a Strawberry Smoothie
 make a Substitute Sanitary Pad
 make a Successful Game
+make a sudden, destructive, unpredictable action
 make a Sugar Topping for a Creme Brulee
 make a Summer Dress out of a Bedsheet
 make a Sun Costume
@@ -9590,6 +9658,7 @@ make an Enema
 make an Envelope
 make an Espresso (Espresso Machine Coffee)
 make an Exe File
+make an exhaustive list of everything you might do and do the last
 make an Eye of God
 make an Eyelash Serum to Grow Long Eyelashes
 make an Hourglass Clock Out of Light Bulbs
@@ -10070,7 +10139,6 @@ make Concrete Pumpkins
 make Concrete White Again
 make Condensed Milk
 make Confetti Potato Salad
-make a connection
 make Cookie Cups
 make Cookie Cutters
 make Cookie Cutters from Regular Aluminum Foil
@@ -10935,6 +11003,7 @@ make Oliebollen (Dutch New Year's Doughnuts)
 make Olive Juice
 make Olive Oil
 make Omurice
+make one dot at a time
 make Onigiri
 make Onion Ring Batter
 make Onion Rings
@@ -11876,6 +11945,7 @@ measure Your Crotch for Pants
 Measure your screen diagonally from corner to corner to find the manufacturer's advertised size
 measure Your Shirt Size
 measure Your Space for a Large Wall Mirror
+mechanicalize something idiosyncratic
 meditate for Beginners
 meditate to Relieve Stress
 Meet at a public, well-lit location
@@ -12028,6 +12098,7 @@ mulch Around a Tree
 multiply Square Roots
 Multiply the diagonal screen size by 1.2 to determine the proper viewing distance from the TV
 Murder Grelod the Kind
+mute and continue
 mute Members in Discord on Android
 Mute notifications from people you don't follow
 mute the Navigation Voice in the Maps App on an iPhone
@@ -12601,7 +12672,6 @@ Open Snapchat, then open a conversation with a friend
 Open Snapchat, then open your profile
 Open Snipping Tool
 Open Spotify
-Open Spotify
 Open Spotify's email in your mailbox
 Open Start
 Open Start, then click the Settings gear
@@ -13107,6 +13177,7 @@ Open Zoom on your computer and join or host a meeting
 operate a Backhoe
 operate an Ambulance Stretcher
 Opren Bumble
+opt out of AdChoices ads
 opt Out of Amazon Sidewalk
 optimize Your Mac
 optimize Your PC Performance
@@ -13798,6 +13869,7 @@ Post regularly and keep your style on-brand
 Post some links to photos or videos for some extra upvotes
 post Text on Instagram
 post to Snapchat Stories
+post Videos
 post While Trotting on a Horse
 Post your TikTok
 Posts You've Liked
@@ -13926,9 +13998,6 @@ Press %
 Press 3 on the numeric keypad
 Press A
 Press Ã·
-Press Enter
-Press Enter or Return
-Press Enter or click +
 Press Alt
 Press Alt + [ to move the window left
 Press Alt + ] to move the window right
@@ -13937,8 +14006,8 @@ Press Alt + 7 on Windows or Option + 8 on Mac
 Press Alt + F and select New Incoming Connection
 Press Alt + F11 to open the Visual Basic editor
 Press Alt and = to insert an equation
-Press Alt+Shift to switch
 Press Alt+P to open the settings page
+Press Alt+Shift to switch
 Press and briefly hold the Power and Volume Up buttons simultaneously
 Press and hold "ON", "C", "CE", or "AC"
 Press and hold "X", "Square", or "R" to summon your sparrow
@@ -14040,6 +14109,7 @@ Press Enter
 Press Enter (Windows) or Return (Mac)
 Press Enter (Windows), Return (Mac), or the mobile equivalent
 Press Enter on your keyboard
+Press Enter or click +
 Press Enter or Ctrl + Shift + Enter
 Press Enter or Return
 Press Enter or Return on your keyboard
@@ -14132,8 +14202,8 @@ press Tofu
 Press UP + SELECT + B buttons simultaneously
 Press Win + E to open File Explorer
 Press Win + I to open Settings
-Press Win + R
 Press Win + PrtScr at the same time to capture the screen
+Press Win + R
 Press Win+Space to switch
 Press Window Key + Shift + S
 Press Windows Key + E
@@ -14297,6 +14367,7 @@ put Feathers in Your Hair
 put Game Saves on Your PSP
 put Glitter on a Dress
 put Google Images in Email
+put in earplugs
 Put in popsicle molds and freeze
 Put it in the fridge until room temperature
 put Laminate on a Counter Top
@@ -14381,6 +14452,7 @@ read Piano Tabs
 read Several Books at Once
 Read the body of the output to see how long it took the address to respond
 Read the braille sign and you'll get a message that an earthquake prompted doors to open around the world
+read the comments
 Read the first line to see what the command is doing
 Read the inscription at the end of the cave
 Read the instructions to put your device in DFU mode and click Start
@@ -14529,6 +14601,7 @@ relieve Breast Engorgement
 reload a Pistol
 remember a Person's Name
 remember Dreams
+remember those quiet evenings
 remix
 remove .Ds_Store Files on Mac OS X
 remove a Carpet Stain With an Iron
@@ -14561,6 +14634,7 @@ remove Adhesive on Hardwood Floor
 remove Adware Manually
 Remove all items from your avatar
 remove All Likes on Instagram
+remove ambiguities and convert to specifics
 remove an Event from Google Calendar on PC or Mac
 remove An Indoor Carpet
 Remove any existing versions of Java
@@ -14664,6 +14738,7 @@ remove Sharpie Stains from a Wall
 Remove sources of Bluetooth interference
 Remove spam blocking apps
 Remove speaker from the cabinet
+remove specifics and convert to ambiguities
 Remove startup programs
 remove Stick On Lettering from a Boat
 remove Stickers
@@ -14956,6 +15031,7 @@ Reset your iPhone's network settings
 reset Your Microsoft Password
 Reset your password
 Reset your router
+resist change
 Resize and crop as needed
 Resize and reposition the image
 Resize it
@@ -15079,6 +15155,7 @@ reuse Old Newspapers
 reuse Paint Rollers
 reuse Your Old Computer Hard Drives
 reveal a Fake Facebook Account
+reverse
 reverse a Curse
 reverse Sear Meat
 Review and tap Send Now
@@ -15309,6 +15386,7 @@ rotate Screen on iPhone
 rotate Things in Fortnite Creative
 rotate Videos in iMovie
 rotate Your Computer Screen
+rotate your home screen on Android
 Rotate your phone
 Rotate your phone (if Auto Rotate is enabled)
 Rotate your phone and tap the manual rotate button (if Auto Rotate is disabled)
@@ -15342,6 +15420,7 @@ run a Lemonade Stand
 Run a malware scan
 run a Program from the Command Line on Linux
 run a Program on Command Prompt
+run a script from the command prompt
 run a Silent Auction
 run a Simple Nmap Scan
 run a Teddy School
@@ -15448,6 +15527,7 @@ save Images or Videos from Text Messages on iPhone
 save Instagram Highlights
 save One Page of a PDF for Free
 save One Page of a PDF Using Adobe Reader
+save photos
 save Photos from WhatsApp to Android Gallery
 save Photos on Telegram on Android
 save Pictures from Emails on an iPhone
@@ -15510,6 +15590,7 @@ say "Love" As an Ancient Roman
 Say "Turn off my flashlight."
 Say "Turn on my flashlight."
 say "Where Is the Bathroom" in Several Different Languages
+say outloud what you are really thinking about
 Say something like "Set an alarm for 8am tomorrow."
 say the Rosary
 Say your message
@@ -15538,6 +15619,7 @@ Scan your PC
 schedule a Lyft in Advance
 schedule a Text on iPhone
 schedule a Zoom Meeting in Outlook
+schedule recurring texts
 scoop Ice Cream
 score 5 on the AP World History Exam
 score Easy Goals in 'Pro Evolution Soccer' for PS2
@@ -15675,11 +15757,11 @@ Search for a location and tap Directions
 Search for a new email app
 Search for a podcast
 Search for a popular YouTube video
+Search for a post you want to view replies for
 search for a Product at Amazon
 Search for a recipient
 Search for a Skyblock map or server
 Search for a topic or source to add to Favorites
-Search for a post you want to view replies for
 Search for a video
 Search for a website that can corrupt a file
 search for a Word on a Webpage
@@ -15727,6 +15809,8 @@ search Instagram
 search Nearby on Google Maps on Android
 search on Facebook Messenger on a PC or Mac
 Search or browse for a package or app
+search posts from a Specific User
+search postss by Date on App
 Search r/pokemongo for promo codes
 search Reels on Instagram
 search Tags on Instagram
@@ -15736,8 +15820,6 @@ search the Internet for a Long Lost Friend
 Search the internet for old records
 Search the internet for their name and location
 Search threads and images
-search postss by Date on App
-search posts from a Specific User
 search Videos on Tiktok
 search Within a Google Docs Spreadsheet
 Search your "#keyword" to see all the tagged messages
@@ -15804,7 +15886,6 @@ see Snapchat Conversation History
 see Snapchat Memories
 see Street View on Google Maps on iPhone or iPad
 see the "Other" Folder in Facebook Messenger
-read the comments
 see Unread Emails in Outlook
 see Uploaded Photos on Facebook
 see What Your Friends Like on Facebook
@@ -16028,6 +16109,7 @@ Select a size
 Select a snip type from the menu
 Select a song
 Select a song from your library
+Select a sorting method
 Select a sound
 Select a source
 Select a specific location, a type of posting, and a type of product or service
@@ -16062,7 +16144,6 @@ Select a virus
 Select a voice channel
 Select a wallpaper display location
 Select a window and click OK
-Select a sorting method
 Select AC or DC mode on the dial
 Select Accessories
 Select Activate
@@ -16746,11 +16827,11 @@ Send the invite link
 Send the link to your recipient
 Send the message
 Send the message to the recipients
+Send the post
 Send the post or link
 Send the request
 Send the snap or save it to your phone
 Send the template SMS to verify
-Send the post
 send Videos
 send Videos on Discord
 send Videos on Groupme on Android
@@ -16921,8 +17002,8 @@ share Screen on FaceTime
 share Steam Games with Family and Friends
 Share the book
 Share the link
-Share the printer
 Share the post
+Share the printer
 Share the URL under Server URL your viewers
 share Videos on Facebook
 share WiFi from iPhone to iPad
@@ -17047,6 +17128,7 @@ Shut down your computer
 Shut down your phone, tablet, or laptop
 shut Down Your Windows Computer from the Command Line
 shut Off a Jammed Horn
+shut the door and listen from outside
 Shut the front cover
 side Braid Hair
 sift Flour
@@ -17425,6 +17507,7 @@ start Seedlings in Toilet Paper Rolls
 start Seeds Indoors
 Start shopping
 Start swiping
+start swiping through your matches
 Start talking
 Start the Activate Windows wizard
 Start the app
@@ -17541,6 +17624,7 @@ stop iCloud from Using Cellular Data for Transfers on an iPhone
 stop iPhone Maps from Automatically Pausing Audio During Prompts
 stop iTunes Payments
 stop Live Caption in Chrome
+stop Notifications
 stop Oat Milk from Going Slimy
 stop on a Longboard
 stop on Ice Skates
@@ -17559,7 +17643,6 @@ stop Squinting
 stop Targeted Ads on Instagram
 stop Toilet Tank Sweating
 stop Tunisian Crochet from Curling
-stop Notifications
 stop Vomiting
 stop Water Hammer
 stop Your Addiction to Stealing
@@ -17951,6 +18034,7 @@ tag Instagram on Facebook
 tag People in a Discord Chat on Android
 tag Someone in Facebook Messenger on Android
 tag Someone on WhatsApp on Android
+take a break
 take a Bus in Brisbane
 take a Cat for a Walk
 take a Good Picture On Your Camera Phone
@@ -17993,6 +18077,7 @@ take an Aromatherapy Bath
 take Apart a Pallet Without Breaking It
 take Apart a Track Bicycle
 take Apart Your Nintendo DS and Safely Put It Back Together
+take away the elements in order of apparent non-importance
 take Better Notes
 take Blood Pressure Manually
 take Blood Samples from Cattle
@@ -18104,6 +18189,7 @@ tape and Mud Drywall
 tape Handlebars
 tape Sheetrock
 tape Shin Splints
+tape your mouth
 taper Trouser Legs
 tarp a Roof
 teach a Baby to Crawl
@@ -18224,6 +18310,7 @@ test Water Quality
 Test your code
 Test your internet connection to ensure you are not just experiencing bad connectivity
 Test your internet speed
+test your motherboard
 test Your PS4 Controller
 tether Cellphone Internet to a Laptop
 tether With Android
@@ -18258,6 +18345,7 @@ thin Eyebrows
 thin Nail Polish
 thin Out Correction Fluid That Has Thickened Up
 Think about what you want to do with programming skills and what platforms you are interested in
+think of the radio
 thread a Brother Ls 1217 Sewing Machine
 thread a Brother Ls 2125i Sewing Machine
 thread a Kenmore Sewing Machine
@@ -18289,6 +18377,7 @@ Throw a witches head on the blue flame to release your own wolf spirit
 throw Playing Cards
 Tick the box to enable syncing and click Apply
 tickle Feet
+tidy up
 tie a Balloon
 tie a Bow Tie
 tie a Bucktail Jig
@@ -18343,14 +18432,6 @@ tint Car Windows
 tint Eyebrows
 tint Tail Lights
 tip a Lyft Driver
-opt out of AdChoices ads
-go to https://optout.aboutads.info and select which ads to opt out from
-rotate your home screen on Android
-enable home screen rotation in the Home Settings menu
-run a script from the command prompt
-test your motherboard
-turn on your computer
-watch for lights on the motherboard, and listen for beep codes
 toast Bread Without a Toaster
 toast Pecans
 toast Sesame Oil
@@ -18465,6 +18546,7 @@ troubleshoot Computer Startup Problems
 troubleshoot Muffins
 troubleshoot Streaming Issues on Hulu
 truss a Chicken
+trust in the you of now
 Trust your Apple ID in your phone or tablet's Device Management settings
 Try a different adapter
 Try a line-art theme
@@ -18533,6 +18615,7 @@ turn an Oversized T Shirt Into a Hot Mini Dress
 turn Any Device Into a Bluetooth Receiver Using Raspberry Pi
 Turn Bluetooth off and then back on
 turn in Crochet
+turn it upside down
 Turn off "Organize by Thread."
 turn Off a Calculator
 turn off a Normal School Calculator
@@ -18553,6 +18636,7 @@ Turn off Hardware TTY
 turn Off iCloud Keychain on an iPhone
 turn Off iCloud Mail on an iPhone
 turn Off iCloud Music Library
+turn Off Image Previews
 turn Off Instagram Notifications on an iPhone
 turn Off iPhone 12 Pro Max
 turn Off iPod Nano
@@ -18585,7 +18669,6 @@ Turn off the Nintendo Switch
 Turn off the Show Parked Location slider
 turn Off the Skype Camera on PC or Mac
 Turn off the Wii and remove the SD card
-turn Off Image Previews
 Turn off unnecessary services
 turn Off Vibrate on iPhone
 Turn off visual effects
@@ -18641,6 +18724,7 @@ Turn on the Xbox and a controller
 turn on Vanish Mode on Instagram
 turn on WiFi Calling on Galaxy
 Turn on Windows File and Printer Sharing
+turn on your computer
 Turn on your computer (if it isn't already on)
 Turn on your HDTV
 Turn on your Mac and press and hold Cmd+R
@@ -18671,8 +18755,8 @@ turn Your Mini Fridge Into a Wine Refrigerator
 Turn your phone back on
 Turn your phone off and then back on again
 tutor Online
-post Videos
 twirl a Drumstick
+twist the spine
 Type - followed by another cell's name
 Type .bat at the end of the file's name in the "File name" text box
 Type "
@@ -18987,11 +19071,11 @@ unblock a Page on Facebook
 unblock Command Prompt Anywhere
 unblock Flash Player
 unblock Fortinet
+unblock Someone
 unblock Someone on Facebook
 unblock Someone on Grindr
 unblock Someone on Kik
 unblock Someone on Snapchat
-unblock Someone
 unblock Websites on Safari
 unblock Your IP Address
 unblock YouTube Users
@@ -19217,8 +19301,8 @@ Upload the spreadsheet to Google Drive
 Upload the video to YouTube
 Upload the XPS file
 upload to Google Photos on iPhone or iPad
-upload Videos on iPhone or iPad
 Upload videos often
+upload Videos on iPhone or iPad
 upload Videos to YouTube Faster
 Upload your own photo or select from the available photos
 Upload your video to YouTube
@@ -19232,6 +19316,7 @@ Use "sudo dpkg I" to install the package
 Use "sudo ufw allow [port number]" to open a port
 Use "sudo ufw allow 6000:6007/tcp" to open a range
 Use "sudo ufw status numbered" to view the rules
+use "unqualified" people
 Use "wget" to download the latest page from Google
 use 7Zip to Create Multiple Compressed Folders in One Go
 use 7Zip to Create Self Extracting excutables
@@ -19321,7 +19406,9 @@ use an Italian Bathroom
 use an iTunes Gift Card
 use an Offset Smoker
 use an Old ATX Power Supply As a Lab Power Supply Without Modification
+use an old idea
 use an Ultrasound Transducer
+use an unacceptable color
 use and Read an Outside Micrometer
 Use arp -a (ip address) to find the MAC address
 use Bandicam
@@ -19358,7 +19445,6 @@ use Coursera
 use Custom Stamps from Microsoft Word in Adobe Acrobat
 use Discord on a PC or Mac
 use Dropbox on a Mac
-add Ubuntu to the boot menu
 Use effective language and tags
 Use effects from the Filters menu
 use Emoji on Facebook Messenger on Android
@@ -19373,7 +19459,9 @@ use Facebook Messenger
 use Facebook Places
 use FaceTime
 Use fewer browser tabs and disable browser extensions
+use fewer notes
 use FileZilla
+use filters
 Use filters and tools
 Use Filters such as Blur or Sharpen to enhance the photo
 use Find in Google Chrome
@@ -19805,6 +19893,7 @@ watch Disney Plus on Chromecast
 watch ESPN Online
 watch Facebook Live Video Broadcasts
 watch Films on Kodi
+watch for lights on the motherboard, and listen for beep codes
 watch Less TV
 watch Live on Instagram
 watch Movies and TV Online for Free
@@ -19959,6 +20048,7 @@ withdraw Cash from an Automated Teller Machine
 withdraw Money on Venmo
 Withdraw money to your bank account
 work a Marionette
+work at a different speed
 work in a Kitchen
 work in Europe
 Work in the shade
@@ -20046,10 +20136,6 @@ Write your email and click Send
 Write your email message
 Write your script
 Write your signature
-convert the file to a PDF
-save photos
-schedule recurring texts
-start swiping through your matches
 zest an Orange Without a Zester
 zip and Unzip Files with Peazip
 Zoom and/or reposition your profile picture

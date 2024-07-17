@@ -27,7 +27,7 @@ export default async (query) => {
 
         return {
           label: item.itemLabel.value || "",
-          description: item.itemDescription.value || "",
+          description: item?.itemDescription?.value || "",
           wikipediaUrl: wikipediaUrl,
           image: imageUrl,
           lat: item?.lat?.value || "",

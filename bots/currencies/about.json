@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@currencies",
+  "description": "Money around the world, and through history.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@currencies"
+    }   
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

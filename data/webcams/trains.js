@@ -1,11 +1,11 @@
 export default [
-  {
-    name: "Bergen Line, Flåm Railway (South Line or Dovre Line)",
-    description: "A short clip from a webcam at the front of a train.",
-    youtube_url: "https://www.youtube.com/watch?v=g7CJ3pm-e7s",
-    youtube_id: "g7CJ3pm-e7s",
-    tags: "#trains #norway #webcam",
-  },
+  // {
+  //   name: "Bergen Line, Flåm Railway (South Line or Dovre Line)",
+  //   description: "A short clip from a webcam at the front of a train.",
+  //   youtube_url: "https://www.youtube.com/watch?v=g7CJ3pm-e7s",
+  //   youtube_id: "g7CJ3pm-e7s",
+  //   tags: "#trains #norway #webcam",
+  // },
   {
     name: "Train journey to the Norwegian Arctic Circle on the Nordland Line (Nordlandsbanen) in winter",
     description: "A short clip from a webcam at the front of a train.",

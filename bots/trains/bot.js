@@ -24,15 +24,17 @@ const botScript = async () => {
 
       // const webcam = randomFromArray(webcams.filter(webcam => webcam.video_start === undefined));
       const webcam = randomFromArray(webcams);
-      const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
+      const videoTimestamp = getRandomInt(
+        webcam.video_start,
+        webcam.video_end - 10
+      );
+
+      const status = `${webcam.name}: ${webcam.youtube_url}&t=${videoTimestamp}\n\n${webcam.tags}`;
 
       if ("video_start" in webcam && "video_end" in webcam) {
         const url = `https://tools.stefanbohacek.dev/video-dl/?platform=direct&url=${
           webcam.direct_url
-        }&start=${getRandomInt(
-          webcam.video_start,
-          webcam.video_end - 10
-        )}&length=10&token=${process.env.STEFANS_TOOLS_ACCESS_TOKEN}`;
+        }&start=${videoTimestamp}&length=10&token=${process.env.STEFANS_TOOLS_ACCESS_TOKEN}`;
         console.log(url);
         await downloadFile(url, __dirname + `/../../temp/${botID}.mp4`);
         try {

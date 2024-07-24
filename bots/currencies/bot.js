@@ -2,6 +2,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import wikidata from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/download-file.js";
+import capitalizeFirstLetter from "./../../modules/capitalize-first-letter.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -41,7 +42,7 @@ const botScript = async () => {
     await downloadFile(imageUrl, filePath);
   
     mastodon.postImage({
-      status: status,
+      status: capitalizeFirstLetter(status),
       image: filePath,
       alt_text:
         "A photo of a currency from the linked website.",

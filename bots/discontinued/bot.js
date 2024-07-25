@@ -27,29 +27,15 @@ const botScript = async () => {
   `);
 
   const item = randomFromArray(items);
-  console.log(item);
-  let imageUrl = "";
-
-  if (item.image) {
-    imageUrl = item.image;
-  }
-
   const status = `Hey, remember ${item.label}?\n\n${item.wikipediaUrl}\n\n#discontinued #nostalgia`;
-
-  const filePath = `${__dirname}/../../temp/discontinued.jpg`;
-  await downloadFile(imageUrl, filePath);
-
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,
     access_token: process.env.DISCONTINUED_BOT_MASTODON_ACCESS_TOKEN,
     api_url: process.env.BOTSINSPACE_API_URL,
   });
 
-  mastodon.postImage({
+  mastodon.post({
     status: status.replace("  ", " "),
-    image: filePath,
-    alt_text:
-      "A photo or a logo of a discontinued product or service from the linked website.",
   });
 
   return true;

@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@trainstations",
+  "description": "Train stations around the world.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@trainstations"
+    }   
+  ],
+  "interval": "EVERY_FOUR_HOURS"
+}

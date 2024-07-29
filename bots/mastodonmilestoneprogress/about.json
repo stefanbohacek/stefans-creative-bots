@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@mastodonmilestoneprogress",
+  "description": "Libraries around the world.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@mastodonmilestoneprogress"
+    }   
+  ],
+  "interval": "EVERY_DAY_MORNING"
+}

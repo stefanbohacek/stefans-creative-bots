@@ -65,11 +65,12 @@ export default [
   //     url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/",
   //     element: '.entry-content img[width="640"]',
   //   },
-  {
-    name: "RRS Sir David Attenborough Webcam",
-    url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",
-    element: '.entry-content img[width="1920"]',
-  },
+  // moved to North Pole
+  // {
+  //   name: "RRS Sir David Attenborough Webcam",
+  //   url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",
+  //   element: '.entry-content img[width="1920"]',
+  // },
   {
     name: "King Edward Point webcam",
     url: "https://www.bas.ac.uk/data/our-data/images/webcams/king-edward-point-webcam/",

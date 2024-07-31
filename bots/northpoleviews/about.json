@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@northpoleviews",
+  "description": "Views from the North Pole.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@northpoleviews"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

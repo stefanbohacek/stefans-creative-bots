@@ -36,10 +36,6 @@ Add ">> /etc/environment" to the end of the line and press Enter
 Add "Hearing" to the Control Center
 Add "YouTube Music"
 Add <img src="imagefile.jpg" alt="Image" height="42" width="42">
-Add 1 Nether Wart to the top box
-Add 1 String to the first and second blocks from the left in the first row, add 1 String to the first block to the left in the second row, add 1 Slimeball to the second block in the second row, add 1 String to the 3rd block on the 3rd row
-Add 1 Sugar to the top box
-Add 1 Water Bottle to one bottom box
 Add a "Hue/Saturation" adjustment layer above the layer with the area you want to change
 Add a Batteries widget to your Home Screen
 add a Best Fit Line in Excel
@@ -312,7 +308,6 @@ Add the link URL in the second box
 Add the list's name to the BCC field when emailing the group
 Add the motion track file to the project
 Add the post to Your Story
-Add the server address in Minecraft
 Add the service's tracking code to your webpages
 add the Time to a Snapchat
 Add the VB Script tags
@@ -411,7 +406,6 @@ align Objects in Illustrator
 Align the code in the frame
 Align the text in the viewfinder
 All riders should tap Accept on their apps before the trip ends
-allocate More RAM to Minecraft
 allocate Resources in Microsoft Project
 allow 3rd Party Cookies on a Mac
 Allow a few inches on all sides or your TV for proper ventilation
@@ -590,6 +584,7 @@ Back up your PC to an external drive
 backboard a Spinal Injury Victim in the Water
 backup Text Messages on iPhone
 backup Your WeChat Chat History on Android
+bake a Cake
 bake a Cake on a Grill
 bake a Cake Using a Jiko
 bake Acorn Squash
@@ -839,7 +834,6 @@ Boot the Raspberry Pi from the SD card
 Boot your computer from the USB Install disk
 Boot your computer in Safe Mode and see if the problem persists
 Boot your iPhone into recovery mode
-Bottom row: obsidian, obsidian, obsidian
 bowl a Strike in Grand Theft Auto IV
 bowl a Successful Inswinger
 bowl an Easy Bowling Strike in Wii Sports
@@ -852,7 +846,6 @@ braid Your Bangs
 braise Beef
 braise Lettuce
 break a Beer Bottle With Your Bare Hands
-break Bedrock in Minecraft
 Break cocoa pods for beans
 Break down the steps as necessary
 Break gravel to get flint
@@ -948,7 +941,6 @@ build a Loft Bed
 build a Log Bed
 build a Low Cost WiFi Antenna
 build a Mason Jar Herb Garden
-build a Minecraft Spaceship
 build a Model Railroad
 build a Model Ship
 build a Ninja Warrior Course
@@ -989,6 +981,7 @@ build a Small Sheet Metal Brake
 build a Snake Cage
 build a Snow Cave
 build a Sod House
+build a Spaceship
 build a Spaghetti Bridge
 build a Still
 build a Stone Fence
@@ -2479,7 +2472,6 @@ Click OK and reboot
 Click OK and then OK again
 Click OK on the error
 Click OK to confirm
-Click Ok to install Minecraft Forge
 Click OK twice
 Click OK when prompted
 Click Ok when the installation is complete
@@ -3997,18 +3989,12 @@ Craft 1 log into 4 planks
 Craft 2 planks and 4 sticks into a gate
 Craft 2 planks into sticks
 Craft 3 books and 4 planks into a bookshelf
-craft a Bed in Minecraft
 Craft a bow
 Craft a bundle of sticks
 Craft a crafting table
 Craft a farm plot from 8 wood, 10 rotting flesh, 5 nitrate powder, and 25 clay soil
 Craft a fishing rod
 Craft a helmet, chestplate, leg pieces, and boots
-craft a Hopper in Minecraft
-craft a Painting in Minecraft
-Craft a pickaxe equip a pickaxe
-Craft a wooden pickaxe
-Craft an Ender Chest from the Eye of Ender and 8 obsidian blocks using a crafting table
 Craft an Eye of Ender from the blaze powder and Ender Pearl using a crafting table
 Craft blaze powder from the blaze rod using a crafting table
 Craft gold rings with the gold ingots
@@ -4055,7 +4041,6 @@ create a High Ponytail Using Clip in Hair Extensions
 create a Hulk Hogan Costume
 create a Jack Skellington Costume
 Create a layer called "Tracing."
-create a Lever Combination Lock in Minecraft
 Create a line graph with your data
 Create a Live CD or Live USB drive
 create a Location on Instagram
@@ -4218,7 +4203,6 @@ create an HTML Signature
 create an Ice Bowl
 create an iCloud Account
 create an Image Map Using Gimp
-create an Infinite Water Supply in Minecraft
 Create an Instagram Story including mentions and hashtags
 create an Invader Zim Gir Hoodie
 create an Online Survey with SurveyMonkey
@@ -4646,6 +4630,7 @@ Defragment the hard drive
 Defragment your drive
 Defragment your hard drive
 dehydrate Tomatoes
+delete all data
 delete an Uber Driver Account
 delete an Ubisoft Account
 Delete and re-install Viber
@@ -4664,7 +4649,6 @@ Delete the Word key
 Delete unneeded files
 Delete unused apps
 Delete your plugin preferences
-delete all data
 deliver a Baby
 deodorize an Oven
 deodorize Carpet With Baking Soda
@@ -4969,7 +4953,6 @@ Double-click the installer or setup file
 Double-click the installer to run it
 Double-click the JAR file to open it
 Double-click the login information you want to access
-Double-click the Minecraft Forge install file after you download it
 Double-click the new drive under "This PC."
 Double-click the Pages file to open it in Pages
 Double-click the photo
@@ -4999,7 +4982,6 @@ Double-tap to use a hoverboard
 Double-tap to use utilities
 Double-tap VoiceView Screen Reader
 downgrade Firefox
-downgrade Minecraft
 download .exe Files to Your PC
 Download "Rec Screen Recorder" from the App Store
 Download "WavePad Audio Editor" from the Google Play Store or App Store
@@ -5015,7 +4997,6 @@ download a Google Drive Folder on Android
 Download a graphics test program and use it to test your graphics card
 Download a map file
 download a Map from Google Maps
-download a Minecraft Mod on a Mac
 Download a mod
 Download a modded Skyrim save file for Xbox 360
 Download a reader from the Play Store
@@ -5044,8 +5025,6 @@ Download and install Camtasia
 Download and install FBReader
 Download and install HandBrake
 Download and install Hiya from the App Store
-Download and install Minecraft Forge version 1.12.2-14.23.5.2838 from https://files.minecraftforge.net
-Download and install MInecraft; Java Edition
 Download and install MutliWall
 Download and install Prey from the App Store or Google Play Store
 Download and install Rufus from https://rufus.ie/
@@ -5154,8 +5133,6 @@ Download the latest installer
 Download the latest version
 Download the latest version of Ubuntu
 Download the Lucky Patcher APK
-Download the Minecraft Forge install file from http://files.minecraftforge.net/
-Download the Minecraft server JAR file
 Download the MySQL Server for your operating system
 Download the operating system or buy installation discs
 Download the Outlook plugin for Zoom to connect the two platforms instantaneously and add Zoom meetings from the Outlook app
@@ -5397,6 +5374,7 @@ dye Slipcovers
 Each primary key record must be unique
 Earn emeralds
 Earn Honey Gold by shopping at participating retailers
+eat
 eat a Banana
 eat a Crawfish
 eat a Cupcake
@@ -5420,7 +5398,6 @@ Eat glowing orbs to grow longer
 eat Hardtack
 eat Heartsease
 eat Icelandic Yogurt
-eat in Minecraft
 eat Langoustines
 eat Red Bananas
 eat Sunflower Seeds
@@ -5594,7 +5571,6 @@ enable Dial Assist on an iPhone
 Enable downloading from unknown sources
 Enable downloading from unknown sources by going to Settings > My Fire TV (Device & Settings) > Developer Options > Apps from Unknown Sources
 Enable dubbing on the Kindle
-enable Education Edition in Minecraft
 Enable FaceTime in Settings
 enable Fast Charging
 Enable Fast Startup
@@ -5665,7 +5641,6 @@ Ensure that the screen is exactly how you want it
 Ensure that the volume is set to the highest level
 Ensure that you have driving, cycling, or walking selected
 Ensure the "Install Client" option is selected
-Ensure the Minecraft install folder is correct
 Enter ",1)" to finish the formula
 Enter "/block " to block a user
 Enter "/color " to change your name's color
@@ -6107,7 +6082,6 @@ fertilize Soil With Eggshells
 fiberglass a Boat
 field Dress a Duck
 fight in L.A. Noire
-fight Mobs in Minecraft
 figure Concrete Yardage
 Figure out how to communicate the object of the game to the player
 Figure out the connection between the four photos
@@ -6223,15 +6197,12 @@ Find Applications to view the number of third party apps on your iPhone
 find Attachments in Gmail
 find Average Atomic Mass
 Find blocked contacts under "BLOCKED CONTACTS."
-find Coal in Minecraft
 Find contact information on the domain's website
 Find Current City in the Search for Friends box
 find Duplicate Pictures in Windows 10
 find Elevation on Google Maps on Android
 find Elevation on Google Maps on iPhone or iPad
 find Elevation on Google Maps on PC or Mac
-find Emeralds in Minecraft
-find Food in Minecraft
 find Friends from High School on Facebook
 find Friends on VSCO on iPhone or iPad
 find Glitches
@@ -6503,7 +6474,6 @@ formulate Black Phenyle Disinfectant
 forward an Email
 forward an Email to Someone in Hotmail
 forward Text Messages to Another Phone on Android
-Forward the Minecraft port
 forward Yahoo Mail
 frame a Floor
 frame Baby Clothes
@@ -6572,7 +6542,6 @@ Gather 3 milks, 1 egg, 2 sugars, and 3 wheat bundles
 Gather 3 sugar cane
 Gather more Glenmoril Witch's heads from Glenmoril Coven
 Gather or make 1 Flint and Steel
-Gather or make 10 blocks of obsidian
 Gather smelt materials for gold, diamond, or iron armor
 Gather the host name, username, and password you'll need to connect
 Gather wood
@@ -6622,9 +6591,9 @@ get a MAC Address from an IP Remotely
 Get a massage
 get a Master Ball in Pokemon Ruby
 get a Midnight Snack Without Your Parents Knowing
-get a Minecraft Pet
 Get a mirroring app for your specific TV on your TV and laptop
 get a Personalized License Plate in Alabama
+get a Pet
 get a Pet on RuneScape
 get a Plumbing License in California
 get a Plumbing License in Florida
@@ -6705,7 +6674,6 @@ get Rid of Teenage Acne
 get Rid of Thrush
 get Rid of Tropical Rat Mites on Pet Rats
 get Rock Smash in Pokemon Ruby
-get Texture Packs for Minecraft PE
 get the Best Gas Mileage from Your Toyota Prius
 Get the cherries to drop to the exit as quickly as possible
 get the Coin Case in Pokemon Ruby
@@ -6726,7 +6694,6 @@ Get the Sapphire from Gideon
 get the Sapphire in FireRed
 Get the server address and port number for the server you want to join
 get the Strongest Weapon on Castlevania Aria of Sorrow
-get the Superflat Terrain in Minecraft
 Get the tea drink from the old lady
 get the Three Regis in Pokemon Emerald
 Get the Transmute Mineral Ore spell from Halted Stream Camp
@@ -6744,7 +6711,6 @@ get to the Command Line on a Mac
 Get to the end of the level as Mini-Mario
 get to the Isle of Thunder
 get Tyranitar in Pokemon Diamond, Pearl or Platinum
-get Unlimited Diamonds, Gold, and Iron on Minecraft PE
 Get your game on as many digital distributors as possible
 get your neck massaged
 Get your PayPal button
@@ -6811,7 +6777,6 @@ Go to a free email service's sign-up page
 Go to a friend's profile page
 Go to a location that accepts Apple Pay
 Go to a map location
-Go to a Minecraft mod website and click a mod
 Go to a PUB to PDF conversion website on your iPhone or iPad
 Go to a search engine website or launch your search app
 Go to a site that has Flash
@@ -6841,19 +6806,8 @@ Go to Google Gmail
 Go to Google Maps
 Go to Google Sheets
 Go to HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft
-Go to http://slither.io/ or open the Slither.io app on your smartphone or tablet
-Go to https://addons.mozilla.org/en-US/firefox/addon/block-website
-Go to https://anchor.fm/ and log in or create a new account
-Go to https://archive.org/web/ in a web browser
-Go to https://draw.io in a web browser
-Go to https://files.minecraftforge.net/ in your web browser
-Go to https://ftp.mozilla.org/pub/firefox/releases/
-go to https://optout.aboutads.info and select which ads to opt out from
-Go to IGN in a web browser
-Go to Insert
 Go to Menu > Setup > Puppy Installer
 Go to Microsoft's Recover Your Account page
-Go to Nether
 Go to New > Layer Via Cut
 Go to one of your friend's profiles
 Go to Options > Activate Microsoft Office
@@ -7655,7 +7609,6 @@ Install and launch Spek
 Install and launch the app
 Install and open Hex Editor
 Install and open Samsung Movie Maker
-Install and run Minecraft: Java Edition
 install and Set Up Free to Air Satellite TV Program Receiver System
 install and Uninstall Applications from Terminal in Ubuntu
 Install and update Java on your computer
@@ -7767,11 +7720,6 @@ install Metal Studs
 install Microsoft Office 2007
 install Microsoft Teams on a Mobile Device
 install Minecraft
-install Minecraft Forge
-install Minecraft Forge for 1.6.4 and Add Mods
-Install Minecraft Forge for Windows
-install Minecraft Mods
-install Minecraft Resource Packs
 Install MinGW
 Install Mod Organizer and Skyrim Script Extender
 install Mods in Euro Truck Simulator
@@ -8019,7 +7967,6 @@ join Multiple Slack Teams on PC or Mac
 Join or host a meeting
 Join or start a meeting in Google Meet
 Join races and complete goals to earn additional sweatcoins
-join Servers in Minecraft PE
 join the Dark Brotherhood in Skyrim
 join the French Foreign Legion
 join the Thieves Guild in Skyrim
@@ -8060,7 +8007,6 @@ keep a Gas Stove Clean
 keep a Notebook
 keep a Parenting Journal
 keep a Pet Fly
-keep a Pet Turtle in Minecraft
 keep a Secret Organization Secret
 keep a Shirt Tucked in
 keep a Spiritual Journal
@@ -8255,7 +8201,6 @@ Launch Google Maps
 Launch InShot on your phone or tablet
 Launch Instagram
 Launch iTunes on your computer
-Launch Minecraft
 Launch OnionFruit
 Launch Overwatch and select Play
 Launch Podcast Player
@@ -8379,7 +8324,6 @@ livestream on TikTok on iPhone or iPad
 load 35Mm Film Into a Manual Camera
 Load a game and household in Sims 4
 load a Golf Bag
-Load a Minecraft game
 load a Rushcard
 Load a saved game of the Sims 4
 Load a Sims 4 game and select a household to modify
@@ -8477,7 +8421,6 @@ Log in using the router's default username and password
 Log in with the default username and password
 Log in with your Apple ID
 Log in with your EA Games account
-Log in with your Minecraft or Mojang account
 Log into Facebook
 Log into Gmail on a computer
 Log into Seller Central
@@ -8750,13 +8693,12 @@ make a Bomb Bag
 make a Bonfire with Lighter Fluid
 make a Bong from a Liquor Bottle
 make a Book Cover
-make a Book in Minecraft
 make a Book Purse
 make a Book Style eReader Cover
 make a Booklet from Paper
 make a Booklet in Word
 make a Bookmark Tassel
-make a Bookshelf in Minecraft
+make a Bookshelf
 make a Boomerang
 make a Boot
 make a Bored Jar
@@ -8783,7 +8725,6 @@ make a Braided Horse Rein
 make a Braided Racerback Tank Top
 make a Brain Out of Clay
 make a Breakfast Burrito
-make a Brewing Stand in Minecraft
 make a Brick Mailbox
 make a Bridal Bouquet With Artificial Flowers
 make a Brochure Using Google Docs
@@ -8791,7 +8732,6 @@ make a Brooch
 make a Brooch Bouquet
 make a Bubble Snake Maker
 make a Bucket Hat
-make a Bucket in Minecraft
 make a Bug Terrarium
 make a Bulletin Board
 make a Bun Without a Hair Tie
@@ -8802,12 +8742,10 @@ make a Burn Barrel
 make a Butterfly Cake
 make a Butterfly Origami
 make a Buttery Nipple Shot
-make a Button in Minecraft
 make a Button Pin
 make a Caesar Drink
 make a Cage Skirt
 make a Cake from a Mix Without Oil and Eggs
-make a Cake in Minecraft
 make a Cake Pop Holder
 make a Cake Using a Pressure Cooker
 make a Cake Vegan
@@ -8850,9 +8788,6 @@ make a Castle Pop up Card (Robert Sabuda Method)
 make a Cat Bed from an Old Sweater
 make a Cat Hammock
 make a Cat Scratching Post
-make a Caterpillar
-make a Cathedral Wedding Veil
-make a Cauldron in Minecraft
 make a CD Sleeve from Paper
 make a Cell Phone Case
 make a Cell Phone Wire Tap
@@ -8919,11 +8854,9 @@ make a Collage on Instagram
 make a Comic Strip
 make a Commonplace Book
 make a Compass
-make a Compass in Minecraft
 make a Compost Pit
 make a Computer Diary
 make a Computer Game for Free
-make a Computer in Minecraft
 make a Computer Operating System
 make a Computer Screen Go Black With PowerPoint
 make a Cone
@@ -8944,7 +8877,6 @@ make a Corset Dress
 make a Cotton Candy Martini
 make a Coupon Book for Tasks
 make a Cow Costume
-make a Cracked Minecraft Server
 make a Crate Divider
 make a Crawfish Trap
 make a Creme Blush
@@ -9001,7 +8933,6 @@ make a Disco Ball with CDs
 make a Discord Server on Mobile
 make a Disney's Ariel Mermaid Costume
 make a Disney's Pocahontas Costume
-make a Dispenser in Minecraft
 make a DIY Countertop
 make a DIY Humidor
 make a DMG File on a Mac
@@ -9014,7 +8945,6 @@ make a Dollar Bill Rose
 make a Dollhouse from a Cardboard Box
 make a Donut Bun
 make a Door Alarm
-make a Door That Locks in Minecraft
 make a Doorstop Out of a Brick
 make a Dosa
 make a Dotting Tool for Your Nails
@@ -9085,7 +9015,6 @@ make a Fire to Survive
 make a Firecracker
 make a Fish Trap
 make a Fitted Sheet
-make a Flaming Arrow Shooter in Minecraft
 make a Flat Chest Beautiful
 make a Flat White Coffee
 make a Fleece Beanie Hat
@@ -9093,7 +9022,6 @@ make a Fleece Blanket
 make a Floating Bead Necklace
 make a Flower Costume
 make a Fluffy 3 Egg Omelette
-make a Fountain in Minecraft
 make a Frappe
 make a Frappuccino
 make a French Braid Headband
@@ -9106,7 +9034,6 @@ make a Frozen Bubble
 make a Fruit Bouquet
 make a Galaxy Shirt
 make a Garden Incinerator
-make a Gate in Minecraft
 make a Gel Candle
 make a Genie Costume
 make a German Paper Star
@@ -9178,21 +9105,18 @@ make a Kosher Reuben Sandwich
 make a Kraft Dinner In The Microwave
 make a Kusudama Flower
 make a Kydex Sheath
-make a Ladder in Minecraft
 make a Ladybug Costume
 make a Lamp out of a Vase
 make a Landscape Quilt
 make a Laptop Stand from PVC Pipe
 make a Lasagna Using Zucchini Instead of Pasta
 make a Layered Pumpkin Cheesecake
-make a Lead in Minecraft
 make a Leaf Rubbing
 make a Leather Riding Crop
 make a LEGO Animation
 make a Lei
 make a Lemon and Honey Mask
 make a Leprechaun Costume
-make a Lever in Minecraft
 make a Leyden Jar
 make a Light Saber Using Everyday Items
 make a Lip Balm Container
@@ -9250,14 +9174,12 @@ make a Mountain Fold (Origami)
 make a Mudslide
 make a Multi Strand Bracelet
 make a Muppet Style Puppet
-make a Mushroom House in Minecraft
 make a Mustache
 make a Naked Egg
 make a Natural Curl Defining Cream with Hold
 make a Navigation Bar in HTML
 make a Neck Pillow
 make a Nesting Box for Parakeets
-make a Nether Portal in Minecraft PE
 make a Newspaper Hat
 make a Ninja Costume
 make a Ninja Turtle Mask
@@ -9333,7 +9255,6 @@ make a Poster Using Microsoft Word
 make a Pot of Gold Candy Dish
 make a Pot of Lavender Potpourri
 make a Potato Face Mask
-make a Potion of Swiftness in Minecraft
 make a Pouch
 make a Powdered Sports Drink Mix
 make a PowerPoint Presentation That Includes Audio and Video Files
@@ -9343,6 +9264,8 @@ make a Primer
 make a Professional Music Video
 make a Protein Shake
 make a PSD File Using Photoshop (Beginner)
+make a Pumpkin Pie
+make a Pumpkin Pie Straight from the Pumpkin
 make a Punching Bag Stand
 make a Puppet Stage from Wood
 make a Puppet with an Empty Bottle and a Broom Stick
@@ -9359,7 +9282,6 @@ make a Rainbow Rose
 make a Recipe Binder
 make a Rectangular Prism
 make a Red Headed Slut Shot
-make a Redstone Lamp in Minecraft
 make a Refrigerator Door Close
 make a Resin Bird Bath
 make a Retro Ponytail
@@ -9445,24 +9367,20 @@ make a Tissue Box Guitar
 make a Tomahawk Without a Forge
 make a Toothbrush Bracelet
 make a Topsy Turvy Cake
-make a Torch in Minecraft
 make a Tornado Survival Kit
 make a Tortilla Cheese Roll Up
 make a Tortillon
 make a Traditional Corned Beef Pie
 make a Traditional Tiramisu
 make a Translation Tessellation
-make a Trapdoor in Minecraft
 make a Travel Brochure
 make a Treasure Hunt for Kids
 make a Trifle
-make a Tripwire Hook in Minecraft
 make a Tuna Egg Sandwich
 make a Tuna Omelet
 make a Tunnel Playground for Your Gerbils
 make a Tutu Dress
 make a TV Antenna with a Potato
-make a TV in Minecraft
 make a Vacuum Chamber
 make a Vacuum Pump
 make a Valentines Day Card
@@ -9497,7 +9415,6 @@ make a Windows XP Bootable Disk Using a ISO File
 make a Windshield Rainbow Prank
 make A Wine Bag
 make a Wire Tree Sculpture
-make a Wither Banner in Minecraft
 make a Wizard Hat
 Make a wooden pickaxe
 make a Wooden Shield
@@ -9552,9 +9469,6 @@ make an Apple Pipe
 make an Apple Store Appointment
 make an Arnold Palmer
 make an Arrow
-make an Automatic Furnace in Minecraft
-make an Automatic Piston Door in Minecraft
-make an Automatic Turret in Garry's Mod
 make an Autumn Serving Tray
 make an Avatar
 make an Avocado Mask for Hair
@@ -9572,8 +9486,6 @@ make an Elastic Headband
 make an Electromagnet
 make an Email Account
 make an Email Address for Free
-make an Enchantment Table in Minecraft
-make an Ender Chest in Minecraft
 make an Enema
 make an Envelope
 make an Espresso (Espresso Machine Coffee)
@@ -9594,7 +9506,6 @@ make an Inverted Fishtail Bracelet from Rainbow Loom
 make an Invisible Ink Message
 make an iPhone Louder in Headphones
 make an IR Blaster for Tivo
-make an Iron Golem in Minecraft
 make an Oatmeal Bath
 make an Oil Lamp
 make an Old Fashioned
@@ -9617,7 +9528,6 @@ make an Origami Transforming Ninja Star
 make an Ottoman Cover
 make an Outdoor Fountain
 make an RC Car Faster
-make an Underground Tree Farm in Minecraft
 make an Upside Down Tomato Planter
 make Ancho Chile Powder
 Make and call a sub procedure
@@ -9628,7 +9538,6 @@ make Angel Wings
 make Animation or Movies with Microsoft PowerPoint
 make Anise Tea
 make Antler Lamps
-make Vegetable and Rice in One Pot
 Make any necessary changes to the document
 make Any Picture Your Computer's Wallpaper
 make Apple Cider
@@ -9647,7 +9556,7 @@ make Applesauce
 make Applesauce Donuts
 make Apricot Glaze
 make Arabic Coffee
-make Armor in Minecraft
+make Armor
 make Aromatherapy Candles
 make Arrowheads
 make Arroz Con Leche
@@ -9788,9 +9697,9 @@ make Bouquet Garni
 make Bowls out of Vinyl Records
 make Braided Bracelets
 make Brass Knuckles
+make Bread
 make Bread Crumbs with Stale Bread
 make Bread in a Can
-make Bread in Minecraft
 make Bread in the Microwave (Simple Method)
 make Bread Machine Pasta
 make Bread Pudding
@@ -9801,7 +9710,6 @@ make Breakfast in Bed
 make Breakfast Quesadillas
 make Breast Milk Jewelry
 make Bricks from Concrete
-make Bricks in Minecraft
 make Bridal Bouquets
 make Brightly Colored Eyelashes
 make Briquettes
@@ -9916,7 +9824,6 @@ make Cendol
 make Ceramic Tile
 make Chai (Kenyan Tea)
 make Chai Latte
-make Chain Armor in Minecraft
 make Chainmail
 make Chalk Paint
 make Chamomile Tea
@@ -10036,7 +9943,6 @@ make Colored Salt
 make Compost for Houseplants
 make Concrete Countertops
 make Concrete Flower Pots
-make Concrete in Minecraft
 make Concrete Pumpkins
 make Concrete White Again
 make Condensed Milk
@@ -10046,7 +9952,6 @@ make Cookie Cutters
 make Cookie Cutters from Regular Aluminum Foil
 make Cookie Dough
 make Cookie Dough Bark
-make Cookies in Minecraft
 make Copper Acetate
 make Corn Bags
 make Corn Chips
@@ -10260,8 +10165,8 @@ make Feta Cheese
 Make final edits
 make Finger Puppets
 make Fingerless Gloves
+make Fire
 make Fire Crackers from Party Poppers
-make Fire in Minecraft
 make Fire Without Matches or a Lighter
 make Firelighters
 make Fish and Chips
@@ -10278,7 +10183,6 @@ make Flavored Water
 make Flax Meal
 make Flax Oil with Cottage Cheese for the Budwig Protocol
 make Flaxseed Hair Gel
-make Flint and Steel in Minecraft
 make Flip Flops from a Yoga Mat
 make Floam
 make Flour
@@ -10427,7 +10331,6 @@ make Green
 make Green Popcorn
 make Green Tea
 make Grilled Mushrooms in Foil Packets
-make Grindstone in Minecraft
 make Ground Beef Tacos
 make Guava Juice
 make Guinea Pig Granola Bars
@@ -10771,8 +10674,6 @@ make Milk Steak With Jelly Beans
 make Milk Tea
 make Millet Polenta
 make Millionaire Shortbread
-make Minecraft Animations
-make Minecraft Run Faster
 make Mini Cinnamon Roll Baked Doughnuts
 make Mini Stromboli
 make Mini Tamale Bites
@@ -10876,7 +10777,6 @@ make Oat Risotto
 make Oatmeal
 make Oatmeal Water
 make Oboe Reeds
-make Obsidian in Minecraft
 make Off the Shoulder Tops
 make Oil Based Modeling Clay
 make Oil Paint Drip
@@ -11052,8 +10952,6 @@ make Puffy Paint
 make Pull Apart Potato Rolls
 make Pulled Pork Pizza
 make Pulled Sugar
-make Pumpkin Pie in Minecraft
-make Pumpkin Pie Straight from the Pumpkin
 make Pumpkin Soup
 make Puppets
 make Puppy Chow Without Peanut Butter
@@ -11066,7 +10964,6 @@ make Pyrethrum Garden Spray
 make Quick and Tasty Moonshine Whiskey
 make Quick Easy Cupcakes
 make Quick Vampire Fangs
-make Quicksand in Minecraft
 make Quinoa Crusted Fish
 make Quinoa Lasagna
 make Radish Juice
@@ -11200,7 +11097,6 @@ make Sex on the Beach Jello Shots
 make Shadow Puppets
 make Shakey's Mojos
 make Shampoo With Hibiscus Flowers and Leaves
-make Shears in Minecraft
 make Sheer Curtains
 make Sheet Pan Macaroni and Cheese
 make Shiruko
@@ -11433,7 +11329,6 @@ make Thai Iced Tea
 make the "Bet It All On Black Garlic Burger" from Bob's Burgers
 make the Air Colder in a Swamp Cooler Home
 make the Chinese Staircase Bracelet
-make the Classic Jeb Door in Minecraft
 make the Eraser Bigger in MS Paint
 make the Hairs on Your Arms Lighter
 Make the hosts file editable
@@ -11524,6 +11419,7 @@ make Vegan Cheese
 make Vegan Gingerbread Cookies
 make Vegan Gruyere Cheese
 make Vegan Pancakes
+make Vegetable and Rice in One Pot
 make Vegetable Curry
 make Vegetable Glycerin
 make Vegetable Soup
@@ -11687,7 +11583,6 @@ make Your Own Roof Crossbars
 make Your Own School Planner
 make Your Own Self Tanner
 make Your Own Sewing Patterns
-make Your Own Skin in Minecraft
 make Your Own Soap
 make Your Own Speakers
 make Your Own Stepping Stones
@@ -11850,15 +11745,7 @@ Message a match
 microwave Carrots
 microwave Corn on the Cob
 microwave Pasta
-Middle row: diamond, obsidian, diamond
 mince a Shallot
-Mine 2 diamonds
-Mine 4 obsidian with a diamond pickaxe
-Mine coal
-Mine emerald ore with an iron or diamond pickaxe
-Mine for iron
-mine in Minecraft
-Mine the clay blocks by hand or with a shovel
 minimize Pores With Foundation
 mirror from Mac to Apple TV
 mirror iPhone to Roku Without WiFi
@@ -11915,6 +11802,7 @@ mount TV on Brick Fireplace
 mourn a Hamster's Death
 Mouse over GO and press X
 mousse Hair Properly
+move
 Move 2 steps down and 2 steps left from the wall next to the inscription and use Rock Smash
 move a Peloton Bike
 move a Piano
@@ -11935,7 +11823,6 @@ move Columns in Excel
 move Email to a Folder in Outlook
 move Files in Ubuntu
 move Google Tasks on iPhone
-move in Minecraft
 move Mail to Different Folders in Gmail
 move Music from Computer to iPhone
 move Music to the Sd Card on Samsung Galaxy
@@ -11958,7 +11845,6 @@ Move the watermark to the desired location
 move to a Foreign Country
 move to Italy
 move to Switzerland
-move to the Netherlands
 move Vending Machines
 Move your cursor in the Word document where you want to paste the Excel data
 Move your cursor to where you want the GIF to be
@@ -12098,7 +11984,6 @@ Navigate to your downloaded mp3 files using Windows Explorer or the Finder on Ma
 Navigate to your Facebook Shop and click Edit on the item that you're selling
 Navigate to your first blank cell without changing the selection
 Navigate to your main drive, then the Windows folder, then the System32 folder, then the osk.exe file
-Navigate to your Minecraft game folder at "C:\Users\[username]\AppData\Roaming\.minecraft" on Windows or "~/Library/Application Support/minecraft" on Mac
 Navigate to your page break
 Navigate to your Wi-Fi settings
 needle Felt
@@ -12128,8 +12013,6 @@ Note the six-digit one-time password in the email
 obedience Train Your Puppy Before It's 10 Weeks Old
 observe Jupiter
 observe the Shabbat
-Obtain 8 obsidian blocks
-Obtain a blaze rod by killing a blaze in the Nether
 obtain a Copy of Your Birth Certificate in Florida
 obtain a Police Report
 Obtain an Ender Pearl by killing Endermen
@@ -12182,8 +12065,6 @@ open a Folder in Cmd
 Open a folder in which you want to search
 Open a folder on the storage device
 open a Franchise
-Open a game
-Open a game in Minecraft
 Open a game on your Android, like Candy Crush
 Open a Google Sheet and select a cell
 Open a group chat
@@ -12449,12 +12330,6 @@ Open Microsoft Edge You can use Edge in Internet Explorer mode to access IE-only
 Open Microsoft Teams
 Open Microsoft Word
 Open Microsoft Word or an existing Word document
-Open Minecraft and click Launch Options
-Open Minecraft and click Options
-Open Minecraft and click Singleplayer
-Open Minecraft Launcher
-Open Minecraft launcher
-Open Minecraft on your mobile device
 open Mobi Files on PC or Mac
 Open Movie Maker in the Start menu
 Open MultiWall and upload your images
@@ -12736,16 +12611,14 @@ Open the Lyft app
 Open the Mail app
 Open the Mail app on your iPhone
 Open the meeting invitation email
+Open the Menu
 Open the menu and select Add-ons > Extensions
 Open the menu and select Magic
-Open the Menu in Minecraft
 Open the message
 Open the Messages app
 Open the Messages app or any app that uses the keyboard
 Open the Messenger app
 Open the Microsoft Store
-Open the Minecraft folder and then open or create a new folder called "mods" with a lower-case "m"
-Open the Minecraft Launcher
 Open the MUGEN install folder
 Open the My Files app
 Open the My Files app and select the Images category
@@ -12997,7 +12870,6 @@ Open your iPhone's settings
 Open your iPhone's Settings app
 Open your iPhone's Watch app
 Open your JPG image
-Open your Minecraft saves folder
 Open your music player
 open Your Old Facebook Account
 Open your PDF
@@ -13353,8 +13225,6 @@ Place 1 sugar, 1 egg, and 1 pumpkin
 Place 2 corners on top of each side frame
 Place 2 dispensers on top of the building block facing the chest
 Place 2 more blocks at each end
-Place 2 obsidian blocks in between the top corner pieces
-Place 2 obsidian blocks on the ground
 Place 3 cobblestones in the bottom lower third
 Place 3 iron ingots into the crafting grid
 Place 3 wheat bundles on the craft table
@@ -13474,7 +13344,6 @@ play a 3 String Cigar Box Guitar
 play a Car Race in Excel 2000
 play a Claw Machine
 play a Coined Spirit Game
-play a Custom Minecraft Map
 play a Double Stroke Roll
 play a DVD on Xbox One
 play a G Chromatic Scale on Trumpet
@@ -13576,7 +13445,6 @@ play Simon Says
 play Sims 3 Without the CD
 play Skip Bo
 play Skull the Card Game
-play SkyBlock in Minecraft
 play Slap
 play Slither.io
 play Snakes and Ladders
@@ -15051,9 +14919,9 @@ ride a Bicycle
 ride a Bike With One Hand
 ride a Bull
 ride a Bus in Melbourne
-ride a Dragon in Skyrim
-ride a Horse on Minecraft
-ride a Motorcycle (Beginners)
+ride a Dragon
+ride a Horse
+ride a Motorcycle
 ride a Segway Safely
 ride a Turkish Dolmus
 ride a Two Wheeled Scooter
@@ -15422,7 +15290,6 @@ Save the image as a JPEG
 Save the image as a PNG, GIF, or PSD file when the background has been erased
 Save the image when you are finished
 Save the installer
-Save the map to your Minecraft Saves folder, or get the server address
 Save the PDF to your iPad
 Save the vector graphic in SVG format
 Save the video file to your device storate, or iCloud
@@ -15624,7 +15491,6 @@ Search for a popular YouTube video
 Search for a post you want to view replies for
 search for a Product at Amazon
 Search for a recipient
-Search for a Skyblock map or server
 Search for a topic or source to add to Favorites
 Search for a video
 Search for a website that can corrupt a file
@@ -15643,8 +15509,6 @@ Search for channels
 search for Diamonds in Crater of Diamonds State Park
 search for Friends by City on Facebook
 Search for GoodGame Empire and any related programs
-Search for Minecraft Bedrock Edition servers online
-Search for Minecraft mods on Google
 search for Multiple Places in Google Maps
 search for People on Facebook
 Search for software
@@ -15784,7 +15648,6 @@ Select "Facebook Messenger"
 Select "Hide & Unhide" on the menu
 Select "Linear."
 Select "Open this page."
-Select "Pixelmon" in the drop-down menu next to the Play button in the Minecraft Launcher
 Select "Reactivate Account" under Sub Category
 Select "Release 1.12.2-forge1.12.2-14.23.5.2838" below "Version"
 Select "Remove" and click Next
@@ -15895,7 +15758,6 @@ Select a message
 Select a messaging app
 Select a method for finding friends
 Select a microphone
-Select a Minecraft Blender file
 Select a movie or show
 Select a network
 Select a new area code and tap Next
@@ -16328,7 +16190,6 @@ Select the APK and click Open
 Select the app in the search results
 Select the appropriate voltage range you are testing
 Select the area of your screen you want to clip
-Select the armature frame of a Minecraft character rig and switch to Pose Mode
 Select the arrow icon you want to use
 Select the Audible book you want to share
 Select the audio and video clips
@@ -17189,7 +17050,6 @@ Solve the Dotted Hole maze on Six (Fortune) Island
 Sort by "Date followed: latest"
 sort on Google Sheets on Android
 sound Deaden Your Car
-spawn a Zombie Horse in Minecraft
 Speak
 Speak to a child
 Speak to Banning
@@ -17291,6 +17151,7 @@ start a Fashion Boutique
 start a Fire With a Bow Drill
 start a Fire With Different Types of Kindling
 start a Fire with Sticks
+start a game
 Start a game in creative mode
 Start a game on the map
 start a Gaming Channel on YouTube
@@ -17309,8 +17170,8 @@ start a Kids Band
 Start a live stream on YouTube or Twitch
 start a Locksmith Business
 Start a match
+Start a new game
 Start a new game in Fortnite
-Start a new game of Minecraft
 start a New Life in a New School
 Start a new message
 Start a new text post or comment
@@ -17332,7 +17193,6 @@ start a Tinder Account
 Start a two-player game
 start a Virtual Museum
 start Aggressive Inline Skating
-start an Animal Farm on Minecraft
 start an Auto Transporting Business
 start an Environmental Club at School
 Start an online match
@@ -17488,7 +17348,6 @@ stop on Ice Skates
 stop on Inline Skates
 stop Pop Ups on a Mac
 stop Potatoes from Sprouting in Storage
-stop Rain in Minecraft
 stop Running Away from Yourself
 stop Running Late
 stop Seeing a Friend's Likes on Facebook
@@ -17707,6 +17566,7 @@ Surf in the waters east of Pacificdlog Town
 Surf to the underwater cave beside Pacifidog Town in the Router 134 Current
 surface Crochet
 Surround it in cobblestone in all but the bottom-center square
+survive
 survive a Chicago Winter
 survive a Hurricane
 survive a Long Car Ride (for Only Child Teens)
@@ -17723,7 +17583,6 @@ survive Being a Single Mother
 survive Being Stuck in a Lift
 survive Far Cry 2
 survive in a Cave
-survive in Minecraft
 survive Infinity Mode in Dead Rising for Seven Days
 survive Total Economic Collapse
 suspend an Object in Jello
@@ -18030,11 +17889,6 @@ Talk to the police officer
 talk to Xbox Players on PC
 talk to Your Crush Via Email
 talk to Your Partner About Their Weight
-tame a Dog in Minecraft PE
-tame a Horse in Minecraft PC
-tame an Ocelot in Minecraft
-tame and Breed a Dog on Minecraft
-tame Foxes in Minecraft
 tame Naturally Curly Hair
 tame Your Winter White Hamster
 tamp Concrete
@@ -18777,7 +18631,6 @@ type Bold Text on Telegram on Android
 Type cd [filepath]
 Type cipher /u /n
 Type cmd
-type Colored Text in Minecraft Chat (Works with Command Blocks)
 Type command prompt into Start
 Type command prompt into the search bar
 Type composer global require "laravel/installer"' and press Enter
@@ -19301,7 +19154,6 @@ use Dropbox on a Mac
 Use effective language and tags
 Use effects from the Filters menu
 use Emoji on Facebook Messenger on Android
-use Enchanted Books in Minecraft
 use Eucalyptus Oil for Your Beard
 Use EV berries
 Use expressions to manipulate the variables
@@ -19320,7 +19172,6 @@ Use Filters such as Blur or Sharpen to enhance the photo
 use Find in Google Chrome
 Use Flash in the center of the chamber
 Use FlashFire to install Android
-Use flint and steel to light the inside of the nether portal frame
 use Font Color Tags in HTML
 Use four bricks and a crafting table to craft brick blocks
 Use frames to create focus
@@ -19934,6 +19785,7 @@ Write "humanoid.Health = 0" on the next line
 Write "if (humanoid ~= nil) then" on the next line
 Write "local humanoid = Deathblock.Parent:FindFirstChild("Humanoid")" on the next line
 Write "script.Parent.Touched:connect(onTouch)" on the last line
+write a Book
 write a Business Plan for Farming and Raising Livestock
 write a Coin Flipping Program on Python
 write a Dark or Sad Story

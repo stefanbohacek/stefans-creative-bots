@@ -1,7 +1,8 @@
 {
-  "active": true,
+  "active": false,
   "name": "@mastodonmilestoneprogress",
   "description": "Keeping track of Mastodon's upcoming releases.",
+  "note": "GitHub Milestones have been removed as they no longer reflect ongoing work.",
   "links": [
     {
       "title": "Follow on Mastodon",

@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch from "node-fetch";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
 import webcams from "./../../data/webcams/iss.js";
@@ -15,7 +15,7 @@ const __dirname = dirname(__filename);
 const botID = "iss";
 
 const botScript = async () => {
- await (async () => {
+  await (async () => {
     try {
       const mastodon = new mastodonClient({
         access_token: process.env.ISS_ACCESS_TOKEN_SECRET,
@@ -41,14 +41,18 @@ const botScript = async () => {
 
       status += `\n\n${webcam.tags}`;
 
-      await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
-      console.log('path check', __dirname + `/../../temp/${botID}.mp4`);
-
-      mastodon.postImage({
+      mastodon.post({
         status,
-        image: __dirname + `/../../temp/${botID}.mp4`,
-        alt_text: webcam.description,
       });
+
+      // await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
+      // console.log('path check', __dirname + `/../../temp/${botID}.mp4`);
+
+      // mastodon.postImage({
+      //   status,
+      //   image: __dirname + `/../../temp/${botID}.mp4`,
+      //   alt_text: webcam.description,
+      // });
     } catch (error) {
       console.log(`${botID} error`, error);
     }

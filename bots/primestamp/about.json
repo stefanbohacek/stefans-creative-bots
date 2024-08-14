@@ -2,6 +2,7 @@
   "active": false,
   "name": "@primestamp",
   "description": "Looking for timestamps that are prime numbers!",
+  "note": "Bot is too noisy.",
   "links": [
     {
       "title": "Mastodon archive",

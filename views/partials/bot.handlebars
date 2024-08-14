@@ -48,6 +48,13 @@
               <a rel="me" href="{{about.source_url}}" class="btn btn-light mt-2">View source</a>
           {{/if}}      
         </p>
+        {{#if about.note}}
+        <div class="card">
+          <div class="card-body">
+            <small>{{about.note}}</small>
+          </div>
+        </div>
+        {{/if}}          
       </div>
     </div>
   </div>

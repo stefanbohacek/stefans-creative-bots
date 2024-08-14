@@ -2,6 +2,7 @@
   "active": false,
   "name": "@vhs",
   "description": "Analog noise.",
+  "note": "No longer able to generate 10-second preview clips from YouTube.",
   "links": [
     {
       "title": "Follow on Mastodon",

@@ -7,7 +7,7 @@ export default [
     name: "RRS Sir David Attenborough Webcam",
     url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",
     element: '.entry-content img[width="1920"]',
-    description: "View from a webcam mounted on the RRS Sir David Attenborough boat, riding through the arctic ocean. You can typically see mountains in the background, on a clear day.",
+    description: "View from a webcam mounted on the RRS Sir David Attenborough boat, riding through icy waters.",
   },
   {
     name: "Point Hope, Alaska, USA (West Webcam)",

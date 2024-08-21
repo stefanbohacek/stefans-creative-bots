@@ -18,13 +18,23 @@ export default [
     latitude: 52.31304,
     longitude: -114.10844,
   },
+  // {
+  //   title:
+  //     "Lake Tahoe, along the borders of Nevada and California, United States.",
+  //   description:
+  //     "This webcam usually shows a few tall trees with the lake behind them, and a mountain in the background.",
+  //   link: "https://www.earthcam.com/usa/nevada/laketahoe/?cam=laketahoe",
+  //   url: "https://www.earthcam.com/cams/includes/image.php?img=zrDIAb%2Bd7Q9lbaFM9ypahg&logo=0&playbutton=0&s=1",
+  //   latitude: 38.941631,
+  //   longitude: -119.977219,
+  // },
   {
     title:
       "Lake Tahoe, along the borders of Nevada and California, United States.",
     description:
-      "This webcam usually shows a few tall trees with the lake behind them, and a mountain in the background.",
-    link: "https://www.earthcam.com/usa/nevada/laketahoe/?cam=laketahoe",
-    url: "https://www.earthcam.com/cams/includes/image.php?img=zrDIAb%2Bd7Q9lbaFM9ypahg&logo=0&playbutton=0&s=1",
+      "This webcam usually shows a view of a large lake from a high point with trees below and mountains in the background.",
+    link: "https://www.skiheavenly.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+    url: "https://live9.brownrice.com/cam-images/heavenlymidstation.jpg",
     latitude: 38.941631,
     longitude: -119.977219,
   },

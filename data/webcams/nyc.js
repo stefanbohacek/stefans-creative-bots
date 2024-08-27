@@ -35,6 +35,15 @@ export default [
     latitude: 40.689247,
     longitude: -74.044502,
   },
+  // {
+  //   "title": "Statue of Liberty HarborCam",
+  //   description:
+  //     "This webcam usually shows a distant view of Lower Manhattan from the Ellis Island.",
+  //   link: "https://www.earthcam.com/usa/nationalparkservice/virtualpark/?cam=liberty_hd",
+  //   url: "https://www.earthcam.com/cams/includes/image.php?logo=0&playbutton=0&s=1&img=rZKo%2FByXfvY3NsnU%2BATWIg%3D%3D",
+  //   latitude: 40.689247,
+  //   longitude: -74.044502,
+  // },
   {
     "title": "30 Rockefeller Plaza",
     "description": "This webcam usually shows a view of the New York skyline.",

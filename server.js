@@ -19,7 +19,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
     const result = findRemoveSync(__dirname + "/temp", {
       files: "*.*",
       age: {
-        seconds: 3600,
+        seconds: 1800,
       },
     });
     console.log(result);

@@ -27,7 +27,7 @@ const botScript = async () => {
       {
         ?article schema:about ?item .
         ?article schema:inLanguage "en" .
-        FILTER (SUBSTR(str(?article), 1, 25) = "https://en.wikipedia.org/")
+        ?article schema:isPartOf <https://en.wikipedia.org/>
       }
     } 
   `);

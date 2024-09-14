@@ -196,7 +196,6 @@ add Grid Lines to Your Excel Spreadsheet
 add Hair to Braids
 add Header Row in Excel
 Add heavy whipping cream and vanilla and mix
-add Highlights on Instagram
 add Honors and Awards in LinkedIn
 add Hyperlinks to Email Messages in Hotmail
 Add Illustrator bullets before each section that you want to separate on your bulleted list
@@ -219,13 +218,11 @@ add More Fonts to WPS Office on Your Android Device
 add MP3 to iTunes
 add Mugen Characters
 add Multiple Destinations on Google Maps
-add Multiple Stories on Instagram
 add Music to an iPod
 add Music to PowerPoint
 add Music to Snapchats
 add Music to the Apple Watch
 add Music to Your Android Device
-add Music to Your Instagram Story on Android
 Add new contact to Signal on your phone
 add Nitrogen to Compost
 add Notes from an Email Account to an iPhone
@@ -619,7 +616,6 @@ be a Healthy Teenager
 be a Sophisticated and Cultured Male
 be a Successful Wiffle Ball Hitter
 be a Well Groomed Indian Man
-Be active on Instagram
 be an engineer
 be an Environmental Consultant
 be an Executor
@@ -764,7 +760,6 @@ blend Colors in Photoshop
 blind Bake
 block a Contact on iPhone
 block a Google Account
-block a Group Chat on Instagram
 block a Number on Sprint
 block a Sender by Email Address in Hotmail
 block a WiFi Network on iPhone or iPad
@@ -813,7 +808,6 @@ bolt a Safe to the Floor
 bolt Into Concrete
 bookmark a Page in Mozilla Firefox
 bookmark on Audible
-boost an Instagram Post on Windows
 Boost contrast
 Boost the core vocal frequencies
 Boost your best posts to reach new people
@@ -1030,8 +1024,6 @@ build Wooden Benches
 build Wooden Bookshelves
 build Your Own Kid's Wagon
 build Your Own Preschool Curriculum
-Bumble will notify you when someone SuperSwipes you
-bundle
 burn a CD in Ubuntu Linux
 burn a CD Using Mac OS X
 burn a DVD in Windows 7
@@ -1254,7 +1246,6 @@ change the Google Play Store Country
 change the HID Headlights on a 2007 Prius (Without Removing Bumper)
 change the Icon of Removable Drives
 change the Ink Cartridge in an HP Envy 5000
-change the Instagram Background Color
 change the IP Address in the Tor Browser
 change the Keyboard Layout on Windows
 change the Language
@@ -1298,7 +1289,6 @@ Change your IP address
 change Your iTunes Payment Method on PC or Mac
 change Your Name on Facebook So People Can Search Your Maiden or Married Name
 change Your Name on Gmail
-change Your Name on Instagram
 change Your Name on Telegram on Android
 change Your Name on Telegram on PC or Mac
 change Your Password in Yahoo
@@ -1337,7 +1327,6 @@ check an IIS Event Log on Windows
 check an iPhone Warranty
 check eBay Sold Prices
 Check for a Seen sign below your friend's name
-Check for an email from Instagram informing you your account has been banned
 Check for an update in Settings
 Check for any error messages or beep patterns as your computer boots up
 Check for any graphics problems
@@ -2294,7 +2283,6 @@ Click Import on the top-right
 Click Import Selected
 Click Import Settings
 Click Import/Export
-Click in the search bar and type "Instagram," then press Enter or Return
 Click In-Game
 Click Info on the left menu
 Click Insert
@@ -2303,7 +2291,6 @@ Click Insert at the top of your screen
 Click Insert' > Object
 Click inside the body of the email and press Ctrl/Cmd + V
 Click Inspect Element or Inspect
-Click Instagram by Instagram then click the green Install button
 Click Install
 Click INSTALL
 Click Install a mod
@@ -2594,7 +2581,6 @@ Click or tap on the page from the list
 Click or tap on their name
 Click or tap Play Online or Play Against A.I
 Click or tap Play Sound
-Click or tap Post Youtube to Instagram
 Click or tap Print
 Click or tap Privacy and safety
 Click or tap Register and fill out the form
@@ -3170,7 +3156,6 @@ Click the green checkmark
 Click the green Download BlueStacks button
 Click the green Download Now button on the right side of the screen
 Click the green Install for Chrome button
-Click the green Open button and login to Instagram
 Click the grid icon to select a character and then click Find a Match
 Click the half-circle to the right of "Password."
 Click the half-rectangle with curved lines at the bottom
@@ -4043,7 +4028,6 @@ create a Jack Skellington Costume
 Create a layer called "Tracing."
 Create a line graph with your data
 Create a Live CD or Live USB drive
-create a Location on Instagram
 create a Login Page in HTML
 create a Mailing List in Yahoo
 create a Marble Nail Effect Using Water
@@ -4203,7 +4187,6 @@ create an HTML Signature
 create an Ice Bowl
 create an iCloud Account
 create an Image Map Using Gimp
-Create an Instagram Story including mentions and hashtags
 create an Invader Zim Gir Hoodie
 create an Online Survey with SurveyMonkey
 Create an Organization Administrator account
@@ -5061,7 +5044,6 @@ download Emails from Gmail on PC or Mac
 Download FFmpeg from https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z
 download Flash
 download Flowplayer Videos
-Download FollowMeter for Instagram
 download Fonts
 Download Fose from fose.silverlock.org
 Download free mp3 files
@@ -5415,15 +5397,12 @@ edit a PDF on an iPad
 edit a PDF Online
 edit a Pivot Table in Excel
 edit a Post on LinkedIn
-edit a Posted Instagram Story on iPhone or iPad
 edit a PowerPoint Template
 edit a Reddit Post on iPhone or iPad
 edit a Screenshot
 edit a WAV File
-edit Ads on Instagram
 edit an Event on Facebook
 edit an Image on Photoshop
-edit an Instagram Post
 edit an XLSX File on an Android
 Edit and post the video
 Edit and save
@@ -5465,7 +5444,6 @@ edit the Frame Size in Premiere Pro
 edit the Hosts File on Windows
 Edit the image and tap Done
 Edit the JPG image as much as you'd like
-Edit the number listed for your weight and tap Done
 Edit the pictures' arrangement
 Edit the screenshot
 Edit the slide masters themes, colors, fonts, and placeholders
@@ -5513,7 +5491,6 @@ embed a Video on Reddit
 embed a YouTube Video
 embed an Image in an Email
 embed an Image into a Yahoo Email
-embed an Instagram Post
 embed an SVG in HTML
 embed Documents in Excel
 embed Pictures
@@ -5827,7 +5804,6 @@ Enter the pairing code, if you're prompted
 Enter the passageway and capture Regirice
 Enter the passageway and capture Registeel
 Enter the password to connect
-Enter the phone number associated with your Instagram account
 Enter the phone number to which the top-up will be sent
 Enter the PIN if prompted
 Enter the Ping command
@@ -5906,8 +5882,6 @@ Enter your first and last name
 Enter your Google account information
 Enter your Google Voice number when prompted
 Enter your host key
-Enter your Instagram account name then tap Download
-Enter your Instagram password
 Enter your key
 Enter your login information
 Enter your message
@@ -6169,7 +6143,6 @@ find a Substitute for Balsamic Vinegar
 Find a toothpick and Q-tip for cleaning
 Find a torrent tracker site
 Find a video you want to download
-find Ads on Instagram
 Find all components on the Assets tab
 find Alternatives to Sitting in a Desk
 find an Address Book in Gmail
@@ -6405,7 +6378,6 @@ Follow on-screen instructions
 Follow other bloggers
 follow Pinterest Topics on a PC or Mac
 Follow recommended podcasts or tap SKIP
-follow Someone on Instagram
 follow Someone on Pinterest
 Follow the cave path to the braille sign
 Follow the installation wizard's prompts
@@ -6530,10 +6502,6 @@ Fulfill any of your Sim's needs
 full Scissor a Poodle by Hand
 Fully charge the iPad before use
 furnish Your First College Dorm or Apartment on a Budget
-gain Karma on Reddit
-gain Muscle in Women
-gain Weight (for Women)
-gain Weight As a Vegetarian
 gain Your Parakeet's Trust
 gap a Spark Plug
 garnish a Martini
@@ -6559,7 +6527,6 @@ germinate Peas
 germinate Seeds
 germinate Tree Seeds
 Get 100 gold from Brynjolf
-get 10k Followers on Instagram
 Get 24 expert staff ghosts in Time Trial mode to unlock the Sprinter kart
 Get 4 blocks of sand, 4 blocks of gravel, and 1 dye
 get 4G LTE
@@ -6631,7 +6598,6 @@ get Pale Lips
 get Pen Stains out of Clothing
 get Photos Off an iPhone
 get Pixelmon
-get Popular on Instagram
 get Popular on the Internet
 get Pregnant Using Instead Cups
 get Pro in Trackmania Nations
@@ -6759,7 +6725,6 @@ glue Plastic
 glue Plexiglas
 glue Styrofoam
 go Back in Time on Google Maps
-go Back on Bumble
 go Back to a Previous Version of iOS on an iPhone
 Go back to the pivot table tab
 go Back Using the Command Prompt
@@ -7046,7 +7011,6 @@ hide Pipes in the Kitchen
 hide Recently Played Artists on Spotify on Android
 hide Sheet Bar in Excel
 hide Speaker Wires
-hide Tagged Photos from Your Instagram Profile
 hide Text Messages on Your iPhone
 Hide the background to check your work
 Hide the Internet Explorer 11 update in Windows Update
@@ -7163,7 +7127,6 @@ Hover your cursor over your Epic Games account name
 Hover your mouse over Edit and select Paste
 Hover your mouse over File and Convert then click Create MP3 Version
 Hover your mouse over Guides
-Hover your mouse over Instagram
 Hover your mouse over More and click Edit Event
 Hover your mouse over Music and click Preferences
 Hover your mouse over Search
@@ -7316,7 +7279,6 @@ increase Headphone Volume on an Android
 increase Internet Speed
 increase Internet Speed in Windows 7
 Increase the brightness in the display settings
-increase the Font on Instagram
 increase the RAM on a PC
 increase the Speed of Videos on Windows Movie Maker
 Increase the volume and/or try another ringtone
@@ -7804,7 +7766,6 @@ Install the Homebrew channel on your Wii
 install the Java Software Development Kit
 Install the latest version of GIMP
 Install the latest version of Java
-Install the Layout app and link it to your Instagram account if necessary
 Install the missing .dll files
 Install the mobile app on your Android, iPhone, or iPad
 Install the mod through the Splinter Cell menu
@@ -7919,7 +7880,6 @@ invert Colours in MS Paint
 invert Sugar
 invite All Friends on Facebook
 Invite an adult to join your household
-invite Facebook Friends to Join Instagram on iPhone or iPad
 invite Friends to Facebook Messenger
 invite Friends to Like a Facebook Page on Android
 invite Friends to WeChat
@@ -8157,48 +8117,15 @@ knit the Knit Stitch
 knit the Purl Stitch
 knit Two Together
 knook
-know Chat ID on Telegram on Android
-know How Many Stamps to Use
-know if a Contact Is Using Signal
-know if a Girl Digs You
-know if Someone Blocked You on Facebook Messenger
-know if Someone Blocked You on WeChat
-know if Someone Deleted You on Snapchat
-know if Someone Deleted You on WhatsApp on Android
-know if Someone Has Blocked You on WhatsApp
-know if Someone Has Your Number on WhatsApp
-know if Someone Unmatched You on Bumble
-know if You Have Spyware on Your Computer
-know if Your Car Has a Fluid Leak
-know if Your Instagram Account Is Banned
-know if Your Number Was Blocked
-know if Your Toe Is Broken
-Know the different components of a wireless connection
-know when Car Tires Need Replacing
-know when Scones Are Baked
-know when Someone Was Last Online on Facebook on Android
-know When You've Been Blocked on Snapchat
-know Who Has Viewed Your Status on WhatsApp
 know Who You Are
 knuckle a Soccer Ball
-kool Aid Dye Black Hair
-Label rows for Principal, Interest, Periods, and Payment
-Label the events
 label Water Bottles
-ladder Jeans
 laminate Paper
 Laminate the paper ID
-Lastly, look up bullet points and copy the desired icon, then paste it into the cell
 Launch a game through Steam
-Launch a Lightning Deal
-Launch AltStore on your phone or tablet and close it when you see an error
-Launch Among Us and tap Online
 Launch Android Studio
-Launch AxCrypt
 Launch Google Earth
 Launch Google Maps
-Launch InShot on your phone or tablet
-Launch Instagram
 Launch iTunes on your computer
 Launch OnionFruit
 Launch Overwatch and select Play
@@ -8392,7 +8319,6 @@ log in to a Microsoft Account
 log in to Discord on Android
 log in to Epic Games on Xbox
 Log in to IMDB
-log in to Instagram on a PC or Mac
 Log in to OneDrive or your preferred cloud storage account
 Log in to Reddit
 log in to Slack on PC or Mac
@@ -8410,7 +8336,6 @@ Log in to your Autodesk account
 Log in to your Epic Games account
 Log in to your Facebook account
 Log in to your Google account
-Log in to your Instagram account
 Log in to your Microsoft account
 Log in to your Microsoft account, if you haven't already done so
 Log in to your Playstation 4
@@ -8477,7 +8402,6 @@ Look for a message with a grey background next to a blue bar
 Look for coal blocks, which look like stone blocks with black spots on them
 Look for greyed-out chats (if you're currently in a conversation with someone you think unmatched you)
 Look for hard-to-believe statements in their profile
-Look for pop-up messages on Instagram saying something like "You're temporarily blocked", then use the Tell us button to appeal
 Look for random popups and disappearing files
 Look for sign-up deals with mobile phone providers that offer free iPads
 Look for usernames under the "ADDED ME" heading
@@ -8508,25 +8432,15 @@ Loop the long end under where the two ends cross
 Loop the thread back up towards the second thread guide to create a "U" shape
 Loot chests in villages and other structures
 Loot, purchase, or craft seeds
-lose Belly Fat Fast (For Women)
-lose Love Handles (For Women)
-lose Weight by Doing Chores
-lose Weight Gardening
-lose Weight in 4 Days
-lose Your Virginity Without Pain (Girls)
-love a Text Message on Android
 love Your Stuffed Animal
-love Yourself when You Are Overweight
+love Yourself
 lower Resting Heart Rate
-Lower the "Render Distance" to 8 chunks or lower
 Lower the opacity
 Lower the opacity of your background image to 50% or lower
-lower the Ping on an Xbox One
 Lower your screen brightness in dark
 lowlight Hair Yourself
 lubricate a Garage Door
 lubricate Door Hinges
-macrame
 magnetize a Screwdriver
 magnetize Steel
 mail a Letter
@@ -8849,7 +8763,6 @@ make a Coke Float
 make a Collage
 make a Collage in Photoshop
 make a Collage on Google Photos on Android
-make a Collage on Instagram
 make a Comic Strip
 make a Commonplace Book
 make a Compass
@@ -10470,7 +10383,6 @@ make Indonesian Kopi Tobruk
 make Infusoria
 make Injera
 make Ink from Tea
-make Instagram Forget Your Login Info
 make Instant Mashed Potatoes
 make Instant Pudding
 make International Calls from Google Voice
@@ -10694,7 +10606,6 @@ make Money in RuneScape as a Non Member
 make Money Leis
 make Money on Anchor
 make Money on eBay
-make Money on Instagram
 make Money on Nintendogs
 make Money on Pinterest
 make Money on RuneScape with Bronze
@@ -11268,7 +11179,6 @@ Make sure you can receive your satellite's signal
 Make sure you have a compatible fingerprint reader (if you don't have one built-in)
 Make sure you have the Premium plan
 Make sure you meet the requirements
-Make sure you meet the requirements for Instagram Shopping
 Make sure you're in a call
 Make sure you're signed up to receive marketing materials from the PokÃ©mon Company International
 Make sure your Android phone has the latest update
@@ -11530,7 +11440,6 @@ make Your Hair Poofy
 make Your Hair Silky and Shiny with Vinegar
 make Your Hair Stand Up
 make Your Hair Wavy
-make Your Instagram Photos Private
 make Your Jeans Tighter
 make Your Laptop a Touch Screen Without Airbar
 make Your Leather Jacket Softer
@@ -11899,7 +11808,6 @@ Navigate to a date when the video wasn't deleted
 Navigate to a folder
 Navigate to a movie and tap it
 Navigate to a picture you want to print
-Navigate to a post on Instagram that you want to share to Facebook
 Navigate to a video you want to share
 Navigate to a web page you want to save
 Navigate to Account Management > Account Information > Security > 2-Step Verification
@@ -12148,7 +12056,6 @@ Open an image in an image editing program
 Open an image in Photoshop
 Open an image in Photoshop Elements
 Open an image you want to edit in Photoshop
-open an Instagram Account Through PC
 open an MP4 File on Android
 open an MP4 File on iPhone or iPad
 open an MP4 File on PC or Mac
@@ -12175,8 +12082,6 @@ Open Blender 3D
 Open BlueStacks
 Open BlueStacks and sign in with your Google account
 Open both images
-Open Bumble
-Open Bumble and tap the filter icon
 Open C:\Windows\System32\drivers\etc
 Open Calendar
 Open Calibre Companion and tap the arrow
@@ -12297,14 +12202,6 @@ Open iMovie
 Open iMovie and open a project
 open Incognito Mode by Default in Google Chrome (Windows)
 Open Indeed
-Open Instagram
-Open Instagram and create a new post
-Open Instagram and go to the profile of the person who posted the photo
-Open Instagram and Tap "ï¼‹."
-Open Instagram and tap the + icon at the bottom of the screen
-Open Instagram if it doesn't open automatically, tap Next, and tap Share
-Open Instagram on your mobile device and log in
-Open Instagram on your phone
 Open Internet Explorer
 Open iTunes
 Open iTunes (Windows only)
@@ -12587,8 +12484,6 @@ Open the image in Microsoft Paint for Windows
 Open the image in Photoshop
 Open the image in the Paint app
 Open the iMovie app
-Open the Instagram app
-Open the Instagram app and swipe right to open the camera
 Open the install file and select your language
 Open the installer
 Open the installer and follow the installation instructions
@@ -12603,7 +12498,6 @@ Open the launcher
 Open the Launcher
 Open the lid on the AirPods case
 Open the link in a new tab to download it
-Open the link in the WhatsApp text sent to you from Instagram
 Open the link sent to your email, then download your zipped data
 Open the Load menu
 Open the Lyft app
@@ -12921,7 +12815,6 @@ Open Zoom and join a meeting
 Open Zoom on your computer and join or host a meeting
 operate a Backhoe
 operate an Ambulance Stretcher
-Opren Bumble
 opt out of AdChoices ads
 opt Out of Amazon Sidewalk
 optimize Your Mac
@@ -13600,13 +13493,11 @@ Post high-quality content, and do it often
 post Images in a Discord Chat on a PC or Mac
 post Links on Facebook
 post on Facebook Messenger from Your Camera Roll on iPhone or iPad
-post on Instagram
 post on Reddit
 post PDF Files to Facebook on a PC or Mac
 post Poshmark Listings to Facebook Marketplace
 Post regularly and keep your style on-brand
 Post some links to photos or videos for some extra upvotes
-post Text on Instagram
 post to Snapchat Stories
 post Videos
 post While Trotting on a Horse
@@ -14003,7 +13894,6 @@ program in Fortran
 program with VBScript
 project a Texture Onto a Curved Surface in SketchUp
 promote a Facebook Page for Free
-promote an Instagram Story
 promote Fiverr Gigs
 promote Products on Amazon
 Proofread the cards
@@ -14088,7 +13978,6 @@ put a Cot Together
 put a Cover Photo on a Music File Using Windows Media Player
 put a DVD on Android
 Put a hole in the wall
-put a Personal Blog on Your Instagram Bio
 Put a redstone in the bottom-center square
 put a Reed on a Clarinet
 Put a sponsorship hashtag in your posts
@@ -14108,7 +13997,6 @@ put in earplugs
 Put in popsicle molds and freeze
 Put it in the fridge until room temperature
 put Laminate on a Counter Top
-put Multiple Pictures on an Instagram Story
 put Multiple Pictures on Your Desktop Background on Mac
 put Music on Your iPhone Without iTunes
 put Music Onto a PS3
@@ -14121,7 +14009,6 @@ put On a Hijab
 put on Pantyhose
 put Out a Cell Phone Fire
 put Out a Fire in a Fireplace
-put Prices on Instagram
 Put Relicanth last in your party and Wailord first and read the inscription
 put Text on iMovie
 Put the accessory into pairing mode
@@ -14236,7 +14123,6 @@ Record a video
 Record a video with the music playing in the background
 record a Zoom Meeting on Android
 Record additional instruments on other tracks
-record an Instagram Story on iPhone or iPad
 record Gameplay on the Xbox Series X or S
 record Google Translate Voice on PC or Mac
 record League of Legends Games
@@ -14368,7 +14254,6 @@ remove Acrylic Paint from Wood
 remove Adhesive on Hardwood Floor
 remove Adware Manually
 Remove all items from your avatar
-remove All Likes on Instagram
 remove ambiguities and convert to specifics
 remove an Event from Google Calendar on PC or Mac
 remove An Indoor Carpet
@@ -14586,7 +14471,6 @@ Repeat on other device
 Repeat on your iPhone and iPad
 Repeat the Purity quest to cure the other bother
 Repeat the unfollow process for each person in your "following" list
-Repeat this process to add more to Instagram Stories
 Repeat this process until level 100
 Repeat to create more accounts
 Repeat to tame a second wolf
@@ -14744,7 +14628,6 @@ reset a Fitbit Charge
 reset a HTC Smartphone when Locked Out
 reset a TV to Factory Settings
 reset an Echo Show
-reset an Instagram Password Without an Email or Facebook
 reset an Xfinity Remote Control
 reset Aol Mail Settings
 reset Apple Music
@@ -15232,7 +15115,6 @@ save a File
 save a GIF on an iPhone
 save a Google Doc
 save a Pattern in Illustrator
-save a Picture from Instagram
 save a Scratch Project
 save a Screenshot
 Save a sound to your Notifications folder if using a custom sound
@@ -15255,7 +15137,6 @@ save Battery Power on an iPhone
 Save each page as its own individual PDF file
 save Files to a USB Flash Drive
 save Images or Videos from Text Messages on iPhone
-save Instagram Highlights
 save One Page of a PDF for Free
 save One Page of a PDF Using Adobe Reader
 save photos
@@ -15304,7 +15185,6 @@ Save your document in the File menu
 Save your edited file
 Save your image
 Save your image as an SVG file
-save Your Instagram Story with Music to Your Gallery
 Save your new PDF
 Save your presentation
 save Your Progess in Pokemon Diamond, Pearl, and Platinum
@@ -15461,7 +15341,6 @@ search by Image on Google
 Search by subject or location
 Search by typing: Command Prompt
 search Channels in YouTube
-search Contacts on Instagram
 Search for "Amazon Music."
 Search for "Facebook"
 Search for "GNOME Tweaks" and install the app
@@ -15532,15 +15411,12 @@ Search for your phone number or email address
 Search for your teacher or class name
 Search for yourself on Whitepages
 search Google
-search Instagram
 search Nearby on Google Maps on Android
 search on Facebook Messenger on a PC or Mac
 Search or browse for a package or app
 search posts from a Specific User
 search postss by Date on App
 Search r/pokemongo for promo codes
-search Reels on Instagram
-search Tags on Instagram
 Search the calendar using the search bar
 search the Internet
 search the Internet for a Long Lost Friend
@@ -15574,21 +15450,15 @@ Secure the hard drive in place with screws
 securely Convert Paper Savings Bonds to Electronic Securities
 sedate a Cat
 seduce a Woman With a Foot Massage
-see a Friend's New Followers on Instagram
 see a Password Protected PDF Using Gmail
 see All Open Tabs in Chrome
 see All Open Windows
-see Archived Posts on Instagram on PC or Mac
 see Birthdays on Facebook on iPhone or iPad
 see Blocked Contacts on iPhone
-see Blocked Users on Instagram
-see Bumble Matches Without Paying
 see Buy Orders on Steam
-see Direct Messages on Instagram
 see Everyone in Microsoft Teams
 see Followers on Facebook
 see Frame Rates
-see Hidden Tagged Photos on Instagram
 see Hours Played on PS4
 see How Many Apps Are on Your iPhone
 see How Many Miles You've Walked on an iPhone
@@ -15599,10 +15469,8 @@ see if Someone Read Your Text on Android
 See if there's a touch-screen overlay that matches your laptop's dimensions
 See if they've been tagged in photos and posts
 see Infrared Light
-see Last Active on Instagram
 see Last Seen on WhatsApp if It Is Hidden
 see Less of Someone on Facebook
-see Matches on Bumble
 see Memories on Facebook
 see Messages from Non-Friends on Facebook Messenger on a PC or Mac
 see Page Likes on Facebook
@@ -15616,19 +15484,14 @@ see the "Other" Folder in Facebook Messenger
 see Unread Emails in Outlook
 see Uploaded Photos on Facebook
 see What Your Friends Like on Facebook
-see Who Doesn't Follow You Back on Instagram
 see Who Is Connected to Your Wireless Network
-see Who Liked You on Bumble
 see Who Shared Your Facebook Post
-see Who Super Swiped You on Bumble
 see Who Viewed Your Facebook Story
 see Who Views Your Facebook Profile
 see Who You Have Blocked
-see Who You Recently Followed on Instagram
 see Your Account Name in Steam
 see Your Archived Messages on Facebook Messenger
 see Your Best Friends on Snapchat
-see Your Likes History on Instagram
 see Your Listening Time on Spotify
 see Your WiFi Password on an iPhone
 seed a Torrent
@@ -16046,7 +15909,6 @@ Select Import items into the same folder in
 Select Initialize
 Select Initialize Console
 Select INSCRIPT from the keyboard menu
-Select Instagram
 Select Install
 Select Install and Done
 Select Install for all users
@@ -16697,7 +16559,6 @@ shape a Hat
 shape a Surfboard
 share a Folder
 share a Google Drive File
-share a Post on Instagram
 share a Printer
 share a Recorded Zoom Meeting
 share a Video
@@ -16710,7 +16571,6 @@ Share events with other people
 share Files on Zoom
 share Files Wirelessly
 share Google Docs
-share Instagram Profile
 share Live Stream on Facebook to Multiple Groups
 share Location from Android to iPhone
 share Microsoft Office on PC or Mac
@@ -16811,7 +16671,6 @@ show Paragraph Marks in Indesign
 show Pictures in a Zoom Meeting
 show Recently Played Artists on Spotify
 show Speed Limits on Maps on an iPhone
-show Tagged Photos on Instagram
 Show the battery percentage in the status bar
 Show the code to a cashier inside the Walmart MoneyCenter
 show the Max Value in an Excel Graph
@@ -17139,7 +16998,6 @@ start a Campfire
 start a Campground Business
 start a Car Insurance Company
 Start a chat with a recipient
-start a Conversation on Bumble
 start a Cooking Club
 start a Dance Group
 start a Dog Bakery
@@ -17324,7 +17182,6 @@ stop All the Ads in Hotmail
 stop an Application from Opening at Startup With Mac OS X
 stop an Echo on Discord
 stop Apple Pay Notifications
-stop Auto Following on Instagram
 stop Being a Tomboy
 stop Being Afraid of Ghosts
 stop Bike Brakes from Screeching
@@ -17333,7 +17190,6 @@ stop Butter Burning
 stop Dried Fruit and Nuts from Falling to the Bottom of Cakes
 stop Eyeliner from Smudging
 stop Flatulence
-stop Following Someone on Instagram
 stop Getting Distracted by Your Phone when Studying
 stop Getting Emails from LinkedIn
 stop iCloud from Using Cellular Data for Transfers on an iPhone
@@ -17355,7 +17211,6 @@ stop Sims 3 from Freezing
 stop Spam
 stop Spam Messages on Snapchat
 stop Squinting
-stop Targeted Ads on Instagram
 stop Toilet Tank Sweating
 stop Tunisian Crochet from Curling
 stop Vomiting
@@ -17628,7 +17483,6 @@ Swipe left to add yellow and magenta colors
 Swipe left to make Shadows brighter
 Swipe left to right to open the camera
 Swipe left with three fingers on iPhone and iPad
-swipe on Bumble
 Swipe on other users
 Swipe or tap the Sharing tab
 Swipe right
@@ -17664,7 +17518,6 @@ Switch "Particles" to Decreased or Minimal
 switch a Door From Right Opening to Left Opening
 Switch back to object mode and apply material properties to the mesh
 Switch between catalog and archive views
-switch Between Instagram Accounts on a Computer
 switch Cameras on Chromebook
 switch Cells in Excel
 Switch Character Count to on
@@ -17693,7 +17546,6 @@ switch the Wheels on a Car
 Switch to 5 GHz
 Switch to arrangement mode and use the controls at the bottom of each track to mix them
 Switch to BFF mode
-switch to Bumble Bff
 Switch to Chrome
 Switch to Ethernet if you're using coaxial
 switch to Portrait or Landscape Mode on Android
@@ -17745,7 +17597,6 @@ system Link Two or More Xbox or Xbox 360 Consoles
 t-Streak (Microbiology)
 tag a Page on Facebook
 tag Cattle
-tag Instagram on Facebook
 tag People in a Discord Chat on Android
 tag Someone in Facebook Messenger on Android
 tag Someone on WhatsApp on Android
@@ -17887,7 +17738,6 @@ Talk to the lady and select Global Trade
 Talk to the police officer
 talk to Xbox Players on PC
 talk to Your Crush Via Email
-talk to Your Partner About Their Weight
 tame Naturally Curly Hair
 tame Your Winter White Hamster
 tamp Concrete
@@ -17925,7 +17775,6 @@ teach Your Horse to Lunge
 teach Your Kid to Drive
 teach Your Nintendogs Tricks
 tease Your Hair
-Tease your Instagram Story
 tell a Male Robin from a Female Robin
 tell a Story
 Tell Carl-bot which channel to use
@@ -17961,7 +17810,6 @@ Tell Siri to enable VoiceOver
 Tell Siri to open "iCloud Settings."
 tell Someone They Have Bad Breath
 tell Time Without a Clock
-tell Who Has Viewed Your Instagram Story on iPhone or iPad
 tell Wool Yarn from Acrylic Yarn
 tell Your Friends That You Are Moving
 tell Your Girlfriend That You Want to Marry Her
@@ -17969,7 +17817,6 @@ tell Your Parents You are Following a Religion They Don't Approve of
 tell Your Parents You Have a Girlfriend
 tell Your Parents You Started Your Period
 temporarily Colour Your Hair Purple at Minimal Cost
-temporarily Disable an Instagram Account
 temporarily Dye Your Hair
 temporarily Fix a Loose Wire on Your Braces
 temporarily Remove a Key from a Macbook
@@ -18194,7 +18041,6 @@ track an iPhone from an Android
 track Friend Requests You've Sent on Facebook
 track Mileage Without an Odometer
 track Money
-track Weight on Apple Watch
 Track your referrals
 trade Forex
 Trade in other Apple products for Apple store credit
@@ -18223,7 +18069,6 @@ transfer AOL Favorites
 transfer Audible Books to Another Account
 transfer Cassette Tape to Computer
 Transfer the ringtone to your iPhone
-Transfer your videos from your computer to your mobile device, then post the Mp4 to Instagram
 Transform the selection to match the face
 Transmute iron ore into gold ore with Transmute Mineral Ore
 Travel back to Ysgramor's Tomb
@@ -18270,7 +18115,6 @@ Try connecting via Ethernet
 Try different poses and smiles
 Try different symbols
 Try disconnecting and reconnecting
-Try Downloader for Instagram if you have an Android
 Try Drawing Guides with Drawing Assist for more complicated drawings
 Try encountering the same PokÃ©mon repeatedly
 Try on online proxy
@@ -18343,7 +18187,6 @@ turn Off iCloud Keychain on an iPhone
 turn Off iCloud Mail on an iPhone
 turn Off iCloud Music Library
 turn Off Image Previews
-turn Off Instagram Notifications on an iPhone
 turn Off iPhone 12 Pro Max
 turn Off iPod Nano
 Turn off Location Services in Settings
@@ -18427,7 +18270,6 @@ Turn on the Nintendo Switch and follow any on-screen instructions
 Turn on the printer
 Turn on the Sold items filter
 Turn on the Xbox and a controller
-turn on Vanish Mode on Instagram
 turn on WiFi Calling on Galaxy
 Turn on Windows File and Printer Sharing
 turn on your computer
@@ -18828,7 +18670,6 @@ undo Locks
 undo on Pages
 Undo the clips between the plastic lid and body
 Unfollow an account
-unfollow Everyone on Instagram
 unfollow People on TikTok on Android
 unfollow People on TikTok on iPhone or iPad
 unfollow Pinboards on Pinterest
@@ -18844,7 +18685,6 @@ unhide Group on Groupme on Android
 unhide Messages on Groupme on Android
 unhide Messages on Groupme on iPhone or iPad
 unhide Rows in Excel
-unhide Tagged Photos on Instagram
 unicycle
 Unify the body text color
 unignore Someone on Messenger
@@ -18894,10 +18734,8 @@ uninstall Webwatcher on Android
 Uninstall WhatsApp
 uninstall Windows 10 Store Apps
 uninstall YouTube Updates
-unlike an Instagram Post
 unlink a Bank Account on Venmo
 unlink a Form on Google Sheets
-unlink Your Facebook and Instagram Accounts on a PC or Mac
 Unload your "gift" symptoms as soon as possible
 unlock a Disabled iPhone
 unlock a Pin Lock on an Android
@@ -18976,7 +18814,6 @@ Upgrade your internet speed
 upholster a Bench
 upload a Song on Soundcloud on iPhone or iPad
 Upload a video at least once a day
-upload a Video from YouTube to Instagram
 upload a Video to Twitch
 Upload a Word document
 upload an Existing Resume on CareerBuilder
@@ -18993,8 +18830,6 @@ Upload it to Google Drive if prompted
 upload Longer TikTok Videos on iPhone or iPad
 upload Longer Videos on YouTube
 upload Mobile Photos to Facebook
-upload Mov Files to Instagram
-upload Multiple Photos to Instagram on iPhone or iPad
 Upload or record a video with a sound you want to use
 upload Pictures to Google Drive on PC or Mac
 Upload sponsored content
@@ -19248,7 +19083,6 @@ use Solver in Microsoft Excel
 use Sour Milk
 use Sour Oranges
 use Space Saver Vacuum Packed Bags
-use Spotlight on Bumble
 use Stickies on Mac
 Use sudo apt-get remove packagename to uninstall
 use Summation Formulas in Microsoft Excel
@@ -19256,7 +19090,6 @@ Use Surf to reach the cave southwest of Petalburg City
 use Technology as a Journalist
 Use the "Extrude" tool to extend faces of a mesh
 Use the "Find and Replace" tool to get rid of the spaces
-Use the "Inspect" feature in Chrome to save Instagram photos to your computer
 Use the "Move," "Rotate," and "Scale tools to move vertices, edges, and faces of a mesh
 Use the "Move," "Rotate," and "Scale" tools to manipulate the object
 Use the "text-decoration: underline" style
@@ -19270,7 +19103,6 @@ Use the Assembly Explorer to browse the nodes
 Use the bar along the button to format the text
 use the Bathroom While Camping
 Use the best gameplay footage in your video edits
-use the Blur Effects on Instagram
 Use the Boot order option or Boot menu to boot from the USB drive
 Use the Browser and Google apps to search the web
 Use the brush tool to draw or mark the image
@@ -19420,11 +19252,9 @@ view Chat History on Snapchat
 View classic Flash content at https://archive.org/details/softwarelibrary_flash
 View Details on your entry
 View graphs of your distance totals
-view Instagram Stories on a Computer
 view Messages on Snapchat
 view Phone Call History on Google Voice
 view Reddit Subscriptions on Android
-view Saved Instagram Posts
 view Saved Passwords on a Mac
 view Source Code in Firefox
 view the Character Count for Texts on an iPhone
@@ -19598,7 +19428,6 @@ watch Facebook Live Video Broadcasts
 watch Films on Kodi
 watch for lights on the motherboard, and listen for beep codes
 watch Less TV
-watch Live on Instagram
 watch Movies and TV Online for Free
 watch Movies on a PlayStation 3
 watch Movies Using Telnet

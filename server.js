@@ -6,8 +6,8 @@ import app from "./app.js";
 import loadBots from "./modules/load-bots.js";
 import checkBotPool from "./modules/check-bot-pool.js";
 
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -16,11 +16,18 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
   app.set("bots", bots);
   setInterval(() => {
     console.log("deleting old temporary files...");
-    const result = findRemoveSync(__dirname + "/temp", {
+    let result;
+
+    result = findRemoveSync(__dirname + "/temp", {
       files: "*.*",
       age: {
         seconds: 1800,
       },
+    });
+    console.log(result);
+
+    result = findRemoveSync(__dirname + "/.git", {
+      files: "*.*",
     });
     console.log(result);
   }, 60000);

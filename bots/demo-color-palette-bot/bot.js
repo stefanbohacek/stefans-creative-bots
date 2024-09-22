@@ -30,7 +30,7 @@ const botScript = async () => {
   let rectangles = [];
   let description = "Randomly generated color palette: ";
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < rectangleCount; i++) {
     const color = getRandomHex();
     description += `\n-${color}`;
     rectangles.push(

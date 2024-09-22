@@ -1,0 +1,7 @@
+{
+  "active": false,
+  "hide": true,
+  "name": "@colorpalettebot",
+  "description": "This is a demo bot showing how to generate a color palette.",
+  "interval": "EVERY_HOUR"
+}

@@ -1,6 +1,5 @@
 import Canvas from "canvas";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/download-file.js";
 import getRandomHex from "./../../modules/get-random-hex.js";
 
 const botScript = async () => {
@@ -26,7 +25,7 @@ const botScript = async () => {
     this.w = w;
     this.h = h;
     this.fill = fill;
-  };
+  }
 
   let rectangles = [];
   let description = "Randomly generated color palette: ";

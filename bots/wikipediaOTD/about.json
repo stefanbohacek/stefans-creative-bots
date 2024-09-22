@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@wikipediaOTD",
+  "description": "Events that happened on this day in history, from Wikipedia.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://botsin.space/@wikipediaOTD"
+    }   
+  ],
+  "interval": "EVERY_DAY_MORNING"
+}

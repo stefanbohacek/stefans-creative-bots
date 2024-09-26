@@ -22,7 +22,8 @@ const botScript = async () => {
       });
 
       const webcam = randomFromArray(webcams);
-      const status = `${webcam.name}: ${webcam.url}\n\n${webcam.tags}`;
+      // const status = `${webcam.name}: ${webcam.url}\n\n${webcam.tags}`;
+      const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
 
       mastodon.post(
         {

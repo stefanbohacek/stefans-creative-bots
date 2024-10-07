@@ -4,7 +4,7 @@
     "platform": "Android",
     "github_repo": "mastodon/mastodon-android",
     "app_download": "https://play.google.com/store/apps/details?id=org.joinmastodon.android",
-    "current_version": "v2.6.1"
+    "current_version": "v2.7.2"
   },
   {
     "app": "Mastodon for iOS",

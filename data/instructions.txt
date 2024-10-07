@@ -377,7 +377,6 @@ adopt a Child in Skyrim
 advertise on Groupon
 After 9 AM the next day, come back and tap the photo icon to check out your photos
 After 9 AM the next day, tap the photo icon to view your developed photo
-age Beef
 age Cheese
 age Copper
 age Metal
@@ -586,7 +585,6 @@ bake a Cake on a Grill
 bake a Cake Using a Jiko
 bake Acorn Squash
 bake Camembert
-bake Codfish
 bake Cookies on Your Car Dashboard
 bake Cookies Without Butter
 bake Easy Oven Noodles
@@ -796,8 +794,6 @@ bluejack
 bluff in Poker
 boil an Egg So That It Peels Easily
 boil Clams
-boil Corned Beef
-boil Fish
 boil Gammon
 boil Lobsters
 boil Moringa Leaves
@@ -837,7 +833,6 @@ braid a Horse's Mane
 braid a Spiral Bracelet
 braid Leather
 braid Your Bangs
-braise Beef
 braise Lettuce
 break a Beer Bottle With Your Bare Hands
 Break cocoa pods for beans
@@ -1156,7 +1151,6 @@ cat Proof Your Toilet
 catch a Baseball
 catch a Guinea Pig
 catch a Spider
-Catch fish
 catch Mewtwo in Pokemon FireRed and LeafGreen
 catch Minnows
 catch Pompano
@@ -1465,7 +1459,6 @@ choose a God (or Gods)
 Choose a good code editor
 Choose a hardware issue
 Choose a hashtag
-choose a Hook for Saltwater Fishing
 Choose a language
 Choose a license and create an SVG package
 Choose a location
@@ -1552,7 +1545,6 @@ Chutdown your Wii, insert your drive, and turn the Wii back on
 Cinq (sank)
 clean a Basketball
 clean a Beauty Blender
-clean a Betta Fish Tank
 clean a Birdcage
 clean a Blackened or Burnt Coffee Pot
 clean a Blood Stain from Car Upholstery
@@ -3858,7 +3850,6 @@ cook Blood Sausage
 cook Chole
 cook Dinuguan
 cook Escarole and Bean Soup
-cook Fish Escabeche
 cook Freekeh
 cook Grouper
 cook Ham Steak
@@ -3871,7 +3862,6 @@ cook Picanha
 cook Pigar Pigar
 cook Pininyahang Manok
 cook Quail
-cook Rupchanda Fish
 cook Salmon Fillet
 cook Salted Cod
 cook Samp
@@ -3978,7 +3968,6 @@ Craft a bow
 Craft a bundle of sticks
 Craft a crafting table
 Craft a farm plot from 8 wood, 10 rotting flesh, 5 nitrate powder, and 25 clay soil
-Craft a fishing rod
 Craft a helmet, chestplate, leg pieces, and boots
 Craft an Eye of Ender from the blaze powder and Ender Pearl using a crafting table
 Craft blaze powder from the blaze rod using a crafting table
@@ -4191,13 +4180,11 @@ create an Invader Zim Gir Hoodie
 create an Online Survey with SurveyMonkey
 Create an Organization Administrator account
 Create an output directory
-create an Undergravel Filter for Your Fishtank
 create an Unturned Server
 create and Hide a Geocache
 Create and save the launch file
 Create and use checklists on any device
 Create and validate an account
-create Aquariums So Lizards and Fish Can Coexist
 create Bold Lips That Will Last
 Create business or organizational logos that work for the web and print
 create Chainmail from Pop Tabs
@@ -4322,7 +4309,6 @@ culture Microworms
 curdle Milk
 cure a Cold Fast
 cure Concrete
-cure Flukes in Goldfish
 cure Jock Itch
 cure Lycanthropy in Skyrim
 cure Olives
@@ -4429,7 +4415,6 @@ cut Circles in Wood
 cut Coil Springs
 cut Concrete
 cut Copper Pipe
-cut Corned Beef
 cut Corner Trim
 cut Corrugated Metal
 cut Coving
@@ -4801,7 +4786,6 @@ do 50s Hair
 do a 2 Card Monte Card Trick
 Do a disk cleanup
 do a Dotted Underline in Word
-do a Fishless Cycle
 do a Five Minute Sports Hairstyle
 do a Flat Top
 do a Flat Twist
@@ -5241,7 +5225,6 @@ Drag your finger on the screen to draw
 Drag your finger to the accent
 Drag your recording to a sharing platform like Google Drive, Dropbox, or similar
 drain Cauliflower Ear
-drain Ground Beef
 drape a Dress
 draw 3D Letters
 draw a Basketball
@@ -5256,7 +5239,6 @@ draw a Cute Kawaii Face (Girl)
 draw a Cute Maltese Dog Face
 draw a Dog Face
 draw a Fire Type Pokemon
-draw a Fish
 draw a Football Helmet
 draw a Ford Mustang
 draw a Hexagonal Prism
@@ -5293,7 +5275,6 @@ draw an Impossible Cube
 Draw and write on the image
 draw Anime Women
 draw Basic Human Figures
-draw Blood from an Adult Fish
 draw Bubble Numbers
 draw Byakugan
 draw Calvin and Hobbes
@@ -5357,7 +5338,6 @@ Earn emeralds
 Earn Honey Gold by shopping at participating retailers
 eat
 eat a Banana
-eat a Crawfish
 eat a Cupcake
 eat a Donut
 eat a Fig
@@ -6108,7 +6088,6 @@ Fill out your profile
 fill Salt and Pepper Shakers
 Fill the buckets with waters
 Fill the remaining squares with planks
-fillet a Fish
 fillet a Mackerel
 fillet a Perch
 fillet Salmon
@@ -6274,11 +6253,6 @@ Finish and save your movie
 finish Drywall
 Finish the game and play again if you'd like
 Finish the install and reboot
-fish for Alligator Gar
-fish for Flounder
-fish from a Kayak
-fish Spoons
-fish Wires Through a Conduit or Pipe
 fit a Backpack
 fit a Bath Panel
 fit a Bed Headboard
@@ -6360,7 +6334,6 @@ fold an Origami Frog
 fold an Origami Sail Boat
 fold an Origami Squirrel
 fold an Origami Water Lily
-fold and Bake Fish in Parchment Paper
 fold Curtains That Are Too Long
 fold Money Into a Flower
 fold Napkins for Christmas
@@ -6729,7 +6702,6 @@ go Back to a Previous Version of iOS on an iPhone
 Go back to the pivot table tab
 go Back Using the Command Prompt
 Go black and white for a minimalist look
-Go fishing
 Go neofuturistic with a neon theme
 go slowly all the way round the outside
 Go The Ratway and defeat 5 bandits
@@ -6889,7 +6861,6 @@ handle a Tire Blowout While Riding a Motorcycle
 handle Awkward Friend Requests on Facebook
 hang a Christmas Tree Upside Down
 hang a Dartboard
-hang a Decorative Fishnet
 hang a Door Mirror
 hang a Garland
 hang a Gate
@@ -7289,7 +7260,6 @@ increase Your Chances of Winning a Freestyle Swimming Race
 Increase your distance to the maximum
 increase Your eBay Selling Limit
 Increase your elevation
-Increase your fishing streak
 increase Your Skills and Attributes in Mount and Blade
 increase Your Snapchat Score Fast
 increase Your TikTok Followers
@@ -7481,7 +7451,6 @@ install a Range Hood
 install a Remote Starter in a Car
 install a Residential Telephone Jack
 install a Ring Doorbell
-install a Rocketfish TV Mount
 Install a rooted Bluestacks emulator
 install a SATA Drive
 install a Sata Hard Drive to an Old Motherboard With Ide Ports Only
@@ -8456,7 +8425,6 @@ maintain a Generator
 maintain a Greenhouse
 Maintain a high product ranking
 maintain a Hydroponic Nutrient Reservoir
-maintain a Jellyfish Tank
 maintain a Lawn Mower
 maintain a Long Distance Friendship with Your Best Friend
 maintain a Mountain Bike
@@ -8790,7 +8758,6 @@ make a Cotton Candy Martini
 make a Coupon Book for Tasks
 make a Cow Costume
 make a Crate Divider
-make a Crawfish Trap
 make a Creme Blush
 make a Crepe Paper Bow
 make a Cribbage Board
@@ -8925,7 +8892,6 @@ make a Fidget Spinner
 make a Fire Breathing Dragon Cake
 make a Fire to Survive
 make a Firecracker
-make a Fish Trap
 make a Fitted Sheet
 make a Flat Chest Beautiful
 make a Flat White Coffee
@@ -8977,7 +8943,6 @@ make a Hair Puff
 make a Ham Panini on a George Foreman Grill
 make a Hamster Playground
 make a Hand Mask
-make a Handmade Fishing Net
 make a Hanging Rope Shelf
 make a Harley Quinn Costume
 make a Harry Potter Scarf
@@ -9189,7 +9154,6 @@ make a Quote Book
 make a Rabbit Cage
 make a Ragdoll Wig
 make a Rain Barrel
-make a Rainbow Loom Fishtail
 make a Rainbow Rose
 make a Recipe Binder
 make a Rectangular Prism
@@ -9282,7 +9246,6 @@ make a Topsy Turvy Cake
 make a Tornado Survival Kit
 make a Tortilla Cheese Roll Up
 make a Tortillon
-make a Traditional Corned Beef Pie
 make a Traditional Tiramisu
 make a Translation Tessellation
 make a Travel Brochure
@@ -9414,7 +9377,6 @@ make an Infinity Scarf
 make an Inflatable Cube Out of Paper
 make an Inside Out Cheeseburger
 make an Intranet
-make an Inverted Fishtail Bracelet from Rainbow Loom
 make an Invisible Ink Message
 make an iPhone Louder in Headphones
 make an IR Blaster for Tivo
@@ -9476,7 +9438,6 @@ make Artificial Flowers
 make Ash Soap
 make Aspirin if You're Lost in the Woods
 make Atholl Brose
-make Attraction Juice for Fishing
 make Au Jus
 make Audio File on Computer
 make Ausuki (Lithuanian Christmas or Easter Cookies)
@@ -9538,11 +9499,6 @@ make Bean Soup
 make Bechamel Sauce
 make Bed Bugs Come Out of Hiding
 make Bedspreads
-make Beef Biryani
-make Beef Gravy
-make Beef Jerky
-make Beef Jerky in the Oven
-make Beef Stew
 make Beer Can Christmas Ornaments
 make Beer Labels
 make Beer Popsicles
@@ -9720,7 +9676,6 @@ make Cat Jungle Gyms and Playgrounds
 make Cat Kibble
 make Cat Litter at Home
 make Cat Toys out of Common Household Items
-make Catfish Bait
 make Catnip Filled Sock Toys
 make Cauliflower Bread
 make Cauliflower Cheese
@@ -10081,11 +10036,6 @@ make Fire
 make Fire Crackers from Party Poppers
 make Fire Without Matches or a Lighter
 make Firelighters
-make Fish and Chips
-make Fish Cakes
-make Fish Fillets Without Oil
-make Fish Rolls
-make Fishbowl Slime
 make Fizzy Lemonade
 make Flan
 make Flash Cards
@@ -10243,7 +10193,6 @@ make Green
 make Green Popcorn
 make Green Tea
 make Grilled Mushrooms in Foil Packets
-make Ground Beef Tacos
 make Guava Juice
 make Guinea Pig Granola Bars
 make Gum Paste
@@ -10398,7 +10347,6 @@ make Isis Wings
 make Island Pineapple Coconut Jello Shots
 make It Rain Money
 Make it the desired size
-make Italian Beef with Italian Dressing
 make Italian Ice
 make Italian Mushroom Soup
 make Italian Peasant Soup
@@ -10730,7 +10678,6 @@ make Pancit
 make Paneer (Indian Cheese)
 make Pani Puri
 make Panko Bread Crumbs
-make Panko Breaded Fish
 make Panko Fried Shrimp
 make Pap in the Microwave
 make Papaya Salad
@@ -10874,7 +10821,6 @@ make Pyrethrum Garden Spray
 make Quick and Tasty Moonshine Whiskey
 make Quick Easy Cupcakes
 make Quick Vampire Fangs
-make Quinoa Crusted Fish
 make Quinoa Lasagna
 make Radish Juice
 make Rainbow Fruit Salad
@@ -11399,7 +11345,6 @@ make Wood Flexible
 make Wood Pellets
 make Wood Signs
 make Wooden Beads
-make Wooden Fishing Lures
 make Wooden Gears
 make Wooden Rings
 make Wool Dreads
@@ -11541,7 +11486,6 @@ map for Garry's Mod With Source SDK
 map Lash Extensions
 march
 marinate a Pot Roast
-marinate Beef
 marinate Salmon
 mark a Facebook Messenger Conversation As Spam
 mark All Emails As Read iPhone
@@ -13093,7 +13037,6 @@ pickle
 pickle Beetroot
 pickle Calamari
 pickle Cauliflower
-pickle Fish
 pickle Green Tomatoes
 pickle Okra
 pickle Quail Eggs
@@ -13455,7 +13398,6 @@ Plug-in the USB cable from your capture card to your Chromebook
 plump Raisins
 poach an Egg
 poach an Egg Using a Microwave
-poach Fish in Milk
 poach Pears
 Point the camera at an object
 Point the dish toward your satellite
@@ -13560,8 +13502,6 @@ prepare Cumin Tea
 prepare Eggplant
 prepare Exterior Wood for Painting
 prepare Fake Formula for Your Reborn Baby Doll
-prepare Fish for Fish Tacos
-prepare Fish for Sushi
 prepare For a Long Distance Run
 prepare for a Sports Tournament
 prepare for a Trip to Mexico
@@ -13569,7 +13509,6 @@ prepare for a Volcanic Eruption
 prepare for an Earthquake
 prepare For and Receive Acupuncture
 prepare for Girls Basketball
-prepare Fruits and Vegetables for Goldfish to Eat
 prepare Notes for Public Speaking
 prepare Okra
 prepare Oyster Mushrooms
@@ -13940,7 +13879,6 @@ prune Wisteria
 Publish to your story Tap Your Story
 Publish your game
 Publish your podcast
-pull a Fish Hook from Your Finger
 Pull at the loops and straighten the bow tie
 Pull down the notification bar
 Pull down the notification panel
@@ -14031,7 +13969,6 @@ put Wheels on a Cooler
 Put your headset into pairing mode
 Put your Jaybird headphones into pairing mode
 Put your phone in pairing mode
-quarantine Freshwater Fish
 Quatre (katr)
 Quickly release both buttons
 quiet Noisy Pipes
@@ -16299,7 +16236,6 @@ Select your Word document
 Select ZIP/RAR File
 Select Zoom Out
 Select/deselect items
-selectively Breed Betta Fish
 self Pierce an Industrial
 self Publish a Magazine
 sell a Book Idea to a Publisher
@@ -16679,7 +16615,6 @@ show the Zoom Controller on an iPhone
 show Touch Keyboard Button on Taskbar in Windows 10
 show Your Pigs
 shower a Puppy
-shred Beef
 shred Carrots for a Cake
 shred Lettuce and Cabbage, Restaurant Style
 shred Zucchini
@@ -17022,7 +16957,6 @@ start a Homemade Hydroponic Garden
 start a Housekeeping Business
 start a Hydroponic Garden in Your Apartment
 start a Janitorial Service
-start a Jellyfish Tank
 start a Kids Band
 Start a live stream on YouTube or Twitch
 start a Locksmith Business
@@ -17039,7 +16973,6 @@ start a Pawn Shop
 start a Pizza Business
 start a Record Player
 start a Room in Clubhouse
-start a Siphon (Fish Tank)
 start a SMPS Without a Motherboard
 start a Solar Business
 Start a song
@@ -17141,7 +17074,6 @@ steam Clean a Mattress
 steam Corn
 steam Crab
 steam Crab Legs
-steam Fish in a Steamer
 steam Green Beans
 steam Kale
 steam Mussels
@@ -17255,7 +17187,6 @@ store Egg Yolks
 store Eggplant
 store Eggs
 store Feta Cheese
-store Fish Without a Fridge
 store Flaxseed
 store Fresh Basil
 store Fresh Basil in Olive Oil
@@ -17658,7 +17589,6 @@ take Care of a Parakeet
 take Care of a Pet Skunk
 take Care of a Pregnant Rabbit
 take Care of a Reborn Baby Doll
-take Care of a Siamese Fighting Fish
 take Care of a Wandering Jew Plant
 take Care of an Aquatic Frog
 take Care of an LOL Surprise Toy
@@ -17666,7 +17596,6 @@ take Care of Bamboo
 take Care of Black Girls' Hair
 take Care of Ducklings
 take Care of Fiddler Crabs
-take Care of Goldfish
 take Care of Infection in Newly Pierced Ears
 take Care of Kittens
 take Care of Lucky Bamboo
@@ -17677,7 +17606,6 @@ take Care of Tiger Salamanders
 take Care of Your Aging Cat
 take Care of Your American Girl Doll's Hair
 take Care of Your Cricket Bat
-take Care of Your Fish
 take Care of Your Furby
 take Care of Your Pokemon Plush
 take Care of Your Stuffed Animal
@@ -17767,7 +17695,6 @@ teach Kids to Garden
 teach Personal Hygiene
 teach Subtraction
 teach T-Ball
-teach Your Betta Fish to Swim Through a Hoop
 teach Your Child to Recognize the Letters of the Alphabet
 teach Your Children to Do Laundry
 teach Your Dog to Focus
@@ -17785,7 +17712,6 @@ tell if a Discord Server Was Deleted
 tell if a Mango Is Ripe
 tell if a Ruby is Real
 tell if a Wall is Load Bearing
-tell if Corned Beef Is Cooked
 tell if Gold Is Real
 tell if My Gpu Is Dying
 tell if One Leg Is Shorter
@@ -17800,7 +17726,6 @@ tell if Your Computer Is Infected by a Trojan Horse
 tell if Your Dog Has Fleas
 tell if Your Eggs Are Fresh
 tell if Your Eyes Are Going Bad
-tell if Your Fish Is Having Babies
 tell if Your Home Has Code Violations
 tell if Your iPhone is Too Old to Update
 tell if Your Power Supply or Motherboard Is Bad
@@ -17891,7 +17816,6 @@ The values in the primary key can never change
 theater Hop
 There are some apps available that may help you find someone's Last Seen status, but the reviews are mixed
 There are too many splitters set up
-thicken Beef Stew
 thicken Chili
 thicken Fruit Juice with Cornstarch
 thicken Ice Cream
@@ -19113,7 +19037,6 @@ Use the center key to make selections
 Use the cobblestone blocks to expand your island and craft other items
 Use the Color menu to change the note color
 Use the color picker window to pick a primary color
-Use the combination Snake, Snake, Fish to solve the pillar puzzle and open the gate
 Use the crop tool to remove excess background around the subject of the image
 Use the Device Manager in the Control Panel to check for any device errors
 Use the drop-down menu at the top to select a folder containing your DWG file

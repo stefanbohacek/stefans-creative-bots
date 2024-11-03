@@ -1,57 +1,45 @@
-import Canvas from "canvas";
-import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/download-file.js";
-import getRandomHex from "./../../modules/get-random-hex.js";
+import rainGenerator from "./../../modules/generators/rain.js";
+import gtsClient from "./../../modules/GoToSocial/client.js";
+import randomFromArray from "./../../modules/random-from-array.js";
+
+console.log(process.env.GTS_RAIN_BOT_TOKEN,  process.env.GTS_API_URL)
 
 const botScript = async () => {
-  const mastodon = new mastodonClient({
-    access_token: process.env.MASTODON_TEST_TOKEN,
-    api_url: process.env.BOTSINSPACE_API_URL,
+  const gotosocial = new gtsClient({
+    access_token: process.env.GTS_RAIN_BOT_TOKEN,
+    api_url: process.env.GTS_API_URL,
   });
 
-  /*
-  Based on https://stackoverflow.com/questions/15220003/html5-javascript-and-drawing-multiple-rectangles-in-a-canvas
-  */
+  const status = randomFromArray([
+      "🌧️ #rain #weather #gif",
+      "🌧️🌧️ #rain #weather #gif",
+      "🌧️🌧️🌧️ #rain #weather #gif",
+    ]),
+    options = {
+      width: 640,
+      height: 480,
+    };
+  
 
-  const width = 800;
-  const height = 600;
-  const rectangleCount = 5;
-  const rectangleHeight = width / rectangleCount;
-  const canvas = Canvas.createCanvas(width, height);
-  const context = canvas.getContext("2d");
-
-  function Shape(x, y, w, h, fill) {
-    this.x = x;
-    this.y = y;
-    this.w = w;
-    this.h = h;
-    this.fill = fill;
+  // rainGenerator(options, (err, image) => {
+  //   mastodon.postImage({
+  //     status,
+  //     image,
+  //     alt_text: "Animated GIF of rain.",
+  //   });
+  // });
+  
+  let postOptions = {
+    status,
+    visibility: "public"
+    // poll: {
+    //   options: options,
+    //   expires_in: 86400,
+    // },
   };
 
-  let rectangles = [];
-  let description = "Randomly generated color palette: ";
-
-  for (let i = 0; i < 5; i++) {
-    const color = getRandomHex();
-    description += `\n-${color}`;
-    rectangles.push(
-      new Shape(0, i * rectangleHeight, width, rectangleHeight, color)
-    );
-  }
-
-  for (let i in rectangles) {
-    const rectangle = rectangles[i];
-    context.fillStyle = rectangle.fill;
-    context.fillRect(rectangle.x, rectangle.y, rectangle.w, rectangle.h);
-  }
-
-  const imageData = canvas.toBuffer().toString("base64");
-
-  mastodon.postImage({
-    status: "New color palette!",
-    image: imageData,
-    alt_text: description,
-  });
+  const post = await gotosocial.post(postOptions);
+  console.log("posted", post);
 };
 
 export default botScript;

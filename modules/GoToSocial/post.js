@@ -1,41 +1,52 @@
+import fetch from "node-fetch";
 import splitText from "./../split-text.js";
+import sleep from "./../sleep.js";
 
-const post = async (client, options, cb) => {
+const postFn = async (domain, token, options) => {
+  const response = await fetch(`https://${domain}/api/v1/statuses`, {
+    method: "post",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+    body: JSON.stringify(options),
+  });
+
+  const responseData = await response.json();
+  return responseData;
+};
+
+const post = async (domain, token, options) => {
   console.log("posting...", options);
 
   let { status } = options;
   let splitStatus = false;
   let statuses;
+  let responses = [];
 
   if (status.length > 500) {
     splitStatus = true;
 
     statuses = splitText(status, 490);
 
-    // console.log({ statuses });
-
     if (statuses.length > 1) {
       options.status = `${statuses.shift()}…`;
     }
   }
 
-  client.post("statuses", options, async (err, data, response) => {
-    if (err) {
-      console.log("mastodon.post error", err);
-    } else {
-      console.log("posted", data.url);
-    }
+  const responseData = await postFn(domain, token, options);
 
-    if (splitStatus) {
-      options.status = statuses.join("");
-      options.in_reply_to_id = data.id;
-      post(client, options, cb);
-    } else {
-      if (cb) {
-        cb(err, data);
-      }
-    }
-  });
+  responses.push(responseData);
+
+  if (splitStatus) {
+    options.status = statuses.join("");
+    options.in_reply_to_id = responseData.id;
+    await sleep(1000);
+    await post(domain, token, options);
+  } else {
+    return responses;
+  }
 };
 
 export default post;

@@ -1,22 +1,22 @@
-import fetch from 'node-fetch';
+import postFn from "./post.js";
+import uploadImageFn from "./uploadImage.js";
 
-export default class GoToSocialClient {
+class GoToSocialClient {
   constructor(options) {
-    this.api_url = options.api_url;
+    this.domain = options.domain;
     this.token = options.access_token;
   }
 
   async post(options) {
-    const response = await fetch(`${this.api_url}statuses`, {
-      method: "post",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + this.token,
-      },
-      body: JSON.stringify(options),
-    });
-    const responseData = await response.json();
-    return responseData;
+    return await postFn(this.domain, this.token, options);
+  }
+
+  async postImage(options) {
+    const imageData = await uploadImageFn(this.domain, this.token, options.file, options.description);
+    console.log("image uploaded", imageData);
+    options.media_ids = [imageData.id];
+    return await postFn(this.domain, this.token, options);
   }
 }
+
+export default GoToSocialClient;

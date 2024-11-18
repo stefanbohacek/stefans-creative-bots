@@ -1,6 +1,7 @@
 import express from "express";
 import moment from "moment";
 import getRandomRange from "./../modules/get-random-range.js";
+import capitalizeFirstLetter from "./../modules/capitalize-first-letter.js";
 
 const router = express.Router();
 
@@ -16,9 +17,9 @@ router.get("/", (req, res) => {
     bots.forEach((bot) => {
       if (bot.cronjob) {
         try {
-          bot.about.next_run = moment(bot.cronjob.nextDates().ts).fromNow();
+          bot.about.next_run = capitalizeFirstLetter(moment(bot.cronjob.nextDates().ts).fromNow());
           if (bot.cronjob.lastExecution) {
-            bot.about.last_run = moment(bot.cronjob.lastExecution).fromNow();
+            bot.about.last_run = capitalizeFirstLetter(moment(bot.cronjob.lastExecution).fromNow());
           }
         } catch (err) {
           console.log(err);

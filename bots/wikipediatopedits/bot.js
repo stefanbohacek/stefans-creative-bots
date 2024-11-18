@@ -8,7 +8,7 @@ const botScript = async () => {
     try {
       const mastodon = new mastodonClient({
         access_token: process.env.WIKIPEDIATOPEDITS_BOT_ACCESS_TOKEN_SECRET,
-        api_url: process.env.BOTSINSPACE_API_URL,
+        api_url: process.env.MASTODON_API_URL,
       });
 
 

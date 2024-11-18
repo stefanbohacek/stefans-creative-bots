@@ -9,7 +9,7 @@ const botScript = async () => {
     try {
       const mastodon = new mastodonClient({
         access_token: process.env.YEAR_BOT_MASTODON_TOKEN,
-        api_url: process.env.BOTSINSPACE_API_URL,
+        api_url: process.env.MASTODON_API_URL,
       });
 
       const days = isLeapYear() ? 366 : 365;

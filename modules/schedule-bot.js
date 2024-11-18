@@ -8,6 +8,7 @@ const scheduleBot = async (bot, app) => {
   const intervalBots = [];
 
   if (bot.about.reply) {
+    console.log("setting up replies for ", bot.name);
     const { reply, clients } = await import(bot.script_path);
 
     if (clients.mastodon) {

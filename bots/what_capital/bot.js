@@ -21,7 +21,7 @@ let savedData = {
 
 const mastodon = new mastodonClient({
   access_token: process.env.WHAT_CAPITAL_MASTODON_ACCESS_TOKEN_SECRET,
-  api_url: process.env.BOTSINSPACE_API_URL,
+  api_url: process.env.MASTODON_API_URL,
 });
 
 const clients = { mastodon };

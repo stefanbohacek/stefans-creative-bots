@@ -44,7 +44,7 @@ const botScript = async () => {
 
   const mastodon = new mastodonClient({
     access_token: process.env.COMPUTERS_BOT_MASTODON_ACCESS_TOKEN,
-    api_url: process.env.BOTSINSPACE_API_URL,
+    api_url: process.env.MASTODON_API_URL,
   });
 
   mastodon.postImage({

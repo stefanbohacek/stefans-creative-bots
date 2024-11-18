@@ -18,7 +18,7 @@ const botScript = async () => {
     try {
       const mastodon = new mastodonClient({
         access_token: process.env.AFRICAN_WILDLIFE_ACCESS_TOKEN_SECRET,
-        api_url: process.env.BOTSINSPACE_API_URL,
+        api_url: process.env.MASTODON_API_URL,
       });
 
       const webcam = randomFromArray(webcams);

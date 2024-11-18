@@ -11,7 +11,7 @@ const botScript = async () => {
     try {
       const mastodon = new mastodonClient({
         access_token: process.env.HAPPY_NAME_DAY_BOT_MASTODON_TOKEN,
-        api_url: process.env.BOTSINSPACE_API_URL,
+        api_url: process.env.MASTODON_API_URL,
       });
 
       const resp = await fetch("https://nameday.abalin.net/api/V1/today");

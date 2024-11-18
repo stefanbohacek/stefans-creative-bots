@@ -20,7 +20,7 @@ let savedData = {
 };
 
 const mastodon = new mastodonClient({
-  access_token: process.env.WHAT_CAPITAL_MASTODON_ACCESS_TOKEN_SECRET,
+  access_token: process.env.WHAT_CAPITAL_BOT_MASTODON_ACCESS_TOKEN_SECRET,
   api_url: process.env.MASTODON_API_URL,
 });
 

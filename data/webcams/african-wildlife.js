@@ -117,19 +117,19 @@ export default [
     url: "https://explore.org/livecams/african-wildlife/african-safari-camera",
     youtube_url: "https://www.youtube.com/watch?v=QkWGGhtTA4k",
     tags: '#africa #wildlife #LaikipiaCounty #kenya #live #webcam'
-  },
-  {
-    "name": "Care for Wild Rhino Sanctuary Outdoor Cam, Nelspruit, South Africa",
-    "description": "A live view from a webcam showing the outside area of a rhino enclosure.",
-    url: "https://explore.org/livecams/african-wildlife/rino-cam-outside",
-    youtube_url: "https://www.youtube.com/watch?v=O_YuSZ7r9oM",
-    tags: '#africa #wildlife #nelspruit, #SouthAfrica #sanctuary #rhinos #live #webcam'
-  },
-  {
-    "name": "Care for Wild Rhino Sanctuary Indoor Cam, Nelspruit, South Africa",
-    "description": "A live view from a webcam showing the inside area of a rhino sanctuary.",
-    url: "https://explore.org/livecams/african-wildlife/rino-cam-inside",
-    youtube_url: "https://www.youtube.com/watch?v=7MPm_fQJAhk",
-    tags: '#africa #wildlife #nelspruit, #SouthAfrica #sanctuary #rhinos #live #webcam'
   }
+  // {
+  //   "name": "Care for Wild Rhino Sanctuary Outdoor Cam, Nelspruit, South Africa",
+  //   "description": "A live view from a webcam showing the outside area of a rhino enclosure.",
+  //   url: "https://explore.org/livecams/african-wildlife/rino-cam-outside",
+  //   youtube_url: "https://www.youtube.com/watch?v=O_YuSZ7r9oM",
+  //   tags: '#africa #wildlife #nelspruit, #SouthAfrica #sanctuary #rhinos #live #webcam'
+  // },
+  // {
+  //   "name": "Care for Wild Rhino Sanctuary Indoor Cam, Nelspruit, South Africa",
+  //   "description": "A live view from a webcam showing the inside area of a rhino sanctuary.",
+  //   url: "https://explore.org/livecams/african-wildlife/rino-cam-inside",
+  //   youtube_url: "https://www.youtube.com/watch?v=7MPm_fQJAhk",
+  //   tags: '#africa #wildlife #nelspruit, #SouthAfrica #sanctuary #rhinos #live #webcam'
+  // }
 ];

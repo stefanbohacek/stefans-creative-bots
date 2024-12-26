@@ -2,7 +2,7 @@ export default [
   {
     "title": "Brooklyn Bridge",
     description:
-      "This webcam usually shows a view of skyscrapers with Brooklyn Bridge in the background.",
+      "This webcam usually shows the New York city skyline with skyscrapers and the Brooklyn Bridge and the Manhattan Bridge in the center of the view.",
     link: "https://www.earthcam.com/usa/newyork/brooklynbridge/?cam=gzcchd",
     url: "https://www.earthcam.com/cams/includes/image.php?img=dTOIb7mOrFEv1Jq3C%2FtGng&logo=0&playbutton=0&s=1",
     latitude: 40.7061,

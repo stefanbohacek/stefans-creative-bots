@@ -5,7 +5,6 @@ import getWeather from "./../../modules/get-weather.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import { stat } from "fs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -21,10 +20,11 @@ const botScript = async () => {
       });
 
       const webcam = {
-        url: "https://mountaingenius.org/webcam-everest/",
+        // url: "https://mountaingenius.org/webcam-everest/",
+        // element: ".elementor-element.elementor-element-51f14c4.elementor-widget.elementor-widget-html .elementor-widget-container img",
+        url: "https://www.windy.com/-Webcams-Khumjung-Hotel-Everest-View/webcams/1652187391?27.820,86.682,5",
         img_url: "https://images-webcams.windy.com/91/1652187391/current/full/1652187391.jpg",
         description: "A wide view of several mountains, from left:\n\n- Taboche (6,500 meters/21,325 feet)\n- Mount Everest (8,848 meters/29,032 feet)\n- Lhotse (8,516 meters/27,939 feet)\n- Ama Dablam (6,814 meters/22,355 feet)",
-        // element: ".elementor-element.elementor-element-51f14c4.elementor-widget.elementor-widget-html .elementor-widget-container img",
         lat: 27.988121,
         lon: 86.924973
       };
@@ -48,7 +48,7 @@ const botScript = async () => {
         }
       }
 
-      status += `#MountEverest #MtEverest #mountain #live #webcam`;
+      status += `via ${webcam.url}\n\n#MountEverest #MtEverest #mountain #live #webcam`;
 
       mastodon.postImage({
         status,

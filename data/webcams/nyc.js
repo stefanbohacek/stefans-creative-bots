@@ -1,6 +1,6 @@
 export default [
   {
-    "title": "Brooklyn Bridge",
+    title: "Brooklyn Bridge",
     description:
       "This webcam usually shows the New York city skyline with skyscrapers and the Brooklyn Bridge and the Manhattan Bridge in the center of the view.",
     link: "https://www.earthcam.com/usa/newyork/brooklynbridge/?cam=gzcchd",
@@ -18,7 +18,7 @@ export default [
   //   longitude: -74.0445,
   // },
   {
-    "title": "World Trade Center",
+    title: "World Trade Center",
     description:
       "This webcam usually shows a view of the New York skyline with the World Trade Center skyscraper showing prominently.",
     link: "https://www.earthcam.com/usa/newyork/skyline/?cam=skyline_g",
@@ -27,14 +27,31 @@ export default [
     longitude: -74.0127,
   },
   {
-    "title": "Statue of Liberty",
-    description:
-      "This webcam usually shows a view of the Statue of Liberty in New York.",
-    link: "https://www.earthcam.com/usa/newyork/statueofliberty/?cam=liberty_str",
-    url: "https://www.earthcam.com/cams/includes/image.php?img=0ZBptCfiZkejwMkBr07QRw%3D%3D&logo=0&playbutton=0&s=1",
-    latitude: 40.689247,
-    longitude: -74.044502,
+    title: "30 Rockefeller Plaza",
+    description: "This webcam usually shows a view of the New York skyline.",
+    link: "https://www.earthcam.com/usa/newyork/rockefellercenter/?cam=rockefellerobservatory",
+    url: "https://www.earthcam.com/cams/includes/image.php?img=FxiZuOzKkdq5wr44wir%2FCw%3D%3D&logo=0&playbutton=0&s=1",
+    latitude: 40.7594,
+    longitude: -73.98,
   },
+  {
+    title: "Times Square",
+    description:
+      "This webcam usually shows the pedestrian zone at the Times Square and its iconic billboard screen ads.",
+    link: "https://www.earthcam.com/usa/newyork/timessquare/?cam=tsrobo1",
+    url: "https://www.earthcam.com/cams/includes/image.php?logo=0&playbutton=0&s=1&img=E5a4Ac%2F%2Fll%2Fw6pvn9FVQug%3D%3D",
+    latitude: 40.758616,
+    longitude: -73.984874,
+  },
+  // {
+  //   "title": "Statue of Liberty",
+  //   description:
+  //     "This webcam usually shows a view of the Statue of Liberty in New York.",
+  //   link: "https://www.earthcam.com/usa/newyork/statueofliberty/?cam=liberty_str",
+  //   url: "https://www.earthcam.com/cams/includes/image.php?img=0ZBptCfiZkejwMkBr07QRw%3D%3D&logo=0&playbutton=0&s=1",
+  //   latitude: 40.689247,
+  //   longitude: -74.044502,
+  // },
   // {
   //   "title": "Statue of Liberty HarborCam",
   //   description:
@@ -44,14 +61,6 @@ export default [
   //   latitude: 40.689247,
   //   longitude: -74.044502,
   // },
-  {
-    "title": "30 Rockefeller Plaza",
-    "description": "This webcam usually shows a view of the New York skyline.",
-    link: "https://www.earthcam.com/usa/newyork/rockefellercenter/?cam=rockefellerobservatory",
-    url: "https://www.earthcam.com/cams/includes/image.php?img=FxiZuOzKkdq5wr44wir%2FCw%3D%3D&logo=0&playbutton=0&s=1",
-    latitude: 40.7594,
-    longitude: -73.98,
-  },
   //  {
   //    "title": "New York › South-West",
   //    description:

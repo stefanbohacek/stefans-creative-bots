@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@mteverest",
+  "description": "Views from the highest webcam in the world, pointed at Mount Everest.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@mteverest"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

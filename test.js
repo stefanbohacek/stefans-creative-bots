@@ -4,6 +4,6 @@ dotenv.config();
 // import bot from "./bots/trains/bot.js";
 // import bot from './bots/wikipediatopedits/bot.js';
 // import bot from "./bots/ignoreallpreviousinstructions/bot.js";
-import bot from "./bots/southpoleviews/bot.js";
+import bot from "./bots/mteverest/bot.js";
 
 bot();

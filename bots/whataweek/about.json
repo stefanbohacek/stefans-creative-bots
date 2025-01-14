@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "name": "@whataweek",
+  "description":
+    "What a week, huh?",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@whataweek"
+    }
+  ],
+  "interval": "EVERY_DAY_MORNING"
+}

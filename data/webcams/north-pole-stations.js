@@ -23,12 +23,12 @@ export default [
     description:
       "A low resolution image captured by a webcam overseeing a small peninsula with a few buildings at the front of the view.",
   },
-  {
-    name: "Nome, Alaska, USA",
-    image_url: "https://nomecoc.com/nomecoc.com/Nomecam1/webcam.jpg",
-    url: "https://www.visitnomealaska.com/nome-cam",
-    description: "An ocean view with a few small buildings.",
-  },
+  // {
+  //   name: "Nome, Alaska, USA",
+  //   image_url: "https://nomecoc.com/nomecoc.com/Nomecam1/webcam.jpg",
+  //   url: "https://www.visitnomealaska.com/nome-cam",
+  //   description: "An ocean view with a few small buildings.",
+  // },
   {
     name: "Utqiaġvik (Barrow) Sea Ice Webcam",
     image_url:

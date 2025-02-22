@@ -14,7 +14,11 @@ const botScript = async () => {
   });
 
   const category = randomFromArray(onomatopoeias);
-  const item = randomFromArray(category.data);
+  // const item = randomFromArray(category.data);
+  const item = randomFromArray(
+    category.data.filter((d) => !d.language.includes("Russian"))
+  );
+
   let language,
     sounds = [];
 
@@ -121,8 +125,11 @@ const botScript = async () => {
 
                 let fontSize = 200;
 
-                if (randomSound[action].length > 5){
-                  fontSize = Math.max(75, Math.floor(5/randomSound[action].length * 200));
+                if (randomSound[action].length > 5) {
+                  fontSize = Math.max(
+                    75,
+                    Math.floor((5 / randomSound[action].length) * 200)
+                  );
                 }
 
                 overlayGenerator(

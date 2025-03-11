@@ -1372,7 +1372,7 @@ export default [
       },
       {
         language: ["Hungarian"],
-        hushing: ["pissz", "psszt"],
+        hushing: ["psszt"],
         "pausing or thinking": ["hm", "hmm", "őő"],
       },
       {
@@ -2016,7 +2016,7 @@ export default [
         language: ["Italian"],
         "bee buzzing": ["bzzz", "zumm"],
         "frog croaking": ["cra cra", "cri cri"],
-        "snake hissing": ["pisss"],
+        // "snake hissing": ["pisss"],
       },
       {
         language: ["Japanese"],

@@ -2016,7 +2016,7 @@ export default [
         language: ["Italian"],
         "bee buzzing": ["bzzz", "zumm"],
         "frog croaking": ["cra cra", "cri cri"],
-        // "snake hissing": ["pisss"],
+        "snake hissing": ["psss"],
       },
       {
         language: ["Japanese"],

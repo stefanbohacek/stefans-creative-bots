@@ -34,6 +34,7 @@ const botScript = async () => {
           helloTranslations.shift(); // Remove the table header
 
           if (!err && helloTranslations && helloTranslations.length > 0) {
+            helloTranslations = helloTranslations.filter(tr => !["il", "ru"].includes(tr[0]));
             // /* For testing. */ const randomTranslation = helloTranslations[69];
             const randomTranslation = randomFromArray(helloTranslations);
 

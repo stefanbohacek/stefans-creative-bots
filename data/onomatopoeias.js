@@ -63,7 +63,7 @@ export default [
         swallowing: ["glu glu"],
       },
       {
-        language: ["Chinese", "Cantonese"],
+        language: ["Cantonese"],
         "eating food": ["嗦嗦"],
         swallowing: ["嗗 (gut2, gut4, gut6)"],
       },
@@ -525,7 +525,7 @@ export default [
         yawning: ["hahay"],
       },
       {
-        language: ["Chinese", "Cantonese"],
+        language: ["Cantonese"],
         "heart beating": ["卜卜 (buk4 buk4)"],
         belching: ["oek4 or oet4 [œʔ²¹]"],
         coughing: ["kem4 (kem2)"],
@@ -950,7 +950,7 @@ export default [
         shriek: ["hiii", "crii"],
       },
       {
-        language: ["Chinese", "Cantonese"],
+        language: ["Cantonese"],
         "baby crying": ["哇哇 (waa1 waa1)"],
         scream: ["哎呀 (aai1 jaa3)"],
       },
@@ -1296,7 +1296,7 @@ export default [
         "pausing or thinking": ["ai", "au", "ui", "uix"],
       },
       {
-        language: ["Chinese", "Cantonese"],
+        language: ["Cantonese"],
         hushing: ["殊 (syu4)"],
         "pausing or thinking": ["嗯 (m6", "m3)"],
         stuttering: ["甩甩咳咳 (lak1 lak1 kak1 kak1)"],
@@ -1578,7 +1578,7 @@ export default [
         kiss: ["muà", "muac", "txuic", "xuic"],
       },
       {
-        language: ["Chinese", "Cantonese"],
+        language: ["Cantonese"],
         laughter: ["哈哈 (haa1 haa1)"],
       },
       {
@@ -1914,7 +1914,7 @@ export default [
         "snake hissing": ["sss", "hss"],
       },
       {
-        language: ["Chinese", "Cantonese"],
+        language: ["Cantonese"],
         "bee buzzing": ["嗡嗡嗡 (jung1 jung1 jung1)"],
         "frog croaking": ["呱呱 (gwek4 gwek2)"],
       },
@@ -2191,7 +2191,7 @@ export default [
         "wet strike": ["xap", "xof", "patatxap"],
       },
       {
-        language: ["Chinese", "Cantonese"],
+        language: ["Cantonese"],
         "sharp strike": ["乒鈴嘭唥 (bìhng līng baang làahng)"],
       },
       {

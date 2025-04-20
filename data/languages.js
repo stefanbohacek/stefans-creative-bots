@@ -783,13 +783,13 @@ export default [
     "three_letter": ["es-chl"],
     "number_lcid": ["13322"]
   },
-  {
-    "country": ["China mainland"],
-    "language": ["Cantonese"],
-    "two_letter": ["yue-cn"],
-    "three_letter": ["yue-chn"],
-    "number_lcid": ["4096"]
-  },
+  // {
+  //   "country": ["China mainland"],
+  //   "language": ["Cantonese"],
+  //   "two_letter": ["yue-cn"],
+  //   "three_letter": ["yue-chn"],
+  //   "number_lcid": ["4096"]
+  // },
   {
     "country": ["China mainland"],
     "language": ["Chinese"],

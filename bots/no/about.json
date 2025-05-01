@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@no",
+  "description": "No.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@no"
+    }
+  ],
+  "interval": "EVERY_THREE_HOURS"
+}

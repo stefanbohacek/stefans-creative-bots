@@ -6,9 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node --trace-warnings server.js",
-    "preinstall": "npm install canvas@2.11.2; npm install chartjs-node-canvas@4.1.6; npm install chart.js@3.9.1;rm /app/node_modules/canvas/build/Release/librsvg-2.so.2",
-    "xxx_postinstall": "node node_modules/puppeteer/install.js; pip3 install yt-dlp==2023.7.6; rm /app/node_modules/canvas/build/Release/librsvg-2.so.2",
-    "postinstall": "node node_modules/puppeteer/install.js; pip3 install yt-dlp==2023.7.6; rm /app/node_modules/canvas/build/Release/librsvg-2.so.2"
+    "xxxpreinstall": "npm install canvas@2.11.2; npm install chartjs-node-canvas@4.1.6; npm install chart.js@3.9.1",
+    "xxxpostinstall": "node node_modules/puppeteer/install.js; pip3 install yt-dlp==2023.7.6"
   },
   "dependencies": {
     "base64-stream": "^1.0.0",

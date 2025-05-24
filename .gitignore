@@ -1,7 +1,5 @@
 .env
 node_modules
-tmp/
-temp/
 temp.*
 .pki
 *.jpg

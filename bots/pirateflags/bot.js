@@ -12,7 +12,7 @@ import randomFromArray from "./../../modules/random-from-array.js";
 import getRandomInt from "./../../modules/get-random-int.js";
 
 const botID = "pirateflags";
-const flagUrlBase = "https://stefans-creative-bots.glitch.me";
+const flagUrlBase = "https://bots.stefanbohacek.com";
 
 const makeFlag = async (page) => {
   try {

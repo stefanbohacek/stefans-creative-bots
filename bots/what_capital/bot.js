@@ -54,7 +54,7 @@ const updateScores = (user) => {
 
 const pickNewCapital = async () => {
   const capital = randomFromArray(capitals);
-  const flagUrl = `https://static.stefanbohacek.dev/images/flags/${capital.country.replace(
+  const flagUrl = `https://static.stefanbohacek.com/images/flags/${capital.country.replace(
     / /g,
     "_"
   )}.png`;

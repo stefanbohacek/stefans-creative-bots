@@ -16,7 +16,7 @@ const flagUrlBase = "https://bots.stefanbohacek.com";
 
 const makeFlag = async (page) => {
   try {
-    const url = "https://static.stefanbohacek.dev/pirate-flags/";
+    const url = "https://static.stefanbohacek.com/pirate-flags/";
     console.log(`visiting ${url} ...`);
     await page.goto(url, {
       // waitUntil: "networkidle0",
@@ -39,7 +39,7 @@ const makeFlag = async (page) => {
 
 const waveFlag = async (page) => {
   try {
-    const url = `https://static.stefanbohacek.dev/pirate-flags/flag.html?img=${flagUrlBase}/images/pirate-flag.jpg`;
+    const url = `https://static.stefanbohacek.com/pirate-flags/flag.html?img=${flagUrlBase}/images/pirate-flag.jpg`;
     console.log(`visiting ${url} ...`);
     await page.goto(url, {
       // waitUntil: "networkidle0",

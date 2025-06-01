@@ -32,7 +32,7 @@ const botScript = async () => {
       const status = `${webcam.name}: ${webcam.youtube_url}&t=${videoTimestamp}\n\n${webcam.tags}`;
 
       if ("video_start" in webcam && "video_end" in webcam) {
-        const url = `https://tools.stefanbohacek.dev/video-dl/?platform=direct&url=${
+        const url = `https://tools.stefanbohacek.com/video-dl/?platform=direct&url=${
           webcam.direct_url
         }&start=${videoTimestamp}&length=10&token=${process.env.STEFANS_TOOLS_ACCESS_TOKEN}`;
         console.log(url);

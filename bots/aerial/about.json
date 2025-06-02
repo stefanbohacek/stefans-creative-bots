@@ -1,7 +1,8 @@
 {
-  "active": true,
+  "active": false,
   "name": "@aerial",
   "description": "Views from above.",
+  "note": "Discontinued.",
   "links": [
     {
       "title": "Follow on Mastodon",

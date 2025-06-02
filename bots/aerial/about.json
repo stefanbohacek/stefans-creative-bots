@@ -2,7 +2,7 @@
   "active": false,
   "name": "@aerial",
   "description": "Views from above.",
-  "note": "Discontinued.",
+  "note": "No longer able to generate 10-second preview clips from YouTube.",
   "links": [
     {
       "title": "Follow on Mastodon",

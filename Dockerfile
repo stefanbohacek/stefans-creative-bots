@@ -18,7 +18,8 @@ RUN apk update && apk upgrade && \
     py3-pip \
     autoconf \
     automake \
-    ffmpeg
+    ffmpeg \
+    imagemagick
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY ./package.json /usr/src/app/

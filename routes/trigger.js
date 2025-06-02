@@ -6,7 +6,7 @@ router.get("/", async (req, res) => {
 
   if (token && token === process.env.TRIGGER_TOKEN && name) {
     try {
-      const botModule = await import(`./bots/${name}/bot.js`);
+      const botModule = await import(`../bots/${name}/bot.js`);
       const bot = botModule.default;
       await bot();
       res.status(200).json({ message: "Bot executed successfully" });

@@ -21,10 +21,10 @@ const botID = "thelick";
 const getInstruments = () => {
   let instruments = [];
 
-  readdirSync("/app/data/notes", { withFileTypes: true }).forEach((dirent) => {
+  readdirSync("/usr/src/app/data/notes", { withFileTypes: true }).forEach((dirent) => {
     if (dirent.isDirectory()) {
       // console.log(`reading ${dirent.name}...`);
-      const pathOriginal = path.join("/app/data/notes", dirent.name);
+      const pathOriginal = path.join("/usr/src/app/data/notes", dirent.name);
 
       const instrument = {
         name: dirent.name,
@@ -96,7 +96,7 @@ const botScript = async () => {
     theLickNotes.forEach((note, index) => {
       delay = getRandomRange(0.05, 0.9)
       cmdArgs.push("-i");
-      cmdArgs.push(`"${path.join("/app/data/notes", instrument.name, note)}"`);
+      cmdArgs.push(`"${path.join("/usr/src/app/data/notes", instrument.name, note)}"`);
 
       console.log({
         note,

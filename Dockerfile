@@ -20,6 +20,7 @@ RUN apk update && apk upgrade && \
     automake \
     ffmpeg \
     imagemagick
+RUN pip3 install yt-dlp==2023.7.6    
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY ./package.json /usr/src/app/

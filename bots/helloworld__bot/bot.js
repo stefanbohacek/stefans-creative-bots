@@ -61,7 +61,7 @@ const botScript = async () => {
               fontFileName = "Noto_Sans_JP-700-2.otf";
               fontFamily = "Noto Sans JP";
             } else if (languageCode === "zh" || languageCode === "zh-hk") {
-              fontFileName = "Noto_Sans_TC-700-9.otf";
+              fontFileName = "NotoSansTC-Medium.ttf";
               fontFamily = "Noto Sans TC";
             } else if (
               languageCode === "ar" ||

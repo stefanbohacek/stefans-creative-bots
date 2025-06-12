@@ -5,7 +5,7 @@ const botScript = async () => {
   const width = 940;
   const height = 794;
   const imageURL =
-    "https://cdn.glitch.global/8b6dd131-2bd5-48bc-9419-8ae59aba7f5d/whataweek.jpg";
+    "https://bots.stefanbohacek.com/images/whataweek.jpg";
   const dayOfWeek = [
     "Sunday",
     "Monday",

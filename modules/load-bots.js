@@ -34,7 +34,7 @@ const loadBots = async (app) => {
         
         if (!botInfo.about.source_url && botInfo.about.source_url !== null){
           if (process.env.PROJECT_NAME) {
-            botInfo.about.source_url = `https://glitch.com/edit/#!/${process.env.PROJECT_NAME}?path=bots/${bot}/bot.js`;
+            botInfo.about.source_url = `https://github.com/stefanbohacek/stefans-creative-bots/tree/master/bots/${bot}/bot.js`;
           } else if (process.env.SOURCE_URL_BASE) {
             botInfo.about.source_url = `${process.env.SOURCE_URL_BASE}/${bot}/bot.js`;
           }

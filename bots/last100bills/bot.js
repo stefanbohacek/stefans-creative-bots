@@ -1,5 +1,5 @@
 /* This bot uses the chart.js library (chartjs.org) via the chartjs-node node package (npmjs.com/package/chartjs-node). */
-/* Static version: https://stefans-creative-bots.glitch.me/last100bills.html */
+/* Static version: https://bots.stefanbohacek.com/last100bills.html */
 import fetch from 'node-fetch';
 
 import { ChartJSNodeCanvas } from "chartjs-node-canvas";

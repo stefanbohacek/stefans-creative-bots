@@ -31,13 +31,9 @@ const loadBots = async (app) => {
           script_path: scriptPath,
           script: botScript,
         };
-        
-        if (!botInfo.about.source_url && botInfo.about.source_url !== null){
-          if (process.env.PROJECT_NAME) {
-            botInfo.about.source_url = `https://github.com/stefanbohacek/stefans-creative-bots/tree/master/bots/${bot}/bot.js`;
-          } else if (process.env.SOURCE_URL_BASE) {
-            botInfo.about.source_url = `${process.env.SOURCE_URL_BASE}/${bot}/bot.js`;
-          }
+
+        if (!botInfo.about.source_url && botInfo.about.source_url !== null) {
+          botInfo.about.source_url = `https://github.com/stefanbohacek/stefans-creative-bots/tree/master/bots/${bot}/bot.js`;
         }
 
         if (about.active && botScript) {

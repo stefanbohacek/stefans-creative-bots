@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import fetch from "node-fetch";
 import he from "he";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
@@ -16,15 +16,24 @@ const botScript = async () => {
   const response = await fetch(botwikiURL);
   const data = await response.json();
 
-  const botUrlsMeta = data[0].meta.bot_url.split("\r\n").filter(url => !url.includes("twitter.com/"));
+  const botUrlsMeta = data[0].meta.bot_url
+    .split("\r\n")
+    .filter(
+      (url) =>
+        !url.includes("twitter.com/") &&
+        !url.includes("x.com/") &&
+        !url.includes("botsin.space/")
+    );
   let botUrls;
 
-  if (botUrlsMeta.length === 0){
+  if (botUrlsMeta.length === 0) {
     botUrls = "";
-  } else if (botUrlsMeta.length === 1){
+  } else if (botUrlsMeta.length === 1) {
     botUrls = `\n\nFollow: ${botUrlsMeta[0]}`;
   } else {
-    botUrls = `\n\nFollow:\n${botUrlsMeta.map(botUrl => `- ${botUrl}`).join("\n")}`;
+    botUrls = `\n\nFollow:\n${botUrlsMeta
+      .map((botUrl) => `- ${botUrl}`)
+      .join("\n")}`;
   }
 
   if (data && data.length) {

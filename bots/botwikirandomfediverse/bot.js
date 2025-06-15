@@ -17,7 +17,14 @@ const botScript = async () => {
   const response = await fetch(botwikiURL);
   const data = await response.json();
 
-  const botUrlsMeta = data[0].meta.bot_url.split("\r\n").filter(url => !url.includes("twitter.com/"));
+  const botUrlsMeta = data[0].meta.bot_url
+    .split("\r\n")
+    .filter(
+      (url) =>
+        !url.includes("twitter.com/") &&
+        !url.includes("x.com/") &&
+        !url.includes("botsin.space/")
+    );
 
   let botUrls;
 

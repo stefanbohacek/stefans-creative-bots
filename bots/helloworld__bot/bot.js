@@ -58,7 +58,7 @@ const botScript = async () => {
             let fontFileName, fontFamily;
 
             if (languageCode === "ja") {
-              fontFileName = "Noto_Sans_JP-700-2.otf";
+              fontFileName = "NotoSansJP-VariableFont_wght.ttf";
               fontFamily = "Noto Sans JP";
             } else if (languageCode === "zh" || languageCode === "zh-hk") {
               fontFileName = "NotoSansTC-Medium.ttf";

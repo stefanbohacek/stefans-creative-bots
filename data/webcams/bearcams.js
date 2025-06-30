@@ -3,7 +3,7 @@ export default [
     "name": "Brooks Falls Brown Bears",
     "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a river with bears in it.",
     url: "https://explore.org/livecams/brown-bears/brown-bear-salmon-cam-brooks-falls",
-    youtube_url: "https://www.youtube.com/watch?v=d1YoGAxmZtE",
+    youtube_url: "https://www.youtube.com/watch?v=73-EekdVVU8",
     tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
   },
   {

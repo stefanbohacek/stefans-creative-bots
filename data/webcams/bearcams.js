@@ -60,4 +60,12 @@ export default [
     youtube_url: "https://www.youtube.com/watch?v=7B8ArsmXPyk",
     tags: "#bearcam #KatmaiNationalPark #alaska",
   },
+  {
+    name: "Underwater Salmon Cam - Katmai National Park, Alaska",
+    description:
+      "A short clip from a live undwerwater webcam in Katmai National Park, Alaska. Typically shows fish swimming around.",
+    url: "https://explore.org/livecams/brown-bears/underwater-bear-cam-brown-bear-salmon-cams",
+    youtube_url: "https://www.youtube.com/watch?v=pfH8hlk2fUc",
+    tags: "#bearcam #KatmaiNationalPark #alaska",
+  },
 ];

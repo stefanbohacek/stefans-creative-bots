@@ -33,7 +33,7 @@ const botScript = async () => {
     }
   ];
 
-  const savedDataPath = __dirname + "/../../data/mastodon_mobile_apps.json";
+  const savedDataPath = __dirname + "/../../temp/mastodon_mobile_apps.json";
 
   if (fs.existsSync(savedDataPath)) {
     apps = JSON.parse(fs.readFileSync(savedDataPath, "utf8"));

@@ -78,7 +78,7 @@ const botScript = async () => {
           `found ${recentlyCompletedCurrent.length} item(s) under "recently completed"`
         );
 
-        const dataPath = `${__dirname}/../../data/mastodon-roadmap`;
+        const dataPath = `${__dirname}/../../temp/mastodon-roadmap`;
 
         let inProgressSaved = [],
           plannedSaved = [],

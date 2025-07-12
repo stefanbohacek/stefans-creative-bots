@@ -11,7 +11,7 @@ import randomFromArray from "./../../modules/random-from-array.js";
 import downloadFile from "./../../modules/download-file.js";
 
 const botID = "whatcapital";
-const savedDataPath = __dirname + "/../../data/what_capital.json";
+const savedDataPath = __dirname + "/../../temp/what_capital.json";
 
 let savedData = {
   country: "",

@@ -152,16 +152,16 @@ if (!savedData.capital) {
 
 const reply = async (postID, from, messageText, fullMessage) => {
   console.log(
-    `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`
+    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`
   );
 
   let replyMessage = "";
 
   if (
-    fullMessage.data.status.visibility === "public" ||
-    fullMessage.data.status.visibility === "unlisted"
+    fullMessage.data.visibility === "public" ||
+    fullMessage.data.visibility === "unlisted"
   ) {
-    const inReplyToId = fullMessage.data.status.in_reply_to_id;
+    const inReplyToId = fullMessage.data.in_reply_to_id;
 
     if (savedData.current_question !== inReplyToId) {
       replyMessage = `Please make sure to reply directly to the latest question: https://botsin.space/@what_capital/${savedData.current_question}`;
@@ -181,7 +181,7 @@ const reply = async (postID, from, messageText, fullMessage) => {
   }
 
   console.log(
-    `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`
+    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`
   );
 
   console.log(`reply: ${replyMessage}`);

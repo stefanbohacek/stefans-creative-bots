@@ -33,10 +33,10 @@ const scheduleBot = async (bot, app) => {
             || message.event === "update"
             // && message.data.type === "mention"
           ) {
-            console.log("message.data", message.data);
+            // console.log("message.data", message.data);
             const from = message.data.account.acct;
-            const statusID = message.data.status.id;
-            const text = convert(message.data.status.content);
+            const statusID = message.data.id;
+            const text = convert(message.data.content);
             reply(statusID, from, text, message);
           }
         });

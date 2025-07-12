@@ -16,17 +16,17 @@ const scheduleBot = async (bot, app) => {
 
         mastodonStream.on("message", (message) => {
           console.log("received message...", {
-            id: message.id,
             event: message.event,
-            created_at: message.created_at,
-            in_reply_to_id: message.in_reply_to_id,
-            in_reply_to_account_id: message.in_reply_to_account_id,
-            visibility: message.visibility,
-            content: message.content,
-            mentions: message.mentions,
-            account_id: message.account.id,
-            account_username: message.account.username,
-            account_display_name: message.account.display_name,
+            id: message.data.id,
+            created_at: message.data.created_at,
+            in_reply_to_id: message.data.in_reply_to_id,
+            in_reply_to_account_id: message.data.in_reply_to_account_id,
+            visibility: message.data.visibility,
+            content: message.data.content,
+            mentions: message.data.mentions,
+            account_id: message.data.account.id,
+            account_username: message.data.account.username,
+            account_display_name: message.data.account.display_name,
           });
           if (
             message.event === "notification"

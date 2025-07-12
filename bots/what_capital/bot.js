@@ -38,7 +38,7 @@ const saveData = () => {
 };
 
 const updateScores = (user) => {
-  const admins = ["stefan@stefanbohacek.online", "botwiki@mastodon.social"];
+  const admins = ["stefan", "stefan@stefanbohacek.online", "botwiki@mastodon.social"];
 
   if (admins.indexOf(user) === -1) {
     if (savedData.scores.hasOwnProperty(user)) {
@@ -166,7 +166,7 @@ const reply = async (postID, from, messageText, fullMessage) => {
     const inReplyToId = fullMessage.data.in_reply_to_id;
 
     if (savedData.current_question !== inReplyToId) {
-      replyMessage = `Please make sure to reply directly to the latest question: https://botsin.space/@what_capital/${savedData.current_question}`;
+      replyMessage = `Please make sure to reply directly to the latest question: https://stefanbohacek.online/@what_capital/${savedData.current_question}`;
     } else {
       if (checkAnswer(messageText)) {
         updateScores(from);

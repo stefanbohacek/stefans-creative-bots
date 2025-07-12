@@ -10,14 +10,14 @@ export default [
     "name": "The Riffles Bear Cam",
     "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a river with bears in it.",
     url: "https://explore.org/livecams/brown-bears/brown-bear-salmon-cam-the-riffles",
-    youtube_url: "https://www.youtube.com/watch?v=zWl-VfiDaKk",
+    youtube_url: "https://www.youtube.com/watch?v=LM1YPBWn5jQ",
     tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
   },
   {
     "name": "Brooks Falls Brown Bears Low",
     "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a river with bears in it.",
     url: "https://explore.org/livecams/brown-bears/brooks-falls-brown-bears-low",
-    youtube_url: "https://www.youtube.com/watch?v=xA8nWNor42c",
+    youtube_url: "https://www.youtube.com/watch?v=UHgF74ieHUM",
     tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
   },
   // {
@@ -49,7 +49,7 @@ export default [
     description:
       "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a view from a mountain.",
     url: "https://explore.org/livecams/brown-bears/dumpling-mountain-brown-bear-salmon-cams",
-    youtube_url: "https://www.youtube.com/watch?v=dXp23eXXTOU",
+    youtube_url: "https://www.youtube.com/watch?v=xbGbMu2iz28",
     tags: "#bearcam #KatmaiNationalPark #alaska #live",
   },
   {

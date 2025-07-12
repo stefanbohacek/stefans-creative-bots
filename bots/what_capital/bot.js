@@ -155,6 +155,8 @@ const reply = async (postID, from, messageText, fullMessage) => {
     `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`
   );
 
+  if (from === "what_capital") return;
+
   let replyMessage = "";
 
   if (

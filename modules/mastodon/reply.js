@@ -5,9 +5,9 @@ const reply = async (client, message, response, cb) => {
   client.post(
     "statuses",
     {
-      in_reply_to_id: message.data.status.id,
-      spoiler_text: message.data.status.spoiler_text,
-      visibility: message.data.status.visibility,
+      in_reply_to_id: message.data.id,
+      spoiler_text: message.data.spoiler_text,
+      visibility: message.data.visibility,
       status: `@${message.data.account.acct} ${response}`,
     },
     (err, data, response) => {

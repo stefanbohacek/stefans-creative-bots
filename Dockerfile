@@ -1,7 +1,6 @@
 FROM node:lts-alpine
 RUN apk update && apk upgrade && \
-    apk add --no-cache git \
-    apk add nano \
+    apk add --no-cache git nano\
     make \
     g++ \
     sudo \

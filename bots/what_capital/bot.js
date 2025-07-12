@@ -101,6 +101,8 @@ const checkAnswer = (answer) => {
     .toLowerCase()
     .normalize("NFD")
     .replace(/\p{Diacritic}/gu, "");
+
+  console.log("checking answer...", { answer, correctAnswer });
   return answer.includes(correctAnswer);
 };
 

@@ -14,25 +14,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 (async () => {
   const bots = await loadBots(app);
   app.set("bots", bots);
-  setInterval(() => {
-    console.log("deleting old temporary files...");
-    const result = findRemoveSync(__dirname + "/temp", {
-      files: "*.*",
-      age: {
-        seconds: 1800,
-      },
-    });
-    console.log(result);
-  }, 60000);
-
-  setInterval(() => {
-    console.log("deleting .git folder...");
-    const result = findRemoveSync(__dirname + "/.git", {
-      files: "*.*",
-    });
-    console.log(result);
-  }, 600000);
-
   const listener = app.listen(process.env.PORT || 3000, async () => {
     checkBotPool(app);
     // const bots = await loadBots(app);

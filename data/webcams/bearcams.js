@@ -34,7 +34,7 @@ export default [
     "name": "Kat's River View",
     "description": "A short clip from a live webcam in Katmai National Park, Alaska. Typically shows a river with bears in it.",
     url: "https://explore.org/livecams/brown-bears/brown-bear-salmon-cam-lower-river",
-    youtube_url: "https://www.youtube.com/watch?v=4TD1GYd7WJw",
+    youtube_url: "https://www.youtube.com/watch?v=vZ1e_m8Tl04",
     tags: '#bearcam #KatmaiNationalPark #alaska #live #bears'
   },
   // {

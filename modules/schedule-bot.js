@@ -17,8 +17,8 @@ const scheduleBot = async (bot, app) => {
         mastodonStream.on("message", (message) => {
           console.log("received message...", message.event, message);
           if (
-            message.event === "notification" &&
-            message.data.type === "mention"
+            message.event === "notification"
+            // && message.data.type === "mention"
           ) {
             const from = message.data.account.acct;
             const statusID = message.data.status.id;

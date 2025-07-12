@@ -29,7 +29,8 @@ const scheduleBot = async (bot, app) => {
             account_display_name: message.data.account.display_name,
           });
           if (
-            message.event === "notification" || message.event === "update"
+            message.event === "notification"
+            // || message.event === "update"
             // && message.data.type === "mention"
           ) {
             const from = message.data.account.acct;

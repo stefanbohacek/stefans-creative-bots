@@ -30,6 +30,8 @@ const reply = async (postID, from, messageText, fullMessage) => {
     `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`
   );
 
+  if (from === "wikilinks") return;
+
   const statusVisibility = fullMessage.data.status.visibility;
   const inReplyToId = fullMessage.data.status.in_reply_to_id;
   let replyMessage = "";

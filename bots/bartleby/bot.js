@@ -38,8 +38,11 @@ const clients = { mastodon };
 
 const reply = async (postID, from, messageText, fullMessage) => {
   console.log(
-    `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`
+    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`
   );
+
+  if (from === "bartleby") return;
+
   const messageTextLowercase = messageText.toLowerCase();
   const reply = await bartleby.reply("local-user", messageTextLowercase);
   console.log(`reply: ${reply}`);

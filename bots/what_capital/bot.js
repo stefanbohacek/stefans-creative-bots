@@ -152,7 +152,7 @@ if (!savedData.capital) {
 
 const reply = async (postID, from, messageText, fullMessage) => {
   console.log(
-    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`
+    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`, fullMessage
   );
 
   if (from === "what_capital") return;

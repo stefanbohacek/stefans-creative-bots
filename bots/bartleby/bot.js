@@ -42,11 +42,11 @@ const reply = async (postID, from, messageText, fullMessage) => {
   if (from === botUsername) return;
 
   console.log(
-    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`,
+    `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`,
     fullMessage
   );
 
-  const mentions = fullMessage.data.mentions?.map(
+  const mentions = fullMessage.data.status.mentions?.map(
     (mention) => mention.username
   );
 

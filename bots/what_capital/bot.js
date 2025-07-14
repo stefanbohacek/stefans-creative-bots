@@ -160,11 +160,11 @@ const reply = async (postID, from, messageText, fullMessage) => {
   if (from === botUsername) return;
 
   console.log(
-    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`,
+    `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`,
     fullMessage
   );
 
-  const mentions = fullMessage.data.mentions?.map(
+  const mentions = fullMessage.data.status.mentions?.map(
     (mention) => mention.username
   );
 
@@ -173,10 +173,10 @@ const reply = async (postID, from, messageText, fullMessage) => {
   let replyMessage = "";
 
   if (
-    fullMessage.data.visibility === "public" ||
-    fullMessage.data.visibility === "unlisted"
+    fullMessage.data.status.visibility === "public" ||
+    fullMessage.data.status.visibility === "unlisted"
   ) {
-    const inReplyToId = fullMessage.data.in_reply_to_id;
+    const inReplyToId = fullMessage.data.status.in_reply_to_id;
 
     if (savedData.current_question !== inReplyToId) {
       replyMessage = `Please make sure to reply directly to the latest question: https://stefanbohacek.online/@what_capital/${savedData.current_question}`;

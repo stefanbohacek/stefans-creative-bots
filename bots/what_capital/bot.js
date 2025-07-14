@@ -38,7 +38,11 @@ const saveData = () => {
 };
 
 const updateScores = (user) => {
-  const admins = ["stefan", "stefan@stefanbohacek.online", "botwiki@mastodon.social"];
+  const admins = [
+    "stefan",
+    "stefan@stefanbohacek.online",
+    "botwiki@mastodon.social",
+  ];
 
   if (admins.indexOf(user) === -1) {
     if (savedData.scores.hasOwnProperty(user)) {
@@ -151,11 +155,20 @@ if (!savedData.capital) {
 }
 
 const reply = async (postID, from, messageText, fullMessage) => {
+  const botUsername = "what_capital";
+
+  if (from === botUsername) return;
+
   console.log(
-    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`, fullMessage
+    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`,
+    fullMessage
   );
 
-  if (from === "what_capital") return;
+  const mentions = fullMessage.data.mentions?.map(
+    (mention) => mention.username
+  );
+
+  if (!mentions.includes(botUsername)) return;
 
   let replyMessage = "";
 
@@ -181,10 +194,6 @@ const reply = async (postID, from, messageText, fullMessage) => {
   } else {
     replyMessage = "Sorry, do you mind responding publicly?";
   }
-
-  console.log(
-    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`
-  );
 
   console.log(`reply: ${replyMessage}`);
   mastodon.reply(fullMessage, replyMessage);

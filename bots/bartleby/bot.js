@@ -37,12 +37,21 @@ const mastodon = new mastodonClient({
 const clients = { mastodon };
 
 const reply = async (postID, from, messageText, fullMessage) => {
+  const botUsername = "bartleby";
+
+  if (from === botUsername) return;
+
   console.log(
-    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`
+    `new ${fullMessage.data.visibility} message from ${from}: ${messageText}`,
+    fullMessage
   );
 
-  if (from === "bartleby") return;
+  const mentions = fullMessage.data.mentions?.map(
+    (mention) => mention.username
+  );
 
+  if (!mentions.includes(botUsername)) return;
+  
   const messageTextLowercase = messageText.toLowerCase();
   const reply = await bartleby.reply("local-user", messageTextLowercase);
   console.log(`reply: ${reply}`);

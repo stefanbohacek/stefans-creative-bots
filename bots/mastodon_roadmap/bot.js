@@ -47,13 +47,14 @@ const botScript = async () => {
         browserWSEndpoint: process.env.BROWSERLESS_URL,
       });
 
-      const page = await browser.newPage();
-      await page.setDefaultNavigationTimeout(120000);
 
       process.on("unhandledRejection", (reason, p) => {
         console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
         browser.close();
       });
+
+      const page = await browser.newPage();
+      await page.setDefaultNavigationTimeout(120000);
 
       page.setUserAgent(
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"

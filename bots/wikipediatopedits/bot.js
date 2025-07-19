@@ -11,7 +11,6 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-
       let dateYesterday = new Date();
       dateYesterday.setDate(dateYesterday.getDate() - 1);
       const date = dateYesterday.toISOString().split("T")[0].replaceAll("-", "");

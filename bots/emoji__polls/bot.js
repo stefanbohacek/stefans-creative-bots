@@ -10,7 +10,7 @@ const botScript = async () => {
 
   const options = randomFromArray(emoji, 4);
   const status = options.join(" ") + " #emoji #poll";
-  console.log({ status, options });
+  // console.log({ status, options });
   mastodon.postPoll(status, options);
 };
 

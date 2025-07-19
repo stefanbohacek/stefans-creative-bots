@@ -120,7 +120,7 @@ const botScript = async () => {
       }
     })();
   } catch (error) {
-    console.log("error", error);
+    console.log("southpoleviews error:", error);
   }
 };
 

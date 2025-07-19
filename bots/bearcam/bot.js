@@ -27,7 +27,7 @@ const botScript = async () => {
       //   webcams.filter((webcam) => webcam.video_start === undefined)
       // );
 
-      console.log(webcam);
+      // console.log(webcam);
       const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
 
       mastodon.post({

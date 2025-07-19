@@ -44,7 +44,7 @@ const botScript = async () => {
       tags: data[0].tags_full,
     };
 
-    console.log(bot);
+    // console.log(bot);
 
     let status = `${bot.description}\n\n${bot.url}${botUrls}\n\n`;
 

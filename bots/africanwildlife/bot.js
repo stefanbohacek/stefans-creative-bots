@@ -30,7 +30,7 @@ const botScript = async () => {
           status,
         },
         () => {
-          console.log("done");
+          // console.log("done");
         }
       );
 

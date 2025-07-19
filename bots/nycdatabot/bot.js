@@ -222,10 +222,10 @@ const findDataset = async () => {
       makeMap(datasetName, datasetPermalink, bodyParsed);
       break;
     case "datasets":
-      console.log({
-        datasetLabels,
-        "data sample": bodyParsed.slice(0, 5),
-      });
+      // console.log({
+      //   datasetLabels,
+      //   "data sample": bodyParsed.slice(0, 5),
+      // });
 
       if (bodyParsed[0].latitude && bodyParsed[0].longitude) {
         makeMap(datasetName, datasetPermalink, bodyParsed);

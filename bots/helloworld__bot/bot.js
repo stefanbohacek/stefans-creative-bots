@@ -38,7 +38,7 @@ const botScript = async () => {
             // /* For testing. */ const randomTranslation = helloTranslations[69];
             const randomTranslation = randomFromArray(helloTranslations);
 
-            console.log(randomTranslation);
+            // console.log(randomTranslation);
 
             const languageCode = randomTranslation[2],
               helloTranslation = he.decode(randomTranslation[3]),
@@ -106,7 +106,7 @@ const botScript = async () => {
                   ""
                 )} #language #linguistics`;
 
-                console.log("status", status);
+                // console.log("status", status);
 
                 // twitter.postImage({
                 //   status,

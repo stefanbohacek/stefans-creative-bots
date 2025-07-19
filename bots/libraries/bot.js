@@ -33,7 +33,7 @@ const botScript = async () => {
   `);
 
   const item = randomFromArray(items);
-  console.log(item);
+  // console.log(item);
   let imageUrl = "";
 
   if (item.image) {

@@ -29,7 +29,7 @@ const botScript = async () => {
 
 
         const status = `Happy name day to all the ${oxfordComma(nameDays)}!\n\n#nameDay #HappyNameDay`
-        console.log(status);
+        // console.log(status);
 
         mastodon.post({
           status

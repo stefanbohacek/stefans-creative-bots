@@ -84,7 +84,7 @@ const scheduleBot = async (bot, app) => {
       }
     }
   } catch (error) {
-    console.log("error", bot.about.name, error);
+    console.log(`${bot.about.name} error:`, error);
   }
 };
 

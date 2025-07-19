@@ -22,7 +22,7 @@ const botScript = async () => {
   let map = await response.json();
   map = map[0];
 
-  console.log("openig a map...");
+  // console.log("openig a map...");
 
   const imageURL =
     map.urlSize4 ||
@@ -31,16 +31,16 @@ const botScript = async () => {
     map.urlSize1 ||
     map.urlSize0;
 
-  console.log({ imageURL });
+  // console.log({ imageURL });
 
   if (imageURL) {
     try {
       const attributes = JSON.parse(map.attributes);
 
-      console.log({
-        "map.date": map.date,
-        "attributes.country": attributes.country,
-      });
+      // console.log({
+      //   "map.date": map.date,
+      //   "attributes.country": attributes.country,
+      // });
 
       const filePath = `${__dirname}/../../temp/${botID}`;
       await downloadFile(imageURL, filePath);

@@ -35,9 +35,9 @@ const botScript = async () => {
           const page = await browser.newPage();
           await page.setDefaultNavigationTimeout(120000);
 
-          console.log("loading exoplanet data...", {
-            url,
-          });
+          // console.log("loading exoplanet data...", {
+          //   url,
+          // });
 
           process.on("unhandledRejection", (reason, p) => {
             console.error(
@@ -90,10 +90,10 @@ const botScript = async () => {
             );
           }
 
-          console.log({
-            planetDescription,
-            planetDistance,
-          });
+          // console.log({
+          //   planetDescription,
+          //   planetDistance,
+          // });
 
           let description = `Name: ${planetName}`;
 
@@ -164,7 +164,7 @@ const botScript = async () => {
             await browser.close();
           }
 
-          console.log(description);
+          // console.log(description);
         } catch (error) {
           console.log("exoplanets error:", error);
         }

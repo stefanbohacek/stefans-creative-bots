@@ -30,7 +30,7 @@ const botScript = async () => {
   `);
 
   const item = randomFromArray(items);
-  console.log(item);
+  // console.log(item);
 
   const status = `${item.label ? `${item.label}, ` : ""} ${
     item.description ? `${item.description}. ` : ""

@@ -1,4 +1,4 @@
-const invertColor = (hex) => {
+export default (hex) => {
   /* https://stackoverflow.com/questions/35969656/how-can-i-generate-the-opposite-color-according-to-current-color */
   const padZero = (str, len) => {
     len = len || 2;
@@ -19,5 +19,3 @@ const invertColor = (hex) => {
         b = (255 - parseInt(hex.slice(4, 6), 16)).toString(16);
   return "#" + padZero(r) + padZero(g) + padZero(b);
 };
-
-export default invertColor;

@@ -1,4 +1,4 @@
-const randomFromArray = (arr, n) => {
+export default (arr, n) => {
   let result = arr;
 
   if (n) {
@@ -21,5 +21,3 @@ const randomFromArray = (arr, n) => {
   }
   return result;
 };
-
-export default randomFromArray;

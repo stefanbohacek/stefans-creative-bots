@@ -7,7 +7,7 @@ import scheduleBot from "./schedule-bot.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const loadBots = async (app) => {
+export default async (app) => {
   const botDirs = fs.readdirSync("bots");
   let bots = [];
   let botCount = 0;
@@ -54,5 +54,3 @@ const loadBots = async (app) => {
 
   return bots;
 };
-
-export default loadBots;

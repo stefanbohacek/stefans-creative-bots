@@ -1,7 +1,7 @@
 import fs from 'fs';
 import loadAssets from 'load-assets.js';
 
-const loadImageAssets = async () => {
+export default async () => {
     let assets = await loadAssets();
     assets = assets.split("\n");
 
@@ -40,5 +40,3 @@ const loadImageAssets = async () => {
 
     return imageUrls;
 };
-
-export default loadImageAssets;

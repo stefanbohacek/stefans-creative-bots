@@ -4,7 +4,7 @@ import moment from "moment";
 import cronSchedules from "./cron-schedules.js";
 import capitalizeFirstLetter from "./capitalize-first-letter.js";
 
-const scheduleBot = async (bot, app) => {
+export default async (bot, app) => {
   const intervalBots = [];
   try {
     if (bot.about.reply) {
@@ -29,9 +29,9 @@ const scheduleBot = async (bot, app) => {
             account_display_name: message.data.account.display_name,
           });
           if (
-            message.event === "notification"
+            message.event === "notification" &&
             // || message.event === "update"
-            && message.data.type === "mention"
+            message.data.type === "mention"
           ) {
             // console.log("message.data", message.data);
             const from = message.data.account.acct;
@@ -87,5 +87,3 @@ const scheduleBot = async (bot, app) => {
     console.log(`${bot.about.name} error:`, error);
   }
 };
-
-export default scheduleBot;

@@ -1,4 +1,4 @@
-const getLuminosity = (color) => {
+export default (color) => {
     const c = color.substring(1);
     const rgb = parseInt(c, 16);
 
@@ -8,5 +8,3 @@ const getLuminosity = (color) => {
 
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 };
-
-export default getLuminosity;

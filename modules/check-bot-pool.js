@@ -36,7 +36,7 @@ const checkBotPoolFn = (app) => {
   console.log(`current pool (${pool.length}):`, pool);
 };
 
-const checkBotPool = (app) => {
+export default (app) => {
   let pool = [];
 
   if (fs.existsSync(poolFilePath)) {
@@ -54,5 +54,3 @@ const checkBotPool = (app) => {
     checkBotPoolFn(app);
   }, poolCheckInterval);
 };
-
-export default checkBotPool;

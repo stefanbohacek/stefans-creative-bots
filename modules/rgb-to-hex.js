@@ -1,4 +1,4 @@
-const rgbToHex = (r, g, b) =>
+export default (r, g, b) =>
   "#" +
   [r, g, b]
     .map((x) => {
@@ -6,5 +6,3 @@ const rgbToHex = (r, g, b) =>
       return hex.length === 1 ? "0" + hex : hex;
     })
     .join("");
-
-export default rgbToHex;

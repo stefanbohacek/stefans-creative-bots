@@ -1,4 +1,4 @@
-const oxfordComma = (arr, conjunction, ifempty) => {
+export default (arr, conjunction, ifempty) => {
   let l = arr.length;
 
   conjunction = conjunction || "and";
@@ -11,5 +11,3 @@ const oxfordComma = (arr, conjunction, ifempty) => {
   arr[l - 1] = `${conjunction} ${arr[l - 1]}`;
   return arr.join(", ");
 };
-
-export default oxfordComma;

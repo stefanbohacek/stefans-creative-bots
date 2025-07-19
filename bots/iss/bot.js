@@ -23,7 +23,7 @@ const botScript = async () => {
       });
 
       const webcam = randomFromArray(webcams);
-      let status = `Live feed: ${webcam.url}`;
+      let status = `Live feed: ${webcam.youtube_url}`;
 
       const apiURL = "http://api.open-notify.org/iss-now.json";
 

@@ -57,28 +57,32 @@ const botScript = async () => {
 
             let fontFileName, fontFamily;
 
-            if (languageCode === "ja") {
-              fontFileName = "NotoSansJP-VariableFont_wght.ttf";
-              fontFamily = "Noto Sans JP";
-            } else if (languageCode === "zh" || languageCode === "zh-hk") {
-              fontFileName = "NotoSansTC-Medium.ttf";
-              fontFamily = "Noto Sans TC";
-            } else if (
-              languageCode === "ar" ||
-              languageCode.indexOf("ar-") !== -1
-            ) {
-              fontFileName = "Cairo-700-3.ttf";
-              fontFamily = "Cairo";
-            } else if (languageCode === "bn") {
-              fontFileName = "Hind_Siliguri-700-5.ttf";
-              fontFamily = "Hind Siliguri";
-            } else if (languageCode === "ka") {
-              fontFileName = "Baloo_Tamma-400-1.ttf";
-              fontFamily = "Baloo Tamma";
-            } else {
-              fontFileName = "Pridi-700-11.ttf";
-              fontFamily = "Pridi";
-            }
+            // if (languageCode === "ja") {
+            //   fontFileName = "NotoSansJP-VariableFont_wght.ttf";
+            //   fontFamily = "Noto Sans JP";
+            // } else if (languageCode === "zh" || languageCode === "zh-hk") {
+            //   fontFileName = "NotoSansTC-Medium.ttf";
+            //   fontFamily = "Noto Sans TC";
+            // } else if (
+            //   languageCode === "ar" ||
+            //   languageCode.indexOf("ar-") !== -1
+            // ) {
+            //   fontFileName = "Cairo-700-3.ttf";
+            //   fontFamily = "Cairo";
+            // } else if (languageCode === "bn") {
+            //   fontFileName = "Hind_Siliguri-700-5.ttf";
+            //   fontFamily = "Hind Siliguri";
+            // } else if (languageCode === "ka") {
+            //   fontFileName = "Baloo_Tamma-400-1.ttf";
+            //   fontFamily = "Baloo Tamma";
+            // } else {
+            //   fontFileName = "Pridi-700-11.ttf";
+            //   fontFamily = "Pridi";
+            // }
+            
+            fontFileName = "GoNotoKurrent-Regular.ttf";
+            fontFamily = "Go Noto Kurrent";
+
 
             overlayGenerator(
               [

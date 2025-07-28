@@ -19,7 +19,8 @@ const botScript = async () => {
   try {
     await (async () => {
       const mastodon = new mastodonClient({
-        access_token: process.env.RRS_SIR_DAVID_ATTENBOROUGH_BOT_MASTODON_ACCESS_TOKEN,
+        access_token:
+          process.env.RRS_SIR_DAVID_ATTENBOROUGH_BOT_MASTODON_ACCESS_TOKEN,
         api_url: process.env.MASTODON_API_URL,
       });
 
@@ -94,32 +95,27 @@ const botScript = async () => {
 
         const luminosity = await getImageLuminosity(filePath);
 
-        if (luminosity > 40) {
-          let description = `View from the ${station.name}.`;
-          let weather;
+        let description = `View from the ${station.name}.`;
+        let weather;
 
-          if (station.location) {
-            weather = await getWeather(
-              station.location.lat,
-              station.location.lon
-            );
+        if (station.location) {
+          weather = await getWeather(
+            station.location.lat,
+            station.location.lon
+          );
 
-            if (weather && weather.description_full) {
-              description += ` ${weather.description_full}`;
-            }
+          if (weather && weather.description_full) {
+            description += ` ${weather.description_full}`;
           }
-
-          const status = `${station.name} via ${station.url} #SouthPole #antarctica #view #webcam`;
-
-          mastodon.postImage({
-            status,
-            image: filePath,
-            alt_text: description,
-          });
-        } else {
-          console.log("@RRSSirDavidAttenborough: image too dark, retrying...");
-          await botScript();
         }
+
+        const status = `${station.name} via ${station.url} #SouthPole #antarctica #view #webcam`;
+
+        mastodon.postImage({
+          status,
+          image: filePath,
+          alt_text: description,
+        });
       } else {
         console.log("@RRSSirDavidAttenborough: image not found, retrying...");
         await botScript();

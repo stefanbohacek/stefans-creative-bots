@@ -29,7 +29,8 @@ const botScript = async () => {
       const station = {
         name: "RRS Sir David Attenborough Webcam",
         url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",
-        image_url: "https://legacy.bas.ac.uk/webcams/rrs_sir_david_attenborough/latest.jpg",
+        image_url:
+          "https://legacy.bas.ac.uk/webcams/rrs_sir_david_attenborough/latest.jpg",
         // element: '.entry-content img[width="1920"]',
         description:
           "View from a webcam mounted on the RRS Sir David Attenborough boat, riding through icy waters.",
@@ -39,89 +40,29 @@ const botScript = async () => {
         browserWSEndpoint: process.env.BROWSERLESS_URL,
       });
 
-      let imageURL;
+      const filePath = `${__dirname}/../../temp/${botID}.jpg`;
+      await downloadFile(station.image_url, filePath);
 
-      if (station.image_url) {
-        imageURL = station.image_url;
-      } else {
-        process.on("unhandledRejection", (reason, p) => {
-          console.error(
-            "Unhandled Rejection at: Promise",
-            p,
-            "reason:",
-            reason
-          );
-          browser.close();
-        });
+      const luminosity = await getImageLuminosity(filePath);
 
-        const page = await browser.newPage();
-        page.setUserAgent(
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-        );
+      let description = `View from the ${station.name}.`;
+      let weather;
 
-        await page.setDefaultNavigationTimeout(120000);
+      if (station.location) {
+        weather = await getWeather(station.location.lat, station.location.lon);
 
-        await page.goto(station.url, {
-          // waitUntil: "networkidle0",
-          waitUntil: "domcontentloaded",
-          timeout: 120000,
-        });
-
-        await page.waitForSelector(station.element, { timeout: 120000 });
-
-        const imageElement = await page.$(station.element);
-
-        const image = await page.evaluate(
-          (imageElement) => imageElement.getAttribute("src"),
-          imageElement
-        );
-
-        if (image) {
-          if (image.indexOf("http") === -1) {
-            imageURL = `${station.page_url}${image}`;
-          } else {
-            imageURL = image;
-          }
-        } else {
-          console.log(
-            "@RRSSirDavidAttenborough error: image element not found",
-            station
-          );
+        if (weather && weather.description_full) {
+          description += ` ${weather.description_full}`;
         }
-        await browser.close();
       }
 
-      if (imageURL) {
-        const filePath = `${__dirname}/../../temp/${botID}.jpg`;
-        await downloadFile(imageURL, filePath);
+      const status = `${station.name} via ${station.url} #SouthPole #antarctica #view #webcam`;
 
-        const luminosity = await getImageLuminosity(filePath);
-
-        let description = `View from the ${station.name}.`;
-        let weather;
-
-        if (station.location) {
-          weather = await getWeather(
-            station.location.lat,
-            station.location.lon
-          );
-
-          if (weather && weather.description_full) {
-            description += ` ${weather.description_full}`;
-          }
-        }
-
-        const status = `${station.name} via ${station.url} #SouthPole #antarctica #view #webcam`;
-
-        mastodon.postImage({
-          status,
-          image: filePath,
-          alt_text: description,
-        });
-      } else {
-        console.log("@RRSSirDavidAttenborough: image not found, retrying...");
-        await botScript();
-      }
+      mastodon.postImage({
+        status,
+        image: filePath,
+        alt_text: description,
+      });
     })();
   } catch (error) {
     console.log("RRSSirDavidAttenborough error:");

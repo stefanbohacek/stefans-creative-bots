@@ -5,6 +5,6 @@ dotenv.config();
 // import bot from './bots/wikipediatopedits/bot.js';
 // import bot from "./bots/ignoreallpreviousinstructions/bot.js";
 // import bot from "./bots/test/bot.js";
-import bot from "./bots/mastodon_roadmap/bot.js";
+import bot from "./bots/RRSSirDavidAttenborough/bot.js";
 
 bot();

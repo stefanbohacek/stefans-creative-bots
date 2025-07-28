@@ -3,13 +3,6 @@ Some sites don't use full URL for the img src attribute and need page_url to be 
 */
 export default [
   {
-    name: "RRS Sir David Attenborough Webcam",
-    url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",
-    element: '.entry-content img[width="1920"]',
-    description:
-      "View from a webcam mounted on the RRS Sir David Attenborough boat, riding through icy waters.",
-  },
-  {
     name: "Neumayer Station III",
     image_url: "https://www.awi.de/NM_WebCam/neumayerW.0650.jpg",
     url: "https://www.awi.de/en/expedition/stations/neumayer-station-iii.html",

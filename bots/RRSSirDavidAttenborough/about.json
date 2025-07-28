@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@RRSSirDavidAttenborough",
+  "description": "Views RRS Sir David Attenborough.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@RRSSirDavidAttenborough"
+    },
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

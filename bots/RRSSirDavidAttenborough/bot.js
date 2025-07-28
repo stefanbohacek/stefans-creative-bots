@@ -36,7 +36,6 @@ const botScript = async () => {
           "View from a webcam mounted on the RRS Sir David Attenborough boat, riding through icy waters.",
       };
 
-      const filePath = `${__dirname}/../../temp/${botID}.jpg`;
       await downloadFile(station.image_url, filePath);
 
       const luminosity = await getImageLuminosity(filePath);
@@ -52,7 +51,7 @@ const botScript = async () => {
         }
       }
 
-      const status = `${station.name} via ${station.url} #SouthPole #antarctica #view #webcam`;
+      const status = `${station.name} via ${station.url}\n\nCurrent location: https://www.vesselfinder.com/vessels/details/9798222\n\n #SouthPole #antarctica #view #webcam`;
 
       mastodon.postImage({
         status,

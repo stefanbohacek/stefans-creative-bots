@@ -36,10 +36,6 @@ const botScript = async () => {
           "View from a webcam mounted on the RRS Sir David Attenborough boat, riding through icy waters.",
       };
 
-      const browser = await puppeteer.connect({
-        browserWSEndpoint: process.env.BROWSERLESS_URL,
-      });
-
       const filePath = `${__dirname}/../../temp/${botID}.jpg`;
       await downloadFile(station.image_url, filePath);
 

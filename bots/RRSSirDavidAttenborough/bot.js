@@ -29,7 +29,8 @@ const botScript = async () => {
       const station = {
         name: "RRS Sir David Attenborough Webcam",
         url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-sir-david-attenborough-webcam/",
-        element: '.entry-content img[width="1920"]',
+        image_url: "https://legacy.bas.ac.uk/webcams/rrs_sir_david_attenborough/latest.jpg",
+        // element: '.entry-content img[width="1920"]',
         description:
           "View from a webcam mounted on the RRS Sir David Attenborough boat, riding through icy waters.",
       };

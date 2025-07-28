@@ -5,6 +5,7 @@ import downloadFile from "./../../modules/download-file.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import getImageLuminosity from "./../../modules/get-image-luminosity.js";
 import getWeather from "./../../modules/get-weather.js";
+import consoleLog from "./../../modules/consolelog.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -122,7 +123,8 @@ const botScript = async () => {
       }
     })();
   } catch (error) {
-    console.log("RRSSirDavidAttenborough error:", error);
+    console.log("RRSSirDavidAttenborough error:");
+    consoleLog(error);
   }
 };
 

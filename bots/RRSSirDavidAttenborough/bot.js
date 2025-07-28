@@ -13,7 +13,7 @@ import { stat } from "fs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const botID = "southpoleviews";
+const botID = "RRSSirDavidAttenborough";
 
 const botScript = async () => {
   try {
@@ -81,7 +81,7 @@ const botScript = async () => {
           }
         } else {
           console.log(
-            "@southpoleviews error: image element not found",
+            "@RRSSirDavidAttenborough error: image element not found",
             station
           );
         }
@@ -117,16 +117,16 @@ const botScript = async () => {
             alt_text: description,
           });
         } else {
-          console.log("@southpoleviews: image too dark, retrying...");
+          console.log("@RRSSirDavidAttenborough: image too dark, retrying...");
           await botScript();
         }
       } else {
-        console.log("@southpoleviews: image not found, retrying...");
+        console.log("@RRSSirDavidAttenborough: image not found, retrying...");
         await botScript();
       }
     })();
   } catch (error) {
-    console.log("southpoleviews error:", error);
+    console.log("RRSSirDavidAttenborough error:", error);
   }
 };
 

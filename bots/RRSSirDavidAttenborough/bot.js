@@ -49,7 +49,7 @@ const botScript = async () => {
         }
       }
 
-      const status = `${station.name} via ${station.url}\n\nCurrent location: https://www.vesselfinder.com/vessels/details/9798222\n\n #SouthPole #antarctica #view #webcam`;
+      const status = `${station.name} via ${station.url}\n\nCurrent location: https://www.vesselfinder.com/vessels/details/9798222\n\n #RRSSirDavidAttenborough #boat #view #webcam #BoatyMcBoatface`;
 
       mastodon.postImage({
         status,

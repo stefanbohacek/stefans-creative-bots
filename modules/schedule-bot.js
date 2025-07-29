@@ -5,7 +5,6 @@ import cronSchedules from "./cron-schedules.js";
 import capitalizeFirstLetter from "./capitalize-first-letter.js";
 
 export default async (bot, app) => {
-  const intervalBots = [];
   try {
     if (bot.about.reply) {
       console.log("setting up replies for ", bot.about.name);
@@ -43,7 +42,7 @@ export default async (bot, app) => {
       }
     }
 
-    if (bot.about.interval) {
+    if (process.env.ENVIRONMENT !== "local" && bot.about.interval) {
       if (bot.about.interval === "EVERY_SECOND") {
         console.log(bot);
 

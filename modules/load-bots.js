@@ -26,6 +26,21 @@ export default async (app) => {
 
         // console.log({ about });
 
+        if (about.links) {
+          const newLinks = [];
+          about.links.forEach((link, index) => {
+            newLinks.push(link);
+
+            if (link.title === "Follow on Mastodon") {
+              newLinks.push({
+                title: "RSS feed",
+                url: link.url + ".rss",
+              });
+            }
+          });
+          about.links = newLinks;
+        }
+
         let botInfo = {
           about,
           script_path: scriptPath,

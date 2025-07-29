@@ -33,12 +33,12 @@ const botScript = async () => {
           "https://legacy.bas.ac.uk/webcams/rrs_sir_david_attenborough/latest.jpg",
         // element: '.entry-content img[width="1920"]',
         description:
-          "View from a webcam mounted on the RRS Sir David Attenborough boat, riding through icy waters.",
+          "View from a webcam mounted on the RRS Sir David Attenborough boat. Typically you'd see the front of the ship with a helipad, and the sea waters surrounding the ship. Depending on the cureent location of the ship, the scenery may include icebergs and industrial ports.",
       };
 
       const filePath = `${__dirname}/../../temp/${botID}.jpg`;
       await downloadFile(station.image_url, filePath);
-      let description = `View from the ${station.name}.`;
+      let description = station.description;
       let weather;
 
       if (station.location) {

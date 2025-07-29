@@ -33,7 +33,7 @@ const botScript = async () => {
           "https://legacy.bas.ac.uk/webcams/rrs_sir_david_attenborough/latest.jpg",
         // element: '.entry-content img[width="1920"]',
         description:
-          "View from a webcam mounted on the RRS Sir David Attenborough boat. Typically you'd see the front of the ship with a helipad, and the sea waters surrounding the ship. Depending on the cureent location of the ship, the scenery may include icebergs and industrial ports.",
+          "View from a webcam mounted on the RRS Sir David Attenborough boat. Typically you'd see the front of the ship with a helipad, and the sea waters surrounding the ship. Depending on the current location of the ship, the scenery may include icebergs and industrial ports.",
       };
 
       const filePath = `${__dirname}/../../temp/${botID}.jpg`;

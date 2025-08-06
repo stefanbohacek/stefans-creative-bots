@@ -527,7 +527,6 @@ Attach the SATA cable and power supply cable
 Attach the straw to the paper with tape or glue
 Attack objects in the environment to gather materials
 Attack the coal block with the pickaxe equipped until the coal block breaks apart
-Attack the people in the torture room but don't kill them
 Attempt to restore from a local backup
 attract Mason Bees
 auto Calculate in Excel
@@ -4090,7 +4089,7 @@ create a Subreddit
 Create a subtitle file in Notepad
 create a Successful Region in SimCity 4
 create a Superhero Movie Trilogy
-create a Tag and Perform a Revert in TortoiseSVN
+create a Tag
 create a Terrarium for an American Toad (Bufor Americanus)
 create a Text Input Using HTML
 create a Thoughts Journal
@@ -4836,7 +4835,7 @@ Don't bother unlocking tier 4
 don't break the silence
 Don't click unfamiliar web links
 Don't give out your real email address online
-Don't let anyone see you killing or using vents
+Don't let anyone see you
 Don't render videos are faster frame rates than they were shot at
 don't stress one thing more than another
 Don't worry about horizontal stripped candies
@@ -6145,7 +6144,7 @@ find Shiny Pokemon
 Find social media accounts using the same name
 Find solutions to any problems you run into
 Find sugar cane
-Find survivors and attack them as a killer
+Find survivors
 Find the "N" on the compass
 find the 5 Yoshi Kids in Paper Mario
 Find the amount of Depreciation per Year by calculating depreciable cost/asset's lifespan
@@ -7993,23 +7992,6 @@ kick Out a Dangerous Roommate
 kick Someone Off Netflix
 kick Someone on Skype
 kickflip on a Skateboard
-Kill a blaze for one blaze rod
-kill a Hornet Nest
-kill a Scorpion
-kill Albert Wesker in Resident Evil 5
-kill Ants
-kill Ants Using Borax
-Kill any running Discord processes
-kill Creeping Charlie
-kill Crepe Myrtle
-kill Flying Ants
-Kill Grelod the Kind
-kill Mold With Vinegar
-kill off a Hero or Other Character
-Kill one of the captives
-Kill the pedestrian when the coast is clear
-Kill vindicators, evokers, and pillagers to loot emeralds
-Kill zombies or spiders (may cause poisoning)
 kiss a Girl the First Time in Your Room
 knit a Baby Blanket
 knit a Baby Hat
@@ -11647,7 +11629,6 @@ muddle
 mulch Around a Tree
 multiply Square Roots
 Multiply the diagonal screen size by 1.2 to determine the proper viewing distance from the TV
-Murder Grelod the Kind
 mute and continue
 mute Members in Discord on Android
 Mute notifications from people you don't follow
@@ -11802,7 +11783,6 @@ observe Jupiter
 observe the Shabbat
 obtain a Copy of Your Birth Certificate in Florida
 obtain a Police Report
-Obtain an Ender Pearl by killing Endermen
 obtain Free Employment Verification of Someone
 Offer to adopt and confirm
 Offer to take the dog
@@ -13167,8 +13147,6 @@ play Mouse Trap (Board Game)
 play Mp4 Videos on a PC
 play MP4s on a Mac
 play Multiplayer Grand Theft Auto for PSP
-play Murder
-play Murder in the Dark
 Play music or watch videos
 play New Super Mario Bros. Wii
 play Nintendo Switch on Chromebook
@@ -13279,7 +13257,6 @@ play What's the Time Mr Wolf
 play Whist
 play Wii Games from a USB Drive or Thumb Drive
 play Wii Sports
-play Wink Murder
 play with 2 Players on the Nintendo Switch
 play with a Hose
 play With Cats
@@ -14303,7 +14280,7 @@ repair an Electric Water Heater
 repair an Exhaust Pipe with a Tin Can
 repair an iPhone from Water Damage
 repair an Umbrella
-Repair generators as a survivor or damage survivors as a killer
+Repair generators
 repair Laminate Flooring with Water Damage
 repair Minor Aircraft Skin Damage
 repair Rotted Eaves
@@ -15810,7 +15787,6 @@ Select photos for your collage
 Select photos to add
 Select photos to move
 Select Picture
-Select Play as Survivor or Play as Killer
 Select PNG as the image format and click Ok
 Select PNG as the output format
 Select Print
@@ -17506,7 +17482,6 @@ take in a Dress
 take in a Dress at the Waist
 take in the Waist on a Pair of Jeans
 take Isabgol
-Take last kill as quickly as possible
 Take lots of pictures
 take Notes
 take Notes on a Book

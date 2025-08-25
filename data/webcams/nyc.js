@@ -26,14 +26,15 @@ export default [
     latitude: 40.7115,
     longitude: -74.0127,
   },
-  {
-    title: "30 Rockefeller Plaza",
-    description: "This webcam usually shows a view of the New York skyline.",
-    link: "https://www.earthcam.com/usa/newyork/rockefellercenter/?cam=rockefellerobservatory",
-    url: "https://www.earthcam.com/cams/includes/image.php?img=FxiZuOzKkdq5wr44wir%2FCw%3D%3D&logo=0&playbutton=0&s=1",
-    latitude: 40.7594,
-    longitude: -73.98,
-  },
+  // {
+  //   title: "30 Rockefeller Plaza",
+  //   description: "This webcam usually shows a view of the New York skyline.",
+  //   link: "https://www.earthcam.com/usa/newyork/rockefellercenter/?cam=rockefellerobservatory",
+  //   url: "https://www.earthcam.com/cams/includes/image.php?img=FxiZuOzKkdq5wr44wir%2FCw%3D%3D&logo=0&playbutton=0&s=1",
+  //   isVideo: true,
+  //   latitude: 40.7594,
+  //   longitude: -73.98,
+  // },
   {
     title: "Times Square",
     description:

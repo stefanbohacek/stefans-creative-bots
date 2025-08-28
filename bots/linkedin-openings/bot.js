@@ -13,7 +13,7 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      let opening = randomFromArray(openings);
+      let opening = randomFromArray(openings.filter(opening => opening.length < 300));
       const doc = nlp(opening);
       const verbs = doc.verbs();
 

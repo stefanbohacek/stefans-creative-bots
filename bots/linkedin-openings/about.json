@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@linkedin_openings",
+  "description": "Great new business opportunites arise.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@linkedin_openings"
+    }
+  ],
+  "interval": "EVERY_FOUR_HOURS"
+}

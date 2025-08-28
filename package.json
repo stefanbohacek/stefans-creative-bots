@@ -19,6 +19,7 @@
     "cheerio": "^0.22.0",
     "color-scheme": "^1.0.1",
     "colorthief": "^2.4.0",
+    "compromise": "^14.14.4",
     "concat-stream": "^2.0.0",
     "cron": "^2.4.3",
     "csv-parse": "^5.5.0",

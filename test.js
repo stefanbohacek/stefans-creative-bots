@@ -5,7 +5,7 @@ dotenv.config();
 // import bot from './bots/wikipediatopedits/bot.js';
 // import bot from "./bots/ignoreallpreviousinstructions/bot.js";
 // import bot from "./bots/test/bot.js";
-import bot from "./bots/nycviewsbot/bot.js";
+import bot from "./bots/linkedin-openings/bot.js";
 
 try {
   bot();

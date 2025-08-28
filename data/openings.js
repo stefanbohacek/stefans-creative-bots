@@ -8420,7 +8420,6 @@ export default [
   `In retrospect, I set the stage for the disaster because I couldn't stop mouthing off to my big brother. `,
   `Gilberec Parzival Moth woke up, startled, when a large black raven landed on his chest at midnight. `,
   `I woke up when my gun jumped into my hand. `,
-  `I, Adolf Hitler, am in Hell, the place to which the victors assign their dead opponents. `,
   `The freakish little leader of the orchestra, newly imported from Sicily to New York, tossed his conductor's wand excitedly through the air, drowning with musical thunders the hum of conversation and the clatter of plates.`,
   `Trevorrick River was but a little stream to have fretted so deep a cleft between the hills as that which sloped from the main road of Tregols parish to the sea. `,
   `There must have been a dozen guests applying for rooms at the Hôtel de France et Chine.`,

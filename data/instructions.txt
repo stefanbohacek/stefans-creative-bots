@@ -840,7 +840,7 @@ breed a Seasonal Dragon in DragonVale
 breed a Sun Dragon in DragonVale
 breed Dwarf Hamsters
 breed Grasshoppers
-Breed PokÃ©mon from two different regions
+Breed Pokémon from two different regions
 breed Quail
 breed Waxworms
 brew Beer Using All Grain Method
@@ -1647,7 +1647,7 @@ Click a movie or TV show
 Click a number of columns
 Click a part of the character rig and move it
 Click a place in the document
-Click a PokÃ©mon title
+Click a Pokémon title
 Click a post to view it
 Click a promotional package you like
 Click A Purchase
@@ -3759,7 +3759,7 @@ Connect to the same Wi-Fi as the Home or Nest
 Connect to the same Wi-Fi network as the Chromecast
 Connect to the same Wi-Fi network as the TV
 Connect to Wi-Fi
-Connect to Wi-Fi and receive your PokÃ©mon
+Connect to Wi-Fi and receive your Pokémon
 Connect to your server in Unturned
 Connect with other social media platforms
 Connect your Android device and PC with a USB cable
@@ -8043,7 +8043,7 @@ Launch the setup file, and finish the install
 Launch the Visual Studio Installer
 Launch WordPad
 Launch your new email app and sign in
-Launch your PokÃ©mon and go to a Global Terminal
+Launch your Pokémon and go to a Global Terminal
 lay a Brick Patio
 lay a New Lawn
 lay Brick
@@ -8152,7 +8152,7 @@ load and Fire a Muzzleloader
 load Dice
 load Images in Mail Automatically on an iPhone
 load Plugins in Pro Tools
-Load PokÃ©mon Platinum on your Nintendo DS or Nintendo 3DS/2DS
+Load Pokémon Platinum on your Nintendo DS or Nintendo 3DS/2DS
 Load the map in Singleplayer mode, or add the server information in multiplayer mode
 Load the resource pack
 Load this backup onto a new phone
@@ -8258,7 +8258,7 @@ log Out of Discord on a PC or Mac
 log Out of Facebook Everywhere on Android
 log Out of Google Drive on PC or Mac
 log Out of Pinterest on Android
-Log out of PokÃ©mon Go
+Log out of Pokémon Go
 log Out of Slack on Android
 Log out of Snapchat
 Log out of your account on your app
@@ -8436,7 +8436,6 @@ make a Bark Rubbing
 make a Basement French Drain
 make a Basic Animated Video in PowerPoint
 make a Basic Automatic Room Door Closer
-make a Basic ConsommÃ©
 make a Basic Felt Doll
 make a Basket from a Garden Hose
 make a Basketball Hoop
@@ -9433,7 +9432,6 @@ make Belgian Fries
 make Bengali Spiced Potato Cakes
 make Benne Cakes
 make Better Tasting Instant Coffee
-make Beurre ManiÃ©
 make Beurre Manie
 make Bhatura
 make Bibimbap
@@ -11047,7 +11045,7 @@ Make sure you have a compatible fingerprint reader (if you don't have one built-
 Make sure you have the Premium plan
 Make sure you meet the requirements
 Make sure you're in a call
-Make sure you're signed up to receive marketing materials from the PokÃ©mon Company International
+Make sure you're signed up to receive marketing materials from the Pokémon Company International
 Make sure your Android phone has the latest update
 Make sure your Android supports RCS
 Make sure your apps are up-to-date
@@ -14492,7 +14490,7 @@ Restart Chromium
 Restart Edge
 Restart Firefox
 Restart LibreOffice
-Restart PokÃ©mon Platinum
+Restart Pokémon Platinum
 restart Pokemon Platinum
 restart Services in Linux
 Restart the application
@@ -16333,7 +16331,7 @@ Set up your iPad as new
 set Up Your Java_Home Path in Ubuntu
 Set up your new operating system
 Set up your notification settings
-Set up your party with a PokÃ©mon that can use Dig, a Wailord in the front, and a Relicanth at the end
+Set up your party with a Pokémon that can use Dig, a Wailord in the front, and a Relicanth at the end
 Set up your Stripe account
 Set your ad preferences
 Set your emulation options
@@ -17896,7 +17894,7 @@ Try different poses and smiles
 Try different symbols
 Try disconnecting and reconnecting
 Try Drawing Guides with Drawing Assist for more complicated drawings
-Try encountering the same PokÃ©mon repeatedly
+Try encountering the same Pokémon repeatedly
 Try on online proxy
 Try opening the Task Manager A virus may prevent you from opening it
 Try reconnecting the Bluetooth device
@@ -18924,7 +18922,7 @@ Use the Optimize function
 Use the options below "Object" in the menu to the right to rotate and flip an object
 Use the options in Create-a-Sim to edit your Sim
 Use the options on the print preview menu to set your print settings
-Use the options on the web page to create a custom PokÃ©mon
+Use the options on the web page to create a custom Pokémon
 Use the padlock to toggle chat privcy
 Use the picture element to display different versions of photos
 Use the plastic pry tool to separate the back cover from the back

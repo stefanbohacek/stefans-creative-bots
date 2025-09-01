@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  // Query via Wikidata Weekly Summary #695
+  // Query by Silvia Gutiérrez @espejolento@fedihum.org via Wikidata Weekly Summary #695.
   const items = await wikidata(
     `
   SELECT ?item ?itemLabel ?itemDescription ?audioFile ?article

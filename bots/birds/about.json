@@ -1,7 +1,7 @@
 {
   "active": true,
   "name": "@birds",
-  "description": "Birds and their sounds.",
+  "description": "Birds and their sounds. Wikidata query by Silvia Gutiérrez @espejolento@fedihum.org.",
   "links": [
     {
       "title": "Follow on Mastodon",

@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@birds",
+  "description": "Birds and their sounds.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@birds"
+    }   
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

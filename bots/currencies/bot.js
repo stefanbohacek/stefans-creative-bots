@@ -27,7 +27,7 @@ const botScript = async () => {
           ?article schema:isPartOf <https://en.wikipedia.org/>
         }
     } 
-  `);
+  `, true);
 
   const item = randomFromArray(items);
   // console.log(item);

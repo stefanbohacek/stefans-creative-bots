@@ -24,7 +24,7 @@ const botScript = async () => {
         ?article schema:isPartOf <https://en.wikipedia.org/>
       }
     }    
-  `);
+  `, true);
 
   const item = randomFromArray(items);
   const status = `Hey, remember ${item.label}?\n\n${item.wikipediaUrl}\n\n#discontinued #nostalgia`;

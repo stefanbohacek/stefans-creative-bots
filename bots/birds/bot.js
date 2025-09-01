@@ -10,48 +10,46 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  const items = await wikidata(`
-    SELECT DISTINCT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article 
-    WHERE 
-    {
-      VALUES ?type {  wd:Q28542014 wd:Q68 wd:Q60484681  }
-      ?item wdt:P31 ?type .
-      ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") . 
-      ?item wdt:P18 ?image;
+  // Query via Wikidata Weekly Summary #695
+  const items = await wikidata(
+    `
+  SELECT ?item ?itemLabel ?itemDescription ?audioFile ?article
+  WHERE {
+    ?item wdt:P31 wd:Q16521 ;
+          wdt:P171* wd:Q5113 ;
+          wdt:P51 ?audioFile .
+          ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") . 
       SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
       {
         ?article schema:about ?item .
         ?article schema:inLanguage "en" .
         ?article schema:isPartOf <https://en.wikipedia.org/>
       }
-    }
-  `, true);
+  }
+  LIMIT 10000
+`,
+    false
+  );
+
+  console.log("items", items);
 
   const item = randomFromArray(items);
-  // console.log(item);
-  let imageUrl = "";
+  console.log(item);
 
-  if (item.image) {
-    imageUrl = item.image;
-  }
+  const status = `${item.label}\n\n${item.wikipediaUrl}\n\n#birds`;
 
-  const status = `${item.label ? `${item.label}, ` : ""} ${
-    item.description ? `${item.description}. ` : ""
-  }\n\n${item.wikipediaUrl}\n\n#computers #tech #technology`;
-
-  const filePath = `${__dirname}/../../temp/computer.jpg`;
-  await downloadFile(imageUrl, filePath);
+  const filePath = `${__dirname}/../../temp/bird.ogg`;
+  await downloadFile(item.audio, filePath);
 
   const mastodon = new mastodonClient({
-    access_token: process.env.COMPUTERS_BOT_MASTODON_ACCESS_TOKEN,
+    access_token: process.env.BIRDS_BOT_MASTODON_ACCESS_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });
 
   mastodon.postImage({
     status: status.replace("  ", " "),
     image: filePath,
-    alt_text:
-      "A photo of a computer from the linked website.",
+    alt_text: "A recording of a bird singing.",
   });
 
   return true;

@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-export default async (query) => {
+export default async (query, filterImage) => {
   const apiUrl = `https://query.wikidata.org/sparql?query=${encodeURIComponent(
     query
   )}&format=json`;
@@ -11,7 +11,7 @@ export default async (query) => {
   if (items && items.length) {
     items = items
       .map((item) => {
-        const wikidataId = item.item.value.split("/entity/")[1];
+        const wikidataId = item?.item?.value?.split("/entity/")[1];
         const wikipediaUrl =
           item?.article?.value || `https://www.wikidata.org/wiki/${wikidataId}`;
 
@@ -26,15 +26,19 @@ export default async (query) => {
         }
 
         return {
-          label: item.itemLabel.value || "",
+          label: item?.itemLabel?.value || "",
           description: item?.itemDescription?.value || "",
           wikipediaUrl: wikipediaUrl,
           image: imageUrl,
+          audio: item?.audioFile?.value || "",
           lat: item?.lat?.value || "",
           long: item?.lon?.value || "",
         };
-      })
-      .filter((item) => item.image && (item.label || item.description));
+      });
+
+      if (filterImage){
+        items.filter((item) => item.image && (item.label || item.description));
+      }
   }
   return items;
 };

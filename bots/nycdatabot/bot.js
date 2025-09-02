@@ -180,14 +180,14 @@ const findDataset = async () => {
   const dataLimit = "1000";
   const discoveryUrl = `http://api.us.socrata.com/api/catalog/v1?domains=${dataSource}&search_context=${dataSource}&only=${dataType}&limit=${dataLimit}&offset=${getRandomInt(0,351)}`;
 
-  console.log(`finding a dataset in the ${dataSource} domain (${dataType})`);
+  console.log(`finding a dataset in the ${dataSource} domain (${dataType})`, discoveryUrl);
 
   let response = await fetch(discoveryUrl);
   let bodyParsed = await response.json();
 
   datasets = bodyParsed.results.filter((dataset) => {
     return (
-      dataset.resource.columns_name && dataset.resource.columns_name.length
+      dataset?.resource?.columns_name && dataset?.resource?.columns_name?.length
     );
   });
 

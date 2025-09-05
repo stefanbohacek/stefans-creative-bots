@@ -35,7 +35,7 @@ const botScript = async () => {
 
   const item = randomFromArray(items);
   console.log(item);
-  const status = `${item.label}\n\n${item.wikipediaUrl}\n\n#birds`;
+  const status = `${item.label}\n\n${item.wikipediaUrl}\n\n#birds #birdwatching`;
 
   const filePath = `${__dirname}/../../temp/bird.ogg`;
   await downloadFile(item.audio, filePath);

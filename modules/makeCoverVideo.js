@@ -20,7 +20,10 @@ export default (imagePath, audioPath, outputPath) => {
         .input(audioPath)
         .videoCodec("libx264")
         .audioCodec("aac")
-        .size("1280x720")
+        .videoFilters([
+          'scale=1280:720:force_original_aspect_ratio=decrease',
+          'pad=1280:720:(ow-iw)/2:(oh-ih)/2:black'
+        ])
         .fps(1)
         .duration(duration)
         .outputOptions(["-pix_fmt yuv420p", "-movflags +faststart"])

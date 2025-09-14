@@ -6,6 +6,7 @@ import getImageLuminosity from "./../../modules/get-image-luminosity.js";
 import getWeather from "./../../modules/get-weather.js";
 
 const botID = "southpoleviews";
+const hashtags = "#SouthPole #antarctica #view #webcam";
 
 const botScript = async () => {
   try {
@@ -36,7 +37,7 @@ const botScript = async () => {
             }
           }
 
-          const status = `${station.name} via ${station.url} #SouthPole #antarctica #view #webcam`;
+          const status = `${station.name} via ${station.url} ${hashtags}`;
 
           mastodon.postImage({
             status,
@@ -44,16 +45,16 @@ const botScript = async () => {
             alt_text: description,
           });
         } else {
-          console.log("@southpoleviews: image too dark, retrying...");
+          console.log(`@${botID}: image too dark, retrying...`);
           await botScript();
         }
       } else {
-        console.log("@southpoleviews: image not found, retrying...");
+        console.log(`@${botID}: image not found, retrying...`);
         await botScript();
       }
     })();
   } catch (error) {
-    console.log("southpoleviews error:", error);
+    console.log(`@${botID} error:`, error);
   }
 };
 

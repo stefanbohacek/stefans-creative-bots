@@ -16,7 +16,8 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  const items = await wikidata(`
+  const items = await wikidata(
+    /* sql */ `    
     SELECT DISTINCT ?item ?itemLabel ?itemDescription ?image ?article WHERE {
         ?item wdt:P31 wd:Q8142 .
         SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
@@ -27,7 +28,9 @@ const botScript = async () => {
           ?article schema:isPartOf <https://en.wikipedia.org/>
         }
     } 
-  `, true);
+  `,
+    true
+  );
 
   const item = randomFromArray(items);
   // console.log(item);
@@ -40,14 +43,12 @@ const botScript = async () => {
     const imageUrl = item.image;
     const filePath = `${__dirname}/../../temp/currency.jpg`;
     await downloadFile(imageUrl, filePath);
-  
+
     mastodon.postImage({
       status: capitalizeFirstLetter(status),
       image: filePath,
-      alt_text:
-        "A photo of a currency from the linked website.",
+      alt_text: "A photo of a currency from the linked website.",
     });
-  
   } else {
     mastodon.post({
       status: status,

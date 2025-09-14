@@ -10,7 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  const items = await wikidata(`
+  const items = await wikidata(
+    /* sql */ `
     SELECT DISTINCT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article 
     WHERE 
     {
@@ -25,7 +26,9 @@ const botScript = async () => {
         ?article schema:isPartOf <https://en.wikipedia.org/>
       }
     }
-  `, true);
+  `,
+    true
+  );
 
   const item = randomFromArray(items);
   // console.log(item);
@@ -50,8 +53,7 @@ const botScript = async () => {
   mastodon.postImage({
     status: status.replace("  ", " "),
     image: filePath,
-    alt_text:
-      "A photo of a computer from the linked website.",
+    alt_text: "A photo of a computer from the linked website.",
   });
 
   return true;

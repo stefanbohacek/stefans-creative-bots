@@ -10,7 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  const items = await wikidata(`
+  const items = await wikidata(
+    /* sql */ `
     SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
       ?item wdt:P31 wd:Q39715 .
       ?item wdt:P131 ?place .  
@@ -30,7 +31,9 @@ const botScript = async () => {
         ?article schema:isPartOf <https://en.wikipedia.org/>
       }
     } 
-`, true);
+`,
+    true
+  );
 
   const item = randomFromArray(items);
   console.log(item);

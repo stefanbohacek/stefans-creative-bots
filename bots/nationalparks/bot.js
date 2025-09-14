@@ -10,7 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  const items = await wikidata(`
+  const items = await wikidata(
+    /* sql */ `
     SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
       ?item wdt:P31 wd:Q46169 .
       ?item wdt:P131 ?place .  
@@ -30,7 +31,9 @@ const botScript = async () => {
         ?article schema:isPartOf <https://en.wikipedia.org/>
       }
     } 
-  `, true);
+  `,
+    true
+  );
 
   const item = randomFromArray(items);
   console.log(item);
@@ -46,7 +49,9 @@ const botScript = async () => {
 
   const status = `${item.label ? `${item.label}, ` : ""} ${
     item.description ? `${item.description}. ` : ""
-  }\n\n${item.wikipediaUrl}\n\n#park #parks #NationalPark #NationalParks #outdoors #map`;
+  }\n\n${
+    item.wikipediaUrl
+  }\n\n#park #parks #NationalPark #NationalParks #outdoors #map`;
 
   const filePath = `${__dirname}/../../temp/nationalpark.jpg`;
   await downloadFile(imageUrl, filePath);

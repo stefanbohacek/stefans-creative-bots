@@ -13,7 +13,7 @@ const __dirname = dirname(__filename);
 const botScript = async () => {
   // Query by Silvia Gutiérrez @espejolento@fedihum.org via Wikidata Weekly Summary #695.
   const items = await wikidata(
-    `
+    /* sql */ `
   SELECT ?item ?itemLabel ?itemDescription ?audioFile ?article ?image
   WHERE {
     ?item wdt:P31 wd:Q16521 ;

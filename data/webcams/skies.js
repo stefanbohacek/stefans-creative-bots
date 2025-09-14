@@ -45,6 +45,16 @@ export default [
     latitude: 36.25299,
     longitude: -81.4156,
   },
+  {
+    title:
+      "Appalachian State University's Dark Sky Observatory, North Carolina, facing South",
+    description:
+      "This webcam usually shows a view of the sky with trees in the foreground.",
+    url: "https://dsoftp.appstate.edu/dsoftp/NewSite/dsoftp/FosCams/DSO-SkyCams-2.jpg",
+    link: "https://dso.appstate.edu/webcams/dso-skycam-south",
+    latitude: 36.25299,
+    longitude: -81.4156,
+  },
   // {
   //   "title": "Appalachian State University's Dark Sky Observatory, North Carolina, facing West",
   //   description:

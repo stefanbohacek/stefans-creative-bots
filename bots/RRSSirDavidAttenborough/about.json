@@ -1,7 +1,8 @@
 {
-  "active": true,
+  "active": false,
   "name": "@RRSSirDavidAttenborough",
   "description": "Views RRS Sir David Attenborough.",
+  "note": "On hold while the boat is docked.",
   "links": [
     {
       "title": "Follow on Mastodon",

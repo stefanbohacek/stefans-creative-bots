@@ -23,7 +23,7 @@ const botScript = async () => {
         const luminosity = await getImageLuminosity(imageFilePath);
 
         if (luminosity > 40) {
-          let description = `View from the ${station.name}.`;
+          let description = station.description ? station.description : `View from the ${station.name}.`;
           let weather;
 
           if (station.location) {

@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "name": "@roots",
+  "description": "Drawings of roots.",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@roots"
+    }   
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

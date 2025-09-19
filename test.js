@@ -9,7 +9,7 @@ dotenv.config();
 // import bot from "./bots/plants/bot.js";
 // import bot from "./bots/galaxy/bot.js";
 // import bot from "./bots/nycdatabot/bot.js";
-import bot from "./bots/southpoleviews/bot.js";
+import bot from "./bots/roots/bot.js";
 
 try {
   bot();

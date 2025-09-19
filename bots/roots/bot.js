@@ -18,15 +18,33 @@ const botScript = async () => {
   )}/maxRecords/100`;
   const resp = await fetch(apiURL);
   const respJSON = await resp.json();
-
   const item = randomFromArray(respJSON.items);
-  console.log(item);
+  // console.log(item);
+
+  let plantDescription = item.metadataFields.find(
+    (field) => field.field === "descri"
+  )?.value;
+
+  if (plantDescription) {
+    const regex =
+      /H plant (\d+) cm, D root (\d+) cm, diameter root system (\d+) cm/;
+    const match = plantDescription.match(regex);
+    const height = match[1];
+    const depth = match[2];
+    const diameter = match[3];
+
+    plantDescription = `\n\n- plant height: ${height}cm\n- root depth: ${depth}cm\n- root system diameter: ${diameter}cm`;
+  } else {
+    plantDescription = "";
+  }
 
   let imageUrl = `https://images.wur.nl/digital/api/singleitem/image/coll13/${item.itemId}/default.jpg`;
   const filePath = `${__dirname}/../../temp/${botId}.jpg`;
   await downloadFile(imageUrl, filePath);
   const status = `${item.title}. https://images.wur.nl/digital/collection/coll13/id/${item.itemId}/\n\n#plants #roots #illustration`;
-  console.log(status, imageUrl);
+
+  // console.log(status);
+  // console.log(plantDescription);
 
   const mastodon = new mastodonClient({
     access_token: process.env.ROOTS_BOT_MASTODON_ACCESS_TOKEN,
@@ -36,7 +54,7 @@ const botScript = async () => {
   mastodon.postImage({
     status: status.replace("  ", " "),
     image: filePath,
-    alt_text: "A drawing of a plant's root system from the linked website.",
+    alt_text: `A drawing of a plant's root system from the linked website.${plantDescription}`,
   });
 
   return true;

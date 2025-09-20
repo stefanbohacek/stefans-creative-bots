@@ -1,4 +1,5 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
+import UnitConverter from "./../../modules/UnitConverter.js";
 import getRandomInt from "./../../modules/get-random-int.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import downloadFile from "./../../modules/download-file.js";
@@ -26,14 +27,19 @@ const botScript = async () => {
   )?.value;
 
   if (plantDescription) {
+    const unitConverter = new UnitConverter();
+
     const regex =
       /H plant (\d+) cm, D root (\d+) cm, diameter root system (\d+) cm/;
     const match = plantDescription.match(regex);
-    const height = match[1];
-    const depth = match[2];
-    const diameter = match[3];
+    const heightCM = match[1];
+    const depthCM = match[2];
+    const diameterCM = match[3];
+    const heightInch = unitConverter.cmToInches(heightCM, 1);
+    const depthInch = unitConverter.cmToInches(depthCM, 1);
+    const diameterInch = unitConverter.cmToInches(diameterCM, 1);
 
-    plantDescription = `\n\n- plant height: ${height}cm\n- root depth: ${depth}cm\n- root system diameter: ${diameter}cm`;
+    plantDescription = `\n\n- plant height: ${heightCM.toLocaleString()} centimeters / ${heightInch.toLocaleString()} inches\n- root depth: ${depthCM.toLocaleString()} centimeters / ${depthInch.toLocaleString()} inches\n- root system diameter: ${diameterCM.toLocaleString()} centimeters / ${diameterInch.toLocaleString()} inches`;
   } else {
     plantDescription = "";
   }

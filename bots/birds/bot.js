@@ -3,15 +3,17 @@ import makeCoverVideo from "./../../modules/makeCoverVideo.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import wikidata from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/download-file.js";
-
-import { dirname } from "path";
+import { dirname, extname } from "path";
 import { fileURLToPath } from "url";
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+const getAudioExtension = (url) => {
+  const extension = extname(new URL(url).pathname);
+  return extension || ".ogg";
+};
+
 const botScript = async () => {
-  // Query by Silvia Gutiérrez @espejolento@fedihum.org via Wikidata Weekly Summary #695.
   const items = await wikidata(
     /* sql */ `
   SELECT ?item ?itemLabel ?itemDescription ?audioFile ?article ?image
@@ -32,29 +34,26 @@ const botScript = async () => {
 `,
     true
   );
-
   const item = randomFromArray(items);
   console.log(item);
   const status = `${item.label}\n\n${item.wikipediaUrl}\n\n#birds #birdwatching`;
 
-  const filePath = `${__dirname}/../../temp/bird.ogg`;
+  const audioExtension = getAudioExtension(item.audio);
+  const filePath = `${__dirname}/../../temp/bird${audioExtension}`;
   await downloadFile(item.audio, filePath);
+
   const mastodon = new mastodonClient({
     access_token: process.env.BIRDS_BOT_MASTODON_ACCESS_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });
-
   const imageFilePath = `${__dirname}/../../temp/bird.png`;
   await downloadFile(item.image, imageFilePath);
   await makeCoverVideo(imageFilePath, filePath, `${filePath}.mp4`);
-
   mastodon.postImage({
     status,
     image: `${filePath}.mp4`,
     alt_text: `A photo of the ${item.label} bird with a recording of the bird singing.`,
   });
-
   return true;
 };
-
 export default botScript;

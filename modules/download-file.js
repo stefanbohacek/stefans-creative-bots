@@ -4,9 +4,12 @@ import fs from "fs";
 export default async (url, path) => {
   console.log("downloading...", { url, path });
   const response = await fetch(url);
-  const blob = await response.blob();
-  const bos = Buffer.from(await blob.arrayBuffer());
-  // const bos = blob.stream();
-  fs.writeFileSync(path, bos);
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+  }
+
+  const buffer = await response.buffer();
+  fs.writeFileSync(path, buffer);
   return { path };
 };

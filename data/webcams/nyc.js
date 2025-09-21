@@ -17,15 +17,15 @@ export default [
   //   latitude: 40.6892,
   //   longitude: -74.0445,
   // },
-  {
-    title: "World Trade Center",
-    description:
-      "This webcam usually shows a view of the New York skyline with the World Trade Center skyscraper showing prominently.",
-    link: "https://www.earthcam.com/usa/newyork/skyline/?cam=skyline_g",
-    url: "https://www.earthcam.com/cams/includes/image.php?img=xMXhcQOChmwtRpphWBrVFQ%3D%3D&logo=0&playbutton=0&s=1",
-    latitude: 40.7115,
-    longitude: -74.0127,
-  },
+  // {
+  //   title: "World Trade Center",
+  //   description:
+  //     "This webcam usually shows a view of the New York skyline with the World Trade Center skyscraper showing prominently.",
+  //   link: "https://www.earthcam.com/usa/newyork/skyline/?cam=skyline_g",
+  //   url: "https://www.earthcam.com/cams/includes/image.php?img=xMXhcQOChmwtRpphWBrVFQ%3D%3D&logo=0&playbutton=0&s=1",
+  //   latitude: 40.7115,
+  //   longitude: -74.0127,
+  // },
   // {
   //   title: "30 Rockefeller Plaza",
   //   description: "This webcam usually shows a view of the New York skyline.",

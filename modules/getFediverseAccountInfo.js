@@ -42,9 +42,8 @@ export default async (fediverseLinkURL) => {
     return JSON.parse(cachedData);
   }
 
-  await sleep(1000);
-
   try {
+    await sleep(1000);    
     const resp = await fetch(
       `https://${server}/api/v1/accounts/lookup?acct=${username}`
     );

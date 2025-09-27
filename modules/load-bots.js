@@ -46,20 +46,20 @@ export default async (app) => {
           about.tags.sort();
         }
 
-        if (about.links) {
-          const fediverseLink = about.links.filter((link) =>
-            ["Follow on Mastodon"].includes(link.title)
-          );
+        // if (about.links) {
+        //   const fediverseLink = about.links.filter((link) =>
+        //     ["Follow on Mastodon"].includes(link.title)
+        //   );
 
-          if (fediverseLink?.length > 0) {
-            const fediverseAccountInfo = await getFediverseAccountInfo(
-              fediverseLink[0]?.url
-            );
-            if (fediverseAccountInfo.followers_count > 0) {
-              about.followers_count = followersCount.toLocaleString();
-            }
-          }
-        }
+        //   if (fediverseLink?.length > 0) {
+        //     const fediverseAccountInfo = await getFediverseAccountInfo(
+        //       fediverseLink[0]?.url
+        //     );
+        //     if (fediverseAccountInfo.followers_count > 0) {
+        //       about.followers_count = followersCount.toLocaleString();
+        //     }
+        //   }
+        // }
 
         let botInfo = {
           about,

@@ -8,3 +8,4 @@ temp.*
 *.mp4.mkv
 *.mp4.webm
 !public/**/*.*
+data/fediverse

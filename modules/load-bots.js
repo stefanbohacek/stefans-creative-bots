@@ -3,6 +3,7 @@ import { readFileSync } from "fs";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import scheduleBot from "./schedule-bot.js";
+import getFediverseAccountInfo from "./getFediverseAccountInfo.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -43,6 +44,19 @@ export default async (app) => {
 
         if (about.tags) {
           about.tags.sort();
+        }
+
+        const fediverseLink = about.links.filter((link) =>
+          ["Follow on Mastodon"].includes(link.title)
+        );
+
+        if (fediverseLink?.length > 0) {
+          const fediverseAccountInfo = await getFediverseAccountInfo(
+            fediverseLink[0]?.url
+          );
+          if (fediverseAccountInfo.followers_count > 0) {
+            about.followers_count = followersCount.toLocaleString();
+          }
         }
 
         let botInfo = {

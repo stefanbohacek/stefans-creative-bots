@@ -1,5 +1,12 @@
 <div class="card mb-4">
-  <div class="card-body">
+  <div class="card-body position-relative">
+    {{#if about.followers_count}}
+    <span class="badge bg-info text-white position-absolute"
+      style="top: 10px; right: 10px; z-index: 10;">
+      {{about.followers_count}} followers
+    </span>
+    {{/if}}
+
     <div class="row mb-3 bot-showcase">
       <div class="col-sm-12">
         {{#if about.about_url}}

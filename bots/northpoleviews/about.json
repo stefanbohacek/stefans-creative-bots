@@ -2,6 +2,7 @@
   "active": true,
   "name": "@northpoleviews",
   "description": "Views from the North Pole.",
+  "tags": ["webcam", "live", "view"],
   "links": [
     {
       "title": "Follow on Mastodon",

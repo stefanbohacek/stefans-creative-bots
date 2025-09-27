@@ -2,6 +2,7 @@
   "active": true,
   "name": "@botwikirandom",
   "description": "Explore Botwiki one bot at a time.",
+  "tags": ["bots", "botwiki"],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2021/01/botwikirandom.png",
   "about_url": "https://botwiki.org/bot/botwikirandom/",
   "links": [

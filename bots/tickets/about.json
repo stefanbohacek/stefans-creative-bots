@@ -2,6 +2,7 @@
   "active": true,
   "name": "@tickets",
   "description": "All aboard!",
+  "tags": ["tickets", "travel", "archive"],
   "links": [
     {
       "title": "Follow on Mastodon",

@@ -1,8 +1,8 @@
 {
   "active": true,
   "name": "@whataweek",
-  "description":
-    "What a week, huh?",
+  "description": "What a week, huh?",
+  "tags": ["meme"],
   "links": [
     {
       "title": "Follow on Mastodon",

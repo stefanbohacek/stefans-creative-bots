@@ -2,6 +2,7 @@
   "active": true,
   "name": "@mastodon_mobile_apps",
   "description": "Keep track of latest updates to Mastodon's official mobile apps.",
+  "tags": ["mastodon", "fediverse", "github", "android", "ios"],
   "links": [
     {
       "title": "Follow on Mastodon",

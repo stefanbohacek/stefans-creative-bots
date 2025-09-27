@@ -2,6 +2,7 @@
   "active": true,
   "name": "@mastodonroadmap",
   "description": "Posting when new items are added to Mastodon's public roadmap.",
+  "tags": ["mastodon", "fediverse"],
   "links": [
     {
       "title": "Follow on Mastodon",

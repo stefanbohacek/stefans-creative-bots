@@ -2,6 +2,7 @@
   "active": true,
   "name": "This dataset does not exist",
   "description": "These datasets probably don't exist.",
+  "tags": ["data", "dataset", "generative text"],
   "links": [
     {
       "title": "Follow on Mastodon",

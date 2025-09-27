@@ -2,6 +2,7 @@
   "active": true,
   "name": "@computers",
   "description": "Computers!",
+  "tags": ["wikidata", "computers", "technology", "wikipedia"],
   "links": [
     {
       "title": "Follow on Mastodon",

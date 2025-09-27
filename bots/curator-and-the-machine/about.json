@@ -2,6 +2,7 @@
   "active": true,
   "name": "Curator and the machine",
   "description": "Exploring creativity and authorship with generative art and a bot.",
+  "tags": ["generative art", "interactive", "art"],
   "thumbnail": "https://stefanbohacek.com/wp-content/uploads/2018/08/curator-and-the-machine-thumbnail-v2.jpg",
   "about_url": "https://stefanbohacek.com/project/curator-and-the-machine/",
   "source_url": "https://glitch.com/edit/#!/curator-and-the-machine",

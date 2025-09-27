@@ -2,6 +2,7 @@
   "active": false,
   "name": "UNTITLED",
   "description": "Inspired by the work of Mark Rothko and Benjamin Kovach.",
+  "tags": ["generative art", "art"],
   "note": "Lost source code :-/",
   "thumbnail": "https://botwiki.org/wp-content/uploads/2018/09/untitled-artist.png",
   "about_url": "https://botwiki.org/bot/untitled-artist/",

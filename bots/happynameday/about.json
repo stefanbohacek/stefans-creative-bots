@@ -2,9 +2,9 @@
   "active": true,
   "name": "@happynameday",
   "description": "Happy name day!",
+  "tags": ["calendar", "celebration", "holidays"],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/12/happy-name-day--1703685900.png",
   "about_url": "https://botwiki.org/bot/happy-name-day/",
-
   "links": [
     {
       "title": "Follow on Mastodon",

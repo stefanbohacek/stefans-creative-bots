@@ -2,14 +2,14 @@
   "active": true,
   "name": "@lighthouses",
   "description": "Lighthouses around the world.",
-  "thumbnail":
-    "https://botwiki.org/wp-content/uploads/2023/11/lighthouses-lighthouses-botsin-space-botsin-space.png",
-  "about_url": "https://botwiki.org/bot/lighthouses/",  
+  "tags": ["wikidata", "wikipedia", "maps"],
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2023/11/lighthouses-lighthouses-botsin-space-botsin-space.png",
+  "about_url": "https://botwiki.org/bot/lighthouses/",
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@lighthouses"
-    }   
+    }
   ],
   "interval": "EVERY_SIX_HOURS"
 }

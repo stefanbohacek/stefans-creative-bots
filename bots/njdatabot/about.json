@@ -2,6 +2,7 @@
   "active": true,
   "name": "Data of New Jersey",
   "description": "Explore the state of New Jersey through data.",
+  "tags": ["data", "dataviz", "data visualization", "new jersey", "maps"],
   "links": [
     {
       "title": "Follow on Mastodon",

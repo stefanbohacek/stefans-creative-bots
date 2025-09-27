@@ -2,6 +2,7 @@
   "active": true,
   "name": "snow.gif",
   "description": "🌨️",
+  "tags": ["weather", "snow", "generative art", "gif", "animated"],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2022/11/snowdotgif-botsinspace.png",
   "about_url": "https://botwiki.org/bot/snow-gif/",
   "links": [

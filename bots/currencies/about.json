@@ -2,6 +2,7 @@
   "active": true,
   "name": "@currencies",
   "description": "Money around the world, and through history.",
+  "tags": ["wikidata", "wikipedia", "money", "currency"],
   "links": [
     {
       "title": "Follow on Mastodon",

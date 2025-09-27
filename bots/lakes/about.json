@@ -2,6 +2,7 @@
   "active": true,
   "name": "Lakes",
   "description": "Enjoy views of lakes.",
+  "tags": ["webcam", "live", "view", "lakes", "nature"],
   "links": [
     {
       "title": "Follow on Mastodon",

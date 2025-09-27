@@ -2,6 +2,7 @@
   "active": true,
   "name": "@trainstations",
   "description": "Train stations around the world.",
+  "tags": ["wikidata", "wikipedia", "maps", "public transport", "trains"],
   "links": [
     {
       "title": "Follow on Mastodon",

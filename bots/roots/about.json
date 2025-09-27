@@ -2,6 +2,7 @@
   "active": true,
   "name": "@roots",
   "description": "Drawings of roots.",
+  "tags": ["plants", "botany"],
   "links": [
     {
       "title": "Follow on Mastodon",

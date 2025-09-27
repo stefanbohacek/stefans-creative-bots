@@ -2,6 +2,7 @@
   "active": true,
   "name": "@parks",
   "description": "Parks around the world.",
+  "tags": ["wikidata", "wikipedia", "parks", "maps"],
   "links": [
     {
       "title": "Follow on Mastodon",

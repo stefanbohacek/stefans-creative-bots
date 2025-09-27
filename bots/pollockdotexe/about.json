@@ -2,6 +2,7 @@
   "active": true,
   "name": "pollock.exe",
   "description": "A robot painter, very Pollock-like.",
+  "tags": ["generative art", "art"],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2018/06/pollock.exe.png",
   "about_url": "https://botwiki.org/bot/pollock-exe/",
   "links": [

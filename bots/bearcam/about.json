@@ -2,6 +2,7 @@
   "active": true,
   "name": "@bearcam",
   "description": "Watching some bears.",
+  "tags": ["webcam", "live", "view", "nature", "animals", "wildlife", "bears"],
   "thumbnail":
     "https://botwiki.org/wp-content/uploads/2023/07/-bearcam-1689222972.png",
   "about_url": "https://botwiki.org/bot/bearcam/",

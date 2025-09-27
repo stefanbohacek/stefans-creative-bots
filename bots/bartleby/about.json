@@ -3,6 +3,7 @@
   "reply": true,
   "name": "Bartleby, the Scrivener",
   "description": "I would prefer not to.",
+  "tags": ["interactive", "books", "literature"],
   "about_url": "https://botwiki.org/bot/bartleby_scrvnr/",
   "links": [
     {

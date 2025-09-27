@@ -2,6 +2,7 @@
   "active": true,
   "name": "rain.gif",
   "description": "🌧🌧🌧",
+  "tags": ["weather", "gif", "generative art"],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2018/07/rain.gif.png",
   "about_url": "https://botwiki.org/bot/rain-gif/",
   "links": [

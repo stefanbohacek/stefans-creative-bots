@@ -2,6 +2,7 @@
   "active": true,
   "name": "@linkedin_openings",
   "description": "Great new business opportunites arise.",
+  "tags": ["meme", "social media", "linkedin"],
   "links": [
     {
       "title": "Follow on Mastodon",

@@ -2,6 +2,7 @@
   "active": true,
   "name": "@maps",
   "description": "Exploring historical maps.",
+  "tags": ["maps", "history", "archive"],
   "links": [
     {
       "title": "Follow on Mastodon",

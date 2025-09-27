@@ -64,6 +64,17 @@ export default [
     url: "https://www.bas.ac.uk/data/our-data/images/webcams/bird-island-webcam/",
     element: '.entry-content img[width="640"]',
   },
+  {
+    name: "Halley VI webcam",
+    // description: "TODO",
+    url: "https://www.bas.ac.uk/data/our-data/images/webcams/halley-vi-webcam/",
+    // element: '.entry-content img[width="1920"]',
+    element: '.entry-content img',
+    location: {
+      lat: 75.5674,
+      lon: 25.5165,
+    },
+  },
   // {
   //   name: "Rothera webcam",
   //   description: "TODO",
@@ -83,16 +94,6 @@ export default [
   //     url: "https://www.bas.ac.uk/data/our-data/images/webcams/rrs-james-clark-ross-webcam/",
   //     element: '.entry-content img[width="640"]',
   //   },
-  // {
-  //   name: "Halley VI webcam",
-  //   description: "TODO",
-  //   url: "https://www.bas.ac.uk/data/our-data/images/webcams/halley-vi-webcam/",
-  //   element: '.entry-content img[width="1920"]',
-  //   location: {
-  //     lat: 75.5674,
-  //     lon: 25.5165,
-  //   },
-  // },
   // {
   //   name: "RRS Ernest Shackleton",
   //   description: "TODO",

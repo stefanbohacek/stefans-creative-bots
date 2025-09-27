@@ -2,6 +2,7 @@
   "active": true,
   "name": "@discontinued",
   "description": "Hey, remember this!",
+  "tags": ["wikipedia", "wikidata", "technology", "services"],
   "links": [
     {
       "title": "Follow on Mastodon",

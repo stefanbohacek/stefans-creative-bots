@@ -2,8 +2,8 @@
   "active": true,
   "name": "@southpoleviews",
   "description": "Views from the South Pole.",
-  "thumbnail":
-    "https://botwiki.org/wp-content/uploads/2018/08/-southpoleviews.png",
+  "tags": ["webcam", "live", "view", "snow"],
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2018/08/-southpoleviews.png",
   "about_url": "https://botwiki.org/bot/southpoleviews/",
   "links": [
     {

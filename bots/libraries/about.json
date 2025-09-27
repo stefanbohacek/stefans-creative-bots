@@ -2,6 +2,7 @@
   "active": true,
   "name": "@libraries",
   "description": "Libraries around the world.",
+  "tags": ["libraries", "books", "wikidata", "wikipedia"],
   "links": [
     {
       "title": "Follow on Mastodon",

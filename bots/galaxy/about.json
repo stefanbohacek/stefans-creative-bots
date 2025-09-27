@@ -2,6 +2,7 @@
   "active": true,
   "name": "@galaxy",
   "description": "Exploring galaxies.",
+  "tags": ["space", "galaxies", "nasa"],
   "links": [
     {
       "title": "Follow on Mastodon",

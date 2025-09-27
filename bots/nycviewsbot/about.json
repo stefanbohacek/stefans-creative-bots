@@ -2,6 +2,7 @@
   "active": true,
   "name": "Views from New York",
   "description": "Views from the great city of NYC 🗽",
+  "tags": ["webcam", "live", "view", "nyc", "new york"],
   "thumbnail":
     "https://botwiki.org/wp-content/uploads/2020/03/views-from-new-york-1585658499.png",
   "about_url": "https://botwiki.org/bot/views-from-new-york/",

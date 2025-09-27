@@ -2,6 +2,7 @@
   "active": true,
   "name": "@mteverest",
   "description": "Views from the highest webcam in the world, pointed at Mount Everest.",
+  "tags": ["webcam", "live", "view", "nature", "mountains"],
   "links": [
     {
       "title": "Follow on Mastodon",

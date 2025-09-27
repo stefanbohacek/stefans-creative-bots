@@ -2,6 +2,7 @@
   "active": true,
   "name": "Who would you rather fight?",
   "description": "If you *had* to choose.",
+  "tags": ["poll", "animals"],
   "thumbnail": "",
   "links": [
     {

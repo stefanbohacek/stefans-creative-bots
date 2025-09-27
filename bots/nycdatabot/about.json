@@ -2,6 +2,7 @@
   "active": true,
   "name": "Data of New York",
   "description": "Explore the city of New York through data.",
+  "tags": ["data", "dataviz", "data visualization", "nyc", "new york", "maps"],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2021/05/data-of-new-york-1620941593.png",
   "about_url": "https://botwiki.org/bot/data-of-new-york/",
   "links": [

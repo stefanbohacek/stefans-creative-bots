@@ -2,8 +2,8 @@
   "active": true,
   "name": "@trains",
   "description": "Riding trains.",
-  "thumbnail":
-    "https://botwiki.org/wp-content/uploads/2023/08/trains-1691854906.png",
+  "tags": ["trains", "webcam", "view", "travel", "public transport"],
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2023/08/trains-1691854906.png",
   "about_url": "https://botwiki.org/bot/trains/",
   "links": [
     {

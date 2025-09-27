@@ -41,6 +41,10 @@ export default async (app) => {
           about.links = newLinks;
         }
 
+        if (about.tags) {
+          about.tags.sort();
+        }
+
         let botInfo = {
           about,
           script_path: scriptPath,

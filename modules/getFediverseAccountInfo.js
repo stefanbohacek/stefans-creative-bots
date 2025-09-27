@@ -13,7 +13,7 @@ export default async (fediverseLinkURL) => {
     );
 
     const filename = `@${username}@${server}.json`;
-    const dataDir = "./data/fediverse";
+    const dataDir = "./temp/fediverse";
     const filePath = path.join(dataDir, filename);
 
     try {

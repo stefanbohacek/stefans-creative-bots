@@ -50,13 +50,17 @@ export default async (fediverseLinkURL) => {
     );
 
     if (!resp.ok) {
-      throw new Error(`HTTP ${resp.status}: ${resp.statusText}`);
+      console.log(
+        `getFediverseAccountInfo error: @${username}@${server}`,
+        resp.statusText
+      );
+      return {};
     }
 
     const accountData = await resp.json();
 
     if (!accountData.id || typeof accountData.followers_count !== "number") {
-      throw new Error("Invalid response: missing account ID or follower count");
+      return {};
     }
 
     const result = {
@@ -78,7 +82,11 @@ export default async (fediverseLinkURL) => {
       const cachedData = await fs.readFile(filePath, "utf8");
       return JSON.parse(cachedData);
     } catch (cacheError) {
-      throw error;
+      console.log(
+        `getFediverseAccountInfo error: @${username}@${server}`,
+        error
+      );
+      return {};
     }
   }
 };

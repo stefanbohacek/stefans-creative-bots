@@ -3,6 +3,7 @@ import UnitConverter from "./../../modules/UnitConverter.js";
 import getRandomInt from "./../../modules/get-random-int.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import downloadFile from "./../../modules/download-file.js";
+import getWikipediaPage from "./../../modules/getWikipediaPage.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -47,10 +48,12 @@ const botScript = async () => {
   let imageUrl = `https://images.wur.nl/digital/api/singleitem/image/coll13/${item.itemId}/default.jpg`;
   const filePath = `${__dirname}/../../temp/${botId}.jpg`;
   await downloadFile(imageUrl, filePath);
-  const status = `${item.title}. https://images.wur.nl/digital/collection/coll13/id/${item.itemId}/\n\n#plants #roots #illustration`;
+
+  const wikipediaUrl = await getWikipediaPage(item.title);
+  const wikipediaLink = wikipediaUrl ? `\n\n${wikipediaUrl}` : "";
+  const status = `${item.title}. https://images.wur.nl/digital/collection/coll13/id/${item.itemId}/${wikipediaLink}\n\n#plants #roots #illustration`;
 
   // console.log(status);
-  // console.log(plantDescription);
 
   const mastodon = new mastodonClient({
     access_token: process.env.ROOTS_BOT_MASTODON_ACCESS_TOKEN,

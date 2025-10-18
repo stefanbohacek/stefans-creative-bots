@@ -9,6 +9,7 @@ const loadFollowersForCard = async (card) => {
   if (!mastodonLink) return;
 
   const followersCountElement = card.querySelector(".followers-count");
+  const lastPostElement = card.querySelector(".last-run");
   if (!followersCountElement) return;
 
   if (!followersCountElement.classList.contains("d-none") || followersCountElement.dataset.checked === "true") return;
@@ -21,6 +22,9 @@ const loadFollowersForCard = async (card) => {
       followersCountElement.innerHTML = `${respJSON.followers.toLocaleString()} followers`;
       followersCountElement.classList.remove("d-none");
     }
+    // if (lastPostElement && respJSON.last_status_at) {
+    //   lastPostElement.innerHTML = dayjs(respJSON.last_status_at).fromNow();
+    // }
     followersCountElement.dataset.checked = "true";
   } catch (error) {
     console.error("showFollowersCount error:", error);

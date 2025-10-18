@@ -72,6 +72,7 @@ export default async (fediverseLinkURL) => {
         followers: accountData.followers_count,
         following: accountData.following_count,
         posts: accountData.statuses_count,
+        last_status_at: accountData.last_status_at,
         fetchedAt: new Date().toISOString(),
       };
 

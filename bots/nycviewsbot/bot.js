@@ -21,16 +21,16 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  const webcam = randomFromArray(webcams);
-  // const webcam = {
-  //   title: "30 Rockefeller Plaza",
-  //   description: "This webcam usually shows a view of the New York skyline.",
-  //   link: "https://www.earthcam.com/usa/newyork/rockefellercenter/?cam=rockefellerobservatory",
-  //   url: "https://www.earthcam.com/cams/includes/image.php?img=FxiZuOzKkdq5wr44wir%2FCw%3D%3D&logo=0&playbutton=0&s=1",
-  //   isVideo: true,
-  //   latitude: 40.7594,
-  //   longitude: -73.98,
-  // };
+  // const webcam = randomFromArray(webcams);
+  const webcam = {
+    title: "Times Square #NoKings #protest #NYC",
+    description:
+      "A crowd gathering at the Times Square with protest signs.",
+    link: "https://www.earthcam.com/usa/newyork/timessquare/?cam=tsrobo1",
+    url: "https://www.earthcam.com/cams/includes/image.php?logo=0&playbutton=0&s=1&img=E5a4Ac%2F%2Fll%2Fw6pvn9FVQug%3D%3D",
+    latitude: 40.758616,
+    longitude: -73.984874,
+  };
 
   let webcamUrl;
 

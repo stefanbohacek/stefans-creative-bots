@@ -32,13 +32,14 @@
           <li><span title="This bot replies to you">💬</span> Reply bot</li>
           {{/if}}
           {{#if about.interval_human}}
-          <li><span title="Post frequency">⌛</span> {{about.interval_human}}</li>
+          <li><span>⌛</span> <strong>Frequency:</strong> {{about.interval_human}}</li>
           {{/if}}
           {{#if about.next_run}}
-          <li><span title="Next run">⏱️</span> {{about.next_run}}</li>
+          <li><span>⏱️</span> <strong>Next run:</strong> {{about.next_run}}</li>
           {{/if}}
           {{#if about.last_run}}
-          <li><span title="Last run">📅</span> <span class="last-run">{{about.last_run}}</span></li>
+          <li><span>📅</span> <strong>Last run:</strong> <span
+              class="last-run">{{about.last_run}}</span></li>
           {{/if}}
           {{/if}}
         </ul>

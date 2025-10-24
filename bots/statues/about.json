@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "name": "@statues",
+  "description": "Statues around the world.",
+  "tags": ["wikidata", "wikipedia", "maps", "statues"],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@statues"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

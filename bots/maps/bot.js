@@ -46,10 +46,6 @@ const botScript = async () => {
       await downloadFile(imageURL, filePath);
 
       const source = `https://www.davidrumsey.com/luna/servlet/detail/${map.id}`;
-      let status = `${attributes.full_title.replaceAll(
-        '"',
-        '"'
-      )} ${source}\n\n#map #maps #HistoricalMaps`;
       // const description = attributes.pub_note || ""
       const mapDate = attributes.pub_date || map.date || false; 
       const mapAge = mapDate ? ` ${mapDate} ` : "n old ";
@@ -65,9 +61,16 @@ const botScript = async () => {
 
       const description = `A${mapAge}map${mapArea} from the website linked in the post.`;
 
+      let status = `${attributes.full_title.replaceAll(
+        '"',
+        '"'
+      )}`;
+
       if (mapDate){
-        status += `\n\nPublished in ${mapDate}.`
+        status += ` Published in ${mapDate}.`
       }
+
+      status += `${source}\n\n#map #maps #HistoricalMaps`;
 
       mastodon.postImage({
         status,

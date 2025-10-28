@@ -46,12 +46,13 @@ const botScript = async () => {
       await downloadFile(imageURL, filePath);
 
       const source = `https://www.davidrumsey.com/luna/servlet/detail/${map.id}`;
-      const status = `${attributes.full_title.replaceAll(
+      let status = `${attributes.full_title.replaceAll(
         '"',
         '"'
       )} ${source}\n\n#map #maps #HistoricalMaps`;
       // const description = attributes.pub_note || ""
-      const mapAge = map.date ? ` ${map.date} ` : "n old ";
+      const mapDate = attributes.pub_date || map.date || false; 
+      const mapAge = mapDate ? ` ${mapDate} ` : "n old ";
       let mapArea = "";
 
       if (attributes.country && attributes.country.length) {
@@ -63,6 +64,10 @@ const botScript = async () => {
       }
 
       const description = `A${mapAge}map${mapArea} from the website linked in the post.`;
+
+      if (mapDate){
+        status += `\n\nPublished in ${mapDate}.`
+      }
 
       mastodon.postImage({
         status,

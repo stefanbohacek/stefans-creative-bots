@@ -1,10 +1,8 @@
-<div class="container ml-auto mr-auto">
+<div class="container ml-auto mr-auto bg-body p-5 mb-5">
   <div class="row">
-    <div class="col-sm-12">
+    <main class="col-sm-12 px-0 px-md-5 mx-auto mb-2 mb-md-4">
       <h1 class="text-center mt-5 mb-5">
-        <a href="https://stefanbohacek.online/@stefan"
-          rel="me">Stefan</a>'s creative bot
-        showcase <span class="text-nowrap">🤖🎨</span>
+        Stefan's creative bot showcase <span class="text-nowrap">🤖🎨</span>
       </h1>
       <blockquote class="blockquote border-start border-5 border-secondary ps-3 my-5"
         cite="https://www.rollingstone.com/culture/culture-commentary/internet-future-about-to-get-weird-1234938403/">
@@ -22,11 +20,7 @@
         This page lists all the creative bots I've made (<a href="#active-bots">{{active_bots_count}} active</a>,
         <a href="#inactive-bots">{{inactive_bots_count}} inactive</a>, {{bots_count_total}} in total), with <a
           href="https://stefanbohacek.com/blog/analyzing-fediverse-followers/">thousands of unique followers</a> across
-        all of them. Majority of
-        the bots are <a href="https://github.com/stefanbohacek/stefans-creative-bots/">open-sourced</a>.
-      </p>
-      <p>
-        If you want to learn more about creative botmaking, and maybe even make your
+        all of them. If you want to learn more about creative botmaking, and maybe even make your
         own bot, here's a few links to get you started:
       </p>
       <ul>
@@ -48,7 +42,7 @@
         </li>
       </ul>
       <p>
-        If you're enjoying following any of these bots, here's how you can <a
+        Be sure to check out my other projects <a href="https://stefanbohacek.com/">on my personal website</a>, and follow me <a href="https://stefanbohacek.online/@stefan" rel="me">on Mastodon</a>. And here's how you can <a
           href="https://stefanbohacek.com/support-my-work/">support my work</a>.
       </p>
       <p>
@@ -82,10 +76,10 @@
         defer
         class="fsb-script"></script>
 
-    </div>
+    </main>
   </div>
 </div>
-<div class="container-fluid ml-auto mr-auto mt-5 pt-5">
+<div class="container-fluid ml-auto mr-auto mt-4 pt-4">
   {{#if bots}}
   <div id="active-bots"
     class="row list">
@@ -121,7 +115,7 @@
     {{/each}}
   </div>
   {{/if}}
-  <div class="row bg-secondary py-5">
+  <div class="row bg-body-secondary py-5">
     <div class="col-sm-12 mx-auto">
       <blockquote data-bs-theme="automatic"
         class="fediverse-post mx-auto fediverse-post-rendered w-100 mt-4 mb-4">

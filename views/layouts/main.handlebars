@@ -31,7 +31,7 @@
     href="https://bots.stefanbohacek.com/images/icons/favico.ico" />
 </head>
 
-<body class="bg-light"
+<body class="bg-body-tertiary"
   id="top">
   <div class="position-fixed z-3 top-0 end-0"
     style="transform: rotate(3deg);">
@@ -42,8 +42,7 @@
       </a>
     </span>
   </div>
-  <section id="content"
-    class="pt-5">
+  <section id="content">
     <div id="content-inner">{{{body}}}</div>
     <!--
     <footer class="shifted">
@@ -62,10 +61,8 @@
   <script>
     const toggleDarkMode = (enabled) => {
       if (enabled) {
-        document.body.classList.remove("bg-light");
         document.body.setAttribute("data-bs-theme", "dark");
       } else {
-        document.body.classList.add("bg-light");
         document.body.setAttribute("data-bs-theme", "light");
       }
     };

@@ -2,6 +2,10 @@ section {
   margin: 0 auto;
 }
 
+main{
+  max-width: 920px !important;
+}
+
 .bot-showcase img {
   object-fit: cover;
   width: 100%;

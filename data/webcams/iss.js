@@ -9,8 +9,8 @@ export default [
   {
     description:
       "Live views from the International Space Station are streaming from an external camera mounted on the station's Harmony module. The camera is looking forward at an angle so that International Docking Adapter 2 is visible. If the Harmony module camera is not available due to operational considerations for a longer period of time, a continuous loop of recorded Earth views will be displayed with the caption 'Previously Recorded'.",
-    url: "https://www.youtube.com/watch?v=sSabxiFMjKc",
-    youtube_url: "https://www.youtube.com/watch?v=sSabxiFMjKc",
+    url: "https://youtube.com/watch?v=b_4mCNb826Y",
+    youtube_url: "https://youtube.com/watch?v=b_4mCNb826Y",
     tags: "#iss #space #earth #nasa #esa #jaxa #csa",
   },
 ];

@@ -33,7 +33,7 @@ const botScript = async () => {
       return true;
     })();
   } catch (error) {
-    console.log(`@${botID} error:`, error);
+    console.log(`@${botID} error:`, error, floppy);
   }
 };
 

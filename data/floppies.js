@@ -5930,7 +5930,7 @@ export default [
   {
     title: "Token-Ring Network Adapter A  ",
     img_url:
-      "https://sbstatic.nyc3.digitaloceanspaces.com/floppies/2025_01_NOOKS_AND_CRANNIES847 - Token-Ring Network Adapter A.jpg  ",
+      "https://sbstatic.nyc3.digitaloceanspaces.com/floppies/2025_01_NOOKS_AND_CRANNIES847 - Token-Ring Network Adapter A.jpg",
     source: "https://archive.org/details/2025_01_NOOKS_AND_CRANNIES",
     alt_text: "",
   },

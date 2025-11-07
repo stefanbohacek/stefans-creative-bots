@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "name": "@floppies",
+  "description": "Views from the South Pole.",
+  "tags": ["retro", "technology", "floppy", "images", "archive"],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@floppies"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

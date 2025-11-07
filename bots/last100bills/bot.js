@@ -1,7 +1,4 @@
-/* This bot uses the chart.js library (chartjs.org) via the chartjs-node node package (npmjs.com/package/chartjs-node). */
-/* Static version: https://bots.stefanbohacek.com/last100bills.html */
-import fetch from 'node-fetch';
-
+import fetch from "node-fetch";
 import { ChartJSNodeCanvas } from "chartjs-node-canvas";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
@@ -12,39 +9,94 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  console.log("making a chart...");
+  console.log("making a chart of the last 100 bills...");
 
-  const datasetUrl =
-    "https://www.govtrack.us/api/v2/bill?order_by=-current_status_date";
+  const datasetUrl = `https://api.congress.gov/v3/bill?api_key=${process.env.CONGRESS_GOV_API}&limit=100`;
   const datasetName = "Last 100 bills in the US government";
-  const datasetLabels = ["group", "value"];
 
   const response = await fetch(datasetUrl);
   const data = await response.json();
 
-  if (data) {
+  const categorizeStatus = (actionText) => {
+    const text = actionText.toLowerCase();
+
+    if (
+      text.includes("became public law") ||
+      text.includes("signed by president")
+    ) {
+      return "enacted_signed";
+    }
+
+    if (text.includes("passed senate") && text.includes("passed house")) {
+      return "passed_bill";
+    }
+
+    if (text.includes("passed senate")) {
+      return "pass_over_senate";
+    }
+
+    if (text.includes("passed house")) {
+      return "pass_over_house";
+    }
+
+    if (
+      text.includes("agreed to") &&
+      (text.includes("resolution") ||
+        text.includes("concurrent") ||
+        text.includes("without amendment"))
+    ) {
+      if (text.includes("concurrent")) {
+        return "passed_concurrentres";
+      }
+      return "passed_simpleres";
+    }
+
+    if (
+      text.includes("reported") ||
+      (text.includes("placed on") && text.includes("calendar"))
+    ) {
+      return "reported";
+    }
+
+    if (text.includes("referred to") || text.includes("read twice")) {
+      return "introduced";
+    }
+
+    if (text.includes("held at") || text.includes("committee")) {
+      return "introduced";
+    }
+
+    return "introduced";
+  };
+
+  if (data && data.bills) {
     let introduced_count = 0;
     let pass_over_house_count = 0;
+    let pass_over_senate_count = 0;
     let passed_bill_count = 0;
     let passed_concurrentres_count = 0;
     let passed_simpleres_count = 0;
     let reported_count = 0;
     let enacted_signed_count = 0;
 
-    data.objects.forEach((bill) => {
-      if (bill.current_status === "introduced") {
+    data.bills.forEach((bill) => {
+      const status = categorizeStatus(bill.latestAction.text);
+
+      if (status === "introduced") {
         introduced_count++;
-      } else if (bill.current_status === "pass_over_house") {
+      } else if (status === "pass_over_house") {
         pass_over_house_count++;
-      } else if (bill.current_status === "passed_bill") {
+      } else if (status === "pass_over_senate") {
+        pass_over_senate_count++;
+      } else if (status === "passed_bill") {
         passed_bill_count++;
-      } else if (bill.current_status === "passed_concurrentres") {
+      } else if (status === "passed_concurrentres") {
         passed_concurrentres_count++;
-      } else if (bill.current_status === "passed_simpleres") {
+      } else if (status === "passed_simpleres") {
         passed_simpleres_count++;
-      } else if (bill.current_status === "reported") {
+      } else if (status === "reported") {
         reported_count++;
-      } else if (bill.current_status === "enacted_signed") {
+      } else if (status === "enacted_signed") {
         enacted_signed_count++;
       }
     });
@@ -52,14 +104,15 @@ const botScript = async () => {
     const dataset = [
       ["Introduced", introduced_count],
       ["Passed House", pass_over_house_count],
-      ["Passed House & Senate", passed_bill_count],
+      ["Passed Senate", pass_over_senate_count],
+      ["Passed Both Chambers", passed_bill_count],
       ["Concurrent Resolution", passed_concurrentres_count],
       ["Simple Resolution", passed_simpleres_count],
       ["Ordered Reported", reported_count],
       ["Enacted", enacted_signed_count],
     ];
 
-    /* Set up the chart.js options, see chartjs.org for documentation. */
+    const filteredDataset = dataset.filter((item) => item[1] > 0);
 
     const chartJsOptions = {
       plugins: {
@@ -73,15 +126,11 @@ const botScript = async () => {
       },
       type: "bar",
       data: {
-        labels: dataset.map((item) => {
-          return item[0];
-        }),
+        labels: filteredDataset.map((item) => item[0]),
         datasets: [
           {
             label: datasetName,
-            data: dataset.map((item) => {
-              return item[1];
-            }),
+            data: filteredDataset.map((item) => item[1]),
             backgroundColor: "rgb(255, 99, 132)",
             borderColor: "rgb(255, 99, 132)",
             borderWidth: 1,
@@ -120,15 +169,9 @@ const botScript = async () => {
 
     const image = buffer.toString("base64");
 
-    const alt = `${introduced_count} bills have been introduced, ${pass_over_house_count} bills passed the House,  ${passed_bill_count} bills passed the House & the Senate, ${
+    const alt = `${introduced_count} bills have been introduced, ${pass_over_house_count} bills passed the House, ${pass_over_senate_count} bills passed the Senate, ${passed_bill_count} bills passed both chambers, ${
       passed_concurrentres_count + passed_simpleres_count
-    } bills have been agreed to, ${reported_count} bills are being considered, and ${enacted_signed_count} bills have been  enacted.`;
-
-    // twitter.postImage({
-    //   status: text,
-    //   image: image,
-    //   alt_text: alt
-    // });
+    } resolutions have been agreed to, ${reported_count} bills are being considered, and ${enacted_signed_count} bills have been enacted.`;
 
     mastodon.postImage({
       status: text,

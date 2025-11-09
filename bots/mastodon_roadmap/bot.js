@@ -9,27 +9,29 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const getItems = (html, section) => {
+const getItems = (html, statusLabel) => {
   let items = [];
   let $ = cheerio.load(html, {
     normalizeWhitespace: true,
   });
 
-  $("h2")
-    .filter(function () {
-      return $(this).text().trim() === section;
-    })
-    .next()
-    .find("> div")
-    .each(function (i, elem) {
-      const arr = $(this)
-        .text()
-        .split(/([a-zA-Z]{3}-[0-9]+)/);
-      items.push({
-        id: arr[1],
-        label: arr[2],
-      });
-    });
+  $("section").each(function () {
+    const statusSpan = $(this).find("span.px-3").first();
+    const statusText = statusSpan.text().trim();
+    
+    if (statusText === statusLabel) {
+      const title = $(this).find("h2.font-bold").text().trim();
+      const description = $(this).find(".body-text p").text().trim();
+      
+      if (title) {
+        items.push({
+          id: title.toLowerCase().replace(/\s+/g, "-"),
+          label: title,
+          description: description
+        });
+      }
+    }
+  });
 
   return items;
 };
@@ -42,11 +44,9 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
       const browser = await puppeteer.connect({
         browserWSEndpoint: process.env.BROWSERLESS_URL,
       });
-
 
       process.on("unhandledRejection", (reason, p) => {
         console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
@@ -59,125 +59,98 @@ const botScript = async () => {
       page.setUserAgent(
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
       );
+      
       page.on("load", async (response) => {
         let html = await page.evaluate(() => document.body.innerHTML);
-        const inProgressCurrent = getItems(html, "In Progress");
-        const plannedCurrent = getItems(html, "Planned");
+        
+        const releasedCurrent = getItems(html, "Released");
+        const nextReleaseCurrent = getItems(html, "Next release");
         const exploringCurrent = getItems(html, "Exploring");
-        const recentlyCompletedCurrent = getItems(html, "Recently completed");
 
         console.log("checking Mastodon roadmap...");
 
         console.log(
-          `found ${inProgressCurrent.length} item(s) under "in-progress"`
-        );
-        console.log(`found ${plannedCurrent.length} item(s) under "planned"`);
-        console.log(
-          `found ${exploringCurrent.length} item(s) under "exploring"`
+          `found ${releasedCurrent.length} item(s) under "Released"`
         );
         console.log(
-          `found ${recentlyCompletedCurrent.length} item(s) under "recently completed"`
+          `found ${nextReleaseCurrent.length} item(s) under "Next release"`
+        );
+        console.log(
+          `found ${exploringCurrent.length} item(s) under "Exploring"`
         );
 
         const dataPath = `${__dirname}/../../temp/mastodon-roadmap`;
 
-        let inProgressSaved = [],
-          plannedSaved = [],
-          exploringSaved = [],
-          recentlyCompletedSaved = [];
-        let inProgressNew = [],
-          plannedNew = [],
-          exploringNew = [],
-          recentlyCompletedNew = [];
+        let releasedSaved = [],
+          nextReleaseSaved = [],
+          exploringSaved = [];
+        let releasedNew = [],
+          nextReleaseNew = [],
+          exploringNew = [];
 
         if (!fs.existsSync(dataPath)) {
           fs.mkdirSync(dataPath);
-          inProgressSaved = inProgressCurrent;
-          plannedSaved = plannedCurrent;
+          releasedSaved = releasedCurrent;
+          nextReleaseSaved = nextReleaseCurrent;
           exploringSaved = exploringCurrent;
-          recentlyCompletedSaved = recentlyCompletedCurrent;
         } else {
-          inProgressSaved = JSON.parse(
-            fs.readFileSync(`${dataPath}/inProgress.json`, "utf8")
+          releasedSaved = JSON.parse(
+            fs.readFileSync(`${dataPath}/released.json`, "utf8")
           );
-          plannedSaved = JSON.parse(
-            fs.readFileSync(`${dataPath}/planned.json`, "utf8")
+          nextReleaseSaved = JSON.parse(
+            fs.readFileSync(`${dataPath}/nextRelease.json`, "utf8")
           );
           exploringSaved = JSON.parse(
             fs.readFileSync(`${dataPath}/exploring.json`, "utf8")
           );
-          recentlyCompletedSaved = JSON.parse(
-            fs.readFileSync(`${dataPath}/recentlyCompleted.json`, "utf8")
-          );
 
-          const inProgressIDs = inProgressSaved.map((item) => item.id);
-          const plannedIDs = plannedSaved.map((item) => item.id);
+          const releasedIDs = releasedSaved.map((item) => item.id);
+          const nextReleaseIDs = nextReleaseSaved.map((item) => item.id);
           const exploringIDs = exploringSaved.map((item) => item.id);
-          const recentlyCompletedIDs = recentlyCompletedSaved.map(
-            (item) => item.id
-          );
 
-          inProgressNew = inProgressCurrent.filter(
-            (item) => !inProgressIDs.includes(item.id)
+          releasedNew = releasedCurrent.filter(
+            (item) => !releasedIDs.includes(item.id)
           );
-          plannedNew = plannedCurrent.filter(
-            (item) => !plannedIDs.includes(item.id)
+          nextReleaseNew = nextReleaseCurrent.filter(
+            (item) => !nextReleaseIDs.includes(item.id)
           );
           exploringNew = exploringCurrent.filter(
             (item) => !exploringIDs.includes(item.id)
-          );
-          recentlyCompletedNew = exploringCurrent.filter(
-            (item) => !recentlyCompletedIDs.includes(item.id)
           );
 
           console.log("checking new items...");
 
           console.log(
-            `found ${inProgressNew.length} item(s) under "in-progress"`,
-            inProgressNew
+            `found ${releasedNew.length} item(s) under "Released"`,
+            releasedNew
           );
           console.log(
-            `found ${plannedNew.length} item(s) under "planned"`,
-            plannedNew
+            `found ${nextReleaseNew.length} item(s) under "Next release"`,
+            nextReleaseNew
           );
           console.log(
-            `found ${exploringNew.length} item(s) under "exploring"`,
+            `found ${exploringNew.length} item(s) under "Exploring"`,
             exploringNew
-          );
-          console.log(
-            `found ${recentlyCompletedNew.length} item(s) under "recently completed"`,
-            recentlyCompletedNew
           );
 
           let text = "";
 
-          if (inProgressNew.length) {
-            text += `
-              In progress:\n\n${inProgressNew
-                .map((item) => `- ${item.id}: ${item.label}`)
-                .join("\n")}
-              `;
+          if (releasedNew.length) {
+            text += `Released:\n\n${releasedNew
+              .map((item) => `- ${item.label}: ${item.description}`)
+              .join("\n")}`;
           }
 
-          if (plannedNew.length) {
-            text += `\nPlanned:\n\n${plannedNew
-              .map((item) => `- ${item.id}: ${item.label}`)
-              .join("\n")}
-              `;
+          if (nextReleaseNew.length) {
+            text += `\n\nNext release:\n\n${nextReleaseNew
+              .map((item) => `- ${item.label}: ${item.description}`)
+              .join("\n")}`;
           }
 
           if (exploringNew.length) {
-            text += `\nExploring:\n\n${exploringNew
-              .map((item) => `- ${item.id}: ${item.label}`)
-              .join("\n")}
-              `;
-          }
-
-          if (recentlyCompletedNew.length) {
-            text += `\nRecently completed:\n\n${recentlyCompletedNew
-              .map((item) => `- ${item.id}: ${item.label}`)
-              .join("\n")}
-              `;
+            text += `\n\nExploring:\n\n${exploringNew
+              .map((item) => `- ${item.label}: ${item.description}`)
+              .join("\n")}`;
           }
 
           if (text && text.length) {
@@ -188,20 +161,20 @@ const botScript = async () => {
         }
 
         fs.writeFileSync(
-          `${dataPath}/inProgress.json`,
-          JSON.stringify(inProgressSaved.concat(inProgressNew)),
+          `${dataPath}/released.json`,
+          JSON.stringify(releasedSaved.concat(releasedNew)),
           "utf8",
           (error) => {
-            console.log(error);
+            if (error) console.log(error);
           }
         );
 
         fs.writeFileSync(
-          `${dataPath}/planned.json`,
-          JSON.stringify(plannedSaved.concat(plannedNew)),
+          `${dataPath}/nextRelease.json`,
+          JSON.stringify(nextReleaseSaved.concat(nextReleaseNew)),
           "utf8",
           (error) => {
-            console.log(error);
+            if (error) console.log(error);
           }
         );
 
@@ -210,16 +183,7 @@ const botScript = async () => {
           JSON.stringify(exploringSaved.concat(exploringNew)),
           "utf8",
           (error) => {
-            console.log(error);
-          }
-        );
-
-        fs.writeFileSync(
-          `${dataPath}/recentlyCompleted.json`,
-          JSON.stringify(recentlyCompletedSaved.concat(recentlyCompletedNew)),
-          "utf8",
-          (error) => {
-            console.log(error);
+            if (error) console.log(error);
           }
         );
       });

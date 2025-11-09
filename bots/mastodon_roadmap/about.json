@@ -1,8 +1,7 @@
 {
-  "active": false,
+  "active": true,
   "name": "@mastodonroadmap",
   "description": "Posting when new items are added to Mastodon's public roadmap.",
-  "note": "Temporarily suspended after Mastodon's roadmap format has changed.",
   "tags": ["mastodon", "fediverse"],
   "links": [
     {

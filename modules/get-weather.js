@@ -19,46 +19,46 @@ export default async (lat, long, locationName) => {
     if (data && data.weather && data.weather.length){
         switch (data.weather[0].main) {
             case "Clear":
-              weather.description = `It's a clear day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `The weather is clear${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Clouds":
-              weather.description = `It's a cloudy day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's cloudy${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Rain":
-              weather.description = `It's a rainy day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's rainy${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Thunderstorm":
-              weather.description = `It's a stormy day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's stormy${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Drizzle":
               weather.description = `It's drizzling${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Snow":
-              weather.description = `It's a snowy day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's snowy${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Mist":
-              weather.description = `It's a misty day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's misty${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Smoke":
-              weather.description = `It's a smoky day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's smoky${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Haze":
-              weather.description = `It's a hazey day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's hazey${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Dust":
-              weather.description = `It's a dusty day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's dusty${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Fog":
-              weather.description = `It's a foggy day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's foggy${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Sand":
-              weather.description = `It's a sandy day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's sandy${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Dust":
-              weather.description = `It's a dusty day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's dusty${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Ash":
-              weather.description = `It's an ashy day/night${locationName ? ` in ${locationName}` : ''}.`;
+              weather.description = `It's ashy${locationName ? ` in ${locationName}` : ''}.`;
               break;
             case "Tornado":
               weather.description = `There's a tornado warning${locationName ? ` in ${locationName}` : ''}.`;

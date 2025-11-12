@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  const items = await wikidata(
+  let items = await wikidata(
     /* sql */ `
     SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
       ?item wdt:P31 wd:Q179700 .
@@ -33,6 +33,17 @@ const botScript = async () => {
     } 
 `,
     true
+  );
+
+  const ignoreList = ["Christopher Columbus"];
+
+  items = items.filter(
+    (item) =>
+      !ignoreList.some(
+        (ignored) =>
+          item.label?.toLowerCase().includes(ignored.toLowerCase()) ||
+          item.description?.toLowerCase().includes(ignored.toLowerCase())
+      )
   );
 
   const item = randomFromArray(items);

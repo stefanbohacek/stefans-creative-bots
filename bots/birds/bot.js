@@ -48,7 +48,7 @@ const botScript = async () => {
   });
   const imageFilePath = `${__dirname}/../../temp/bird.png`;
   await downloadFile(item.image, imageFilePath);
-  await makeCoverVideo(imageFilePath, filePath, `${filePath}.mp4`);
+  await makeCoverVideo(imageFilePath, filePath, `${filePath}.mp4`, 10);
   mastodon.postImage({
     status,
     image: `${filePath}.mp4`,

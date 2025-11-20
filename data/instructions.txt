@@ -3927,7 +3927,6 @@ cover up Blackheads With Makeup
 cover Windows
 cover Your Face with a Hijab
 crack a "Master Lock" Combination Lock
-crack a Crab
 crack a Safe
 crack Software by Modifying DLL Files
 crackle Paint
@@ -9756,13 +9755,11 @@ make Country Gravy
 make Couscous
 make Cowboy Coffee
 make Crab Apple Jelly
-make Crab Rangoon
 make Craisins
 make Crate Shelves
 make Crayon Candles
 make Cream Cheese
 make Cream Eyeshadow
-make Cream from Milk
 make Cream of Mushroom Cube Steaks
 make Cream Soda
 make Cream Spinach
@@ -9896,7 +9893,6 @@ make Espresso Beverages With a French Press
 make Essential Oils
 make Ethanol Fuel
 make Ethiopian Coffee (Buna)
-make Evaporated Milk
 make Everyone Want to Read Your Diary
 make Eye Mask in a Few Minutes
 make Eyebrows Thicker

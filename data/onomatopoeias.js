@@ -794,7 +794,7 @@ export default [
       },
       {
         language: ["Romanian"],
-        belching: ["râg (a râgâi = to burp)"],
+        belching: ["râg"],
         flatulence: ["pârț"],
         sneezing: ["hapciu"],
         snoring: ["sfor"],
@@ -1361,7 +1361,7 @@ export default [
       },
       {
         language: ["Greek"],
-        hushing: ["σσσ (ssss)", "σσουτ (ssut)", "σιωπή (sjopí", "“silence”)"],
+        hushing: ["σσσ (ssss)", "σσουτ (ssut)", "σιωπή (sjopí)"],
         "pausing or thinking": ["μα (ma)", "ε (eh)"],
       },
       {
@@ -1589,7 +1589,7 @@ export default [
           "[zho 7] 嘻嘻 (xī xī)",
           "[zho 8] 嘿嘿 (hēi hēi)",
         ],
-        kiss: ["boh 啵 (This word is a modern creation)"],
+        kiss: ["boh 啵"],
       },
       {
         language: ["Croatian"],
@@ -1622,14 +1622,7 @@ export default [
       },
       {
         language: ["Finnish"],
-        laughter: [
-          "haha",
-          "hahhah",
-          "hehe",
-          "hehheh",
-          "hihi (girly)",
-          "höhö (unintelligent)",
-        ],
+        laughter: ["haha", "hahhah", "hehe", "hehheh", "hihi", "höhö"],
         kiss: ["muisk"],
       },
       {
@@ -1649,7 +1642,7 @@ export default [
       },
       {
         language: ["Hebrew"],
-        laughter: ["חָה־חָה (xà xà)[heb 3]"],
+        laughter: ["חָה־חָה (xà xà)"],
         kiss: ["מוּאָה (mwa)"],
       },
       {
@@ -1947,12 +1940,7 @@ export default [
       },
       {
         language: ["English"],
-        "bee buzzing": [
-          "buzz",
-          "bzzz",
-          '(in rural English (as mentioned in Joel Chandler Harris\'s "Uncle Remus"stories)',
-          "zoon)",
-        ],
+        "bee buzzing": ["buzz", "bzzz", "zoon"],
         "frog croaking": ["(USA) ribbit", "gribbit; (Britain) croak"],
         "snake hissing": ["hiss", "sss"],
       },
@@ -2196,11 +2184,7 @@ export default [
       },
       {
         language: ["Chinese", "Mandarin"],
-        "sharp strike": [
-          "哐啷",
-          "[zho 19] (kuāng lāng)",
-          "哐当 (kuāng dāng)",
-        ],
+        "sharp strike": ["哐啷", "[zho 19] (kuāng lāng)", "哐当 (kuāng dāng)"],
         "wet strike": ["啪唧 (pā jī)"],
       },
       {

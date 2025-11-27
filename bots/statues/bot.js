@@ -35,7 +35,7 @@ const botScript = async () => {
     true
   );
 
-  const ignoreList = ["Christopher Columbus"];
+  const ignoreList = ["Christopher Columbus", "James Cook", "George Davis"];
 
   items = items.filter(
     (item) =>

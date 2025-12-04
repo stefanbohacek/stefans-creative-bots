@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "name": "The Rorschach test",
+  "description": "Describe what's in this image.",
+  "tags": ["rorschach", "psychology", "generative art"],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@rorschach"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

@@ -1,10 +1,13 @@
 import rorschachGenerator from "./../../modules/generators/rorschach.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
+import getRandomInt from "./../../modules/get-random-int.js";
+import getRandomRange from "./../../modules/get-random-range.js";
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
     access_token: process.env.RORSCHACH_BOT_MASTODON_ACCESS_TOKEN,
+    // access_token: process.env.MASTODON_TEST_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });
 
@@ -27,9 +30,11 @@ const botScript = async () => {
     height: 480,
     resolution: 5,
     inkThreshold: 0.75,
+    // inkThreshold: getRandomRange(0.6, 1),
     noiseLevelX: 0.15,
     noiseLevelY: 0.15,
-    overlapAmount: -4,
+    // overlapAmount: -5,
+    overlapAmount: getRandomInt(-5, 2),
   };
 
   rorschachGenerator(options, (err, image) => {

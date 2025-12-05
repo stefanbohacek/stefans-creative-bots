@@ -18,23 +18,28 @@ const botScript = async () => {
     "What word would you use to describe this image?",
     "What would be the best description of this image?",
     "How does this image make you feel?",
-    "What does this image remind you of?"
+    "What does this image remind you of?",
   ];
 
   const status = `${randomFromArray(
     prompts
   )}\n\n#rorschach #RorschachTest #GenerativeArt`;
 
+  const noiseLevelRnd = getRandomRange(0.1, 0.25);
+
   const options = {
+    // From https://editor.p5js.org/ajt521/sketches/qfwt30yWZ
     width: 640,
     height: 480,
     resolution: 5,
-    inkThreshold: 0.75,
-    // inkThreshold: getRandomRange(0.6, 1),
-    noiseLevelX: 0.15,
-    noiseLevelY: 0.15,
-    // overlapAmount: -5,
-    overlapAmount: getRandomInt(-5, 2),
+    // inkThreshold: 0.75, // Size / Amount of Ink - Change this value to adjust ink density (lower is denser)
+    inkThreshold: getRandomRange(0.6, 1),
+    //noiseLevelX: 0.15, // Intricacy of Pattern - Change these values to adjust pattern intricacy (higher is more intricate)
+    // noiseLevelY: 0.15,
+    noiseLevelX: noiseLevelRnd,
+    noiseLevelY: noiseLevelRnd,
+    // overlapAmount: -5, // Shift to the Middle - Adjust this value to control the overlap (negative values for more overlap, positive for less)
+    overlapAmount: getRandomInt(-5, -1),
   };
 
   rorschachGenerator(options, (err, image) => {

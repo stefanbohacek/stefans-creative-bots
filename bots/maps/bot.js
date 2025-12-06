@@ -67,7 +67,7 @@ const botScript = async () => {
       )}`;
 
       if (mapDate){
-        status += ` Published in ${mapDate}.`
+        status += ` Published in ${mapDate}. `
       }
 
       status += `${source}\n\n#map #maps #HistoricalMaps`;

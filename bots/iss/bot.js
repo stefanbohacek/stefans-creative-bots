@@ -14,6 +14,22 @@ const __dirname = dirname(__filename);
 
 const botID = "iss";
 
+const getLiveStreams = async () => {
+  let videos = [];
+
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCLA_DiR1FfKNvjuUpBHmylQ&eventType=live&type=video&key=${process.env.YOUTUBE_API_KEY}`;
+  const resp = await fetch(url);
+  const respJSON = await resp.json();
+
+  if (respJSON?.items) {
+    videos = respJSON.items.filter((item) =>
+      item?.snippet?.title.includes("from the International Space Station")
+    );
+  }
+
+  return videos;
+};
+
 const botScript = async () => {
   await (async () => {
     try {
@@ -22,37 +38,43 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const webcam = randomFromArray(webcams);
-      let status = `Live feed: ${webcam.youtube_url}`;
+      const liveStreams = await getLiveStreams();
+      const liveStream = randomFromArray(liveStreams);
 
-      const apiURL = "http://api.open-notify.org/iss-now.json";
+      if (liveStream) {
+        const liveStreamURL = `https://www.youtube.com/watch?v=${liveStream.id.videoId}`;
 
-      const response = await fetch(apiURL);
-      const data = await response.json();
+        let status = `Live feed: ${liveStreamURL}`;
 
-      if (
-        data &&
-        data.iss_position &&
-        data.iss_position.latitude &&
-        data.iss_position.longitude
-      ) {
-        status += `\nCurrent location: http://www.openstreetmap.org/?mlat=${data.iss_position.latitude}&mlon=${data.iss_position.longitude}&zoom=2`;
+        const apiURL = "http://api.open-notify.org/iss-now.json";
+
+        const response = await fetch(apiURL);
+        const data = await response.json();
+
+        if (
+          data &&
+          data.iss_position &&
+          data.iss_position.latitude &&
+          data.iss_position.longitude
+        ) {
+          status += `\nCurrent location: http://www.openstreetmap.org/?mlat=${data.iss_position.latitude}&mlon=${data.iss_position.longitude}&zoom=2`;
+        }
+
+        status += `\n\n#iss #space #earth #live #nasa #esa #jaxa #csa`;
+
+        mastodon.post({
+          status,
+        });
+
+        // await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
+        // console.log('path check', __dirname + `/../../temp/${botID}.mp4`);
+
+        // mastodon.postImage({
+        //   status,
+        //   image: __dirname + `/../../temp/${botID}.mp4`,
+        //   alt_text: webcam.description,
+        // });
       }
-
-      status += `\n\n${webcam.tags}`;
-
-      mastodon.post({
-        status,
-      });
-
-      // await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
-      // console.log('path check', __dirname + `/../../temp/${botID}.mp4`);
-
-      // mastodon.postImage({
-      //   status,
-      //   image: __dirname + `/../../temp/${botID}.mp4`,
-      //   alt_text: webcam.description,
-      // });
     } catch (error) {
       console.log(`${botID} error`, error);
     }

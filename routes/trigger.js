@@ -2,13 +2,13 @@ import express from "express";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const { token, name } = req.query;
+  const { token, name, ...params } = req.query;
 
   if (token && token === process.env.TRIGGER_TOKEN && name) {
     try {
       const botModule = await import(`../bots/${name}/bot.js`);
       const bot = botModule.default;
-      await bot();
+      await bot(params);
       res.status(200).json({ message: "Bot executed successfully" });
     } catch (error) {
       console.error("Error loading or executing bot:", error);

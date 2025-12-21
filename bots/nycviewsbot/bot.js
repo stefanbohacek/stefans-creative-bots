@@ -8,20 +8,31 @@ import getWeather from "./../../modules/get-weather.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import puppeteer from "puppeteer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botID = "nycviewsbot";
 
-const botScript = async () => {
+const botScript = async (params) => {
   const mastodon = new mastodonClient({
     access_token: process.env.NYCVIEWSBOT_MASTODON_ACCESS_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });
 
-  const webcam = randomFromArray(webcams);
+  let webcam;
+
+  if (params?.webcam) {
+    const findWebcam = webcams.filter((webcam) => webcam.id === params.webcam);
+    if (webcams.length > 0) {
+      webcam = findWebcam;
+    }
+  }
+
+  if (!webcam) {
+    webcam = randomFromArray(webcams);
+  }
+
   // const webcam = {
   //   title: "Times Square #NoKings #protest #NYC",
   //   description:

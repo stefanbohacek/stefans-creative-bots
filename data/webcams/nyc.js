@@ -1,6 +1,7 @@
 export default [
   {
     title: "Brooklyn Bridge",
+    id: "brooklyn_bridge",
     description:
       "This webcam usually shows the New York city skyline with skyscrapers and the Brooklyn Bridge and the Manhattan Bridge in the center of the view.",
     link: "https://www.earthcam.com/usa/newyork/brooklynbridge/?cam=gzcchd",
@@ -19,6 +20,7 @@ export default [
   // },
   // {
   //   title: "World Trade Center",
+  //   id: "world_trade_center",
   //   description:
   //     "This webcam usually shows a view of the New York skyline with the World Trade Center skyscraper showing prominently.",
   //   link: "https://www.earthcam.com/usa/newyork/skyline/?cam=skyline_g",
@@ -28,6 +30,7 @@ export default [
   // },
   // {
   //   title: "30 Rockefeller Plaza",
+  //   id: "30_rockefeller_plaza",
   //   description: "This webcam usually shows a view of the New York skyline.",
   //   link: "https://www.earthcam.com/usa/newyork/rockefellercenter/?cam=rockefellerobservatory",
   //   url: "https://www.earthcam.com/cams/includes/image.php?img=FxiZuOzKkdq5wr44wir%2FCw%3D%3D&logo=0&playbutton=0&s=1",
@@ -37,6 +40,7 @@ export default [
   // },
   {
     title: "Times Square",
+    id: "times_square",
     description:
       "This webcam usually shows the pedestrian zone at the Times Square and its iconic billboard screen ads.",
     link: "https://www.earthcam.com/usa/newyork/timessquare/?cam=tsrobo1",

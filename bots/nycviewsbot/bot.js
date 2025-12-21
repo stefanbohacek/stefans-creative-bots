@@ -21,27 +21,19 @@ const botScript = async (params) => {
   });
 
   let webcam;
+  const webcamId = params?.webcam;
+  // const webcamId = "times_square";
 
-  if (params?.webcam) {
-    const findWebcam = webcams.filter((webcam) => webcam.id === params.webcam);
+  if (webcamId) {
+    const findWebcam = webcams.filter((webcam) => webcam.id === webcamId);
     if (webcams.length > 0) {
-      webcam = findWebcam;
+      webcam = findWebcam[0];
     }
   }
 
   if (!webcam) {
     webcam = randomFromArray(webcams);
   }
-
-  // const webcam = {
-  //   title: "Times Square #NoKings #protest #NYC",
-  //   description:
-  //     "A crowd gathering at the Times Square with protest signs.",
-  //   link: "https://www.earthcam.com/usa/newyork/timessquare/?cam=tsrobo1",
-  //   url: "https://www.earthcam.com/cams/includes/image.php?logo=0&playbutton=0&s=1&img=E5a4Ac%2F%2Fll%2Fw6pvn9FVQug%3D%3D",
-  //   latitude: 40.758616,
-  //   longitude: -73.984874,
-  // };
 
   let webcamUrl;
 

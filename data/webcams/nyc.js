@@ -9,15 +9,15 @@ export default [
     latitude: 40.7061,
     longitude: -73.9969,
   },
-  // {
-  //   "title": "Statue of Liberty TorchCam",
-  //   description:
-  //     "This webcam usually shows a view from the top of the Statue of Liberty, facing downwards.",
-  //   link: "https://www.earthcam.com/usa/newyork/statueofliberty/?cam=liberty_crown",
-  //   url: "https://www.earthcam.com/cams/includes/image.php?img=2Kv8cKEDQm3%2Fxc8S6M0JlA%3D%3D&logo=0&playbutton=0&s=1",
-  //   latitude: 40.6892,
-  //   longitude: -74.0445,
-  // },
+  {
+    title: "Statue of Liberty TorchCam",
+    description:
+      "This webcam usually shows a view from the top of the Statue of Liberty, facing downwards.",
+    link: "https://www.earthcam.com/usa/newyork/statueofliberty/?cam=liberty_crown",
+    url: "https://www.earthcam.com/cams/includes/image.php?img=2Kv8cKEDQm3%2Fxc8S6M0JlA%3D%3D&logo=0&playbutton=0&s=1",
+    latitude: 40.6892,
+    longitude: -74.0445,
+  },
   // {
   //   title: "World Trade Center",
   //   id: "world_trade_center",
@@ -48,33 +48,33 @@ export default [
     latitude: 40.758616,
     longitude: -73.984874,
   },
-  // {
-  //   "title": "Statue of Liberty",
-  //   description:
-  //     "This webcam usually shows a view of the Statue of Liberty in New York.",
-  //   link: "https://www.earthcam.com/usa/newyork/statueofliberty/?cam=liberty_str",
-  //   url: "https://www.earthcam.com/cams/includes/image.php?img=0ZBptCfiZkejwMkBr07QRw%3D%3D&logo=0&playbutton=0&s=1",
-  //   latitude: 40.689247,
-  //   longitude: -74.044502,
-  // },
-  // {
-  //   "title": "Statue of Liberty HarborCam",
-  //   description:
-  //     "This webcam usually shows a distant view of Lower Manhattan from the Ellis Island.",
-  //   link: "https://www.earthcam.com/usa/nationalparkservice/virtualpark/?cam=liberty_hd",
-  //   url: "https://www.earthcam.com/cams/includes/image.php?logo=0&playbutton=0&s=1&img=rZKo%2FByXfvY3NsnU%2BATWIg%3D%3D",
-  //   latitude: 40.689247,
-  //   longitude: -74.044502,
-  // },
-  //  {
-  //    "title": "New York › South-West",
-  //    description:
-  //      "This webcam usually shows a view of the lower Manhattan with its tall buildings and skyscrapers.",
-  //    windy_id: 1639820559,
-  //    url: "https://images-webcams.windy.com/59/1639820559/current/preview/1639820559.jpg",
-  //    latitude: 40.712728,
-  //    longitude: -74.006015,
-  //  },
+  {
+    title: "Statue of Liberty",
+    description:
+      "This webcam usually shows a view of the Statue of Liberty in New York.",
+    link: "https://www.earthcam.com/usa/newyork/statueofliberty/?cam=liberty_str",
+    url: "https://www.earthcam.com/cams/includes/image.php?img=0ZBptCfiZkejwMkBr07QRw%3D%3D&logo=0&playbutton=0&s=1",
+    latitude: 40.689247,
+    longitude: -74.044502,
+  },
+  {
+    title: "Statue of Liberty HarborCam",
+    description:
+      "This webcam usually shows a distant view of Lower Manhattan from the Ellis Island.",
+    link: "https://www.earthcam.com/usa/nationalparkservice/virtualpark/?cam=liberty_hd",
+    url: "https://www.earthcam.com/cams/includes/image.php?logo=0&playbutton=0&s=1&img=rZKo%2FByXfvY3NsnU%2BATWIg%3D%3D",
+    latitude: 40.689247,
+    longitude: -74.044502,
+  },
+  {
+    title: "New York › South-West",
+    description:
+      "This webcam usually shows a view of the lower Manhattan with its tall buildings and skyscrapers.",
+    windy_id: 1639820559,
+    url: "https://images-webcams.windy.com/59/1639820559/current/preview/1639820559.jpg",
+    latitude: 40.712728,
+    longitude: -74.006015,
+  },
   // {
   //     "windy_id": 1483960779,
   //     "title": "New York: Brooklyn Bridge - Ped Walkway",

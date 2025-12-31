@@ -21,8 +21,8 @@ const botScript = async (params) => {
   });
 
   let webcam;
-  const webcamId = params?.webcam;
-  // const webcamId = "times_square";
+  // const webcamId = params?.webcam;
+  const webcamId = "times_square";
 
   if (webcamId) {
     const findWebcam = webcams.filter((webcam) => webcam.id === webcamId);

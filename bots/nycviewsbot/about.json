@@ -20,6 +20,6 @@
       "url": "https://twitter.com/nycviewsbot"
     }
   ],
-  "interval": "EVERY_HOUR",
-  "__interval": "EVERY_FOUR_HOURS"
+  "__interval": "EVERY_HOUR",
+  "interval": "EVERY_FOUR_HOURS"
 }

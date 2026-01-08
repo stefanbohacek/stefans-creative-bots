@@ -1941,7 +1941,7 @@ export default [
       {
         language: ["English"],
         "bee buzzing": ["buzz", "bzzz", "zoon"],
-        "frog croaking": ["(USA) ribbit", "gribbit; (Britain) croak"],
+        "frog croaking": ["ribbit"],
         "snake hissing": ["hiss", "sss"],
       },
       {
@@ -1967,7 +1967,7 @@ export default [
       {
         language: ["German"],
         "bee buzzing": ["summ"],
-        "frog croaking": ["gribbit", "quaak"],
+        "frog croaking": ["quaak"],
         "snake hissing": ["zisch"],
       },
       {

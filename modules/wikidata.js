@@ -48,6 +48,7 @@ export default async (query, filterImage) => {
       return {
         label: item?.itemLabel?.value || "",
         description: item?.itemDescription?.value || "",
+        date: item?.date?.value ? new Date(item.date.value) : null,
         wikipediaUrl: wikipediaUrl,
         wikipediaDescription: wikipediaDescription,
         image: imageUrl,

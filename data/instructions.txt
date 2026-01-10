@@ -9,7 +9,6 @@ access blocked websites
 Access the BIOS update
 Access your video clips in the "Capture & Share" menu under "Recent recordings"
 Accumulate followers
-activate 2 Step Verification in Facebook
 activate a Microphone on Mac
 activate a PayPal Prepaid Card on PC or Mac
 activate a Weibo Account
@@ -51,7 +50,6 @@ Add a date picker
 Add a description
 Add a description to your video
 add a Drop Shadow in InDesign
-add a Facebook Messenger Account
 add a File to Sharepoint
 Add a filter, then Tap "Next."
 add a Geico Insurance Card to Apple Wallet
@@ -64,17 +62,13 @@ add a Marker in Pro Tools
 Add a message
 add a Mobile Wireless Hot Spot to Your Network
 Add a name for the track (optional)
-Add a new Google account to your Android
 Add a new relationship and click Save
 Add a new track
 Add a payment method to your Apple ID
 add a Picture to a Folder on Mac
-add a Pin on Google Maps on iPhone or iPad
 Add a play icon to your image using the Draw tool
 add a PowerPoint to iMovie
-Add a product from your Facebook shop
 Add a profile photo
-Add a profile picture to your Google account
 Add a profile video
 Add a recipient and subject
 add a Remote Control to Your Ceiling Fan
@@ -93,7 +87,6 @@ Add a title for the link in the first box
 add a Title in iMovie
 Add a topic
 add a Video to Powerpoint on a Mac
-add a Voiceover to Google Slides
 Add a website
 add a Windows Movie Maker Video to YouTube
 Add additional boxes and text
@@ -111,18 +104,14 @@ Add and adjust text
 add and Multiply Fractions
 add and Subtract Functions
 Add any general properties you wish to add
-add Approved Senders to Gmail
 add Approved Senders to Yahoo! Mail
 add Audio to Powerpoint 2010
 add Backgrounds in Word
 add Baking Soda to a Pool
 add Birthdays to an iPhone Calendar
-add Birthdays to Google Calendar
 Add Blaze Powder in the left box
 add Bleed in Illustrator
 add Bling To Your Cell Phone
-add Borders in Google Docs
-add Bullets in Google Sheets
 add Bullets in Illustrator
 Add Carl Bot to your server
 add Channels to Sling
@@ -135,20 +124,15 @@ add Color to Gum Paste
 add Color to Marzipan
 add Colored Sugar to Sugar Cookies
 add Columns in Microsoft Word
-add Columns on Google Sheets
 add Concrete to Existing Concrete
 Add contact information, hours, and location if applicable
 Add contacts
 add Contacts from an Email Account to an iPhone
-add Contacts in Gmail
 add Contacts on Signal on Android
 add Contacts on Signal on PC or Mac
-add Contacts to Gmail Using a CSV File
 add Contacts to Skype
 add Custom Text Shortcuts to Android
-add Desriptions to Google Photos on iPhone or iPad
 add DLC to Xbox 360
-add Documents in Gmail
 Add each role by entering the corresponding emoji, followed by a space, and then the role name
 add Effects in TikTok
 add Emergency Contacts and Information to Android
@@ -156,10 +140,7 @@ add Emojis to Pictures
 add Ethernet Ports to a Router
 add Exercise on a Fitbit
 add Exponents
-add Extensions in Google Chrome
 add Extra Memory to Your Computer
-add Facebook Events to Google Calendar
-add Facebook Like to Blogger
 add Favorites to Your iPhone
 Add files to the disc
 add Filling to a Cupcake
@@ -179,7 +160,6 @@ Add glass blocks to either side of the carpet
 Add glass blocks two-layers high around the hopper
 Add glossy or matte photo paper into your printer
 add Gluten to Flour
-add Google Drive to the Files App on iPhone or iPad
 add Grid Lines to Your Excel Spreadsheet
 add Hair to Braids
 add Header Row in Excel
@@ -193,7 +173,6 @@ Add iron ingot to the top-left box
 Add items to track to Honey's Droplist
 add JARs to Project Build Paths in Eclipse (Java)
 add Jewish Holidays to an iPhone's Calendar
-add Labels on Google Maps on PC or Mac
 add Layers in GIMP
 add LED Lights to a PC
 Add letters and numbers
@@ -205,7 +184,6 @@ Add more contacts from your friends
 add More Fonts to WPS Office on Your Android Device
 add MP3 to iTunes
 add Mugen Characters
-add Multiple Destinations on Google Maps
 add Music to an iPod
 add Music to PowerPoint
 add Music to Snapchats
@@ -214,21 +192,16 @@ add Music to Your Android Device
 Add new contact to Signal on your phone
 add Nitrogen to Compost
 add Notes from an Email Account to an iPhone
-add Notes in Gmail
 add Notification Sounds on Android
 add Oil to Your Car
 add OneDrive to the Files App on iPhone or iPad
 Add or change your data
 Add other photos and videos
 add Page Numbers to a PDF
-add PayPal to a Facebook Shop
 add Personal Movies to iTunes
 Add photos and videos to your project
 add Photos to a PDF on a Mobile Device
-add Photos to Shared Album on Google Photos on Android
-add Photos to Shared Album on Google Photos on iPhone or iPad
 add Pictures in InDesign
-add Pre Recorded Video to Facebook Reel
 add Promotion on LinkedIn
 add Reaction Roles to a Discord Server on PC or Mac
 add Read More to WordPress
@@ -253,7 +226,6 @@ add Smoke to a Gas Grill
 Add snaps to your story
 add Someone to a Direct Message on Slack on Android
 add Someone to a FaceTime Call on iPhone or iPad
-add Someone to a Restricted List on Facebook
 Add songs to a playlist
 Add songs to your playlist
 Add sources and legal info
@@ -412,7 +384,6 @@ alphabetize in Microsoft Word
 alter Pants
 alter Startup Programs in Windows XP
 Alternatively, find your model number in the About Phone section of Settings
-Alternatively, install third-party apps like Simple Gmail Notes
 Alternatively, open your profile, then bring up the Settings menu
 Alternatively, type =char(9679) and hit Enter or Return
 Always use a password to protect your computer
@@ -438,7 +409,6 @@ apply a Butterfly Bandage
 apply a Ceruse Finish
 apply a Color Rinse
 Apply a filter to sharpen the image
-apply a Formula to an Entire Column on Google Sheets on Android
 apply a Full Coverage Foundation
 apply a Gauze Muzzle to a Dog
 apply a Mud Mask
@@ -742,7 +712,6 @@ Blend both layers
 blend Colors in Photoshop
 blind Bake
 block a Contact on iPhone
-block a Google Account
 block a Number on Sprint
 block a Sender by Email Address in Hotmail
 block a WiFi Network on iPhone or iPad
@@ -753,8 +722,6 @@ block Apps on Android
 block Banner Ads in Yahoo Mail
 block Caller ID on iPhone
 Block explicit direct messages
-block Facebook on Chrome
-block Friends on Facebook
 Block harassers
 block Pop Ups on Chrome
 block Private Numbers on iPhone
@@ -1099,7 +1066,6 @@ calculate the Value of Junk Silver Coins
 calculate Time on Excel Spreadsheet
 calculate Your Waist to Hip Ratio
 calibrate a Joystick
-calibrate the Compass on Google Maps on iPhone or iPad
 Call 1-888-4-ONSTAR to cancel
 call a Function in Python
 call Bixby on Samsung Galaxy
@@ -1219,7 +1185,6 @@ Change the extension to ".m4r."
 change the Faucet Hose in a Kitchen Sink
 Change the game directory
 Change the game resolution to something lower
-change the Google Play Store Country
 change the HID Headlights on a 2007 Prius (Without Removing Bumper)
 change the Icon of Removable Drives
 change the Ink Cartridge in an HP Envy 5000
@@ -1231,7 +1196,6 @@ change the Language in Word
 change the Language on an iPhone
 Change the multiple pages setting to Book fold
 change the Netflix Language
-change the Notification Sound on Facebook Messenger on a PC or Mac
 change the Notification Sound on iPhone
 change the Number Format on a Mac
 Change the numbers for height and width to change the size
@@ -1240,12 +1204,10 @@ change the Oil and Oil Filter on a Motorcycle
 change the Oil in a Volkswagen (VW) CC
 change the Oil in Motorcycle Forks
 change the Oil in Your Truck
-change the Order of Google Photos on Android
 Change the page on the scanner glass (if you're not using the ADF.)
 change the Password in Outlook 365
 Change the primary DNS to match your computer's IP address in Shiny2
 change the Primary Search Language in DOTA 2
-change the Route on Google Maps on Android
 change the Side on Which Your Refrigerator Door Opens
 change the SIM PIN on an iPhone
 change the Startup Sound for Windows 7 and 8
@@ -1262,8 +1224,6 @@ change Your iCloud Keychain Security Code on an iPhone
 change Your iCloud Security Code Verification Number on an iPhone
 Change your IP address
 change Your iTunes Payment Method on PC or Mac
-change Your Name on Facebook So People Can Search Your Maiden or Married Name
-change Your Name on Gmail
 change Your Name on Telegram on Android
 change Your Name on Telegram on PC or Mac
 change Your Password in Yahoo
@@ -1402,7 +1362,6 @@ Check to see if you have QuickTime player on your macOS
 Check your "Match Queue."
 check Your Airtel Data Balance
 Check your block list
-check Your Block List on Facebook
 Check your CPU temperature
 Check your email
 Check your email and follow instructions
@@ -1410,7 +1369,6 @@ Check your email for a confirmation email from AT&T within 24 hours
 Check your email or texts for the verification code
 Check your email to access the meeting recording via Cloud Recording
 Check your firewall settings and make sure they are not blocking Internet Explorer
-Check your Google Voice balance
 Check your hard drive activity
 check Your iPhone's Bluetooth Address
 Check your laptop's Wi-Fi button or switch
@@ -1458,7 +1416,6 @@ Choose a style
 Choose a table size/layout (rows x columns)
 choose a Tie
 Choose a track to remix
-Choose a video conferencing option, like Zoom, Facebook Messenger Rooms, or Google Meet
 Choose an amount of RAM to allocate
 Choose an email marketing service
 Choose an image folder
@@ -1671,7 +1628,6 @@ Click a video
 Click a video to select it
 Click a video to watch it
 Click a voice channel to chat with audio and video
-Click About Google Chrome
 Click About Outlook (if you didn't see the version previously)
 Click Accept
 Click Accessibility
@@ -1998,7 +1954,6 @@ Click Create at the top of the page
 Click Create at the top of the screen
 Click CREATE COMMUNITY
 Click Create Document
-Click Create File and wait for Facebook to compile your data
 Click Create from file
 Click Create from template or Convert PowerPoint
 Click Create List
@@ -2091,7 +2046,6 @@ Click Edit in the top menu
 Click edit info
 Click Edit Links
 Click Edit List
-Click Edit next to "On Facebook."
 Click Edit next to the payment method you wish to edit
 Click Edit next to your place
 Click Edit page
@@ -2130,7 +2084,6 @@ Click Extract
 Click Extract All
 Click Extract to
 Click EZ Pixelmon or another pack
-Click Facebook
 Click Family on the left
 Click File
 Click File -> Import
@@ -2219,8 +2172,6 @@ Click Go To and type "New Campaign."
 Click Go To Special and click to select Blanks then OK
 Click Go to the old version
 Click Go to the Store
-Click Google Chrome
-Click Google Chrome or Firefox
 Click Gradient
 Click Hardware and Sound followed by Power Options
 Click Header & Footer and Add
@@ -2325,7 +2276,6 @@ Click Link Twitch Account
 Click Link Your Account
 Click Lists
 Click Live
-Click Live on Facebook
 Click Live Streaming in Creater Studio
 Click Load Sample or click a suggestion from "Recent Projects"
 Click Locate
@@ -2350,7 +2300,6 @@ Click Manage Payment Options
 Click Manage Payments next to "Payment Information."
 Click Manage Stores
 Click Manage your data & personalization
-Click Manage your Google Account
 Click Manually enter an API key
 Click Map
 Click Maps and actions to view the location of the phone
@@ -2458,7 +2407,6 @@ Click on Media
 Click on Movie from File
 Click on Outline
 Click on Restart Firefox to Update
-Click on Settings in the top right corner of your Facebook Page
 Click on Share
 Click on Sound
 Click on System Preferences
@@ -2518,7 +2466,6 @@ Click Open resource pack folder
 Click Open SQL Script
 Click Open with
 Click Open With
-Click Open with Google Docs
 Click Opt-out
 Click OPTIONS
 Click Options
@@ -2541,11 +2488,9 @@ Click or tap either Download Video or Download on Mobile
 Click or tap Embed in the menu
 Click or tap Large Gallery
 Click or tap Live in the menu to the left, at the top of the screen, or below "What's on Watch" in the video feed
-Click or tap LOG IN WITH FACEBOOK or LOG IN WITH PHONE NUMBER
 Click or tap Log In, Sign In or something similar
 Click or tap Next if no password field is available
 Click or tap Next, Submit, Log In, Sign In or something similar
-Click or tap OK when prompted (Facebook only)
 Click or tap on the Friends icon on their profile, and select Unfollow
 Click or tap on the page from the list
 Click or tap on their name
@@ -2624,7 +2569,6 @@ Click Play when it finishes installing
 Click Playback
 Click Post
 Click Post a Reply
-Click Post to Facebook
 Click Power & sleep
 Click PowerPoint Template from Save File Type..
 Click Preferences
@@ -3053,7 +2997,6 @@ Click the downloaded file to open it
 Click the downloaded file to start the installation process
 Click the downloaded zip file
 Click the downward-facing arrow icon on the offer
-Click the downward-facing arrow in the top right corner of the Facebook page
 Click the downward-pointing arrow
 Click the downwards pointing arrow
 Click the downwards-pointing arrow next to the highlight icon
@@ -3116,7 +3059,6 @@ Click the gear icon in the top-right
 Click the gear icon on the bottom-right
 Click the gear or three-dot menu
 Click the Get tab at the top
-Click the Google Drive icon
 Click the green "+" icon on the top-left
 Click the green checkmark
 Click the green Download BlueStacks button
@@ -3394,7 +3336,6 @@ Click the top button to increase volume or the bottom button to decrease it
 Click the transaction you want to create a shipping label for
 Click the transition icon in between the two clips
 Click the Transitions tab at the top of the screen
-Click the trash can icon next to "Google Pay."
 Click the trash icon
 Click the Ubuntu Software tab
 Click The Unarchiver.app
@@ -3710,7 +3651,6 @@ Connect Android to computer via USB
 Connect Bitmoji to Snapchat
 Connect controller to Xbox
 Connect directly to the modem
-Connect Google Home to power
 Connect iPhone to the computer
 Connect or install your capture card to your computer
 Connect other computers to the new network
@@ -3770,8 +3710,6 @@ Connect your devices to the switch
 Connect your external fingerprint reader to your computer (if you don't have one built-in)
 Connect your external hard drive
 Connect your gaming device to your TV using an HDMI 2.1 cable
-Connect your Gmail account to Outlook
-Connect your Gmail account to Thunderbird
 Connect your iPad to your Mac
 Connect your iPhone
 Connect your iPhone to the computer with iTunes
@@ -3818,58 +3756,6 @@ Convert raster images to vector graphics
 convert the file to a PDF
 Convert your USB drive to NTFS if it's FAT32
 Convert your video to MP4
-cook Arroz Caldo
-cook Blood Sausage
-cook Chole
-cook Dinuguan
-cook Escarole and Bean Soup
-cook Freekeh
-cook Grouper
-cook Ham Steak
-cook Hemp Seeds for Eating
-cook Kohlrabi
-cook Laing
-cook Lomi
-cook Pasta Al Dente
-cook Picanha
-cook Pigar Pigar
-cook Pininyahang Manok
-cook Quail
-cook Salmon Fillet
-cook Salted Cod
-cook Samp
-cook Sarciado
-cook Scrapple
-cook Sea Bass
-cook Shark
-cook Short Grain Brown Rice
-cook Shrimp
-cook Sirloin Tips
-cook Skinless Salmon
-cook Small Tapioca Pearls
-cook Sorghum
-cook Sous Vide Steak
-cook Spaghetti Squash
-cook Spinach
-cook Squash
-cook Sriracha Fried Rice
-cook Steak in the Oven
-cook Steak Well Done
-cook Steel Cut Oats
-cook Strip Steak
-cook Sweet Potatoes
-cook Tapioca
-cook Tarantula Spiders
-cook Tender Pork Chops
-cook Tilapia
-cook Tomahawk Ribeye Steak
-cook Top Sirloin Steak
-cook Tuna Steak
-cook Turnip Greens
-cook Turnips
-cook Ugali
-cook Venison Heart
-cook Yuca Root
 copy a Protected DVD
 Copy and paste the selection you want to change as a new layer
 Copy and paste your JARs into the lib folder and refresh
@@ -3899,7 +3785,6 @@ Copy the selection
 Copy the URL in the address bar
 Copy the web address from the web page you want to link to
 Copy your image to your clipboard
-Copy your imported information to your Gmail account in Outlook
 core a Cabbage
 core a Pear
 core a Pineapple
@@ -4011,10 +3896,8 @@ Create a new folder called "~mods" in the "Paks" folder
 Create a new folder called "mods" with all lowercase letters, if it's not already there
 Create a new folder on your Windows desktop called "APK"
 Create a new folder on your Windows desktop called "Signapk"
-Create a new Google account for your gaming channel
 Create a new image
 Create a new key called Edge
-Create a new label and a new filter in Gmail
 Create a new layer
 Create a new layer for your background image
 create a New Layer in Adobe Illustrator
@@ -4048,8 +3931,6 @@ Create a password and click Save
 Create a password and SSID
 Create a password for the hotspot
 Create a path between objects
-Create a phone number with Google Voice
-create a Photo Album on Facebook
 create a Photo Booth with the Raspberry Pi
 Create a PIN
 Create a post
@@ -4121,9 +4002,7 @@ create a Windows Server 2012 R2 Domain
 create a Zen Garden
 create a Zip File in Windows
 Create ad campaigns to draw attention to your pins
-create Additional Email Addresses in Gmail and Yahoo
 Create additional partitions as needed
-create Ads on Facebook
 create Agar
 Create all of the roles you want to assign
 Create an account
@@ -4137,7 +4016,6 @@ Create an anvil and open its menu
 create an App with Android Studio
 create an Archive Folder in Outlook on PC or Mac
 Create an array
-create an Egg Incubator for Wild Bird Eggs
 Create an email username
 Create an enchanting table and open it
 create an Epic Fantasy Story
@@ -4171,11 +4049,9 @@ Create gold ingots at a smelter
 create Hierarchy in Excel
 Create high-value content in your niche
 create Iron on Patches
-create Labels in the Gmail App
 create Line Art with Photoshop
 Create main and swap partitions
 create Multiple Email Accounts
-create Multiple Facebook Accounts
 Create new folders called "Skyrim Mods" and "Steam 2."
 Create new layers for each element
 Create or Open a Word document
@@ -4496,7 +4372,6 @@ date a Twin
 date a Workaholic
 de Haze a Photo with GIMP
 de Poof Hair
-deactivate a Facebook Account
 deactivate a Kik Account
 deactivate a PS3
 deactivate a Twitter Account
@@ -4507,7 +4382,6 @@ deafen Members in Discord on Android
 deal With a Girl That Leads You On (for Guys)
 deal With a Pawn Shop
 deal With an Itch That Occurs Throughout the Night
-deal With Facebook Stalkers
 debone a Turkey Breast
 Debug to find errors
 Decide on a concept for a game based around your skills as a designer
@@ -4653,7 +4527,6 @@ Dig a pool of water one block away from the lava
 dig Post Holes
 dip Dye Hair Temporarily
 dip Dye Jeans
-disable "OK Google" Voice Search on Android
 Disable "Update Links on Save" in Excel
 Disable "Vibrate on Ring."
 Disable "Vibrate on Silent."
@@ -4670,7 +4543,6 @@ Disable Background App Refresh in Settings
 Disable call audio routing and call forwarding
 disable Delete Browser History in Internet Explorer
 Disable extensions, plugins, and toolbars
-disable Facebook Places
 Disable Fast Boot in the Windows Control Panel
 Disable Fetch New Data in Settings
 Disable Find My iPhone
@@ -4687,7 +4559,6 @@ disable Siri
 Disable Siri
 disable Startup Programs
 Disable startup programs
-Disable the Auto-update feature in the Google Play Store
 disable the Capslock Key in Windows
 disable the Onboard Graphics and Install a New Graphics Card in Your HP Pavilion 6630
 Disable transparency effects
@@ -4725,7 +4596,6 @@ display Cake Pops
 display Embroidery Without a Hoop
 display Media That May Contain Sensitive Content
 display Nicknames for Contacts on an iPhone
-display Only Mutual Facebook Friends on PC or Mac
 dispose of a Box Spring
 dispose of Mercury
 dispose of Motor Oil
@@ -4919,7 +4789,6 @@ Double-tap VoiceView Screen Reader
 downgrade Firefox
 download .exe Files to Your PC
 Download "Rec Screen Recorder" from the App Store
-Download "WavePad Audio Editor" from the Google Play Store or App Store
 Download a BitTorrent Client
 Download a BitTorret client such as qTorrent, uTorrent, BitTorrent, or Vuze
 Download a car mod
@@ -4928,10 +4797,8 @@ download a Flash Game
 Download a font
 Download a font you want to use in WordPad
 Download a game you want to install
-download a Google Drive Folder on Android
 Download a graphics test program and use it to test your graphics card
 Download a map file
-download a Map from Google Maps
 Download a mod
 Download a modded Skyrim save file for Xbox 360
 Download a reader from the Play Store
@@ -4942,7 +4809,6 @@ Download a Torrent from a Torrent search site
 Download a ZIP or RAR file of characters
 download Adobe After Effects on PC or Mac
 download All iCloud Photos
-download All on Google Photos on PC or Mac
 download An App onto an iPhone or iPod Touch
 Download an app that edits JPG images
 Download an image from an image search engine
@@ -4960,19 +4826,14 @@ Download and install FBReader
 Download and install HandBrake
 Download and install Hiya from the App Store
 Download and install MutliWall
-Download and install Prey from the App Store or Google Play Store
 Download and install Rufus from https://rufus.ie/
 Download and install Steam Link on your computer
 Download and install SWFFilePlayer on Windows or Elmedia Video Player on Mac
 Download and install the Android SDK Platform Tools
 Download and install the free community edition of ActiveTCL 8.6
-Download and install the Google Chat app from the Google Play Store (Android) or App Store (iOS)
-Download and install the Google Home app on your Android or iPhone
 Download and install the recommended TeX package for your system
-Download and install VLC Media Player from the Google Play Store or App Store, and open it
 Download and install Wine
 Download and install Xcode on your Mac
-Download and install Zelle from the App Store or Google Play
 Download and open GroupMe
 Download and Open Kustom Live Wallpaper (KLWP)
 download Apps
@@ -4981,16 +4842,12 @@ download Apps on the Nintendo Switch
 download Asus Aura
 download Audio from Tumblr
 download Books to a Kindle Fire
-Download Catan Universe from The Google Play Store, App Store, or Steam
 Download crouton from GitHub and verify that the file saves to your Downloads folder
 download Cursors for Windows 10
 download Demos from the PlayStation Store
 download Dev C++ (Ide)
-download Directions on Google Maps on Android
 Download Discord and create an account
 download eBooks
-download Emails from Gmail on Android
-download Emails from Gmail on PC or Mac
 Download FFmpeg from https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z
 download Flash
 download Flowplayer Videos
@@ -5001,10 +4858,6 @@ download Free Music to iTunes
 download Free Music with Jamendo
 download from Microsoft Stream
 download Games Onto a Graphing Calculator
-download Google Books
-download Google Contacts on Android
-Download Google Photos
-download Images from Google Images
 download iTunes
 download iTunes on Windows
 download Lucky Patcher on PC or Mac
@@ -5051,8 +4904,6 @@ Download the Dolphin Emulator (if you want to open the ELF file on your computer
 Download the file on the other computer
 Download the font
 Download the Framaroot APK
-Download the Honey app from the Google Play Store (Android) or App Store (iOS)
-Download the Honey app from the Google Play Store or App Store
 Download the installation file for the version of LibreOffice you have
 Download the installation files to your SD card and plug it into your Wii
 Download the installer
@@ -5069,7 +4920,6 @@ Download the MySQL Server for your operating system
 Download the operating system or buy installation discs
 Download the Outlook plugin for Zoom to connect the two platforms instantaneously and add Zoom meetings from the Outlook app
 Download the PDF file
-Download the PS4 Second Screen app from the Google Play Store or App Store
 Download the RetroPie image to your computer
 Download the Ruffle Flash emulator from https://ruffle.rs/#releases
 Download the setup file
@@ -5095,7 +4945,6 @@ Download Vidtrim
 Download Visual C++ Redistributables
 download Voice Memos from an iPhone
 Download XAMPP from https://www.apachefriends.org/download.html
-download Your Facebook Data
 download Zanki Deck
 download Zoom
 download, Install, and Use Code::Blocks
@@ -5333,8 +5182,6 @@ edge a Lawn
 edit a Company Page on Linkedin
 edit a Dat File
 edit a Document Using Microsoft Word's Track Changes Feature
-edit a Facebook Post
-edit a Group Description on Facebook on a PC or Mac
 edit a PDF File
 edit a PDF on an iPad
 edit a PDF Online
@@ -5344,7 +5191,6 @@ edit a PowerPoint Template
 edit a Reddit Post on iPhone or iPad
 edit a Screenshot
 edit a WAV File
-edit an Event on Facebook
 edit an Image on Photoshop
 edit an XLSX File on an Android
 Edit and post the video
@@ -5353,22 +5199,18 @@ edit APK Files
 Edit as needed
 edit Audio on iPhone
 edit Buildings in Fortnite
-edit Close Friends on Facebook on a PC or Mac
 edit Contacts on Android
 edit DLL Files
 edit Existing Email Account Information on an iPhone
 edit Feedback on eBay
 Edit format, fonts, and colors
-edit Google Sheets on Mobile
 edit HTML Files
 edit in Paint
 edit JPG Images
 edit Legend Entries in Excel
 edit Music on TikTok
 edit or Remove a Posted Review on Yelp
-edit Personal Information on Facebook
 edit Photos
-edit Photos Using Google Drive
 edit Pictures Using Microsoft Office PowerPoint
 edit Sound in Video
 edit Text in Adobe Acrobat
@@ -5399,9 +5241,6 @@ edit XML Files
 Edit your .wav file
 edit Your Apple ID Name on an iPhone
 Edit your display name and/or username
-edit Your Facebook Profile Picture Thumbnail
-edit Your Facebook Shortcuts
-edit Your Favorites on Facebook
 Edit your imported image in Photoshop
 Edit your information
 Edit your Page to reflect your business needs
@@ -5409,7 +5248,6 @@ Edit your post
 Edit your post (if you want to)
 Edit your presentation
 Edit your profile name
-edit Your Restricted Friends List on Facebook on iPhone or iPad
 Edit your story
 edit Your TikTok Profile
 effectively Use Star Power in Guitar Hero
@@ -5428,7 +5266,6 @@ email Receipts to Expensify
 email to a Cell Phone
 email to Fax
 embalm
-embed a Google Map in HTML
 embed a Video on Reddit
 embed a YouTube Video
 embed an Image in an Email
@@ -5496,14 +5333,11 @@ Enable File and printer sharing
 enable Flash on Chrome
 enable Full Screen Start Menu on Windows 10
 enable Function Keys
-enable Gmail Desktop Notifications
-enable Grammarly on Google Docs
 Enable High-Contrast mode
 enable home screen rotation in the Home Settings menu
 Enable HTML email if using a desktop client
 Enable iCloud Backup
 enable Image Preview to Display Pictures in a Folder (Windows 10)
-Enable IMAP in your Gmail account
 enable IP Routing on Windows 10
 enable Keybinds in Discord
 Enable Lost Mode if unable to find the iPhone
@@ -5818,8 +5652,6 @@ Enter your email, phone number, or Skype, then click Next
 Enter your email, phone, or Skype number associated with your Xbox LIVE account
 Enter your Exchange account information
 Enter your first and last name
-Enter your Google account information
-Enter your Google Voice number when prompted
 Enter your host key
 Enter your key
 Enter your login information
@@ -5915,10 +5747,8 @@ explode in Team Fortress 2
 export an iMovie Video in HD
 export Contacts from Outlook
 export Contacts from Outlook 2010
-export Gmail Contacts
 Export in a high-quality format
 export Photos from an iPhone
-Export the file as a "Google CSV" file
 Export the image
 Export the project to a new video file
 Export the project to Visual Basic to edit the code
@@ -5990,7 +5820,6 @@ felt a Pool Table
 fence a Garden
 ferment Vegetables
 fertilize Flowers
-fertilize Soil With Eggshells
 fiberglass a Boat
 field Dress a Duck
 fight in L.A. Noire
@@ -5998,7 +5827,6 @@ figure Concrete Yardage
 Figure out how to communicate the object of the game to the player
 Figure out the connection between the four photos
 Figure out the endpoint
-Figure out whether you're blocked on Facebook If you are, you're also blocked on Messenger
 Figure out why your IP was blocked
 figure out Your College GPA
 file Down Gel Nails at Home
@@ -6060,17 +5888,13 @@ Find 7 sticks
 find a Channel ID on Slack on PC or Mac
 Find a demo you wish to download
 Find a dragon
-find a Facebook Comment You're Tagged in on a PC or Mac
-find a Facebook URL on iPhone or iPad
 Find a free HTML signature generator
 Find a free ringtone website
-find a Friend's Comments on Facebook
 Find a GIF that you want to send
 Find a guitar pick, credit card, or plastic spudger
 Find a jungle biome
 find a Leak in a Tire
 Find a link or tab
-find a Location Using Coordinates on Google Maps
 Find a paid app
 Find a photo
 Find a pumpkin
@@ -6083,7 +5907,6 @@ Find a torrent tracker site
 Find a video you want to download
 Find all components on the Assets tab
 find Alternatives to Sitting in a Desk
-find an Address Book in Gmail
 Find an Among Us server and join it
 Find an armorer blacksmith's house
 Find an audio or video file on your Mac
@@ -6104,16 +5927,11 @@ Find and select Back Up Now
 Find and tap the file you want to upload
 find and Write a Business Review on Yelp
 Find Applications to view the number of third party apps on your iPhone
-find Attachments in Gmail
 find Average Atomic Mass
 Find blocked contacts under "BLOCKED CONTACTS."
 Find contact information on the domain's website
 Find Current City in the Search for Friends box
 find Duplicate Pictures in Windows 10
-find Elevation on Google Maps on Android
-find Elevation on Google Maps on iPhone or iPad
-find Elevation on Google Maps on PC or Mac
-find Friends from High School on Facebook
 find Friends on VSCO on iPhone or iPad
 find Glitches
 Find Gsnap in the Effect menu
@@ -6123,7 +5941,6 @@ find lowest common denominator
 find Marginal Cost
 find Molecular Formula
 find Moltres in Pokemon HeartGold and SoulSilver
-find North on Google Maps on Android
 Find or craft a book
 Find or purchase a 3.5mm audio cable
 Find or summon a horse
@@ -6183,14 +6000,12 @@ find the Surface Area of a Pyramid
 Find the system specs
 Find the tag for the text you want to color
 find Treasure
-find Unread Emails in Gmail
 find Unread Slack Messages
 find Water
 Find your card under "Financial Information."
 Find your contact's name
 Find your daily Steps
 Find your eight best friends at the top
-find Your Google Analytics Code
 Find your latest backup
 find Your Mac Address on Samsung Galaxy
 Find your model number at the bottom of the back of your phone
@@ -6231,7 +6046,6 @@ fix a Crack in Your Ukulele
 fix a Dented or Loose Canvas
 fix a Formula in Excel
 fix a Garden Hose
-fix a Google Drive Server Error
 fix a Guitar Bridge
 fix a Hole in an Asphalt Driveway
 fix a Hyperlink in Excel
@@ -6319,7 +6133,6 @@ Follow the instructions outlined in Sprint's email to unlock your iPhone
 Follow the instructions to activate your Anchor Pay account
 Follow the instructions to complete the installation
 Follow the instructions to set Screen Time settings if using a child's iPad
-Follow the instructions to set up 2SV via text message or an authenticator app such as Google Authenticator
 Follow the menu options to talk to a customer service representative
 Follow the on-screen installation instructions On Windows and Linux, you must set the JDK path as well
 Follow the on-screen instructions
@@ -6337,7 +6150,6 @@ Follow the on-screen instructions to make Nightbot a moderator
 Follow the on-screen instructions to reinstall macOS including where to install it
 Follow the on-screen instructions to reset
 Follow the on-screen instructions to restore
-Follow the on-screen instructions to set up Google Assistant
 Follow the on-screen instructions to set up your iPhone
 Follow the on-screen instructions to start the download
 Follow the on-screen instructions to view content
@@ -6476,7 +6288,6 @@ get a Free Basic VIN Check
 get a Free iPad
 get a Free Ringtone
 Get a friendly drink, lunch, or combo
-get a Girlfriend Via Facebook Chat
 get a Jack Russell Terrier Book on Nintendogs
 get a Job as a Domestic Violence Advocate
 get a Job As a Waiter, Waitress or Server
@@ -6573,14 +6384,10 @@ get the Coin Case in Pokemon Ruby
 get the Drake Sword in Dark Souls
 Get the game code inside the voice channel
 get the Gasoline Smell Out of a Car
-Get the Google Lens app from the Google Play Store
-Get the Google Maps embed code
 get the Health Benefits of Cinnamon
 get the Hex Code of a Color on Your Computer Screen
 get the Justin Bieber Haircut
 Get the key to Mercer's house from Vlad
-get the Link to a Facebook Post on a PC or Mac
-Get the Microsoft Excel mobile app from the Google Play Store
 Get the mini-mushroom at towards the end of the castle level
 get the Real Megabuster on Deadrising
 Get the Sapphire from Gideon
@@ -6596,7 +6403,6 @@ Get the URL to the deleted video
 get the Wet Hair Look
 get Thick Eyebrows
 get Tiktok Coins on Android
-get to a Google Maps Location Through a Wikipedia Geohack
 get to Machu Picchu
 get to Saffron City in Pokemon FireRed and LeafGreen
 get to Smithing Skill Level 100 in Skyrim
@@ -6630,7 +6436,6 @@ Give permission if prompted
 give Someone a Facial
 give Someone a Manicure
 give Someone a Pedicure
-give Someone an Admin Role on Your Facebook Page
 Give the cashier your card and cash
 Give the cashier your ID (if you're in a Walgreens or Duane Reade)
 give the game away
@@ -6652,7 +6457,6 @@ glue Glitter to Glass
 glue Plastic
 glue Plexiglas
 glue Styrofoam
-go Back in Time on Google Maps
 go Back to a Previous Version of iOS on an iPhone
 Go back to the pivot table tab
 go Back Using the Command Prompt
@@ -6681,8 +6485,6 @@ Go to Chrome
 Go to eBay on a browser or using the app
 Go to Edit > Paste
 Go to Edit > Software Sources
-Go to Facebook and log in
-Go to Facebook in your web browser
 Go to File > Add File to Library
 Go to File > Add to Library
 Go to File > Get Info
@@ -6691,10 +6493,6 @@ Go to File > Open
 Go to File > Open archive
 Go to File > Print
 Go to File > Save As
-Go to Google Calendar and log in if prompted
-Go to Google Gmail
-Go to Google Maps
-Go to Google Sheets
 Go to HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft
 Go to Menu > Setup > Puppy Installer
 Go to Microsoft's Recover Your Account page
@@ -6720,7 +6518,6 @@ Go to the Cygwin window and right-click a blank spot
 Go to the desired location
 Go to the exact pickup location
 Go to the extension store in the browser of your choice
-Go to the Facebook profile you want to report
 Go to the feedback you've left for others
 Go to the File tab and hover over Import From
 Go to the Firewall page
@@ -6768,18 +6565,15 @@ Go to Yahoo! to see if the ads are blocked
 Go to your "My TV" page in the app
 Go to your account page
 Go to your account settings
-Go to your Ad Center on Facebook
 Go to your email
 Go to your faction camp outside of Shado-Pan Garrison
 Go to your faction's shrine
 Go to your feed
 Go to your friend's page
 Go to your friend's profile
-Go to your friend's profile in the Facebook app
 Go to your friend's profile page
 Go to your installed apps or updates
 Go to your LinkedIn profile
-Go to your Page in the Facebook app
 Go to your Photo Library to access the saved image or video
 Go to your profile
 Go to your Profile
@@ -6811,7 +6605,6 @@ hand Tie a Quilt
 handbrake Turn
 handcuff a Person
 handle a Tire Blowout While Riding a Motorcycle
-handle Awkward Friend Requests on Facebook
 hang a Christmas Tree Upside Down
 hang a Dartboard
 hang a Door Mirror
@@ -6847,7 +6640,6 @@ hang Wall Cabinets
 hang Wall Paper over Wood Paneling
 hang Wallpaper
 hang Wood Shutters on Brick
-hardboil Eggs in a Microwave
 harvest Chives
 Harvest crops
 Harvest crops from gardens in villages
@@ -6861,7 +6653,6 @@ harvest Wheat
 Harvest wheat once grown
 Harvest wheat when grown
 harvest Yarrow
-hashtag on Facebook
 haul a Motorcycle
 Have "Simon" give a command to the other players
 have a Baby on Sims 2
@@ -6919,15 +6710,12 @@ hem Knit Fabrics
 hem Pants With Sewing Machine
 hide a Pet from Your Parents
 hide a Tinder Profile
-hide an Offer on Facebook
 hide and Lock Hard Disk Drives in "My Computer"
 hide Channels on Roku TV
 hide Contacts on Android
 hide Files and Folders Using Batch Files
 hide if Someone Breaks in Your House
-hide Likes on Facebook
 hide Money
-hide Mutual Friends on Facebook on Android
 hide or Delete Comments in Microsoft Word
 hide Photos on Samsung Galaxy
 hide Pipes in the Kitchen
@@ -6941,10 +6729,7 @@ Hide the selected messages from the inbox
 Hide the wires or tape them to the floor
 hide Things in a Book
 Hide what you don't need
-hide Your Number of Friends on Facebook on a PC or Mac
-hide Your Number of Friends on Facebook on iPhone or iPad
 Highlight cells to merge
-highlight Duplicates on Google Sheets on PC or Mac
 highlight Every Other Row in Excel
 highlight Hair
 highlight in PowerPoint
@@ -7103,7 +6888,6 @@ If necessary, tap the Share icon
 If not, buy an external touchscreen monitor and connect it to your laptop
 If possible, you can have the sender export the PUB file from Publisher as a Word DOCX file or PDF
 If someone's Last Seen is hidden, there's no way to find it in the app
-If that also doesn't work, tap the photo, tap the sharing icon, and then select Gmail Enter your own email address and send the message Tap the message when it arrives, tap the photo attachment, tap the three dots at the top-right, and then tap Save
 If that didn't help, press and hold the mute and volume down buttons
 If that doesn't work, tap the photo, and then tap the sharing icon at the top Select your file manager app and save the photo to Images or Photos
 If the command doesn't start with "Simon says" and a player does it, they're "out."
@@ -7136,7 +6920,6 @@ imagine the music as a moving chain or caterpillar
 imagine the music as a set of disconnected events
 impart STEM Education to Your Children
 implement an Accounting System
-import a KML File to Google Earth
 import a PST File to Thunderbird
 Import a simple 2D image in Adobe Illustrator or Inkscape
 import an Image Into Photoshop
@@ -7145,8 +6928,6 @@ import Beats to Garageband on Mac
 import Bookmarks to Edge
 import Bookmarks to Safari
 import Contacts from Excel to an Android Phone
-import Contacts from Gmail to Your iPhone
-import Emails to Gmail
 import Models Into Blender on PC or Mac
 import Music from iTunes to iPhone
 import Products from Etsy to Shopify
@@ -7182,7 +6963,6 @@ improve Your Reflexes
 improve Your Skill in Guitar Hero I, II and III
 improve Your Skills as a Programmer
 improvise a Dog Lead
-In Google Docs, press "Control" (Windows) or "Command" (Mac), and ","
 In Little Alchemy 2, Godzilla is called Kaiju
 In the last page before posting, tap Tag Products
 In Word or Notepad, press "Control" (Windows) or "Command" (Mac), and "+"
@@ -7280,7 +7060,6 @@ Insert fractions with "/" key
 insert Gifs Into PowerPoint
 Insert images and graphics
 insert Images with HTML
-insert Multiple Rows on Google Sheets on PC or Mac
 Insert new RAM
 insert Page Numbers in Word
 Insert photos, attachments, checklists, and drawings
@@ -7362,7 +7141,6 @@ install a Drip Irrigation System
 install a Faucet
 install a Fireplace Mantel
 install a Floating Floor
-Install a game from the Google Play Store
 install a Garbage Disposal
 install a Gas Cap
 install a Glass Shower Door
@@ -7391,7 +7169,6 @@ Install a new operating system on your computer
 install a New Toilet Seat
 install a Nintendo DS Emulator on PC or Mac
 install a No Drill Mud Flap
-Install a note-taking app like Google Keep or Evernote
 install a Plinth Block at a Door
 Install a podcatcher app
 install a Printer
@@ -7551,10 +7328,6 @@ install Formica
 install FOSE
 install Glass Blocks
 install Gnome on Ubuntu
-install Google Authenticator
-Install Google Authenticator from the Play Store or App Store
-install Google Chrome Using Terminal on Linux
-Install Google Keep from the App Store or Play Store
 Install Grammarly on Chrome
 install Granite Countertops
 install Grommets
@@ -7664,7 +7437,6 @@ install Teamviewer
 Install telnet if it's not installed
 Install TestDisk & PhotoRec
 Install TextNow from the App Store or Play Store
-Install the "Invite All Friends on Facebook" extension
 Install the AdBlock extension for Chrome
 Install the app for your watch
 install the Arabic Language on Android
@@ -7676,9 +7448,7 @@ Install the CPU, CPU cooler, RAM, and other components
 Install the desktop app on your PC or Mac
 Install the downgraded version
 Install the drivers
-install the Facebook Messenger App for Windows
 Install the Geico Mobile app
-Install the Google Home app
 Install the Hearthfire DLC add-on
 Install the Homebrew channel on your Wii
 install the Java Software Development Kit
@@ -7794,10 +7564,7 @@ invert Colors on a Mac
 invert Colors on Windows 7
 invert Colours in MS Paint
 invert Sugar
-invite All Friends on Facebook
 Invite an adult to join your household
-invite Friends to Facebook Messenger
-invite Friends to Like a Facebook Page on Android
 invite Friends to WeChat
 Invite people (if closed)
 invite People to a Discord Server on Android
@@ -7831,14 +7598,11 @@ Join a voice chat channel on the Among Us server you joined
 Join a Zoom meeting
 join a Zoom Meeting on PC or Mac
 join an Apple Watch Challenge
-join Google Groups
 join GroupMe on Android
 join GroupMe on iPhone or iPad
-join Groups on Facebook
 join Meetup
 join Multiple Slack Teams on PC or Mac
 Join or host a meeting
-Join or start a meeting in Google Meet
 Join races and complete goals to earn additional sweatcoins
 join the Dark Brotherhood in Skyrim
 join the French Foreign Legion
@@ -7846,7 +7610,6 @@ join the Thieves Guild in Skyrim
 join the Thieves' Guild in Oblivion
 join Three Tables in SQL
 join Up With a Horse
-Join using your Google, Facebook, PayPal, or Apple account information or tap Join with Email
 join when Knitting in the Round
 join Yarn in Crocheting
 journal for Therapy
@@ -7918,7 +7681,6 @@ keep Food Warm for a Party
 keep Foods Fresh at a Picnic or Tailgate Party
 keep Fresh Chopped Garlic
 keep Ginger Fresh
-keep Google Maps Pointing North on an iPhone
 keep Guacamole Fresh
 keep Hair Healthy when Using Irons Daily
 keep Ice from Melting
@@ -7947,7 +7709,6 @@ keep Rose Petals Fresh
 keep Roses Fresh
 Keep router far from cordless phones and microwaves
 keep Safe During a House Fire
-keep Safe on Facebook
 keep Salad Fresh
 Keep sharing after the download is complete
 keep Spaghetti from Sticking
@@ -7985,7 +7746,6 @@ Keep your phone or Apple Watch on you at all times so all of your steps are logg
 keep Your Private Parts Clean
 keep Your Room Organized
 keep Your Underarms Fresh and Clean
-kettle Cook Potato Chips
 kick a Soccer Ball
 kick Out a Dangerous Roommate
 kick Someone Off Netflix
@@ -8020,8 +7780,6 @@ laminate Paper
 Laminate the paper ID
 Launch a game through Steam
 Launch Android Studio
-Launch Google Earth
-Launch Google Maps
 Launch iTunes on your computer
 Launch OnionFruit
 Launch Overwatch and select Play
@@ -8114,7 +7872,6 @@ line a Skirt
 Line the corridors with redstone
 Line up both faces in the camera
 Line up your face in the camera
-Link a valid Visa or Mastercard-branded debit card or PayPal account to Facebook
 link Sheets in Excel
 link Twitch Prime with Fortnite
 Link your bank account
@@ -8218,15 +7975,12 @@ log in to Slack on PC or Mac
 Log in to Steam
 Log in to the app
 Log in to the computer remotely
-Log in to the same Google account you used before the factory reset
 log in to WeChat on iPhone or iPad
 log in to WordPress
 Log in to your account
 Log in to your account on PS4
 Log in to your Autodesk account
 Log in to your Epic Games account
-Log in to your Facebook account
-Log in to your Google account
 Log in to your Microsoft account
 Log in to your Microsoft account, if you haven't already done so
 Log in to your Playstation 4
@@ -8236,8 +7990,6 @@ Log in using the router's default username and password
 Log in with the default username and password
 Log in with your Apple ID
 Log in with your EA Games account
-Log into Facebook
-Log into Gmail on a computer
 Log into Seller Central
 Log into social media
 Log into Steam
@@ -8247,15 +7999,10 @@ Log into the Verizon router through the admin site
 Log into your Apple ID account
 Log into your email
 Log into your Epic Games account
-Log into your Facebook account
 Log into your Mac
-Log into YouTube with your Google account and upload your channel art
 Log out and try to log back in If you have been banned, a pop up should appear telling you your account has been disabled
-log Out from Facebook Messenger in Android
 log Out of Destiny
 log Out of Discord on a PC or Mac
-log Out of Facebook Everywhere on Android
-log Out of Google Drive on PC or Mac
 log Out of Pinterest on Android
 Log out of Pokémon Go
 log Out of Slack on Android
@@ -8529,7 +8276,6 @@ make a Brain Out of Clay
 make a Breakfast Burrito
 make a Brick Mailbox
 make a Bridal Bouquet With Artificial Flowers
-make a Brochure Using Google Docs
 make a Brooch
 make a Brooch Bouquet
 make a Bubble Snake Maker
@@ -8547,7 +8293,6 @@ make a Buttery Nipple Shot
 make a Button Pin
 make a Caesar Drink
 make a Cage Skirt
-make a Cake from a Mix Without Oil and Eggs
 make a Cake Pop Holder
 make a Cake Using a Pressure Cooker
 make a Cake Vegan
@@ -8651,7 +8396,6 @@ make a Coin Disappear
 make a Coke Float
 make a Collage
 make a Collage in Photoshop
-make a Collage on Google Photos on Android
 make a Comic Strip
 make a Commonplace Book
 make a Compass
@@ -8780,7 +8524,6 @@ make a DVD Cover
 make a Dynamite Roll
 make a Fabric Frisbee
 make a Fabric Picture Frame
-make a Facebook Post Public
 make a FaceTime Call on an iPad
 make a Facial Mask
 make a Fairy Costume
@@ -8844,7 +8587,6 @@ make a Glass from a Bottle
 make a Glitter Painting
 make a Good Confession in the Catholic Church
 make a Good Place on Roblox
-make a Google Chrome Theme
 make a Gradient in MS Paint
 make a Grape Smoothie
 make a Grappling Hook
@@ -8869,7 +8611,6 @@ make a Harley Quinn Costume
 make a Harry Potter Scarf
 make a Hat Box
 make a Hawaiian Pizza
-make a Header on Google Sheets on PC or Mac
 make a Healthy Lunch
 make a Help File
 make a Hemp Necklace
@@ -9021,7 +8762,6 @@ make a Personalized Journal
 make a Philly Cheese Steak
 make a Philodendron Pole
 make a Photo Board
-make a Photo Collage on Facebook on iPhone or iPad
 make a Picture Skinnier
 make a Pie Chart in Adobe Illustrator
 make a Pig Pop up Card (Robert Sabuda Method)
@@ -9492,7 +9232,6 @@ make Bread Machine Pasta
 make Bread Pudding
 make Bread Upma
 make Bread With a Food Processor
-make Breaded Shrimp
 make Breakfast in Bed
 make Breakfast Quesadillas
 make Breast Milk Jewelry
@@ -9604,7 +9343,6 @@ make CBD Oil Gummies
 make CBD Oil Lotion
 make Celery Juice
 make Celery Soup
-make Cells Bigger on Google Sheets on PC or Mac
 make Cement in the Wild
 make Cendol
 make Ceramic Tile
@@ -9627,7 +9365,6 @@ make Cheese at Home
 make Cheese Flan
 make Cheese Quesadillas
 make Cheese Toast With a Toaster and Microwave
-make Cheesy Scrambled Eggs
 make Cheetos
 make Chemical Solutions
 make Cherry Ketchup
@@ -9813,18 +9550,15 @@ make Dangly Earrings
 make Dark Chocolate
 make Decals
 make Decorative Garden Mushrooms
-make Deep Fried Eggs
 make Deep Fried Kit Kat
 make Deep Fried Watermelon
 make Delicious 'French Creams'
 make Denim Cut off Shorts
-make Deviled Eggs
 make Different Types of Greeting Cards
 make Diffuser Oil
 make Digital Art
 make Digital Pictures Print on 3x5 or 4x6 Photo Paper
 make Dijon Mustard
-make Dippy Eggs
 make Dirty Denim Distressed Cut Off Shorts
 make Dish Soap Slime
 make Distilled Water
@@ -9852,7 +9586,6 @@ make Dumplings for Soup
 make Dumplings with Self Rising Flour
 make Dwarf Hamsters Stop Biting the Cage
 make Ear Cuffs
-make Easter Eggs
 make Easy Caramel
 make Easy Fritters
 make Easy Homemade Biscuits
@@ -9878,9 +9611,6 @@ make Egg Tarts
 make Eggless Cake
 make Eggnog
 make Eggplant Fritters
-make Eggs Benedict
-make Eggs in a Basket
-make Eggs Italiano
 make Electrolyte Water
 make Elephant Ears for a Costume
 make Elephant Toothpaste
@@ -10001,7 +9731,6 @@ make Fresh Peach Nectar
 make Fresh Squeezed Lemonade
 make Fried Bean Curd
 make Fried Cauliflower
-make Fried Eggs Without Flipping Them
 make Fried Ice Cream
 make Fried Maggi Noodles (Malaysian Mamak Style)
 make Fried Octopus
@@ -10009,7 +9738,6 @@ make Fried Oreos
 make Fried Pickles
 make Fried Rice with Soy Sauce
 make Fried Tofu Nuggets
-make Friends Lists on Facebook
 make Frosted Cranberries
 make Frosting
 make Frosting with Powdered Sugar
@@ -10250,12 +9978,10 @@ make Injera
 make Ink from Tea
 make Instant Mashed Potatoes
 make Instant Pudding
-make International Calls from Google Voice
 make Internet Explorer Your Default Internet Browser
 make Invisible Ink with Baking Soda
 make Invisible Thread
 make Invitations
-make Invitations on Facebook
 make Invoices in Word
 make iPhone Flash when Receiving a Text
 make Iranian Bread
@@ -10475,7 +10201,6 @@ make Money on Pinterest
 make Money on RuneScape with Bronze
 make Money on Sims 2
 make Money on Snapchat
-make Money with Facebook Fan Page
 make Money with Sweatcoin
 make Money Writing on Medium
 make Monster Energy Drink Cupcakes
@@ -10494,14 +10219,12 @@ make Mozzarella Cheese
 make Mud
 make Muesli
 make Muffins with Pancake Mix
-make Muffins Without Eggs
 make Mugwort Tea
 make Mulan's Hairstyle
 make Murukku
 make Muscadine Wine
 make Mushroom Chips
 make Mushroom Sauce
-make Music Notes on Facebook
 make Music Using a Computer
 make Musical Instruments with Recycled Materials
 make Mustard from Scratch
@@ -10588,12 +10311,10 @@ make Paint Colors
 make Pancake Batter
 make Pancakes
 make Pancakes in a Microwave Oven
-make Pancakes Without Eggs or Milk
 make Pancit
 make Paneer (Indian Cheese)
 make Pani Puri
 make Panko Bread Crumbs
-make Panko Fried Shrimp
 make Pap in the Microwave
 make Papaya Salad
 make Paper at Home
@@ -10606,7 +10327,6 @@ make Paper Flowers
 make Paper Look Old
 make Paper Pulp
 make Paper Ring Decorations
-make Papier Meche Eggs
 make Paprika Hendl
 make Papyrus
 make Paracord Ranger Beads
@@ -10621,7 +10341,6 @@ make Pastillas
 make Pastillas de Leche (Candied Milk)
 make Pastrami
 make Patches with Cloth and Acrylic Paint
-make PDFs Editable With Google Docs
 make Peach Cobbler
 make Peanut Butter
 make Peanut Butter Cookies
@@ -10647,7 +10366,6 @@ make Photo Frames from Ice Cream Sticks
 make Photo Magnets
 make Photo Mugs
 make Pick Me Up Cocktails
-make Pickled Eggs
 make Pickled Ginger
 make Pickled Olives
 make Pickled Raisins
@@ -10827,7 +10545,6 @@ make Salt Crystals
 make Salt Dough
 make Salt Glitter
 make Salted Cucumbers
-make Salted Eggs
 make Sambar Powder
 make Samosas
 make Samurai Armor
@@ -10847,11 +10564,6 @@ make Scented Hand Sanitizer
 make Scented Pine Cones
 make Schezwan Sauce
 make Scones
-make Scotch Eggs
-make Scrambled Eggs
-make Scrambled Eggs in a Microwave
-make Scrambled Eggs Inside the Shell
-make Scrambled Eggs Without Milk
 make Scrap Fabric Pom Poms
 make Scrunchies
 make Sea Glass
@@ -11008,7 +10720,6 @@ make Sun Dried Tomatoes
 make Sun Tea
 make Suncatchers
 make Sunglasses
-make Sunny Side up Eggs
 make Sunscreen
 make Supervillains
 Make sure "Denoiser" is selected and "Declipper" and "Declicker" are off
@@ -11035,7 +10746,6 @@ Make sure the toggle next to "Back up & sync" is on
 Make sure the USB connection is secure (if you're using a USB connection)
 Make sure the volume bar says Volume instead of Ringer to adjust media volume
 Make sure Wi-Fi is turned on
-Make sure you are signed in to the Google account you use on your Android phone
 Make sure you can receive your satellite's signal
 Make sure you have a compatible fingerprint reader (if you don't have one built-in)
 Make sure you have the Premium plan
@@ -11379,7 +11089,6 @@ malt Corn
 man Braid
 manage a Nerf Team
 Manage automatic update preferences in Settings > App Store
-manage Facebook Privacy Settings
 manage the Storage on Your iPad
 Manage your language and input settings in Settings > Personalization
 manage Your Money (for Teenagers)
@@ -11393,7 +11102,6 @@ manually Auto Tune With Audacity
 Manually go through your followers list
 manually Reset Your Wireless Adapter in Windows
 manually Rewind a Cassette Tape
-manually Update Google Play
 Many cross-listing services exist, but few have free options
 Map actions to controls
 map for Garry's Mod With Source SDK
@@ -11401,7 +11109,6 @@ map Lash Extensions
 march
 marinate a Pot Roast
 marinate Salmon
-mark a Facebook Messenger Conversation As Spam
 mark All Emails As Read iPhone
 mark Messages As Read when Clicked on Outlook
 Mark your posts as metered
@@ -11576,7 +11283,6 @@ move a Pool Table
 move a Radiator
 Move a saddle to the horse's inventory
 move a Sofa Bed Up or Down Stairs
-move a Text Box in Google Docs
 move an Oak Desk By Yourself
 Move and resize the sticker to your liking
 Move around in crowds
@@ -11588,8 +11294,6 @@ Move closer to your router
 move Columns in Excel
 move Email to a Folder in Outlook
 move Files in Ubuntu
-move Google Tasks on iPhone
-move Mail to Different Folders in Gmail
 move Music from Computer to iPhone
 move Music to the Sd Card on Samsung Galaxy
 Move on to more advanced projects
@@ -11655,9 +11359,7 @@ Navigate back one screen
 Navigate back to the previous screen
 Navigate back to the screen you want to capture
 Navigate back to the Squad tab and click Copy Link
-Navigate in the code to where you want the Google Map to appear
 Navigate to "Add Music Services"
-Navigate to "HKEY_LOCAL_KEY" > "SOFTWARE" > "Policies" > "Google" > "Chrome"
 Navigate to "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters."
 Navigate to a chat, either private or channel
 Navigate to a date when the video wasn't deleted
@@ -11744,7 +11446,6 @@ Navigate to where you opened the file and open it
 Navigate to your chats
 Navigate to your CUR file
 Navigate to your downloaded mp3 files using Windows Explorer or the Finder on Mac
-Navigate to your Facebook Shop and click Edit on the item that you're selling
 Navigate to your first blank cell without changing the selection
 Navigate to your main drive, then the Windows folder, then the System32 folder, then the osk.exe file
 Navigate to your page break
@@ -11812,7 +11513,6 @@ Open a crafting table
 open a DAT File on Mac
 Open a direct message or chat channel
 Open a document
-Open a document in Google Docs
 Open a document in Word
 Open a document with a table
 open a Door With a Knife
@@ -11827,7 +11527,6 @@ Open a folder in which you want to search
 Open a folder on the storage device
 open a Franchise
 Open a game on your Android, like Candy Crush
-Open a Google Sheet and select a cell
 Open a group chat
 open a Lemonade Stand
 Open a mobile internet browser
@@ -11933,7 +11632,6 @@ open BIN Files
 Open Blender
 Open Blender 3D
 Open BlueStacks
-Open BlueStacks and sign in with your Google account
 Open both images
 Open C:\Windows\System32\drivers\etc
 Open Calendar
@@ -11982,14 +11680,6 @@ Open Excel
 open Excel Files
 open EXE Files
 open Exe Files on Mac
-Open Facebook
-Open Facebook and sign into your account
-Open Facebook in a browser
-Open Facebook in an internet browser
-Open Facebook Messenger
-Open Facebook on a browser
-Open Facebook on your browser
-Open Facebook on your device
 Open FaceTime
 open File Explorer
 Open File Explorer
@@ -12011,26 +11701,6 @@ Open Foxit PDF Editor
 Open GarageBand
 open GIFs
 Open GIMP
-Open Gmail
-open Google Archive Files
-Open Google Authenticator and tap Get Started
-Open Google Chrome
-Open Google Chrome and a few tabs
-Open Google Chrome on your Android
-Open Google Drive
-Open Google Drive and sign in
-Open Google Drive in a web browser
-Open Google Home
-Open Google Lens
-Open Google Maps
-Open Google Maps in your browser
-Open Google Messenger
-Open Google Photos
-Open Google Sheets
-Open Google Sheets in a browser
-Open Google Takeout in a browser
-Open Google Translate
-Open Google Voice
 Open GParted
 Open Grindr
 Open GroupMe
@@ -12052,7 +11722,6 @@ Open IDLE
 Open iexpress
 Open iMovie
 Open iMovie and open a project
-open Incognito Mode by Default in Google Chrome (Windows)
 Open Indeed
 Open Internet Explorer
 Open iTunes
@@ -12101,7 +11770,6 @@ Open or create a file in Adobe Illustrator
 Open or create a message
 Open or create a new Illustrator document
 Open or create a new Pro Tools session
-Open or create a new project in Google Docs
 Open or create an HTML file in Visual Studio Code
 Open or create the folder called "mods."
 Open Origin and log in
@@ -12199,7 +11867,6 @@ Open the "ScpToolkit Driver Installer" program
 Open the "Server" folder and then open the "Command.dat" file in Notepad
 Open the 7-Zip program and navigate to your tar file
 Open the Activity app
-Open the Adblock Plus webpage in your Google Chrome browser
 Open the Adobe Acrobat Reader app on your Android
 Open the Adobe After Effects page
 Open the Alexa App
@@ -12278,9 +11945,6 @@ Open the email receipt
 Open the Emergency Contacts Settngs menu
 Open the emulator
 Open the Excel document
-Open the Facebook app
-Open the Facebook app and tap the menu
-Open the Facebook app on your smartphone
 Open the FBReader app
 Open the file
 Open the File Explorer
@@ -12306,20 +11970,6 @@ Open the game in Chrome
 Open the Game menu
 Open the Game menu and select Memory Card Utility
 Open the gates once all generators are repaired
-Open the Gmail app
-Open the Google app
-Open the Google app on your phone
-Open the Google Chrome browser
-Open the Google CSV file in Excel and enter all your contact information in the correct column
-Open the Google Form on a browser
-Open the Google Maps app or website
-Open the Google News app
-Open the Google Play Store
-Open the Google Play Store and search for a game
-Open the Google Play Store app
-Open the Google Play Store or App Store
-Open the Google Play Store or App Store on your phone or tablet
-Open the Google Sheets app
 Open the Groupme app
 Open the Groupon app
 Open the Health App
@@ -12577,7 +12227,6 @@ Open your device's store
 Open your display settings
 Open your document
 Open your document in Excel
-Open your document in Google Docs
 Open your document in Word
 Open your Documents and Settings folder
 Open your DVD in HandBrake
@@ -12608,7 +12257,6 @@ Open your iPhone's Settings app
 Open your iPhone's Watch app
 Open your JPG image
 Open your music player
-open Your Old Facebook Account
 Open your PDF
 Open your Phone app
 Open your phone's Messages app
@@ -12623,8 +12271,6 @@ Open your project in AutoCAD
 Open your project in Excel
 Open your project in Excel or create a new project
 Open your project in FL Studio
-Open your project in Google Docs
-Open your project in Google Slides
 Open your project in Illustrator
 Open your project in iMovie
 Open your project in InDesign
@@ -12822,7 +12468,6 @@ pan for Gold
 pan Fry
 pan Fry Salmon
 pan Fry Scallops
-pan Fry Shrimp
 parboil Broccoli
 parboil Potatoes
 parchment Craft
@@ -12856,7 +12501,6 @@ Paste the embed code into a blog or website
 Paste the folder into your htdocs folder
 Paste the hex code into a file
 Paste the link
-Paste the link in the Facebook groups you want to share it with
 Paste the link into the email message and send
 Paste the link to the video in your preferred messaging service
 Paste the mod file in the "mods" folder
@@ -12871,7 +12515,6 @@ pasteurize Your Homemade Wine
 patch a Bicycle Tube
 patina Brass
 patina Metal
-pause a Google Drive Upload on Android
 Pause any household devices using your connection's bandwidth
 Pause OneDrive syncing
 Pause or cancel any active game downloads
@@ -12896,7 +12539,6 @@ Peel off the last of the foil
 Peel or scratch the label on the card
 peel Plums
 peel Potatoes With an Ordinary Kitchen Knife
-peel Quail Eggs
 Peel up the foil at the connector
 Perfect your own content
 perform a Butt Weld Using Electric Arc Welding
@@ -12918,7 +12560,6 @@ perform the Pillow Squeeze (Pilates)
 Perform the steps you want to automate
 perm Short Hair
 permanently Erase Data Off a Hard Drive
-personalize Google News
 persuade Your Parents to Let You Get a Rat
 photograph Christmas Lights
 photograph the Eye Close Up
@@ -12937,10 +12578,8 @@ pickle Calamari
 pickle Cauliflower
 pickle Green Tomatoes
 pickle Okra
-pickle Quail Eggs
 pierce Snakebites
 pierce Your Own Tragus
-pin Comments on Facebook Live on Android
 pin Someone on Zoom
 pin Telegram Messages on Android
 Pinch fingers together to zoom out
@@ -13196,7 +12835,6 @@ play Temple Run
 play Tennis
 play Tetris
 play Texas Hold'em
-play the "No Results" Google Prank
 play the "Who Am I" Drinking Game
 play the Bassoon
 play the Blues on Guitar
@@ -13320,18 +12958,12 @@ Position the file
 Position the image
 Position the motion tracker
 Position the photo inside the circle
-post a Picture with Music on Facebook
-post a YouTube Video on Facebook
 post Ads to Craigslist
 Post at least once per week
 Post frequently
 Post high-quality content, and do it often
 post Images in a Discord Chat on a PC or Mac
-post Links on Facebook
-post on Facebook Messenger from Your Camera Roll on iPhone or iPad
 post on Reddit
-post PDF Files to Facebook on a PC or Mac
-post Poshmark Listings to Facebook Marketplace
 Post regularly and keep your style on-brand
 Post some links to photos or videos for some extra upvotes
 post to Snapchat Stories
@@ -13382,9 +13014,6 @@ prepare a Sea Salt Soak
 prepare a Violin Bow
 prepare Amortization Schedule in Excel
 prepare an Emergency School Kit for Girls
-prepare and Cook Conch
-prepare and Cook Prawns
-prepare and Cook Salmon
 prepare and Give a Speech
 prepare Beets for a Salad
 prepare Black Rice
@@ -13405,10 +13034,7 @@ prepare For and Receive Acupuncture
 prepare for Girls Basketball
 prepare Notes for Public Speaking
 prepare Okra
-prepare Oyster Mushrooms
 prepare Plastic Bags for Knitting or Crochet
-prepare Shiitake Mushrooms
-prepare Shrimp for Cooking
 prepare Soil for Fruit Trees
 prepare Steak Before Cooking
 prepare Textured Vegetable Protein
@@ -13681,13 +13307,11 @@ prevent Calluses on Hands
 prevent Cats from Jumping on Counters
 prevent Clematis Wilt
 prevent Crimson Heads in Resident Evil
-prevent Downloading on Google Drive on PC or Mac
 prevent Getting Poison Ivy or Poison Oak
 prevent Hangnails
 prevent Leather Boots from Creasing
 prevent Lice and Mites Infesting Your Pigs
 prevent Makeup from Melting in Hot Weather
-prevent Others from Seeing Posts You Like on Facebook
 Prevent programs from starting automatically
 prevent Strangers from Messaging You on Snapchat
 prevent Windows from Connecting to Unsecured Wireless Networks
@@ -13709,7 +13333,6 @@ print Passport Photos
 print Pictures from an iPhone
 print Pictures from Your Phone
 print QR Codes on Paper on Android
-print Responses from Google Forms
 print Shipping Labels from PayPal
 print Shipping Labels from the Etsy App
 Print the cards to cardstock
@@ -13725,7 +13348,6 @@ program in Flash (Basic Actionscript 2.0)
 program in Fortran
 program with VBScript
 project a Texture Onto a Curved Surface in SketchUp
-promote a Facebook Page for Free
 promote Fiverr Gigs
 Proofread the cards
 propagate a Grapevine from Store Bought Grapes
@@ -13793,7 +13415,6 @@ Purchase and download Overwatch
 Purchase and furnish a house
 Purchase new cartridges
 Purchase new RAM
-Purchase the book in the Google Play Store
 Purchase the gear you need to record gameplay footage, webcam footage, and audio
 Purchase the label
 Purchase web monitoring software
@@ -13801,7 +13422,6 @@ puree Vegetables
 push Start a Motorcycle
 Push the top plastic piece from the bottom of the hard drive
 Push the wake button Stops a ringing alarm, timer, or reminder
-Put 2 cups of milk in a pot and cook it to a simmer
 put a Banjo Strap on
 Put a compatible Bluetooth device into pairing mode
 put a Cot Together
@@ -13811,7 +13431,6 @@ Put a hole in the wall
 Put a redstone in the bottom-center square
 put a Reed on a Clarinet
 Put a sponsorship hashtag in your posts
-put a Video in a Google Doc
 put a Video on a DVD
 put a Website on Tiktok
 put Ads on YouTube
@@ -13822,7 +13441,6 @@ Put each cell address in the parentheses separated by commas
 put Feathers in Your Hair
 put Game Saves on Your PSP
 put Glitter on a Dress
-put Google Images in Email
 put in earplugs
 Put in popsicle molds and freeze
 Put it in the fridge until room temperature
@@ -13847,7 +13465,6 @@ Put the card back into the Wii and turn it on
 Put the Galaxy Buds in their charging case
 Put the headphones into pairing mode
 Put the location next to "Target" in quotation marks
-Put the mixture back in the pot and cook while mixing until it has a thick custard-like texture
 Put the Pixel Buds in their charging case
 Put the tablet into Download Mode and connect it to the PC
 Put them in Pairing Mode
@@ -13952,7 +13569,6 @@ Record a video with the music playing in the background
 record a Zoom Meeting on Android
 Record additional instruments on other tracks
 record Gameplay on the Xbox Series X or S
-record Google Translate Voice on PC or Mac
 record League of Legends Games
 record Text to Speech on iPhone or iPad
 Record the first segment of your podcast in under the Episodes tab
@@ -13977,7 +13593,6 @@ recycle a Used Oil Filter
 recycle Aluminum Cans, Glass and Plastic Bottles for Cash
 recycle an Old Hot Water Bottle
 recycle Candles
-recycle Eggshells in Gardening Activities
 Recycle it
 recycle Sawdust in a Compost Pile
 recycle Towels
@@ -14060,7 +13675,6 @@ remove a Downloaded File
 remove a FaceTime Email Address on an iPhone
 remove a Fireplace Insert
 remove a Flash Drive from a Windows 10 Computer
-remove a Google Account on Samsung Galaxy
 remove a Kitchen Sink
 remove a Paper Label from a Plastic Prescription Bottle
 remove a Payment Method from iPhone
@@ -14077,7 +13691,6 @@ remove Adhesive on Hardwood Floor
 remove Adware Manually
 Remove all items from your avatar
 remove ambiguities and convert to specifics
-remove an Event from Google Calendar on PC or Mac
 remove An Indoor Carpet
 Remove any existing versions of Java
 Remove any screws or the special enclosure holding the old hard drive in place
@@ -14101,7 +13714,6 @@ remove Caulk
 remove Chewing Gum from a Dog's Hair
 remove Chewing Gum from a Dryer Drum
 remove Chocolate Stains from Clothes
-remove Contacts from Gmail
 remove Copper Stains from Baths and Showers
 remove Cydia
 remove Cydia Apps
@@ -14120,9 +13732,6 @@ remove Fruit Juice Stains from Carpet
 remove Glitter from Your Hands
 remove Glue from Hair Extensions Wefts
 remove Glue from Photos
-remove Google Map Labels on iPhone or iPad
-remove Google Photos
-remove Google Suggestions from Mobile
 remove Grass Stains from Shoes
 remove Grip Tape from a Skateboard
 remove Grout and Cement Spots off Ceramic Tiles
@@ -14170,9 +13779,6 @@ remove Programs (Windows 7)
 remove Red Eye on iPhone, iPod, and iPad Photos
 remove Rust from an Old Knife
 remove Rusted Allen Bolts
-remove Saved Places on Google Maps on Android
-remove Saved Places on Google Maps on iPhone or iPad
-remove Saved Places on Google Maps on PC or Mac
 remove Scorch Marks
 remove Scuff Marks from Car Vinyl
 Remove sections of the piece to create variations of the building piece
@@ -14417,12 +14023,10 @@ reply to an Email
 Reply to your messages
 report a Bug on Roblox
 report a Channel on YouTube
-report a Problem on Google Maps
 Report defects or incorrect items immediately
 report Fraud
 Report repeat harassment to the Trust and Safety team
 report Someone on eBay
-report Someone on Facebook
 report Someone on Snapchat
 Report spam when possible
 repot a Cactus
@@ -14532,7 +14136,6 @@ restore Faded Clothes
 restore from iCloud
 Restore from your iCloud Drive if you use it to back up files
 restore Furniture
-restore Google Contacts
 restore iPhone from Backup
 restore Leather
 restore Lost Power in an Old Car
@@ -14563,7 +14166,6 @@ retrofit Air Conditioning in Cars to New Refrigerant
 return a Groupon Voucher
 return an Order with Fashion Nova App on iPhone or iPad
 return Products Purchased Online
-Return to Google Meet and select Present now
 Return to Hiya and tap the Protect tab
 Return to Riften
 Return to Settings and tap General
@@ -14589,7 +14191,6 @@ reuse Old Clothes
 reuse Old Newspapers
 reuse Paint Rollers
 reuse Your Old Computer Hard Drives
-reveal a Fake Facebook Account
 reverse
 reverse a Curse
 Review and tap Send Now
@@ -14811,7 +14412,6 @@ rotate a Mattress
 rotate a Video
 rotate a YouTube Video
 rotate an Image in Photoshop
-rotate Google Photos on Android
 rotate Objects in Photoshop
 rotate Screen on Android
 rotate Screen on iPhone
@@ -14893,7 +14493,6 @@ Run SuperTool to root the Kindle
 run Task Manager from Command Prompt
 Run the activation script
 Run the EXE file to install
-Run the Google Play Store option
 Run the installer
 Run the installer and install PortableApps on your USB flash drive
 Run the installer and select "Modify."
@@ -14925,13 +14524,11 @@ salt Peanuts
 sandboard
 saute
 saute Garlic
-saute Shrimp
 save a Baby Wild Mouse
 save a Choking Dog
 save a Dying Rose Bush
 save a File
 save a GIF on an iPhone
-save a Google Doc
 save a Pattern in Illustrator
 save a Scratch Project
 save a Screenshot
@@ -14939,7 +14536,6 @@ Save a sound to your Notifications folder if using a custom sound
 save a Text Chat on Skype
 save a TikTok Video in Your Gallery on Android
 save a TikTok Video in Your Gallery on iPhone or iPad
-save a Web Page as a PDF in Google Chrome
 save a Webpage
 save a Wet Photo Album
 save a Word Document in iCloud
@@ -14960,10 +14556,7 @@ save One Page of a PDF Using Adobe Reader
 save photos
 save Photos on Telegram on Android
 save Pictures from Emails on an iPhone
-save Pictures from Facebook
 save Pictures from Snapchat Chat Without Taking a Screenshot
-save Pictures on Facebook Messenger on a PC or Mac
-save Pictures on Facebook Messenger on iPhone or iPad
 save Pictures to Your MacBook
 save Snapchat Conversations
 save Snapchats to the Camera Roll
@@ -15038,7 +14631,6 @@ Scan or enter the code
 Scan the document you want to send
 Scan the QR code on your iPhone using your Android
 Scan the QR code or enter the setup key
-scan with Google Translate
 Scan your document
 Scan your PC
 schedule a Lyft in Advance
@@ -15066,7 +14658,6 @@ Scroll down
 Scroll down and check on Show advanced settings box
 Scroll down and click Edit or Add a Description next to "DESCRIPTION."
 Scroll down and click Get classic Skype
-Scroll down and click Google Chrome
 Scroll down and click iCloud
 Scroll down and click NEXT
 Scroll down and click on a notification
@@ -15103,7 +14694,6 @@ Scroll down to the "TeX Distributions" heading
 Scroll down to the bottom of the page Hit "Save changes"
 Scroll down to the DNS option
 Scroll down to the privacy section
-Scroll down to the Your Facebook Information section
 Scroll down to your post
 Scroll right through the selection of apps
 Scroll the scroll wheel on your mouse or press + or -
@@ -15144,7 +14734,6 @@ Search "Pixelmon"
 Search "Steam"
 Search "webgl.disabled" and double-click it if it says "True" under "Value"
 Search a location
-search a Phone Number on Facebook
 Search and Download Ubuntu themes from the internet
 search and Find About Someone Using Image Easily
 Search and find the location
@@ -15152,11 +14741,9 @@ Search and install Adobe Acrobat Reader
 Search and open Command Prompt
 Search and open Event Viewer
 Search blu-ray
-search by Image on Google
 Search by subject or location
 Search by typing: Command Prompt
 search Channels in YouTube
-Search for "Facebook"
 Search for "GNOME Tweaks" and install the app
 Search for "HTML Preview" and install it
 Search for "netflix codes" in a web browser
@@ -15194,14 +14781,10 @@ Search for an item or items
 Search for and engage with content from the desired region
 Search for and install "Downloader."
 Search for another user
-Search for apktool.bat on Google and save the file to the APK folder
 Search for business card templates
 Search for channels
 search for Diamonds in Crater of Diamonds State Park
-search for Friends by City on Facebook
 Search for GoodGame Empire and any related programs
-search for Multiple Places in Google Maps
-search for People on Facebook
 Search for software
 Search for stone blocks alongside mountains, cliffsides, underground, or in caves
 Search for the artist and click their page
@@ -15223,9 +14806,6 @@ Search for your organization by name of EIN
 Search for your phone number or email address
 Search for your teacher or class name
 Search for yourself on Whitepages
-search Google
-search Nearby on Google Maps on Android
-search on Facebook Messenger on a PC or Mac
 Search or browse for a package or app
 search posts from a Specific User
 search postss by Date on App
@@ -15237,7 +14817,6 @@ Search the internet for old records
 Search the internet for their name and location
 Search threads and images
 search Videos on Tiktok
-search Within a Google Docs Spreadsheet
 Search your "#keyword" to see all the tagged messages
 Search your contacts for Kik users
 search YouTube Videos by Date
@@ -15256,21 +14835,17 @@ season Pampered Chef Stoneware
 season Pinto Beans
 season Pork Chops
 season Salmon
-season Shrimp
 section Hair
 secure a Bookcase to a Wall
 Secure the hard drive in place with screws
 securely Convert Paper Savings Bonds to Electronic Securities
 sedate a Cat
 seduce a Woman With a Foot Massage
-see a Password Protected PDF Using Gmail
 see All Open Tabs in Chrome
 see All Open Windows
-see Birthdays on Facebook on iPhone or iPad
 see Blocked Contacts on iPhone
 see Buy Orders on Steam
 see Everyone in Microsoft Teams
-see Followers on Facebook
 see Frame Rates
 see Hours Played on PS4
 see How Many Apps Are on Your iPhone
@@ -15282,27 +14857,14 @@ see if Someone Read Your Text on Android
 See if there's a touch-screen overlay that matches your laptop's dimensions
 See if they've been tagged in photos and posts
 see Infrared Light
-see Less of Someone on Facebook
-see Memories on Facebook
-see Messages from Non-Friends on Facebook Messenger on a PC or Mac
-see Page Likes on Facebook
 see People's Birthdays on Snapchat
 see Replies on Telegram on Android
-see Saved Posts on Facebook
 see Snapchat Conversation History
 see Snapchat Memories
-see Street View on Google Maps on iPhone or iPad
-see the "Other" Folder in Facebook Messenger
 see Unread Emails in Outlook
-see Uploaded Photos on Facebook
-see What Your Friends Like on Facebook
 see Who Is Connected to Your Wireless Network
-see Who Shared Your Facebook Post
-see Who Viewed Your Facebook Story
-see Who Views Your Facebook Profile
 see Who You Have Blocked
 see Your Account Name in Steam
-see Your Archived Messages on Facebook Messenger
 see Your Best Friends on Snapchat
 see Your WiFi Password on an iPhone
 seed a Torrent
@@ -15317,7 +14879,6 @@ Select "Creative" in the "Default Game Mode" drop-down
 Select "Custom Install" and click Next
 Select "Enable" next to "Webgl 2.0 Compute"
 Select "End current position as of now."
-Select "Facebook Messenger"
 Select "Hide & Unhide" on the menu
 Select "Linear."
 Select "Open this page."
@@ -15382,7 +14943,6 @@ Select a document type from the "Profile" menu
 Select a drive
 Select a drive with unallocated space and click Next
 Select a duration
-Select a Facebook page to share to
 Select a file and click Open
 Select a file or directory
 Select a file smaller than 25 MB
@@ -15675,7 +15235,6 @@ Select End Meeting for All
 Select Everyone and click Add
 Select Export
 Select Extract files only and click Next
-Select Facebook on the Save or Share page
 Select Favorites from the menu options
 Select FFmpeg as the output format
 Select files or folders to add
@@ -16022,7 +15581,6 @@ Select Use a formula to determine which cells to format
 Select what to import
 Select what to transfer from the Android
 Select what version you want (only available for certain downloads, like Win32)
-Select where on Facebook you'd like to go Live then click Next
 Select where to post
 Select where you want your filter available
 Select which components you want to install
@@ -16130,16 +15688,12 @@ Send a chat message
 send a Direct Message
 send a Fax
 send a Flirty Text Message
-send a Friend Request on Facebook
 send a Group Email in Outlook on PC or Mac
 send a Kahoot
 send a Long Video from iPhone
 Send a message and watch for an error
-send a Message from a Facebook Page
 Send a message to a follower
-send a Message to All Facebook Friends
 Send a message to the person in Messenger and watch the "Sent" icon afterwards
-send a Private Facebook Message
 send a Private Message
 Send a reminder and start your tasting
 Send a reply
@@ -16152,15 +15706,12 @@ send a YouTube Video
 send a Zoom Invitation
 send An Anonymous Email
 send an Audio Message from an iPhone
-send an Email Using Gmail
-send an Encrypted Email in Gmail on Android
 Send an image
 send an iMessage As a Text on iPhone
 send an Invoice on eBay
 send an Offer to a Buyer on Fiverr
 send an S.A.S.E. (Self Addressed Stamped Envelope)
 send an Undisclosed Recipients Email
-send and Request Money with Facebook Messenger
 send AP Scores
 Send as many snaps as possible to as many people as possible
 send Audio Files on Snapchat
@@ -16170,18 +15721,15 @@ send Christmas Cards
 send Code on Telegram
 send CSGO Skins on Steam on PC or Mac
 Send direct messages to friends
-send Documents Securely via Gmail
 send Electronic Goods Through a Courier
 send Email on Android
 send Email on the iPhone
 send Email Using Telnet
 send Files from Your Computer to Your Mobile Phone Via Bluetooth
-send Files on Facebook
 send Fireworks on Apple Messages
 send from Another Email Address in Outlook
 send Gifs on iPhone
 send Group Email
-send Group Email in Gmail
 send HTML Emails
 Send invitations to your guests with instructions on purchasing the wines
 send Large Files on Discord Without Nitro
@@ -16189,7 +15737,6 @@ send Large Files Through Outlook
 send Large Files to Another Computer Using the Internet
 send Mass Emails
 send Messages on an iPhone
-send Messages on Facebook
 send Messages on TikTok Without a Phone Number
 Send messages to friends
 Send messages to people you've liked
@@ -16203,7 +15750,6 @@ send Photos Via Email (Windows)
 send Pictures by Email in Yahoo
 send Pictures from Your Cell Phone to Your Computer
 send Pictures to a Cell Phone
-send Software Through Gmail
 send Someone an Email
 send Someone Your Location
 send Text Messages
@@ -16230,7 +15776,6 @@ separate Messages from Unknown Users on an iPhone
 separate Salt and Sugar
 separate Stuck Glasses
 separate Stuck Trash Barrels
-Separate the whites and yolk from 2 eggs
 separate Threads in iPhone Mail App
 Sept (set)
 serve a Tennis Ball
@@ -16266,13 +15811,10 @@ Set content restrictions
 set Different Wallpapers on Dual Monitors on Windows
 set Fire to Leaves
 set Floor Levels in Revit
-set Google Chrome As Your Default Browser
 set Hair
-set Homepage in Google Chrome
 set Image Width and Height Using HTML
 set Parental Controls for the iPhone App Store
 set Planer Blades
-set Print Area on Google Sheets on PC or Mac
 Set reminders for specific dates and times
 set Reminders on iPhone Calendar
 set SkyScan Atomic Clock
@@ -16297,10 +15839,8 @@ Set the start and stop times and click OK
 set Tie Dye
 set Time Limits on Snapchat
 Set up a complete profile
-set Up a Google Apps Account
 set Up a Lathe
 set up a Paypal Account to Receive Donations
-set Up a Private Facebook Page
 set Up a Smart Board
 Set up a Stream
 set Up a Turtle Tank
@@ -16310,8 +15850,6 @@ set Up a Xbox 360 Controller on Project64
 set Up an AVID Binder
 set up Columns in Illustrator
 set Up Drop in with Alexa
-set Up Google Alerts
-set Up Google Home
 set Up Homebridge
 set Up Multiple Home Pages in Firefox
 set Up Parental Controls in Microsoft 10
@@ -16355,7 +15893,6 @@ shape a Beard
 shape a Hat
 shape a Surfboard
 share a Folder
-share a Google Drive File
 share a Printer
 share a Recorded Zoom Meeting
 share a Video
@@ -16366,12 +15903,9 @@ share Books on iPad
 Share events with other people
 share Files on Zoom
 share Files Wirelessly
-share Google Docs
-share Live Stream on Facebook to Multiple Groups
 share Location from Android to iPhone
 share Microsoft Office on PC or Mac
 Share new content on weekdays between 9 AM and 3 PM
-share on Facebook
 Share on social media
 share Personal or Public Files Using uTorrent
 share Photos Online
@@ -16383,7 +15917,6 @@ Share the link
 Share the post
 Share the printer
 Share the URL under Server URL your viewers
-share Videos on Facebook
 share WiFi from iPhone to iPad
 share WiFi Password from iPhone to iPhone
 Share your copied invite
@@ -16447,7 +15980,6 @@ shop for Speakers
 shorten a Bike Chain
 shorten and Hem Curtains
 shorten Backpack Straps
-shorten Google Maps URLs
 shorten Jacket Sleeves
 shorten Mini Blinds
 shorten Pants Without Hand Sewing
@@ -16458,8 +15990,6 @@ shovel Snow
 show Battery Percentage on iPhone 11, 12, and XR
 show Dislikes on YouTube
 show Hidden Files and Folders on a Mac
-show Hotels on Google Maps on Android
-show Hotels on Google Maps on iPhone or iPad
 show Lowercase Keys on an iPhone
 show Margins in Word
 show Paragraph Marks in Indesign
@@ -16515,12 +16045,6 @@ Sign in or create a new Oracle account
 Sign in or create an account
 Sign in to a workspace
 sign in to Chrome
-Sign in to Facebook
-Sign in to Gmail
-Sign in to Google Drive
-sign in to Google Drive on Android
-Sign in to Google Gmail
-Sign in to Google Sheets
 sign in to iCloud on an iPhone
 Sign in to Microsoft
 sign in to Office 365
@@ -16536,7 +16060,6 @@ Sign in to your AOL account
 Sign in to your Apple ID
 Sign in to your Creative Cloud account
 Sign in to your email account
-Sign in to your Gmail account
 Sign in to your iCloud account
 Sign in to your LinkedIn account
 Sign in to your Microsoft account and add or choose your payment method
@@ -16549,18 +16072,13 @@ Sign in to your PSN account
 Sign in to your router's admin site
 Sign in to your Yahoo account
 Sign in to your YouTube account, if needed
-Sign in with a Google account
 Sign in with a Microsoft account
 Sign in with the account that has the Game Pass or Gold subscription
 Sign in with the username and password associated with your television service provider account
 Sign in with your Apple ID
 Sign in with your e-mail or mobile number and password
-Sign in with your Facebook account
-Sign in with your Google account
 Sign in with your Yahoo account
-Sign into (or create a) Google account
 Sign into both using the same RealVNC account
-Sign into Facebook on a phone or tablet
 Sign into iCloud
 sign Into OneNote
 Sign into Skype when prompted
@@ -16653,7 +16171,6 @@ Slide the button next to Location Services to the "On" position
 Slide the Calendars switch right to the On position
 Slide the Contacts switch to On
 Slide the Find My iPhone button to On
-Slide the Google Photos switch to On
 Slide the green tab left and right several times
 Slide the iCloud Keychain switch left to the Off position
 Slide the Keep Map North Up button to the On position
@@ -16670,7 +16187,6 @@ Slide the WiFi calling switch to On
 Slide Viber to On
 Slide your finger to the heart icon
 slip Slip Knit
-slow Cook a Turkey
 Smelt iron, gold, or diamond materials in a furnace
 Smelt the iron in a furnace
 Smelt the iron ore in a furnace
@@ -16696,7 +16212,6 @@ solve Logic Puzzles
 solve Problems Using Mind Maps
 Solve the Dotted Hole maze on Six (Fortune) Island
 Sort by "Date followed: latest"
-sort on Google Sheets on Android
 sound Deaden Your Car
 Speak
 Speak to a child
@@ -16719,7 +16234,6 @@ splice Coax Cable
 splice Yarn
 splint a Cat's Broken Leg
 splint a Fracture of the Lower Leg
-split a Cell on Google Sheets on Android
 split a Table in Word
 split Hardwood Firewood
 split PDF Files
@@ -16899,7 +16413,6 @@ stay Calm During Road Rage
 stay Cool in Warm Weather
 stay Hydrated in a Desert
 stay in the Presence of God
-stay Logged in on Facebook on PC or Mac
 stay Looking Clean All Day Long
 stay on Task and Be Focused
 Stay safe
@@ -16933,7 +16446,6 @@ steam Kale
 steam Mussels
 steam Open an Envelope
 steam Press a Sweater or Other Knit Garment
-steam Shrimp
 steam Vegetables
 steam Vegetables in an Instant Pot
 steam Your Face
@@ -16963,7 +16475,6 @@ stop a Mac's Screen From Dimming when Not Plugged in
 stop a Windows Computer from Freezing
 stop Airpods from Reading Texts
 stop Alarms with Alexa
-stop All Friend Requests on Facebook
 stop All the Ads in Hotmail
 stop an Application from Opening at Startup With Mac OS X
 stop an Echo on Discord
@@ -16991,8 +16502,6 @@ stop Pop Ups on a Mac
 stop Potatoes from Sprouting in Storage
 stop Running Away from Yourself
 stop Running Late
-stop Seeing a Friend's Likes on Facebook
-stop Seeing a Friend's Posts on Facebook
 stop Sims 3 from Freezing
 stop Spam
 stop Spam Messages on Snapchat
@@ -17036,10 +16545,8 @@ store Cooked Salmon
 store Cooking Oil
 store Croutons
 store Dahlia Bulbs
-store Duck Eggs
 store Egg Yolks
 store Eggplant
-store Eggs
 store Feta Cheese
 store Flaxseed
 store Fresh Basil
@@ -17136,7 +16643,6 @@ stretch the Waist on Jeans
 stretch Your Back
 stretch Your Legs
 stretch Your Shoes With Ice
-strikethrough on Google Docs
 string a Compound Bow
 string a Crossbow
 string a Lacrosse Stick
@@ -17193,7 +16699,6 @@ subtract in Excel
 succeed in College
 succeed in Harvest Moon Back to Nature
 successfully Counter Any Kick in Tae Kwon Do
-suggest Friends on Facebook
 sum Multiple Rows and Columns in Excel
 summon a Vehicle in Destiny
 summon a Vehicle in Destiny 2
@@ -17308,10 +16813,7 @@ switch Cells in Excel
 Switch Character Count to on
 switch Epic Games Accounts
 switch from Android to iPhone with Verizon
-switch from AOL to Gmail
 switch from Clarinet to Tenor Saxophone
-switch from Yahoo! Mail to Gmail
-switch Google Play Accounts on Android
 switch Hulu Profiles on iPhone or iPad
 switch Hulu Profiles on PC or Mac
 switch iPhones
@@ -17348,16 +16850,11 @@ sync a PS4 Controller
 sync a Roku Replacement Remote
 sync a Samsung Phone and Tablet
 sync an iPod
-sync Android Contacts With Gmail
 sync Apple Books
 sync Apple Music from iPhone to iPad
 sync Audio and Video
 sync Cell Phones
 sync Contacts on GroupMe on Android
-sync Contacts to a Google Account
-sync Facebook Events to iCal
-sync Google Calendar with Outlook
-sync Google Contacts With Android
 sync iPhone and iPad Calendars
 sync iPhone Calendar to iCloud
 sync iPhone Contacts to iCloud
@@ -17373,16 +16870,13 @@ sync Outlook Signatures
 sync Your Calendar with Outlook on iPhone or iPad
 Sync your controller
 sync Your Fitbit on Android
-Sync your Google account in the Settings menu on your Android phone
 sync Your iPhone with Microsoft Exchange
 synchronize Folders
 synchronize Outlook Data with Yahoo
 system Link Two or More Xbox or Xbox 360 Consoles
 t-Streak (Microbiology)
-tag a Page on Facebook
 tag Cattle
 tag People in a Discord Chat on Android
-tag Someone in Facebook Messenger on Android
 take a break
 take a Bus in Brisbane
 take a Cat for a Walk
@@ -17541,7 +17035,6 @@ teach a Dog How to Catch a Frisbee
 teach a Foal to Lead
 teach a Horse to Ride Tackless
 teach a Rat Its Name
-teach Facebook to Seniors
 teach Kids to Garden
 teach Personal Hygiene
 teach Subtraction
@@ -17568,14 +17061,11 @@ tell if My Gpu Is Dying
 tell if One Leg Is Shorter
 tell if Ray Ban Sunglasses Are Fake
 tell if Someone Added You on Snapchat
-tell if Someone Has Seen Your Facebook Event Invitation on a PC or Mac
-tell if Someone Has Seen Your Facebook Event Invitation on iPhone or iPad
 tell if Someone Saved Your Messages on Snapchat
 tell if Thanksgiving Turkey Is Done
 tell If Your Car Speakers Are Blown
 tell if Your Computer Is Infected by a Trojan Horse
 tell if Your Dog Has Fleas
-tell if Your Eggs Are Fresh
 tell if Your Eyes Are Going Bad
 tell if Your Home Has Code Violations
 tell if Your iPhone is Too Old to Update
@@ -17798,7 +17288,6 @@ topdress a Lawn
 torch Weld
 toss a Salad
 toss Pizza Dough
-total a Column on Google Sheets on PC or Mac
 Touch OK on the printer's control panel
 Touch the Uconnect Apps button on your car's touchscreen
 touch Up Car Paint
@@ -17813,7 +17302,6 @@ traceroute
 track a Cell Phone
 track an iPhone
 track an iPhone from an Android
-track Friend Requests You've Sent on Facebook
 track Mileage Without an Odometer
 track Money
 Track your referrals
@@ -17973,14 +17461,10 @@ turn Off PS4 Without Controller
 turn Off Reminder Notifications on an iPhone
 turn Off Roku
 turn Off S Mode in Windows 10
-turn Off Satellite View on Google Maps on Android
-turn Off Satellite View on Google Maps on iPhone or iPad
-turn Off Satellite View on Google Maps on PC or Mac
 turn Off Send Text Sound on an iPhone
 turn Off Silent Mode on iPhone
 turn Off SMS on GroupMe on Android
 Turn off Software TTY
-turn Off Spell Check in Google
 Turn off Story Progression in the game options
 Turn off the feature that silences unknown callers
 turn Off the Light on an Echo Dot
@@ -18070,7 +17554,6 @@ turn Wireless Compatibility Back On
 turn Wood
 Turn wood into planks and sticks
 turn Your Bedroom Into a Blanket Fort
-turn Your Favorite Website Into Desktop Apps With Google Chrome
 turn Your Flare Jeans Into Skinny Jeans
 turn Your Mini Fridge Into a Wine Refrigerator
 Turn your phone back on
@@ -18128,7 +17611,6 @@ Type "done" to finish
 Type "ease of access" into the Windows Search bar
 Type "echo echo "JAVA_HOME=' " followed by the installation path
 Type "export JAVA_HOME=" followed by the Java installation location in the terminal and press Enter
-Type "Facebook" into the search bar
 Type "has:attachment"
 Type "hotels" and press Enter
 Type "hotels" and tap the search key
@@ -18334,7 +17816,6 @@ Type the name of the program you want to launch
 Type the name or username of the person you want to follow
 Type the number of seconds until the shut down or restart happens
 Type the number you want to block and click Add number
-Type the old email address and choose Gmailify or POP3
 Type the person's name or email address
 Type the person's username into "From these accounts."
 Type the phone number followed by the carrier's domain into the "To" text field
@@ -18386,12 +17867,10 @@ unbind a Book
 unblock a Drain
 unblock a Number
 unblock a Number on Android
-unblock a Page on Facebook
 unblock Command Prompt Anywhere
 unblock Flash Player
 unblock Fortinet
 unblock Someone
-unblock Someone on Facebook
 unblock Someone on Grindr
 unblock Someone on Kik
 unblock Someone on Snapchat
@@ -18448,8 +17927,6 @@ unfollow Pinboards on Pinterest
 unfollow Someone on Pinterest on an iPhone or iPad
 unforget Bluetooth Device iPhone
 unfreeze Water Pipes
-unfriend on Facebook
-unfriend Someone on Facebook Without Actually Unfriending Them
 unfriend Someone Without Them Knowing
 unhide Columns in Excel
 unhide Games in Steam
@@ -18472,11 +17949,7 @@ uninstall Chrome on Android
 uninstall Directx
 uninstall Discord
 Uninstall extensions you don't need
-uninstall Facebook on Android
 uninstall Goodgame Empire
-uninstall Google Chrome
-uninstall Google Music Manager
-uninstall Google Pay
 uninstall iCloud for Windows
 uninstall Internet Explorer 11 for Windows 7
 uninstall Internet Explorer Completely
@@ -18498,18 +17971,15 @@ Uninstall unnecessary apps
 Uninstall unnecessary programs
 Uninstall unused applications
 Uninstall unused apps and disable apps running in the background
-uninstall Updates on Google Play Services
 uninstall Visual Studio
 uninstall Webwatcher on Android
 uninstall Windows 10 Store Apps
 uninstall YouTube Updates
 unlink a Bank Account on Venmo
-unlink a Form on Google Sheets
 Unload your "gift" symptoms as soon as possible
 unlock a Disabled iPhone
 unlock a Pin Lock on an Android
 unlock a Sprint iPhone
-unlock an Android Phone Pattern Lock with Gmail
 unlock an AT&T iPhone
 unlock Blooper and Hammer Bro. in Mario Party 8
 unlock Factions in Rome Total War
@@ -18528,16 +17998,13 @@ Unlock your phone
 Unlock your Samsung Galaxy device
 unmould a Jelly
 Unpack the downloaded file
-unpin a Group on Facebook Messenger
 Unplug it from the TV to turn it off
 Unplug your computer
 Unplug your USB cable
-unpublish a Page on Facebook
 Unscrew the screws securing the battery in place
 unsubscribe
 unsubscribe from a Subreddit on PC or Mac
 unsubscribe from Spam
-untag on Facebook
 untangle Hair
 Unzip the cursor file
 Unzip the downloaded file
@@ -18553,7 +18020,6 @@ update Android Apps from Your PC
 update Cyberflix
 update Excel on Mac
 update Firmware on an Lg Smart TV
-update Google Chrome
 update iOS
 Update the address
 Update the application regularly
@@ -18584,7 +18050,6 @@ Upload a video at least once a day
 upload a Video to Twitch
 Upload a Word document
 upload an Existing Resume on CareerBuilder
-upload an HTML File to Your Server in Order to Verify Ownership to Google
 Upload an image or paste an image's URL
 Upload at least once a day
 Upload at least one photo
@@ -18593,21 +18058,16 @@ upload Files to a Discord Channel on Android
 upload from PS4 to YouTube
 Upload high-quality videos
 upload Images to Roblox
-Upload it to Google Drive if prompted
 upload Longer TikTok Videos on iPhone or iPad
 upload Longer Videos on YouTube
-upload Mobile Photos to Facebook
 Upload or record a video with a sound you want to use
-upload Pictures to Google Drive on PC or Mac
 Upload sponsored content
 Upload the certificate to the server
 Upload the HTML file to your server
 Upload the image
 Upload the PUB file to the online converter
-Upload the spreadsheet to Google Drive
 Upload the video to YouTube
 Upload the XPS file
-upload to Google Photos on iPhone or iPad
 Upload videos often
 upload Videos on iPhone or iPad
 upload Videos to YouTube Faster
@@ -18624,7 +18084,6 @@ Use "sudo ufw allow [port number]" to open a port
 Use "sudo ufw allow 6000:6007/tcp" to open a range
 Use "sudo ufw status numbered" to view the rules
 use "unqualified" people
-Use "wget" to download the latest page from Google
 use 7Zip to Create Multiple Compressed Folders in One Go
 use 7Zip to Create Self Extracting excutables
 Use a battle item
@@ -18700,13 +18159,11 @@ use an Axe
 use an Aztec Clay Mask
 use an Ehmer Sling
 use an Electric Knife to Cut Foam
-use an Email Address to Find Someone on Facebook
 use an Emulator and Roms
 Use an ethernet cable to connect a computer to the router
 Use an ethernet cable to connect the modem to the "WAN" port on a wireless router
 Use an exposure or contrast filter or adjustment layer to lighten or darken an image
 Use an HDMI cable to connect your Nintendo Switch to the capture card in docked mode
-use an Incubator to Hatch Eggs
 use an Insulin Pen
 use an iPad
 use an Italian Bathroom
@@ -18753,15 +18210,11 @@ use Custom Stamps from Microsoft Word in Adobe Acrobat
 use Discord on a PC or Mac
 Use effective language and tags
 Use effects from the Filters menu
-use Emoji on Facebook Messenger on Android
 use Eucalyptus Oil for Your Beard
 Use EV berries
 Use expressions to manipulate the variables
 use Eyebrow Pencil
 use Eyeshadow Brushes
-use Facebook for Business Marketing
-use Facebook Messenger
-use Facebook Places
 use FaceTime
 Use fewer browser tabs and disable browser extensions
 use fewer notes
@@ -18769,7 +18222,6 @@ use FileZilla
 use filters
 Use filters and tools
 Use Filters such as Blur or Sharpen to enhance the photo
-use Find in Google Chrome
 Use Flash in the center of the chamber
 Use FlashFire to install Android
 use Font Color Tags in HTML
@@ -18777,11 +18229,6 @@ Use four bricks and a crafting table to craft brick blocks
 Use frames to create focus
 use Gel to Fix Curly Hair
 use GIMP
-use Google Calendar
-use Google Chat
-use Google Keep
-use Google Maps Offline
-use Google Photos
 use Green Eyeshadow to Cover a Red Pimple
 Use ground pound to defeat the worm as Mini-Mario
 use Hair Removal Cream on Your Face
@@ -18832,7 +18279,6 @@ use Predictive Text
 use Prepackaged Concrete Mix
 use Reactions in Discord on iPhone or iPad
 Use relevant and popular hashtags in your captions
-Use Restream to stream a Facebook Live to multiple groups
 Use Rufus to create a USB install disk from the ISO file
 Use Run > Run Module to execute the script
 Use sabotages to lure players away from bodies or set traps
@@ -18870,11 +18316,8 @@ Use the bar along the button to format the text
 use the Bathroom While Camping
 Use the best gameplay footage in your video edits
 Use the Boot order option or Boot menu to boot from the USB drive
-Use the Browser and Google apps to search the web
 Use the brush tool to draw or mark the image
 Use the Brush tool to paint
-use the Camera with Google Translate on Android
-use the Camera with Google Translate on iPhone or iPad
 Use the center key to make selections
 Use the cobblestone blocks to expand your island and craft other items
 Use the Color menu to change the note color
@@ -18997,7 +18440,6 @@ Vendoo's paid upgrade automatically delists sold items automatically and require
 verify a GPG Signature
 Verify closing the account in your email
 verify If an Email Address Is Valid
-Verify that all your local data has been saved to Google Drive or to another form of storage
 Verify that the link locations are up-to-date
 Verify the bank account information
 Verify the new account in your email
@@ -19008,16 +18450,13 @@ Verify your email
 Verify your new security method
 Verify your phone number or click Skip
 Vibrate your hand with your wrist and arm muscles
-video Chat on Facebook
 video Chat on Skype
-view a Friendship on Facebook
 view Archived Channels in Slack
 view Chat History on Snapchat
 View classic Flash content at https://archive.org/details/softwarelibrary_flash
 View Details on your entry
 View graphs of your distance totals
 view Messages on Snapchat
-view Phone Call History on Google Voice
 view Reddit Subscriptions on Android
 view Saved Passwords on a Mac
 view Source Code in Firefox
@@ -19027,7 +18466,6 @@ View the same photos on all devices
 View the timer for the most recent session in hh:mm:ss format
 View when they were last active below their name at the top
 View your battery in Today View
-view Your Calendar in Gmail
 view Your Diagnostics and Usage Data on an iPhone
 View your Favorites
 view Your Liked Videos in YouTube
@@ -19186,7 +18624,6 @@ watch Crunchyroll with Friends
 watch Deleted YouTube Videos with the Url
 watch Disney Plus on Chromecast
 watch ESPN Online
-watch Facebook Live Video Broadcasts
 watch Films on Kodi
 watch for lights on the motherboard, and listen for beep codes
 watch Less TV
@@ -19204,7 +18641,6 @@ Watch your file play in your web browser
 Watch your health and search for health packs to stay alive
 watch YouTube Live
 watch YouTube Videos on Your iPod
-watch YouTube Videos with Friends During a Google+ Hangouts Video Call
 watch YouTube While on Another Tab
 water a Bonsai Tree
 water Plants While You're Away
@@ -19417,7 +18853,6 @@ write in Bold on Reddit on Android
 write in Bold on Reddit on iPhone or iPad
 write in Gothic Calligraphy
 write in Your Diary at School
-write on Easter Eggs
 write Software Documentation
 Write the while command and state the condition
 write with a Fountain Pen
@@ -19433,13 +18868,14 @@ Zoom and/or reposition your profile picture
 Zoom in
 Zoom in and use single clicks with a small brush around the edge of the subject
 Zoom in on a location
-zoom in on Facebook Photos on iPhone and iPad
-zoom in on Google Maps on Android
 Zoom in on the thumbnail
 Zoom in to 200%
 Zoom in to see contour lines
 Zoom into a hilly area
-zoom on Google Photos on Android
-zoom on Google Photos on iPhone or iPad
 Zoom out as far as you want
 zoom Out on a Mac
+create an Egg Incubator for Wild Bird Eggs
+fertilize Soil With Eggshells
+make Easter Eggs
+recycle Eggshells in Gardening Activities
+write on Easter Eggs

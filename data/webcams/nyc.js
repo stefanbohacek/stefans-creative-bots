@@ -66,15 +66,15 @@ export default [
     latitude: 40.689247,
     longitude: -74.044502,
   },
-  {
-    title: "New York › South-West",
-    description:
-      "This webcam usually shows a view of the lower Manhattan with its tall buildings and skyscrapers.",
-    windy_id: 1639820559,
-    url: "https://images-webcams.windy.com/59/1639820559/current/preview/1639820559.jpg",
-    latitude: 40.712728,
-    longitude: -74.006015,
-  },
+  // {
+  //   title: "New York › South-West",
+  //   description:
+  //     "This webcam usually shows a view of the lower Manhattan with its tall buildings and skyscrapers.",
+  //   windy_id: 1639820559,
+  //   url: "https://images-webcams.windy.com/59/1639820559/current/preview/1639820559.jpg",
+  //   latitude: 40.712728,
+  //   longitude: -74.006015,
+  // },
   // {
   //     "windy_id": 1483960779,
   //     "title": "New York: Brooklyn Bridge - Ped Walkway",

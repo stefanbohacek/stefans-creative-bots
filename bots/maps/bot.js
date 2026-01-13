@@ -66,7 +66,7 @@ const botScript = async () => {
         '"'
       )}`;
 
-      if (mapDate){
+      if (mapDate && !status.includes(mapDate)){
         status += ` Published in ${mapDate}. `
       }
 

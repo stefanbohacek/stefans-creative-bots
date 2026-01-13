@@ -596,7 +596,6 @@ be the Best Gymnast in Your Level
 be the Master at Hide'n'seek In The Dark
 be Verbose
 be Your Clique's Alpha
-bear Hunt
 beat Homesickness at a Sleepover
 beat Level 76 on Candy Crush Saga
 beat Pandemic 2
@@ -6845,8 +6844,6 @@ how Do I Reinstall DirectX on Windows 10
 Huit (wheet)
 hull Walnuts
 humanize something free of error
-hunt
-hunt Rabbit
 ice a Cake
 ice a Cupcake
 ice Skate
@@ -16363,7 +16360,6 @@ Start chatting
 start Contact Juggling
 Start creating a new island
 start Dreads with Short Hair
-start Duck Hunting
 Start FaceTime
 start Firefox in Safe Mode
 Start from the top
@@ -17324,7 +17320,6 @@ train Climbing Roses
 train Employees in Better Phone Skills
 train for Parkour
 train Grape Vines
-train Your Dog to Hunt
 train Your Dog to Not Run Away
 transfer Android Game Data to iPhone
 transfer AOL Favorites

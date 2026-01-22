@@ -49,19 +49,19 @@
           {{#if about.about_url}}
           <a rel="me"
             href="{{about.about_url}}"
-            class="btn btn-dark mt-2">Learn more</a>
+            class="btn btn-secondary mt-2">Learn more</a>
           {{/if}}
           {{#if about.links}}
           {{#each about.links}}
           <a rel="me"
             href="{{this.url}}"
-            class="btn btn-light mt-2">{{this.title}}</a>
+            class="btn btn-outline-secondary mt-2">{{this.title}}</a>
           {{/each}}
           {{/if}}
           {{#if about.source_url}}
           <a rel="me"
             href="{{about.source_url}}"
-            class="btn btn-light mt-2">View source</a>
+            class="btn btn-outline-secondary mt-2">View source</a>
           {{/if}}
         </p>
         {{#if about.note}}

@@ -26,8 +26,10 @@ const botScript = async () => {
       }
     }    
   `,
-    true
+    true,
   );
+
+  // console.log(items);
 
   const item = randomFromArray(items);
   const status = `Hey, remember ${item.label}?\n\n${item.wikipediaUrl}\n\n#discontinued #nostalgia`;

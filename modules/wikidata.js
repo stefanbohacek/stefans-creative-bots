@@ -8,15 +8,19 @@ export default async (query, filterImage) => {
   const respJSON = await resp.json();
   let items = respJSON?.results?.bindings || [];
 
+  // console.log("wikidata:items", items);
+
   if (items && items.length) {
     const itemPromises = items.map(async (item) => {
       const wikidataId = item?.item?.value?.split("/entity/")[1];
       const wikipediaUrl =
         item?.article?.value || `https://www.wikidata.org/wiki/${wikidataId}`;
 
-      let image = item?.itemLabel?.value || "";
+      // console.log("wikidata:item", item);
+
+      let image = item?.image?.value || "";
       let imageUrl = "";
-      let itemTitle = "";
+      let itemTitle = item?.itemLabel?.value || "";
       let wikipediaDescription = "";
 
       if (item?.image?.value) {
@@ -24,29 +28,6 @@ export default async (query, filterImage) => {
           "http://commons.wikimedia.org/wiki/Special:FilePath/",
         )[1];
         imageUrl = `https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/${image}&width=410`;
-      }
-
-      if (wikipediaUrl.includes("/wiki/")) {
-        const pageTitle = wikipediaUrl.split("/wiki/")[1];
-
-        try {
-          const resp = await fetch(
-            `https://en.wikipedia.org/api/rest_v1/page/summary/${pageTitle}`,
-          );
-
-          if (resp.ok) {
-            const contentType = resp.headers.get("content-type");
-            if (contentType && contentType.includes("application/json")) {
-              const respJSON = await resp.json();
-              wikipediaDescription = respJSON.extract || "";
-              if (respJSON.title) {
-                itemTitle = respJSON.title;
-              }
-            }
-          }
-        } catch (error) {
-          wikipediaDescription = "";
-        }
       }
 
       return {

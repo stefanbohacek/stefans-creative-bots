@@ -22,8 +22,13 @@ const botScript = async () => {
   });
 
   const stationList = `https://www.ndbc.noaa.gov/buoycams.php`;
+  const excludedStationIDs = [44008, 46080, 46029, 42003];
   const response = await fetch(stationList);
   let stations = await response.json();
+
+  stations = stations.filter(
+    (station) => !excludedStationIDs.includes(station.id),
+  );
 
   stations = stations.filter((station) => {
     let includeStation = true;

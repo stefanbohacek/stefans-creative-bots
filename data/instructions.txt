@@ -6432,7 +6432,6 @@ Give a voice command
 give Cattle Oral Medications
 give New Life to a Faded Wicker Basket
 Give permission if prompted
-give Someone a Facial
 give Someone a Manicure
 give Someone a Pedicure
 Give the cashier your card and cash

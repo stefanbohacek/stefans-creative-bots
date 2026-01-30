@@ -1,7 +1,7 @@
 import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import downloadFile from "./../../modules/download-file.js";
-import getWeather from "./../../modules/get-weather.js";
+// import getWeather from "./../../modules/get-weather.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -34,19 +34,19 @@ const botScript = async () => {
       await downloadFile(imageURL, filePath);
       const description = webcam.description;
       
-      let weather;
+      // let weather;
       let status = "";
 
-      if (webcam.lat && webcam.lon) {
-        weather = await getWeather(
-          webcam.lat,
-          webcam.lon
-        );
+      // if (webcam.lat && webcam.lon) {
+      //   weather = await getWeather(
+      //     webcam.lat,
+      //     webcam.lon
+      //   );
 
-        if (weather && weather.description_full) {
-          status = `${weather.description_full}\n\n`;
-        }
-      }
+      //   if (weather && weather.description_full) {
+      //     status = `${weather.description_full}\n\n`;
+      //   }
+      // }
 
       status += `via ${webcam.url}\n\n#MountEverest #MtEverest #mountain #live #webcam`;
 

@@ -48,7 +48,7 @@ const botScript = async () => {
       //   }
       // }
 
-      status += `via ${webcam.url}\n\n#MountEverest #MtEverest #mountain #live #webcam`;
+      status += `Via ${webcam.url}\n\n#MountEverest #MtEverest #mountain #live #webcam`;
 
       mastodon.postImage({
         status,

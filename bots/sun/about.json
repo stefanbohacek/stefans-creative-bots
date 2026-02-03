@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "name": "@sun",
+  "description": "Hello from our sun.",
+  "tags": ["sun", "space", "stars", "nasa"],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@sun"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

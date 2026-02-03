@@ -23,7 +23,7 @@ const botScript = async () => {
         {
           name: "Extreme ultraviolet Imaging Telescope (EIT)",
           description:
-            "Last 48 hours worth of data from Extreme ultraviolet Imaging Telescope (EIT) rendered as an animated GIF showing the Sun as a glowing and rotating red-colored orb with visible sun flares.",
+            "Last 48 hours worth of data from the Extreme ultraviolet Imaging Telescope (EIT) rendered as an animated GIF showing the Sun as a glowing and rotating red-colored orb with visible sun flares.",
           url: "https://soho.nascom.nasa.gov/data/realtime/gif/",
           imageURL:
             "https://soho.nascom.nasa.gov/data/LATEST/current_eit_304.gif",

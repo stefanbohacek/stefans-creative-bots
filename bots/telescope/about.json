@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "name": "@telescope",
+  "description": "Exploring the universe.",
+  "tags": ["space", "stars", "galaxies", "nasa"],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@telescope"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

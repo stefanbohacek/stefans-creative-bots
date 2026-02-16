@@ -33,18 +33,26 @@ const botScript = async () => {
       }
     } 
 `,
-    true
+    true,
   );
 
-  const ignoreList = ["Christopher Columbus", "Columbus Circle", "James Cook", "George Davis", "George Washington", "Roger B. Taney"];
+  const ignoreList = [
+    "Columbus Circle",
+    "Christopher Columbus",
+    "George Davis",
+    "George Washington",
+    "James Cook",
+    "Reiterdenkmal",
+    "Roger B. Taney",
+  ];
 
   items = items.filter(
     (item) =>
       !ignoreList.some(
         (ignored) =>
           item.label?.toLowerCase().includes(ignored.toLowerCase()) ||
-          item.description?.toLowerCase().includes(ignored.toLowerCase())
-      )
+          item.description?.toLowerCase().includes(ignored.toLowerCase()),
+      ),
   );
 
   const item = randomFromArray(items);
@@ -53,7 +61,7 @@ const botScript = async () => {
 
   if (item.image) {
     imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
-      item.image
+      item.image,
     )}(${item.long},${item.lat})/${item.long},${
       item.lat
     },5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;

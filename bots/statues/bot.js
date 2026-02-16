@@ -15,6 +15,7 @@ const botScript = async () => {
     SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
       ?item wdt:P31 wd:Q179700 .
       ?item wdt:P131 ?place .  
+      FILTER NOT EXISTS { ?item wdt:P576 ?abolishedDate . }
       ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") . 
       ?item wdt:P18 ?image;
             p:P625 [

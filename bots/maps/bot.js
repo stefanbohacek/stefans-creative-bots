@@ -67,10 +67,10 @@ const botScript = async () => {
       )}`;
 
       if (mapDate && !status.includes(mapDate)){
-        status += ` Published in ${mapDate}. `
+        status += ` Published in ${mapDate}.`
       }
 
-      status += `${source}\n\n#map #maps #HistoricalMaps`;
+      status += ` ${source}\n\n#map #maps #HistoricalMaps`;
 
       mastodon.postImage({
         status,

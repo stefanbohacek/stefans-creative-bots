@@ -36,7 +36,10 @@ const botScript = async () => {
           if (!err && helloTranslations && helloTranslations.length > 0) {
             helloTranslations = helloTranslations.filter(tr => !["il", "ru"].includes(tr[0]));
             // /* For testing. */ const randomTranslation = helloTranslations[69];
-            const randomTranslation = randomFromArray(helloTranslations);
+            // const randomTranslation = randomFromArray(helloTranslations);
+            let randomTranslation = randomFromArray(helloTranslations);
+            // TODO: Temporarily remove translations that cause encoding issues.
+            randomTranslation = randomTranslation.filter(t => !["kh"].includes(t[0]));
 
             // console.log(randomTranslation);
 

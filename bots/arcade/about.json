@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "name": "@arcade",
+  "description": "Go play some classic arcade games!",
+  "tags": ["retro", "videogames", "archive"],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@arcade"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

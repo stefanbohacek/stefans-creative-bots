@@ -29,7 +29,7 @@ const botScript = async () => {
         if (item.creator) {
           status += ` by ${item.creator.split("(")[0].trim()}`;
         }
-        status += `!\n\n${url}`;
+        status += `!\n\n${url}\n\n#arcade #videogames #InternetArchive`;
         console.log(status);
 
         mastodon.post({

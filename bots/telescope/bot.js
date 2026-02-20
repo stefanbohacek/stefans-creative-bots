@@ -58,7 +58,14 @@ const botScript = async () => {
       });
 
       await page.waitForSelector(telescope.selector, { timeout: 120000 });
-      await page.waitForTimeout(10000);
+
+      const latestTargetBtn = await page.$(".button--view-latest");
+
+      if (latestTargetBtn) {
+        await latestTargetBtn.click();
+      }
+
+      await page.waitForTimeout(20000);
 
       const canvasData = await page.evaluate((selector) => {
         const canvas = document.querySelector(selector);
@@ -123,7 +130,8 @@ const botScript = async () => {
         mastodon.postImage({
           status,
           image: imgData,
-          alt_text: "A photo captured by a space telescope from the linked website, typically showing a wide image of distant galaxies with stars and interstellar gas.",
+          alt_text:
+            "A photo captured by a space telescope from the linked website, typically showing a wide image of distant galaxies with stars and interstellar gas.",
         });
       }
 

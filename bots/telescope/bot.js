@@ -60,12 +60,10 @@ const botScript = async () => {
       await page.waitForSelector(telescope.selector, { timeout: 120000 });
 
       const latestTargetBtn = await page.$(".button--view-latest");
+      await page.waitForTimeout(10000);
 
-      if (latestTargetBtn) {
-        await latestTargetBtn.click();
-      }
-
-      await page.waitForTimeout(20000);
+      await latestTargetBtn.click();
+      await page.waitForTimeout(10000);
 
       const canvasData = await page.evaluate((selector) => {
         const canvas = document.querySelector(selector);

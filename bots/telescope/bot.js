@@ -37,11 +37,13 @@ const botScript = async () => {
       const telescopes = [
         {
           name: "Hubble",
+          // url: "https://spacetelescopelive.org/hubble",
           url: "https://spacetelescopelive.org/hubble?obsId=01KFQ3EM1TFYWMTKZDT3B0CTSY",
           selector: ".aladin-imageCanvas",
         },
         {
           name: "Webb",
+          // url: "https://spacetelescopelive.org/webb",
           url: "https://spacetelescopelive.org/webb?obsId=01KG0HH0KBWM94V5W19MK3QTZR",
           selector: ".aladin-imageCanvas",
         },
@@ -119,7 +121,8 @@ const botScript = async () => {
         //   }
         // }
 
-        status += `\n\n${telescope.url}\n\n #${telescope.name.toLowerCase()} #space #astronomy #telescope`;
+
+        status += `\n\n${page.url() || telescope.url.split("?")[0]}\n\n #${telescope.name.toLowerCase()} #space #astronomy #telescope`;
 
         const imgData = await fs.readFileSync(imgPath, {
           encoding: "base64",

@@ -6,9 +6,10 @@ dotenv.config();
 // import bot from "./bots/birds/bot.js";
 // import bot from "./bots/rorschach/bot.js";
 // import bot from "./bots/test/bot.js";
-import bot from "./bots/telescope/bot.js";
+// import bot from "./bots/telescope/bot.js";
 // import bot from "./bots/southpoleviews/bot.js";
 // import bot from "./bots/arcade/bot.js";
+import bot from "./bots/emoji_stories/bot.js";
 
 try {
   bot();

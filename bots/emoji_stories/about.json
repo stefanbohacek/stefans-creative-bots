@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "name": "@emoji_stories",
+  "description": "Turn emoji into a story!",
+  "tags": ["emoji", "writing", "prompt"],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@emoji_stories"
+    }
+  ],
+  "interval": "EVERY_DAY_MORNING"
+}

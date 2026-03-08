@@ -1,9 +1,8 @@
 {
-  "active": false,
+  "active": true,
   "name": "Hello, world!",
   "description": "Hello from around the world",
-  "note": "Needs more work.",
-  "tags": ["translation", "hello", "language", "maps"],
+  "tags": ["translation", "hello", "language", "emoji"],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2019/02/hello--world-.png",
   "about_url": "https://botwiki.org/bot/hello-world/",
   "links": [

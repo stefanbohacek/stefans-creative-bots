@@ -1,138 +1,83 @@
-import fs from "fs";
-import he from "he";
-import overlayGenerator from "./../../modules/generators/overlay.js";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
 
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-
-import { parse } from "csv-parse";
-
-// import {generate, parse, transform, stringify} from 'csv/sync';
-
-// const csvParse = require("csv-parse");
-// const mastodon = new mastodonClient({
-//   access_token: process.env.HELLOWORLDBOT_MASTODON_ACCESS_TOKEN,
-//   api_url: process.env.HELLOWORLDBOT_MASTODON_API,
-// });
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const botScript = async () => {
+  const botID = "hello_world";
+  let status = "";
+  const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;
+
   const mastodon = new mastodonClient({
+    // access_token: process.env.MASTODON_TEST_TOKEN,
     access_token: process.env.HELLOWORLDBOT_MASTODON_ACCESS_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });
 
-  fs.readFile("data/hello.csv", "utf8", (err, csvData) => {
-    if (!err && csvData) {
-      parse(
-        csvData,
-        {
-          comment: "#",
-        },
-        (err, helloTranslations) => {
-          helloTranslations.shift(); // Remove the table header
+  try {
+    const browser = await puppeteer.connect({
+      browserWSEndpoint: process.env.BROWSERLESS_URL,
+    });
 
-          if (!err && helloTranslations && helloTranslations.length > 0) {
-            helloTranslations = helloTranslations.filter(tr => !["il", "ru"].includes(tr[0]));
-            // /* For testing. */ const randomTranslation = helloTranslations[69];
-            // const randomTranslation = randomFromArray(helloTranslations);
-            let randomTranslation = randomFromArray(helloTranslations);
-            // TODO: Temporarily remove translations that cause encoding issues.
-            randomTranslation = randomTranslation.filter(t => !["kh"].includes(t[0]));
+    const page = await browser.newPage();
+    await page.setDefaultNavigationTimeout(30000);
 
-            // console.log(randomTranslation);
+    process.on("unhandledRejection", (reason, p) => {
+      console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
+      browser.close();
+    });
 
-            const languageCode = randomTranslation[2],
-              helloTranslation = he.decode(randomTranslation[3]),
-              countryName = randomTranslation[1],
-              countryLat = randomTranslation[4],
-              countryLong = randomTranslation[5],
-              center = `${countryLat},${countryLong}`,
-              width = 1280,
-              height = 1280,
-              scale = 2,
-              zoom = 6,
-              maptype = "roadmap",
-              style =
-                "feature:all|element:all|visibility:on&style=feature:administrative|element:labels.text.fill|color:0x444444&style=feature:landscape|element:all|color:0xf2f2f2&style=feature:poi|element:all|visibility:off&style=feature:road|element:all|saturation:-100|lightness:45|visibility:on|weight:1|gamma:.5&style=feature:road|element:geometry.fill|color:0xd6d5d5&style=feature:road|element:geometry.stroke|color:0xbab7b7&style=feature:road.highway|element:all|visibility:simplified&style=feature:road.arterial|element:labels.icon|visibility:off&style=feature:transit|element:all|visibility:off&style=feature:water|element:all|color:0xc8d7d4|visibility:onoff",
-              map_url = `https://maps.googleapis.com/maps/api/staticmap?center=${center}&zoom=${zoom}&size=${width}x${height}&scale=${scale}&maptype=${maptype}&style=${style}&key=${process.env.HELLOWORLDBOT_GOOGLE_MAPS_API_KEY}`;
+    page.setUserAgent(
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+    );
 
-            let fontFileName, fontFamily;
+    // await page.setViewport({ width: 800, height: 800 });
+    await page.setViewport({ width: 400, height: 400, deviceScaleFactor: 2 });
 
-            // if (languageCode === "ja") {
-            //   fontFileName = "NotoSansJP-VariableFont_wght.ttf";
-            //   fontFamily = "Noto Sans JP";
-            // } else if (languageCode === "zh" || languageCode === "zh-hk") {
-            //   fontFileName = "NotoSansTC-Medium.ttf";
-            //   fontFamily = "Noto Sans TC";
-            // } else if (
-            //   languageCode === "ar" ||
-            //   languageCode.indexOf("ar-") !== -1
-            // ) {
-            //   fontFileName = "Cairo-700-3.ttf";
-            //   fontFamily = "Cairo";
-            // } else if (languageCode === "bn") {
-            //   fontFileName = "Hind_Siliguri-700-5.ttf";
-            //   fontFamily = "Hind Siliguri";
-            // } else if (languageCode === "ka") {
-            //   fontFileName = "Baloo_Tamma-400-1.ttf";
-            //   fontFamily = "Baloo Tamma";
-            // } else {
-            //   fontFileName = "Pridi-700-11.ttf";
-            //   fontFamily = "Pridi";
-            // }
-            
-            fontFileName = "GoNotoKurrent-Regular.ttf";
-            fontFamily = "Go Noto Kurrent";
+    const url = "https://weirdweboctober.stefanbohacek.com/2025/21/";
+    console.log(`visiting ${url} ...`);
+    await page.goto(url, {
+      waitUntil: "domcontentloaded",
+    });
 
+    await page.evaluate(() => {
+      document.querySelector("h1")?.remove();
+      document.querySelector("#hellosalut-attribution")?.remove();
+      document.body.style.marginTop = "-40px";
+    });
 
-            overlayGenerator(
-              [
-                {
-                  url: map_url,
-                  x: 0,
-                  y: 0,
-                  width: width,
-                  height: height,
-                },
-                {
-                  text: helloTranslation,
-                  fontSize: 200,
-                  fontFileName: fontFileName,
-                  fontFamily: fontFamily,
-                  style: "#fff",
-                  strokeStyle: "#424242",
-                  position: "center center",
-                },
-              ],
-              { width, height },
-              (err, image) => {
-                const status = `Hello from ${countryName}! #HelloWorld #${countryName.replace(
-                  /\s+/g,
-                  ""
-                )} #language #linguistics`;
+    const altText = await page.evaluate(() => {
+      const hello = document.querySelector("#hello")?.innerText;
+      const language = document.querySelector("#language")?.innerText;
+      const emoji = document.querySelector(".emoji:not(.d-none)")?.innerText;
+      return `${hello} ${language} ${emoji}`.trim();
+    });
 
-                // console.log("status", status);
+    await page.waitForTimeout(3000);
 
-                // twitter.postImage({
-                //   status,
-                //   image: image,
-                //   alt_text: `Map of ${ countryName } overlaid with a translation of the word "hello".`,
-                // });
+    try {
+      await page.screenshot({ path: screenshotPath });
 
-                mastodon.postImage({
-                  status,
-                  image,
-                  alt_text: `Map of ${countryName} overlaid with a translation of the word "hello": ${helloTranslation}.`,
-                });
-              }
-            );
-          }
-        }
+      status += "\n\n#HelloWorld #hello #languages";
+
+      mastodon.postImage({
+        status,
+        image: screenshotPath,
+        alt_text: altText,
+      });
+    } catch (err) {
+      console.log(
+        `@HelloWorld screenshot error on line ${err.lineNumber}: ${err.message}`,
       );
     }
-  });
+
+    await browser.close();
+  } catch (err) {
+    console.log(`@HelloWorld error on line ${err.lineNumber}: ${err.message}`);
+  }
 };
 
 export default botScript;

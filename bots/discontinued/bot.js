@@ -24,7 +24,9 @@ const botScript = async () => {
         ?article schema:inLanguage "en" .
         ?article schema:isPartOf <https://en.wikipedia.org/>
       }
-    }    
+
+      FILTER NOT EXISTS { ?item wdt:P31 wd:Q3231690 }
+    }
   `,
     true,
   );

@@ -34,7 +34,7 @@ export default [
     description:
       "This webcam usually shows a view of a large lake from a high point with trees below and mountains in the background.",
     link: "https://www.skiheavenly.com/the-mountain/mountain-conditions/mountain-cams.aspx",
-    url: "https://live9.brownrice.com/cam-images/heavenlymidstation.jpg",
+    url: "https://live9.brownrice.com/cam-images/heavenlytram.jpg",
     latitude: 38.941631,
     longitude: -119.977219,
   },

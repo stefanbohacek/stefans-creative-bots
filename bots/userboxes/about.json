@@ -1,0 +1,13 @@
+{
+  "active": true,
+  "name": "Userboxes",
+  "description": "This bot posts random Wikipedia userboxes.",
+  "tags": ["wikipedia"],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@userboxes"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS"
+}

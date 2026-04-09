@@ -51,6 +51,7 @@
     "node-fetch": "^2.7.0",
     "node-gyp": "^7.1.2",
     "node-gyp-build": "^4.2.3",
+    "node-html-parser": "^7.1.0",
     "pluralize": "^8.0.0",
     "pngjs": "^4.0.0",
     "poisson-disc-sampler": "^1.1.0",
@@ -64,6 +65,7 @@
     "underscore": "^1.10.2",
     "us-zips": "^4.0.1",
     "utf-8-validate": "^5.0.2",
+    "wtf_wikipedia": "^10.4.1",
     "xml-js": "^1.6.11"
   },
   "engines": {

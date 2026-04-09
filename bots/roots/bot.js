@@ -3,7 +3,7 @@ import UnitConverter from "./../../modules/UnitConverter.js";
 import getRandomInt from "./../../modules/get-random-int.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import downloadFile from "./../../modules/download-file.js";
-import getWikipediaPage from "./../../modules/getWikipediaPage.js";
+import { getWikipediaPage } from "./../../modules/wikipedia.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -16,7 +16,7 @@ const botScript = async () => {
   //TODO: Pagination should work dynamically.
   const apiURL = `https://images.wur.nl/digital/api/search/collection/coll13/page/${getRandomInt(
     1,
-    12
+    12,
   )}/maxRecords/100`;
   const resp = await fetch(apiURL);
   const respJSON = await resp.json();
@@ -24,7 +24,7 @@ const botScript = async () => {
   // console.log(item);
 
   let plantDescription = item.metadataFields.find(
-    (field) => field.field === "descri"
+    (field) => field.field === "descri",
   )?.value;
 
   if (plantDescription) {

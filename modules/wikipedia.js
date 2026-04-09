@@ -94,7 +94,7 @@ const renderUserbox = async (template) => {
       prop: "text",
       text: `{{${template}}}`,
       contentmodel: "wikitext",
-      format: "json"
+      format: "json",
     }),
   });
   const { parse: rendered } = await resp.json();
@@ -107,9 +107,25 @@ const renderUserbox = async (template) => {
     .trim();
 };
 
+export const renderUserboxHTML = async (template) => {
+  const resp = await fetch(WIKIPEDIA_API_URL, {
+    method: "POST",
+    body: new URLSearchParams({
+      action: "parse",
+      prop: "text",
+      text: `{{${template}}}`,
+      contentmodel: "wikitext",
+      format: "json",
+    }),
+  });
+  const { parse: rendered } = await resp.json();
+  return rendered.text["*"]
+    .replace(/src="\/\//g, 'src="https://')
+    .replace(/src="\//g, 'src="https://en.wikipedia.org/');
+};
+
 export const getRandomUserbox = async () => {
   const galleries = await getUserboxGalleries();
-  // console.log("galleries", galleries);
   const gallery = randomFromArray(galleries);
   const templates = await getGalleryUserboxes(gallery.title);
   if (!templates.length) {
@@ -117,10 +133,39 @@ export const getRandomUserbox = async () => {
     return getRandomUserbox();
   }
 
-  const text = await renderUserbox(randomFromArray(templates));
+  const template = randomFromArray(templates);
+  const html = await renderUserboxHTML(template);
+
+  const root = parse(html);
+  const infoCell = root.querySelector(".userbox-info");
+  infoCell?.querySelectorAll("sup").forEach((sup) => sup.remove());
+  const text = he
+    .decode(infoCell?.innerText ?? "")
+    .replace(/\s+/g, " ")
+    .trim();
+
   if (!text || text.includes("...") || text.includes("{{{")) {
     await sleep(1000);
     return getRandomUserbox();
   }
-  return text;
+
+  return { text, html };
 };
+
+// export const getRandomUserbox = async () => {
+//   const galleries = await getUserboxGalleries();
+//   // console.log("galleries", galleries);
+//   const gallery = randomFromArray(galleries);
+//   const templates = await getGalleryUserboxes(gallery.title);
+//   if (!templates.length) {
+//     await sleep(1000);
+//     return getRandomUserbox();
+//   }
+
+//   const text = await renderUserbox(randomFromArray(templates));
+//   if (!text || text.includes("...") || text.includes("{{{")) {
+//     await sleep(1000);
+//     return getRandomUserbox();
+//   }
+//   return text;
+// };

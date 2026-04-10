@@ -1,6 +1,6 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
-import wikidata from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/download-file.js";
 
 import { dirname } from "path";
@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  let items = await wikidata(
+  let items = await queryWikidata(
     /* sql */ `
     SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
       ?item wdt:P31 wd:Q179700 .
@@ -56,6 +56,11 @@ const botScript = async () => {
   );
 
   const item = randomFromArray(items);
+
+  if (item.label === item.wikidataId) {
+    item.label = await getWikidataLabel(item);
+  }
+
   console.log(item);
   let imageUrl = "";
 

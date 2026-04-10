@@ -1,6 +1,6 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
-import wikidata from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/download-file.js";
 
 import { dirname } from "path";
@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  const items = await wikidata(
+  const items = await queryWikidata(
     /* sql */ `
     SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
       ?item wdt:P31 wd:Q55488 .
@@ -32,16 +32,21 @@ const botScript = async () => {
       }
     } 
   `,
-    true
+    true,
   );
 
   const item = randomFromArray(items);
+
+  if (item.label === item.wikidataId) {
+    item.label = await getWikidataLabel(item);
+  }
+
   console.log(item);
   let imageUrl = "";
 
   if (item.image) {
     imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
-      item.image
+      item.image,
     )}(${item.long},${item.lat})/${item.long},${
       item.lat
     },5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;

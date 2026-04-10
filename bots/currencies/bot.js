@@ -1,6 +1,6 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
-import wikidata from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/download-file.js";
 import capitalizeFirstLetter from "./../../modules/capitalize-first-letter.js";
 
@@ -16,7 +16,7 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  const items = await wikidata(
+  const items = await queryWikidata(
     /* sql */ `    
     SELECT DISTINCT ?item ?itemLabel ?itemDescription ?image ?article WHERE {
         ?item wdt:P31 wd:Q8142 .
@@ -29,10 +29,15 @@ const botScript = async () => {
         }
     } 
   `,
-    true
+    true,
   );
 
   const item = randomFromArray(items);
+
+  if (item.label === item.wikidataId) {
+    item.label = await getWikidataLabel(item);
+  }
+
   // console.log(item);
 
   const status = `${item.label ? `${item.label}, ` : ""} ${

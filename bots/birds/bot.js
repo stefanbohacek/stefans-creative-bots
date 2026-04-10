@@ -1,7 +1,7 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import makeCoverVideo from "./../../modules/makeCoverVideo.js";
 import randomFromArray from "./../../modules/random-from-array.js";
-import wikidata from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/download-file.js";
 import { dirname, extname } from "path";
 import { fileURLToPath } from "url";
@@ -14,7 +14,7 @@ const getAudioExtension = (url) => {
 };
 
 const botScript = async () => {
-  const items = await wikidata(
+  const items = await queryWikidata(
     /* sql */ `
   SELECT ?item ?itemLabel ?itemDescription ?audioFile ?article ?image
   WHERE {
@@ -35,6 +35,10 @@ const botScript = async () => {
     true
   );
   const item = randomFromArray(items);
+  if (item.label === item.wikidataId) {
+    item.label = await getWikidataLabel(item)
+  }
+  
   console.log(item);
   const status = `${item.label}\n\n${item.wikipediaUrl}\n\n#birds #birdwatching`;
 

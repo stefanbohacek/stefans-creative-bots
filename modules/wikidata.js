@@ -1,6 +1,22 @@
 import fetch from "node-fetch";
 
-export default async (query, filterImage) => {
+export const getWikidataLabel = async (item) => {
+  const response = await fetch(
+    `https://www.wikidata.org/entity/${item.wikidataId}.json`,
+    {
+      headers: {
+        "User-Agent":
+          "StefansCreativeBots/1.0 (https://bots.stefanbohacek.com/; stefan@stefanbohacek.com) node/lts",
+      },
+    },
+  );
+
+  const data = await response.json();
+  const entity = data.entities[item.wikidataId];
+  return entity?.labels?.en?.value || entity?.labels?.mul?.value || "";
+};
+
+export const queryWikidata = async (query, filterImage) => {
   const apiUrl = `https://query.wikidata.org/sparql?query=${encodeURIComponent(
     query,
   )}&format=json`;
@@ -32,6 +48,7 @@ export default async (query, filterImage) => {
 
       return {
         label: itemTitle,
+        wikidataId: wikidataId,
         description: item?.itemDescription?.value || "",
         date: item?.date?.value ? new Date(item.date.value) : null,
         wikipediaUrl: wikipediaUrl,

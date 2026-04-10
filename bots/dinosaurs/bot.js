@@ -1,6 +1,6 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
-import wikidata from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/download-file.js";
 
 import { dirname } from "path";
@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  const items = await wikidata(
+  const items = await queryWikidata(
     /* sql */ `
     SELECT DISTINCT ?item ?itemLabel ?itemDescription ?image ?article 
     WHERE 
@@ -39,6 +39,10 @@ const botScript = async () => {
   );
 
   const item = randomFromArray(dinosaurs);
+
+  if (item.label === item.wikidataId) {
+    item.label = await getWikidataLabel(item);
+  }
 
   // console.log("items", items);
   // console.log("dinosaurs", dinosaurs);

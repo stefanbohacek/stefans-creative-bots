@@ -1,6 +1,6 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
-import wikidata from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/download-file.js";
 
 import { dirname } from "path";
@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const botScript = async () => {
-  const items = await wikidata(
+  const items = await queryWikidata(
     /* sql */ `
     SELECT DISTINCT ?item ?cui ?itemLabel ?itemDescription ?image ?logo ?article 
     WHERE 
@@ -32,8 +32,15 @@ const botScript = async () => {
   );
 
   // console.log(items);
-
   const item = randomFromArray(items);
+  // const item = items.filter((i) => i.label === "Q1063978")[0];
+
+  if (item.label === item.wikidataId) {
+    item.label = await getWikidataLabel(item)
+  }
+
+  // console.log(item);
+
   const status = `Hey, remember ${item.label}?\n\n${item.wikipediaUrl}\n\n#discontinued #nostalgia`;
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,

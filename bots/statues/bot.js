@@ -42,8 +42,10 @@ const botScript = async () => {
     "George Davis",
     "George Washington",
     "James Cook",
+    "Williams Carter Wickham",
     "Reiterdenkmal",
     "Roger B. Taney",
+    "confederate general",
   ];
 
   items = items.filter(

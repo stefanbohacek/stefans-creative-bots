@@ -47,7 +47,7 @@ const botScript = async () => {
 
       const source = `https://www.davidrumsey.com/luna/servlet/detail/${map.id}`;
       // const description = attributes.pub_note || ""
-      const mapDate = attributes.pub_date || map.date || false; 
+      const mapDate = map?.date || attributes?.pub_date || false; 
       const mapAge = mapDate ? ` ${mapDate} ` : "n old ";
       let mapArea = "";
 
@@ -59,7 +59,8 @@ const botScript = async () => {
         }
       }
 
-      const description = `A${mapAge}map${mapArea} from the website linked in the post.`;
+      // const description = `A${mapAge}map${mapArea} from the website linked in the post.`;
+      const description = `A map${mapArea} from the website linked in the post.`;
 
       let status = `${attributes.full_title.replaceAll(
         '"',

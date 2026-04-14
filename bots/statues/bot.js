@@ -42,9 +42,10 @@ const botScript = async () => {
     "George Davis",
     "George Washington",
     "James Cook",
-    "Williams Carter Wickham",
+    "Margaret Thatcher",
     "Reiterdenkmal",
     "Roger B. Taney",
+    "Williams Carter Wickham",
     "confederate general",
   ];
 

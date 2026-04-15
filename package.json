@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node --trace-warnings server.js",
+    "test": "node test.js",
     "xxxpreinstall": "npm install canvas@2.11.2; npm install chartjs-node-canvas@4.1.6; npm install chart.js@3.9.1",
     "xxxpostinstall": "node node_modules/puppeteer/install.js; pip3 install yt-dlp==2023.7.6"
   },

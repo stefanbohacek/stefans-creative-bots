@@ -5,6 +5,7 @@ import extractVideoLive from "./../../modules/extract-video-live.js";
 import downloadFile from "./../../modules/download-file.js";
 import getRandomInt from "./../../modules/get-random-int.js";
 import randomFromArray from "./../../modules/random-from-array.js";
+import { getLiveStreams } from "./../../modules/youtube.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -22,17 +23,24 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const webcam = randomFromArray(webcams);
+      const liveStreams = await getLiveStreams("UC2Sk0aXLq3ADkH_USGPKT_Q");
+
+      console.log("liveStreams", liveStreams);
+      //TODO: Finish when the bear season starts. 
+
+      
+
+      // const webcam = randomFromArray(webcams);
       // const webcam = randomFromArray(
       //   webcams.filter((webcam) => webcam.video_start === undefined)
       // );
 
       // console.log(webcam);
-      const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
+      // const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
 
-      mastodon.post({
-        status
-      });      
+      // mastodon.post({
+      //   status
+      // });      
 
       // if ("video_start" in webcam && "video_end" in webcam) {
       //   const url = `https://tools.stefanbohacek.com/video-dl/?platform=youtube&id=${

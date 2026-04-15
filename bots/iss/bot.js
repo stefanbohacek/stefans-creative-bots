@@ -5,6 +5,7 @@ import webcams from "./../../data/webcams/iss.js";
 import extractVideoLive from "./../../modules/extract-video-live.js";
 import extractVideo from "./../../modules/extract-video.js";
 import randomFromArray from "./../../modules/random-from-array.js";
+import { getLiveStreams } from "./../../modules/youtube.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -14,22 +15,6 @@ const __dirname = dirname(__filename);
 
 const botID = "iss";
 
-const getLiveStreams = async () => {
-  let videos = [];
-
-  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCLA_DiR1FfKNvjuUpBHmylQ&eventType=live&type=video&key=${process.env.YOUTUBE_API_KEY}`;
-  const resp = await fetch(url);
-  const respJSON = await resp.json();
-
-  if (respJSON?.items) {
-    videos = respJSON.items.filter((item) =>
-      item?.snippet?.title.includes("from the International Space Station")
-    );
-  }
-
-  return videos;
-};
-
 const botScript = async () => {
   await (async () => {
     try {
@@ -38,7 +23,7 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const liveStreams = await getLiveStreams();
+      const liveStreams = await getLiveStreams("UCLA_DiR1FfKNvjuUpBHmylQ");
       const liveStream = randomFromArray(liveStreams);
 
       if (liveStream) {

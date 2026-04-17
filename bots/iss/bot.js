@@ -23,7 +23,14 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const liveStreams = await getLiveStreams("UCLA_DiR1FfKNvjuUpBHmylQ");
+      let liveStreams = await getLiveStreams("NASA");
+
+      if (liveStreams?.length) {
+        liveStreams = liveStreams.filter((item) =>
+          item?.snippet?.title.includes("from the International Space Station"),
+        );
+      }
+
       const liveStream = randomFromArray(liveStreams);
 
       if (liveStream) {

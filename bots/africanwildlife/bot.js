@@ -1,8 +1,8 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
-
 import webcams from "./../../data/webcams/african-wildlife.js";
-import extractVideoLive from "./../../modules/extract-video-live.js";
-import extractVideo from "./../../modules/extract-video.js";
+import { getLiveStreams } from "./../../modules/youtube.js";
+// import extractVideoLive from "./../../modules/extract-video-live.js";
+// import extractVideo from "./../../modules/extract-video.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 
 import { dirname } from "path";
@@ -21,18 +21,34 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const webcam = randomFromArray(webcams);
-      // const status = `${webcam.name}: ${webcam.url}\n\n${webcam.tags}`;
-      const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
+      const liveStreams = await getLiveStreams("ExploreAfrica");
+      const liveStream = randomFromArray(liveStreams);
 
-      mastodon.post(
-        {
+      if (liveStream && liveStream?.id?.videoId) {
+        const liveStreamURL = `https://www.youtube.com/watch?v=${liveStream.id.videoId}`;
+
+        const title = liveStream?.snippet?.title
+          .replace("Africam ", "")
+          .replace(" powered by EXPLORE.org", "");
+        const status = `${title + "\n\n" || ""}${liveStreamURL}\n\n#africa #wildlife #animals #live #LiveStream`;
+
+        mastodon.post({
           status,
-        },
-        () => {
-          // console.log("done");
-        }
-      );
+        });
+
+        // await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
+        // console.log('path check', __dirname + `/../../temp/${botID}.mp4`);
+
+        // mastodon.postImage({
+        //   status,
+        //   image: __dirname + `/../../temp/${botID}.mp4`,
+        //   alt_text: webcam.description,
+        // });
+      }
+
+      // const webcam = randomFromArray(webcams);
+      // // const status = `${webcam.name}: ${webcam.url}\n\n${webcam.tags}`;
+      // const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
 
       // await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
 

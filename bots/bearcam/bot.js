@@ -23,7 +23,7 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const liveStreams = await getLiveStreams("UC2Sk0aXLq3ADkH_USGPKT_Q");
+      const liveStreams = await getLiveStreams("ExploreLiveNatureCams");
 
       console.log("liveStreams", liveStreams);
       //TODO: Finish when the bear season starts. 

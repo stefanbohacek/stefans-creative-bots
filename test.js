@@ -11,7 +11,10 @@ dotenv.config();
 // import bot from "./bots/arcade/bot.js";
 // import bot from "./bots/helloworld__bot/bot.js";
 // import bot from "./bots/userboxes/bot.js";
-import bot from "./bots/discontinued/bot.js";
+// import bot from "./bots/discontinued/bot.js";
+// import bot from "./bots/bearcam/bot.js";
+// import bot from "./bots/wikipediatopedits/bot.js";
+import bot from "./bots/iss/bot.js";
 
 try {
   bot();

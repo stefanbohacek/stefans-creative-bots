@@ -5097,7 +5097,6 @@ draw Cute Animals
 draw Dragon Ball Z
 draw Feminine Features
 draw Haida Art
-draw Harry Potter
 draw Human Feet
 draw in 8 Bit
 draw in Two Point Perspective
@@ -5132,7 +5131,6 @@ dress Like a Wag
 dress Like a Yuppie
 dress Like Alice from Alice in Wonderland
 dress Like Belle from Beauty and the Beast
-dress Like Harry Potter
 dress Like the Doctor from Doctor Who
 dress Up As Ash from Pokemon
 dress Up As Mario from Super Mario Bros
@@ -8604,7 +8602,6 @@ make a Hamster Playground
 make a Hand Mask
 make a Hanging Rope Shelf
 make a Harley Quinn Costume
-make a Harry Potter Scarf
 make a Hat Box
 make a Hawaiian Pizza
 make a Healthy Lunch
@@ -13508,7 +13505,6 @@ Re-open the Cyberflix app
 reactivate a Twitch Account
 Read a book about the language
 read a Feng Shui Bagua Map
-read a Whole Harry Potter Book in a Week
 read Algebraic Chess Notation
 read eBooks from PC on iPad with Calibre
 read ePubs on Kindle Fire

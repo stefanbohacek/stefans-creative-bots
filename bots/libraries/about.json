@@ -2,12 +2,19 @@
   "active": true,
   "name": "@libraries",
   "description": "Libraries around the world.",
-  "tags": ["libraries", "books", "wikidata", "wikipedia"],
+  "tags": [
+    "libraries",
+    "books",
+    "wikidata",
+    "wikipedia"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@libraries"
-    }   
+    }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/797/622/963/169/original/5566a2a4ad509a82.png"
 }

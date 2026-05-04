@@ -2,13 +2,19 @@
   "active": false,
   "name": "@mastodonmilestoneprogress",
   "description": "Keeping track of Mastodon's upcoming releases.",
-  "tags": ["mastodon", "fediverse", "github"],
+  "tags": [
+    "mastodon",
+    "fediverse",
+    "github"
+  ],
   "note": "GitHub Milestones have been removed as they no longer reflect ongoing work.",
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@mastodonmilestoneprogress"
-    }   
+    }
   ],
-  "interval": "EVERY_DAY_MORNING"
+  "interval": "EVERY_DAY_MORNING",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/865/886/534/172/original/0bc6ff0fe51b0c13.png"
 }

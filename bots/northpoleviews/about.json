@@ -2,12 +2,18 @@
   "active": true,
   "name": "@northpoleviews",
   "description": "Views from the North Pole.",
-  "tags": ["webcam", "live", "view"],
+  "tags": [
+    "webcam",
+    "live",
+    "view"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@northpoleviews"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/820/689/358/169/original/f0cf3da8ad639d50.png"
 }

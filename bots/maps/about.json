@@ -2,12 +2,18 @@
   "active": true,
   "name": "@maps",
   "description": "Exploring historical maps.",
-  "tags": ["maps", "history", "archive"],
+  "tags": [
+    "maps",
+    "history",
+    "archive"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@maps"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/801/174/028/178/original/66a69b82a2f35657.png"
 }

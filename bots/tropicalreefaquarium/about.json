@@ -2,7 +2,14 @@
   "active": false,
   "name": "Tropical reef aquarium",
   "description": "Watching some fish.",
-  "tags": ["webcam", "live", "view", "fish", "animals", "water"],
+  "tags": [
+    "webcam",
+    "live",
+    "view",
+    "fish",
+    "animals",
+    "water"
+  ],
   "note": "No longer able to generate 10-second preview clips from YouTube.",
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/07/tropical-reef-aquarium-1689247814.png",
   "about_url": "https://botwiki.org/bot/tropical-reef-aquarium/",
@@ -12,5 +19,6 @@
       "url": "https://stefanbohacek.online/@tropicalreefaquarium"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

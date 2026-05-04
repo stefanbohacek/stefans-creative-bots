@@ -2,7 +2,12 @@
   "active": true,
   "name": "Hello, world!",
   "description": "Hello from around the world",
-  "tags": ["translation", "hello", "language", "emoji"],
+  "tags": [
+    "translation",
+    "hello",
+    "language",
+    "emoji"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2019/02/hello--world-.png",
   "about_url": "https://botwiki.org/bot/hello-world/",
   "links": [
@@ -15,5 +20,6 @@
       "url": "https://twitter.com/helloworld__bot"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

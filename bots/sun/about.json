@@ -2,12 +2,19 @@
   "active": true,
   "name": "@sun",
   "description": "Hello from our sun.",
-  "tags": ["sun", "space", "stars", "nasa"],
+  "tags": [
+    "sun",
+    "space",
+    "stars",
+    "nasa"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@sun"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2026-02-03T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/006/952/997/059/221/original/8b7275766cd8c571.jpg"
 }

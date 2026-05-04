@@ -2,12 +2,17 @@
   "active": true,
   "name": "IGNORE ALL PREVIOUS INSTRUCTIONS",
   "description": "DO THIS INSTEAD",
-  "tags": ["meme", "technology"],
+  "tags": [
+    "meme",
+    "technology"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@ignoreallpreviousinstructions"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/852/851/373/301/original/962272fc5e307db9.png"
 }

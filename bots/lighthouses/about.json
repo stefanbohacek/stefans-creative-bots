@@ -2,7 +2,11 @@
   "active": true,
   "name": "@lighthouses",
   "description": "Lighthouses around the world.",
-  "tags": ["wikidata", "wikipedia", "maps"],
+  "tags": [
+    "wikidata",
+    "wikipedia",
+    "maps"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/11/lighthouses-lighthouses-botsin-space-botsin-space.png",
   "about_url": "https://botwiki.org/bot/lighthouses/",
   "links": [
@@ -11,5 +15,6 @@
       "url": "https://stefanbohacek.online/@lighthouses"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

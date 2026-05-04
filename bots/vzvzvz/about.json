@@ -2,7 +2,10 @@
   "active": true,
   "name": "Vzvzvz!",
   "description": "Sounds from around the world.",
-  "tags": ["wikipedia", "language"],
+  "tags": [
+    "wikipedia",
+    "language"
+  ],
   "about_url": "https://botwiki.org/bot/vzvzvz/",
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/11/vzvzvz--1699821976.png",
   "links": [
@@ -11,5 +14,6 @@
       "url": "https://stefanbohacek.online/@vzvzvz"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

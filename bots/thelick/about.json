@@ -2,7 +2,11 @@
   "active": true,
   "name": "@thelick",
   "description": "Playing The Lick.",
-  "tags": ["meme", "music", "sound"],
+  "tags": [
+    "meme",
+    "music",
+    "sound"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/11/the-lick-1699407568.png",
   "about_url": "https://botwiki.org/bot/the-lick/",
   "links": [
@@ -11,5 +15,6 @@
       "url": "https://stefanbohacek.online/@thelick"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

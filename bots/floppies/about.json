@@ -2,12 +2,20 @@
   "active": true,
   "name": "@floppies",
   "description": "Photos of floppy disks.",
-  "tags": ["retro", "technology", "floppy", "images", "archive"],
+  "tags": [
+    "retro",
+    "technology",
+    "floppy",
+    "images",
+    "archive"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@floppies"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2025-11-07T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/115/509/927/238/774/506/original/ca3cf72692f665df.png"
 }

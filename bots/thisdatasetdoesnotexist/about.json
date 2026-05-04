@@ -2,12 +2,18 @@
   "active": true,
   "name": "This dataset does not exist",
   "description": "These datasets probably don't exist.",
-  "tags": ["data", "dataset", "generative text"],
+  "tags": [
+    "data",
+    "dataset",
+    "generative text"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@thisdatasetdoesnotexist"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/861/749/373/542/original/2250b9b54192b6fc.png"
 }

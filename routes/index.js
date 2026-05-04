@@ -15,6 +15,10 @@ router.get("/", (req, res) => {
 
   if (bots && bots.length > 0) {
     bots.forEach((bot) => {
+      if (bot.about.date_created) {
+        bot.about.created_ago = capitalizeFirstLetter(moment(bot.about.date_created).fromNow());
+      }
+
       if (bot.cronjob) {
         try {
           bot.about.next_run = capitalizeFirstLetter(moment(bot.cronjob.nextDates().ts).fromNow());

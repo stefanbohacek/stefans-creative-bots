@@ -2,7 +2,13 @@
   "active": true,
   "name": "@sea",
   "description": "Views from the middle of an ocean.",
-  "tags": ["webcam", "live", "view", "sea", "water"],
+  "tags": [
+    "webcam",
+    "live",
+    "view",
+    "sea",
+    "water"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/08/at-sea-1693537253.png",
   "about_url": "https://botwiki.org/bot/at-sea/",
   "links": [
@@ -11,5 +17,6 @@
       "url": "https://stefanbohacek.online/@sea"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

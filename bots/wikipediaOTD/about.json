@@ -2,12 +2,17 @@
   "active": true,
   "name": "@wikipediaOTD",
   "description": "Events that happened on this day in history, from Wikipedia.",
-  "tags": ["wikipedia", "history"],
+  "tags": [
+    "wikipedia",
+    "history"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@wikipediaOTD"
     }
   ],
-  "interval": "EVERY_DAY_MORNING"
+  "interval": "EVERY_DAY_MORNING",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/849/539/637/588/original/e5a6f80b157295bc.png"
 }

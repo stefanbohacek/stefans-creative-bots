@@ -2,12 +2,19 @@
   "active": true,
   "name": "@telescope",
   "description": "Exploring the universe.",
-  "tags": ["space", "stars", "galaxies", "nasa"],
+  "tags": [
+    "space",
+    "stars",
+    "galaxies",
+    "nasa"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@telescope"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2026-02-03T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/004/789/667/457/404/original/52984e29e9775572.png"
 }

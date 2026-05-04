@@ -2,7 +2,10 @@
   "active": true,
   "name": "@botwikirandomfediverse",
   "description": "Explore Botwiki one fediverse bot at a time.",
-  "tags": ["bots", "botwiki"],
+  "tags": [
+    "bots",
+    "botwiki"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2021/01/botwikirandom.png",
   "about_url": "https://botwiki.org/bot/botwikirandom/",
   "links": [
@@ -11,5 +14,6 @@
       "url": "https://stefanbohacek.online/@botwikirandomfediverse"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

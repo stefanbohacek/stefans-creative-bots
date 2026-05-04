@@ -2,12 +2,19 @@
   "active": true,
   "name": "@currencies",
   "description": "Money around the world, and through history.",
-  "tags": ["wikidata", "wikipedia", "money", "currency"],
+  "tags": [
+    "wikidata",
+    "wikipedia",
+    "money",
+    "currency"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@currencies"
-    }   
+    }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/722/340/558/517/original/1c09dd73168946a1.png"
 }

@@ -2,9 +2,12 @@
   "active": true,
   "name": "@exoplanets",
   "description": "Explore distant worlds.",
-  "tags": ["space", "planets", "nasa"],
-  "thumbnail":
-    "https://botwiki.org/wp-content/uploads/2023/07/-exoplanets-1688591006.png",
+  "tags": [
+    "space",
+    "planets",
+    "nasa"
+  ],
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2023/07/-exoplanets-1688591006.png",
   "about_url": "https://botwiki.org/bot/exoplanets/",
   "links": [
     {
@@ -12,5 +15,6 @@
       "url": "https://stefanbohacek.online/@exoplanets"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

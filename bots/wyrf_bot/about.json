@@ -2,8 +2,11 @@
   "active": true,
   "name": "Who would you rather fight?",
   "description": "If you *had* to choose.",
-  "tags": ["poll", "animals"],
-  "thumbnail": "",
+  "tags": [
+    "poll",
+    "animals"
+  ],
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/865/798/264/846/original/3c3721e0986b4db7.png",
   "links": [
     {
       "title": "Follow on Mastodon",
@@ -14,5 +17,6 @@
       "url": "https://twitter.com/wyrf_bot"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

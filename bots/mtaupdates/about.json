@@ -2,7 +2,14 @@
   "active": true,
   "name": "MTA Subway Alerts",
   "description": "Updates about New York's public transit.",
-  "tags": ["nyc", "new york", "mta", "subway", "public transport", "schedule"],
+  "tags": [
+    "nyc",
+    "new york",
+    "mta",
+    "subway",
+    "public transport",
+    "schedule"
+  ],
   "about_url": "https://stefanbohacek.com/blog/turn-an-email-subscription-into-a-mastodon-bot-with-pipedream-com/",
   "thumbnail": "https://stefanbohacek.com/wp-content/uploads/2023/04/mtaupdates-mastodon-bot-pipedream-email.png",
   "source_url": "https://pipedream.com/new?h=tch_OQlfnY",
@@ -11,5 +18,6 @@
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@mtaupdates"
     }
-  ]
+  ],
+  "date_created": "2024-11-17T00:00:00Z"
 }

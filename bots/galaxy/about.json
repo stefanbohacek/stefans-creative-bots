@@ -2,12 +2,18 @@
   "active": true,
   "name": "@galaxy",
   "description": "Exploring galaxies.",
-  "tags": ["space", "galaxies", "nasa"],
+  "tags": [
+    "space",
+    "galaxies",
+    "nasa"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@galaxy"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/725/640/708/121/original/493ed580d954d84a.jpg"
 }

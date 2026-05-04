@@ -2,7 +2,11 @@
   "active": true,
   "name": "rain.gif",
   "description": "🌧🌧🌧",
-  "tags": ["weather", "gif", "generative art"],
+  "tags": [
+    "weather",
+    "gif",
+    "generative art"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2018/07/rain.gif.png",
   "about_url": "https://botwiki.org/bot/rain-gif/",
   "links": [
@@ -19,5 +23,6 @@
       "url": "https://twitter.com/raindotgifbot"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

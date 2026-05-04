@@ -3,12 +3,18 @@
   "name": "@linkedin_openings",
   "description": "Great new business opportunites arise.",
   "note": "Needs more work.",
-  "tags": ["meme", "social media", "linkedin"],
+  "tags": [
+    "meme",
+    "social media",
+    "linkedin"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@linkedin_openings"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2025-08-28T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/115/107/707/819/711/553/original/0a1519ce396bf325.jpg"
 }

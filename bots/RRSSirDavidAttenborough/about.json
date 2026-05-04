@@ -2,7 +2,13 @@
   "active": true,
   "name": "@RRSSirDavidAttenborough",
   "description": "Views RRS Sir David Attenborough.",
-  "tags": ["webcam", "live", "view", "sea", "water"],
+  "tags": [
+    "webcam",
+    "live",
+    "view",
+    "sea",
+    "water"
+  ],
   "note": "On hold while the boat is docked.",
   "links": [
     {
@@ -10,5 +16,7 @@
       "url": "https://stefanbohacek.online/@RRSSirDavidAttenborough"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2025-07-28T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/114/932/604/763/676/664/original/e0a448bedcda2d1c.jpg"
 }

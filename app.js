@@ -15,6 +15,7 @@ import Grant from "grant-express";
 import indexRoute from "./routes/index.js";
 import triggerRoute from "./routes/trigger.js";
 import fediverseInfoRoute from "./routes/fediverse-info.js";
+import rssFeedRoute from "./routes/feed.js";
 // import connectTumblrRoute from "./routes/connect-tumblr.js";
 // import callbackRoute from "./routes/callback.js";
 // import disconnectRoute from "./routes/disconnect.js";
@@ -38,6 +39,7 @@ console.log("loading app...");
 app.use("/", indexRoute);
 app.use("/trigger", triggerRoute);
 app.use("/fediverse-info", fediverseInfoRoute);
+app.use("/feed", rssFeedRoute);
 app.use("/images", express.static(__dirname + "/temp/"));
 
 app.use(express.static("public"));

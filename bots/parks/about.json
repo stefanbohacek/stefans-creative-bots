@@ -2,12 +2,19 @@
   "active": true,
   "name": "@parks",
   "description": "Parks around the world.",
-  "tags": ["wikidata", "wikipedia", "parks", "maps"],
+  "tags": [
+    "wikidata",
+    "wikipedia",
+    "parks",
+    "maps"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@parks"
-    }   
+    }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/823/583/489/676/original/6c54f6f88eed66d2.png"
 }

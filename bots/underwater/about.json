@@ -2,7 +2,13 @@
   "active": false,
   "name": "@underwater",
   "description": "Watching some fish.",
-  "tags": ["webcam", "live", "view", "fish", "water"],
+  "tags": [
+    "webcam",
+    "live",
+    "view",
+    "fish",
+    "water"
+  ],
   "note": "No longer able to generate 10-second preview clips from YouTube.",
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/09/-underwater-1694440432.png",
   "about_url": "https://botwiki.org/bot/underwater/",
@@ -12,5 +18,6 @@
       "url": "https://stefanbohacek.online/@underwater"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

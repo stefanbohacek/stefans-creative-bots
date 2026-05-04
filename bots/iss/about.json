@@ -2,9 +2,15 @@
   "active": true,
   "name": "@iss",
   "description": "Live from space!",
-  "tags": ["webcam", "live", "view", "space", "nasa", "space station"],
-  "thumbnail":
-    "https://botwiki.org/wp-content/uploads/2023/07/iss-live-1690040716.png",
+  "tags": [
+    "webcam",
+    "live",
+    "view",
+    "space",
+    "nasa",
+    "space station"
+  ],
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2023/07/iss-live-1690040716.png",
   "about_url": "https://botwiki.org/bot/iss-live/",
   "links": [
     {
@@ -12,5 +18,6 @@
       "url": "https://stefanbohacek.online/@iss"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

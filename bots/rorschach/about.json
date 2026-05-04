@@ -2,12 +2,18 @@
   "active": true,
   "name": "The Rorschach test",
   "description": "Describe what's in this image.",
-  "tags": ["rorschach", "psychology", "generative art"],
+  "tags": [
+    "rorschach",
+    "psychology",
+    "generative art"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@rorschach"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2025-12-04T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/115/662/111/462/816/269/original/609107dd7ef8799f.png"
 }

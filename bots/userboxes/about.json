@@ -2,12 +2,16 @@
   "active": true,
   "name": "Userboxes",
   "description": "This bot posts random Wikipedia userboxes.",
-  "tags": ["wikipedia"],
+  "tags": [
+    "wikipedia"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@userboxes"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2026-04-09T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/374/592/111/493/491/original/338a540c986e9f29.png"
 }

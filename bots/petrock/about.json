@@ -2,12 +2,17 @@
   "active": true,
   "name": "Pet Rock",
   "description": "Quotes from the The Care and Training of Your Pet Rock by Gary Dahl, published in 1975.",
-  "tags": ["books", "pets"],
+  "tags": [
+    "books",
+    "pets"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@petrock"
     }
   ],
-  "interval": "EVERY_TWELVE_HOURS"
+  "interval": "EVERY_TWELVE_HOURS",
+  "date_created": "2025-11-20T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/115/579/991/033/988/484/original/01d8837921571055.png"
 }

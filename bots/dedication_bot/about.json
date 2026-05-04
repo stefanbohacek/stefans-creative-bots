@@ -2,7 +2,10 @@
   "active": true,
   "name": "Book dedications bot",
   "description": "This one’s for you.",
-  "tags": ["books", "literature"],
+  "tags": [
+    "books",
+    "literature"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2022/12/book-dedications-bot-1669959321.png",
   "about_url": "https://botwiki.org/bot/book-dedications-bot/",
   "source_url": "https://pipedream.com/new?h=tch_OL4f7g",
@@ -16,5 +19,6 @@
       "url": "https://twitter.com/dedication_bot"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

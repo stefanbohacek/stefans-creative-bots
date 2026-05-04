@@ -2,7 +2,12 @@
   "active": true,
   "name": "@last100bills",
   "description": "Breakdown of the last 100 bills introduced in the US government.",
-  "tags": ["data", "dataviz", "data visualization", "government"],
+  "tags": [
+    "data",
+    "dataviz",
+    "data visualization",
+    "government"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2018/05/last100bills-1.png",
   "about_url": "https://botwiki.org/bot/last100bills/",
   "links": [
@@ -15,5 +20,6 @@
       "url": "https://twitter.com/last100bills"
     }
   ],
-  "interval": "EVERY_DAY_MORNING"
+  "interval": "EVERY_DAY_MORNING",
+  "date_created": "2024-11-17T00:00:00Z"
 }

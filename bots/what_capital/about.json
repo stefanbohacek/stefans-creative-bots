@@ -3,7 +3,12 @@
   "reply": true,
   "name": "What's the capital?",
   "description": "Identify the capital based on a country flag.",
-  "tags": ["game", "geography", "cities", "interactive"],
+  "tags": [
+    "game",
+    "geography",
+    "cities",
+    "interactive"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2018/02/what_capital-mastodon.png",
   "about_url": "https://botwiki.org/bot/what_capital/",
   "links": [
@@ -11,5 +16,6 @@
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@what_capital"
     }
-  ]
+  ],
+  "date_created": "2024-11-17T00:00:00Z"
 }

@@ -2,7 +2,13 @@
   "active": true,
   "name": "@volcanoviews",
   "description": "Views of volcanoes.",
-  "tags": ["webcam", "live", "view", "nature", "volcanoes"],
+  "tags": [
+    "webcam",
+    "live",
+    "view",
+    "nature",
+    "volcanoes"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2022/12/views-of-volcanoes-1670623386.png",
   "about_url": "https://botwiki.org/bot/views-of-volcanoes/",
   "links": [
@@ -11,5 +17,6 @@
       "url": "https://stefanbohacek.online/@volcanoviews"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

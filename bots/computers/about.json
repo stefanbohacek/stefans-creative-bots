@@ -2,12 +2,19 @@
   "active": true,
   "name": "@computers",
   "description": "Computers!",
-  "tags": ["wikidata", "computers", "technology", "wikipedia"],
+  "tags": [
+    "wikidata",
+    "computers",
+    "technology",
+    "wikipedia"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@computers"
-    }   
+    }
   ],
-  "interval": "EVERY_TWELVE_HOURS"
+  "interval": "EVERY_TWELVE_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/721/111/474/342/original/bf6cf54cf04be057.png"
 }

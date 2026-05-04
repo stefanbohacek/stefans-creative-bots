@@ -2,12 +2,18 @@
   "active": true,
   "name": "@emoji_stories",
   "description": "Turn emoji into a story!",
-  "tags": ["emoji", "writing", "prompt"],
+  "tags": [
+    "emoji",
+    "writing",
+    "prompt"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@emoji_stories"
     }
   ],
-  "interval": "EVERY_DAY_MORNING"
+  "interval": "EVERY_DAY_MORNING",
+  "date_created": "2026-03-01T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/155/393/545/487/377/original/846b8cf4bd44dad9.jpg"
 }

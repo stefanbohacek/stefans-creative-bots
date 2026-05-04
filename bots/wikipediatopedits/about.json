@@ -2,7 +2,10 @@
   "active": true,
   "name": "@wikipediatopedits",
   "description": "Keeping track of Wikipedia pages with most edits.",
-  "tags": ["wikipedia", "stats"],
+  "tags": [
+    "wikipedia",
+    "stats"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/11/top-edits-on-wikipedia-1699821580.png",
   "about_url": "https://botwiki.org/bot/top-edits-on-wikipedia/",
   "links": [
@@ -11,5 +14,6 @@
       "url": "https://stefanbohacek.online/@wikipediatopedits"
     }
   ],
-  "interval": "EVERY_DAY_MORNING"
+  "interval": "EVERY_DAY_MORNING",
+  "date_created": "2024-11-17T00:00:00Z"
 }

@@ -2,12 +2,18 @@
   "active": true,
   "name": "@tickets",
   "description": "All aboard!",
-  "tags": ["tickets", "travel", "archive"],
+  "tags": [
+    "tickets",
+    "travel",
+    "archive"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@tickets"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/838/396/004/018/original/0b2cbbf7e3ec7465.png"
 }

@@ -2,12 +2,18 @@
   "active": true,
   "name": "@arcade",
   "description": "Go play some classic arcade games!",
-  "tags": ["retro", "videogames", "archive"],
+  "tags": [
+    "retro",
+    "videogames",
+    "archive"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@arcade"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2026-02-20T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/101/348/554/439/906/original/c369d7c5891b1db5.png"
 }

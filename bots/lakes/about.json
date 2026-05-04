@@ -2,12 +2,20 @@
   "active": true,
   "name": "Lakes",
   "description": "Enjoy views of lakes.",
-  "tags": ["webcam", "live", "view", "lakes", "nature"],
+  "tags": [
+    "webcam",
+    "live",
+    "view",
+    "lakes",
+    "nature"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@lakes"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/855/458/829/693/original/c894e085f75d7a56.jpg"
 }

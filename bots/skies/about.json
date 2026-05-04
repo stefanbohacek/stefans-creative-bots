@@ -2,7 +2,13 @@
   "active": true,
   "name": "@skies",
   "description": "Views of skies.",
-  "tags": ["webcam", "live", "view", "nature", "sky"],
+  "tags": [
+    "webcam",
+    "live",
+    "view",
+    "nature",
+    "sky"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/08/-skies-1691854577.png",
   "about_url": "https://botwiki.org/bot/skies/",
   "links": [
@@ -11,5 +17,6 @@
       "url": "https://stefanbohacek.online/@skies"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

@@ -2,12 +2,20 @@
   "active": true,
   "name": "@mteverest",
   "description": "Views from the highest webcam in the world, pointed at Mount Everest.",
-  "tags": ["webcam", "live", "view", "nature", "mountains"],
+  "tags": [
+    "webcam",
+    "live",
+    "view",
+    "nature",
+    "mountains"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@mteverest"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-12-26T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/716/527/624/749/295/original/7f6bee63285c0e6c.png"
 }

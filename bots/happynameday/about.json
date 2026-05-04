@@ -2,7 +2,11 @@
   "active": true,
   "name": "@happynameday",
   "description": "Happy name day!",
-  "tags": ["calendar", "celebration", "holidays"],
+  "tags": [
+    "calendar",
+    "celebration",
+    "holidays"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/12/happy-name-day--1703685900.png",
   "about_url": "https://botwiki.org/bot/happy-name-day/",
   "links": [
@@ -11,5 +15,6 @@
       "url": "https://stefanbohacek.online/@happynameday"
     }
   ],
-  "interval": "EVERY_DAY_MORNING"
+  "interval": "EVERY_DAY_MORNING",
+  "date_created": "2024-11-17T00:00:00Z"
 }

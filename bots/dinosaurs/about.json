@@ -2,12 +2,19 @@
   "active": true,
   "name": "@dinosaurs",
   "description": "Dinosaurs!",
-  "tags": ["wikidata", "dinosaurs", "animals", "wikipedia"],
+  "tags": [
+    "wikidata",
+    "dinosaurs",
+    "animals",
+    "wikipedia"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@dinosaurs"
-    }   
+    }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2026-03-02T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/157/354/102/570/188/original/fb10cc4945d29ddc.jpg"
 }

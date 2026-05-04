@@ -2,7 +2,13 @@
   "active": true,
   "name": "@trains",
   "description": "Riding trains.",
-  "tags": ["trains", "webcam", "view", "travel", "public transport"],
+  "tags": [
+    "trains",
+    "webcam",
+    "view",
+    "travel",
+    "public transport"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2023/08/trains-1691854906.png",
   "about_url": "https://botwiki.org/bot/trains/",
   "links": [
@@ -11,5 +17,6 @@
       "url": "https://stefanbohacek.online/@trains"
     }
   ],
-  "interval": "EVERY_FOUR_HOURS"
+  "interval": "EVERY_FOUR_HOURS",
+  "date_created": "2024-11-13T00:00:00Z"
 }

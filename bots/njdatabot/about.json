@@ -2,12 +2,20 @@
   "active": true,
   "name": "Data of New Jersey",
   "description": "Explore the state of New Jersey through data.",
-  "tags": ["data", "dataviz", "data visualization", "new jersey", "maps"],
+  "tags": [
+    "data",
+    "dataviz",
+    "data visualization",
+    "new jersey",
+    "maps"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@njdatabot"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/852/319/307/770/original/5a2fe1c949656891.png"
 }

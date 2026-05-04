@@ -2,12 +2,17 @@
   "active": true,
   "name": "@mastodonroadmap",
   "description": "Posting when new items are added to Mastodon's public roadmap.",
-  "tags": ["mastodon", "fediverse"],
+  "tags": [
+    "mastodon",
+    "fediverse"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@mastodonroadmap"
     }
   ],
-  "interval": "EVERY_THIRTY_MINUTES"
+  "interval": "EVERY_THIRTY_MINUTES",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/812/943/769/686/original/ff1d2f5848255825.png"
 }

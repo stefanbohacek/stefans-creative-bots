@@ -2,7 +2,10 @@
   "active": true,
   "name": "@emoji__polls",
   "description": "Choose your favorite emoji!",
-  "tags": ["emoji", "polls"],
+  "tags": [
+    "emoji",
+    "polls"
+  ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2018/02/emoji__polls-v3.png",
   "about_url": "https://botwiki.org/bot/emoji__polls/",
   "links": [
@@ -15,5 +18,6 @@
       "url": "https://twitter.com/emoji__polls"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2024-11-17T00:00:00Z"
 }

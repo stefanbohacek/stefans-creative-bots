@@ -2,12 +2,16 @@
   "active": true,
   "name": "@whataweek",
   "description": "What a week, huh?",
-  "tags": ["meme"],
+  "tags": [
+    "meme"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@whataweek"
     }
   ],
-  "interval": "EVERY_DAY_LATE_MORNING"
+  "interval": "EVERY_DAY_LATE_MORNING",
+  "date_created": "2025-01-14T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/824/659/109/998/450/original/b1b6cf69fdd2eb03.png"
 }

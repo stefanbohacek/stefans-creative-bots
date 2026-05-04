@@ -2,12 +2,19 @@
   "active": true,
   "name": "@statues",
   "description": "Statues around the world.",
-  "tags": ["wikidata", "wikipedia", "maps", "statues"],
+  "tags": [
+    "wikidata",
+    "wikipedia",
+    "maps",
+    "statues"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@statues"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2025-10-24T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/115/430/552/159/857/384/original/0cc530c1e3248b4d.png"
 }

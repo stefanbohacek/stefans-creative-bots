@@ -19,5 +19,8 @@
     }
   ],
   "interval": "EVERY_SIX_HOURS",
-  "date_created": "2024-11-17T00:00:00Z"
+  "date_created": "2024-11-17T00:00:00Z",
+  "fediverse_handle": "@emoji__polls@stefanbohacek.online",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/724/129/260/623/original/1ca8a8ef46978d1e.jpg",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/724/129/260/623/original/bfcf32b8e55574d6.png"
 }

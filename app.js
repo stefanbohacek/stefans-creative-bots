@@ -36,6 +36,8 @@ app.use(function (req, res, next) {
 
 console.log("loading app...");
 
+app.get("/health", (req, res) => res.sendStatus(200));
+
 app.use("/", indexRoute);
 app.use("/trigger", triggerRoute);
 app.use("/fediverse-info", fediverseInfoRoute);

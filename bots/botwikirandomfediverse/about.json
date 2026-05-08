@@ -15,5 +15,8 @@
     }
   ],
   "interval": "EVERY_SIX_HOURS",
-  "date_created": "2024-11-17T00:00:00Z"
+  "date_created": "2024-11-17T00:00:00Z",
+  "fediverse_handle": "@botwikirandomfediverse@stefanbohacek.online",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/720/135/491/511/original/5e603c08d8ea5ca1.jpg",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/720/135/491/511/original/2dc54603132ab93c.jpeg"
 }

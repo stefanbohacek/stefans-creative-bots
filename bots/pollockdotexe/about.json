@@ -19,5 +19,8 @@
     }
   ],
   "interval": "EVERY_SIX_HOURS",
-  "date_created": "2024-11-17T00:00:00Z"
+  "date_created": "2024-11-17T00:00:00Z",
+  "fediverse_handle": "@pollockdotexe@stefanbohacek.online",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/856/207/784/439/original/93c11828ce41ea22.jpg",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/856/207/784/439/original/43ff60f32aab07c4.jpeg"
 }

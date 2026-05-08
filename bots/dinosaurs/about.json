@@ -16,5 +16,7 @@
   ],
   "interval": "EVERY_SIX_HOURS",
   "date_created": "2026-03-02T00:00:00Z",
-  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/157/354/102/570/188/original/fb10cc4945d29ddc.jpg"
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/157/354/102/570/188/original/fb10cc4945d29ddc.jpg",
+  "fediverse_handle": "@dinosaurs@stefanbohacek.online",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/157/354/102/570/188/original/fb10cc4945d29ddc.jpg"
 }

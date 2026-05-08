@@ -1,0 +1,194 @@
+/* Happy Hues color palette — https://www.happyhues.co */
+
+[data-bs-theme="light"] {
+  --hh-bg: #f4effc;
+  --hh-card-bg: #e2daeb;
+  --hh-headline: #1f1135;
+  --hh-text: #1b1325;
+  --hh-highlight: #ff6e6c;
+  --hh-secondary: #67568c;
+  --hh-tertiary: #fbdd74;
+
+  --bs-body-bg: var(--hh-bg);
+  --bs-body-bg-rgb: 244, 239, 252;
+  --bs-body-color: var(--hh-text);
+  --bs-heading-color: var(--hh-headline);
+
+  --bs-tertiary-bg: var(--hh-bg);
+  --bs-tertiary-bg-rgb: 244, 239, 252;
+  --bs-secondary-bg: var(--hh-card-bg);
+  --bs-secondary-bg-rgb: 226, 218, 235;
+
+  --bs-secondary-rgb: 103, 86, 140;
+  --bs-info-rgb: 255, 110, 108;
+
+  --bs-card-bg: var(--hh-card-bg);
+  --bs-card-cap-bg: var(--hh-card-bg);
+  --bs-card-border-color: rgba(103, 86, 140, 0.2);
+
+  --bs-link-color: var(--hh-secondary);
+  --bs-link-color-rgb: 103, 86, 140;
+  --bs-link-hover-color: var(--hh-highlight);
+
+  --bs-border-color: rgba(103, 86, 140, 0.25);
+}
+
+[data-bs-theme="dark"] {
+  --hh-bg: #301e4e;
+  --hh-card-bg: #463366;
+  --hh-headline: #c9bae2;
+  --hh-text: #c9bae2;
+  --hh-highlight: #ff6e6c;
+  --hh-secondary: #9b88c9;
+  --hh-tertiary: #fbdd74;
+
+  --bs-body-bg: var(--hh-bg);
+  --bs-body-bg-rgb: 48, 30, 78;
+  --bs-body-color: var(--hh-text);
+  --bs-heading-color: var(--hh-headline);
+
+  --bs-tertiary-bg: var(--hh-bg);
+  --bs-tertiary-bg-rgb: 48, 30, 78;
+  --bs-secondary-bg: var(--hh-bg);
+  --bs-secondary-bg-rgb: 48, 30, 78;
+
+  --bs-secondary-rgb: 155, 136, 201;
+  --bs-info-rgb: 255, 110, 108;
+
+  --bs-card-bg: var(--hh-card-bg);
+  --bs-card-cap-bg: var(--hh-card-bg);
+  --bs-card-border-color: rgba(155, 136, 201, 0.2);
+
+  --bs-link-color: var(--hh-highlight);
+  --bs-link-color-rgb: 255, 110, 108;
+  --bs-link-hover-color: var(--hh-secondary);
+
+  --bs-border-color: rgba(155, 136, 201, 0.25);
+}
+
+body {
+  background-color: var(--hh-bg);
+  color: var(--hh-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--hh-headline);
+}
+
+a {
+  color: var(--hh-secondary);
+}
+
+a:hover {
+  color: var(--hh-highlight);
+}
+
+[data-bs-theme="dark"] a:not(.btn) {
+  color: var(--hh-highlight);
+}
+
+[data-bs-theme="dark"] a:not(.btn):hover {
+  color: var(--hh-secondary);
+}
+
+[data-bs-theme="dark"] .fediverse-post a,
+[data-bs-theme="dark"] .fediverse-post a:hover {
+  color: #9b88c9;
+}
+
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--hh-secondary);
+  --bs-btn-border-color: var(--hh-secondary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--hh-highlight);
+  --bs-btn-hover-border-color: var(--hh-highlight);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--hh-highlight);
+  --bs-btn-active-border-color: var(--hh-highlight);
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: var(--hh-secondary);
+  --bs-btn-border-color: var(--hh-secondary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--hh-secondary);
+  --bs-btn-hover-border-color: var(--hh-secondary);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--hh-secondary);
+  --bs-btn-active-border-color: var(--hh-secondary);
+}
+
+.card {
+  background-color: var(--hh-card-bg);
+  border: none;
+}
+
+.card-footer {
+  background-color: var(--hh-card-bg);
+  border-top: none;
+}
+
+.card .card {
+  background-color: var(--hh-bg);
+}
+
+.blockquote {
+  background-color: var(--hh-card-bg);
+  padding: 1.5rem;
+}
+
+.img-thumbnail {
+  background-color: var(--hh-card-bg);
+  border-color: rgba(var(--bs-secondary-rgb), 0.2);
+}
+
+[data-bs-theme="dark"] .img-thumbnail {
+  background-color: var(--hh-card-bg) !important;
+  border-color: rgba(155, 136, 201, 0.2) !important;
+}
+
+#back-to-top {
+  background-color: var(--hh-secondary);
+  color: #fff;
+}
+
+[data-bs-theme="dark"] .card h1,
+[data-bs-theme="dark"] .card h2,
+[data-bs-theme="dark"] .card h3,
+[data-bs-theme="dark"] .card h4,
+[data-bs-theme="dark"] .card h5,
+[data-bs-theme="dark"] .card h6 {
+  color: var(--hh-text);
+}
+
+[data-bs-theme="dark"] .badge.text-bg-secondary {
+  background-color: rgba(155, 136, 201, 0.2) !important;
+  color: var(--hh-secondary) !important;
+}
+
+.badge-year {
+  background-color: var(--hh-secondary);
+  color: #fff;
+}
+
+[data-bs-theme="dark"] .badge-year {
+  color: var(--hh-bg);
+}
+
+[data-bs-theme="dark"] .btn-secondary {
+  --bs-btn-color: var(--hh-text);
+  --bs-btn-bg: var(--hh-card-bg);
+  --bs-btn-border-color: var(--hh-card-bg);
+  --bs-btn-hover-color: var(--hh-bg);
+  --bs-btn-hover-bg: var(--hh-secondary);
+  --bs-btn-hover-border-color: var(--hh-secondary);
+  --bs-btn-active-color: var(--hh-bg);
+  --bs-btn-active-bg: var(--hh-secondary);
+  --bs-btn-active-border-color: var(--hh-secondary);
+}

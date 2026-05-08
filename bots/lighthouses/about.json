@@ -16,5 +16,8 @@
     }
   ],
   "interval": "EVERY_SIX_HOURS",
-  "date_created": "2024-11-17T00:00:00Z"
+  "date_created": "2024-11-17T00:00:00Z",
+  "fediverse_handle": "@lighthouses@stefanbohacek.online",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/799/701/809/538/original/0f9b10f3e6bb46b0.jpg",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/799/701/809/538/original/f9f8aa7f173f8ebf.jpg"
 }

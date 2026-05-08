@@ -1,89 +1,149 @@
 <div class="card mb-4 w-100">
-  <div class="card-body position-relative">
-    <span class="followers-count badge bg-info text-black position-absolute d-none">
-    </span>
 
-    <div class="row mb-3 bot-showcase">
-      <div class="col-sm-12">
-        {{#if about.about_url}}
-        <a rel="me"
-          href="{{about_url}}">
-          {{else}}
-          <a rel="me"
-            href="{{about.links.[0].url}}">
-            {{/if}}
-            {{#if about.thumbnail}}
-            <img class="img-thumbnail mb-2 mr-3"
-              src="{{about.thumbnail}}"
-              alt="...">
-            {{else}}
-            <img class="img-thumbnail mb-2 mr-3"
-              src="https://generative-placeholders.stefanbohacek.com/image?width=360&height=200&style=cellular-automata&cells=10&colors={{@root.generative_placeholders_color}}&{{@key}}"
-              alt="...">
-            {{/if}}
-          </a>
-      </div>
-      <div class="col-sm-12">
-        <h2 class="mt-3">{{about.name}}</h2>
-        <p>{{about.description}}</p>
-        <ul class="list-unstyled">
-          {{#if about.created_ago}}
-          <li><strong>Created:</strong> {{about.created_ago}}</li>
-          {{/if}}
-          {{#if about.active}}
-          {{#if about.reply}}
-          <li><span title="This bot replies to you">💬</span> Reply bot</li>
-          {{/if}}
-          {{#if about.interval_human}}
-          <li><strong>Frequency:</strong> {{about.interval_human}}</li>
-          {{/if}}
-          {{#if about.next_run}}
-          <li><strong>Next run:</strong> {{about.next_run}}</li>
-          {{/if}}
-          {{#if about.last_run}}
-          <li><strong>Last run:</strong> <span
-              class="last-run">{{about.last_run}}</span></li>
-          {{/if}}
-          {{/if}}
-        </ul>
-      </div>
-      <div class="col-sm-12">
-        <p class="bot-links">
-          {{#if about.about_url}}
-          <a rel="me"
-            href="{{about.about_url}}"
-            class="btn btn-secondary mt-2">Learn more</a>
-          {{/if}}
-          {{#if about.links}}
-          {{#each about.links}}
-          <a rel="me"
-            href="{{this.url}}"
-            class="btn btn-outline-secondary mt-2">{{this.title}}</a>
-          {{/each}}
-          {{/if}}
-          {{#if about.source_url}}
-          <a rel="me"
-            href="{{about.source_url}}"
-            class="btn btn-outline-secondary mt-2">View source</a>
-          {{/if}}
-        </p>
-        {{#if about.note}}
-        <div class="card">
-          <div class="card-body">
-            <small>{{about.note}}</small>
-          </div>
-        </div>
+  <div class="bot-card-banner">
+    {{#if about.fediverse_url}}
+    <a href="{{about.fediverse_url}}"
+      data-fediverse-url="{{about.fediverse_url}}"
+      rel="me noopener noreferrer"
+      target="_blank"
+      class="d-block w-100 h-100">
+      {{/if}}
+      {{#if about.header_image}}
+      <img src="{{about.header_image}}"
+        alt=""
+        loading="lazy">
+      {{else if about.thumbnail}}
+      <img src="{{about.thumbnail}}"
+        alt=""
+        loading="lazy">
+      {{else}}
+      <img
+        src="https://generative-placeholders.stefanbohacek.com/image?width=600&height=200&style=cellular-automata&cells=10&colors={{@root.generative_placeholders_color}}&{{@key}}"
+        alt=""
+        loading="lazy">
+      {{/if}}
+      {{#if about.fediverse_url}}
+    </a>
+    {{/if}}
+  </div>
+
+  <div class="card-body">
+    {{#if about.fediverse_url}}
+    <a href="{{about.fediverse_url}}"
+      data-fediverse-url="{{about.fediverse_url}}"
+      rel="me noopener noreferrer"
+      target="_blank">
+      {{/if}}
+      {{#if about.avatar}}
+      <img src="{{about.avatar}}"
+        width="64"
+        height="64"
+        class="rounded-circle bot-avatar"
+        alt="{{about.name}} avatar"
+        loading="lazy">
+      {{else}}
+      <img
+        src="https://generative-placeholders.stefanbohacek.com/image?width=200&height=200&style=cellular-automata&cells=10&colors={{@root.generative_placeholders_color}}&{{@key}}"
+        width="64"
+        height="64"
+        class="rounded-circle bot-avatar"
+        alt=""
+        loading="lazy">
+      {{/if}}
+      {{#if about.fediverse_url}}
+    </a>
+    {{/if}}
+
+    <div class="mt-2 mb-3">
+      <h2 class="fs-5 mb-0">{{about.name}}</h2>
+      {{#if about.fediverse_handle}}
+      <small class="text-muted d-block mb-1">{{about.fediverse_handle}}</small>
+      {{/if}}
+      <div class="mt-1">
+        {{#if about.created_year}}
+        <span class="badge badge-year me-1">Created in {{about.created_year}}</span>
         {{/if}}
+        <span class="followers-count badge bg-info text-black d-none"></span>
       </div>
     </div>
+
+    <p>{{about.description}}</p>
+
+    <ul class="list-unstyled">
+      {{#if about.active}}
+      {{#if about.reply}}
+      <li>
+        <span title="This bot replies to you">💬</span> Reply bot
+      </li>
+      {{/if}}
+      {{#if about.interval_human}}
+      <li>
+        <strong>Frequency:</strong> {{about.interval_human}}
+      </li>
+      {{/if}}
+      {{#if about.next_run}}
+      <li>
+        <strong>Next run:</strong> {{about.next_run}}
+      </li>
+      {{/if}}
+      {{#if about.last_run}}
+      <li>
+        <strong>Last run:</strong> <span class="last-run">{{about.last_run}}</span>
+      </li>
+      {{/if}}
+      {{/if}}
+    </ul>
+
+    <ul class="bot-links mb-0 ps-3">
+      {{#each about.links}}
+      {{#if this.is_fediverse}}
+      <li>
+        <a rel="me noopener noreferrer"
+          target="_blank"
+          class="fw-bold"
+          data-fediverse-url="{{this.url}}"
+          href="{{this.url}}">{{this.title}}</a>
+      </li>
+      {{else}}
+      <li>
+        <a rel="me noopener noreferrer"
+          target="_blank"
+          href="{{this.url}}">{{this.title}}</a>
+      </li>
+      {{/if}}
+      {{/each}}
+      {{#if about.source_url}}
+      <li>
+        <a rel="me noopener noreferrer"
+          target="_blank"
+          href="{{about.source_url}}">View source</a>
+      </li>
+      {{/if}}
+      {{#if about.about_url}}
+      <li>
+        <a rel="me noopener noreferrer"
+          target="_blank"
+          href="{{about.about_url}}">Learn more</a>
+      </li>
+      {{/if}}
+    </ul>
+
+    {{#if about.note}}
+    <div class="card mt-3">
+      <div class="card-body">
+        <small>{{about.note}}</small>
+      </div>
+    </div>
+    {{/if}}
+
   </div>
+
   {{#if about.tags}}
-  <div class="card-footer">
+  <div class="card-footer pb-3">
     {{#each about.tags}}
-    <span class="badge text-bg-secondary">
-      #{{this}}
-    </span>
+    <span class="badge text-bg-secondary">#{{this}}</span>
     {{/each}}
   </div>
   {{/if}}
+
 </div>

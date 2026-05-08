@@ -17,6 +17,17 @@ router.get("/", (req, res) => {
     bots.forEach((bot) => {
       if (bot.about.date_created) {
         bot.about.created_ago = capitalizeFirstLetter(moment(bot.about.date_created).fromNow());
+        bot.about.created_year = new Date(bot.about.date_created).getFullYear();
+      }
+
+      if (bot.about.links) {
+        bot.about.links.forEach(link => {
+          link.is_fediverse = link.title === "Follow on Mastodon";
+        });
+        const primaryLink = bot.about.links.find(l => l.title?.startsWith("Follow on"));
+        if (primaryLink) {
+          bot.about.fediverse_url = primaryLink.url;
+        }
       }
 
       if (bot.cronjob) {

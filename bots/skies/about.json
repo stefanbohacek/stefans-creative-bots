@@ -18,5 +18,8 @@
     }
   ],
   "interval": "EVERY_FOUR_HOURS",
-  "date_created": "2024-11-17T00:00:00Z"
+  "date_created": "2024-11-17T00:00:00Z",
+  "fediverse_handle": "@skies@stefanbohacek.online",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/833/535/172/583/original/59d0d104d8b0b4af.png",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/833/535/172/583/original/2a26ef3aa0367ec0.png"
 }

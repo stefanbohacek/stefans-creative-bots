@@ -23,10 +23,10 @@
     content="Creative online bots 🤖🎨" />
   <meta name="twitter:description"
     content="Making creative online bots." />
-  <link rel="stylesheet"
-    href="styles.css" />
   <link href="libs/bootstrap/5.3.8/css/bootstrap.min.css"
     rel="stylesheet" />
+  <link rel="stylesheet"
+    href="styles/styles.css" />
   <link rel="shortcut icon"
     href="https://bots.stefanbohacek.com/images/icons/favico.ico" />
   <link rel="alternate"
@@ -35,55 +35,39 @@
     href="/feed" />
 </head>
 
-<body class="bg-body-tertiary"
-  id="top">
+<body id="top"
+  class="pt-4 pt-md-0">
   <div class="position-fixed z-3 top-0 end-0"
     style="transform: rotate(3deg);">
-    <span class="badge rounded-pill text-bg-info p-3 m-2 d-inline-block">
+    <span class="badge rounded-pill text-bg-info p-2 m-2 d-inline-block">
       <a class="fs-6 text-black text-center d-block text-decoration-none"
         href="https://stefanbohacek.online/@stefan/111767376158601667">
-        Best Fediverse App<br />on Glitch 2023
+        Best Fediverse App <br class="d-none d-md-block" />on Glitch 2023 🤘
       </a>
     </span>
   </div>
   <section id="content">
     <div id="content-inner">{{{body}}}</div>
-    <!--
-    <footer class="shifted">
-      <p><a href="https://glitch.com/edit/#!/stefan">Make your own Glitch projects page.</a> Created by <a href="https://stefanbohacek.online/@stefan">@stefan</a>.</p>
-    </footer>
--->
   </section>
   <script defer
     src="libs/day.js/1.11.18/dayjs.min.js"></script>
   <script defer
     src="libs/day.js/1.11.18/plugins/relativeTime.min.js"></script>
   <script defer
-    src="scripts.js"
+    src="scripts/scripts.js"
     type="module"></script>
   {{{footer_scripts}}}
   <script>
     const toggleDarkMode = (enabled) => {
-      if (enabled) {
-        document.body.setAttribute("data-bs-theme", "dark");
-      } else {
-        document.body.setAttribute("data-bs-theme", "light");
-      }
+      document.body.setAttribute("data-bs-theme", enabled ? "dark" : "light");
     };
 
-    if (window.matchMedia) {
-      toggleDarkMode(
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      );
-    }
+    const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (event) => {
-        toggleDarkMode(
-          window.matchMedia("(prefers-color-scheme: dark)").matches
-        );
-      });
+    if (darkModeQuery) {
+      toggleDarkMode(darkModeQuery.matches);
+      darkModeQuery.addEventListener("change", (ev) => toggleDarkMode(ev.matches));
+    }
   </script>
   <a id="back-to-top"
     title="Go back all the way to the top of this page"

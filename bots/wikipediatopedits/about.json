@@ -15,5 +15,8 @@
     }
   ],
   "interval": "EVERY_DAY_MORNING",
-  "date_created": "2024-11-17T00:00:00Z"
+  "date_created": "2024-11-17T00:00:00Z",
+  "fediverse_handle": "@wikipediatopedits@stefanbohacek.online",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/849/534/716/203/original/2db0236d2a1fc51d.png",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/849/534/716/203/original/458995d96dea8372.jpg"
 }

@@ -17,5 +17,7 @@
   ],
   "interval": "EVERY_FIVE_MINUTES",
   "date_created": "2024-11-17T00:00:00Z",
-  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/809/764/084/865/original/3de5d4c9c7a9b78f.png"
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/809/764/084/865/original/3de5d4c9c7a9b78f.png",
+  "fediverse_handle": "@mastodon_mobile_apps@stefanbohacek.online",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/809/764/084/865/original/3de5d4c9c7a9b78f.png"
 }

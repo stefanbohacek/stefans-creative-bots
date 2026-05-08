@@ -17,5 +17,8 @@
   ],
   "interval": "EVERY_FOUR_HOURS",
   "date_created": "2024-11-17T00:00:00Z",
-  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/855/458/829/693/original/c894e085f75d7a56.jpg"
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/855/458/829/693/original/c894e085f75d7a56.jpg",
+  "fediverse_handle": "@lakes@stefanbohacek.online",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/855/458/829/693/original/0cbc92c1a606c84b.png",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/855/458/829/693/original/c894e085f75d7a56.jpg"
 }

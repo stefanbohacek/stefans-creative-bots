@@ -27,5 +27,8 @@
   ],
   "__interval": "EVERY_HOUR",
   "interval": "EVERY_FOUR_HOURS",
-  "date_created": "2024-11-17T00:00:00Z"
+  "date_created": "2024-11-17T00:00:00Z",
+  "fediverse_handle": "@nycviewsbot@stefanbohacek.online",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/862/254/810/635/original/2050f46a1b90c8c6.jpg",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/862/254/810/635/original/1c008655b7643ee6.png"
 }

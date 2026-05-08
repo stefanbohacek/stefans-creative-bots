@@ -1,12 +1,31 @@
 const STORAGE_KEY = "fediverse_server";
 
-const authorizeInteractionPlatforms = ["mastodon", "hometown", "glitch-soc", "fedibird"];
+const getInteractionUrl = (server, platform, uri) => {
+  switch (platform) {
+    case "mastodon":
+    case "hometown":
+    case "glitch-soc":
+    case "fedibird":
+      return `https://${server}/authorize_interaction?uri=${uri}`;
+    case "misskey":
+      return `https://${server}/authorize-follow?acct=${uri}`;
+    case "pleroma":
+    case "akkoma":
+      return `https://${server}/ostatus_subscribe?acct=${uri}`;
+    case "lemmy":
+      return `https://${server}/activitypub/externalInteraction?uri=${uri}`;
+    case "friendica":
+      return `https://${server}/contact/follow?url=${uri}`;
+    default:
+      return null;
+  }
+};
 
 const updateFediverseLinks = (server, platform) => {
-  document.querySelectorAll("[data-fediverse-url]").forEach(link => {
-    link.href = server && authorizeInteractionPlatforms.includes(platform)
-      ? `https://${server}/authorize_interaction?uri=${link.dataset.fediverseUrl}`
-      : link.dataset.fediverseUrl;
+  document.querySelectorAll("[data-fediverse-url]").forEach((link) => {
+    const url =
+      server && getInteractionUrl(server, platform, link.dataset.fediverseUrl);
+    link.href = url || link.dataset.fediverseUrl;
   });
 };
 
@@ -24,7 +43,9 @@ const applyServer = async (server) => {
 
   let platform = "mastodon";
   try {
-    const resp = await fetch(`https://fediverse-info.stefanbohacek.com/node-info?domain=${server}`);
+    const resp = await fetch(
+      `https://fediverse-info.stefanbohacek.com/node-info?domain=${server}`,
+    );
     const data = await resp.json();
     platform = data?.software?.name?.toLowerCase();
   } catch (err) {}
@@ -32,23 +53,37 @@ const applyServer = async (server) => {
   updateFediverseLinks(server, platform);
 
   const note = document.getElementById("fediverse-server-note");
-  if (note) { note.classList.toggle("d-none", authorizeInteractionPlatforms.includes(platform)); }
+  if (note) {
+    note.classList.toggle(
+      "d-none",
+      getInteractionUrl(server, platform, "") !== null,
+    );
+  }
 };
 
 export default () => {
-  document.addEventListener("submit", (ev) => {
-    if (ev.target.classList.contains("fsb-prompt")) {
-      const fsbInput = e.target.querySelector(".fsb-domain");
-      if (fsbInput) { fsbInput.dataset.software = ""; }
-    }
-  }, true);
+  document.addEventListener(
+    "submit",
+    (ev) => {
+      if (ev.target.classList.contains("fsb-prompt")) {
+        const fsbInput = e.target.querySelector(".fsb-domain");
+        if (fsbInput) {
+          fsbInput.dataset.software = "";
+        }
+      }
+    },
+    true,
+  );
 
   const input = document.getElementById("fediverse-server-input");
 
   if (input) {
     const param = new URLSearchParams(window.location.search).get("server");
-    const server = param || localStorage.getItem(STORAGE_KEY) || "mastodon.social";
-    if (param) { localStorage.setItem(STORAGE_KEY, param); }
+    const server =
+      param || localStorage.getItem(STORAGE_KEY) || "mastodon.social";
+    if (param) {
+      localStorage.setItem(STORAGE_KEY, param);
+    }
 
     input.value = server;
     applyServer(server);
@@ -73,7 +108,9 @@ export default () => {
     updateBtn?.addEventListener("click", handleUpdate);
 
     input.addEventListener("keydown", (ev) => {
-      if (ev.key === "Enter") { handleUpdate(); }
+      if (ev.key === "Enter") {
+        handleUpdate();
+      }
     });
   }
 };

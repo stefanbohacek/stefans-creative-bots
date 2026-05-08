@@ -12,8 +12,8 @@ const getInteractionUrl = (server, platform, uri) => {
     case "pleroma":
     case "akkoma":
       return `https://${server}/ostatus_subscribe?acct=${uri}`;
-    case "lemmy":
-      return `https://${server}/activitypub/externalInteraction?uri=${uri}`;
+    // case "lemmy":
+    //   return `https://${server}/activitypub/externalInteraction?uri=${uri}`;
     case "friendica":
       return `https://${server}/contact/follow?url=${uri}`;
     default:

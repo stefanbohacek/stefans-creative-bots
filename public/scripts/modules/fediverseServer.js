@@ -37,7 +37,7 @@ const updateFsbInput = (server) => {
   }
 };
 
-const applyServer = async (server) => {
+const updateFollowLinks = async (server) => {
   localStorage.setItem(STORAGE_KEY, server);
   updateFsbInput(server);
 
@@ -52,13 +52,13 @@ const applyServer = async (server) => {
 
   updateFediverseLinks(server, platform);
 
-  const note = document.getElementById("fediverse-server-note");
+  const linksUpdated = getInteractionUrl(server, platform, "") !== null;
+  const note = document.getElementById("fediverse-server-unknown");
   if (note) {
-    note.classList.toggle(
-      "d-none",
-      getInteractionUrl(server, platform, "") !== null,
-    );
+    note.classList.toggle("d-none", linksUpdated);
   }
+
+  return linksUpdated;
 };
 
 export default () => {
@@ -86,7 +86,7 @@ export default () => {
     }
 
     input.value = server;
-    applyServer(server);
+    updateFollowLinks(server);
 
     const updateBtn = document.getElementById("fediverse-server-update");
 
@@ -97,15 +97,26 @@ export default () => {
         server = handleMatch[1];
       }
       input.value = server;
-      if (server) {
+      const errorMessage = document.getElementById("fediverse-server-error");
+      if (errorMessage) {
+        errorMessage.classList.toggle("d-none", !server || server.split(".").filter(part => part.length > 0).length >= 2);
+      }
+      if (server && server.split(".").filter(part => part.length > 0).length >= 2) {
         if (updateBtn) {
           updateBtn.disabled = true;
           updateBtn.textContent = "Updating...";
         }
-        await applyServer(server);
+        const linksUpdated = await updateFollowLinks(server);
         if (updateBtn) {
           updateBtn.disabled = false;
           updateBtn.textContent = "Update";
+        }
+        const updatedNote = document.getElementById("fediverse-server-updated");
+        if (updatedNote) {
+          updatedNote.classList.toggle("d-none", !linksUpdated);
+          if (linksUpdated) {
+            setTimeout(() => updatedNote.classList.add("d-none"), 5000);
+          }
         }
       }
     };

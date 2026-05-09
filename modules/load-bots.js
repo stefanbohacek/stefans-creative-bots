@@ -8,24 +8,16 @@ import getFediverseAccountInfo from "./getFediverseAccountInfo.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-export default async (app) => {
+export const loadBotInfo = (app) => {
   const botDirs = fs.readdirSync("bots");
-  let bots = [];
-  let botCount = 0;
+  const bots = [];
 
   for (const bot of botDirs) {
     if (fs.lstatSync(`bots/${bot}`).isDirectory()) {
-      let aboutJSON = `${__dirname}/../bots/${bot}/about.json`;
+      const aboutJSON = `${__dirname}/../bots/${bot}/about.json`;
       if (fs.existsSync(aboutJSON)) {
-        const data = await readFileSync(aboutJSON);
-        const about = JSON.parse(data);
+        const about = JSON.parse(readFileSync(aboutJSON));
         const scriptPath = `${__dirname}/../bots/${bot}/bot.js`;
-        let botScript = false;
-        if (fs.existsSync(scriptPath)) {
-          botScript = await import(scriptPath);
-        }
-
-        // console.log({ about });
 
         if (about.links) {
           const newLinks = [];
@@ -46,35 +38,14 @@ export default async (app) => {
           about.tags.sort();
         }
 
-        // if (about.links) {
-        //   const fediverseLink = about.links.filter((link) =>
-        //     ["Follow on Mastodon"].includes(link.title)
-        //   );
-
-        //   if (fediverseLink?.length > 0) {
-        //     const fediverseAccountInfo = await getFediverseAccountInfo(
-        //       fediverseLink[0]?.url
-        //     );
-        //     if (fediverseAccountInfo.followers_count > 0) {
-        //       about.followers_count = followersCount.toLocaleString();
-        //     }
-        //   }
-        // }
-
-        let botInfo = {
+        const botInfo = {
           about,
           script_path: scriptPath,
-          script: botScript,
+          script: false,
         };
 
         if (!botInfo.about.source_url && botInfo.about.source_url !== null) {
           botInfo.about.source_url = `https://github.com/stefanbohacek/stefans-creative-bots/tree/master/bots/${bot}/bot.js`;
-        }
-
-        if (about.active && botScript) {
-          botCount++;
-          const job = await scheduleBot(botInfo, app);
-          botInfo.cronjob = job;
         }
 
         if (!about.hide) {
@@ -84,8 +55,25 @@ export default async (app) => {
     }
   }
 
-  console.log(`🤖 scheduled ${botCount.toLocaleString()} bot(s)`);
-  // console.log("reading bots...", bots.map(bot => bot.about.name));
-
   return bots;
+};
+
+export const scheduleBots = async (bots, app) => {
+  let botCount = 0;
+
+  for (const botInfo of bots) {
+    const { about, script_path: scriptPath } = botInfo;
+    if (fs.existsSync(scriptPath)) {
+      const botScript = await import(scriptPath);
+      botInfo.script = botScript;
+
+      if (about.active && botScript) {
+        botCount++;
+        const job = await scheduleBot(botInfo, app);
+        botInfo.cronjob = job;
+      }
+    }
+  }
+
+  console.log(`🤖 scheduled ${botCount.toLocaleString()} bot(s)`);
 };

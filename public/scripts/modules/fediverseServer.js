@@ -91,7 +91,12 @@ export default () => {
     const updateBtn = document.getElementById("fediverse-server-update");
 
     const handleUpdate = async () => {
-      const server = input.value.trim();
+      let server = input.value.trim().replace(/^https?:\/\//, "").replace(/\/$/, "");
+      const handleMatch = server.match(/^@?[^@]+@([^@]+)$/);
+      if (handleMatch) {
+        server = handleMatch[1];
+      }
+      input.value = server;
       if (server) {
         if (updateBtn) {
           updateBtn.disabled = true;

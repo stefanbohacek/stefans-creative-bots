@@ -49,8 +49,8 @@
 
   --bs-tertiary-bg: var(--hh-bg);
   --bs-tertiary-bg-rgb: 48, 30, 78;
-  --bs-secondary-bg: var(--hh-bg);
-  --bs-secondary-bg-rgb: 48, 30, 78;
+  --bs-secondary-bg: var(--hh-card-bg);
+  --bs-secondary-bg-rgb: 70, 51, 102;
 
   --bs-secondary-rgb: 155, 136, 201;
   --bs-info-rgb: 255, 110, 108;

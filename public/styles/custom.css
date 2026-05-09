@@ -105,7 +105,7 @@ section {
 }
 
 [data-bs-theme="light"] .fediverse-post {
-  background-color: var(--hh-bg);
+  background-color: #fff;
   border: 1px solid rgba(103, 86, 140, 0.25);
   border-radius: var(--bs-border-radius);
   color: var(--hh-text);
@@ -117,7 +117,7 @@ section {
 }
 
 [data-bs-theme="light"] .fediverse-post .card {
-  background-color: var(--hh-card-bg);
+  background-color: #fff;
   border-color: rgba(103, 86, 140, 0.2);
   border-radius: var(--bs-border-radius);
 }

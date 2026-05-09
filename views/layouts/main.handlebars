@@ -59,7 +59,7 @@
   {{{footer_scripts}}}
   <script>
     const toggleDarkMode = (enabled) => {
-      document.body.setAttribute("data-bs-theme", enabled ? "dark" : "light");
+      document.documentElement.setAttribute("data-bs-theme", enabled ? "dark" : "light");
     };
 
     const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");

@@ -2,7 +2,10 @@
   "active": false,
   "name": "Arr! Doubloons!",
   "description": "Booty!",
-  "tags": ["pirates", "maps"],
+  "tags": [
+    "pirates",
+    "maps"
+  ],
   "note": "No longer working on Twitter bots.",
   "thumbnail": "https://botwiki.org/wp-content/uploads/2018/05/arrrrdoubloons.png",
   "about_url": "https://botwiki.org/bot/arrrrdoubloons/",
@@ -13,5 +16,6 @@
       "url": "https://twitter.com/arrrrdoubloons"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "date_created": "2018-05-01T16:54:48Z"
 }

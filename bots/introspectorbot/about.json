@@ -11,5 +11,6 @@
       "url": "https://twitter.com/INTROSPECTORBOT"
     }
   ],
-  "interval": "EVERY_DAY_MORNING"
+  "interval": "EVERY_DAY_MORNING",
+  "date_created": "2018-03-12T12:32:34Z"
 }

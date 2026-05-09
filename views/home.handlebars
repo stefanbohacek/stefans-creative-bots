@@ -1,4 +1,4 @@
-<div class="container ml-auto mr-auto p-4 p-md-5 mb-5">
+<div class="container ml-auto mr-auto px-4 px-md-5 mb-0">
   <main>
     <div class="row">
       <div class="col-sm-12 px-0 px-md-5 mx-auto intro-text">
@@ -53,77 +53,83 @@
           </li>
         </ul>
         <p>
-          And here's how you can <a href="https://stefanbohacek.com/support-my-work/">support my work</a>.
+          And here's how you can <a href="https://stefanbohacek.com/support-my-work/">support my work</a>. And <a
+            href="https://stefanbohacek.online/@stefan"
+            rel="me">follow me on Mastodon</a>!
         </p>
-        <p>
-          <em>Note: If you don't want to see occasional announcements about new bots that I've made, <a
-              href="https://fedi.tips/hiding-someones-boosts-in-mastodon-without-blocking-or-muting-them/">see how to
-              hide
-              them</a>.</em>
-        </p>
-        <p>
-          <a href="https://fedidevs.com/s/ODY4/"
-            class="btn btn-sm btn-secondary mt-2">Browse the starter pack</a>
-          <a href="https://stefanbohacek.online/@stefan"
-            rel="me"
-            class="btn btn-sm btn-outline-secondary mt-2">Follow me on Mastodon</a>
-        </p>
-        <div class="mt-4">
-          <p class="mb-2">Or you can browse my bots below. Links will open from this server:</p>
-          <div class="input-group fediverse-input-group"
-            style="max-width: 500px;">
-            <span class="input-group-text">https://</span>
-            <input type="text"
-              id="fediverse-server-input"
-              class="form-control"
-              placeholder="mastodon.social"
-              aria-label="Fediverse server domain">
-            <button class="btn btn-outline-secondary"
-              type="button"
-              id="fediverse-server-update">Update</button>
-          </div>
-          <p id="fediverse-server-note"
-            class="mt-2 d-none">Unknown fediverse server, links will open directly.</p>
-        </div>
       </div>
     </div>
   </main>
 </div>
 </div>
-<div class="container-fluid ml-auto mr-auto mt-4 pt-4">
+<div id="active-bots"
+  class="container-fluid ml-auto mr-auto mt-2">
   {{#if bots}}
-  <div id="active-bots"
-    class="row list">
-    {{#each active_bots}}
-    <div class="col-sm-12 col-md-6 col-lg-3 col-xxl-2 list-item">
-      {{> bot name=this.about.name description=this.about.description
-      thumbnail=this.about.thumbnail preview=this.about.preview
-      about_url=this.about.about_url source_url=this.about.source_url
-      links=this.about.links file=this.about.file interval=this.about.interval
-      interval_human=this.about.interval_human next_run=this.about.next_run
-      last_run=this.about.last_run }}
-    </div>
-    {{/each}}
-  </div>
+  {{#if categories}}
   <div class="row">
-    <div class="col-sm-12">
-      <div class="container ml-auto mr-auto">
-        <h2 id="inactive-bots"
-          class="text-center mt-5 mb-5">Inactive bots</h2>
+    <div class="col-12 text-center">
+      <div class="container mx-auto mb-4">
+        <label for="fediverse-server-input" class="mb-2">Links below will open from this server:</label>
+        <div class="input-group fediverse-input-group mx-auto"
+          style="max-width: 500px;">
+          <span class="input-group-text">https://</span>
+          <input type="text"
+            id="fediverse-server-input"
+            class="form-control"
+            placeholder="mastodon.social"
+            aria-label="Fediverse server domain">
+          <button class="btn btn-outline-secondary"
+            type="button"
+            id="fediverse-server-update">Update</button>
+        </div>
+        <p id="fediverse-server-note"
+          class="mt-2 d-none">Unknown fediverse server, links will open directly.</p>
       </div>
     </div>
-  </div>
-  <div class="row list">
-    {{#each inactive_bots}}
-    <div class="col-sm-12 col-md-6 col-lg-3 col-xxl-2 list-item">
-      {{> bot name=this.about.name description=this.about.description
-      thumbnail=this.about.thumbnail preview=this.about.preview
-      about_url=this.about.about_url source_url=this.about.source_url
-      links=this.about.links file=this.about.file interval=this.about.interval
-      interval_human=this.about.interval_human next_run=this.about.next_run
-      last_run=this.about.last_run }}
+    <div class="col-sm-12 px-0 px-md-5 mx-auto intro-text mt-3">
+      <ol class="category-list">
+        {{#each categories}}
+        <li><a href="#{{this.slug}}">{{this.title}}</a></li>
+        {{/each}}
+      </ol>
     </div>
-    {{/each}}
+  </div>
+  {{/if}}
+  {{#each categories}}
+  <div id="{{this.slug}}"
+    class="category-section pb-5">
+    <div class="row section-heading-row">
+      <div class="col-sm-12">
+        <div class="container ml-auto mr-auto">
+          <h2 class="text-center pt-4 pb-5 m-0"><a href="#{{this.slug}}">{{this.title}}</a></h2>
+        </div>
+      </div>
+    </div>
+    <div class="row list pt-4">
+      {{#each this.bots}}
+      <div class="col-sm-12 col-md-6 col-lg-3 col-xxl-2 list-item">
+        {{> bot about=this.about}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{/each}}
+  <div id="inactive-bots"
+    class="category-section pb-5">
+    <div class="row section-heading-row">
+      <div class="col-sm-12">
+        <div class="container ml-auto mr-auto">
+          <h2 class="text-center pt-4 pb-5 m-0"><a href="#inactive-bots">Inactive bots</a></h2>
+        </div>
+      </div>
+    </div>
+    <div class="row list pt-4">
+      {{#each inactive_bots}}
+      <div class="col-sm-12 col-md-6 col-lg-3 col-xxl-2 list-item">
+        {{> bot about=this.about}}
+      </div>
+      {{/each}}
+    </div>
   </div>
   {{/if}}
   <div class="row bg-body-secondary py-5">

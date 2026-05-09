@@ -1,7 +1,18 @@
 import express from "express";
 import moment from "moment";
+import { readFileSync } from "fs";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 import getRandomRange from "./../modules/get-random-range.js";
 import capitalizeFirstLetter from "./../modules/capitalize-first-letter.js";
+import slugify from "./../modules/slugify.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const categoriesConfig = JSON.parse(
+  readFileSync(`${__dirname}/../config/categories.json`, "utf8"),
+);
 
 const router = express.Router();
 
@@ -16,15 +27,19 @@ router.get("/", (req, res) => {
   if (bots && bots.length > 0) {
     bots.forEach((bot) => {
       if (bot.about.date_created) {
-        bot.about.created_ago = capitalizeFirstLetter(moment(bot.about.date_created).fromNow());
+        bot.about.created_ago = capitalizeFirstLetter(
+          moment(bot.about.date_created).fromNow(),
+        );
         bot.about.created_year = new Date(bot.about.date_created).getFullYear();
       }
 
       if (bot.about.links) {
-        bot.about.links.forEach(link => {
+        bot.about.links.forEach((link) => {
           link.is_fediverse = link.title === "Follow on Mastodon";
         });
-        const primaryLink = bot.about.links.find(l => l.title?.startsWith("Follow on"));
+        const primaryLink = bot.about.links.find((l) =>
+          l.title?.startsWith("Follow on"),
+        );
         if (primaryLink) {
           bot.about.fediverse_url = primaryLink.url;
         }
@@ -32,9 +47,13 @@ router.get("/", (req, res) => {
 
       if (bot.cronjob) {
         try {
-          bot.about.next_run = capitalizeFirstLetter(moment(bot.cronjob.nextDates().ts).fromNow());
+          bot.about.next_run = capitalizeFirstLetter(
+            moment(bot.cronjob.nextDates().ts).fromNow(),
+          );
           if (bot.cronjob.lastExecution) {
-            bot.about.last_run = capitalizeFirstLetter(moment(bot.cronjob.lastExecution).fromNow());
+            bot.about.last_run = capitalizeFirstLetter(
+              moment(bot.cronjob.lastExecution).fromNow(),
+            );
           }
         } catch (err) {
           console.log(err);
@@ -45,7 +64,7 @@ router.get("/", (req, res) => {
 
   try {
     bots.sort((a, b) =>
-      a.about.name.toLowerCase() > b.about.name.toLowerCase() ? 1 : -1
+      a.about.name.toLowerCase() > b.about.name.toLowerCase() ? 1 : -1,
     );
   } catch (err) {
     console.log(err);
@@ -54,14 +73,32 @@ router.get("/", (req, res) => {
   const activeBots = bots.filter((b) => b.about.active);
   const inactiveBots = bots.filter((b) => !b.about.active);
 
+  const matchesHandle = (bot, handle) =>
+    bot.about.fediverse_handle &&
+    (bot.about.fediverse_handle === handle ||
+      bot.about.fediverse_handle.startsWith(handle + "@"));
+
+  const allCategories = categoriesConfig.map((category) => ({
+    ...category,
+    slug: slugify(category.title),
+    bots: category.bots
+      .map((handle) => activeBots.find((b) => matchesHandle(b, handle)))
+      .filter(Boolean),
+  }));
+
+  const categories = allCategories.filter((c) => c.bots.length > 0);
+
   res.render("home", {
     project_name: process.env.PROJECT_NAME,
     bots,
+    categories,
     active_bots: activeBots,
     inactive_bots: inactiveBots,
     active_bots_count: activeBots.length.toLocaleString(),
     inactive_bots_count: inactiveBots.length.toLocaleString(),
-    bots_count_total: (activeBots.length + inactiveBots.length).toLocaleString(),
+    bots_count_total: (
+      activeBots.length + inactiveBots.length
+    ).toLocaleString(),
     generative_placeholders_color: getRandomRange(0, 99),
     footer_scripts: process.env.FOOTER_SCRIPTS,
   });

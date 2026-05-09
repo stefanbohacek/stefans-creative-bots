@@ -1,0 +1,154 @@
+[
+  {
+    "title": "Live views",
+    "description": "",
+    "starter_pack": "",
+    "bots": [
+      "@nycviewsbot",
+      "@southpoleviews",
+      "@northpoleviews",
+      "@volcanoviews",
+      "@mteverest",
+      "@iss",
+      "@sea",
+      "@skies",
+      "@bearcam",
+      "@lakes"
+    ]
+  },
+  {
+    "title": "Space",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@iss", "@exoplanets", "@galaxy", "@sun", "@telescope"]
+  },
+  {
+    "title": "Weather",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@rain", "@snow"]
+  },
+  {
+    "title": "Wildlife and animals",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@africanwildlife", "@bearcam", "@birds", "@dinosaurs"]
+  },
+  {
+    "title": "Maps and geography",
+    "description": "",
+    "starter_pack": "",
+    "bots": [
+      "@maps",
+      "@lighthouses",
+      "@nationalparks",
+      "@parks",
+      "@statues",
+      "@trainstations",
+      "@pirateflags"
+    ]
+  },
+  {
+    "title": "Data visualizations",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@nycdatabot", "@njdatabot", "@last100bills"]
+  },
+  {
+    "title": "Wikipedia and Wikidata",
+    "description": "",
+    "starter_pack": "",
+    "bots": [
+      "@wikipediaOTD",
+      "@wikipediatopedits",
+      "@userboxes",
+      "@vzvzvz",
+      "@currencies"
+    ]
+  },
+  {
+    "title": "Transit and travel",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@trains", "@trainstations", "@tickets", "@mtaupdates"]
+  },
+  {
+    "title": "NYC bots",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@nycviewsbot", "@nycdatabot", "@mtaupdates"]
+  },
+  {
+    "title": "Books, reading, literature",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@bartleby", "@dedication_bot", "@petrock", "@libraries"]
+  },
+  {
+    "title": "Archives",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@roots", "@maps"]
+  },
+  {
+    "title": "Generative art",
+    "description": "",
+    "starter_pack": "",
+    "bots": [
+      "@pollockdotexe",
+      "@rain",
+      "@snow",
+      "@rorschach",
+      "@curator_machine"
+    ]
+  },
+  {
+    "title": "Retro and vintage",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@computers", "@floppies", "@discontinued", "@arcade"]
+  },
+  {
+    "title": "Interactive and prompts",
+    "description": "",
+    "starter_pack": "",
+    "bots": [
+      "@what_capital",
+      "@emoji_stories",
+      "@hypno__bot",
+      "@rorschach",
+      "@happymoonbot",
+      "@happynameday"
+    ]
+  },
+  {
+    "title": "Polls",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@emoji__polls", "@vibecheck", "@wouldyouratherfight"]
+  },
+  {
+    "title": "Memes and jokes",
+    "description": "",
+    "starter_pack": "",
+    "bots": [
+      "@whataweek",
+      "@ignoreallpreviousinstructions",
+      "@thelick",
+      "@no",
+      "@thisdatasetdoesnotexist"
+    ]
+  },
+  {
+    "title": "Fediverse",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@mastodon_mobile_apps", "@mastodonroadmap"]
+  },
+  {
+    "title": "Botwiki",
+    "description": "",
+    "starter_pack": "",
+    "bots": ["@botwikirandom", "@botwikirandomfediverse", "@newonbotwiki"]
+  }
+]

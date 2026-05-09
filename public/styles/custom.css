@@ -39,6 +39,40 @@ section {
   flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+  .glitch-award {
+    position: static !important;
+    text-align: right;
+  }
+}
+
+.category-list {
+  columns: 1;
+}
+
+@media (min-width: 576px) {
+  .category-list {
+    columns: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .category-list {
+    columns: 3;
+  }
+}
+
+.category-section {
+  position: relative;
+}
+
+.section-heading-row {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--bs-body-bg);
+}
+
 .list-item {
   display: flex;
   margin-bottom: 20px;
@@ -46,12 +80,15 @@ section {
 
 #back-to-top {
   position: fixed;
+  z-index: 3;
   bottom: 1rem;
   right: 1rem;
   padding: 1rem;
   opacity: 0;
   transform: translateY(0.5rem);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
   pointer-events: none;
 }
 

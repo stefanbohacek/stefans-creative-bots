@@ -2,7 +2,7 @@
   {
     "title": "Live views",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": [
       "@nycviewsbot",
       "@southpoleviews",
@@ -19,25 +19,25 @@
   {
     "title": "Space",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@iss", "@exoplanets", "@galaxy", "@sun", "@telescope"]
   },
   {
     "title": "Weather",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@rain", "@snow"]
   },
   {
     "title": "Wildlife and animals",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@africanwildlife", "@bearcam", "@birds", "@dinosaurs"]
   },
   {
     "title": "Maps and geography",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": [
       "@maps",
       "@lighthouses",
@@ -51,13 +51,13 @@
   {
     "title": "Data visualizations",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@nycdatabot", "@njdatabot", "@last100bills"]
   },
   {
     "title": "Wikipedia and Wikidata",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": [
       "@wikipediaOTD",
       "@wikipediatopedits",
@@ -69,31 +69,31 @@
   {
     "title": "Transit and travel",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@trains", "@trainstations", "@tickets", "@mtaupdates"]
   },
   {
     "title": "NYC bots",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@nycviewsbot", "@nycdatabot", "@mtaupdates"]
   },
   {
     "title": "Books, reading, literature",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@bartleby", "@dedication_bot", "@petrock", "@libraries"]
   },
   {
     "title": "Archives",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@roots", "@maps"]
   },
   {
     "title": "Generative art",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": [
       "@pollockdotexe",
       "@rain",
@@ -105,13 +105,13 @@
   {
     "title": "Retro and vintage",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@computers", "@floppies", "@discontinued", "@arcade"]
   },
   {
     "title": "Interactive and prompts",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": [
       "@what_capital",
       "@emoji_stories",
@@ -124,13 +124,13 @@
   {
     "title": "Polls",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@emoji__polls", "@vibecheck", "@wouldyouratherfight"]
   },
   {
     "title": "Memes and jokes",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": [
       "@whataweek",
       "@ignoreallpreviousinstructions",
@@ -142,13 +142,13 @@
   {
     "title": "Fediverse",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@mastodon_mobile_apps", "@mastodonroadmap"]
   },
   {
     "title": "Botwiki",
     "description": "",
-    "starter_pack": "",
+    "starter_pack": null,
     "bots": ["@botwikirandom", "@botwikirandomfediverse", "@newonbotwiki"]
   }
 ]

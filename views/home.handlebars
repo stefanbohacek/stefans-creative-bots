@@ -112,6 +112,13 @@
       </div>
       {{/each}}
     </div>
+    {{#if this.starter_pack}}
+    <div class="row">
+      <div class="col-12 text-center pt-2 pb-3">
+        <a href="{{this.starter_pack}}" class="btn btn-outline-secondary" target="_blank" rel="noopener">View collection on Mastodon</a>
+      </div>
+    </div>
+    {{/if}}
   </div>
   {{/each}}
   <div id="inactive-bots"

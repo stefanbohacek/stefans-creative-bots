@@ -1,0 +1,38 @@
+{
+  "description": "A list of classic breads and sweet pastries.",
+  "breads": [
+    "bagel",
+    "baguette",
+    "brioche",
+    "ciabatta",
+    "cornbread",
+    "flatbread",
+    "focaccia",
+    "fruit bread",
+    "hamburger bun",
+    "matzoh",
+    "muffin",
+    "naan",
+    "pita",
+    "potato bread",
+    "pretzel",
+    "pumpernickel",
+    "roti",
+    "scone",
+    "soda bread",
+    "sourdough",
+    "tortilla"
+  ],
+  "pastries": [
+    "baklava",
+    "cinnamon roll",
+    "croissant",
+    "doughnut",
+    "éclair",
+    "morning bun",
+    "pain au chocolat",
+    "shortcake",
+    "strudel",
+    "toaster strudel"
+  ]
+}

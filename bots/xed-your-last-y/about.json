@@ -1,0 +1,18 @@
+{
+  "active": true,
+  "name": "You have X-ed your last Y!",
+  "description": "And that's it.",
+  "tags": ["random", "language", "corpora"],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@XedYourLastY"
+    }
+  ],
+  "interval": "EVERY_FOUR_HOURS",
+  "fediverse_handle": "@XedYourLastY@stefanbohacek.online",
+  "date_created": "2026-05-09T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/545/223/015/631/529/original/dc6b57f1e528ef72.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/545/223/015/631/529/original/c3c63f865462c58e.png",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/545/223/015/631/529/original/dc6b57f1e528ef72.png"
+}

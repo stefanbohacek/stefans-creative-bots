@@ -1,3 +1,5 @@
+import getReferrerServer from "./getReferrerServer.js";
+
 const STORAGE_KEY = "fediverse_server";
 
 const getInteractionUrl = (server, platform, uri) => {
@@ -61,7 +63,7 @@ const updateFollowLinks = async (server) => {
   return linksUpdated;
 };
 
-export default () => {
+export default async () => {
   document.addEventListener(
     "submit",
     (ev) => {
@@ -79,19 +81,42 @@ export default () => {
 
   if (input) {
     const param = new URLSearchParams(window.location.search).get("server");
-    const server =
-      param || localStorage.getItem(STORAGE_KEY) || "mastodon.social";
+    const stored = localStorage.getItem(STORAGE_KEY);
+
     if (param) {
       localStorage.setItem(STORAGE_KEY, param);
     }
 
+    const server = param || stored || "mastodon.social";
     input.value = server;
     updateFollowLinks(server);
+
+    if (!param && !stored) {
+      const referrerServer = getReferrerServer();
+      if (referrerServer) {
+        try {
+          const resp = await fetch(
+            `https://fediverse-info.stefanbohacek.com/node-info?domain=${referrerServer}`,
+          );
+          const data = await resp.json();
+          const platform = data?.software?.name?.toLowerCase();
+          if (getInteractionUrl(referrerServer, platform, "") !== null) {
+            input.value = referrerServer;
+            updateFollowLinks(referrerServer);
+          }
+        } catch {
+          /* noop */
+        }
+      }
+    }
 
     const updateBtn = document.getElementById("fediverse-server-update");
 
     const handleUpdate = async () => {
-      let server = input.value.trim().replace(/^https?:\/\//, "").replace(/\/$/, "");
+      let server = input.value
+        .trim()
+        .replace(/^https?:\/\//, "")
+        .replace(/\/$/, "");
       const handleMatch = server.match(/^@?[^@]+@([^@]+)$/);
       if (handleMatch) {
         server = handleMatch[1];
@@ -99,9 +124,16 @@ export default () => {
       input.value = server;
       const errorMessage = document.getElementById("fediverse-server-error");
       if (errorMessage) {
-        errorMessage.classList.toggle("d-none", !server || server.split(".").filter(part => part.length > 0).length >= 2);
+        errorMessage.classList.toggle(
+          "d-none",
+          !server ||
+            server.split(".").filter((part) => part.length > 0).length >= 2,
+        );
       }
-      if (server && server.split(".").filter(part => part.length > 0).length >= 2) {
+      if (
+        server &&
+        server.split(".").filter((part) => part.length > 0).length >= 2
+      ) {
         if (updateBtn) {
           updateBtn.disabled = true;
           updateBtn.textContent = "Updating...";

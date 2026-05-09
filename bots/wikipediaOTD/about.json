@@ -1,6 +1,6 @@
 {
   "active": true,
-  "name": "@wikipediaOTD",
+  "name": "On This Day from Wikipedia",
   "description": "Events that happened on this day in history, from Wikipedia.",
   "tags": [
     "wikipedia",

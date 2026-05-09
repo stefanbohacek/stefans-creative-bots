@@ -1,6 +1,6 @@
 {
   "active": true,
-  "name": "@currencies",
+  "name": "Currencies",
   "description": "Money around the world, and through history.",
   "tags": [
     "wikidata",

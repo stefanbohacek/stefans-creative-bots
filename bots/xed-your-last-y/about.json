@@ -1,8 +1,12 @@
 {
   "active": true,
-  "name": "You have X-ed your last Y!",
+  "name": "You have Xed your last Y!",
   "description": "And that's it.",
-  "tags": ["random", "language", "corpora"],
+  "tags": [
+    "random",
+    "language",
+    "corpora"
+  ],
   "links": [
     {
       "title": "Follow on Mastodon",

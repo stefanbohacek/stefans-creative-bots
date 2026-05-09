@@ -1,6 +1,6 @@
 {
   "active": true,
-  "name": "@wikipediatopedits",
+  "name": "Top edits on Wikipedia",
   "description": "Keeping track of Wikipedia pages with most edits.",
   "tags": [
     "wikipedia",

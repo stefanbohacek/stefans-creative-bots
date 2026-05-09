@@ -1,6 +1,6 @@
 {
   "active": true,
-  "name": "@mastodonroadmap",
+  "name": "Mastodon roadmap (Unofficial)",
   "description": "Posting when new items are added to Mastodon's public roadmap.",
   "tags": [
     "mastodon",

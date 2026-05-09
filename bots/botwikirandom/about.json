@@ -1,6 +1,6 @@
 {
   "active": true,
-  "name": "@botwikirandom",
+  "name": "Random bots from Botwiki",
   "description": "Explore Botwiki one bot at a time.",
   "tags": [
     "bots",

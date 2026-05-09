@@ -1,0 +1,22 @@
+{
+  "active": true,
+  "name": "New on Botwiki",
+  "description": "See what's new on Botwiki!",
+  "tags": [
+    "bots",
+    "botwiki"
+  ],
+  "thumbnail": "https://botwiki.org/wp-content/uploads/2019/12/new-on-botwiki.png",
+  "about_url": "https://botwiki.org/bot/new-on-botwiki/",
+  "source_url": "https://github.com/botwiki/botwiki-wp-theme/blob/master/includes/newonbotwiki.php",
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@newonbotwiki"
+    }
+  ],
+  "fediverse_handle": "@newonbotwiki@stefanbohacek.online",
+  "date_created": "2024-11-27T00:00:00Z",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/555/536/225/898/013/original/c5880f0f824f72aa.jpg",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/555/536/225/898/013/original/e2f7cc345c5ea1c1.jpg"
+}

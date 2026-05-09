@@ -3,64 +3,82 @@
     "title": "Live views",
     "description": "",
     "collection_url": null,
-    "bots": [
-      "@nycviewsbot",
+    "bots": [      
       "@southpoleviews",
       "@northpoleviews",
-      "@volcanoviews",
-      "@mteverest",
+      "@RRSSirDavidAttenborough",
+      "@nycviewsbot",
       "@iss",
+      "@bearcam",
+      "@mteverest",
+      "@lakes",
       "@sea",
       "@skies",
-      "@bearcam",
-      "@lakes"
+      "@volcanoviews"
     ]
   },
   {
     "title": "Space",
     "description": "",
     "collection_url": null,
-    "bots": ["@iss", "@exoplanets", "@galaxy", "@sun", "@telescope"]
+    "bots": [
+      "@iss", 
+      "@telescope", 
+      "@galaxy", 
+      "@exoplanets", 
+      "@sun"
+    ]
   },
   {
     "title": "Weather",
     "description": "",
     "collection_url": null,
-    "bots": ["@rain", "@snow"]
+    "bots": [
+      "@rain", 
+      "@snow"
+    ]
   },
   {
     "title": "Wildlife and animals",
     "description": "",
     "collection_url": null,
-    "bots": ["@africanwildlife", "@bearcam", "@birds", "@dinosaurs"]
+    "bots": [
+      "@bearcam", 
+      "@birds", 
+      "@dinosaurs", 
+      "@africanwildlife"
+    ]
   },
   {
-    "title": "Maps and geography",
+    "title": "Maps and history",
     "description": "",
     "collection_url": null,
-    "bots": [
+    "bots": [      
       "@maps",
+      "@trainstations",
       "@lighthouses",
       "@nationalparks",
-      "@parks",
       "@statues",
-      "@trainstations",
-      "@pirateflags"
+      "@parks"
     ]
   },
   {
     "title": "Data visualizations",
     "description": "",
     "collection_url": null,
-    "bots": ["@nycdatabot", "@njdatabot", "@last100bills"]
+    "bots": [
+      "@nycdatabot", 
+      "@njdatabot",
+      "@last100bills"
+    ]
   },
   {
     "title": "Wikipedia and Wikidata",
     "description": "",
     "collection_url": null,
-    "bots": [
-      "@wikipediaOTD",
+    "bots": [      
       "@wikipediatopedits",
+      "@wikipediaOTD",
       "@userboxes",
       "@vzvzvz",
       "@currencies"
@@ -70,86 +88,113 @@
     "title": "Transit and travel",
     "description": "",
     "collection_url": null,
-    "bots": ["@trains", "@trainstations", "@tickets", "@mtaupdates"]
+    "bots": [
+      "@trains", 
+      "@trainstations", 
+      "@tickets", 
+      "@mtaupdates"
+    ]
   },
   {
     "title": "NYC bots",
     "description": "",
     "collection_url": null,
-    "bots": ["@nycviewsbot", "@nycdatabot", "@mtaupdates"]
+    "bots": [
+      "@nycviewsbot", 
+      "@nycdatabot", 
+      "@mtaupdates"
+    ]
   },
   {
     "title": "Books, reading, literature",
     "description": "",
     "collection_url": null,
-    "bots": ["@bartleby", "@dedication_bot", "@petrock", "@libraries"]
+    "bots": [
+      "@dedication_bot", 
+      "@libraries", 
+      "@petrock", 
+      "@bartleby"
+    ]
   },
   {
     "title": "Archives",
     "description": "",
     "collection_url": null,
-    "bots": ["@roots", "@maps"]
+    "bots": [
+      "@roots", 
+      "@maps"
+    ]
   },
   {
     "title": "Generative art",
     "description": "",
     "collection_url": null,
-    "bots": [
-      "@pollockdotexe",
+    "bots": [      
       "@rain",
       "@snow",
       "@rorschach",
-      "@curator_machine"
+      "@pollockdotexe",
+      "@curator_machine",
+      "@hypno__bot"
     ]
   },
   {
     "title": "Retro and vintage",
     "description": "",
     "collection_url": null,
-    "bots": ["@computers", "@floppies", "@discontinued", "@arcade"]
-  },
-  {
-    "title": "Interactive and prompts",
-    "description": "",
-    "collection_url": null,
     "bots": [
-      "@what_capital",
-      "@emoji_stories",
-      "@hypno__bot",
-      "@rorschach",
-      "@happymoonbot",
-      "@happynameday"
+      "@computers", 
+      "@discontinued", 
+      "@arcade",
+      "@floppies"
     ]
   },
   {
-    "title": "Polls",
-    "description": "",
-    "collection_url": null,
-    "bots": ["@emoji__polls", "@vibecheck", "@wouldyouratherfight"]
-  },
-  {
-    "title": "Memes and jokes",
+    "title": "Interactive, prompts, and polls",
     "description": "",
     "collection_url": null,
     "bots": [
-      "@whataweek",
+      "@emoji__polls", 
+      "@rorschach",
+      "@what_capital",
+      "@happymoonbot",
+      "@emoji_stories",
+      "@vibecheck", 
+      "@wouldyouratherfight"
+    ]
+  },
+  {
+    "title": "Memes, jokes, and others",
+    "description": "",
+    "collection_url": null,
+    "bots": [      
+      "@happynameday",
+      "@pirateflags",
+      "@XedYourLastY",
       "@ignoreallpreviousinstructions",
-      "@thelick",
+      "@whataweek",
       "@no",
-      "@thisdatasetdoesnotexist",
-      "@XedYourLastY"
+      "@thelick",
+      "@thisdatasetdoesnotexist"    
     ]
   },
   {
     "title": "Fediverse",
     "description": "",
     "collection_url": null,
-    "bots": ["@mastodon_mobile_apps", "@mastodonroadmap"]
+    "bots": [
+      "@mastodon_mobile_apps", 
+      "@mastodonroadmap"
+    ]
   },
   {
     "title": "Botwiki",
     "description": "",
     "collection_url": null,
-    "bots": ["@botwikirandom", "@botwikirandomfediverse", "@newonbotwiki"]
+    "bots": [
+      "@botwikirandomfediverse", 
+      "@newonbotwiki", 
+      "@botwikirandom"
+    ]
   }
 ]

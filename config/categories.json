@@ -59,7 +59,17 @@
       "@lighthouses",
       "@nationalparks",
       "@statues",
-      "@parks"
+      "@parks",
+      "@currencies"
+    ]
+  },
+  {
+    "title": "Language",
+    "description": "",
+    "collection_url": null,
+    "bots": [      
+      "@helloworld",
+      "@vzvzvz"
     ]
   },
   {
@@ -79,9 +89,7 @@
     "bots": [      
       "@wikipediatopedits",
       "@wikipediaOTD",
-      "@userboxes",
-      "@vzvzvz",
-      "@currencies"
+      "@userboxes"
     ]
   },
   {

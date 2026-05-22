@@ -130,7 +130,8 @@
     "collection_url": null,
     "bots": [
       "@roots", 
-      "@maps"
+      "@maps",
+      "@manuals"
     ]
   },
   {
@@ -154,7 +155,8 @@
       "@computers", 
       "@discontinued", 
       "@arcade",
-      "@floppies"
+      "@floppies",
+      "@manuals"
     ]
   },
   {

@@ -1,0 +1,18 @@
+{
+  "active": true,
+  "name": "Manuals",
+  "description": "Photos of floppy disks.",
+  "tags": [
+    "manuals",
+    "technology",
+    "archive"
+  ],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@manuals"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS",
+  "fediverse_handle": "@manuals@stefanbohacek.online"
+}

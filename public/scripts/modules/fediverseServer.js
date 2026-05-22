@@ -44,13 +44,15 @@ const updateFollowLinks = async (server) => {
   updateFsbInput(server);
 
   let platform = "mastodon";
-  try {
-    const resp = await fetch(
-      `https://fediverse-info.stefanbohacek.com/node-info?domain=${server}`,
-    );
-    const data = await resp.json();
-    platform = data?.software?.name?.toLowerCase();
-  } catch (err) {}
+  if (server !== "mastodon.social") {
+    try {
+      const resp = await fetch(
+        `https://fediverse-info.stefanbohacek.com/node-info?domain=${server}`,
+      );
+      const data = await resp.json();
+      platform = data?.software?.name?.toLowerCase();
+    } catch (err) {}
+  }
 
   updateFediverseLinks(server, platform);
 

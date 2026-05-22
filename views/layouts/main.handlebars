@@ -23,10 +23,12 @@
     content="Creative online bots 🤖🎨" />
   <meta name="twitter:description"
     content="Making creative online bots." />
-  <link href="libs/bootstrap/5.3.8/css/bootstrap.min.css"
-    rel="stylesheet" />
-  <link rel="stylesheet"
-    href="styles/styles.css" />
+  {{#if critical_css}}<style>{{{critical_css}}}</style>{{/if}}
+  <link rel="preload"
+    href="styles/main.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles/main.css"></noscript>
   <link rel="shortcut icon"
     href="https://bots.stefanbohacek.com/images/icons/favico.ico" />
   <link rel="alternate"
@@ -50,12 +52,7 @@
     <div id="content-inner">{{{body}}}</div>
   </section>
   <script defer
-    src="libs/day.js/1.11.18/dayjs.min.js"></script>
-  <script defer
-    src="libs/day.js/1.11.18/plugins/relativeTime.min.js"></script>
-  <script defer
-    src="scripts/scripts.js"
-    type="module"></script>
+    src="scripts/bundle.js"></script>
   {{{footer_scripts}}}
   <script>
     const toggleDarkMode = (enabled) => {

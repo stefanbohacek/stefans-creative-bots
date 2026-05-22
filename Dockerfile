@@ -24,9 +24,10 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY ./package.json /usr/src/app/
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
-RUN npm install --production && npm cache clean --force
-RUN pip3 install --break-system-packages yt-dlp==2023.7.6
+RUN npm install
 COPY ./ /usr/src/app
+RUN npm run build && npm prune --production && npm cache clean --force
+RUN pip3 install --break-system-packages yt-dlp==2023.7.6
 ENV NODE_ENV production
 ENV PORT 3000
 EXPOSE 3000

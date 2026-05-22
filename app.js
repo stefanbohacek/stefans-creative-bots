@@ -1,3 +1,4 @@
+import { readFileSync } from "fs";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -22,6 +23,16 @@ import rssFeedRoute from "./routes/feed.js";
 
 const app = express();
 const MemoryStore = createMemoryStore(session);
+
+let criticalCss = "";
+try {
+  criticalCss = readFileSync("./public/styles/critical.css", "utf8");
+} catch {}
+
+app.use((req, res, next) => {
+  res.locals.critical_css = criticalCss;
+  next();
+});
 
 app.engine("handlebars", engine());
 app.set("views", __dirname + "/views");

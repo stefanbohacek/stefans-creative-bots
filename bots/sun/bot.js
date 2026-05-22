@@ -1,7 +1,11 @@
 import fs from "fs";
+import { exec } from "child_process";
+import { promisify } from "util";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import downloadFile from "./../../modules/download-file.js";
+
+const execAsync = promisify(exec);
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -34,11 +38,13 @@ const botScript = async () => {
 
       console.log(`@${botID}: downloading image from ${camera.imageURL}`);
 
-      const imgPath = `${__dirname}/../../temp/${botID}.jpg`;
+      const imgPath = `${__dirname}/../../temp/${botID}.gif`;
+      const resizedPath = `${__dirname}/../../temp/${botID}_resized.gif`;
       await downloadFile(camera.imageURL, imgPath);
+      await execAsync(`ffmpeg -y -i "${imgPath}" -vf "fps=10" -loop 0 "${resizedPath}"`);
       let status = `${camera.url}\n\n#TheSun #space #astronomy #telescope`;
 
-      const imgData = await fs.readFileSync(imgPath, {
+      const imgData = await fs.readFileSync(resizedPath, {
         encoding: "base64",
       });
 

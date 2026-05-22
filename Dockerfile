@@ -22,7 +22,7 @@ RUN apk update && apk upgrade && \
     imagemagick
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY ./package.json /usr/src/app/
+COPY ./package.json ./package-lock.json /usr/src/app/
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
 RUN npm ci --no-audit --no-fund
 COPY ./ /usr/src/app

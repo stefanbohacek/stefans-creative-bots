@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "build": "npm run build:css && npm run build:js && npm run build:critical",
+    "build": "npm run build:css && npm run build:js",
     "build:js": "rollup -c",
     "build:css": "sass src/styles/styles.scss:public/styles/main.css --style=compressed --no-source-map --quiet-deps",
     "build:critical": "node scripts/build-critical.js",

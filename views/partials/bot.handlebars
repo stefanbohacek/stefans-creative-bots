@@ -10,16 +10,16 @@
       {{/if}}
       {{#if about.header_image}}
       <img src="{{about.header_image}}"
-        alt=""
+        alt="{{about.name}} banner"
         loading="lazy">
       {{else if about.thumbnail}}
       <img src="{{about.thumbnail}}"
-        alt=""
+        alt="{{about.name}} banner"
         loading="lazy">
       {{else}}
       <img
         src="https://generative-placeholders.stefanbohacek.com/image?width=600&height=200&style=cellular-automata&cells=10&colors={{@root.generative_placeholders_color}}&{{@key}}"
-        alt=""
+        alt="{{about.name}} banner"
         loading="lazy">
       {{/if}}
       {{#if about.fediverse_url}}
@@ -47,7 +47,7 @@
         width="64"
         height="64"
         class="rounded-circle bot-avatar"
-        alt=""
+        alt="{{about.name}} avatar"
         loading="lazy">
       {{/if}}
       {{#if about.fediverse_url}}
@@ -116,6 +116,7 @@
       <li>
         <a rel="me noopener noreferrer"
           target="_blank"
+          aria-label="View source for the {{about.name}} bot"
           href="{{about.source_url}}">View source</a>
       </li>
       {{/if}}
@@ -123,6 +124,7 @@
       <li>
         <a rel="me noopener noreferrer"
           target="_blank"
+          aria-label="Learn more about the {{about.name}} bot"
           href="{{about.about_url}}">Learn more</a>
       </li>
       {{/if}}

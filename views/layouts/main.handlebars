@@ -2,7 +2,7 @@
 <html itemscope
   itemtype="//schema.org/WebPage"
   lang="en"
-  data-bs-theme="dark">
+  data-bs-theme="light">
 
 <head>
   <meta charset="utf-8" />
@@ -23,6 +23,12 @@
     content="Creative online bots 🤖🎨" />
   <meta name="twitter:description"
     content="Making creative online bots." />
+  <script>
+    const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    if (darkModeQuery.matches) {
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+    }
+  </script>
   {{#if critical_css}}<style>{{{critical_css}}}</style>{{/if}}
   <link rel="preload"
     href="styles/main.css"
@@ -55,16 +61,9 @@
     src="scripts/bundle.js"></script>
   {{{footer_scripts}}}
   <script>
-    const toggleDarkMode = (enabled) => {
-      document.documentElement.setAttribute("data-bs-theme", enabled ? "dark" : "light");
-    };
-
-    const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    if (darkModeQuery) {
-      toggleDarkMode(darkModeQuery.matches);
-      darkModeQuery.addEventListener("change", (ev) => toggleDarkMode(ev.matches));
-    }
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (ev) => {
+      document.documentElement.setAttribute("data-bs-theme", ev.matches ? "dark" : "light");
+    });
   </script>
   <a id="back-to-top"
     title="Go back all the way to the top of this page"

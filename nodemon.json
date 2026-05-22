@@ -1,0 +1,6 @@
+{
+  "watch": ["app.js", "server.js", "routes", "modules", "config", "bots"],
+  "ignore": ["src", "public", "node_modules"],
+  "ext": "js,json",
+  "legacyWatch": true
+}

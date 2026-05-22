@@ -11,7 +11,7 @@
     "build:critical": "node scripts/build-critical.js",
     "watch": "rollup -c --watch",
     "start": "node --trace-warnings server.js",
-    "dev": "concurrently \"sass --watch src/styles/styles.scss:public/styles/main.css --quiet-deps\" \"rollup -c --watch\" \"node --trace-warnings server.js\"",
+    "dev": "concurrently \"sass --watch src/styles/styles.scss:public/styles/main.css --quiet-deps\" \"rollup -c --watch\" \"nodemon --trace-warnings server.js\"",
     "test": "node test.js",
     "xxxpreinstall": "npm install canvas@2.11.2; npm install chartjs-node-canvas@4.1.6; npm install chart.js@3.9.1",
     "xxxpostinstall": "node node_modules/puppeteer/install.js; pip3 install yt-dlp==2023.7.6"
@@ -98,8 +98,9 @@
     "@rollup/plugin-terser": "^1.0.0",
     "concurrently": "^9.2.1",
     "critical": "^8.0.0",
-    "sass": "^1.0.0",
     "dayjs": "^1.11.20",
-    "rollup": "^4.60.4"
+    "nodemon": "^3.1.14",
+    "rollup": "^4.60.4",
+    "sass": "^1.0.0"
   }
 }

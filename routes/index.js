@@ -88,6 +88,19 @@ router.get("/", (req, res) => {
 
   const categories = allCategories.filter((c) => c.bots.length > 0);
 
+  const latestBots = [...activeBots]
+    .filter((b) => b.about.date_created)
+    .sort((a, b) => new Date(b.about.date_created) - new Date(a.about.date_created))
+    .slice(0, 6);
+
+  if (latestBots.length > 0) {
+    categories.unshift({
+      title: "Latest",
+      slug: "latest",
+      bots: latestBots,
+    });
+  }
+
   res.render("home", {
     project_name: process.env.PROJECT_NAME,
     bots,

@@ -1,4 +1,4 @@
-FROM node:22-alpine
+FROM node:lts-alpine
 RUN apk update && apk upgrade && \
     apk add --no-cache git nano\
     make \
@@ -24,7 +24,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY ./package.json ./package-lock.json /usr/src/app/
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
-RUN npm install --no-audit --no-fund
+RUN npm install --no-audit --no-fund --ignore-engines
 COPY ./requirements.txt /usr/src/app/
 RUN pip3 install --break-system-packages -r requirements.txt
 COPY ./ /usr/src/app

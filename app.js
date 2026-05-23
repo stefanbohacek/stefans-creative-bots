@@ -6,6 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 import express from "express";
+import compression from "compression";
 import { engine } from "express-handlebars";
 import session from "express-session";
 import bodyParser from "body-parser";
@@ -38,6 +39,7 @@ app.engine("handlebars", engine());
 app.set("views", __dirname + "/views");
 app.set("view engine", "handlebars");
 
+app.use(compression());
 app.use(bodyParser.json());
 
 app.use(function (req, res, next) {

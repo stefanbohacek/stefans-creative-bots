@@ -1,7 +1,7 @@
 import app from "../app.js";
 import { generate } from "critical";
 import { loadBotInfo } from "../modules/load-bots.js";
-import { writeFile } from "fs/promises";
+import { readFile, writeFile } from "fs/promises";
 
 const bots = loadBotInfo(app);
 app.set("bots", bots);
@@ -20,7 +20,13 @@ server.on("listening", async () => {
       width: 1300,
       height: 900,
     });
-    await writeFile("public/styles/critical.css", css.toString());
+
+    const mainCSS = await readFile("public/styles/main.css", "utf8");
+    const themeCSS = mainCSS.match(/\[data-bs-theme[^{]+\{[^}]+\}/g) ?? [];
+    await writeFile(
+      "public/styles/critical.css",
+      themeCSS.join("") + css.toString(),
+    );
     console.log("critical CSS saved to public/styles/critical.css");
   } catch (err) {
     console.error("failed to generate critical CSS:", err);

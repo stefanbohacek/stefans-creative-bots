@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html itemscope
   itemtype="//schema.org/WebPage"
-  lang="en"
-  data-bs-theme="light">
+  lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -25,9 +24,7 @@
     content="Making creative online bots." />
   <script>
     const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    if (darkModeQuery.matches) {
-      document.documentElement.setAttribute("data-bs-theme", "dark");
-    }
+    document.documentElement.setAttribute("data-bs-theme", darkModeQuery.matches ? "dark" : "light");
   </script>
   {{#if critical_css}}<style>{{{critical_css}}}</style>{{/if}}
   <link rel="preload"
@@ -65,6 +62,7 @@
       document.documentElement.setAttribute("data-bs-theme", ev.matches ? "dark" : "light");
     });
   </script>
+
   <a id="back-to-top"
     title="Go back all the way to the top of this page"
     href="#top"

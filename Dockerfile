@@ -28,7 +28,7 @@ RUN npm install --no-audit --no-fund --ignore-engines
 COPY ./requirements.txt /usr/src/app/
 RUN pip3 install --break-system-packages -r requirements.txt
 COPY ./ /usr/src/app
-RUN npm run build && npm prune --production && npm cache clean --force
+RUN npm run build && npm prune --omit=dev && npm cache clean --force
 ENV NODE_ENV production
 ENV PORT 3000
 EXPOSE 3000

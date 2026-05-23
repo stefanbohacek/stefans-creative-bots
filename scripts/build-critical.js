@@ -22,7 +22,7 @@ server.on("listening", async () => {
     });
 
     const mainCSS = await readFile("public/styles/main.css", "utf8");
-    const themeCSS = mainCSS.match(/\[data-bs-theme[^{]+\{[^}]+\}/g) ?? [];
+    const themeCSS = (mainCSS.match(/\[data-bs-theme[^{\s]+\{[^}]+\}/g) ?? []).filter(b => b.includes("--hh-"));
     await writeFile(
       "public/styles/critical.css",
       themeCSS.join("") + css.toString(),

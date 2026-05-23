@@ -1,10 +1,8 @@
 import express from "express";
-import moment from "moment";
 import { readFileSync } from "fs";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import getRandomRange from "./../modules/get-random-range.js";
-import capitalizeFirstLetter from "./../modules/capitalize-first-letter.js";
 import slugify from "./../modules/slugify.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -16,7 +14,13 @@ const categoriesConfig = JSON.parse(
 
 const router = express.Router();
 
+let htmlCache = null;
+
 router.get("/", (req, res) => {
+  if (htmlCache) {
+    return res.send(htmlCache);
+  }
+
   if (req.session && req.session.grant) {
     if (req.session.grant.response) {
       console.log("grant", req.session.grant.response);
@@ -27,9 +31,6 @@ router.get("/", (req, res) => {
   if (bots && bots.length > 0) {
     bots.forEach((bot) => {
       if (bot.about.date_created) {
-        bot.about.created_ago = capitalizeFirstLetter(
-          moment(bot.about.date_created).fromNow(),
-        );
         bot.about.created_year = new Date(bot.about.date_created).getFullYear();
       }
 
@@ -47,13 +48,9 @@ router.get("/", (req, res) => {
 
       if (bot.cronjob) {
         try {
-          bot.about.next_run = capitalizeFirstLetter(
-            moment(bot.cronjob.nextDates().ts).fromNow(),
-          );
+          bot.about.next_run = new Date(bot.cronjob.nextDates().ts).toISOString();
           if (bot.cronjob.lastExecution) {
-            bot.about.last_run = capitalizeFirstLetter(
-              moment(bot.cronjob.lastExecution).fromNow(),
-            );
+            bot.about.last_run = new Date(bot.cronjob.lastExecution).toISOString();
           }
         } catch (err) {
           console.log(err);
@@ -114,6 +111,10 @@ router.get("/", (req, res) => {
     ).toLocaleString(),
     generative_placeholders_color: getRandomRange(0, 99),
     footer_scripts: process.env.FOOTER_SCRIPTS,
+  }, (err, html) => {
+    if (err) return res.status(500).send(err.message);
+    htmlCache = html;
+    res.send(html);
   });
 });
 

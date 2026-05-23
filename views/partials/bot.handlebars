@@ -83,12 +83,12 @@
       {{/if}}
       {{#if about.next_run}}
       <li>
-        <small><strong>Next run:</strong> {{about.next_run}}</small>
+        <small><strong>Next run:</strong> <time class="relative-time" data-handle="{{about.fediverse_handle}}" data-run-type="next"></time></small>
       </li>
       {{/if}}
       {{#if about.last_run}}
       <li>
-        <small><strong>Last run:</strong> <span class="last-run">{{about.last_run}}</span></small>
+        <small><strong>Last run:</strong> <time class="relative-time" data-handle="{{about.fediverse_handle}}" data-run-type="last"></time></small>
       </li>
       {{/if}}
       {{/if}}

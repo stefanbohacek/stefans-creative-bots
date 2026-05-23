@@ -83,13 +83,11 @@
     "url": ""
   },
   "keywords": [
-    "node",
-    "glitch",
-    "gomix",
-    "hyperdev",
-    "twitter",
-    "twitterbot",
-    "bot"
+    "bots",
+    "creative-bots",
+    "fediverse",
+    "mastodon",
+    "node"
   ],
   "license": "GPL-3.0",
   "devDependencies": {

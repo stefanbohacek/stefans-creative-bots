@@ -83,7 +83,7 @@ export default async () => {
     true,
   );
 
-  const input = document.getElementById("fediverse-server-input");
+  const input = document.getElementById("fediverse-server");
 
   if (input) {
     const param = new URLSearchParams(window.location.search).get("server");

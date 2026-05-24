@@ -14,37 +14,6 @@ import getRandomInt from "./../../modules/get-random-int.js";
 const botID = "pirateflags";
 const flagUrlBase = "https://bots.stefanbohacek.com";
 
-const describeFlagImage = (filename) =>
-  filename
-    .split("/")
-    .pop()
-    .replace(".png", "")
-    .split("-")
-    .filter((part) => !/^\d+$/.test(part))
-    .join(" ");
-
-const buildFlagDescription = (flagData) => {
-  if (!flagData || !flagData.images.length) {
-    return "A randomly generated pirate flag.";
-  }
-
-  const elements = flagData.images.map(describeFlagImage);
-  const layout = flagData.layout;
-
-  if (elements.length === 1) {
-    return `A randomly generated pirate flag featuring ${elements[0]}.`;
-  }
-
-  if (layout === "rows_2" || layout === "rows_3") {
-    return `A randomly generated pirate flag featuring ${elements.join(" on top of ")}.`;
-  } else if (elements.length === 2) {
-    return `A randomly generated pirate flag featuring ${elements[0]} next to ${elements[1]}.`;
-  } else {
-    const lastElement = elements[elements.length - 1];
-    const otherElements = elements.slice(0, -1);
-    return `A randomly generated pirate flag featuring ${otherElements.join(", ")}, and ${lastElement} side by side.`;
-  }
-};
 
 const makeFlag = async (page) => {
   try {
@@ -62,6 +31,7 @@ const makeFlag = async (page) => {
       return {
         layout: grid.dataset.flagLayout,
         images: JSON.parse(grid.dataset.flagImages || "[]"),
+        description: grid.getAttribute("aria-label") || "",
       };
     });
 
@@ -106,7 +76,7 @@ const waveFlag = async (page, flagData) => {
       "Avast ye!",
     ]);
 
-    const description = buildFlagDescription(flagData);
+    const description = flagData.description || "A randomly generated pirate flag.";
 
     try {
       const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;

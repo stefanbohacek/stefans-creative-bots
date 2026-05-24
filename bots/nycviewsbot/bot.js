@@ -2,6 +2,7 @@ import webcams from "./../../data/webcams/nyc.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/random-from-array.js";
 import captureEarthcamLiveStream from "./../../modules/captureEarthcamLiveStream.js";
+import getWeather from "./../../modules/get-weather.js";
 
 process.on("unhandledRejection", (reason, p) => {
   console.error("NYCVIEWSBOT unhandledRejection:", reason);
@@ -39,8 +40,21 @@ const botScript = async (params) => {
   const image = await captureEarthcamLiveStream(webcam, botID);
 
   if (!image || !image.path) {
-    console.log("NYCVIEWSBOT: Failed to capture image");
+    console.log("NYCVIEWSBOT: failed to capture image");
     return;
+  }
+
+  let weatherText = "";
+
+  if (webcam.latitude) {
+    try {
+      const weather = await getWeather(webcam.latitude, webcam.longitude);
+      if (weather.description_full) {
+        weatherText = ` ${weather.description_full}`;
+      }
+    } catch (err) {
+      console.log("NYCVIEWSBOT: failed to fetch weather:", err);
+    }
   }
 
   const archiveLabel = image.isArchive ? " (archived footage)" : "";
@@ -49,7 +63,7 @@ const botScript = async (params) => {
   mastodon.postImage({
     status,
     image: image.path,
-    alt_text: webcam.description,
+    alt_text: `${webcam.description}${weatherText}`,
   });
 };
 

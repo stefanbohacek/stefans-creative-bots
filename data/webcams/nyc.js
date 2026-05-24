@@ -49,6 +49,16 @@ export default [
     longitude: -73.984874,
   },
   {
+    title: "Times Square (South)",
+    id: "times_square_south",
+    description:
+      "This webcam usually shows a high-angle view looking down Times Square, with tall buildings and billboard screens on both sides and the street below.",
+    link: "https://www.earthcam.com/usa/newyork/timessquare/?cam=tstwo_hd2",
+    url: "https://www.earthcam.com/cams/includes/image.php?logo=0&playbutton=0&s=1&img=E5a4Ac%2F%2Fll%2Fw6pvn9FVQug%3D%3D",
+    latitude: 40.758616,
+    longitude: -73.984874,
+  },
+  {
     title: "Statue of Liberty",
     description:
       "This webcam usually shows a view of the Statue of Liberty in New York.",

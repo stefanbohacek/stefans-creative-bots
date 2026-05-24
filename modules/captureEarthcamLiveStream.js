@@ -29,7 +29,7 @@ export default async (webcam, botID) => {
   };
 
   const browser = await puppeteer.connect({
-    browserWSEndpoint: `${process.env.BROWSERLESS_URL}&blockAds=true&stealth=true`,
+    browserWSEndpoint: `${process.env.BROWSERLESS_URL}&blockAds=true`,
   });
 
   try {
@@ -135,7 +135,8 @@ export default async (webcam, botID) => {
       }
     }
 
-    return capturedPath;
+    const isArchive = hlsUrl ? hlsUrl.includes("video2archives.earthcam.com") : false;
+    return { path: capturedPath, isArchive };
   } catch (err) {
     console.log(`captureEarthcamLiveStream error:`, err);
     return null;

@@ -16,7 +16,7 @@ dotenv.config();
 // import bot from "./bots/iss/bot.js";
 // import bot from "./bots/wikipediatopedits/bot.js";
 // import bot from "./bots/xed-your-last-y/bot.js";
-import bot from "./bots/wikipediaOTD/bot.js";
+import bot from "./bots/nycviewsbot/bot.js";
 
 try {
   bot();

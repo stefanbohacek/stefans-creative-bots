@@ -1,22 +1,18 @@
 import webcams from "./../../data/webcams/nyc.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-
-import downloadFile from "./../../modules/download-file.js";
 import randomFromArray from "./../../modules/random-from-array.js";
-import captureVideoFrame from "./../../modules/captureVideoFrame.js";
-import getWeather from "./../../modules/get-weather.js";
+import captureEarthcamLiveStream from "./../../modules/captureEarthcamLiveStream.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+process.on("unhandledRejection", (reason, p) => {
+  console.error("NYCVIEWSBOT unhandledRejection:", reason);
+});
 
 const botID = "nycviewsbot";
 
 const botScript = async (params) => {
   const mastodon = new mastodonClient({
     access_token: process.env.NYCVIEWSBOT_MASTODON_ACCESS_TOKEN,
+    // access_token: process.env.MASTODON_TEST_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });
 
@@ -35,41 +31,25 @@ const botScript = async (params) => {
     webcam = randomFromArray(webcams);
   }
 
-  let webcamUrl;
+  const webcamUrl = webcam.windy_id
+    ? `📷 https://www.windy.com/-Webcams/webcams/${webcam.windy_id}`
+    : `📷 ${webcam.link}`;
 
-  if (webcam.windy_id) {
-    webcamUrl = `📷 https://www.windy.com/-Webcams/webcams/${webcam.windy_id}`;
-  } else {
-    webcamUrl = `📷 ${webcam.link}`;
+  const image = await captureEarthcamLiveStream(webcam, botID);
+
+  if (!image || !image.path) {
+    console.log("NYCVIEWSBOT: Failed to capture image");
+    return;
   }
 
-  const filePath = `${__dirname}/../../temp/${botID}.jpg`;
-
-  try {
-    if (webcam.isVideo) {
-      await captureVideoFrame(webcam.link, "video", filePath);
-    } else {
-      await downloadFile(webcam.url, filePath);
-    }
-  } catch (error) {
-    console.log("NYCVIEWSBOT CAPTURE ERROR:", error);
-  }
-
-  const mapURL = `🗺️ https://www.openstreetmap.org/?mlat=${webcam.latitude}&mlon=${webcam.longitude}#map=12/${webcam.latitude}/${webcam.longitude}`;
-  const weather = await getWeather(webcam.latitude, webcam.longitude);
-  const status = `${webcam.title}\n\n${webcamUrl}\n${mapURL}\n\n#nyc #webcam #city`;
-  let description = webcam.description;
-
-  if (weather && weather.description_full) {
-    description += ` ${weather.description_full}`;
-  }
+  const archiveLabel = image.isArchive ? " (archived footage)" : "";
+  const status = `${webcam.title}${archiveLabel}\n\n${webcamUrl}\n\n#NYC #NewYorkCity #webcam`;
 
   mastodon.postImage({
     status,
-    image: filePath,
-    alt_text: description,
+    image: image.path,
+    alt_text: webcam.description,
   });
-  return true;
 };
 
 export default botScript;

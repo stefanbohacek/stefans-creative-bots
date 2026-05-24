@@ -32,17 +32,17 @@ const buildFlagDescription = (flagData) => {
   const layout = flagData.layout;
 
   if (elements.length === 1) {
-    return `A randomly generated pirate flag featuring a ${elements[0]}.`;
+    return `A randomly generated pirate flag featuring ${elements[0]}.`;
   }
 
   if (layout === "rows_2" || layout === "rows_3") {
-    return `A randomly generated pirate flag featuring ${elements.map((e) => `a ${e}`).join(" on top of ")}.`;
+    return `A randomly generated pirate flag featuring ${elements.join(" on top of ")}.`;
   } else if (elements.length === 2) {
-    return `A randomly generated pirate flag featuring a ${elements[0]} next to a ${elements[1]}.`;
+    return `A randomly generated pirate flag featuring ${elements[0]} next to ${elements[1]}.`;
   } else {
     const lastElement = elements[elements.length - 1];
     const otherElements = elements.slice(0, -1);
-    return `A randomly generated pirate flag featuring ${otherElements.map((e) => `a ${e}`).join(", ")}, and a ${lastElement} side by side.`;
+    return `A randomly generated pirate flag featuring ${otherElements.join(", ")}, and ${lastElement} side by side.`;
   }
 };
 

@@ -26,7 +26,7 @@ const botScript = async () => {
 
       process.on("unhandledRejection", (reason, p) => {
         console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-        browser.close();
+        browser.disconnect();
       });
 
       const page = await browser.newPage();
@@ -136,7 +136,7 @@ const botScript = async () => {
         });
       }
 
-      await browser.close();
+      await browser.disconnect();
     } catch (error) {
       console.log("telescope:error", error);
     }

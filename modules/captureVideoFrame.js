@@ -107,6 +107,6 @@ export default async (webcamUrl, webcamSelector, outputPath) => {
   } catch (err) {
     console.log("nYC VIEWS BOT ERROR:", err);
   } finally {
-    await browser.close();
+    await browser.disconnect();
   }
 };

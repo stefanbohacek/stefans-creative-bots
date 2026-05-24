@@ -46,7 +46,7 @@ const botScript = async () => {
             "reason:",
             reason
           );
-          browser.close();
+          browser.disconnect();
         });
 
         const page = await browser.newPage();
@@ -83,7 +83,7 @@ const botScript = async () => {
             station
           );
         }
-        await browser.close();
+        await browser.disconnect();
       }
 
       if (imageURL) {

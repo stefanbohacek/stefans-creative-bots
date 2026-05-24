@@ -147,6 +147,6 @@ export default async (url, filename) => {
   });
 
   console.log(`GIF saved to ${gifPath} (${fs.statSync(gifPath).size} bytes)`);
-  await browser.close();
+  await browser.disconnect();
   return gifPath;
 };

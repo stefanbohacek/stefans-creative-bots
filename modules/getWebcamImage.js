@@ -24,7 +24,7 @@ export default async (botID, webcam) => {
             "reason:",
             reason
           );
-          browser.close();
+          browser.disconnect();
         });
 
         const page = await browser.newPage();
@@ -56,7 +56,7 @@ export default async (botID, webcam) => {
           console.log(`@${botID} error: image element not found`, webcam);
         }
       } finally {
-        await browser.close();
+        await browser.disconnect();
       }
     } else {
       return false;

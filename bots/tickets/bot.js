@@ -107,7 +107,7 @@ const botScript = async () => {
 
     process.on("unhandledRejection", (reason, p) => {
       console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-      browser.close();
+      browser.disconnect();
     });
 
     const page = await browser.newPage();
@@ -137,7 +137,7 @@ const botScript = async () => {
       alt_text: `Picture of a public transportation ticket from attached website, usually for a train or bus.`,
     });
 
-    await browser.close();
+    await browser.disconnect();
   })();
 };
 

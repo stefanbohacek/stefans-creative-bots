@@ -46,7 +46,7 @@ const botScript = async () => {
               "reason:",
               reason
             );
-            browser.close();
+            browser.disconnect();
           });
 
           page.setUserAgent(
@@ -161,7 +161,7 @@ const botScript = async () => {
           } catch (err) {
             console.log(`Error: ${err.message}`);
           } finally {
-            await browser.close();
+            await browser.disconnect();
           }
 
           // console.log(description);

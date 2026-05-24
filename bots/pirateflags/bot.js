@@ -151,7 +151,7 @@ const botScript = async () => {
 
       process.on("unhandledRejection", (reason, p) => {
         console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-        browser.close();
+        browser.disconnect();
       });
 
       page.setUserAgent(
@@ -162,7 +162,7 @@ const botScript = async () => {
 
       const flagData = await makeFlag(page);
       await waveFlag(page, flagData);
-      await browser.close();
+      await browser.disconnect();
     } catch (err) {
       console.log(`@pirateflags botScript error:`, err);
     }

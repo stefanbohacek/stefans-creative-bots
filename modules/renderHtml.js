@@ -33,6 +33,6 @@ export default async ({
   const element = (await page.$(selector)) ?? (await page.$("body"));
   const imageBuffer = await element.screenshot({ type: "png" });
 
-  await browser.close();
+  await browser.disconnect();
   return imageBuffer;
 };

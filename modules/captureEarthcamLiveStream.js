@@ -141,6 +141,6 @@ export default async (webcam, botID) => {
     console.log(`captureEarthcamLiveStream error:`, err);
     return null;
   } finally {
-    await browser.close();
+    await browser.disconnect();
   }
 };

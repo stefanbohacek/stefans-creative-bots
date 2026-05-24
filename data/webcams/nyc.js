@@ -11,6 +11,7 @@ export default [
   },
   {
     title: "Statue of Liberty TorchCam",
+    id: "statue_of_liberty_torchcam",
     description:
       "This webcam usually shows a view from the top of the Statue of Liberty, facing downwards.",
     link: "https://www.earthcam.com/usa/newyork/statueofliberty/?cam=liberty_crown",
@@ -60,6 +61,7 @@ export default [
   },
   {
     title: "Statue of Liberty",
+    id: "statue_of_liberty",
     description:
       "This webcam usually shows a view of the Statue of Liberty in New York.",
     link: "https://www.earthcam.com/usa/newyork/statueofliberty/?cam=liberty_str",
@@ -69,6 +71,7 @@ export default [
   },
   {
     title: "Statue of Liberty HarborCam",
+    id: "statue_of_liberty_harborcam",
     description:
       "This webcam usually shows a distant view of Lower Manhattan from the Ellis Island.",
     link: "https://www.earthcam.com/usa/nationalparkservice/virtualpark/?cam=liberty_hd",

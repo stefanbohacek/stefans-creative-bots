@@ -17,8 +17,9 @@ const botScript = async (params) => {
   });
 
   let webcam;
-  const webcamId = params?.webcam;
   // const webcamId = "times_square";
+  // const webcamId = "statue_of_liberty_harborcam";
+  const webcamId = params?.webcam;
 
   if (webcamId) {
     const findWebcam = webcams.filter((webcam) => webcam.id === webcamId);

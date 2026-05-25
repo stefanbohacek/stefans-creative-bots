@@ -1,7 +1,18 @@
 import express from "express";
 const router = express.Router();
 
+const CACHE_TTL = 60000;
+let statusCache = null;
+let statusCacheTime = 0;
+
 router.get("/", (req, res) => {
+  const now = Date.now();
+  const botsScheduled = req.app.get("bots_scheduled");
+
+  if (botsScheduled && statusCache && now - statusCacheTime < CACHE_TTL) {
+    return res.json(statusCache);
+  }
+
   const bots = req.app.get("bots");
   const statuses = {};
 
@@ -17,6 +28,11 @@ router.get("/", (req, res) => {
       statuses[bot.about.fediverse_handle] = status;
     }
   });
+
+  if (botsScheduled) {
+    statusCache = statuses;
+    statusCacheTime = now;
+  }
 
   res.json(statuses);
 });

@@ -4,6 +4,7 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 import scheduleBot from "./scheduleBot.js";
 import getFediverseAccountInfo from "./getFediverseAccountInfo.js";
+import capitalizeFirstLetter from "./capitalizeFirstLetter.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -48,6 +49,12 @@ export const loadBotInfo = (app) => {
           botInfo.about.source_url = `https://github.com/stefanbohacek/stefans-creative-bots/tree/master/bots/${bot}/bot.js`;
         }
 
+        if (about.interval) {
+          about.interval_human = capitalizeFirstLetter(
+            about.interval.replace(/_/g, " ")
+          );
+        }
+
         if (!about.hide) {
           bots.push(botInfo);
         }
@@ -75,5 +82,6 @@ export const scheduleBots = async (bots, app) => {
     }
   }
 
+  app.set("bots_scheduled", true);
   console.log(`🤖 scheduled ${botCount.toLocaleString()} bot(s)`);
 };

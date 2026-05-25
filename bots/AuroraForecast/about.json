@@ -1,0 +1,22 @@
+{
+  "active": true,
+  "name": "Aurora Forecasts",
+  "description": "Prediction of the intensity and location of the aurora borealis and australis.",
+  "tags": [
+    "aurora",
+    "forecast",
+    "space"
+  ],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@AuroraForecast"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS",
+  "fediverse_handle": "@AuroraForecast@stefanbohacek.online",
+  "date_created": "2026-05-25T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/635/422/943/455/097/original/601d143bedf3c5b0.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/635/422/943/455/097/original/e05ca51ec7fce4bb.png",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/635/422/943/455/097/original/601d143bedf3c5b0.png"
+}

@@ -22,6 +22,7 @@
     "description": "",
     "collection_url": null,
     "bots": [
+      "@AuroraForecast",
       "@iss", 
       "@telescope", 
       "@galaxy", 

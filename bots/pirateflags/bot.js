@@ -1,4 +1,4 @@
-// PIRATEFLAGS
+﻿// PIRATEFLAGS
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -8,8 +8,8 @@ const __dirname = dirname(__filename);
 
 import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
-import getRandomInt from "./../../modules/get-random-int.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
+import getRandomInt from "./../../modules/getRandomInt.js";
 
 const botID = "pirateflags";
 const flagUrlBase = "https://bots.stefanbohacek.com";

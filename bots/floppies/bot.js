@@ -1,7 +1,7 @@
-import floppies from "./../../data/floppies.js";
+﻿import floppies from "./../../data/floppies.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
-import downloadFile from "./../../modules/download-file.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
+import downloadFile from "./../../modules/downloadFile.js";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 

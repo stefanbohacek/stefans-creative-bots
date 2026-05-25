@@ -1,4 +1,4 @@
-/*
+﻿/*
   Based on https://codepen.io/ruigewaard/pen/JHDdF
 */
 
@@ -6,9 +6,9 @@ import Canvas from 'canvas';
 import GIFEncoder from 'gifencoder';
 import concat from 'concat-stream';
 
-import randomFromArray from  '../random-from-array.js';
-import getRandomInt from  '../get-random-int.js';
-import shadeColor from  '../shade-color.js';
+import randomFromArray from  '../randomFromArray.js';
+import getRandomInt from  '../getRandomInt.js';
+import shadeColor from  '../shadeColor.js';
 
 export default (options, cb) => {
   console.log('making art...');

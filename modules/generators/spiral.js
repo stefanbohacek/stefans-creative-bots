@@ -1,10 +1,10 @@
-/*  http://jsfiddle.net/X2gp3/ */
+﻿/*  http://jsfiddle.net/X2gp3/ */
 
 import Canvas from 'canvas';
 import { Image } from 'canvas';
 import GIFEncoder from 'gifencoder';
 import concat from 'concat-stream';
-import getRandomRange from  '../get-random-range.js';
+import getRandomRange from  '../getRandomRange.js';
 
 export default (options, cb) => {
   /* http://jsfiddle.net/X2gp3/ */

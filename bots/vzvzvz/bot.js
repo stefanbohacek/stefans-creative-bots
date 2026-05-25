@@ -1,10 +1,10 @@
-import fs from "fs";
+﻿import fs from "fs";
 import he from "he";
 import onomatopoeias from "./../../data/onomatopoeias.js";
 import languages from "./../../data/languages.js";
 import overlayGenerator from "./../../modules/generators/overlay.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 import { parse } from "csv-parse";
 
 const botScript = async () => {

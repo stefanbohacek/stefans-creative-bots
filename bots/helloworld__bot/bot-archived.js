@@ -1,8 +1,8 @@
-import fs from "fs";
+﻿import fs from "fs";
 import he from "he";
 import overlayGenerator from "./../../modules/generators/overlay.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);

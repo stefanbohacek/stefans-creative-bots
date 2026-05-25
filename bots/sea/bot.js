@@ -1,11 +1,11 @@
-import fetch from "node-fetch";
+﻿import fetch from "node-fetch";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
-import downloadFile from "./../../modules/download-file.js";
-import getWeather from "./../../modules/get-weather.js";
-import getImageLuminosity from "./../../modules/get-image-luminosity.js";
-import randomFromArray from "./../../modules/random-from-array.js";
-import runCommand from "./../../modules/run-command.js";
+import downloadFile from "./../../modules/downloadFile.js";
+import getWeather from "./../../modules/getWeather.js";
+import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
+import runCommand from "./../../modules/runCommand.js";
 import sleep from "./../../modules/sleep.js";
 
 import { dirname } from "path";

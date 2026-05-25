@@ -1,11 +1,11 @@
-import { dirname } from 'path';
+﻿import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from './../../modules/download-file.js';
+import downloadFile from './../../modules/downloadFile.js';
 
 
 const botScript = async () => {

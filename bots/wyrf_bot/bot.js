@@ -1,6 +1,6 @@
-import pluralize from "pluralize";
+﻿import pluralize from "pluralize";
 import animals from "./../../data/animals.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
 const botScript = async () => {

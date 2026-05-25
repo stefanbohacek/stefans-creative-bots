@@ -1,7 +1,7 @@
-import mastodonClient from "./../../modules/mastodon/index.js";
+﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import fetch from "node-fetch";
 import pluralize from "pluralize";
-import oxfordComma from "./../../modules/oxford-comma.js";
+import oxfordComma from "./../../modules/oxfordComma.js";
 
 // Made with Nameday API
 // https://nameday.abalin.net/

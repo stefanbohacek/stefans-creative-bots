@@ -1,4 +1,4 @@
-import { dirname } from "path";
+﻿import { dirname } from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -7,8 +7,8 @@ const __dirname = dirname(__filename);
 import fs from "fs";
 import capitals from "./../../data/capitals.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
-import downloadFile from "./../../modules/download-file.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
+import downloadFile from "./../../modules/downloadFile.js";
 
 const botID = "whatcapital";
 const savedDataPath = __dirname + "/../../temp/what_capital.json";

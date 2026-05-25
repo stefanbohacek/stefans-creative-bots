@@ -1,8 +1,8 @@
-import { CronJob } from "cron";
+﻿import { CronJob } from "cron";
 import { convert } from "html-to-text";
 import moment from "moment";
-import cronSchedules from "./cron-schedules.js";
-import capitalizeFirstLetter from "./capitalize-first-letter.js";
+import cronSchedules from "./cronSchedules.js";
+import capitalizeFirstLetter from "./capitalizeFirstLetter.js";
 
 export default async (bot, app) => {
   try {

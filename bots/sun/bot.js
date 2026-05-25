@@ -1,9 +1,9 @@
-import fs from "fs";
+﻿import fs from "fs";
 import { exec } from "child_process";
 import { promisify } from "util";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
-import downloadFile from "./../../modules/download-file.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
+import downloadFile from "./../../modules/downloadFile.js";
 
 const execAsync = promisify(exec);
 

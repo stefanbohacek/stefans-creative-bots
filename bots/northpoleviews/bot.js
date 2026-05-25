@@ -1,10 +1,10 @@
-import puppeteer from "puppeteer";
+﻿import puppeteer from "puppeteer";
 import stations from "./../../data/webcams/north-pole-stations.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/download-file.js";
-import randomFromArray from "./../../modules/random-from-array.js";
-import getImageLuminosity from "./../../modules/get-image-luminosity.js";
-import getWeather from "./../../modules/get-weather.js";
+import downloadFile from "./../../modules/downloadFile.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
+import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import getWeather from "./../../modules/getWeather.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";

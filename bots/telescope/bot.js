@@ -1,7 +1,7 @@
-import fs from "fs";
+﻿import fs from "fs";
 import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";

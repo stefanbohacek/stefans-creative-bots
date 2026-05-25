@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
-import fahrenheitToCelsius from './fahrenheit-to-celsius.js';
+﻿import fetch from 'node-fetch';
+import fahrenheitToCelsius from './fahrenheitToCelsius.js';
 
 export default async (lat, long, locationName) => {
     console.log('looking up weather...', {lat, long, locationName});

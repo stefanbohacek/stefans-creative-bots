@@ -1,6 +1,6 @@
-import ColorThief from "colorthief";
-import rgbToHex from "./rgb-to-hex.js";
-import getLuminosity from "./get-luminosity.js";
+﻿import ColorThief from "colorthief";
+import rgbToHex from "./rgbToHex.js";
+import getLuminosity from "./getLuminosity.js";
 
 export default async (imagePath) => {
     let luminosity = 0;

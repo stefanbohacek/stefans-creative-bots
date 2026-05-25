@@ -1,4 +1,4 @@
-import { dirname } from "path";
+﻿import { dirname } from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -9,8 +9,8 @@ import path from "path";
 import Canvas from "canvas";
 import GIFEncoder from "gifencoder";
 
-import getFilenameFromURL from "./../get-filename-from-url.js";
-import downloadFile from "./../download-file.js";
+import getFilenameFromURL from "./../getFilenameFromUrl.js";
+import downloadFile from "./../downloadFile.js";
 
 export default (overlays, options, cb) => {
   console.log("overlaying images...");

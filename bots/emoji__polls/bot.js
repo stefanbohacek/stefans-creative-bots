@@ -1,5 +1,5 @@
-import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+﻿import mastodonClient from "./../../modules/mastodon/index.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 import emoji from "./../../data/emoji.js";
 
 const botScript = async () => {

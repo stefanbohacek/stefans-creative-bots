@@ -1,4 +1,4 @@
-import { dirname } from "path";
+﻿import { dirname } from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -7,10 +7,10 @@ const __dirname = dirname(__filename);
 import webcams from "./../../data/webcams/skies.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
-import getWeather from "./../../modules/get-weather.js";
-import getImageLuminosity from "./../../modules/get-image-luminosity.js";
-import downloadFile from "./../../modules/download-file.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import getWeather from "./../../modules/getWeather.js";
+import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import downloadFile from "./../../modules/downloadFile.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 
 const botID = "skies";
 

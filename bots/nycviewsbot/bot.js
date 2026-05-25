@@ -1,8 +1,8 @@
-import webcams from "./../../data/webcams/nyc.js";
+﻿import webcams from "./../../data/webcams/nyc.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 import captureEarthcamLiveStream from "./../../modules/captureEarthcamLiveStream.js";
-import getWeather from "./../../modules/get-weather.js";
+import getWeather from "./../../modules/getWeather.js";
 
 process.on("unhandledRejection", (reason, p) => {
   console.error("NYCVIEWSBOT unhandledRejection:", reason);

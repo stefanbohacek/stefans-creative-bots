@@ -1,8 +1,8 @@
-import fetch from "node-fetch";
+﻿import fetch from "node-fetch";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import progressbar from "./../../modules/generators/progressbar.js";
-import dayOfYear from "./../../modules/day-of-year.js";
-import isLeapYear from "./../../modules/is-leap-year.js";
+import dayOfYear from "./../../modules/dayOfYear.js";
+import isLeapYear from "./../../modules/isLeapYear.js";
 
 const botScript = async () => {
   await (async () => {

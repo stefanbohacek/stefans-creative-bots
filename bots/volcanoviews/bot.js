@@ -1,9 +1,9 @@
-import webcams from "./../../data/webcams/volcanoes.js";
+﻿import webcams from "./../../data/webcams/volcanoes.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/download-file.js";
-import randomFromArray from "./../../modules/random-from-array.js";
-import getWeather from "./../../modules/get-weather.js";
-import getImageLuminosity from "./../../modules/get-image-luminosity.js";
+import downloadFile from "./../../modules/downloadFile.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
+import getWeather from "./../../modules/getWeather.js";
+import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";

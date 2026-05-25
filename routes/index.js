@@ -1,8 +1,8 @@
-import express from "express";
+﻿import express from "express";
 import { readFileSync } from "fs";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import getRandomRange from "./../modules/get-random-range.js";
+import getRandomRange from "./../modules/getRandomRange.js";
 import slugify from "./../modules/slugify.js";
 
 const __filename = fileURLToPath(import.meta.url);

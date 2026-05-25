@@ -1,9 +1,9 @@
-import stations from "./../../data/webcams/south-pole-stations.js";
+﻿import stations from "./../../data/webcams/south-pole-stations.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 import getWebcamImage from "./../../modules/getWebcamImage.js";
-import getImageLuminosity from "./../../modules/get-image-luminosity.js";
-import getWeather from "./../../modules/get-weather.js";
+import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import getWeather from "./../../modules/getWeather.js";
 
 const botID = "southpoleviews";
 const hashtags = "#SouthPole #antarctica #view #webcam";

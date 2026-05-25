@@ -1,5 +1,5 @@
-import mastodonClient from "./../../modules/mastodon/index.js";
-import isPrime from "./../../modules/is-prime.js";
+﻿import mastodonClient from "./../../modules/mastodon/index.js";
+import isPrime from "./../../modules/isPrime.js";
 
 const botScript = async () => {
   const timestamp = Date.now();

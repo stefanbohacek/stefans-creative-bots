@@ -1,6 +1,6 @@
-import getRandomHex from "./../../modules/get-random-hex.js";
-import shadeColor from "./../../modules/shade-color.js";
-import invertColor from "./../../modules/invert-color.js";
+﻿import getRandomHex from "./../../modules/getRandomHex.js";
+import shadeColor from "./../../modules/shadeColor.js";
+import invertColor from "./../../modules/invertColor.js";
 
 import spiralGenerator from "./../../modules/generators/spiral.js";
 import mastodonClient from "./../../modules/mastodon/index.js";

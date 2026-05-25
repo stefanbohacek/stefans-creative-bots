@@ -1,9 +1,9 @@
-import mastodonClient from "./../../modules/mastodon/index.js";
+﻿import mastodonClient from "./../../modules/mastodon/index.js";
 
 import webcams from "./../../data/webcams/aerial-views.js";
-import extractVideoLive from "./../../modules/extract-video-live.js";
-import extractVideo from "./../../modules/extract-video.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import extractVideoLive from "./../../modules/extractVideoLive.js";
+import extractVideo from "./../../modules/extractVideo.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';

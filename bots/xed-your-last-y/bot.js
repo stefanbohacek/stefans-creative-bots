@@ -1,8 +1,8 @@
-import { readFileSync } from "fs";
+﻿import { readFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 

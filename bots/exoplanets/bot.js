@@ -1,8 +1,8 @@
-import puppeteer from "puppeteer";
+﻿import puppeteer from "puppeteer";
 import csv from "csvtojson";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import getImageLuminosity from "./../../modules/get-image-luminosity.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";

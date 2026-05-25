@@ -1,4 +1,4 @@
-/*
+﻿/*
   Based on https://www.cssscript.com/basic-snowflakes-falling-effect-javascript-canvas-snow-js/
 */
 
@@ -6,9 +6,9 @@ import Canvas from "canvas";
 import GIFEncoder from "gifencoder";
 import concat from "concat-stream";
 
-import randomFromArray from "../random-from-array.js";
-import getRandomInt from "../get-random-int.js";
-import getRandomRange from "../get-random-range.js";
+import randomFromArray from "../randomFromArray.js";
+import getRandomInt from "../getRandomInt.js";
+import getRandomRange from "../getRandomRange.js";
 
 export default (options, cb) => {
   console.log("making it snow...");

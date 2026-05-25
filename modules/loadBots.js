@@ -1,8 +1,8 @@
-import fs from "fs";
+﻿import fs from "fs";
 import { readFileSync } from "fs";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import scheduleBot from "./schedule-bot.js";
+import scheduleBot from "./scheduleBot.js";
 import getFediverseAccountInfo from "./getFediverseAccountInfo.js";
 
 const __filename = fileURLToPath(import.meta.url);

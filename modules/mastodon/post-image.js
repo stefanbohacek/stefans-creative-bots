@@ -1,5 +1,5 @@
-import fs from "fs";
-import getRandomInt from "../get-random-int.js";
+﻿import fs from "fs";
+import getRandomInt from "../getRandomInt.js";
 import truncate from "../truncate.js";
 
 import { dirname } from "path";

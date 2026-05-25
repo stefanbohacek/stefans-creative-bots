@@ -1,11 +1,11 @@
-/*
+﻿/*
   Based on https://codepen.io/motorlatitude/pen/nmqBeQ
 */
 
 import Canvas from 'canvas';
-import randomFromArray from  '../random-from-array.js';
-import getRandomInt from  '../get-random-int.js';
-import shadeColor from  '../shade-color.js';
+import randomFromArray from  '../randomFromArray.js';
+import getRandomInt from  '../getRandomInt.js';
+import shadeColor from  '../shadeColor.js';
 
 class Progressbar {
   constructor(canvas, options) {

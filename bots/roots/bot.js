@@ -1,8 +1,8 @@
-import mastodonClient from "./../../modules/mastodon/index.js";
+﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import UnitConverter from "./../../modules/UnitConverter.js";
-import getRandomInt from "./../../modules/get-random-int.js";
-import randomFromArray from "./../../modules/random-from-array.js";
-import downloadFile from "./../../modules/download-file.js";
+import getRandomInt from "./../../modules/getRandomInt.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
+import downloadFile from "./../../modules/downloadFile.js";
 import { getWikipediaPage } from "./../../modules/wikipedia.js";
 
 import { dirname } from "path";

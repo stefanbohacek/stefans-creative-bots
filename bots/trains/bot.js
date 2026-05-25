@@ -1,10 +1,10 @@
-import fs from "fs";
+﻿import fs from "fs";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import webcams from "./../../data/webcams/trains.js";
-import extractVideoLive from "./../../modules/extract-video-live.js";
-import downloadFile from "./../../modules/download-file.js";
-import getRandomInt from "./../../modules/get-random-int.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import extractVideoLive from "./../../modules/extractVideoLive.js";
+import downloadFile from "./../../modules/downloadFile.js";
+import getRandomInt from "./../../modules/getRandomInt.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";

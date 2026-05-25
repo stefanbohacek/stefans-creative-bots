@@ -1,5 +1,5 @@
-import { CronJob } from "cron";
-import cronSchedules from "./cron-schedules.js";
+﻿import { CronJob } from "cron";
+import cronSchedules from "./cronSchedules.js";
 
 export default () => {
   console.log("setting up cron jobs...");

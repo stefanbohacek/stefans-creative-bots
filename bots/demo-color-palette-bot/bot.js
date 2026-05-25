@@ -1,6 +1,6 @@
-import Canvas from "canvas";
+﻿import Canvas from "canvas";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import getRandomHex from "./../../modules/get-random-hex.js";
+import getRandomHex from "./../../modules/getRandomHex.js";
 
 const botScript = async () => {
   const mastodon = new mastodonClient({

@@ -1,6 +1,6 @@
-import mastodonClient from "./../../modules/mastodon/index.js";
-import extractVideoLive from "./../../modules/extract-video-live.js";
-import extractVideo from "./../../modules/extract-video.js";
+﻿import mastodonClient from "./../../modules/mastodon/index.js";
+import extractVideoLive from "./../../modules/extractVideoLive.js";
+import extractVideo from "./../../modules/extractVideo.js";
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 

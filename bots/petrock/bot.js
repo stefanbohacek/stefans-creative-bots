@@ -1,5 +1,5 @@
-import fs from "fs";
-import randomFromArray from "./../../modules/random-from-array.js";
+﻿import fs from "fs";
+import randomFromArray from "./../../modules/randomFromArray.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
 const instructions = fs

@@ -1,4 +1,4 @@
-import splitText from "./../split-text.js";
+﻿import splitText from "./../splitText.js";
 
 const post = async (client, options, cb) => {
   console.log("posting...", options);

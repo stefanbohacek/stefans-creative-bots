@@ -1,8 +1,8 @@
-import fetch from "node-fetch";
+﻿import fetch from "node-fetch";
 import wtf from "wtf_wikipedia";
 import { parse } from "node-html-parser";
 import he from "he";
-import randomFromArray from "./random-from-array.js";
+import randomFromArray from "./randomFromArray.js";
 import sleep from "./sleep.js";
 
 const WIKIPEDIA_API_URL = "https://en.wikipedia.org/w/api.php";

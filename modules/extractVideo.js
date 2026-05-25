@@ -1,6 +1,6 @@
-import { exec } from "node:child_process";
+﻿import { exec } from "node:child_process";
 import util from "node:util";
-import getRandomInt from "./get-random-int.js";
+import getRandomInt from "./getRandomInt.js";
 import TimeFormat from "hh-mm-ss";
 import { dirname } from "path";
 import { fileURLToPath } from "url";

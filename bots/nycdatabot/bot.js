@@ -1,9 +1,9 @@
-import fetch from 'node-fetch';
+﻿import fetch from 'node-fetch';
 import usZips from "us-zips";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/download-file.js";
-import randomFromArray from "./../../modules/random-from-array.js";
-import getRandomInt from "./../../modules/get-random-int.js";
+import downloadFile from "./../../modules/downloadFile.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
+import getRandomInt from "./../../modules/getRandomInt.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -107,15 +107,6 @@ const getLongLat = (datapoint) => {
 };
 
 const makeMap = async (datasetName, datasetPermalink, data, cb) => {
-  /*
-    https://docs.mapbox.com/help/glossary/static-images-api/
-    https://docs.mapbox.com/playground/static/
-    https://docs.mapbox.com/api/maps/static-images/#example-request-retrieve-a-static-map-with-a-marker-overlay
-
-    https://api.mapbox.com/styles/v1/mapbox/light-v10/static/pin-s+555555(-73.915888033,40.84586773),pin-s+555555(-74.077149232,40.627060894)/auto/1200x500?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tlMjN2ZjljMDVsOTJ6cDgxNGgweTJ5ZiJ9.mJ0-aoLZIVU2bqjH3j9kKQ
-
-  */
-
   console.log("making a map...");
   let locationData = [],
     markers = [];

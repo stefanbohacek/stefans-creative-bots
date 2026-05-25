@@ -1,4 +1,4 @@
-import fs from "fs";
+﻿import fs from "fs";
 import path from "path";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -8,9 +8,9 @@ import { exec } from "node:child_process";
 import getMP3Duration from "get-mp3-duration";
 import a from "indefinite";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import getRandomInt from "./../../modules/get-random-int.js";
-import getRandomRange from "./../../modules/get-random-range.js";
-import randomFromArray from "./../../modules/random-from-array.js";
+import getRandomInt from "./../../modules/getRandomInt.js";
+import getRandomRange from "./../../modules/getRandomRange.js";
+import randomFromArray from "./../../modules/randomFromArray.js";
 import util from "util";
 
 const __filename = fileURLToPath(import.meta.url);

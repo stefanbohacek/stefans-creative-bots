@@ -1,6 +1,6 @@
-import app from "../app.js";
+﻿import app from "../app.js";
 import { generate } from "critical";
-import { loadBotInfo } from "../modules/load-bots.js";
+import { loadBotInfo } from "../modules/loadBots.js";
 import { readFile, writeFile } from "fs/promises";
 
 const bots = loadBotInfo(app);

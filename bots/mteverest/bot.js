@@ -1,7 +1,7 @@
-import puppeteer from "puppeteer";
+﻿import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/download-file.js";
-// import getWeather from "./../../modules/get-weather.js";
+import downloadFile from "./../../modules/downloadFile.js";
+// import getWeather from "./../../modules/getWeather.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";

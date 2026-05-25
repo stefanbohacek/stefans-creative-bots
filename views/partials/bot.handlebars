@@ -83,10 +83,10 @@
       {{/if}}
       {{#if about.interval}}
       <li class="d-none">
-        <small><strong>Next run:</strong> <time data-handle="{{about.fediverse_handle}}" data-run-type="next"></time></small>
+        <small><strong>Next run:</strong> <time class="relative-time" data-handle="{{about.fediverse_handle}}" data-run-type="next"></time></small>
       </li>
       <li class="d-none">
-        <small><strong>Last run:</strong> <time data-handle="{{about.fediverse_handle}}" data-run-type="last"></time></small>
+        <small><strong>Last run:</strong> <time class="relative-time" data-handle="{{about.fediverse_handle}}" data-run-type="last"></time></small>
       </li>
       {{/if}}
       {{/if}}

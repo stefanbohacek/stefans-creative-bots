@@ -9,7 +9,11 @@ router.get("/", (req, res) => {
   const now = Date.now();
   const botsScheduled = req.app.get("bots_scheduled");
 
-  if (botsScheduled && statusCache && now - statusCacheTime < CACHE_TTL) {
+  if (!botsScheduled) {
+    return res.json({});
+  }
+
+  if (statusCache && now - statusCacheTime < CACHE_TTL) {
     return res.json(statusCache);
   }
 

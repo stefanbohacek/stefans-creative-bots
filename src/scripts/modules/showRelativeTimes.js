@@ -20,9 +20,9 @@ const populate = (statuses) => {
 const fetchAndPopulate = async (handles) => {
   try {
     const statuses = await fetch("/bot-status").then((r) => r.json());
-    populate(statuses);
-    const hasAll = [...handles].every((handle) => statuses[handle]);
-    if (!hasAll) {
+    if (Object.keys(statuses).length > 0) {
+      populate(statuses);
+    } else {
       setTimeout(() => fetchAndPopulate(handles), 2000);
     }
   } catch (err) {

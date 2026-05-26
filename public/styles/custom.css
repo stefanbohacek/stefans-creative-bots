@@ -80,7 +80,7 @@ section {
 
 #back-to-top {
   position: fixed;
-  z-index: 3;
+  z-index: 3 !important;
   bottom: 1rem;
   right: 1rem;
   padding: 1rem;

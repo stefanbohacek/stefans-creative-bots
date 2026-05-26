@@ -1,9 +1,19 @@
+:root {
+  scroll-behavior: auto;
+}
+
 html {
   font-size: 1.125rem;
 }
 
 section {
   margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.2rem;
+  }
 }
 
 .blockquote {
@@ -39,11 +49,18 @@ section {
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-  .glitch-award {
-    position: static !important;
-    text-align: right;
-  }
+
+body {
+  padding-top: 0;
+}
+
+.glitch-award {
+  position: absolute;
+  z-index: 3;
+  display: inline-block;
+  right: 0;
+  top: 0.5rem;
+  transform-origin: top right;
 }
 
 .category-list {
@@ -69,9 +86,10 @@ section {
 .section-heading-row {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1;
   background-color: var(--bs-body-bg);
 }
+
 
 .list-item {
   display: flex;
@@ -80,10 +98,11 @@ section {
 
 #back-to-top {
   position: fixed;
-  z-index: 3;
   bottom: 1rem;
   right: 1rem;
-  padding: 1rem;
+  padding: 0.75rem;
+  background-color: var(--bs-body-bg);
+  border-radius: var(--bs-border-radius);
   opacity: 0;
   transform: translateY(0.5rem);
   transition:

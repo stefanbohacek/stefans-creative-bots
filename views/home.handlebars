@@ -1,8 +1,18 @@
+<nav class="top-nav z-2" id="category-nav">
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+  <div class="nav-links">
+    {{#each categories}}
+    <a href="#{{this.slug}}">{{this.title}}</a>
+    {{/each}}
+    <a href="#inactive-bots">Inactive bots</a>
+  </div>
+</nav>
 <div class="container ml-auto mr-auto px-4 px-md-5 mb-0">
   <main>
     <div class="row">
       <div class="col-sm-12 px-0 px-md-5 mx-auto intro-text">
-        <h1 class="text-center mt-5 mb-5">
+        <h1 class="text-center mt-5 mb-5 pt-5 pt-md-0">
           Stefan's creative bot showcase <span class="text-nowrap">🤖🎨</span>
         </h1>
       </div>
@@ -104,7 +114,7 @@
     <div class="row section-heading-row">
       <div class="col-sm-12">
         <div class="container ml-auto mr-auto">
-          <h2 class="text-center pt-4 pb-5 m-0"><a href="#{{this.slug}}">{{this.title}}</a></h2>
+          <h2 class="text-center pt-3 pb-4 m-0"><a href="#{{this.slug}}">{{this.title}}</a></h2>
         </div>
       </div>
     </div>
@@ -129,7 +139,7 @@
     <div class="row section-heading-row">
       <div class="col-sm-12">
         <div class="container ml-auto mr-auto">
-          <h2 class="text-center pt-4 pb-5 m-0"><a href="#inactive-bots">Inactive bots</a></h2>
+          <h2 class="text-center pt-3 pb-4 m-0"><a href="#inactive-bots">Inactive bots</a></h2>
         </div>
       </div>
     </div>

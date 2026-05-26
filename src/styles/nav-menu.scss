@@ -1,0 +1,79 @@
+// Based on https://codepen.io/edezekiel/pen/drrQzP?editors=1100
+
+:root {
+  --top-nav-height: 44px;
+}
+
+html:has(#menu-toggle:checked) {
+  overflow: hidden;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 0.5rem 0.5rem;
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: var(--bs-body-color);
+    user-select: none;
+    padding: 0.1rem 0.4rem;
+    background-color: var(--hh-bg);
+    border-radius: var(--bs-border-radius);
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    a {
+      text-decoration: none;
+      color: var(--bs-body-color);
+      padding: 0.4rem 0.25rem;
+      border-top: 1px solid var(--bs-border-color);
+
+      &:hover {
+        color: var(--bs-link-color);
+      }
+    }
+  }
+
+  &:has(#menu-toggle:checked) {
+    right: 0;
+    max-width: 100%;
+    background-color: var(--hh-bg);
+    border-radius: var(--bs-border-radius);
+    min-height: 100vh;
+    z-index: 4 !important;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    width: 100%;
+    max-height: calc(100vh - var(--top-nav-height));
+    overflow-y: auto;
+    opacity: 1;
+    pointer-events: auto;
+    transition:
+      max-height 0.25s ease,
+      opacity 0.2s ease;
+    padding: 0.25rem 0.4rem;
+    background-color: var(--hh-bg);
+    border-radius: var(--bs-border-radius);
+  }
+}

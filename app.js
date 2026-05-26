@@ -1,4 +1,5 @@
 import { readFileSync } from "fs";
+import { readFile } from "fs/promises";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -26,13 +27,23 @@ import botStatusRoute from "./routes/bot-status.js";
 const app = express();
 const MemoryStore = createMemoryStore(session);
 
-let criticalCss = "";
-try {
-  criticalCss = readFileSync("./public/styles/critical.css", "utf8");
-} catch {}
+let criticalCSS = "";
+if (process.env.ENVIRONMENT === "production") {
+  try {
+    criticalCSS = readFileSync("./public/styles/critical.css", "utf8");
+  } catch {}
+}
 
-app.use((req, res, next) => {
-  res.locals.critical_css = criticalCss;
+app.use(async (req, res, next) => {
+  if (process.env.ENVIRONMENT === "production") {
+    res.locals.critical_css = criticalCSS;
+  } else {
+    try {
+      res.locals.critical_css = await readFile("./public/styles/critical.css", "utf8");
+    } catch {
+      res.locals.critical_css = "";
+    }
+  }
   next();
 });
 

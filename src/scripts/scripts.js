@@ -6,6 +6,7 @@ import backToTop from "./modules/backToTop.js";
 import fediverseServer from "./modules/fediverseServer.js";
 import birthdayBadge from "./modules/birthdayBadge.js";
 import showRelativeTimes from "./modules/showRelativeTimes.js";
+import categoryNav from "./modules/categoryNav.js";
 
 ready(() => {
   dayjs.extend(relativeTime);
@@ -14,4 +15,5 @@ ready(() => {
   fediverseServer();
   birthdayBadge();
   showRelativeTimes();
+  categoryNav();
 });

@@ -7,6 +7,7 @@ import fediverseServer from "./modules/fediverseServer.js";
 import birthdayBadge from "./modules/birthdayBadge.js";
 import showRelativeTimes from "./modules/showRelativeTimes.js";
 import categoryNav from "./modules/categoryNav.js";
+import lazyLoadShareButton from "./modules/lazyLoadShareButton.js";
 
 ready(() => {
   dayjs.extend(relativeTime);
@@ -16,4 +17,5 @@ ready(() => {
   birthdayBadge();
   showRelativeTimes();
   categoryNav();
+  lazyLoadShareButton();
 });

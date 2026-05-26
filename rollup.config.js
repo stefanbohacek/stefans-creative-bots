@@ -7,6 +7,7 @@ export default {
   output: {
     file: "public/scripts/bundle.js",
     format: "iife",
+    sourcemap: process.env.ENVIRONMENT !== "production",
   },
   plugins: [nodeResolve(), commonjs(), terser()],
 };

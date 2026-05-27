@@ -1,5 +1,4 @@
-﻿import fetch from "node-fetch";
-import { ChartJSNodeCanvas } from "chartjs-node-canvas";
+﻿import { ChartJSNodeCanvas } from "chartjs-node-canvas";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 

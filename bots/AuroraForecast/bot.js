@@ -1,8 +1,8 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
-import getBotID from "./../../modules/getBotID.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 import stitchImages from "./../../modules/stitchImages.js";
 
-const { botID } = getBotID(import.meta.url);
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   try {
@@ -18,6 +18,7 @@ const botScript = async () => {
       const stitchedImage = await stitchImages(forecastImageURLs);
 
       const mastodon = new mastodonClient({
+        // access_token: process.env.MASTODON_TEST_TOKEN,
         access_token: process.env.AURORAFORECAST_BOT_MASTODON_ACCESS_TOKEN,
         api_url: process.env.MASTODON_API_URL,
       });

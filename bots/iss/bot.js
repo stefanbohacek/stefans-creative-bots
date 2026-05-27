@@ -1,6 +1,4 @@
-﻿import fetch from "node-fetch";
-import mastodonClient from "./../../modules/mastodon/index.js";
-
+﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import webcams from "./../../data/webcams/iss.js";
 import extractVideoLive from "./../../modules/extractVideoLive.js";
 import extractVideo from "./../../modules/extractVideo.js";

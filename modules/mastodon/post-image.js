@@ -35,7 +35,11 @@ const postImageFn = (client, options, cb) => {
         
         if (options.spoiler_text) {
           statusObj.spoiler_text = options.spoiler_text;
-        }        
+        }
+
+        if (options.language) {
+          statusObj.language = options.language;
+        }
 
         client.post("statuses", statusObj, (err, data, response) => {
           if (err) {

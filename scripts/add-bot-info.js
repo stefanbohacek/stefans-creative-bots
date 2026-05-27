@@ -8,7 +8,6 @@
 import fs from "fs";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import fetch from "node-fetch";
 import sleep from "../modules/sleep.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));

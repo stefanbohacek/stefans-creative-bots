@@ -1,12 +1,11 @@
-import fetch from "node-fetch";
+import getUserAgent from "./getSCBUserAgent";
 
 export const getWikidataLabel = async (item) => {
   const response = await fetch(
     `https://www.wikidata.org/entity/${item.wikidataId}.json`,
     {
       headers: {
-        "User-Agent":
-          "StefansCreativeBots/1.0 (https://bots.stefanbohacek.com/; stefan@stefanbohacek.com) node/lts",
+        "User-Agent": getUserAgent(),
       },
     },
   );

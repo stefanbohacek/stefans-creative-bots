@@ -1,5 +1,4 @@
-﻿import fetch from "node-fetch";
-import wtf from "wtf_wikipedia";
+﻿import wtf from "wtf_wikipedia";
 import { parse } from "node-html-parser";
 import he from "he";
 import randomFromArray from "./randomFromArray.js";

@@ -1,4 +1,3 @@
-import fetch from "node-fetch";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
 const botScript = async () => {

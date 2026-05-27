@@ -1,4 +1,3 @@
-import fetch from "node-fetch";
 import he from "he";
 import mastodonClient from "./../../modules/mastodon/index.js";
 

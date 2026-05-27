@@ -1,5 +1,4 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
-import fetch from "node-fetch";
 import pluralize from "pluralize";
 import oxfordComma from "./../../modules/oxfordComma.js";
 

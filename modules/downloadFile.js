@@ -1,13 +1,12 @@
-import fetch from "node-fetch";
 import fs from "fs";
+import getUserAgent from "./getSCBUserAgent.js";
 
 export default async (url, path) => {
   console.log("downloading...", { url, path });
 
   const response = await fetch(url, {
     headers: {
-      "User-Agent":
-        "StefansCreativeBots/1.0 (https://bots.stefanbohacek.com/; stefan@stefanbohacek.com) node/lts",
+      "User-Agent": getUserAgent()
     },
   });
 

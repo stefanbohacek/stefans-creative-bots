@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 const getChannelId = async (handle) => {
   const url = `https://www.googleapis.com/youtube/v3/channels?part=id&forHandle=${handle}&key=${process.env.YOUTUBE_API_KEY}`;
   const resp = await fetch(url);

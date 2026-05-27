@@ -1,5 +1,4 @@
-﻿import fetch from "node-fetch";
-import mastodonClient from "./../../modules/mastodon/index.js";
+﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import downloadFile from "./../../modules/downloadFile.js";
 
 import { dirname } from "path";

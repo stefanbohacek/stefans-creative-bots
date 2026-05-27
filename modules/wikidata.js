@@ -1,4 +1,4 @@
-import getUserAgent from "./getSCBUserAgent";
+import getUserAgent from "./getSCBUserAgent.js";
 
 export const getWikidataLabel = async (item) => {
   const response = await fetch(

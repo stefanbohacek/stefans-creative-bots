@@ -132,7 +132,8 @@
     "bots": [
       "@roots", 
       "@maps",
-      "@manuals"
+      "@manuals",
+      "@famicase"
     ]
   },
   {

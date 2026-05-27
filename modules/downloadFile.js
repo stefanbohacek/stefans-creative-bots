@@ -14,7 +14,7 @@ export default async (url, path) => {
     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
   }
 
-  const buffer = await response.buffer();
+  const buffer = Buffer.from(await response.arrayBuffer());
   fs.writeFileSync(path, buffer);
   return { path };
 };

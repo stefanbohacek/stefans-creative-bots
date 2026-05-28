@@ -17,12 +17,15 @@ const router = express.Router();
 
 let htmlCache = null;
 let htmlCacheTime = 0;
+let htmlCacheRendering = false;
 const HTML_CACHE_TTL = 60 * 60 * 1000;
 
 router.get("/", async (req, res) => {
-  if (htmlCache && Date.now() - htmlCacheTime < HTML_CACHE_TTL) {
+  if (htmlCache && (Date.now() - htmlCacheTime < HTML_CACHE_TTL || htmlCacheRendering)) {
     return res.send(htmlCache);
   }
+
+  htmlCacheRendering = true;
 
   if (req.session && req.session.grant) {
     if (req.session.grant.response) {
@@ -152,6 +155,7 @@ router.get("/", async (req, res) => {
     generative_placeholders_color: getRandomRange(0, 99),
     footer_scripts: process.env.FOOTER_SCRIPTS,
   }, (err, html) => {
+    htmlCacheRendering = false;
     if (err) return res.status(500).send(err.message);
     htmlCache = html;
     htmlCacheTime = Date.now();

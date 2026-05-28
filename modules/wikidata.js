@@ -24,7 +24,11 @@ export const queryWikidata = async (query, filterImage) => {
   const apiUrl = `https://query.wikidata.org/sparql?query=${encodeURIComponent(
     query,
   )}&format=json`;
-  const resp = await fetch(apiUrl);
+  const resp = await fetch(apiUrl, {
+    headers: {
+      "User-Agent": getUserAgent(),
+    },
+  });
 
   if (!resp.ok) {
     console.log(`queryWikidata error: ${resp.status} ${resp.statusText}`);

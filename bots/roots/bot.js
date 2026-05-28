@@ -2,17 +2,10 @@
 import UnitConverter from "./../../modules/UnitConverter.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import { getWikipediaPage } from "./../../modules/wikipedia.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
 const botScript = async () => {
-  const botId = "roots";
   //TODO: Pagination should work dynamically.
   const apiURL = `https://images.wur.nl/digital/api/search/collection/coll13/page/${getRandomInt(
     1,
@@ -45,9 +38,8 @@ const botScript = async () => {
     plantDescription = "";
   }
 
-  let imageUrl = `https://images.wur.nl/digital/api/singleitem/image/coll13/${item.itemId}/default.jpg`;
-  const filePath = `${__dirname}/../../temp/${botId}.jpg`;
-  await downloadFile(imageUrl, filePath);
+  const imageUrl = `https://images.wur.nl/digital/api/singleitem/image/coll13/${item.itemId}/default.jpg`;
+  const imgData = await downloadFileAsBase64(imageUrl);
 
   const wikipediaUrl = await getWikipediaPage(item.title);
   const wikipediaLink = wikipediaUrl ? `\n\n${wikipediaUrl}` : "";
@@ -60,9 +52,9 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  mastodon.postImage({
+  await mastodon.postImage({
     status: status.replace("  ", " "),
-    image: filePath,
+    image: imgData,
     alt_text: `A drawing of a plant's root system from the linked website.${plantDescription}`,
   });
 

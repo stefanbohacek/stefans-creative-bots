@@ -1,18 +1,12 @@
-﻿import fs from "fs";
-import puppeteer from "puppeteer";
+﻿import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
-import downloadFile from "./../../modules/downloadFile.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const botID = "galaxy";
+const { botID } = getBotInfo(import.meta.url);
 
 const findGalaxy = async (page) => {
   let link;
@@ -107,16 +101,10 @@ const botScript = async () => {
     // console.log({ galaxies });
 
     const galaxy = randomFromArray(galaxies);
-    const imgPath = `${__dirname}/../../temp/${botID}.jpg`;
-
-    await downloadFile(galaxy.image, imgPath);
+    const imgData = await downloadFileAsBase64(galaxy.image);
     const status = `${galaxy.group_name}: ${galaxy.url}\n\n#space #astronomy #galaxy`;
 
-    const imgData = await fs.readFileSync(imgPath, {
-      encoding: "base64",
-    });
-
-    mastodon.postImage({
+    await mastodon.postImage({
       status,
       image: imgData,
       alt_text: "Color mosaics showing the data (left panel), model (middle panel), and residuals (right panel).",

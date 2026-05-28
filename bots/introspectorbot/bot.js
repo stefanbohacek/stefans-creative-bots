@@ -1,11 +1,5 @@
-﻿import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from './../../modules/downloadFile.js';
+﻿import mastodonClient from "./../../modules/mastodon/index.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 
 
 const botScript = async () => {
@@ -16,14 +10,13 @@ const botScript = async () => {
 
   const url = `https://api.screenshotmachine.com?key=${process.env.SCREENSHOTMACHINE_API_KEY}&url=https%3A%2F%2Ftwitter.com%2Fintrospectorbot&dimension=1024x768&cacheLimit=0&delay=3000`;
 
-  const filePath = `${__dirname}/../../temp/introspector.jpg`;
-  await downloadFile(url, filePath);
+  const imgData = await downloadFileAsBase64(url);
 
   const status = "";
 
-  mastodon.postImage({
+  await mastodon.postImage({
     status,
-    image: filePath,
+    image: imgData,
     // alt_text: datasetName,
   });
 }

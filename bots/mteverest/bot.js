@@ -1,15 +1,10 @@
 ﻿import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 // import getWeather from "./../../modules/getWeather.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const botID = "mteverest";
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   try {
@@ -30,8 +25,7 @@ const botScript = async () => {
       };
 
       const imageURL = webcam.img_url;
-      const filePath = `${__dirname}/../../temp/${botID}.jpg`;
-      await downloadFile(imageURL, filePath);
+      const imgData = await downloadFileAsBase64(imageURL);
       const description = webcam.description;
       
       // let weather;
@@ -50,9 +44,9 @@ const botScript = async () => {
 
       status += `Via ${webcam.url}\n\n#MountEverest #MtEverest #mountain #live #webcam`;
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status,
-        image: filePath,
+        image: imgData,
         alt_text: description,
       });
     })();

@@ -3,6 +3,7 @@ import csv from "csvtojson";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -10,7 +11,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const botID = "exoplanets";
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   await (async () => {

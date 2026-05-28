@@ -1,13 +1,9 @@
 ﻿import floppies from "./../../data/floppies.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import downloadFile from "./../../modules/downloadFile.js";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const botID = "floppies";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
+const { botID } = getBotInfo(import.meta.url);
 const hashtags = "#floppy #RetroTechnology";
 
 const botScript = async () => {
@@ -19,12 +15,11 @@ const botScript = async () => {
       });
 
       const floppy = randomFromArray(floppies);
-      const filePath = `${__dirname}/../../temp/${botID}.jpg`;
-      await downloadFile(floppy.img_url, filePath);
+      const imgData = await downloadFileAsBase64(floppy.img_url);
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status: `Via ${floppy.source}\n\n${hashtags}`,
-        image: filePath,
+        image: imgData,
         alt_text:
           floppy.alt_text ||
           `A photo of a floppy disk labeled "${floppy.title}".`,

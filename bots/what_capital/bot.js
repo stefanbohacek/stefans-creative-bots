@@ -8,9 +8,10 @@ import fs from "fs";
 import capitals from "./../../data/capitals.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-const botID = "whatcapital";
+const { botID } = getBotInfo(import.meta.url);
 const savedDataPath = __dirname + "/../../temp/what_capital.json";
 
 let savedData = {
@@ -71,8 +72,7 @@ const pickNewCapital = async () => {
   savedData.capital = capital.capital;
   savedData.country = capital.country;
 
-  const filePath = `${__dirname}/../../temp/${botID}.jpg`;
-  await downloadFile(flagUrl, filePath);
+  const imgData = await downloadFileAsBase64(flagUrl);
 
   let altText = capital.flag_description;
 
@@ -80,11 +80,11 @@ const pickNewCapital = async () => {
     altText = capital.flag_description.slice(0, 2) + "...";
   }
 
-  mastodon.postImage(
+  await mastodon.postImage(
     {
       status:
         "What is the capital of this country or territory? #quiz #geography #flags #country",
-      image: filePath,
+      image: imgData,
       alt_text: `An unspecified country flag: ${altText}`,
     },
     (error, data) => {

@@ -1,13 +1,7 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
-import downloadFile from "./../../modules/downloadFile.js";
-
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 
 const botScript = async () => {
   let items = await queryWikidata(
@@ -82,8 +76,7 @@ const botScript = async () => {
     item.description ? `${item.description}. ` : ""
   }\n\n${item.wikipediaUrl}\n\n#statue #history #map`;
 
-  const filePath = `${__dirname}/../../temp/statue.jpg`;
-  await downloadFile(imageUrl, filePath);
+  const imgData = await downloadFileAsBase64(imageUrl);
 
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,
@@ -91,9 +84,9 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  mastodon.postImage({
+  await mastodon.postImage({
     status: status.replace("  ", " "),
-    image: filePath,
+    image: imgData,
     alt_text:
       "A photo of a statue from the linked Wikipedia article, overlaid on a cropped world map where it's located.",
   });

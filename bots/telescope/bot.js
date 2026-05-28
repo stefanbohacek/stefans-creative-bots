@@ -2,13 +2,9 @@
 import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const botID = "telescope";
+const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   (async () => {
@@ -79,7 +75,7 @@ const botScript = async () => {
         const base64Data = canvasData.replace(/^data:image\/png;base64,/, "");
         const buffer = Buffer.from(base64Data, "base64");
 
-        const imgPath = `${__dirname}/../../temp/${botID}.jpg`;
+        const imgPath = getTempDirPath("jpg");
         fs.writeFileSync(imgPath, buffer);
 
         let status = `What is ${telescope.name} observing?`;

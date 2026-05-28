@@ -1,20 +1,14 @@
 ﻿import puppeteer from "puppeteer";
 // import stations from "./../../data/webcams/south-pole-stations.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getWeather from "./../../modules/getWeather.js";
 import consoleLog from "./../../modules/consolelog.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { stat } from "fs";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const botID = "RRSSirDavidAttenborough";
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   try {
@@ -36,8 +30,7 @@ const botScript = async () => {
           "View from a webcam mounted on the RRS Sir David Attenborough boat. Typically you'd see the front of the ship with a helipad, and the sea waters surrounding the ship. Depending on the current location of the ship, the scenery may include icebergs and industrial ports.",
       };
 
-      const filePath = `${__dirname}/../../temp/${botID}.jpg`;
-      await downloadFile(station.image_url, filePath);
+      const imgData = await downloadFileAsBase64(station.image_url);
       let description = station.description;
       let weather;
 
@@ -51,9 +44,9 @@ const botScript = async () => {
 
       const status = `${station.name} via ${station.url}\n\nCurrent location: https://www.vesselfinder.com/vessels/details/9798222\n\n #RRSSirDavidAttenborough #boat #view #webcam #BoatyMcBoatface`;
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status,
-        image: filePath,
+        image: imgData,
         alt_text: description,
       });
     })();

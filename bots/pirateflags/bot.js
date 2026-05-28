@@ -1,17 +1,12 @@
 ﻿// PIRATEFLAGS
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
 import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-const botID = "pirateflags";
+const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 const flagUrlBase = "https://bots.stefanbohacek.com";
 
 
@@ -79,7 +74,7 @@ const waveFlag = async (page, flagData) => {
     const description = flagData.description || "A randomly generated pirate flag.";
 
     try {
-      const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;
+      const screenshotPath = getTempDirPath("jpg");
       await page.screenshot({ path: screenshotPath });
 
       const mastodon = new mastodonClient({

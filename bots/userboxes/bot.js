@@ -1,15 +1,12 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import { getRandomUserbox } from "../../modules/wikipedia.js";
 import renderHTML from "../../modules/renderHtml.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
 import { writeFile } from "fs/promises";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const botID = "userboxes";
-const imagePath = `${__dirname}/../../temp/${botID}.png`;
+const { botID, getTempDirPath } = getBotInfo(import.meta.url);
+const imagePath = getTempDirPath("png");
 
 const botScript = async () => {
   try {

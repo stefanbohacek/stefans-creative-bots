@@ -59,7 +59,7 @@ const botScript = async () => {
         let status = `New ${app.platform} release (${currentRelease.tag_name})!\n\n${currentRelease.body ? truncate(currentRelease.body, 400) : ""}`;
         status += `\n\n- https://github.com/${app.github_repo}/releases\n- ${app.app_download}\n\n#mastodon #update #release #${app.platform.toLowerCase()}`;
         // console.log(status);
-        mastodon.post({ status });
+        await mastodon.post({ status });
 
       } else {
         console.log(`no new ${app.platform} version found (current: ${app.current_version})`);

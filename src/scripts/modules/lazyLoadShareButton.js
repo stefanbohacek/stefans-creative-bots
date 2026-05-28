@@ -17,10 +17,9 @@ export default () => {
       }
     };
 
-    const pageScrollHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-
     const handleScroll = () => {
+      const pageScrollHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       if (window.scrollY / pageScrollHeight >= 0.5) {
         loadStyles();
       }

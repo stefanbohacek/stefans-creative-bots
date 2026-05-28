@@ -1,14 +1,11 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
-import downloadFile from "./../../modules/downloadFile.js";
 import capitalizeFirstLetter from "./../../modules/capitalizeFirstLetter.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -45,17 +42,15 @@ const botScript = async () => {
   }\n\n${item.wikipediaUrl}\n\n#money #currency`.replace("  ", " ");
 
   if (item.image) {
-    const imageUrl = item.image;
-    const filePath = `${__dirname}/../../temp/currency.jpg`;
-    await downloadFile(imageUrl, filePath);
+    const imgData = await downloadFileAsBase64(item.image);
 
-    mastodon.postImage({
+    await mastodon.postImage({
       status: capitalizeFirstLetter(status),
-      image: filePath,
+      image: imgData,
       alt_text: "A photo of a currency from the linked website.",
     });
   } else {
-    mastodon.post({
+    await mastodon.post({
       status: status,
     });
   }

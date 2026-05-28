@@ -11,12 +11,13 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
 import getRandomRange from "./../../modules/getRandomRange.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 import util from "util";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const botID = "thelick";
+const { botID } = getBotInfo(import.meta.url);
 
 const getInstruments = () => {
   let instruments = [];

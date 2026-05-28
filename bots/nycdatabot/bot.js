@@ -1,15 +1,9 @@
 ﻿import fetch from 'node-fetch';
 import usZips from "us-zips";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
-
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const locationInRange = (location, centerPoint, km) => {
   km = km || 50;
@@ -134,8 +128,7 @@ const makeMap = async (datasetName, datasetPermalink, data, cb) => {
     ","
   )}/auto/900x600?access_token=${process.env.MAPBOX_ACCESS_TOKEN}`;
 
-  const filePath = `${__dirname}/../../temp/nycdata.jpg`;
-  await downloadFile(mapUrl, filePath);
+  const imgData = await downloadFileAsBase64(mapUrl);
 
   const mastodon = new mastodonClient({
     access_token: process.env.NYCDATABOT_MASTODON_ACCESS_TOKEN_SECRET,
@@ -144,9 +137,9 @@ const makeMap = async (datasetName, datasetPermalink, data, cb) => {
 
   const status = `${datasetName}\nSource: ${datasetPermalink}\n#nyc #data #dataviz`;
 
-  mastodon.postImage({
+  await mastodon.postImage({
     status,
-    image: filePath,
+    image: imgData,
     alt_text: `A map with locations from the ${datasetName} dataset. Please visit the link for full details.`,
   });
 };

@@ -1,13 +1,7 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
-import downloadFile from "./../../modules/downloadFile.js";
-
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 
 const botScript = async () => {
   const items = await queryWikidata(
@@ -56,17 +50,16 @@ const botScript = async () => {
 
   const status = `${item.label}.\n\n${item.wikipediaUrl}\n\n#dinosaur`;
 
-  const filePath = `${__dirname}/../../temp/dinosaur.jpg`;
-  await downloadFile(imageUrl, filePath);
+  const imgData = await downloadFileAsBase64(imageUrl);
 
   const mastodon = new mastodonClient({
     access_token: process.env.DINOSAURS_BOT_MASTODON_ACCESS_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });
 
-  mastodon.postImage({
+  await mastodon.postImage({
     status: status.replace("  ", " "),
-    image: filePath,
+    image: imgData,
     alt_text:
       "A photo or drawing of a dinosaur or dinosaur remains from the linked Wikipedia page.",
   });

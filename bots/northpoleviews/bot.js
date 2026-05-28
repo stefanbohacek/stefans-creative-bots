@@ -5,15 +5,11 @@ import downloadFile from "./../../modules/downloadFile.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getWeather from "./../../modules/getWeather.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
 import { stat } from "fs";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const botID = "northpoleviews";
+const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   await (async () => {
@@ -87,7 +83,7 @@ const botScript = async () => {
       }
 
       if (imageURL) {
-        const filePath = `${__dirname}/../../temp/${botID}.jpg`;
+        const filePath = getTempDirPath("jpg");
         await downloadFile(imageURL, filePath);
 
         const luminosity = await getImageLuminosity(filePath);

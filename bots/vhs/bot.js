@@ -5,14 +5,9 @@ import extractVideoLive from "./../../modules/extractVideoLive.js";
 import downloadFile from "./../../modules/downloadFile.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const botID = "vhs";
+const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   await (async () => {
@@ -33,11 +28,11 @@ const botScript = async () => {
           webcam.video_end - 10
         )}&length=10&token=${process.env.STEFANS_TOOLS_ACCESS_TOKEN}`;
         console.log(url);
-        await downloadFile(url, __dirname + `/../../temp/${botID}.mp4`);
+        await downloadFile(url, getTempDirPath("mp4"));
         try {
           fs.renameSync(
-            __dirname + `/../../temp/${botID}.mp4.mkv`,
-            __dirname + `/../../temp/${botID}.mp4`
+            getTempDirPath("mp4.mkv"),
+            getTempDirPath("mp4")
           );
         } catch (err) {
           /* noop */
@@ -51,7 +46,7 @@ const botScript = async () => {
       mastodon.postImage({
         status,
         spoiler_text: "May contain flashing images.",
-        image: __dirname + `/../../temp/${botID}.mp4`,
+        image: getTempDirPath("mp4"),
         alt_text: webcam.description,
       });
     } catch (error) {

@@ -3,12 +3,13 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import captureEarthcamLiveStream from "./../../modules/captureEarthcamLiveStream.js";
 import getWeather from "./../../modules/getWeather.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
 process.on("unhandledRejection", (reason, p) => {
   console.error("NYCVIEWSBOT unhandledRejection:", reason);
 });
 
-const botID = "nycviewsbot";
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async (params) => {
   const mastodon = new mastodonClient({

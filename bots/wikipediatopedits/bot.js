@@ -1,7 +1,8 @@
 import fetch from 'node-fetch';
 import mastodonClient from "./../../modules/mastodon/index.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-const botID = "wikipediatopedits";
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
  await (async () => {

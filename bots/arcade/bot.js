@@ -1,7 +1,8 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-const botID = "arcade";
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   try {

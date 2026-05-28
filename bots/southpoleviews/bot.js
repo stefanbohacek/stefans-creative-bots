@@ -4,8 +4,9 @@ import randomFromArray from "./../../modules/randomFromArray.js";
 import getWebcamImage from "./../../modules/getWebcamImage.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getWeather from "./../../modules/getWeather.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-const botID = "southpoleviews";
+const { botID } = getBotInfo(import.meta.url);
 const hashtags = "#SouthPole #antarctica #view #webcam";
 
 const botScript = async () => {

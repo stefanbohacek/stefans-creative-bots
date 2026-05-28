@@ -3,12 +3,6 @@ import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/downloadFile.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
 const botScript = async () => {
   const items = await queryWikidata(
     /* sql */ `

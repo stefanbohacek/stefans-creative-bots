@@ -4,14 +4,9 @@ import webcams from "./../../data/webcams/underwater.js";
 import extractVideoLive from "./../../modules/extractVideoLive.js";
 import extractVideo from "./../../modules/extractVideo.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const botID = "underwater";
+const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
  await (async () => {
@@ -27,7 +22,7 @@ const botScript = async () => {
 
       mastodon.postImage({
         status,
-        image: __dirname + `/../../temp/${botID}.mp4`,
+        image: getTempDirPath("mp4"),
         alt_text: webcam.description,
       });
     } catch (error) {

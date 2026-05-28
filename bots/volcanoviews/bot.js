@@ -4,14 +4,9 @@ import downloadFile from "./../../modules/downloadFile.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getWeather from "./../../modules/getWeather.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const botID = "volcanoviews";
+const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -20,7 +15,7 @@ const botScript = async () => {
   });
 
   const webcam = randomFromArray(webcams);
-  const filePath = `${__dirname}/../../temp/${botID}.jpg`;
+  const filePath = getTempDirPath("jpg");
   await downloadFile(webcam.url, filePath);
 
   const luminosity = await getImageLuminosity(filePath);

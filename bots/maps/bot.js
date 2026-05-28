@@ -1,13 +1,8 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const botID = "@maps";
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -41,8 +36,7 @@ const botScript = async () => {
       //   "attributes.country": attributes.country,
       // });
 
-      const filePath = `${__dirname}/../../temp/${botID}`;
-      await downloadFile(imageURL, filePath);
+      const imgData = await downloadFileAsBase64(imageURL);
 
       const source = `https://www.davidrumsey.com/luna/servlet/detail/${map.id}`;
       // const description = attributes.pub_note || ""
@@ -72,9 +66,9 @@ const botScript = async () => {
 
       status += ` ${source}\n\n#map #maps #HistoricalMaps`;
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status,
-        image: filePath,
+        image: imgData,
         alt_text: description,
       });
     } catch (error) {

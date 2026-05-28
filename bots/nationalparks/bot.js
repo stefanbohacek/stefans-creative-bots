@@ -1,13 +1,7 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
-import downloadFile from "./../../modules/downloadFile.js";
-
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 
 const botScript = async () => {
   const items = await queryWikidata(
@@ -58,8 +52,7 @@ const botScript = async () => {
     item.wikipediaUrl
   }\n\n#park #parks #NationalPark #NationalParks #outdoors #map`;
 
-  const filePath = `${__dirname}/../../temp/nationalpark.jpg`;
-  await downloadFile(imageUrl, filePath);
+  const imgData = await downloadFileAsBase64(imageUrl);
 
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,
@@ -67,9 +60,9 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  mastodon.postImage({
+  await mastodon.postImage({
     status: status.replace("  ", " "),
-    image: filePath,
+    image: imgData,
     alt_text:
       "A photo of or from a national park from the linked website, overlaid on a cropped world map where it's located.",
   });

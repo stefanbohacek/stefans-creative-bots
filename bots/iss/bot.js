@@ -4,14 +4,9 @@ import extractVideoLive from "./../../modules/extractVideoLive.js";
 import extractVideo from "./../../modules/extractVideo.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { getLiveStreams } from "./../../modules/youtube.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const botID = "iss";
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   await (async () => {

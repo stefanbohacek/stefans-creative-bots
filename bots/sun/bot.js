@@ -4,6 +4,7 @@ import { promisify } from "util";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import downloadFile from "./../../modules/downloadFile.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
 const execAsync = promisify(exec);
 
@@ -12,7 +13,7 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const botID = "sun";
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   (async () => {

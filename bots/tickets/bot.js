@@ -1,19 +1,13 @@
-﻿import fs from "fs";
-import puppeteer from "puppeteer";
+﻿import puppeteer from "puppeteer";
 import csv from "csvtojson";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
-import downloadFile from "./../../modules/downloadFile.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const botID = "tickets";
+const { botID } = getBotInfo(import.meta.url);
 
 const findTicket = async (page) => {
   let link;
@@ -122,16 +116,10 @@ const botScript = async () => {
 
     console.log({ link, ticket });
 
-    const imgPath = `${__dirname}/../../temp/${botID}.jpg`;
-
-    await downloadFile(ticket.ticket, imgPath);
+    const imgData = await downloadFileAsBase64(ticket.ticket);
     const status = `${ticket.name}\n${ticket.description}\nVia ${link} #trains #tickets #transit #travel`;
 
-    const imgData = await fs.readFileSync(imgPath, {
-      encoding: "base64",
-    });
-
-    mastodon.postImage({
+    await mastodon.postImage({
       status,
       image: imgData,
       alt_text: `Picture of a public transportation ticket from attached website, usually for a train or bus.`,

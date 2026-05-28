@@ -1,18 +1,13 @@
-﻿import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-import webcams from "./../../data/webcams/skies.js";
+﻿import webcams from "./../../data/webcams/skies.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
 import getWeather from "./../../modules/getWeather.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import downloadFile from "./../../modules/downloadFile.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-const botID = "skies";
+const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -31,7 +26,7 @@ const botScript = async () => {
 
   console.log("looking at the sky...", webcam);
 
-  const filePath = `${__dirname}/../../temp/${botID}.jpg`;
+  const filePath = getTempDirPath("jpg");
   await downloadFile(webcam.url, filePath);
   const luminosity = await getImageLuminosity(filePath);
 

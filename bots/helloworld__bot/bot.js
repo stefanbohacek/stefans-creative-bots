@@ -1,15 +1,12 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
 import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
-  const botID = "hello_world";
   let status = "";
-  const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;
+  const screenshotPath = getTempDirPath("jpg");
 
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,

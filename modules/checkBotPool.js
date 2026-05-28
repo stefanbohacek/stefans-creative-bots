@@ -1,15 +1,9 @@
-import fs from "fs";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+import db from "./db.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const poolFilePath = `${__dirname}/../temp/pool.json`;
 const poolCheckInterval = 60000;
 // const poolCheckInterval = 5000;
 
-const checkBotPoolFn = (app) => {
+const checkBotPoolFn = async (app) => {
   let pool = app.get("pool");
 
   if (pool && pool.length) {
@@ -28,7 +22,11 @@ const checkBotPoolFn = (app) => {
 
       pool = [...new Set(pool)];
       app.set("pool", pool);
-      fs.writeFileSync(poolFilePath, JSON.stringify(pool, null, 2), "utf8");
+
+      await db.execute(/* sql */`DELETE FROM bot_pool`);
+      for (const name of pool) {
+        await db.execute(/* sql */`INSERT IGNORE INTO bot_pool (bot_name) VALUES (?)`, [name]);
+      }
     } catch (err) {
       /* noop */
     }
@@ -36,17 +34,12 @@ const checkBotPoolFn = (app) => {
   console.log(`current pool (${pool.length}):`, pool);
 };
 
-export default (app) => {
-  let pool = [];
+export default async (app) => {
+  const [rows] = await db.execute(
+    /* sql */`SELECT bot_name FROM bot_pool ORDER BY id`
+  );
 
-  if (fs.existsSync(poolFilePath)) {
-    try {
-      pool = JSON.parse(fs.readFileSync(poolFilePath, "utf8"));
-    } catch (err) {
-      pool = [];
-    }
-  }
-
+  let pool = rows.map((row) => row.bot_name);
   pool = [...new Set(pool)];
   app.set("pool", pool);
 

@@ -14,7 +14,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
   const bots = loadBotInfo(app);
   app.set("bots", bots);
   const listener = app.listen(process.env.PORT || 3000, async () => {
-    checkBotPool(app);
+    await checkBotPool(app);
     cronJobs();
 
     console.log(`🖥️ running on port ${listener.address().port}`);

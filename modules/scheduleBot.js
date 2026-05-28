@@ -28,9 +28,8 @@ export default async (bot, app) => {
             account_display_name: message.data.account.display_name,
           });
           if (
-            message.event === "notification" &&
-            // || message.event === "update"
-            message.data.type === "mention"
+            (message.event === "notification" && message.data.type === "mention") ||
+            message.event === "update"
           ) {
             // console.log("message.data", message.data);
             const from = message.data.account.acct;

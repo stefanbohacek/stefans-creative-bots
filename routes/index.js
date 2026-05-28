@@ -91,6 +91,21 @@ router.get("/", async (req, res) => {
     .sort((a, b) => new Date(b.about.date_created) - new Date(a.about.date_created))
     .slice(0, 6);
 
+  const [followerStatsRows] = await db.execute(
+    /* sql */`SELECT unique_followers, unique_servers, calculated_at FROM follower_stats WHERE id = 1`
+  );
+
+  let follower_stats = null;
+  if (followerStatsRows.length) {
+    const row = followerStatsRows[0];
+    const date = new Date(row.calculated_at);
+    follower_stats = {
+      unique_followers: row.unique_followers.toLocaleString("en-US"),
+      unique_servers: row.unique_servers.toLocaleString("en-US"),
+      calculated_month: date.toLocaleDateString("en-US", { month: "long", year: "numeric" }),
+    };
+  }
+
   const [popularRows] = await db.execute(
     /* sql */`SELECT username, server FROM fediverse_account_info
      WHERE followers IS NOT NULL ORDER BY followers DESC LIMIT 6`
@@ -131,6 +146,7 @@ router.get("/", async (req, res) => {
     bots_count_total: (
       activeBots.length + inactiveBots.length
     ).toLocaleString(),
+    follower_stats,
     generative_placeholders_color: getRandomRange(0, 99),
     footer_scripts: process.env.FOOTER_SCRIPTS,
   }, (err, html) => {

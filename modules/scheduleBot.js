@@ -53,7 +53,11 @@ export default async (bot, app) => {
         console.log(botScript);
 
         setInterval(async () => {
-          bot.script.default();
+          try {
+            await bot.script.default();
+          } catch (err) {
+            console.log(`${bot.about.name} error:`, err);
+          }
         }, 1000);
       } else {
         for (const schedule in cronSchedules) {

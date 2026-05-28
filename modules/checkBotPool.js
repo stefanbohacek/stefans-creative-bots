@@ -18,7 +18,7 @@ const checkBotPoolFn = async (app) => {
       //     bots: bots.map(bot => bot.about.name)
       // });
 
-      bot.script.default();
+      await bot.script.default();
 
       pool = [...new Set(pool)];
       app.set("pool", pool);

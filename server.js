@@ -1,7 +1,6 @@
-﻿import dotenv from "dotenv";
-dotenv.config();
+﻿import "dotenv/config";
 import app from "./app.js";
-import { loadBotInfo, scheduleBots } from "./modules/loadBots.js";
+import { loadBotInfo, scheduleBots, loadFediverseAccountData } from "./modules/loadBots.js";
 import cronJobs from "./modules/cronJobs.js";
 import checkBotPool from "./modules/checkBotPool.js";
 
@@ -20,6 +19,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
     console.log(`🖥️ running on port ${listener.address().port}`);
     console.log(`🕒 server time: ${new Date().toTimeString()}`);
 
+    loadFediverseAccountData(bots);
     scheduleBots(bots, app);
   });
 })();

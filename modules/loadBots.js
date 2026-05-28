@@ -6,6 +6,7 @@ import scheduleBot from "./scheduleBot.js";
 import getFediverseAccountInfo from "./getFediverseAccountInfo.js";
 import capitalizeFirstLetter from "./capitalizeFirstLetter.js";
 import sleep from "./sleep.js";
+import db from "./db.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -64,6 +65,30 @@ export const loadBotInfo = (app) => {
   }
 
   return bots;
+};
+
+export const loadFediverseAccountData = async (bots) => {
+  const accounts = bots
+    .filter((botInfo) => botInfo.about.fediverse_handle)
+    .map((botInfo) => {
+      const parts = botInfo.about.fediverse_handle.split("@").filter(Boolean);
+      return { username: parts[0], server: parts[1] };
+    })
+    .filter(({ server }) => server);
+
+  if (!accounts.length) {
+    return;
+  }
+
+  const placeholders = accounts.map(() => "(?, ?)").join(", ");
+  const values = accounts.flatMap(({ username, server }) => [username, server]);
+
+  await db.execute(
+    /* sql */`INSERT IGNORE INTO fediverse_account_info (username, server) VALUES ${placeholders}`,
+    values
+  );
+
+  console.log(`💾 loaded ${accounts.length} fediverse account(s)`);
 };
 
 export const scheduleBots = async (bots, app) => {

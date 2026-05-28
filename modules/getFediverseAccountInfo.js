@@ -8,13 +8,13 @@ export default async (fediverseLinkURL) => {
 
   if (["stefanbohacek.online"].includes(server)) {
     console.log(
-      `getFediverseAccountInfo: loading data for @${username}@${server}...`,
+      `getFediverseAccountInfo: loading data for @${username}@${server}...`
     );
 
     const [cachedRows] = await db.execute(
-      /* sql */ `SELECT * FROM fediverse_account_info
+      /* sql */`SELECT * FROM fediverse_account_info
        WHERE username = ? AND server = ? AND fetched_at > NOW() - INTERVAL 3 HOUR`,
-      [username, server],
+      [username, server]
     );
 
     if (cachedRows.length) {
@@ -29,16 +29,43 @@ export default async (fediverseLinkURL) => {
       };
     }
 
+    const [lockResult] = await db.execute(
+      /* sql */`UPDATE fediverse_account_info SET fetching = 1
+       WHERE username = ? AND server = ? AND fetching = 0`,
+      [username, server]
+    );
+
+    if (lockResult.affectedRows === 0) {
+      const [staleRows] = await db.execute(
+        /* sql */`SELECT * FROM fediverse_account_info WHERE username = ? AND server = ?`,
+        [username, server]
+      );
+
+      if (staleRows.length && staleRows[0].display_name) {
+        return {
+          displayName: staleRows[0].display_name,
+          avatar: staleRows[0].avatar,
+          followers: staleRows[0].followers,
+          following: staleRows[0].following_count,
+          posts: staleRows[0].posts,
+          last_status_at: staleRows[0].last_status_at,
+          fetchedAt: staleRows[0].fetched_at,
+        };
+      }
+
+      return {};
+    }
+
     try {
       await sleep(1000);
       const resp = await fetch(
-        `https://${server}/api/v1/accounts/lookup?acct=${username}`,
+        `https://${server}/api/v1/accounts/lookup?acct=${username}`
       );
 
       if (!resp.ok) {
         console.log(
           `getFediverseAccountInfo error: @${username}@${server}`,
-          resp.statusText,
+          resp.statusText
         );
         return {};
       }
@@ -60,9 +87,9 @@ export default async (fediverseLinkURL) => {
       };
 
       await db.execute(
-        /* sql */ `INSERT INTO fediverse_account_info
-         (username, server, display_name, avatar, followers, following_count, posts, last_status_at, fetched_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())
+        /* sql */`INSERT INTO fediverse_account_info
+         (username, server, display_name, avatar, followers, following_count, posts, last_status_at, fetched_at, fetching)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW(), 0)
          ON DUPLICATE KEY UPDATE
            display_name = VALUES(display_name),
            avatar = VALUES(avatar),
@@ -70,7 +97,8 @@ export default async (fediverseLinkURL) => {
            following_count = VALUES(following_count),
            posts = VALUES(posts),
            last_status_at = VALUES(last_status_at),
-           fetched_at = NOW()`,
+           fetched_at = NOW(),
+           fetching = 0`,
         [
           username,
           server,
@@ -80,22 +108,22 @@ export default async (fediverseLinkURL) => {
           result.following,
           result.posts,
           result.last_status_at,
-        ],
+        ]
       );
 
       return result;
     } catch (error) {
       console.log(
         `getFediverseAccountInfo error: @${username}@${server}`,
-        error,
+        error
       );
 
       const [staleRows] = await db.execute(
-        /* sql */ `SELECT * FROM fediverse_account_info WHERE username = ? AND server = ?`,
-        [username, server],
+        /* sql */`SELECT * FROM fediverse_account_info WHERE username = ? AND server = ?`,
+        [username, server]
       );
 
-      if (staleRows.length) {
+      if (staleRows.length && staleRows[0].display_name) {
         return {
           displayName: staleRows[0].display_name,
           avatar: staleRows[0].avatar,
@@ -109,9 +137,14 @@ export default async (fediverseLinkURL) => {
 
       console.log(
         `getFediverseAccountInfo error: @${username}@${server}`,
-        error,
+        error
       );
       return {};
+    } finally {
+      await db.execute(
+        /* sql */`UPDATE fediverse_account_info SET fetching = 0 WHERE username = ? AND server = ?`,
+        [username, server]
+      );
     }
   } else {
     return {};

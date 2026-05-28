@@ -94,7 +94,7 @@ router.get("/", async (req, res) => {
   const latestBots = [...activeBots]
     .filter((b) => b.about.date_created)
     .sort((a, b) => new Date(b.about.date_created) - new Date(a.about.date_created))
-    .slice(0, 6);
+    .slice(0, 8);
 
   const [followerStatsRows] = await db.execute(
     /* sql */`SELECT unique_followers, unique_servers, calculated_at FROM follower_stats WHERE id = 1`
@@ -113,7 +113,7 @@ router.get("/", async (req, res) => {
 
   const [popularRows] = await db.execute(
     /* sql */`SELECT username, server FROM fediverse_account_info
-     WHERE followers IS NOT NULL ORDER BY followers DESC LIMIT 6`
+     WHERE followers IS NOT NULL ORDER BY followers DESC LIMIT 8`
   );
 
   const popularBots = popularRows

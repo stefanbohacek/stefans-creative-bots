@@ -1,5 +1,6 @@
 import sleep from "./sleep.js";
 import db from "./db.js";
+import lookupAccount from "./mastodon/lookupAccount.js";
 
 export const mapFediverseRow = (row) => ({
   displayName: row.display_name,
@@ -52,33 +53,14 @@ export default async (fediverseLinkURL) => {
 
     try {
       await sleep(1000);
-      const resp = await fetch(
-        `https://${server}/api/v1/accounts/lookup?acct=${username}`
-      );
+      const accountData = await lookupAccount(username, server);
 
-      if (!resp.ok) {
-        console.log(
-          `getFediverseAccountInfo error: @${username}@${server}`,
-          resp.statusText
-        );
+      if (!accountData) {
+        console.log(`getFediverseAccountInfo error: @${username}@${server}`);
         return {};
       }
 
-      const accountData = await resp.json();
-
-      if (!accountData.id || typeof accountData.followers_count !== "number") {
-        return {};
-      }
-
-      const result = {
-        displayName: accountData.display_name,
-        avatar: accountData.avatar,
-        followers: accountData.followers_count,
-        following: accountData.following_count,
-        posts: accountData.statuses_count,
-        last_status_at: accountData.last_status_at,
-        fetchedAt: new Date().toISOString(),
-      };
+      const result = { ...accountData, fetchedAt: new Date().toISOString() };
 
       await db.execute(
         /* sql */`INSERT INTO fediverse_account_info
@@ -96,12 +78,12 @@ export default async (fediverseLinkURL) => {
         [
           username,
           server,
-          result.displayName,
-          result.avatar,
-          result.followers,
-          result.following,
-          result.posts,
-          result.last_status_at,
+          accountData.displayName,
+          accountData.avatar,
+          accountData.followers,
+          accountData.following,
+          accountData.posts,
+          accountData.last_status_at,
         ]
       );
 

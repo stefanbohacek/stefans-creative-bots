@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import mysql from "mysql2/promise";
+import lookupAccount from "../modules/mastodon/lookupAccount.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -47,19 +48,10 @@ for (const { username, server } of accounts) {
   try {
     console.log(`Fetching @${username}@${server}...`);
 
-    const resp = await fetch(
-      `https://${server}/api/v1/accounts/lookup?acct=${username}`,
-    );
+    const accountData = await lookupAccount(username, server);
 
-    if (!resp.ok) {
-      console.log(`  skipped: ${resp.statusText}`);
-      continue;
-    }
-
-    const data = await resp.json();
-
-    if (!data.id || typeof data.followers_count !== "number") {
-      console.log(`  skipped: unexpected response`);
+    if (!accountData) {
+      console.log(`  skipped`);
       continue;
     }
 
@@ -79,16 +71,16 @@ for (const { username, server } of accounts) {
       [
         username,
         server,
-        data.display_name,
-        data.avatar,
-        data.followers_count,
-        data.following_count,
-        data.statuses_count,
-        data.last_status_at,
+        accountData.displayName,
+        accountData.avatar,
+        accountData.followers,
+        accountData.following,
+        accountData.posts,
+        accountData.last_status_at,
       ],
     );
 
-    console.log(`  ${data.followers_count.toLocaleString()} followers`);
+    console.log(`  ${accountData.followers.toLocaleString()} followers`);
 
     await new Promise((resolve) => setTimeout(resolve, 500));
   } catch (err) {

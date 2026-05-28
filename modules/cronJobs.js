@@ -2,6 +2,7 @@ import { CronJob } from "cron";
 import cronSchedules from "./cronSchedules.js";
 import db from "./db.js";
 import { mastodonFetch } from "./mastodon/fetch.js";
+import lookupAccount from "./mastodon/lookupAccount.js";
 
 export default () => {
   console.log("setting up cron jobs...");
@@ -48,17 +49,9 @@ export default () => {
 
         for (const { username, server } of accounts) {
           try {
-            const resp = await fetch(
-              `https://${server}/api/v1/accounts/lookup?acct=${username}`
-            );
+            const accountData = await lookupAccount(username, server);
 
-            if (!resp.ok) {
-              continue;
-            }
-
-            const accountData = await resp.json();
-
-            if (!accountData.id || typeof accountData.followers_count !== "number") {
+            if (!accountData) {
               continue;
             }
 
@@ -68,11 +61,11 @@ export default () => {
                posts = ?, last_status_at = ?, fetched_at = NOW(), fetching = 0
                WHERE username = ? AND server = ?`,
               [
-                accountData.display_name,
+                accountData.displayName,
                 accountData.avatar,
-                accountData.followers_count,
-                accountData.following_count,
-                accountData.statuses_count,
+                accountData.followers,
+                accountData.following,
+                accountData.posts,
                 accountData.last_status_at,
                 username,
                 server,

@@ -1,26 +1,15 @@
-import dotenv from "dotenv";
-dotenv.config();
+import "dotenv/config";
 
-// import bot from "./bots/test/bot.js";
-// import bot from "./bots/roots/bot.js";
-// import bot from "./bots/birds/bot.js";
-// import bot from "./bots/rorschach/bot.js";
-// import bot from "./bots/test/bot.js";
-// import bot from "./bots/telescope/bot.js";
-// import bot from "./bots/southpoleviews/bot.js";
-// import bot from "./bots/arcade/bot.js";
-// import bot from "./bots/helloworld__bot/bot.js";
-// import bot from "./bots/userboxes/bot.js";
-// import bot from "./bots/discontinued/bot.js";
-// import bot from "./bots/bearcam/bot.js";
-// import bot from "./bots/iss/bot.js";
-// import bot from "./bots/wikipediatopedits/bot.js";
-// import bot from "./bots/xed-your-last-y/bot.js";
-// import bot from "./bots/AuroraForecast/bot.js";
-import bot from "./bots/libraries/bot.js";
+const botNames = process.argv.slice(2).length ? process.argv.slice(2) : ["test"];
 
-try {
-  bot();
-} catch (error) {
-  console.log("TEST:ERROR", error);
+for (const botName of botNames) {
+  console.log(`Running bot: ${botName}`);
+  try {
+    const bot = await import(`./bots/${botName}/bot.js`);
+    await bot.default();
+  } catch (error) {
+    console.log(`TEST:ERROR (${botName}):`, error);
+  }
 }
+
+process.exit(0);

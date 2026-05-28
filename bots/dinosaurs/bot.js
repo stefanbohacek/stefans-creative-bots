@@ -1,31 +1,47 @@
-﻿import mastodonClient from "./../../modules/mastodon/index.js";
+import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
 import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
+
+const { botID } = getBotInfo(import.meta.url);
+
+const WIKIDATA_QUERY = /* sql */`
+  SELECT DISTINCT ?item ?itemLabel ?itemDescription ?image ?article
+  WHERE
+  {
+    ?item wdt:P105 wd:Q34740 .
+    ?item wdt:P171+ wd:Q430 .
+    ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") .
+    ?item wdt:P18 ?image .
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+    {
+      ?article schema:about ?item .
+      ?article schema:inLanguage "en" .
+      ?article schema:isPartOf <https://en.wikipedia.org/>
+    }
+  }
+  LIMIT 40000
+`;
 
 const botScript = async () => {
-  const items = await queryWikidata(
-    /* sql */ `
-    SELECT DISTINCT ?item ?itemLabel ?itemDescription ?image ?article 
-    WHERE 
-    {
-      ?item wdt:P105 wd:Q34740 .
-      ?item wdt:P171+ wd:Q430 .
-      ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") .
-      ?item wdt:P18 ?image .
-      SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-      {
-        ?article schema:about ?item .
-        ?article schema:inLanguage "en" .
-        ?article schema:isPartOf <https://en.wikipedia.org/>
-      }
+  let items = [];
+  const cached = await getWikidataCache(botID);
+
+  if (!cached || cached.isStale) {
+    const freshItems = await queryWikidata(WIKIDATA_QUERY, true);
+    if (freshItems.length) {
+      await saveWikidataCache(botID, freshItems);
+      items = freshItems;
+    } else if (cached) {
+      console.log(`${botID}: live fetch failed, using stale cache`);
+      items = cached.data;
     }
-  `,
-    true,
-  );
+  } else {
+    items = cached.data;
+  }
 
   // TODO: Temporary fix until I can figure out the query.
-
   const dinosaurs = items.filter(
     (item) =>
       item.description?.toLowerCase().includes("dinosaur") ||
@@ -33,6 +49,11 @@ const botScript = async () => {
   );
 
   const item = randomFromArray(dinosaurs);
+
+  if (!item) {
+    console.log(`${botID}: no items found`);
+    return;
+  }
 
   if (item.label === item.wikidataId) {
     item.label = await getWikidataLabel(item);

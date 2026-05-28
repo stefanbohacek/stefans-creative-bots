@@ -1,27 +1,24 @@
-﻿import mastodonClient from "./../../modules/mastodon/index.js";
+import mastodonClient from "./../../modules/mastodon/index.js";
 import makeCoverVideo from "./../../modules/makeCoverVideo.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
 import downloadFile from "./../../modules/downloadFile.js";
 import { dirname, extname } from "path";
 import { fileURLToPath } from "url";
+import getBotInfo from "./../../modules/getBotInfo.js";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const getAudioExtension = (url) => {
-  const extension = extname(new URL(url).pathname);
-  return extension || ".ogg";
-};
+const { botID } = getBotInfo(import.meta.url);
 
-const botScript = async () => {
-  const items = await queryWikidata(
-    /* sql */ `
+const WIKIDATA_QUERY = /* sql */`
   SELECT ?item ?itemLabel ?itemDescription ?audioFile ?article ?image
   WHERE {
     ?item wdt:P31 wd:Q16521 ;
           wdt:P171* wd:Q5113 ;
           wdt:P51 ?audioFile .
-          ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") . 
+          ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") .
       ?item wdt:P18 ?image;
       SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
       {
@@ -30,15 +27,42 @@ const botScript = async () => {
         ?article schema:isPartOf <https://en.wikipedia.org/>
       }
   }
-  LIMIT 10000
-`,
-    true
-  );
-  const item = randomFromArray(items);
-  if (item.label === item.wikidataId) {
-    item.label = await getWikidataLabel(item)
+  LIMIT 40000
+`;
+
+const getAudioExtension = (url) => {
+  const extension = extname(new URL(url).pathname);
+  return extension || ".ogg";
+};
+
+const botScript = async () => {
+  let items = [];
+  const cached = await getWikidataCache(botID);
+
+  if (!cached || cached.isStale) {
+    const freshItems = await queryWikidata(WIKIDATA_QUERY, true);
+    if (freshItems.length) {
+      await saveWikidataCache(botID, freshItems);
+      items = freshItems;
+    } else if (cached) {
+      console.log(`${botID}: live fetch failed, using stale cache`);
+      items = cached.data;
+    }
+  } else {
+    items = cached.data;
   }
-  
+
+  const item = randomFromArray(items);
+
+  if (!item) {
+    console.log(`${botID}: no items found`);
+    return;
+  }
+
+  if (item.label === item.wikidataId) {
+    item.label = await getWikidataLabel(item);
+  }
+
   console.log(item);
   const status = `${item.label}\n\n${item.wikipediaUrl}\n\n#birds #birdwatching`;
 
@@ -60,4 +84,5 @@ const botScript = async () => {
   });
   return true;
 };
+
 export default botScript;

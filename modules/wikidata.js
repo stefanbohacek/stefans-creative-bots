@@ -1,4 +1,7 @@
 import getUserAgent from "./getSCBUserAgent.js";
+import db from "./db.js";
+
+const TTL_48H = 48 * 60 * 60 * 1000;
 
 export const getWikidataLabel = async (item) => {
   const response = await fetch(
@@ -11,13 +14,38 @@ export const getWikidataLabel = async (item) => {
   );
 
   if (!response.ok) {
-    console.log(`getWikidataLabel error: ${response.status} ${response.statusText}`);
+    console.log(
+      `getWikidataLabel error: ${response.status} ${response.statusText}`,
+    );
     return "";
   }
 
   const data = await response.json();
   const entity = data.entities[item.wikidataId];
   return entity?.labels?.en?.value || entity?.labels?.mul?.value || "";
+};
+
+export const getWikidataCache = async (botId, ttl = TTL_48H) => {
+  const [rows] = await db.execute(
+    /* sql */ `SELECT data, updated_at FROM wikidata_cache WHERE bot_id = ?`,
+    [botId],
+  );
+
+  if (!rows.length) {
+    return null;
+  }
+
+  const isStale = Date.now() - new Date(rows[0].updated_at).getTime() > ttl;
+
+  return { data: JSON.parse(rows[0].data), isStale };
+};
+
+export const saveWikidataCache = async (botId, items) => {
+  await db.execute(
+    /* sql */ `INSERT INTO wikidata_cache (bot_id, data) VALUES (?, ?)
+     ON DUPLICATE KEY UPDATE data = VALUES(data), updated_at = NOW()`,
+    [botId, JSON.stringify(items)],
+  );
 };
 
 export const queryWikidata = async (query, filterImage) => {
@@ -35,7 +63,19 @@ export const queryWikidata = async (query, filterImage) => {
     return [];
   }
 
-  const respJSON = await resp.json();
+  const respText = await resp.text();
+  let respJSON;
+  try {
+    respJSON = JSON.parse(respText);
+  } catch (err) {
+    console.log(`queryWikidata JSON parse error:`, err.message);
+    console.log(
+      `queryWikidata response (first 500 chars):`,
+      respText.substring(0, 500),
+    );
+    return [];
+  }
+
   let items = respJSON?.results?.bindings || [];
 
   // console.log("wikidata:items", items);
@@ -82,5 +122,6 @@ export const queryWikidata = async (query, filterImage) => {
       );
     }
   }
+
   return items;
 };

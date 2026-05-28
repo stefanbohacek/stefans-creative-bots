@@ -1,50 +1,67 @@
-﻿import mastodonClient from "./../../modules/mastodon/index.js";
+import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import { queryWikidata, getWikidataLabel } from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
 import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
+
+const { botID } = getBotInfo(import.meta.url);
+
+const WIKIDATA_QUERY = /* sql */`
+  SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
+    ?item wdt:P31 wd:Q179700 .
+    ?item wdt:P131 ?place .
+    FILTER NOT EXISTS { ?item wdt:P576 ?abolishedDate . }
+    ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") .
+    ?item wdt:P18 ?image;
+          p:P625 [
+            ps:P625 ?coord;
+            psv:P625 [
+              wikibase:geoLongitude ?lon;
+              wikibase:geoLatitude ?lat;
+            ] ;
+          ]
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+    {
+      ?article schema:about ?item .
+      ?article schema:inLanguage "en" .
+      ?article schema:isPartOf <https://en.wikipedia.org/>
+    }
+  }
+  LIMIT 40000
+`;
+
+const ignoreList = [
+  "Columbus Circle",
+  "Christopher Columbus",
+  "Edward Colston",
+  "George Davis",
+  "George Washington",
+  "James Cook",
+  "Joseph Bryan",
+  "Margaret Thatcher",
+  "Reiterdenkmal",
+  "Raphael Semmes",
+  "Roger B. Taney",
+  "Williams Carter Wickham",
+  "confederate general",
+];
 
 const botScript = async () => {
-  let items = await queryWikidata(
-    /* sql */ `
-    SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
-      ?item wdt:P31 wd:Q179700 .
-      ?item wdt:P131 ?place .  
-      FILTER NOT EXISTS { ?item wdt:P576 ?abolishedDate . }
-      ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") . 
-      ?item wdt:P18 ?image;
-            p:P625 [
-              ps:P625 ?coord;
-              psv:P625 [
-                wikibase:geoLongitude ?lon;
-                wikibase:geoLatitude ?lat;
-              ] ;
-            ]
-      SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-      {
-        ?article schema:about ?item .
-        ?article schema:inLanguage "en" .
-        ?article schema:isPartOf <https://en.wikipedia.org/>
-      }
-    } 
-`,
-    true,
-  );
+  let items = [];
+  const cached = await getWikidataCache(botID);
 
-  const ignoreList = [
-    "Columbus Circle",
-    "Christopher Columbus",
-    "Edward Colston",
-    "George Davis",
-    "George Washington",
-    "James Cook",
-    "Joseph Bryan",
-    "Margaret Thatcher",
-    "Reiterdenkmal",
-    "Raphael Semmes",
-    "Roger B. Taney",
-    "Williams Carter Wickham",
-    "confederate general",
-  ];
+  if (!cached || cached.isStale) {
+    const freshItems = await queryWikidata(WIKIDATA_QUERY, true);
+    if (freshItems.length) {
+      await saveWikidataCache(botID, freshItems);
+      items = freshItems;
+    } else if (cached) {
+      console.log(`${botID}: live fetch failed, using stale cache`);
+      items = cached.data;
+    }
+  } else {
+    items = cached.data;
+  }
 
   items = items.filter(
     (item) =>
@@ -56,6 +73,11 @@ const botScript = async () => {
   );
 
   const item = randomFromArray(items);
+
+  if (!item) {
+    console.log(`${botID}: no items found`);
+    return;
+  }
 
   if (item.label === item.wikidataId) {
     item.label = await getWikidataLabel(item);

@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 import scheduleBot from "./scheduleBot.js";
 import getFediverseAccountInfo from "./getFediverseAccountInfo.js";
 import capitalizeFirstLetter from "./capitalizeFirstLetter.js";
+import sleep from "./sleep.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -67,20 +68,31 @@ export const loadBotInfo = (app) => {
 
 export const scheduleBots = async (bots, app) => {
   let botCount = 0;
+  let replyBotIndex = 0;
 
-  for (const botInfo of bots) {
-    const { about, script_path: scriptPath } = botInfo;
-    if (fs.existsSync(scriptPath)) {
-      const botScript = await import(scriptPath);
-      botInfo.script = botScript;
+  const botsWithDelay = bots.map((botInfo) => {
+    const replyDelay = botInfo.about.reply ? replyBotIndex++ * 1000 : 0;
+    return { botInfo, replyDelay };
+  });
 
-      if (about.active && botScript) {
-        botCount++;
-        const job = await scheduleBot(botInfo, app);
-        botInfo.cronjob = job;
+  await Promise.all(
+    botsWithDelay.map(async ({ botInfo, replyDelay }) => {
+      const { about, script_path: scriptPath } = botInfo;
+      if (fs.existsSync(scriptPath)) {
+        const botScript = await import(scriptPath);
+        botInfo.script = botScript;
+
+        if (about.active && botScript) {
+          if (replyDelay) {
+            await sleep(replyDelay);
+          }
+          const job = await scheduleBot(botInfo, app);
+          botInfo.cronjob = job;
+          botCount++;
+        }
       }
-    }
-  }
+    })
+  );
 
   app.set("bots_scheduled", true);
   console.log(`🤖 scheduled ${botCount.toLocaleString()} bot(s)`);

@@ -1,13 +1,7 @@
-import fs from "fs";
 import cheerio from "cheerio";
 import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
-
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import db from "./../../modules/db.js";
 
 const getItems = (html, statusLabel) => {
   let items = [];
@@ -57,7 +51,7 @@ const botScript = async () => {
       await page.setDefaultNavigationTimeout(120000);
 
       page.setUserAgent(
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
       );
 
       page.on("load", async (response) => {
@@ -71,76 +65,51 @@ const botScript = async () => {
 
         console.log(`found ${releasedCurrent.length} item(s) under "Released"`);
         console.log(
-          `found ${nextReleaseCurrent.length} item(s) under "Next release"`
+          `found ${nextReleaseCurrent.length} item(s) under "Next release"`,
         );
         console.log(
-          `found ${exploringCurrent.length} item(s) under "Exploring"`
+          `found ${exploringCurrent.length} item(s) under "Exploring"`,
         );
 
-        const dataPath = `${__dirname}/../../temp/mastodon-roadmap`;
-
-        let releasedSaved = [],
-          nextReleaseSaved = [],
-          exploringSaved = [];
-        let releasedNew = [],
-          nextReleaseNew = [],
-          exploringNew = [];
-
-        if (!fs.existsSync(dataPath)) {
-          fs.mkdirSync(dataPath);
-        }
-
-        if (fs.existsSync(`${dataPath}/released.json`)) {
-          releasedSaved = JSON.parse(
-            fs.readFileSync(`${dataPath}/released.json`, "utf8")
-          );
-        } else {
-          releasedSaved = [];
-        }
-
-        if (fs.existsSync(`${dataPath}/nextRelease.json`)) {
-          nextReleaseSaved = JSON.parse(
-            fs.readFileSync(`${dataPath}/nextRelease.json`, "utf8")
-          );
-        } else {
-          nextReleaseSaved = [];
-        }
-
-        if (fs.existsSync(`${dataPath}/exploring.json`)) {
-          exploringSaved = JSON.parse(
-            fs.readFileSync(`${dataPath}/exploring.json`, "utf8")
-          );
-        } else {
-          exploringSaved = [];
-        }
-
-        const releasedIDs = releasedSaved.map((item) => item.id);
-        const nextReleaseIDs = nextReleaseSaved.map((item) => item.id);
-        const exploringIDs = exploringSaved.map((item) => item.id);
-
-        releasedNew = releasedCurrent.filter(
-          (item) => !releasedIDs.includes(item.id)
+        const [savedRows] = await db.execute(
+          /* sql */ `SELECT item_id, category FROM mastodon_roadmap_items`,
         );
-        nextReleaseNew = nextReleaseCurrent.filter(
-          (item) => !nextReleaseIDs.includes(item.id)
+
+        const savedIDs = {
+          released: savedRows
+            .filter((r) => r.category === "released")
+            .map((r) => r.item_id),
+          nextRelease: savedRows
+            .filter((r) => r.category === "nextRelease")
+            .map((r) => r.item_id),
+          exploring: savedRows
+            .filter((r) => r.category === "exploring")
+            .map((r) => r.item_id),
+        };
+
+        const releasedNew = releasedCurrent.filter(
+          (item) => !savedIDs.released.includes(item.id),
         );
-        exploringNew = exploringCurrent.filter(
-          (item) => !exploringIDs.includes(item.id)
+        const nextReleaseNew = nextReleaseCurrent.filter(
+          (item) => !savedIDs.nextRelease.includes(item.id),
+        );
+        const exploringNew = exploringCurrent.filter(
+          (item) => !savedIDs.exploring.includes(item.id),
         );
 
         console.log("checking new items...");
 
         console.log(
           `found ${releasedNew.length} item(s) under "Released"`,
-          releasedNew
+          releasedNew,
         );
         console.log(
           `found ${nextReleaseNew.length} item(s) under "Next release"`,
-          nextReleaseNew
+          nextReleaseNew,
         );
         console.log(
           `found ${exploringNew.length} item(s) under "Exploring"`,
-          exploringNew
+          exploringNew,
         );
 
         let text = "";
@@ -171,32 +140,21 @@ const botScript = async () => {
           });
         }
 
-        fs.writeFileSync(
-          `${dataPath}/released.json`,
-          JSON.stringify(releasedSaved.concat(releasedNew)),
-          "utf8",
-          (error) => {
-            if (error) console.log(error);
-          }
-        );
+        const newItems = [
+          ...releasedNew.map((item) => ({ ...item, category: "released" })),
+          ...nextReleaseNew.map((item) => ({
+            ...item,
+            category: "nextRelease",
+          })),
+          ...exploringNew.map((item) => ({ ...item, category: "exploring" })),
+        ];
 
-        fs.writeFileSync(
-          `${dataPath}/nextRelease.json`,
-          JSON.stringify(nextReleaseSaved.concat(nextReleaseNew)),
-          "utf8",
-          (error) => {
-            if (error) console.log(error);
-          }
-        );
-
-        fs.writeFileSync(
-          `${dataPath}/exploring.json`,
-          JSON.stringify(exploringSaved.concat(exploringNew)),
-          "utf8",
-          (error) => {
-            if (error) console.log(error);
-          }
-        );
+        for (const item of newItems) {
+          await db.execute(
+            /* sql */ `INSERT IGNORE INTO mastodon_roadmap_items (item_id, category, label, description) VALUES (?, ?, ?, ?)`,
+            [item.id, item.category, item.label, item.description || ""],
+          );
+        }
       });
 
       try {

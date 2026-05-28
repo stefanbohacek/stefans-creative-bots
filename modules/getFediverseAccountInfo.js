@@ -1,6 +1,5 @@
-import fs from "fs/promises";
-import path from "path";
 import sleep from "./sleep.js";
+import db from "./db.js";
 
 export default async (fediverseLinkURL) => {
   const url = new URL(fediverseLinkURL);
@@ -9,53 +8,37 @@ export default async (fediverseLinkURL) => {
 
   if (["stefanbohacek.online"].includes(server)) {
     console.log(
-      `getFediverseAccountInfo: loading data for @${username}@${server}...`
+      `getFediverseAccountInfo: loading data for @${username}@${server}...`,
     );
 
-    const filename = `@${username}@${server}.json`;
-    const dataDir = "./temp/fediverse";
-    const filePath = path.join(dataDir, filename);
+    const [cachedRows] = await db.execute(
+      /* sql */ `SELECT * FROM fediverse_account_info
+       WHERE username = ? AND server = ? AND fetched_at > NOW() - INTERVAL 3 HOUR`,
+      [username, server],
+    );
 
-    try {
-      await fs.mkdir(dataDir, { recursive: true });
-    } catch (error) {
-      console.log(
-        `getFediverseAccountInfo error: @${username}@${server}`,
-        error
-      );
-    }
-
-    let shouldFetch = true;
-
-    try {
-      const stats = await fs.stat(filePath);
-      const fileAge = Date.now() - stats.mtime.getTime();
-      const fileAgeThreshold = 3 * 60 * 60 * 1000;
-
-      if (fileAge < fileAgeThreshold) {
-        shouldFetch = false;
-        const cachedData = await fs.readFile(filePath, "utf8");
-        return JSON.parse(cachedData);
-      }
-    } catch (error) {
-      shouldFetch = true;
-    }
-
-    if (!shouldFetch) {
-      const cachedData = await fs.readFile(filePath, "utf8");
-      return JSON.parse(cachedData);
+    if (cachedRows.length) {
+      return {
+        displayName: cachedRows[0].display_name,
+        avatar: cachedRows[0].avatar,
+        followers: cachedRows[0].followers,
+        following: cachedRows[0].following_count,
+        posts: cachedRows[0].posts,
+        last_status_at: cachedRows[0].last_status_at,
+        fetchedAt: cachedRows[0].fetched_at,
+      };
     }
 
     try {
       await sleep(1000);
       const resp = await fetch(
-        `https://${server}/api/v1/accounts/lookup?acct=${username}`
+        `https://${server}/api/v1/accounts/lookup?acct=${username}`,
       );
 
       if (!resp.ok) {
         console.log(
           `getFediverseAccountInfo error: @${username}@${server}`,
-          resp.statusText
+          resp.statusText,
         );
         return {};
       }
@@ -76,25 +59,59 @@ export default async (fediverseLinkURL) => {
         fetchedAt: new Date().toISOString(),
       };
 
-      await fs.writeFile(filePath, JSON.stringify(result, null, 2), "utf8");
+      await db.execute(
+        /* sql */ `INSERT INTO fediverse_account_info
+         (username, server, display_name, avatar, followers, following_count, posts, last_status_at, fetched_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())
+         ON DUPLICATE KEY UPDATE
+           display_name = VALUES(display_name),
+           avatar = VALUES(avatar),
+           followers = VALUES(followers),
+           following_count = VALUES(following_count),
+           posts = VALUES(posts),
+           last_status_at = VALUES(last_status_at),
+           fetched_at = NOW()`,
+        [
+          username,
+          server,
+          result.displayName,
+          result.avatar,
+          result.followers,
+          result.following,
+          result.posts,
+          result.last_status_at,
+        ],
+      );
 
       return result;
     } catch (error) {
       console.log(
         `getFediverseAccountInfo error: @${username}@${server}`,
-        error
+        error,
       );
 
-      try {
-        const cachedData = await fs.readFile(filePath, "utf8");
-        return JSON.parse(cachedData);
-      } catch (cacheError) {
-        console.log(
-          `getFediverseAccountInfo error: @${username}@${server}`,
-          error
-        );
-        return {};
+      const [staleRows] = await db.execute(
+        /* sql */ `SELECT * FROM fediverse_account_info WHERE username = ? AND server = ?`,
+        [username, server],
+      );
+
+      if (staleRows.length) {
+        return {
+          displayName: staleRows[0].display_name,
+          avatar: staleRows[0].avatar,
+          followers: staleRows[0].followers,
+          following: staleRows[0].following_count,
+          posts: staleRows[0].posts,
+          last_status_at: staleRows[0].last_status_at,
+          fetchedAt: staleRows[0].fetched_at,
+        };
       }
+
+      console.log(
+        `getFediverseAccountInfo error: @${username}@${server}`,
+        error,
+      );
+      return {};
     }
   } else {
     return {};

@@ -1,13 +1,7 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-import fs from 'fs';
 import fetch from 'node-fetch';
 import mastodonClient from "./../../modules/mastodon/index.js";
 import truncate from "./../../modules/truncate.js";
+import db from "./../../modules/db.js";
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -15,7 +9,6 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  let apps;
   const defaultApps = [
     {
       "app": "Mastodon for Android",
@@ -33,13 +26,11 @@ const botScript = async () => {
     }
   ];
 
-  const savedDataPath = __dirname + "/../../temp/mastodon_mobile_apps.json";
+  const [rows] = await db.execute(
+    /* sql */`SELECT app, platform, github_repo, app_download, current_version FROM mastodon_mobile_apps`
+  );
 
-  if (fs.existsSync(savedDataPath)) {
-    apps = JSON.parse(fs.readFileSync(savedDataPath, "utf8"));
-  } else {
-    apps = defaultApps;
-  }
+  const apps = rows.length ? rows : defaultApps;
 
   console.log("checking Mastodon mobile app versions... ");
 
@@ -49,12 +40,12 @@ const botScript = async () => {
     const response = await fetch(`https://api.github.com/repos/${app.github_repo}/releases`);
     const data = await response.json();
 
-    if (data && data.length){
+    if (data && data.length) {
       const currentRelease = data[0];
 
-      if (app.current_version !== currentRelease.tag_name){
+      if (app.current_version !== currentRelease.tag_name) {
         console.log(`found new ${app.platform} version: ${currentRelease.tag_name} (current: ${app.current_version})`);
-        
+
         app.current_version = currentRelease.tag_name;
         let status = `New ${app.platform} release (${currentRelease.tag_name})!\n\n${currentRelease.body ? truncate(currentRelease.body, 400) : ""}`;
         status += `\n\n- https://github.com/${app.github_repo}/releases\n- ${app.app_download}\n\n#mastodon #update #release #${app.platform.toLowerCase()}`;
@@ -66,7 +57,14 @@ const botScript = async () => {
       }
     }
   }, Promise.resolve());
-  fs.writeFileSync(savedDataPath, JSON.stringify(apps, null, 2), "utf8");
+
+  for (const app of apps) {
+    await db.execute(
+      /* sql */`INSERT INTO mastodon_mobile_apps (app, platform, github_repo, app_download, current_version) VALUES (?, ?, ?, ?, ?)
+       ON DUPLICATE KEY UPDATE current_version = VALUES(current_version)`,
+      [app.app, app.platform, app.github_repo, app.app_download, app.current_version]
+    );
+  }
 };
 
 export default botScript;

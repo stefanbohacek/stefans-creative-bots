@@ -18,11 +18,11 @@ export default async (bot, app) => {
             event: message.event,
             id: message.data.id,
             created_at: message.data.created_at,
-            in_reply_to_id: message.data.status.in_reply_to_id,
-            in_reply_to_account_id: message.data.status.in_reply_to_account_id,
-            visibility: message.data.status.visibility,
-            content: message.data.status.content,
-            mentions: message.data.status.mentions,
+            in_reply_to_id: message.data?.status?.in_reply_to_id,
+            in_reply_to_account_id: message.data?.status?.in_reply_to_account_id,
+            visibility: message.data?.status?.visibility,
+            content: message.data?.status?.content || message.data?.content || "",
+            mentions: message.data?.status?.mentions,
             account_id: message.data.account.id,
             account_username: message.data.account.username,
             account_display_name: message.data.account.display_name,
@@ -35,7 +35,7 @@ export default async (bot, app) => {
             // console.log("message.data", message.data);
             const from = message.data.account.acct;
             const statusID = message.data.id;
-            const text = convert(message.data.content);
+            const text = convert(message.data?.status?.content || message.data?.content || "");
             reply(statusID, from, text, message);
           }
         });

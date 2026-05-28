@@ -33,8 +33,12 @@ const checkBotPoolFn = async (app) => {
         [name],
       );
     }
+
+    setImmediate(() => checkBotPoolFn(app));
+  } else {
+    console.log(`current pool (${pool.length}):`, pool);
+    setTimeout(() => checkBotPoolFn(app), poolCheckInterval);
   }
-  console.log(`current pool (${pool.length}):`, pool);
 };
 
 export default async (app) => {
@@ -46,7 +50,5 @@ export default async (app) => {
   pool = [...new Set(pool)];
   app.set("pool", pool);
 
-  setInterval(() => {
-    checkBotPoolFn(app);
-  }, poolCheckInterval);
+  checkBotPoolFn(app);
 };

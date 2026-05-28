@@ -118,9 +118,9 @@
         </div>
       </div>
     </div>
-    <div class="row list pt-4">
+    <div class="row list pt-4 justify-content-center">
       {{#each this.bots}}
-      <div class="col-sm-12 col-md-6 col-lg-3 col-xxl-2 list-item">
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 list-item">
         {{> bot about=this.about}}
       </div>
       {{/each}}
@@ -145,7 +145,7 @@
     </div>
     <div class="row list pt-4">
       {{#each inactive_bots}}
-      <div class="col-sm-12 col-md-6 col-lg-3 col-xxl-2 list-item">
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 list-item">
         {{> bot about=this.about}}
       </div>
       {{/each}}

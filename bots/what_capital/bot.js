@@ -1,22 +1,16 @@
-﻿import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-import fs from "fs";
 import capitals from "./../../data/capitals.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
+import db from "./../../modules/db.js";
 
 const { botID } = getBotInfo(import.meta.url);
-const savedDataPath = __dirname + "/../../temp/what_capital.json";
 
 let savedData = {
   country: "",
   capital: "",
+  current_question: "",
   scores: {},
 };
 
@@ -27,18 +21,28 @@ const mastodon = new mastodonClient({
 
 const clients = { mastodon };
 
-if (fs.existsSync(savedDataPath)) {
-  savedData = JSON.parse(fs.readFileSync(savedDataPath, "utf8"));
+const [questionRows] = await db.execute(
+  /* sql */`SELECT country, capital, current_question FROM what_capital_question WHERE id = 1`
+);
+
+if (questionRows.length) {
+  savedData.country = questionRows[0].country;
+  savedData.capital = questionRows[0].capital;
+  savedData.current_question = questionRows[0].current_question;
+}
+
+const [scoreRows] = await db.execute(
+  /* sql */`SELECT username, score FROM what_capital_scores`
+);
+
+for (const row of scoreRows) {
+  savedData.scores[row.username] = row.score;
 }
 
 console.log(`loading saved data for @${botID}...`, savedData);
 // console.log(JSON.parse(savedData));
 
-const saveData = () => {
-  fs.writeFileSync(savedDataPath, JSON.stringify(savedData, null, 2), "utf8");
-};
-
-const updateScores = (user) => {
+const updateScores = async (user) => {
   const admins = [
     "stefan",
     "stefan@stefanbohacek.online",
@@ -51,7 +55,11 @@ const updateScores = (user) => {
     } else {
       savedData.scores[user] = 1;
     }
-    saveData();
+    await db.execute(
+      /* sql */`INSERT INTO what_capital_scores (username, score) VALUES (?, 1)
+       ON DUPLICATE KEY UPDATE score = score + 1`,
+      [user]
+    );
   } else {
     console.log("what_capital: skipping answer from admin");
   }
@@ -87,10 +95,14 @@ const pickNewCapital = async () => {
       image: imgData,
       alt_text: `An unspecified country flag: ${altText}`,
     },
-    (error, data) => {
+    async (error, data) => {
       console.log("question posted", data.id);
       savedData.current_question = data.id;
-      saveData();
+      await db.execute(
+        /* sql */`INSERT INTO what_capital_question (id, country, capital, current_question) VALUES (1, ?, ?, ?)
+         ON DUPLICATE KEY UPDATE country = VALUES(country), capital = VALUES(capital), current_question = VALUES(current_question)`,
+        [savedData.country, savedData.capital, data.id]
+      );
     }
   );
 };
@@ -182,7 +194,7 @@ const reply = async (postID, from, messageText, fullMessage) => {
       replyMessage = `Please make sure to reply directly to the latest question: https://stefanbohacek.online/@what_capital/${savedData.current_question}`;
     } else {
       if (checkAnswer(messageText)) {
-        updateScores(from);
+        await updateScores(from);
         replyMessage = `Yes, ${savedData.capital} is the capital of ${
           savedData.country
         }, correct! ${getLeaderboard()}`;

@@ -16,9 +16,11 @@ const categoriesConfig = JSON.parse(
 const router = express.Router();
 
 let htmlCache = null;
+let htmlCacheTime = 0;
+const HTML_CACHE_TTL = 60 * 60 * 1000;
 
 router.get("/", async (req, res) => {
-  if (htmlCache) {
+  if (htmlCache && Date.now() - htmlCacheTime < HTML_CACHE_TTL) {
     return res.send(htmlCache);
   }
 
@@ -152,6 +154,7 @@ router.get("/", async (req, res) => {
   }, (err, html) => {
     if (err) return res.status(500).send(err.message);
     htmlCache = html;
+    htmlCacheTime = Date.now();
     res.send(html);
   });
 });

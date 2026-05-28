@@ -28,5 +28,6 @@ export default {
   EVERY_DAY_LATE_MORNING: '0 14 * * *',
   EVERY_DAY_NOON: '0 17 * * *',
   EVERY_DAY_AFTERNOON: '0 19 * * *',
-  EVERY_DAY_EVENING: '0 0 * * *'
+  EVERY_DAY_EVENING: '0 0 * * *',
+  EVERY_WEEK: '0 10 * * 1',
 };

@@ -19,16 +19,19 @@ const checkBotPoolFn = async (app) => {
       // });
 
       await bot.script.default();
-
-      pool = [...new Set(pool)];
-      app.set("pool", pool);
-
-      await db.execute(/* sql */`DELETE FROM bot_pool`);
-      for (const name of pool) {
-        await db.execute(/* sql */`INSERT IGNORE INTO bot_pool (bot_name) VALUES (?)`, [name]);
-      }
     } catch (err) {
-      /* noop */
+      console.log(`${botName} error:`, err);
+    }
+
+    pool = [...new Set(pool)];
+    app.set("pool", pool);
+
+    await db.execute(/* sql */ `DELETE FROM bot_pool`);
+    for (const name of pool) {
+      await db.execute(
+        /* sql */ `INSERT IGNORE INTO bot_pool (bot_name) VALUES (?)`,
+        [name],
+      );
     }
   }
   console.log(`current pool (${pool.length}):`, pool);
@@ -36,7 +39,7 @@ const checkBotPoolFn = async (app) => {
 
 export default async (app) => {
   const [rows] = await db.execute(
-    /* sql */`SELECT bot_name FROM bot_pool ORDER BY id`
+    /* sql */ `SELECT bot_name FROM bot_pool ORDER BY id`,
   );
 
   let pool = rows.map((row) => row.bot_name);

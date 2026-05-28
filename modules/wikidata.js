@@ -10,6 +10,11 @@ export const getWikidataLabel = async (item) => {
     },
   );
 
+  if (!response.ok) {
+    console.log(`getWikidataLabel error: ${response.status} ${response.statusText}`);
+    return "";
+  }
+
   const data = await response.json();
   const entity = data.entities[item.wikidataId];
   return entity?.labels?.en?.value || entity?.labels?.mul?.value || "";
@@ -20,6 +25,12 @@ export const queryWikidata = async (query, filterImage) => {
     query,
   )}&format=json`;
   const resp = await fetch(apiUrl);
+
+  if (!resp.ok) {
+    console.log(`queryWikidata error: ${resp.status} ${resp.statusText}`);
+    return [];
+  }
+
   const respJSON = await resp.json();
   let items = respJSON?.results?.bindings || [];
 

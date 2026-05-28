@@ -17,7 +17,7 @@ dotenv.config();
 // import bot from "./bots/wikipediatopedits/bot.js";
 // import bot from "./bots/xed-your-last-y/bot.js";
 // import bot from "./bots/AuroraForecast/bot.js";
-import bot from "./bots/famicase/bot.js";
+import bot from "./bots/libraries/bot.js";
 
 try {
   bot();

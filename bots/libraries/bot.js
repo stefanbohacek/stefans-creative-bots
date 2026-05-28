@@ -31,6 +31,11 @@ const botScript = async () => {
 
   const item = randomFromArray(items);
 
+  if (!item) {
+    console.log("libraries: no items found");
+    return;
+  }
+
   if (item.label === item.wikidataId) {
     item.label = await getWikidataLabel(item);
   }

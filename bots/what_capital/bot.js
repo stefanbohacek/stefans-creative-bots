@@ -85,7 +85,7 @@ const pickNewCapital = async () => {
   let altText = capital.flag_description;
 
   if (capital.flag_description.length > 1000) {
-    altText = capital.flag_description.slice(0, 2) + "...";
+    altText = capital.flag_description.slice(0, 997) + "...";
   }
 
   await mastodon.postImage(

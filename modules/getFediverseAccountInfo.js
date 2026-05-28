@@ -1,6 +1,16 @@
 import sleep from "./sleep.js";
 import db from "./db.js";
 
+export const mapFediverseRow = (row) => ({
+  displayName: row.display_name,
+  avatar: row.avatar,
+  followers: row.followers,
+  following: row.following_count,
+  posts: row.posts,
+  last_status_at: row.last_status_at,
+  fetchedAt: row.fetched_at,
+});
+
 export default async (fediverseLinkURL) => {
   const url = new URL(fediverseLinkURL);
   const server = url.hostname;
@@ -18,15 +28,7 @@ export default async (fediverseLinkURL) => {
     );
 
     if (cachedRows.length) {
-      return {
-        displayName: cachedRows[0].display_name,
-        avatar: cachedRows[0].avatar,
-        followers: cachedRows[0].followers,
-        following: cachedRows[0].following_count,
-        posts: cachedRows[0].posts,
-        last_status_at: cachedRows[0].last_status_at,
-        fetchedAt: cachedRows[0].fetched_at,
-      };
+      return mapFediverseRow(cachedRows[0]);
     }
 
     const [lockResult] = await db.execute(
@@ -42,15 +44,7 @@ export default async (fediverseLinkURL) => {
       );
 
       if (staleRows.length && staleRows[0].display_name) {
-        return {
-          displayName: staleRows[0].display_name,
-          avatar: staleRows[0].avatar,
-          followers: staleRows[0].followers,
-          following: staleRows[0].following_count,
-          posts: staleRows[0].posts,
-          last_status_at: staleRows[0].last_status_at,
-          fetchedAt: staleRows[0].fetched_at,
-        };
+        return mapFediverseRow(staleRows[0]);
       }
 
       return {};
@@ -124,15 +118,7 @@ export default async (fediverseLinkURL) => {
       );
 
       if (staleRows.length && staleRows[0].display_name) {
-        return {
-          displayName: staleRows[0].display_name,
-          avatar: staleRows[0].avatar,
-          followers: staleRows[0].followers,
-          following: staleRows[0].following_count,
-          posts: staleRows[0].posts,
-          last_status_at: staleRows[0].last_status_at,
-          fetchedAt: staleRows[0].fetched_at,
-        };
+        return mapFediverseRow(staleRows[0]);
       }
 
       console.log(

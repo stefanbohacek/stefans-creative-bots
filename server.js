@@ -13,13 +13,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
   const bots = loadBotInfo(app);
   app.set("bots", bots);
   const listener = app.listen(process.env.PORT || 3000, async () => {
-    await checkBotPool(app);
     cronJobs();
 
     console.log(`🖥️ running on port ${listener.address().port}`);
     console.log(`🕒 server time: ${new Date().toTimeString()}`);
 
     loadFediverseAccountData(bots);
-    scheduleBots(bots, app);
+    await scheduleBots(bots, app);
+    await checkBotPool(app);
   });
 })();

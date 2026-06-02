@@ -9,7 +9,7 @@ const botScript = async () => {
 
   console.log("generating a dataset... ");
 
-  const response = await fetch("https://thisdatasetdoesnotexist.com/generate");
+  const response = await fetch("https://thisdatasetdoesnotexist.stefanbohacek.com/generate");
   const responseJSON = await response.json();
 
   if (responseJSON && responseJSON.dataset) {

@@ -36,9 +36,9 @@ const botScript = async () => {
           const page = await browser.newPage();
           await page.setDefaultNavigationTimeout(120000);
 
-          // console.log("loading exoplanet data...", {
-          //   url,
-          // });
+          console.log("loading exoplanet data...", {
+            url,
+          });
 
           process.on("unhandledRejection", (reason, p) => {
             console.error(
@@ -50,7 +50,7 @@ const botScript = async () => {
             browser.disconnect();
           });
 
-          page.setUserAgent(
+          await page.setUserAgent(
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
           );
 
@@ -61,7 +61,7 @@ const botScript = async () => {
             timeout: 120000,
           });
 
-          await page.waitForSelector("#entrySubtitleId", {
+          await page.waitForSelector(".info-panel .subtitle", {
             timeout: 120000,
           });
           await page.waitForTimeout(10000);
@@ -72,7 +72,7 @@ const botScript = async () => {
 
           // const planetDescription = $('#entrySubtitleId').text();
 
-          element = await page.$("#entrySubtitleId");
+          element = await page.$(".info-panel .subtitle");
 
           if (element) {
             planetDescription = await page.evaluate(
@@ -90,7 +90,6 @@ const botScript = async () => {
               element
             );
           }
-
           // console.log({
           //   planetDescription,
           //   planetDistance,
@@ -141,7 +140,7 @@ const botScript = async () => {
             description += `\nEquilibrium temperature: ${randomPlanet.pl_eqt}° K`;
           }
 
-          await page.addStyleTag({ content: ".ui{display: none}" });
+          await page.addStyleTag({ content: ".headerBar, #dropUpId, #sideId, .info-panel, footer, .toggle-ui-mobile { display: none !important; }" });
 
           try {
             const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;

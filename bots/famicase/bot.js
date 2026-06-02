@@ -185,46 +185,44 @@ const botScript = async () => {
     browserWSEndpoint: process.env.BROWSERLESS_URL,
   });
 
-  process.on("unhandledRejection", (reason, p) => {
-    console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-    browser.disconnect();
-  });
+  try {
+    const page = await browser.newPage();
 
-  const page = await browser.newPage();
+    await page.setUserAgent(getUserAgent());
+    await page.setDefaultNavigationTimeout(120000);
 
-  await page.setUserAgent(getUserAgent());
-  await page.setDefaultNavigationTimeout(120000);
+    // const game = await findGame(page, 24);
+    // const game = await findGame(page, 8);
+    const game = await findGame(page);
 
-  // const game = await findGame(page, 24);
-  // const game = await findGame(page, 8);
-  const game = await findGame(page);
+    if (!game) {
+      console.log(`@${botID}: no game found`);
+      return;
+    }
 
-  if (!game) {
-    console.log(`@${botID}: no game found`);
+    console.log(`@${botID}: found game`, { game });
+
+    const imgData = await downloadFileAsBase64(game.cartridgeImage);
+    const language = isTextJapanese(game.description) ? "ja" : "en";
+
+    const status = [
+      `${game.title} by ${game.author}`,
+      game.description,
+      game.url,
+      "#famicase #art #exhibition #games #videogames #design",
+    ].join("\n\n");
+
+    await mastodon.postImage({
+      status,
+      image: imgData,
+      alt_text: "Game cartridge from the linked website.",
+      language,
+    });
+  } catch (err) {
+    console.error(`@${botID} error:`, err);
+  } finally {
     await browser.disconnect();
-    return;
   }
-
-  console.log(`@${botID}: found game`, { game });
-
-  const imgData = await downloadFileAsBase64(game.cartridgeImage);
-  const language = isTextJapanese(game.description) ? "ja" : "en";
-
-  const status = [
-    `${game.title} by ${game.author}`,
-    game.description,
-    game.url,
-    "#famicase #art #exhibition #games #videogames #design",
-  ].join("\n\n");
-
-  await mastodon.postImage({
-    status,
-    image: imgData,
-    alt_text: "Game cartridge from the linked website.",
-    language,
-  });
-
-  await browser.disconnect();
 };
 
 export default botScript;

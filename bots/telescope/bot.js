@@ -14,15 +14,11 @@ const botScript = async () => {
       api_url: process.env.MASTODON_API_URL,
     });
 
+    let browser;
     try {
       // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
-      const browser = await puppeteer.connect({
+      browser = await puppeteer.connect({
         browserWSEndpoint: process.env.BROWSERLESS_URL,
-      });
-
-      process.on("unhandledRejection", (reason, p) => {
-        console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-        browser.disconnect();
       });
 
       const page = await browser.newPage();
@@ -132,9 +128,12 @@ const botScript = async () => {
         });
       }
 
-      await browser.disconnect();
     } catch (error) {
       console.log("telescope:error", error);
+    } finally {
+      if (browser) {
+        await browser.disconnect();
+      }
     }
   })();
 };

@@ -13,6 +13,7 @@ const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   await (async () => {
+    let browser;
     try {
       const mastodon = new mastodonClient({
         access_token: process.env.NORTHPOLEVIEWS_MASTODON_ACCESS_TOKEN_SECRET,
@@ -25,7 +26,7 @@ const botScript = async () => {
 
       // const station = randomFromArray(stations.filter(s => s.name === "Troll research station"));
       // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
-      const browser = await puppeteer.connect({
+      browser = await puppeteer.connect({
         browserWSEndpoint: process.env.BROWSERLESS_URL,
       });
 
@@ -35,15 +36,7 @@ const botScript = async () => {
       if (station.image_url) {
         imageURL = station.image_url;
       } else {
-        process.on("unhandledRejection", (reason, p) => {
-          console.error(
-            "Unhandled Rejection at: Promise",
-            p,
-            "reason:",
-            reason
-          );
-          browser.disconnect();
-        });
+
 
         const page = await browser.newPage();
         page.setUserAgent(
@@ -79,7 +72,6 @@ const botScript = async () => {
             station
           );
         }
-        await browser.disconnect();
       }
 
       if (imageURL) {
@@ -120,6 +112,10 @@ const botScript = async () => {
       }
     } catch (error) {
       console.log(`@${botID} error`, error);
+    } finally {
+      if (browser) {
+        await browser.disconnect();
+      }
     }
   })();
 };

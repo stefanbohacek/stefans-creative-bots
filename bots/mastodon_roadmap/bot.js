@@ -32,19 +32,15 @@ const getItems = (html, statusLabel) => {
 
 const botScript = async () => {
   await (async () => {
+    let browser;
     try {
       const mastodon = new mastodonClient({
         access_token: process.env.MASTODON_ROADMAP_BOT_ACCESS_TOKEN_SECRET,
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const browser = await puppeteer.connect({
+      browser = await puppeteer.connect({
         browserWSEndpoint: process.env.BROWSERLESS_URL,
-      });
-
-      process.on("unhandledRejection", (reason, p) => {
-        console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-        browser.disconnect();
       });
 
       const page = await browser.newPage();
@@ -163,12 +159,13 @@ const botScript = async () => {
         });
       } catch (error) {
         console.log(error);
-        browser.disconnect();
       }
-
-      await browser.disconnect();
     } catch (error) {
       console.log("mastodon roadmap error", error);
+    } finally {
+      if (browser) {
+        await browser.disconnect();
+      }
     }
   })();
 };

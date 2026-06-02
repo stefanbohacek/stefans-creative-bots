@@ -14,18 +14,14 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
+  let browser;
   try {
-    const browser = await puppeteer.connect({
+    browser = await puppeteer.connect({
       browserWSEndpoint: process.env.BROWSERLESS_URL,
     });
 
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(30000);
-
-    process.on("unhandledRejection", (reason, p) => {
-      console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-      browser.disconnect();
-    });
 
     page.setUserAgent(
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
@@ -70,10 +66,12 @@ const botScript = async () => {
         `@HelloWorld screenshot error on line ${err.lineNumber}: ${err.message}`,
       );
     }
-
-    await browser.disconnect();
   } catch (err) {
     console.log(`@HelloWorld error on line ${err.lineNumber}: ${err.message}`);
+  } finally {
+    if (browser) {
+      await browser.disconnect();
+    }
   }
 };
 

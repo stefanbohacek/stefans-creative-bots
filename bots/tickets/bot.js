@@ -99,33 +99,32 @@ const botScript = async () => {
       browserWSEndpoint: process.env.BROWSERLESS_URL,
     });
 
-    process.on("unhandledRejection", (reason, p) => {
-      console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-      browser.disconnect();
-    });
+    try {
+      const page = await browser.newPage();
+      page.setUserAgent(
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+      );
 
-    const page = await browser.newPage();
-    page.setUserAgent(
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-    );
+      await page.setDefaultNavigationTimeout(120000);
 
-    await page.setDefaultNavigationTimeout(120000);
+      const link = await findTicket(page);
+      const ticket = await getTicket(page, link);
 
-    const link = await findTicket(page);
-    const ticket = await getTicket(page, link);
+      console.log({ link, ticket });
 
-    console.log({ link, ticket });
+      const imgData = await downloadFileAsBase64(ticket.ticket);
+      const status = `${ticket.name}\n${ticket.description}\nVia ${link} #trains #tickets #transit #travel`;
 
-    const imgData = await downloadFileAsBase64(ticket.ticket);
-    const status = `${ticket.name}\n${ticket.description}\nVia ${link} #trains #tickets #transit #travel`;
-
-    await mastodon.postImage({
-      status,
-      image: imgData,
-      alt_text: `Picture of a public transportation ticket from attached website, usually for a train or bus.`,
-    });
-
-    await browser.disconnect();
+      await mastodon.postImage({
+        status,
+        image: imgData,
+        alt_text: `Picture of a public transportation ticket from attached website, usually for a train or bus.`,
+      });
+    } catch (err) {
+      console.error(`@${botID} error:`, err);
+    } finally {
+      await browser.disconnect();
+    }
   })();
 };
 

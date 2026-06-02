@@ -85,32 +85,31 @@ const botScript = async () => {
     });
     
 
-    process.on("unhandledRejection", (reason, p) => {
-      console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-      browser.disconnect();
-    });
+    try {
+      const page = await browser.newPage();
+      page.setUserAgent(
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+      );
 
-    const page = await browser.newPage();
-    page.setUserAgent(
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-    );
+      await page.setDefaultNavigationTimeout(120000);
 
-    await page.setDefaultNavigationTimeout(120000);
+      const galaxies = await findGalaxy(page);
+      // console.log({ galaxies });
 
-    const galaxies = await findGalaxy(page);
-    // console.log({ galaxies });
+      const galaxy = randomFromArray(galaxies);
+      const imgData = await downloadFileAsBase64(galaxy.image);
+      const status = `${galaxy.group_name}: ${galaxy.url}\n\n#space #astronomy #galaxy`;
 
-    const galaxy = randomFromArray(galaxies);
-    const imgData = await downloadFileAsBase64(galaxy.image);
-    const status = `${galaxy.group_name}: ${galaxy.url}\n\n#space #astronomy #galaxy`;
-
-    await mastodon.postImage({
-      status,
-      image: imgData,
-      alt_text: "Color mosaics showing the data (left panel), model (middle panel), and residuals (right panel).",
-    });
-
-    await browser.disconnect();
+      await mastodon.postImage({
+        status,
+        image: imgData,
+        alt_text: "Color mosaics showing the data (left panel), model (middle panel), and residuals (right panel).",
+      });
+    } catch (err) {
+      console.error(`@${botID} error:`, err);
+    } finally {
+      await browser.disconnect();
+    }
   })();
 };
 

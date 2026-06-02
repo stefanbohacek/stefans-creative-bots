@@ -104,8 +104,9 @@ const waveFlag = async (page, flagData) => {
 
 const botScript = async () => {
   await (async () => {
+    let browser;
     try {
-      const browser = await puppeteer.connect({
+      browser = await puppeteer.connect({
         browserWSEndpoint: process.env.BROWSERLESS_URL,
       });
 
@@ -113,11 +114,6 @@ const botScript = async () => {
       await page.setDefaultNavigationTimeout(30000);
 
       console.log("making a new pirate flag...");
-
-      process.on("unhandledRejection", (reason, p) => {
-        console.error("Unhandled Rejection at: Promise", p, "reason:", reason);
-        browser.disconnect();
-      });
 
       page.setUserAgent(
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
@@ -127,9 +123,12 @@ const botScript = async () => {
 
       const flagData = await makeFlag(page);
       await waveFlag(page, flagData);
-      await browser.disconnect();
     } catch (err) {
       console.log(`@pirateflags botScript error:`, err);
+    } finally {
+      if (browser) {
+        await browser.disconnect();
+      }
     }
   })();
 };

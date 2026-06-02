@@ -1,4 +1,4 @@
-﻿import getRandomHex from "./../../modules/getRandomHex.js";
+import getRandomHex from "./../../modules/getRandomHex.js";
 import shadeColor from "./../../modules/shadeColor.js";
 import invertColor from "./../../modules/invertColor.js";
 
@@ -21,13 +21,12 @@ const botScript = async () => {
       height: 480,
     };
 
-  spiralGenerator(options, (err, image) => {
-    await mastodon.postImage({
-      status,
-      image,
-      alt_text: `Animated spiral.`,
-    });
-  });  
+  const image = await spiralGenerator(options);
+  await mastodon.postImage({
+    status,
+    image,
+    alt_text: `Animated spiral.`,
+  });
 }
 
 

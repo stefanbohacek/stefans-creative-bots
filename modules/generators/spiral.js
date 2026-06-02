@@ -7,6 +7,7 @@ import concat from 'concat-stream';
 import getRandomRange from  '../getRandomRange.js';
 
 export default (options, cb) => {
+  return new Promise((resolve) => {
   /* http://jsfiddle.net/X2gp3/ */
 
   console.log('drawing a spiral...');
@@ -20,9 +21,11 @@ export default (options, cb) => {
       colorBackground = options.background || '#fff';
 
   encoder.createReadStream().pipe(concat((data) => {
+    const result = data.toString('base64');
     if (cb){
-      cb(null, data.toString('base64'));
+      cb(null, result);
     }
+    resolve(result);
   }));
 
   encoder.start();
@@ -80,4 +83,5 @@ export default (options, cb) => {
 
   encoder.finish();
   console.log('gif finished...');
+  });
 }

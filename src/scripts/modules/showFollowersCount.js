@@ -1,3 +1,18 @@
+const formatLastPost = (dateStr) => {
+  if (!dateStr) {
+    return null;
+  }
+  const date = new Date(dateStr);
+  const diffDays = Math.floor((Date.now() - date) / (1000 * 60 * 60 * 24));
+  if (diffDays === 0) {
+    return "today";
+  }
+  if (diffDays === 1) {
+    return "yesterday";
+  }
+  return `${diffDays.toLocaleString()} days ago`;
+};
+
 const loadFollowersForCard = async (card) => {
   const botLinks = card.querySelector(".bot-links");
 
@@ -19,6 +34,18 @@ const loadFollowersForCard = async (card) => {
             followersCountEl.innerHTML = `${respJSON.followers.toLocaleString()} followers`;
             followersCountEl.classList.remove("d-none");
           }
+
+          if (respJSON.last_status_at) {
+            const lastPostEl = card.querySelector(".last-post");
+            const lastPostTimeEl = card.querySelector(".last-post-time");
+            if (lastPostEl && lastPostTimeEl) {
+              lastPostTimeEl.textContent = formatLastPost(
+                respJSON.last_status_at,
+              );
+              lastPostEl.classList.remove("d-none");
+            }
+          }
+
           followersCountEl.dataset.checked = "true";
         } catch (error) {
           console.error("showFollowersCount error:", error);
@@ -59,6 +86,17 @@ const prefillFollowerCounts = async (cards) => {
           followersCountEl.innerHTML = `${accountData.followers.toLocaleString()} followers`;
           followersCountEl.classList.remove("d-none");
           followersCountEl.dataset.checked = "true";
+        }
+      }
+
+      if (accountData?.last_status_at) {
+        const lastPostEl = card.querySelector(".last-post");
+        const lastPostTimeEl = card.querySelector(".last-post-time");
+        if (lastPostEl && lastPostTimeEl) {
+          lastPostTimeEl.textContent = formatLastPost(
+            accountData.last_status_at,
+          );
+          lastPostEl.classList.remove("d-none");
         }
       }
     }

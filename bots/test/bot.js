@@ -1,42 +1,73 @@
-import { exec } from "node:child_process";
-import util from "node:util";
+import webcams from "./../../data/webcams/nyc.js";
+import mastodonClient from "./../../modules/mastodon/index.js";
+import captureEarthcamLiveStream from "./../../modules/captureEarthcamLiveStream.js";
+import getWeather from "./../../modules/getWeather.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
+import { getNextItem } from "../../modules/rotationQueue.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+process.on("unhandledRejection", (reason, p) => {
+  console.error("NYCVIEWSBOT unhandledRejection:", reason);
+});
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const { botID } = getBotInfo(import.meta.url);
 
-const execPromise = util.promisify(exec);
+const botScript = async (params) => {
+  const mastodon = new mastodonClient({
+    // access_token: process.env.NYCVIEWSBOT_MASTODON_ACCESS_TOKEN,
+    access_token: process.env.MASTODON_TEST_TOKEN,
+    api_url: process.env.MASTODON_API_URL,
+  });
 
-const STREAM_URL = "https://www.youtube.com/watch?v=FuuC4dpSQ1M";
+  let webcam;
+  // const webcamId = "times_square";
+  // const webcamId = "statue_of_liberty_harborcam";
+  const webcamId = params?.webcam;
 
-const botScript = async () => {
-  console.log("testing yt-dlp...");
+  if (webcamId) {
+    const findWebcam = webcams.filter((webcam) => webcam.id === webcamId);
+    if (webcams.length > 0) {
+      webcam = findWebcam[0];
+    }
+  }
 
-  let streamUrl;
+  if (!webcam) {
+    const allWebcamIDs = webcams.map((w) => w.id);
+    const nextWebcamID = await getNextItem(botID, allWebcamIDs);
+    webcam = webcams.find((w) => w.id === nextWebcamID);
+  }
 
-  try {
-    const { stdout, stderr } = await execPromise(
-      `yt-dlp --get-url -f best "${STREAM_URL}"`,
-    );
-    streamUrl = stdout.trim();
-    console.log("yt-dlp succeeded, stream URL:", streamUrl);
-  } catch (err) {
-    console.log("yt-dlp failed:", err.message);
+  const webcamUrl = webcam.windy_id
+    ? `📷 https://www.windy.com/-Webcams/webcams/${webcam.windy_id}`
+    : `📷 ${webcam.link}`;
+
+  const image = await captureEarthcamLiveStream(webcam, botID);
+
+  if (!image || !image.path) {
+    console.log("NYCVIEWSBOT: failed to capture image");
     return;
   }
 
-  const framePath = `${__dirname}/../../temp/test-iss-frame.jpg`;
+  let weatherText = "";
 
-  try {
-    const { stdout, stderr } = await execPromise(
-      `ffmpeg -i "${streamUrl}" -frames:v 1 -y "${framePath}"`,
-    );
-    console.log("ffmpeg succeeded, frame saved to:", framePath);
-  } catch (err) {
-    console.log("ffmpeg failed:", err.message);
+  if (webcam.latitude) {
+    try {
+      const weather = await getWeather(webcam.latitude, webcam.longitude);
+      if (weather.description_full) {
+        weatherText = ` ${weather.description_full}`;
+      }
+    } catch (err) {
+      console.log("NYCVIEWSBOT: failed to fetch weather:", err);
+    }
   }
+
+  const archiveLabel = image.isArchive ? " (archived footage)" : "";
+  const status = `${webcam.title}${archiveLabel}\n\n${webcamUrl}\n\n#NYC #NewYorkCity #webcam`;
+
+  mastodon.postImage({
+    status,
+    image: image.path,
+    alt_text: `${webcam.description}${weatherText}`,
+  });
 };
 
 export default botScript;

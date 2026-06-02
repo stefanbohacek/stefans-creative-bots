@@ -1,7 +1,7 @@
 ﻿import stations from "./../../data/webcams/south-pole-stations.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/randomFromArray.js";
 import getWebcamImage from "./../../modules/getWebcamImage.js";
+import { getNextItem } from "../../modules/rotationQueue.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getWeather from "./../../modules/getWeather.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
@@ -17,20 +17,24 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const station = randomFromArray(stations);
+      const allStationIDs = stations.map((s) => s.id);
+      const nextStationID = await getNextItem(botID, allStationIDs);
+      const station = stations.find((s) => s.id === nextStationID);
       const imageFilePath = await getWebcamImage(botID, station);
 
       if (imageFilePath) {
         const luminosity = await getImageLuminosity(imageFilePath);
 
         if (luminosity > 40) {
-          let description = station.description ? station.description : `View from the ${station.name}.`;
+          let description = station.description
+            ? station.description
+            : `View from the ${station.name}.`;
           let weather;
 
           if (station.location) {
             weather = await getWeather(
               station.location.lat,
-              station.location.lon
+              station.location.lon,
             );
 
             if (weather && weather.description_full) {

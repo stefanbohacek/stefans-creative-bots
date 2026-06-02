@@ -1,9 +1,9 @@
 ﻿import webcams from "./../../data/webcams/nyc.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/randomFromArray.js";
 import captureEarthcamLiveStream from "./../../modules/captureEarthcamLiveStream.js";
 import getWeather from "./../../modules/getWeather.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
+import { getNextItem } from "../../modules/rotationQueue.js";
 
 process.on("unhandledRejection", (reason, p) => {
   console.error("NYCVIEWSBOT unhandledRejection:", reason);
@@ -31,7 +31,9 @@ const botScript = async (params) => {
   }
 
   if (!webcam) {
-    webcam = randomFromArray(webcams);
+    const allWebcamIDs = webcams.map((w) => w.id);
+    const nextWebcamID = await getNextItem(botID, allWebcamIDs);
+    webcam = webcams.find((w) => w.id === nextWebcamID);
   }
 
   const webcamUrl = webcam.windy_id

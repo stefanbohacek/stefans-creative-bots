@@ -42,12 +42,11 @@ const botScript = async () => {
     overlapAmount: getRandomInt(-5, -1),
   };
 
-  rorschachGenerator(options, (err, image) => {
-    await mastodon.postImage({
-      status,
-      image,
-      alt_text: "A randomly generated symmetrical pixelated ink blot pattern.",
-    });
+  const image = await rorschachGenerator(options);
+  await mastodon.postImage({
+    status,
+    image,
+    alt_text: "A randomly generated symmetrical pixelated ink blot pattern.",
   });
 };
 

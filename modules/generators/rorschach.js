@@ -81,7 +81,7 @@ function make2DArray(cols, rows) {
   return arr;
 }
 
-export default (options, cb) => {
+export default async (options, cb) => {
   console.log("generating ink blob pattern...");
 
   const width = options.width || 600;
@@ -179,10 +179,13 @@ export default (options, cb) => {
   let ctx = canvas.getContext("2d");
   displayGrid(ctx);
 
-  const buffer = canvas.toBuffer("image/png");
+  const result = buffer.toString("base64");
+
   if (cb) {
-    cb(null, buffer.toString("base64"));
+    cb(null, result);
   }
 
   console.log("ink blob finished...");
+
+  return result;
 };

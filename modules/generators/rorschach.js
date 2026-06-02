@@ -179,7 +179,7 @@ export default async (options, cb) => {
   let ctx = canvas.getContext("2d");
   displayGrid(ctx);
 
-  const result = buffer.toString("base64");
+  const result = canvas.toBuffer().toString("base64");
 
   if (cb) {
     cb(null, result);

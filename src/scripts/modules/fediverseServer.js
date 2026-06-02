@@ -47,7 +47,7 @@ const updateFollowLinks = async (server, knownPlatform = null) => {
   updateFsbInput(server);
 
   let platform = knownPlatform ?? "mastodon";
-  if (!knownPlatform && server !== "mastodon.social") {
+  if (!knownPlatform && server) {
     try {
       const resp = await fetch(
         `https://fediverse-info.stefanbohacek.com/node-info?domain=${server}`,
@@ -94,10 +94,12 @@ export default async () => {
       localStorage.setItem(STORAGE_KEY, param);
     }
 
-    const server = param || stored || "mastodon.social";
+    const server = param || stored || "";
     const cachedPlatform = (!param && server === stored) ? storedPlatform : null;
     input.value = server;
-    updateFollowLinks(server, cachedPlatform);
+    if (server) {
+      updateFollowLinks(server, cachedPlatform);
+    }
 
     if (!param && !stored) {
       const referrerServer = getReferrerServer();

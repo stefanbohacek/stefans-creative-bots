@@ -35,16 +35,16 @@ const loadFollowersForCard = async (card) => {
             followersCountEl.classList.remove("d-none");
           }
 
-          if (respJSON.last_status_at) {
-            const lastPostEl = card.querySelector(".last-post");
-            const lastPostTimeEl = card.querySelector(".last-post-time");
-            if (lastPostEl && lastPostTimeEl) {
-              lastPostTimeEl.textContent = formatLastPost(
-                respJSON.last_status_at,
-              );
-              lastPostEl.classList.remove("d-none");
-            }
-          }
+          // if (respJSON.last_status_at) {
+          //   const lastPostEl = card.querySelector(".last-post");
+          //   const lastPostTimeEl = card.querySelector(".last-post-time");
+          //   if (lastPostEl && lastPostTimeEl) {
+          //     lastPostTimeEl.textContent = formatLastPost(
+          //       respJSON.last_status_at,
+          //     );
+          //     lastPostEl.classList.remove("d-none");
+          //   }
+          // }
 
           followersCountEl.dataset.checked = "true";
         } catch (error) {

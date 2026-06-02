@@ -1,4 +1,5 @@
 import db from "./db.js";
+import { notifyAdmin } from "./email.js";
 
 const poolCheckInterval = 60000;
 // const poolCheckInterval = 5000;
@@ -21,12 +22,14 @@ const checkBotPoolFn = async (app) => {
       await bot.script.default();
     } catch (err) {
       console.log(`${botName} error:`, err);
+      await notifyAdmin(`${botName} error`, `<pre>${err.toString()}</pre>`);
     }
 
     pool = [...new Set(pool)];
     app.set("pool", pool);
 
     await db.execute(/* sql */ `DELETE FROM bot_pool`);
+
     for (const name of pool) {
       await db.execute(
         /* sql */ `INSERT IGNORE INTO bot_pool (bot_name) VALUES (?)`,

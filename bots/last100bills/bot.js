@@ -172,7 +172,7 @@ const botScript = async () => {
       passed_concurrentres_count + passed_simpleres_count
     } resolutions have been agreed to, ${reported_count} bills are being considered, and ${enacted_signed_count} bills have been enacted.`;
 
-    mastodon.postImage({
+    await mastodon.postImage({
       status: text,
       image: image,
       alt_text: alt,

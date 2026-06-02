@@ -83,7 +83,7 @@ const waveFlag = async (page, flagData) => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status: `${pirateTalk}\n\n#pirates #flags`,
         image: screenshotPath,
         alt_text: description,

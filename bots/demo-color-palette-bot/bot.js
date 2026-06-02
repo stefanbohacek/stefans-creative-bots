@@ -46,7 +46,7 @@ const botScript = async () => {
 
   const imageData = canvas.toBuffer().toString("base64");
 
-  mastodon.postImage({
+  await mastodon.postImage({
     status: "New color palette!",
     image: imageData,
     alt_text: description,

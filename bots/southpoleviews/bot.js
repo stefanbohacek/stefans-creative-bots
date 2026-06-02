@@ -44,7 +44,7 @@ const botScript = async () => {
 
           const status = `${station.name} via ${station.url} ${hashtags}`;
 
-          mastodon.postImage({
+          await mastodon.postImage({
             status,
             image: imageFilePath,
             alt_text: description,

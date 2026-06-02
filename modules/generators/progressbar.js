@@ -39,19 +39,23 @@ class Progressbar {
   }
 }
 
-export default (options, cb) => {
+export default async (options, cb) => {
   console.log('making a progressbar...', options);
 
   const canvasWidth = options.width || 800;
   const canvasHeight = options.height || 500;
   let canvas = Canvas.createCanvas(canvasWidth, canvasHeight);
- 
+
   const progress = 33;
   const bar = new Progressbar(canvas, options);
 
   bar.draw();
 
+  const result = canvas.toBuffer().toString('base64');
+
   if (cb){
-    cb(null, canvas.toBuffer().toString('base64'));
+    cb(null, result);
   }
+
+  return result;
 }

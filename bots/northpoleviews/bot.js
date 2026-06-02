@@ -105,7 +105,7 @@ const botScript = async () => {
 
           const status = `${station.name} via ${station.url}\n\n#NorthPole #view #webcam`;
 
-          mastodon.postImage({
+          await mastodon.postImage({
             status,
             image: filePath,
             alt_text: description,

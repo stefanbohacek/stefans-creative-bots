@@ -124,7 +124,7 @@ const botScript = async () => {
           encoding: "base64",
         });
 
-        mastodon.postImage({
+        await mastodon.postImage({
           status,
           image: imgData,
           alt_text:

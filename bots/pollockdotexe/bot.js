@@ -12,25 +12,23 @@ const botScript = async () => {
       height: 506,
     };
 
-  pollockGenerator(options, function (err, imageDataGIF, imageDataStatic) {
-    mastodon.postImage(
-      {
-        status,
-        image: imageDataStatic,
-        alt_text: "Animated generative art in the style of Jackson Pollock.",
-      },
-      (err, data, response) => {
-        if (data && data.id) {
-          mastodon.postImage({
-            status,
-            image: imageDataGIF,
-            alt_text: "Generative art in the style of Jackson Pollock",
-            in_reply_to_id: data.id,
-          });
-        }
-      }
-    );
+  const { gif: imageDataGIF, imageDataStatic } =
+    await pollockGenerator(options);
+
+  const firstPost = await mastodon.postImage({
+    status,
+    image: imageDataStatic,
+    alt_text: "Animated generative art in the style of Jackson Pollock.",
   });
+
+  if (firstPost && firstPost.id) {
+    await mastodon.postImage({
+      status,
+      image: imageDataGIF,
+      alt_text: "Generative art in the style of Jackson Pollock",
+      in_reply_to_id: firstPost.id,
+    });
+  }
 };
 
 export default botScript;

@@ -33,7 +33,7 @@ const botScript = async () => {
 
     await writeFile(imagePath, imageBuffer);
 
-    mastodon.postImage({
+    await mastodon.postImage({
       status: `#wikipedia`,
       image: imagePath,
       alt_text: text,

@@ -20,7 +20,7 @@ const botScript = async () => {
       const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
       await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status,
         image: getTempDirPath("mp4"),
         alt_text: webcam.description,

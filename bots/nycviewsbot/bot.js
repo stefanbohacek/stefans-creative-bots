@@ -63,7 +63,7 @@ const botScript = async (params) => {
   const archiveLabel = image.isArchive ? " (archived footage)" : "";
   const status = `${webcam.title}${archiveLabel}\n\n${webcamUrl}\n\n#NYC #NewYorkCity #webcam`;
 
-  mastodon.postImage({
+  await mastodon.postImage({
     status,
     image: image.path,
     alt_text: `${webcam.description}${weatherText}`,

@@ -1,4 +1,4 @@
-﻿import snowGenerator from "./../../modules/generators/snow.js";
+import snowGenerator from "./../../modules/generators/snow.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 
@@ -18,12 +18,11 @@ const botScript = async () => {
       height: 480,
     };
 
-  snowGenerator(options, (err, image) => {
-    mastodon.postImage({
-      status,
-      image,
-      alt_text: "Animated GIF of snow.",
-    });
+  const image = await snowGenerator(options);
+  await mastodon.postImage({
+    status,
+    image,
+    alt_text: "Animated GIF of snow.",
   });
 };
 

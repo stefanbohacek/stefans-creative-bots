@@ -25,7 +25,7 @@ const botScript = async () => {
 
       const status = `Aurora forecast for the next 30-90 minutes.\n\nFull forecast data: ${forecastURL}\n\n#Aurora #AuroraBorealis #AuroraAustralis #NorthernLights #SouthernLights #forecast`;
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status,
         image: stitchedImage,
         alt_text:

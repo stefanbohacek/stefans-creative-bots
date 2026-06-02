@@ -46,7 +46,7 @@ const botScript = async () => {
       
       console.log({status, alt_text: webcam.description});
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status,
         image: getTempDirPath("mp4"),
         alt_text: webcam.description,

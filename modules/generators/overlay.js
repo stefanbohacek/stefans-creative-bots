@@ -13,6 +13,7 @@ import getFilenameFromURL from "./../getFilenameFromUrl.js";
 import downloadFile from "./../downloadFile.js";
 
 export default (overlays, options, cb) => {
+  return new Promise((resolve) => {
   console.log("overlaying images...");
 
   let width = options.width,
@@ -191,7 +192,11 @@ export default (overlays, options, cb) => {
       }
     });
 
-    cb(null, canvas.toBuffer().toString("base64"));
+    const result = canvas.toBuffer().toString("base64");
+    if (cb) {
+      cb(null, result);
+    }
+    resolve(result);
   };
 
   let actions = overlays.map(prepareImgFn);
@@ -199,5 +204,6 @@ export default (overlays, options, cb) => {
 
   results.then((imgDataArr, index) => {
     return makeOverlayImage(imgDataArr);
+  });
   });
 };

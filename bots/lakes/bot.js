@@ -33,7 +33,7 @@ const botScript = async () => {
       description += ` ${weather.description_full}`;
     }
   
-    mastodon.postImage({
+    await mastodon.postImage({
       status,
       image: filePath,
       alt_text: description,

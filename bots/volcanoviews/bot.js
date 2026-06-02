@@ -23,7 +23,7 @@ const botScript = async () => {
   if (luminosity > 40) {
     const status = `${webcam.name} via ${webcam.page_url} #volcano #nature`;
 
-    mastodon.postImage({
+    await mastodon.postImage({
       status,
       image: filePath,
       alt_text: "Webcam view of a volcano.",

@@ -41,7 +41,7 @@ const botScript = async () => {
     const mapURL = `🗺️ https://www.openstreetmap.org/?mlat=${webcam.latitude}&mlon=${webcam.longitude}#map=6/${webcam.latitude}/${webcam.longitude}`;
     const status = `${webcam.title}\n${webcamUrl}\n${mapURL} #sky #skies #view #webcam`;
 
-    mastodon.postImage({
+    await mastodon.postImage({
       status,
       image: filePath,
       alt_text: description,

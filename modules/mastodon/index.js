@@ -23,8 +23,8 @@ class MastodonClient {
   }
   
   postImage(options, cb) {
-    postImage(this.client, options, cb);
-  }  
+    return postImage(this.client, options, cb);
+  }
 
   reply(message, response, cb) {
     reply(this.client, message, response, cb)

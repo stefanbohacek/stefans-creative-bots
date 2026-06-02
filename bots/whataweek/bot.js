@@ -22,7 +22,7 @@ const botScript = async () => {
       api_url: process.env.MASTODON_API_URL,
     });
 
-    overlayGenerator(
+    const image = await overlayGenerator(
       [
         {
           url: imageURL,
@@ -48,20 +48,19 @@ const botScript = async () => {
           y: 300,
         },
       ],
-      { width, height },
-      (err, image) => {
-        const status = `#WhatAWeek #WhatAWeekHuh #${dayOfWeek}`;
+      { width, height }
+    );
 
-        mastodon.postImage({
-          status,
-          image,
-          alt_text: `A panel from the "The Adventures of Tintin" comics featuring the titular character Tintin, a young man with blonde hair wearing a brown trench coat, and Captain Archibald Haddock, a retired merchant sailor with dark bushy hair and a full-grown beard. They are both sitting at a table having a conversation, while Tintin's dog Snowy, a white Wire Fox Terrier, looks on, startled.
-  
+    const status = `#WhatAWeek #WhatAWeekHuh #${dayOfWeek}`;
+
+    await mastodon.postImage({
+      status,
+      image,
+      alt_text: `A panel from the "The Adventures of Tintin" comics featuring the titular character Tintin, a young man with blonde hair wearing a brown trench coat, and Captain Archibald Haddock, a retired merchant sailor with dark bushy hair and a full-grown beard. They are both sitting at a table having a conversation, while Tintin's dog Snowy, a white Wire Fox Terrier, looks on, startled.
+
   Captain Haddock: "What a week, huh?"
   Tintin: "Captain, it's ${dayOfWeek}"`,
-        });
-      }
-    );
+    });
   } else {
     console.log("@whataweek: skipping...");
   }

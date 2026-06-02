@@ -43,7 +43,7 @@ const botScript = async () => {
   };
 
   rorschachGenerator(options, (err, image) => {
-    mastodon.postImage({
+    await mastodon.postImage({
       status,
       image,
       alt_text: "A randomly generated symmetrical pixelated ink blot pattern.",

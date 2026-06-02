@@ -16,20 +16,16 @@ const botScript = async () => {
       const status = `Testing.`;
       console.log(status, progress);
 
-      progressbar(
-        {
-          progress,
-          // color: "red",
-          // background: "blue"
-        },
-        (err, image) => {
-          mastodon.postImage({
-            status,
-            image,
-            alt_text: `Progress bar that's ${progress}% full.`,
-          });
-        }
-      );
+      const image = await progressbar({
+        progress,
+        // color: "red",
+        // background: "blue"
+      });
+      await mastodon.postImage({
+        status,
+        image,
+        alt_text: `Progress bar that's ${progress}% full.`,
+      });
     } catch (error) {
       console.log("@year error:", error);
     }

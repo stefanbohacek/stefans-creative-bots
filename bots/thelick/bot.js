@@ -165,7 +165,7 @@ const botScript = async () => {
 
       const status = `The Lick played on ${instrument.name}.\n\n#TheLick #music`;
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status,
         image: `${__dirname}/../../temp/the-lick-2.mp3`,
         alt_text: "A short audio clip with a jazzy tune.",

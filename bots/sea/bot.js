@@ -78,7 +78,7 @@ const botScript = async () => {
       const weather = await getWeather(station.lat, station.lng);
       const status = `${station.name}\n\n${weather.description_full}\nStation: ${stationURL}\nLocation: http://www.openstreetmap.org/?mlat=${station.lat}&mlon=${station.lng}&zoom=2\n#sea #ocean #water #webcam`;
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status,
         image: selectedImagePath,
         alt_text: "This is an image captured by a buoy floating at sea.",

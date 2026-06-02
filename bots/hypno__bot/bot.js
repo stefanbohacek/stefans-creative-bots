@@ -22,7 +22,7 @@ const botScript = async () => {
     };
 
   spiralGenerator(options, (err, image) => {
-    mastodon.postImage({
+    await mastodon.postImage({
       status,
       image,
       alt_text: `Animated spiral.`,

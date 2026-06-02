@@ -60,7 +60,7 @@ const botScript = async () => {
 
       status += "\n\n#HelloWorld #hello #languages";
 
-      mastodon.postImage({
+      await mastodon.postImage({
         status,
         image: screenshotPath,
         alt_text: altText,

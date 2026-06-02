@@ -1,4 +1,4 @@
-﻿import rainGenerator from "./../../modules/generators/rain.js";
+import rainGenerator from "./../../modules/generators/rain.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 
@@ -18,12 +18,11 @@ const botScript = async () => {
       height: 480,
     };
 
-  rainGenerator(options, (err, image) => {
-    mastodon.postImage({
-      status,
-      image,
-      alt_text: "Animated GIF of rain.",
-    });
+  const image = await rainGenerator(options);
+  await mastodon.postImage({
+    status,
+    image,
+    alt_text: "Animated GIF of rain.",
   });
 };
 

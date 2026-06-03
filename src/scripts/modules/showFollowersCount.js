@@ -1,3 +1,10 @@
+const followerFormatter = new Intl.NumberFormat("en", {
+  notation: "compact",
+  compactDisplay: "short",
+});
+
+const formatFollowerCount = (count) => followerFormatter.format(count);
+
 const formatLastPost = (dateStr) => {
   if (!dateStr) {
     return null;
@@ -10,7 +17,7 @@ const formatLastPost = (dateStr) => {
   if (diffDays === 1) {
     return "yesterday";
   }
-  return `${diffDays.toLocaleString()} days ago`;
+  return `${diffDays.toLocaleString("en")} days ago`;
 };
 
 const loadFollowersForCard = async (card) => {
@@ -31,7 +38,7 @@ const loadFollowersForCard = async (card) => {
           const respJSON = await resp.json();
 
           if (respJSON.followers) {
-            followersCountEl.innerHTML = `${respJSON.followers.toLocaleString()} followers`;
+            followersCountEl.innerHTML = `${formatFollowerCount(respJSON.followers)} followers`;
             followersCountEl.classList.remove("d-none");
           }
 
@@ -83,7 +90,7 @@ const prefillFollowerCounts = async (cards) => {
       if (accountData?.followers) {
         const followersCountEl = card.querySelector(".followers-count");
         if (followersCountEl) {
-          followersCountEl.innerHTML = `${accountData.followers.toLocaleString()} followers`;
+          followersCountEl.innerHTML = `${formatFollowerCount(accountData.followers)} followers`;
           followersCountEl.classList.remove("d-none");
           followersCountEl.dataset.checked = "true";
         }

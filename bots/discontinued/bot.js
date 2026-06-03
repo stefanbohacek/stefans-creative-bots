@@ -1,19 +1,17 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
-import downloadFile from "./../../modules/downloadFile.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { botID } = getBotInfo(import.meta.url);
 
 const WIKIDATA_QUERY = /* sql */`
-  SELECT DISTINCT ?item ?cui ?itemLabel ?itemDescription ?image ?logo ?article
+  SELECT DISTINCT ?item ?itemLabel ?itemDescription ?article
   WHERE
   {
     ?item wdt:P2669 ?cui.
     ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") .
-    ?item wdt:P18|wdt:P154 ?image;
-          SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
     {
       ?article schema:about ?item .
       ?article schema:inLanguage "en" .
@@ -30,7 +28,7 @@ const botScript = async () => {
   const cached = await getWikidataCache(botID);
 
   if (!cached || cached.isStale) {
-    const freshItems = await queryWikidata(WIKIDATA_QUERY, true);
+    const freshItems = await queryWikidata(WIKIDATA_QUERY, false);
     if (freshItems.length) {
       await saveWikidataCache(botID, freshItems);
       items = freshItems;

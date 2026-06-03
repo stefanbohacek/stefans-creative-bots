@@ -1,26 +1,26 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
+import { getMainImage } from "./../../modules/wikipedia.js";
 import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { botID } = getBotInfo(import.meta.url);
 
 const WIKIDATA_QUERY = /* sql */`
-  SELECT DISTINCT ?item ?itemLabel ?itemDescription ?image ?article
+  SELECT ?item ?itemLabel ?itemDescription ?article
   WHERE
   {
     ?item wdt:P105 wd:Q34740 .
     ?item wdt:P171+ wd:Q430 .
     ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") .
-    ?item wdt:P18 ?image .
+    ?item wdt:P18 [] .
+    ?article schema:about ?item .
+    ?article schema:inLanguage "en" .
+    ?article schema:isPartOf <https://en.wikipedia.org/> .
     SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-    {
-      ?article schema:about ?item .
-      ?article schema:inLanguage "en" .
-      ?article schema:isPartOf <https://en.wikipedia.org/>
-    }
   }
+  GROUP BY ?item ?itemLabel ?itemDescription ?article
   LIMIT 40000
 `;
 
@@ -29,7 +29,7 @@ const botScript = async () => {
   const cached = await getWikidataCache(botID);
 
   if (!cached || cached.isStale) {
-    const freshItems = await queryWikidata(WIKIDATA_QUERY, true);
+    const freshItems = await queryWikidata(WIKIDATA_QUERY, false);
     if (freshItems.length) {
       await saveWikidataCache(botID, freshItems);
       items = freshItems;
@@ -63,10 +63,11 @@ const botScript = async () => {
   // console.log("dinosaurs", dinosaurs);
   // console.log("item", item);
 
-  let imageUrl = "";
+  const imageUrl = await getMainImage(item.wikipediaUrl);
 
-  if (item.image) {
-    imageUrl = item.image;
+  if (!imageUrl) {
+    console.log(`${botID}: no image found for ${item.label}`);
+    return;
   }
 
   const status = `${item.label}.\n\n${item.wikipediaUrl}\n\n#dinosaur`;
@@ -75,6 +76,7 @@ const botScript = async () => {
 
   const mastodon = new mastodonClient({
     access_token: process.env.DINOSAURS_BOT_MASTODON_ACCESS_TOKEN,
+    // access_token: process.env.MASTODON_TEST_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });
 

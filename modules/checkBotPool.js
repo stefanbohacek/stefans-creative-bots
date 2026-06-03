@@ -28,13 +28,17 @@ const checkBotPoolFn = async (app) => {
     pool = [...new Set(pool)];
     app.set("pool", pool);
 
-    await db.execute(/* sql */ `DELETE FROM bot_pool`);
+    try {
+      await db.execute(/* sql */ `DELETE FROM bot_pool`);
 
-    for (const name of pool) {
-      await db.execute(
-        /* sql */ `INSERT IGNORE INTO bot_pool (bot_name) VALUES (?)`,
-        [name],
-      );
+      for (const name of pool) {
+        await db.execute(
+          /* sql */ `INSERT IGNORE INTO bot_pool (bot_name) VALUES (?)`,
+          [name],
+        );
+      }
+    } catch (err) {
+      console.log("checkBotPool: DB unavailable, skipping pool persistence:", err.message);
     }
 
     setImmediate(() => checkBotPoolFn(app));
@@ -45,13 +49,17 @@ const checkBotPoolFn = async (app) => {
 };
 
 export default async (app) => {
-  const [rows] = await db.execute(
-    /* sql */ `SELECT bot_name FROM bot_pool ORDER BY id`,
-  );
+  let pool = [];
 
-  let pool = rows.map((row) => row.bot_name);
-  pool = [...new Set(pool)];
+  try {
+    const [rows] = await db.execute(
+      /* sql */ `SELECT bot_name FROM bot_pool ORDER BY id`,
+    );
+    pool = [...new Set(rows.map((row) => row.bot_name))];
+  } catch (err) {
+    console.log("checkBotPool: DB connection not available", err.message);
+  }
+
   app.set("pool", pool);
-
   checkBotPoolFn(app);
 };

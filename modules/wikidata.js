@@ -26,26 +26,35 @@ export const getWikidataLabel = async (item) => {
 };
 
 export const getWikidataCache = async (botId, ttl = TTL_48H) => {
-  const [rows] = await db.execute(
-    /* sql */ `SELECT data, updated_at FROM wikidata_cache WHERE bot_id = ?`,
-    [botId],
-  );
+  try {
+    const [rows] = await db.execute(
+      /* sql */ `SELECT data, updated_at FROM wikidata_cache WHERE bot_id = ?`,
+      [botId],
+    );
 
-  if (!rows.length) {
+    if (!rows.length) {
+      return null;
+    }
+
+    const isStale = Date.now() - new Date(rows[0].updated_at).getTime() > ttl;
+
+    return { data: JSON.parse(rows[0].data), isStale };
+  } catch (err) {
+    console.log("wikidata:getWikidataCache: DB unavailable, fetching live data");
     return null;
   }
-
-  const isStale = Date.now() - new Date(rows[0].updated_at).getTime() > ttl;
-
-  return { data: JSON.parse(rows[0].data), isStale };
 };
 
 export const saveWikidataCache = async (botId, items) => {
-  await db.execute(
-    /* sql */ `INSERT INTO wikidata_cache (bot_id, data) VALUES (?, ?)
-     ON DUPLICATE KEY UPDATE data = VALUES(data), updated_at = NOW()`,
-    [botId, JSON.stringify(items)],
-  );
+  try {
+    await db.execute(
+      /* sql */ `INSERT INTO wikidata_cache (bot_id, data) VALUES (?, ?)
+       ON DUPLICATE KEY UPDATE data = VALUES(data), updated_at = NOW()`,
+      [botId, JSON.stringify(items)],
+    );
+  } catch (err) {
+    console.log("wikidata:saveWikidataCache: DB unavailable, skipping cache save");
+  }
 };
 
 export const queryWikidata = async (query, filterImage) => {

@@ -6,6 +6,26 @@ import sleep from "./sleep.js";
 
 const WIKIPEDIA_API_URL = "https://en.wikipedia.org/w/api.php";
 
+export const getMainImage = async (wikipediaUrl) => {
+  const pageTitle = wikipediaUrl.split("/wiki/")[1];
+  try {
+    const params = new URLSearchParams({
+      action: "query",
+      titles: decodeURIComponent(pageTitle),
+      prop: "pageimages",
+      pithumbsize: "1000",
+      format: "json",
+    });
+    const resp = await fetch(`${WIKIPEDIA_API_URL}?${params}`);
+    const data = await resp.json();
+    const page = Object.values(data.query.pages)[0];
+    return page?.thumbnail?.source || null;
+  } catch (err) {
+    console.log("wikipedia:getMainImage:error", err);
+    return null;
+  }
+};
+
 export const getPageSummary = async (wikipediaUrl) => {
   const pageTitle = wikipediaUrl.split("/wiki/")[1];
   try {

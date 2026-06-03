@@ -7,7 +7,7 @@ import getBotInfo from "./../../modules/getBotInfo.js";
 const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
-  (async () => {
+  await (async () => {
     const mastodon = new mastodonClient({
       access_token: process.env.TELESCOPE_BOT_MASTODON_ACCESS_TOKEN,
       // access_token: process.env.MASTODON_TEST_TOKEN,
@@ -130,6 +130,7 @@ const botScript = async () => {
 
     } catch (error) {
       console.log("telescope:error", error);
+      throw error;
     } finally {
       if (browser) {
         await browser.disconnect();

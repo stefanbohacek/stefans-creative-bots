@@ -68,6 +68,7 @@ const botScript = async () => {
     }
   } catch (err) {
     console.log(`@HelloWorld error on line ${err.lineNumber}: ${err.message}`);
+    throw err;
   } finally {
     if (browser) {
       await browser.disconnect();

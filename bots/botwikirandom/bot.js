@@ -57,7 +57,7 @@ const botScript = async () => {
 
     status += " #bots #CreativeBots #CreativeCoding";
 
-    mastodon.post({ status });
+    await mastodon.post({ status });
   }
 };
 

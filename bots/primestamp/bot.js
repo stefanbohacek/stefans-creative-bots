@@ -12,7 +12,7 @@ const botScript = async () => {
       access_token: process.env.PRIMESTAMP_BOT_MASTODON_ACCESS_TOKEN,
       api_url: process.env.MASTODON_API_URL,
     });
-    mastodon.post({ status });
+    await mastodon.post({ status });
   } else {
     console.log(`${timestamp} is not a prime number...`);
   }

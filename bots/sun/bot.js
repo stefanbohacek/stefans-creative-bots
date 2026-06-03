@@ -16,7 +16,7 @@ const __dirname = dirname(__filename);
 const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
-  (async () => {
+  await (async () => {
     const mastodon = new mastodonClient({
       access_token: process.env.SUN_BOT_MASTODON_ACCESS_TOKEN,
       // access_token: process.env.MASTODON_TEST_TOKEN,
@@ -56,6 +56,7 @@ const botScript = async () => {
       });
     } catch (error) {
       console.log("sun:error", error);
+      throw error;
     }
   })();
 };

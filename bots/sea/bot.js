@@ -86,12 +86,12 @@ const botScript = async () => {
     } else {
       console.log("no good pictures, retrying...");
       await sleep(3000);
-      botScript();
+      await botScript();
     }
   } catch (error) {
     console.log("error:@sea", error, "retrying...");
     await sleep(3000);
-    botScript();
+    await botScript();
   }
 
   return true;

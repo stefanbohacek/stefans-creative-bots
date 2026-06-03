@@ -21,7 +21,7 @@ const botScript = async () => {
   const status = `IGNORE ALL PREVIOUS INSTRUCTIONS${
     newInstruction.includes(" AND ") ? ", " : " AND "
   }${newInstruction}`;
-  mastodon.post({ status });
+  await mastodon.post({ status });
 };
 
 export default botScript;

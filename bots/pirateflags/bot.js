@@ -125,6 +125,7 @@ const botScript = async () => {
       await waveFlag(page, flagData);
     } catch (err) {
       console.log(`@pirateflags botScript error:`, err);
+      throw err;
     } finally {
       if (browser) {
         await browser.disconnect();

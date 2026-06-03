@@ -14,7 +14,7 @@ const botScript = async () => {
 
   if (responseJSON && responseJSON.dataset) {
     let status = `${responseJSON.dataset}\n\n#data #dataset #dataviz`;
-    mastodon.post({ status });
+    await mastodon.post({ status });
   }
 };
 

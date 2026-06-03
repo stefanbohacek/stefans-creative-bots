@@ -28,7 +28,7 @@ const botScript = async () => {
     selectedEmojiLines +
     "\n\n#emoji #WritingPrompt #EmojiStories";
 
-  mastodon.post({
+  await mastodon.post({
     status,
   });
 };

@@ -14,7 +14,7 @@ const botScript = async () => {
   const status =
     selected.map((item) => item.emoji).join(" ") + "\n\n#emoji #poll";
   const options = selected.map((item) => `${item.emoji} ${item.name}`);
-  mastodon.postPoll(status, options);
+  await mastodon.postPoll(status, options);
 };
 
 export default botScript;

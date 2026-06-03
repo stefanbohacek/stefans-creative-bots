@@ -69,7 +69,7 @@ const getInstruments = () => {
 };
 
 const botScript = async () => {
-  (async () => {
+  await (async () => {
     const instruments = getInstruments();
     // console.log(util.inspect(instruments, false, null, true));
     // const theLick = ["B", "C#", "D", "E", "C#", "A", "B"]
@@ -172,6 +172,7 @@ const botScript = async () => {
       });
     } catch (error) {
       console.log(error);
+      throw error;
     }
   })();
 };

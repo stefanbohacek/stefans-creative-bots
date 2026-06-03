@@ -53,6 +53,7 @@ const botScript = async () => {
       });
     } catch (error) {
       console.log(`${botID} error`, error);
+      throw error;
     }
   })();
 };

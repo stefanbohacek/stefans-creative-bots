@@ -21,7 +21,7 @@ const botScript = async () => {
   )} or 1 ${animal2}-sized ${animal1}?\n\n#poll`;
 
   console.log({ status, options });
-  mastodon.postPoll(status, options);
+  await mastodon.postPoll(status, options);
 };
 
 export default botScript;

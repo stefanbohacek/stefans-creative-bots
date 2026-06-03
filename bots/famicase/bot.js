@@ -220,6 +220,7 @@ const botScript = async () => {
     });
   } catch (err) {
     console.error(`@${botID} error:`, err);
+    throw err;
   } finally {
     await browser.disconnect();
   }

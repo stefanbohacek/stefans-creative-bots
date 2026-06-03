@@ -162,6 +162,7 @@ const botScript = async () => {
       }
     } catch (error) {
       console.log("mastodon roadmap error", error);
+      throw error;
     } finally {
       if (browser) {
         await browser.disconnect();

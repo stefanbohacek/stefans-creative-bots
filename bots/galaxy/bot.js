@@ -72,7 +72,7 @@ const findGalaxy = async (page) => {
 };
 
 const botScript = async () => {
-  (async () => {
+  await (async () => {
 
     const mastodon = new mastodonClient({
       access_token: process.env.GALAXY_VIEWS_BOT_MASTODON_ACCESS_TOKEN,
@@ -107,6 +107,7 @@ const botScript = async () => {
       });
     } catch (err) {
       console.error(`@${botID} error:`, err);
+      throw err;
     } finally {
       await browser.disconnect();
     }

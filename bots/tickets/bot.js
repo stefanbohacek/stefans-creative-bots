@@ -88,7 +88,7 @@ const getTicket = async (page, url) => {
 };
 
 const botScript = async () => {
-  (async () => {
+  await (async () => {
     const mastodon = new mastodonClient({
       access_token: process.env.TICKETS_BOT_ACCESS_TOKEN_SECRET,
       api_url: process.env.MASTODON_API_URL,
@@ -122,6 +122,7 @@ const botScript = async () => {
       });
     } catch (err) {
       console.error(`@${botID} error:`, err);
+      throw err;
     } finally {
       await browser.disconnect();
     }

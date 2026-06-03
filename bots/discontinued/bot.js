@@ -64,7 +64,7 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  mastodon.post({
+  await mastodon.post({
     status: status.replace("  ", " "),
   });
 

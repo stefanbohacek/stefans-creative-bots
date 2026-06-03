@@ -1,65 +1,9 @@
-﻿import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 import usZips from "us-zips";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
-import randomFromArray from "./../../modules/randomFromArray.js";
-import getRandomInt from "./../../modules/getRandomInt.js";
-
-const locationInRange = (location, centerPoint, km) => {
-  km = km || 50;
-
-  var ky = 40000 / 360;
-  var kx = Math.cos((Math.PI * centerPoint.latitude) / 180.0) * ky;
-  var dx = Math.abs(centerPoint.longitude - location.longitude) * kx;
-  var dy = Math.abs(centerPoint.latitude - location.latitude) * ky;
-  return Math.sqrt(dx * dx + dy * dy) <= km;
-};
-
-const cleanupLocationData = (locationData) => {
-  let locationDataClean = [],
-    latitudes = [],
-    longitudes = [];
-
-  locationData.forEach((location) => {
-    latitudes.push(parseFloat(location.latitude));
-    longitudes.push(parseFloat(location.longitude));
-  });
-
-  const centerPoint = {
-    latitude: median(latitudes),
-    longitude: median(longitudes),
-  };
-
-  // console.log({latitudes, longitudes, centerPoint});
-
-  locationData.forEach((location) => {
-    if (locationInRange(location, centerPoint, 50)) {
-      locationDataClean.push(location);
-    }
-  });
-
-  return locationDataClean;
-};
-
-const median = (values) => {
-  if (values.length === 0) return 0;
-
-  values.sort((a, b) => {
-    return a - b;
-  });
-
-  const half = Math.floor(values.length / 2);
-
-  if (values.length % 2) {
-    return values[half];
-  }
-
-  return (values[half - 1] + values[half]) / 2.0;
-};
-
-const isBetween = (x, min, max) => {
-  return x >= min && x <= max;
-};
+import isBetween from "./../../modules/isBetween.js";
+import getZipCodeFromDataPoint from "./../../modules/getZipCodeFromDataPoint.js";
+import { getData, makeDataMap } from "./../../modules/datasets.js";
 
 const getLongLat = (datapoint) => {
   let dp = false;
@@ -100,123 +44,59 @@ const getLongLat = (datapoint) => {
   return dp;
 };
 
-const makeMap = async (datasetName, datasetPermalink, data, cb) => {
-  console.log("making a map...");
-  let locationData = [],
-    markers = [];
+const mastodon = new mastodonClient({
+  // access_token: process.env.NYCDATABOT_MASTODON_ACCESS_TOKEN_SECRET,
+  access_token: process.env.MASTODON_TEST_TOKEN,
+  api_url: process.env.MASTODON_API_URL,
+});
 
-  data = randomFromArray(data, 100);
+const dataOptions = {
+  dataSource: "data.cityofnewyork.us",
+  dataTypes: ["datasets", "map"],
+  offsetRange: [0, 351],
+};
 
-  data.forEach((datapoint) => {
-    const location = getLongLat(datapoint);
+const botScript = async () => {
+  const result = await getData(dataOptions);
 
-    if (location) {
-      locationData.push({
-        longitude: location.longitude,
-        latitude: location.latitude,
+  if (!result) {
+    return;
+  }
+
+  const { dataType, datasetName, datasetPermalink, resource } = result;
+
+  // const datasetUrl = 'https://data.cityofnewyork.us/resource/tn4g-ski5.json';
+  const datasetUrl = `https://data.cityofnewyork.us/resource/${resource.id}.json`;
+
+  // console.log("loading data...", { datasetName, dataType, datasetPermalink });
+
+  const response = await fetch(datasetUrl);
+  const data = await response.json();
+
+  const postMap = async () => {
+    const imgData = await makeDataMap(data, getLongLat);
+    if (imgData) {
+      await mastodon.postImage({
+        status: `${datasetName}\nSource: ${datasetPermalink}\n#nyc #data #dataviz`,
+        image: imgData,
+        alt_text: `A map with locations from the ${datasetName} dataset. Please visit the link for full details.`,
       });
     }
-  });
-
-  locationData = cleanupLocationData(locationData);
-
-  locationData.forEach((location) => {
-    markers.push(`pin-s+555555(${location.longitude},${location.latitude})`);
-  });
-
-  const mapUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v10/static/${markers.join(
-    ","
-  )}/auto/900x600?access_token=${process.env.MAPBOX_ACCESS_TOKEN}`;
-
-  const imgData = await downloadFileAsBase64(mapUrl);
-
-  const mastodon = new mastodonClient({
-    access_token: process.env.NYCDATABOT_MASTODON_ACCESS_TOKEN_SECRET,
-    api_url: process.env.MASTODON_API_URL,
-  });
-
-  const status = `${datasetName}\nSource: ${datasetPermalink}\n#nyc #data #dataviz`;
-
-  await mastodon.postImage({
-    status,
-    image: imgData,
-    alt_text: `A map with locations from the ${datasetName} dataset. Please visit the link for full details.`,
-  });
-};
-
-const getZipCode = (datapoint) => {
-  return (
-    datapoint.postcode ||
-    datapoint.zipcode ||
-    datapoint.zip_code ||
-    datapoint.zip_code_2 ||
-    false
-  );
-};
-
-const findDataset = async () => {
-  // https://socratadiscovery.docs.apiary.io/#reference/0/find-by-domain/search-by-domain
-  let datasets = [];
-
-  const dataSource = "data.cityofnewyork.us";
-  const dataType = randomFromArray(["datasets", "map"]);
-
-  const dataLimit = "1000";
-  const discoveryUrl = `http://api.us.socrata.com/api/catalog/v1?domains=${dataSource}&search_context=${dataSource}&only=${dataType}&limit=${dataLimit}&offset=${getRandomInt(0,351)}`;
-
-  console.log(`finding a dataset in the ${dataSource} domain (${dataType})`, discoveryUrl);
-
-  let response = await fetch(discoveryUrl);
-  let bodyParsed = await response.json();
-
-  datasets = bodyParsed.results.filter((dataset) => {
-    return (
-      dataset?.resource?.columns_name && dataset?.resource?.columns_name?.length
-    );
-  });
-
-  // console.log('filtering data...', datasets.map((dataset) => {
-  //   return {
-  //     name: dataset.resource.name,
-  //     size: dataset.resource.columns_name.length,
-  //     url: `https://data.cityofnewyork.us/resource/${ dataset.resource.id }.json`,
-  //   }
-  // }));
-
-  const dataset = randomFromArray(datasets);
-
-  const datasetUrl = `https://data.cityofnewyork.us/resource/${dataset.resource.id}.json`,
-    // const datasetUrl = 'https://data.cityofnewyork.us/resource/tn4g-ski5.json',
-    datasetName = dataset.resource.name,
-    datasetLabels = dataset.resource.columns_name,
-    datasetPermalink = dataset.permalink;
-
-  // console.log("loading data...", {
-  //   datasetName,
-  //   dataType,
-  //   datasetUrl,
-  //   datasetPermalink,
-  // });
-
-  response = await fetch(datasetUrl);
-  bodyParsed = await response.json();
+  };
 
   switch (dataType) {
     case "map":
-      makeMap(datasetName, datasetPermalink, bodyParsed);
+      await postMap();
       break;
     case "datasets":
-      // console.log({
-      //   datasetLabels,
-      //   "data sample": bodyParsed.slice(0, 5),
-      // });
+      // console.log({ "data sample": data.slice(0, 5) });
 
-      if (bodyParsed[0].latitude && bodyParsed[0].longitude) {
-        makeMap(datasetName, datasetPermalink, bodyParsed);
-      } else if (getZipCode(bodyParsed[0])) {
+      if (data[0].latitude && data[0].longitude) {
+        await postMap();
+      } else if (getZipCodeFromDataPoint(data[0])) {
         console.log("found dataset with zip codes...");
-        bodyParsed.forEach((datapoint) => {
-          const zipCode = getZipCode(datapoint);
+        data.forEach((datapoint) => {
+          const zipCode = getZipCodeFromDataPoint(datapoint);
           if (zipCode) {
             const location = usZips[zipCode];
 
@@ -226,16 +106,12 @@ const findDataset = async () => {
             }
           }
         });
-        makeMap(datasetName, datasetPermalink, bodyParsed);
+        await postMap();
       } else {
-        findDataset();
+        await botScript();
       }
       break;
   }
-};
-
-const botScript = async () => {
-  findDataset();
 };
 
 export default botScript;

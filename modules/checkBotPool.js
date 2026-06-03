@@ -22,7 +22,7 @@ const checkBotPoolFn = async (app) => {
       await bot.script.default();
     } catch (err) {
       console.log(`${botName} error:`, err);
-      await notifyAdmin(`${botName} error`, `<pre>${err.toString()}</pre>`);
+      await notifyAdmin(`${botName} error`, `<pre>${err.stack || err.toString()}</pre>`);
     }
 
     pool = [...new Set(pool)];

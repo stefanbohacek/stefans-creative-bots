@@ -5,6 +5,7 @@ import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
+import sleep from "./../../modules/sleep.js";
 
 const { botID } = getBotInfo(import.meta.url);
 
@@ -32,6 +33,7 @@ const findGalaxy = async (page) => {
 
     const content = await page.evaluate(() => {
       const tbody = document.querySelector("table.table tbody");
+      if (!tbody) { return []; }
       const trs = Array.from(tbody.querySelectorAll("tr"));
       const content = [];
 
@@ -93,9 +95,22 @@ const botScript = async () => {
 
       await page.setDefaultNavigationTimeout(120000);
 
-      const galaxies = await findGalaxy(page);
-      // console.log({ galaxies });
+      let galaxies;
+      for (let i = 1; i <= 5; i++) {
+        galaxies = await findGalaxy(page);
+        if (galaxies && galaxies.length) {
+          break;
+        }
+        console.log(`@${botID}: no galaxies found, retrying (${i}/5)...`);
+        await sleep(i * 1000);
+      }
 
+      if (!galaxies || !galaxies.length) {
+        console.log(`@${botID}: no galaxies found after 5 retries`);
+        return;
+      }
+
+      // console.log({ galaxies });
       const galaxy = randomFromArray(galaxies);
       const imgData = await downloadFileAsBase64(galaxy.image);
       const status = `${galaxy.group_name}: ${galaxy.url}\n\n#space #astronomy #galaxy`;

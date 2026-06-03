@@ -9,6 +9,7 @@ const instructions = fs
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
+    // access_token: process.env.MASTODON_TEST_TOKEN,
     access_token: process.env.PET_ROCK_BOT_MASTODON_ACCESS_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });

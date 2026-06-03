@@ -2,6 +2,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
+    // access_token: process.env.MASTODON_TEST_TOKEN,
     access_token: process.env.VIBECHECK_BOT_MASTODON_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });

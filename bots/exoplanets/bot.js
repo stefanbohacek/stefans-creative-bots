@@ -16,6 +16,7 @@ const { botID } = getBotInfo(import.meta.url);
 const botScript = async () => {
   await (async () => {
     const mastodon = new mastodonClient({
+      // access_token: process.env.MASTODON_TEST_TOKEN,
       access_token: process.env.EXOPLANETS_ACCESS_TOKEN_SECRET,
       api_url: process.env.MASTODON_API_URL,
     });

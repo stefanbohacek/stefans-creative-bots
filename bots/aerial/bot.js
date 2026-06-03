@@ -12,6 +12,7 @@ const botScript = async () => {
  await (async () => {
     try {
       const mastodon = new mastodonClient({
+        // access_token: process.env.MASTODON_TEST_TOKEN,
         access_token: process.env.AERIAL_VIEWS_BOT_MASTODON_ACCESS_TOKEN,
         api_url: process.env.MASTODON_API_URL,
       });

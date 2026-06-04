@@ -33,6 +33,7 @@ const WIKIDATA_QUERY = /* sql */`
 const ignoreList = [
   "Columbus Circle",
   "Christopher Columbus",
+  "Daytoy ni Bannawag",
   "Edward Colston",
   "George Davis",
   "George Washington",

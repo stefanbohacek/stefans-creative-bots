@@ -3,8 +3,10 @@ import { parse } from "node-html-parser";
 import he from "he";
 import randomFromArray from "./randomFromArray.js";
 import sleep from "./sleep.js";
+import getUserAgent from "./getSCBUserAgent.js";
 
 const WIKIPEDIA_API_URL = "https://en.wikipedia.org/w/api.php";
+const headers = { "User-Agent": getUserAgent() };
 
 export const getMainImage = async (wikipediaUrl) => {
   const pageTitle = wikipediaUrl.split("/wiki/")[1];
@@ -16,7 +18,7 @@ export const getMainImage = async (wikipediaUrl) => {
       pithumbsize: "1000",
       format: "json",
     });
-    const resp = await fetch(`${WIKIPEDIA_API_URL}?${params}`);
+    const resp = await fetch(`${WIKIPEDIA_API_URL}?${params}`, { headers });
     const data = await resp.json();
     const page = Object.values(data.query.pages)[0];
     return page?.thumbnail?.source || null;
@@ -31,6 +33,7 @@ export const getPageSummary = async (wikipediaUrl) => {
   try {
     const resp = await fetch(
       `https://en.wikipedia.org/api/rest_v1/page/summary/${pageTitle}`,
+      { headers },
     );
     if (
       !resp.ok ||
@@ -50,7 +53,7 @@ export const getWikipediaPage = async (title) => {
   try {
     const encodedTitle = encodeURIComponent(title);
     const url = `${WIKIPEDIA_API_URL}?action=query&titles=${encodedTitle}&format=json&formatversion=2`;
-    const response = await fetch(url);
+    const response = await fetch(url, { headers });
     const data = await response.json();
 
     if (data.query.pages[0].missing !== true) {
@@ -84,6 +87,7 @@ const getUserboxGalleries = async () => {
 
     const resp = await fetch(
       `${WIKIPEDIA_API_URL}?${new URLSearchParams(params)}`,
+      { headers },
     );
     const { query, continue: cont } = await resp.json();
 
@@ -108,6 +112,7 @@ const getGalleryUserboxes = async (galleryTitle) => {
 const renderUserbox = async (template) => {
   const resp = await fetch(WIKIPEDIA_API_URL, {
     method: "POST",
+    headers,
     body: new URLSearchParams({
       action: "parse",
       prop: "text",
@@ -129,6 +134,7 @@ const renderUserbox = async (template) => {
 export const renderUserboxHTML = async (template) => {
   const resp = await fetch(WIKIPEDIA_API_URL, {
     method: "POST",
+    headers,
     body: new URLSearchParams({
       action: "parse",
       prop: "text",

@@ -20,10 +20,12 @@ export const sendEmail = async (emailOptions) => {
 };
 
 export const notifyAdmin = async (subject, body) => {
-  await sendEmail({
-    from: process.env.SMTP_EMAIL,
-    to: process.env.ADMIN_EMAIL_ADDRESS,
-    subject: `Stefan's Creative Bots: ${subject || "Admin notification"}`,
-    html: /* html */`${body || ""}`,
-  });
+  if (process.env.ENVIRONMENT !== "local") {
+    await sendEmail({
+      from: process.env.SMTP_EMAIL,
+      to: process.env.ADMIN_EMAIL_ADDRESS,
+      subject: `Stefan's Creative Bots: ${subject || "Admin notification"}`,
+      html: /* html */ `${body || ""}`,
+    });
+  }
 };

@@ -30,8 +30,8 @@ class MastodonClient {
     reply(this.client, message, response, cb)
   }
   
-  postPoll(status, options, cb) {
-    postPoll(this.client, status, options, cb)
+  postPoll(status, options, params) {
+    postPoll(this.client, status, options, params)
   }
 
   getNotifications(cb) {

@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-const postPoll = async (client, status, options, cb) => {
+const postPoll = async (client, status, options, params) => {
   console.log("posting a poll...");
 
   let optionsObj = {
@@ -9,6 +9,10 @@ const postPoll = async (client, status, options, cb) => {
       expires_in: 86400,
     },
   };
+
+  if (params?.in_reply_to_id) {
+    optionsObj.in_reply_to_id = params.in_reply_to_id;
+  }
 
   const response = await fetch(`${client.config.api_url}/statuses`, {
     method: "post",
@@ -21,11 +25,13 @@ const postPoll = async (client, status, options, cb) => {
   });
 
   const responseData = await response.json();
-  console.log("poll posted", responseData.url);
 
-  if (cb) {
-    cb(error, response, body);
+  if (!response.ok) {
+    console.log("postPoll error:", responseData);
+    return responseData;
   }
+
+  console.log("poll posted", responseData.url);
 
   return responseData;
 };

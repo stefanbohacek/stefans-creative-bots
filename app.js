@@ -15,6 +15,7 @@ import createMemoryStore from "memorystore";
 import Grant from "grant-express";
 // import tumblr from 'tumblr.js';
 
+import { notifyAdmin } from "./modules/email.js";
 import indexRoute from "./routes/index.js";
 import triggerRoute from "./routes/trigger.js";
 import fediverseInfoRoute from "./routes/fediverse-info.js";
@@ -72,5 +73,11 @@ app.use("/images", express.static(__dirname + "/temp/"));
 
 app.use(express.static("public"));
 app.use(express.static("views"));
+
+app.use(async (err, req, res, next) => {
+  console.error("express error:", err);
+  await notifyAdmin("Express error", `<pre>${err?.stack || err}</pre>`);
+  res.status(500).send("Internal server error");
+});
 
 export default app;

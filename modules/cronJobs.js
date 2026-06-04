@@ -3,6 +3,7 @@ import cronSchedules from "./cronSchedules.js";
 import db from "./db.js";
 import { mastodonFetch } from "./mastodon/fetch.js";
 import lookupAccount from "./mastodon/lookupAccount.js";
+import { notifyAdmin } from "./email.js";
 
 export default () => {
   console.log("setting up cron jobs...");
@@ -26,6 +27,7 @@ export default () => {
         const data = await response.json();
       } catch (err) {
         console.log("WikipediaTopEdits cron error:", err);
+        await notifyAdmin("WikipediaTopEdits cron error", `<pre>${err?.stack || err}</pre>`);
       }
     },
     null,
@@ -79,6 +81,7 @@ export default () => {
         console.log("fediverse data refresh: done");
       } catch (err) {
         console.log("fediverse data refresh cron error:", err);
+        await notifyAdmin("Fediverse data refresh cron error", `<pre>${err?.stack || err}</pre>`);
       }
     },
     null,
@@ -148,6 +151,7 @@ export default () => {
         console.log(`follower stats: done — ${uniqueFollowers.size.toLocaleString()} unique followers across ${uniqueServers.size.toLocaleString()} servers`);
       } catch (err) {
         console.log("follower stats cron error:", err);
+        await notifyAdmin("Follower stats cron error", `<pre>${err?.stack || err}</pre>`);
       }
     },
     null,

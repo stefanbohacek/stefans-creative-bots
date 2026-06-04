@@ -3,6 +3,7 @@ import { convert } from "html-to-text";
 import moment from "moment";
 import cronSchedules from "./cronSchedules.js";
 import capitalizeFirstLetter from "./capitalizeFirstLetter.js";
+import { notifyAdmin } from "./email.js";
 
 export default async (bot, app) => {
   try {
@@ -57,6 +58,7 @@ export default async (bot, app) => {
             await bot.script.default();
           } catch (err) {
             console.log(`${bot.about.name} error:`, err);
+            await notifyAdmin(`${bot.about.name} error`, `<pre>${err?.stack || err}</pre>`);
           }
         }, 1000);
       } else {
@@ -91,5 +93,6 @@ export default async (bot, app) => {
     }
   } catch (error) {
     console.log(`${bot.about.name} error:`, error);
+    await notifyAdmin(`${bot.about.name} setup error`, `<pre>${error?.stack || error}</pre>`);
   }
 };

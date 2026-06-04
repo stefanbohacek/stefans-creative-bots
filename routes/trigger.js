@@ -1,4 +1,5 @@
 import express from "express";
+import { notifyAdmin } from "../modules/email.js";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
@@ -11,7 +12,8 @@ router.get("/", async (req, res) => {
       await bot(params);
       res.status(200).json({ message: "Bot executed successfully" });
     } catch (error) {
-      console.error("Error loading or executing bot:", error);
+      console.error("error loading or running bot:", error);
+      await notifyAdmin(`Trigger error: ${name}`, `<pre>${error?.stack || error}</pre>`);
       res.status(500).json({ error: "Failed to execute bot" });
     }
   } else {

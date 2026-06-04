@@ -3,6 +3,7 @@ import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
 import capitalizeFirstLetter from "./../../modules/capitalizeFirstLetter.js";
 import { getMainImage } from "./../../modules/wikipedia.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { botID } = getBotInfo(import.meta.url);
@@ -63,9 +64,10 @@ const botScript = async () => {
   const imageUrl = await getMainImage(item.wikipediaUrl);
 
   if (imageUrl) {
+    const imageData = await downloadFileAsBase64(imageUrl);
     await mastodon.postImage({
       status: capitalizeFirstLetter(status),
-      image: imageUrl,
+      image: imageData,
       alt_text: "A photo of a currency from the linked website.",
     });
   } else {

@@ -2,6 +2,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
 import { getMainImage } from "./../../modules/wikipedia.js";
+import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { botID } = getBotInfo(import.meta.url);
@@ -70,9 +71,11 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
+  const imageData = await downloadFileAsBase64(imageUrl);
+
   await mastodon.postImage({
     status: status.replace("  ", " "),
-    image: imageUrl,
+    image: imageData,
     alt_text: "A photo of a computer from the linked website.",
   });
 

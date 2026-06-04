@@ -8,6 +8,7 @@ import birthdayBadge from "./modules/birthdayBadge.js";
 import showRelativeTimes from "./modules/showRelativeTimes.js";
 import categoryNav from "./modules/categoryNav.js";
 import lazyLoadShareButton from "./modules/lazyLoadShareButton.js";
+import sectionScroll from "./modules/sectionScroll.js";
 
 ready(() => {
   dayjs.extend(relativeTime);
@@ -18,4 +19,5 @@ ready(() => {
   showRelativeTimes();
   categoryNav();
   lazyLoadShareButton();
+  sectionScroll();
 });

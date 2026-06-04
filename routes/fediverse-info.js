@@ -11,7 +11,7 @@ router.get("/all", async (req, res) => {
     );
   } catch (err) {
     console.log("Failed to load fediverse account info:", err.message);
-    return res.status(500).json({ error: "Database unavailable" });
+    return res.status(500).json({ error: "unable to connected to the database" });
   }
 
   const result = {};
@@ -24,8 +24,13 @@ router.get("/all", async (req, res) => {
 
 router.get("/", async (req, res) => {
   const { url } = req.query;
-  const fediverseAccountInfo = await getFediverseAccountInfo(url);
-  res.status(200).json(fediverseAccountInfo);
+  try {
+    const fediverseAccountInfo = await getFediverseAccountInfo(url);
+    res.status(200).json(fediverseAccountInfo);
+  } catch (err) {
+    console.log("failed to get fediverse account info:", err.message);
+    res.status(500).json({ error: "unable to connected to the database" });
+  }
 });
 
 export default router;

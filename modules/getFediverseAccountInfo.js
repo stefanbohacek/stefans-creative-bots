@@ -22,27 +22,45 @@ export default async (fediverseLinkURL) => {
       `getFediverseAccountInfo: loading data for @${username}@${server}...`
     );
 
-    const [cachedRows] = await db.execute(
-      /* sql */`SELECT * FROM fediverse_account_info
-       WHERE username = ? AND server = ? AND fetched_at > NOW() - INTERVAL 3 HOUR`,
-      [username, server]
-    );
+    let cachedRows;
+    try {
+      [cachedRows] = await db.execute(
+        /* sql */`SELECT * FROM fediverse_account_info
+         WHERE username = ? AND server = ? AND fetched_at > NOW() - INTERVAL 3 HOUR`,
+        [username, server]
+      );
+    } catch (err) {
+      console.log(`getFediverseAccountInfo: DB unavailable:`, err.message);
+      return {};
+    }
 
     if (cachedRows.length) {
       return mapFediverseRow(cachedRows[0]);
     }
 
-    const [lockResult] = await db.execute(
-      /* sql */`UPDATE fediverse_account_info SET fetching = 1
-       WHERE username = ? AND server = ? AND fetching = 0`,
-      [username, server]
-    );
-
-    if (lockResult.affectedRows === 0) {
-      const [staleRows] = await db.execute(
-        /* sql */`SELECT * FROM fediverse_account_info WHERE username = ? AND server = ?`,
+    let lockResult;
+    try {
+      [lockResult] = await db.execute(
+        /* sql */`UPDATE fediverse_account_info SET fetching = 1
+         WHERE username = ? AND server = ? AND fetching = 0`,
         [username, server]
       );
+    } catch (err) {
+      console.log(`getFediverseAccountInfo: DB unavailable:`, err.message);
+      return {};
+    }
+
+    if (lockResult.affectedRows === 0) {
+      let staleRows;
+      try {
+        [staleRows] = await db.execute(
+          /* sql */`SELECT * FROM fediverse_account_info WHERE username = ? AND server = ?`,
+          [username, server]
+        );
+      } catch (err) {
+        console.log(`getFediverseAccountInfo: DB unavailable:`, err.message);
+        return {};
+      }
 
       if (staleRows.length && staleRows[0].display_name) {
         return mapFediverseRow(staleRows[0]);
@@ -94,13 +112,17 @@ export default async (fediverseLinkURL) => {
         error
       );
 
-      const [staleRows] = await db.execute(
-        /* sql */`SELECT * FROM fediverse_account_info WHERE username = ? AND server = ?`,
-        [username, server]
-      );
+      try {
+        const [staleRows] = await db.execute(
+          /* sql */`SELECT * FROM fediverse_account_info WHERE username = ? AND server = ?`,
+          [username, server]
+        );
 
-      if (staleRows.length && staleRows[0].display_name) {
-        return mapFediverseRow(staleRows[0]);
+        if (staleRows.length && staleRows[0].display_name) {
+          return mapFediverseRow(staleRows[0]);
+        }
+      } catch (dbErr) {
+        console.log(`getFediverseAccountInfo: DB unavailable:`, dbErr.message);
       }
 
       console.log(
@@ -109,10 +131,14 @@ export default async (fediverseLinkURL) => {
       );
       return {};
     } finally {
-      await db.execute(
-        /* sql */`UPDATE fediverse_account_info SET fetching = 0 WHERE username = ? AND server = ?`,
-        [username, server]
-      );
+      try {
+        await db.execute(
+          /* sql */`UPDATE fediverse_account_info SET fetching = 0 WHERE username = ? AND server = ?`,
+          [username, server]
+        );
+      } catch (err) {
+        console.log(`getFediverseAccountInfo: failed to clear lock:`, err.message);
+      }
     }
   } else {
     return {};

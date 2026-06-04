@@ -2,8 +2,8 @@
   {
     "title": "Live views",
     "description": "",
-    "collection_url": null,
-    "bots": [      
+    "collection_url": "https://stefanbohacek.online/collections/116688638329681621",
+    "bots": [
       "@southpoleviews",
       "@northpoleviews",
       "@RRSSirDavidAttenborough",
@@ -20,41 +20,41 @@
   {
     "title": "Space",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688675122889640",
     "bots": [
       "@AuroraForecast",
-      "@iss", 
-      "@telescope", 
-      "@galaxy", 
-      "@exoplanets", 
+      "@iss",
+      "@telescope",
+      "@galaxy",
+      "@exoplanets",
       "@sun"
     ]
   },
   {
     "title": "Weather",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688675144019631",
     "bots": [
-      "@rain", 
+      "@rain",
       "@snow"
     ]
   },
   {
     "title": "Wildlife and animals",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688675169259794",
     "bots": [
-      "@bearcam", 
-      "@birds", 
-      "@dinosaurs", 
+      "@bearcam",
+      "@birds",
+      "@dinosaurs",
       "@africanwildlife"
     ]
   },
   {
     "title": "Maps and history",
     "description": "",
-    "collection_url": null,
-    "bots": [      
+    "collection_url": "https://stefanbohacek.online/collections/116688675205223206",
+    "bots": [
       "@maps",
       "@trainstations",
       "@lighthouses",
@@ -67,8 +67,8 @@
   {
     "title": "Language",
     "description": "",
-    "collection_url": null,
-    "bots": [      
+    "collection_url": "https://stefanbohacek.online/collections/116688675232678748",
+    "bots": [
       "@helloworld",
       "@vzvzvz"
     ]
@@ -76,9 +76,9 @@
   {
     "title": "Data visualizations",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688675260738778",
     "bots": [
-      "@nycdatabot", 
+      "@nycdatabot",
       "@njdatabot",
       "@last100bills"
     ]
@@ -87,7 +87,7 @@
     "title": "Wikipedia and Wikidata",
     "description": "",
     "collection_url": null,
-    "bots": [      
+    "bots": [
       "@wikipediatopedits",
       "@wikipediaOTD",
       "@userboxes"
@@ -96,41 +96,41 @@
   {
     "title": "Transit and travel",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688675342845080",
     "bots": [
-      "@trains", 
-      "@trainstations", 
-      "@tickets", 
+      "@trains",
+      "@trainstations",
+      "@tickets",
       "@mtaupdates"
     ]
   },
   {
     "title": "NYC bots",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688675375577173",
     "bots": [
-      "@nycviewsbot", 
-      "@nycdatabot", 
+      "@nycviewsbot",
+      "@nycdatabot",
       "@mtaupdates"
     ]
   },
   {
     "title": "Books, reading, literature",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688733652012321",
     "bots": [
-      "@dedication_bot", 
-      "@libraries", 
-      "@petrock", 
+      "@dedication_bot",
+      "@libraries",
+      "@petrock",
       "@bartleby"
     ]
   },
   {
     "title": "Archives",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688733689180990",
     "bots": [
-      "@roots", 
+      "@roots",
       "@maps",
       "@manuals",
       "@famicase"
@@ -139,8 +139,8 @@
   {
     "title": "Generative art",
     "description": "",
-    "collection_url": null,
-    "bots": [      
+    "collection_url": "https://stefanbohacek.online/collections/116688733729802720",
+    "bots": [
       "@rain",
       "@snow",
       "@rorschach",
@@ -152,10 +152,10 @@
   {
     "title": "Retro and vintage",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688733765596304",
     "bots": [
-      "@computers", 
-      "@discontinued", 
+      "@computers",
+      "@discontinued",
       "@arcade",
       "@floppies",
       "@manuals"
@@ -164,22 +164,22 @@
   {
     "title": "Interactive and prompts",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688733809361814",
     "bots": [
-      "@emoji__polls", 
+      "@emoji__polls",
       "@rorschach",
       "@what_capital",
       "@happymoonbot",
       "@emoji_stories",
-      "@vibecheck", 
+      "@vibecheck",
       "@wouldyouratherfight"
     ]
   },
   {
     "title": "Memes, jokes, and others",
     "description": "",
-    "collection_url": null,
-    "bots": [      
+    "collection_url": "https://stefanbohacek.online/collections/116688733861224293",
+    "bots": [
       "@happynameday",
       "@pirateflags",
       "@XedYourLastY",
@@ -187,25 +187,25 @@
       "@whataweek",
       "@no",
       "@thelick",
-      "@thisdatasetdoesnotexist"    
+      "@thisdatasetdoesnotexist"
     ]
   },
   {
     "title": "Fediverse",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688733929366428",
     "bots": [
-      "@mastodon_mobile_apps", 
+      "@mastodon_mobile_apps",
       "@mastodonroadmap"
     ]
   },
   {
     "title": "Botwiki",
     "description": "",
-    "collection_url": null,
+    "collection_url": "https://stefanbohacek.online/collections/116688733954019845",
     "bots": [
-      "@botwikirandomfediverse", 
-      "@newonbotwiki", 
+      "@botwikirandomfediverse",
+      "@newonbotwiki",
       "@botwikirandom"
     ]
   }

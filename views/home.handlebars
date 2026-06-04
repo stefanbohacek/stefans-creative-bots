@@ -1,6 +1,9 @@
-<nav class="top-nav z-2" id="category-nav">
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="hamburger">&#9776;</label>
+<nav class="top-nav z-2"
+  id="category-nav">
+  <input type="checkbox"
+    id="menu-toggle">
+  <label for="menu-toggle"
+    class="hamburger">&#9776;</label>
   <div class="nav-links">
     {{#each categories}}
     <a href="#{{this.slug}}">{{this.title}}</a>
@@ -22,7 +25,8 @@
         <blockquote class="blockquote fst-italic border-start border-5 border-secondary ps-3 my-5"
           cite="https://www.rollingstone.com/culture/culture-commentary/internet-future-about-to-get-weird-1234938403/">
           <p>
-            <a href="https://stefanbohacek.com/" aria-label="my website">Stefan Bohacek</a> has been working for years to enable almost anyone
+            <a href="https://stefanbohacek.com/"
+              aria-label="my website">Stefan Bohacek</a> has been working for years to enable almost anyone
             to create simple, automated bots, offering
             up everything from a constantly-updated view of the weather at the South Pole to one that posts excerpts
             from
@@ -45,7 +49,9 @@
             href="https://stefanbohacek.com/blog/on-running-creative-online-bots-with-ten-thousand-followers/">past
             decade</a> (<a href="#active-bots">{{active_bots_count}} active</a>,
           <a href="#inactive-bots">{{inactive_bots_count}} inactive</a>, {{bots_count_total}} in total), with <a
-            href="https://stefanbohacek.com/blog/analyzing-fediverse-followers/">{{follower_stats.unique_followers}} unique followers across {{follower_stats.unique_servers}} servers</a>{{#if follower_stats.calculated_month}}, as of {{follower_stats.calculated_month}}{{/if}}.
+            href="https://stefanbohacek.com/blog/analyzing-fediverse-followers/">{{follower_stats.unique_followers}}
+            unique followers across {{follower_stats.unique_servers}} servers</a>{{#if
+          follower_stats.calculated_month}}, as of {{follower_stats.calculated_month}}{{/if}}.
         </p>
         <p>
           A few other things that might interest you:
@@ -55,7 +61,8 @@
             tutorials and descriptions of my bot projects <a href="https://stefanbohacek.com/tag/bots/">on my blog</a>
           </li>
           <li>
-            my <a href="https://stefanbohacek.com/blog/twitter-bots-a-retrospective/">2023 retrospective on Twitter bots</a>
+            my <a href="https://stefanbohacek.com/blog/twitter-bots-a-retrospective/">2023 retrospective on Twitter
+              bots</a>
           </li>
           <li>
             my other projects <a href="https://stefanbohacek.com/">on my personal website</a>
@@ -78,7 +85,8 @@
   <div class="row">
     <div class="col-12 text-center">
       <div class="container mx-auto mb-4">
-        <label for="fediverse-server" class="mb-2">Links below will open from this server:</label>
+        <label for="fediverse-server"
+          class="mb-2">Links below will open from this server:</label>
         <div class="input-group fediverse-input-group mx-auto"
           style="max-width: 500px;">
           <span class="input-group-text">https://</span>
@@ -113,8 +121,16 @@
     class="category-section pb-5">
     <div class="row section-heading-row">
       <div class="col-sm-12">
-        <div class="container ml-auto mr-auto">
-          <h2 class="text-center pt-3 pb-4 m-0"><a href="#{{this.slug}}">{{this.title}}</a></h2>
+        <div class="container ml-auto mr-auto d-flex align-items-center justify-content-center gap-3">
+          <h2 class="pt-3 pb-3 m-0"><a href="#{{this.slug}}">{{this.title}}</a></h2>
+          {{#if this.___collection_url}}
+          <a href="{{this.collection_url}}"
+            class="btn btn-sm btn-outline-secondary"
+            target="_blank"
+            rel="noopener">
+            View collection
+          </a>
+          {{/if}}
         </div>
       </div>
     </div>
@@ -125,13 +141,6 @@
       </div>
       {{/each}}
     </div>
-    {{#if this.collection_url}}
-    <div class="row">
-      <div class="col-12 text-center pt-2 pb-3">
-        <a href="{{this.collection_url}}" class="btn btn-outline-secondary" target="_blank" rel="noopener">View collection on Mastodon</a>
-      </div>
-    </div>
-    {{/if}}
   </div>
   {{/each}}
   <div id="inactive-bots"
@@ -267,7 +276,9 @@ The word &quot;watchers&quot; is highlighted, showing a link to my personal site
             type="submit">
             <img alt="Icon of the selected fediverse server's platform"
               src="https://fediverse-share-button.stefanbohacek.com/fediverse-share-button/icons/mastodon.svg"
-              class="fsb-icon" width="20" height="20">
+              class="fsb-icon"
+              width="20"
+              height="20">
             </span>Share</button>
         </div>
         <p class="fsb-support-note fsb-d-none">This server does not support sharing. Please visit <a

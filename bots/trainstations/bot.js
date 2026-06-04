@@ -72,7 +72,13 @@ const botScript = async () => {
     item.description ? `${item.description}. ` : ""
   }\n\n${item.wikipediaUrl}\n\n#trains #TrainStations #map`;
 
-  const imgData = await downloadFileAsBase64(imageUrl);
+  let imgData;
+  try {
+    imgData = await downloadFileAsBase64(imageUrl);
+  } catch (err) {
+    console.log(`${botID}: failed to download image for ${item.label}:`, err.message);
+    throw new Error(`${botID}: failed to download image for ${item.label}\n${imageUrl}\n\n${err.message}`);
+  }
 
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,

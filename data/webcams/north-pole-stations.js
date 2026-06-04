@@ -29,12 +29,12 @@ export default [
   //   url: "https://www.visitnomealaska.com/nome-cam",
   //   description: "An ocean view with a few small buildings.",
   // },
-  {
-    name: "Utqiaġvik (Barrow) Sea Ice Webcam",
-    image_url:
-      "https://seaice.alaska.edu/Staging/Utq_seaicecam/Utq_seaicecam_current.jpg",
-    url: "https://seaice.alaska.edu/gi/observatories/barrow_webcam/",
-    description:
-      "A view from a webcam overseeing a beach with a few small houses.",
-  },
+  // {
+  //   name: "Utqiaġvik (Barrow) Sea Ice Webcam",
+  //   image_url:
+  //     "https://seaice.alaska.edu/Staging/Utq_seaicecam/Utq_seaicecam_current.jpg",
+  //   url: "https://seaice.alaska.edu/gi/observatories/barrow_webcam/",
+  //   description:
+  //     "A view from a webcam overseeing a beach with a few small houses.",
+  // },
 ];

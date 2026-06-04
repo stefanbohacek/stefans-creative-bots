@@ -77,7 +77,12 @@ const botScript = async () => {
 
       if (imageURL) {
         const filePath = getTempDirPath("jpg");
-        await downloadFile(imageURL, filePath);
+        try {
+          await downloadFile(imageURL, filePath);
+        } catch (err) {
+          console.log(`${botID}: failed to download image for ${station.name}:`, err.message);
+          throw new Error(`${botID}: failed to download image for ${station.name}\n${imageURL}\n\n${err.message}`);
+        }
 
         const luminosity = await getImageLuminosity(filePath);
 

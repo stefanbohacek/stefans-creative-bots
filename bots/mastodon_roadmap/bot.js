@@ -68,9 +68,15 @@ const botScript = async () => {
           `found ${exploringCurrent.length} item(s) under "Exploring"`,
         );
 
-        const [savedRows] = await db.execute(
-          /* sql */ `SELECT item_id, category FROM mastodon_roadmap_items`,
-        );
+        let savedRows;
+        try {
+          [savedRows] = await db.execute(
+            /* sql */ `SELECT item_id, category FROM mastodon_roadmap_items`,
+          );
+        } catch (err) {
+          console.log("mastodon_roadmap: failed to load saved items:", err.message);
+          return;
+        }
 
         const savedIDs = {
           released: savedRows
@@ -147,10 +153,14 @@ const botScript = async () => {
         ];
 
         for (const item of newItems) {
-          await db.execute(
-            /* sql */ `INSERT IGNORE INTO mastodon_roadmap_items (item_id, category, label, description) VALUES (?, ?, ?, ?)`,
-            [item.id, item.category, item.label, item.description || ""],
-          );
+          try {
+            await db.execute(
+              /* sql */ `INSERT IGNORE INTO mastodon_roadmap_items (item_id, category, label, description) VALUES (?, ?, ?, ?)`,
+              [item.id, item.category, item.label, item.description || ""],
+            );
+          } catch (err) {
+            console.log("mastodon_roadmap: failed to save item:", err.message);
+          }
         }
       });
 

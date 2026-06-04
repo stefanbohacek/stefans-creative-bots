@@ -22,22 +22,30 @@ const mastodon = new mastodonClient({
 
 const clients = { mastodon };
 
-const [questionRows] = await db.execute(
-  /* sql */`SELECT country, capital, current_question FROM what_capital_question WHERE id = 1`
-);
+try {
+  const [questionRows] = await db.execute(
+    /* sql */`SELECT country, capital, current_question FROM what_capital_question WHERE id = 1`
+  );
 
-if (questionRows.length) {
-  savedData.country = questionRows[0].country;
-  savedData.capital = questionRows[0].capital;
-  savedData.current_question = questionRows[0].current_question;
+  if (questionRows.length) {
+    savedData.country = questionRows[0].country;
+    savedData.capital = questionRows[0].capital;
+    savedData.current_question = questionRows[0].current_question;
+  }
+} catch (err) {
+  console.log("what_capital: failed to load saved question:", err.message);
 }
 
-const [scoreRows] = await db.execute(
-  /* sql */`SELECT username, score FROM what_capital_scores`
-);
+try {
+  const [scoreRows] = await db.execute(
+    /* sql */`SELECT username, score FROM what_capital_scores`
+  );
 
-for (const row of scoreRows) {
-  savedData.scores[row.username] = row.score;
+  for (const row of scoreRows) {
+    savedData.scores[row.username] = row.score;
+  }
+} catch (err) {
+  console.log("what_capital: failed to load scores:", err.message);
 }
 
 console.log(`loading saved data for @${botID}...`, savedData);
@@ -56,11 +64,15 @@ const updateScores = async (user) => {
     } else {
       savedData.scores[user] = 1;
     }
-    await db.execute(
-      /* sql */`INSERT INTO what_capital_scores (username, score) VALUES (?, 1)
-       ON DUPLICATE KEY UPDATE score = score + 1`,
-      [user]
-    );
+    try {
+      await db.execute(
+        /* sql */`INSERT INTO what_capital_scores (username, score) VALUES (?, 1)
+         ON DUPLICATE KEY UPDATE score = score + 1`,
+        [user]
+      );
+    } catch (err) {
+      console.log("what_capital: failed to update scores:", err.message);
+    }
   } else {
     console.log("what_capital: skipping answer from admin");
   }
@@ -99,11 +111,15 @@ const pickNewCapital = async () => {
     async (error, data) => {
       console.log("question posted", data.id);
       savedData.current_question = data.id;
-      await db.execute(
-        /* sql */`INSERT INTO what_capital_question (id, country, capital, current_question) VALUES (1, ?, ?, ?)
-         ON DUPLICATE KEY UPDATE country = VALUES(country), capital = VALUES(capital), current_question = VALUES(current_question)`,
-        [savedData.country, savedData.capital, data.id]
-      );
+      try {
+        await db.execute(
+          /* sql */`INSERT INTO what_capital_question (id, country, capital, current_question) VALUES (1, ?, ?, ?)
+           ON DUPLICATE KEY UPDATE country = VALUES(country), capital = VALUES(capital), current_question = VALUES(current_question)`,
+          [savedData.country, savedData.capital, data.id]
+        );
+      } catch (err) {
+        console.log("what_capital: failed to save question:", err.message);
+      }
     }
   );
 };

@@ -27,9 +27,14 @@ const botScript = async () => {
     }
   ];
 
-  const [rows] = await db.execute(
-    /* sql */`SELECT app, platform, github_repo, app_download, current_version FROM mastodon_mobile_apps`
-  );
+  let rows = [];
+  try {
+    [rows] = await db.execute(
+      /* sql */`SELECT app, platform, github_repo, app_download, current_version FROM mastodon_mobile_apps`
+    );
+  } catch (err) {
+    console.log("mastodon_mobile_apps: failed to load apps from DB:", err.message);
+  }
 
   const apps = rows.length ? rows : defaultApps;
 
@@ -60,11 +65,15 @@ const botScript = async () => {
   }, Promise.resolve());
 
   for (const app of apps) {
-    await db.execute(
-      /* sql */`INSERT INTO mastodon_mobile_apps (app, platform, github_repo, app_download, current_version) VALUES (?, ?, ?, ?, ?)
-       ON DUPLICATE KEY UPDATE current_version = VALUES(current_version)`,
-      [app.app, app.platform, app.github_repo, app.app_download, app.current_version]
-    );
+    try {
+      await db.execute(
+        /* sql */`INSERT INTO mastodon_mobile_apps (app, platform, github_repo, app_download, current_version) VALUES (?, ?, ?, ?, ?)
+         ON DUPLICATE KEY UPDATE current_version = VALUES(current_version)`,
+        [app.app, app.platform, app.github_repo, app.app_download, app.current_version]
+      );
+    } catch (err) {
+      console.log("mastodon_mobile_apps: failed to save app version:", err.message);
+    }
   }
 };
 

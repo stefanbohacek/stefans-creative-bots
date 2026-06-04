@@ -83,12 +83,15 @@ export const loadFediverseAccountData = async (bots) => {
   const placeholders = accounts.map(() => "(?, ?)").join(", ");
   const values = accounts.flatMap(({ username, server }) => [username, server]);
 
-  await db.execute(
-    /* sql */`INSERT IGNORE INTO fediverse_account_info (username, server) VALUES ${placeholders}`,
-    values
-  );
-
-  console.log(`💾 loaded ${accounts.length} fediverse account(s)`);
+  try {
+    await db.execute(
+      /* sql */`INSERT IGNORE INTO fediverse_account_info (username, server) VALUES ${placeholders}`,
+      values
+    );
+    console.log(`💾 loaded ${accounts.length} fediverse account(s)`);
+  } catch (err) {
+    console.log("failed to load fediverse account data:", err.message);
+  }
 };
 
 export const scheduleBots = async (bots, app) => {

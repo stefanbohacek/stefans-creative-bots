@@ -18,7 +18,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
     console.log(`🖥️ running on port ${listener.address().port}`);
     console.log(`🕒 server time: ${new Date().toTimeString()}`);
 
-    loadFediverseAccountData(bots);
+    try {
+      await loadFediverseAccountData(bots);
+    } catch (err) {
+      console.log("Failed to load fediverse account data:", err.message);
+    }
     await scheduleBots(bots, app);
     await checkBotPool(app);
   });

@@ -4,9 +4,15 @@ import express from "express";
 const router = express.Router();
 
 router.get("/all", async (req, res) => {
-  const [rows] = await db.execute(
-    /* sql */`SELECT * FROM fediverse_account_info WHERE display_name IS NOT NULL`
-  );
+  let rows;
+  try {
+    [rows] = await db.execute(
+      /* sql */`SELECT * FROM fediverse_account_info WHERE display_name IS NOT NULL`
+    );
+  } catch (err) {
+    console.log("Failed to load fediverse account info:", err.message);
+    return res.status(500).json({ error: "Database unavailable" });
+  }
 
   const result = {};
   for (const row of rows) {

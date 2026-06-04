@@ -96,33 +96,40 @@ router.get("/", async (req, res) => {
     .sort((a, b) => new Date(b.about.date_created) - new Date(a.about.date_created))
     .slice(0, 8);
 
-  const [followerStatsRows] = await db.execute(
-    /* sql */`SELECT unique_followers, unique_servers, calculated_at FROM follower_stats WHERE id = 1`
-  );
-
   let follower_stats = null;
-  if (followerStatsRows.length) {
-    const row = followerStatsRows[0];
-    const date = new Date(row.calculated_at);
-    follower_stats = {
-      unique_followers: row.unique_followers.toLocaleString("en-US"),
-      unique_servers: row.unique_servers.toLocaleString("en-US"),
-      calculated_month: date.toLocaleDateString("en-US", { month: "long", year: "numeric" }),
-    };
+  try {
+    const [followerStatsRows] = await db.execute(
+      /* sql */`SELECT unique_followers, unique_servers, calculated_at FROM follower_stats WHERE id = 1`
+    );
+    if (followerStatsRows.length) {
+      const row = followerStatsRows[0];
+      const date = new Date(row.calculated_at);
+      follower_stats = {
+        unique_followers: row.unique_followers.toLocaleString("en-US"),
+        unique_servers: row.unique_servers.toLocaleString("en-US"),
+        calculated_month: date.toLocaleDateString("en-US", { month: "long", year: "numeric" }),
+      };
+    }
+  } catch (err) {
+    console.log("Failed to load follower stats:", err.message);
   }
 
-  const [popularRows] = await db.execute(
-    /* sql */`SELECT username, server FROM fediverse_account_info
-     WHERE followers IS NOT NULL ORDER BY followers DESC LIMIT 8`
-  );
-
-  const popularBots = popularRows
-    .map((row) =>
-      activeBots.find(
-        (b) => b.about.fediverse_handle === `@${row.username}@${row.server}`,
-      ),
-    )
-    .filter(Boolean);
+  let popularBots = [];
+  try {
+    const [popularRows] = await db.execute(
+      /* sql */`SELECT username, server FROM fediverse_account_info
+       WHERE followers IS NOT NULL ORDER BY followers DESC LIMIT 8`
+    );
+    popularBots = popularRows
+      .map((row) =>
+        activeBots.find(
+          (b) => b.about.fediverse_handle === `@${row.username}@${row.server}`,
+        ),
+      )
+      .filter(Boolean);
+  } catch (err) {
+    console.log("Failed to load popular bots:", err.message);
+  }
 
   if (popularBots.length > 0) {
     categories.unshift({

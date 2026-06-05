@@ -4,6 +4,7 @@ import db from "./db.js";
 import { mastodonFetch } from "./mastodon/fetch.js";
 import lookupAccount from "./mastodon/lookupAccount.js";
 import { notifyAdmin } from "./email.js";
+import getUserAgent from "./getSCBUserAgent.js";
 
 export default () => {
   console.log("setting up cron jobs...");
@@ -15,7 +16,7 @@ export default () => {
         console.log("fetching data for WikipediaTopEdits bot");
 
         let dateYesterday = new Date();
-        dateYesterday.setDate(dateYesterday.getDate() - 1);
+        dateYesterday.setUTCDate(dateYesterday.getUTCDate() - 1);
         const date = dateYesterday
           .toISOString()
           .split("T")[0]
@@ -23,7 +24,7 @@ export default () => {
         const url = `https://tools.stefanbohacek.com/wikipedia-top-edits/?date=${date}`;
         console.log(url);
 
-        const response = await fetch(url);
+        const response = await fetch(url, { headers: { "User-Agent": getUserAgent() } });
         const data = await response.json();
       } catch (err) {
         console.log("WikipediaTopEdits cron error:", err);

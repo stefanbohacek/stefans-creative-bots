@@ -33,7 +33,7 @@ const botScript = async () => {
           const browser = await puppeteer.connect({
             browserWSEndpoint: process.env.BROWSERLESS_URL,
           });
-          
+
           const page = await browser.newPage();
           await page.setDefaultNavigationTimeout(120000);
 
@@ -41,10 +41,8 @@ const botScript = async () => {
             url,
           });
 
-
-
           await page.setUserAgent(
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
           );
 
           await page.setViewport({ width: 720, height: 720 });
@@ -70,7 +68,7 @@ const botScript = async () => {
           if (element) {
             planetDescription = await page.evaluate(
               (el) => el.textContent,
-              element
+              element,
             );
           }
 
@@ -80,7 +78,7 @@ const botScript = async () => {
           if (element) {
             planetDistance = await page.evaluate(
               (el) => el.textContent,
-              element
+              element,
             );
           }
           // console.log({
@@ -123,7 +121,7 @@ const botScript = async () => {
 
           if (randomPlanet.pl_orbper) {
             description += `\nOrbital period: ${parseFloat(
-              randomPlanet.pl_orbper
+              randomPlanet.pl_orbper,
             )
               .toFixed(2)
               .toLocaleString()} day(s)`;
@@ -133,22 +131,28 @@ const botScript = async () => {
             description += `\nEquilibrium temperature: ${randomPlanet.pl_eqt}° K`;
           }
 
-          await page.addStyleTag({ content: ".headerBar, #dropUpId, #sideId, .info-panel, footer, .toggle-ui-mobile { display: none !important; }" });
+          await page.addStyleTag({
+            content:
+              ".headerBar, #dropUpId, #sideId, .info-panel, footer, .toggle-ui-mobile { display: none !important; }",
+          });
 
           try {
             const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;
             await page.screenshot({ path: screenshotPath });
 
             const luminosity = await getImageLuminosity(screenshotPath);
+            console.log(`exoplanets: image luminosity`, luminosity);
 
-            if (luminosity > 40) {
+            if (luminosity > 40 && luminosity < 200) {
               await mastodon.postImage({
                 status: `${description}\n\n${url}\n\n#space #exoplanets`,
                 image: screenshotPath,
                 alt_text: `A computer-generated representation of the ${planetName} exoplanet.`,
               });
             } else {
-              console.log("exoplanets: image too dark, retrying...");
+              console.log(
+                `exoplanets: image luminosity out of range (${Math.round(luminosity)}), retrying...`,
+              );
               await botScript();
             }
           } catch (err) {

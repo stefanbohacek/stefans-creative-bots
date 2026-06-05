@@ -15,7 +15,10 @@ const botScript = async () => {
 
       let dateYesterday = new Date();
       dateYesterday.setDate(dateYesterday.getDate() - 1);
-      const date = dateYesterday.toISOString().split("T")[0].replaceAll("-", "");
+      const year = dateYesterday.getFullYear();
+      const month = String(dateYesterday.getMonth() + 1).padStart(2, "0");
+      const day = String(dateYesterday.getDate()).padStart(2, "0");
+      const date = `${year}${month}${day}`;
       const url = `https://tools.stefanbohacek.com/wikipedia-top-edits/?date=${date}`;
       console.log(url);
 

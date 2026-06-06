@@ -6,12 +6,17 @@ import randomFromArray from "./../../modules/randomFromArray.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getWeather from "./../../modules/getWeather.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
+import sleep from "./../../modules/sleep.js";
 
 import { stat } from "fs";
 
 const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
-const botScript = async () => {
+const botScript = async (retries = 0) => {
+  if (retries >= 10) {
+    console.log(`${botID}: max retries reached`);
+    return;
+  }
   await (async () => {
     let browser;
     try {
@@ -86,7 +91,7 @@ const botScript = async () => {
 
         const luminosity = await getImageLuminosity(filePath);
 
-        if (luminosity > 40) {
+        if (luminosity > 20 && luminosity < 200) {
           let description = station.description ? station.description : `View from the ${station.name}.`;
           let weather;
 
@@ -110,11 +115,13 @@ const botScript = async () => {
           });
         } else {
           console.log(`@${botID}: image too dark, retrying...`);
-          await botScript();
+          await sleep(3000);
+          await botScript(retries + 1);
         }
       } else {
         console.log(`@${botID}: image not found, retrying...`);
-        await botScript();
+        await sleep(3000);
+        await botScript(retries + 1);
       }
     } catch (error) {
       console.log(`@${botID} error`, error);

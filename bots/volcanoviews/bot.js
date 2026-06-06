@@ -5,10 +5,15 @@ import randomFromArray from "./../../modules/randomFromArray.js";
 import getWeather from "./../../modules/getWeather.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
+import sleep from "./../../modules/sleep.js";
 
 const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
-const botScript = async () => {
+const botScript = async (retries = 0) => {
+  if (retries >= 10) {
+    console.log(`${botID}: max retries reached`);
+    return;
+  }
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,
     access_token: process.env.VOLCANOVIEWS_MASTODON_ACCESS_TOKEN,
@@ -21,7 +26,7 @@ const botScript = async () => {
 
   const luminosity = await getImageLuminosity(filePath);
 
-  if (luminosity > 40) {
+  if (luminosity > 20 && luminosity < 200) {
     const status = `${webcam.name} via ${webcam.page_url} #volcano #nature`;
 
     await mastodon.postImage({
@@ -31,7 +36,8 @@ const botScript = async () => {
     });
     return true;
   } else {
-    return await botScript();
+    await sleep(3000);
+    return await botScript(retries + 1);
   }
 };
 

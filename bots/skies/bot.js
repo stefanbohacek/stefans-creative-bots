@@ -6,10 +6,15 @@ import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import downloadFile from "./../../modules/downloadFile.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
+import sleep from "./../../modules/sleep.js";
 
 const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
-const botScript = async () => {
+const botScript = async (retries = 0) => {
+  if (retries >= 10) {
+    console.log(`${botID}: max retries reached`);
+    return;
+  }
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,
     access_token: process.env.SKIES_ACCESS_TOKEN_SECRET,
@@ -31,7 +36,7 @@ const botScript = async () => {
   await downloadFile(webcam.url, filePath);
   const luminosity = await getImageLuminosity(filePath);
 
-  if (luminosity > 40) {
+  if (luminosity > 20 && luminosity < 200) {
     const weather = await getWeather(webcam.latitude, webcam.longitude);
     let description = webcam.description;
 
@@ -49,7 +54,8 @@ const botScript = async () => {
     });
   } else {
     console.log("skies: image too dark, retrying...");
-    await botScript();
+    await sleep(3000);
+    await botScript(retries + 1);
   }
 
   return true;

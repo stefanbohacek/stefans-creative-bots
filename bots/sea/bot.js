@@ -5,6 +5,7 @@ import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import runCommand from "./../../modules/runCommand.js";
 import sleep from "./../../modules/sleep.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -12,7 +13,13 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const botScript = async () => {
+const { botID } = getBotInfo(import.meta.url);
+
+const botScript = async (retries = 0) => {
+  if (retries >= 10) {
+    console.log(`${botID}: max retries reached`);
+    return;
+  }
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,
     access_token: process.env.AT_SEA_ACCESS_TOKEN_SECRET,
@@ -86,12 +93,12 @@ const botScript = async () => {
     } else {
       console.log("no good pictures, retrying...");
       await sleep(3000);
-      await botScript();
+      await botScript(retries + 1);
     }
   } catch (error) {
     console.log("error:@sea", error, "retrying...");
     await sleep(3000);
-    await botScript();
+    await botScript(retries + 1);
   }
 
   return true;

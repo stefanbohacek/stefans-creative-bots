@@ -6,10 +6,15 @@ import randomFromArray from "./../../modules/randomFromArray.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getWeather from "./../../modules/getWeather.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
+import sleep from "./../../modules/sleep.js";
 
 const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
-const botScript = async () => {
+const botScript = async (retries = 0) => {
+  if (retries >= 10) {
+    console.log(`${botID}: max retries reached`);
+    return;
+  }
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,
     access_token: process.env.LAKES_BOT_MASTODON_ACCESS_TOKEN,
@@ -24,7 +29,7 @@ const botScript = async () => {
 
   const luminosity = await getImageLuminosity(filePath);
 
-  if (luminosity > 40) {
+  if (luminosity > 20 && luminosity < 200) {
     const mapURL = `🗺️ https://www.openstreetmap.org/?mlat=${webcam.latitude}&mlon=${webcam.longitude}#map=12/${webcam.latitude}/${webcam.longitude}`;
     const weather = await getWeather(webcam.latitude, webcam.longitude);
     const status = `${webcam.title}\n\n${webcamUrl}\n${mapURL}\n\n#lake #lakes #outdoors #webcam`;
@@ -41,7 +46,8 @@ const botScript = async () => {
     });
     return true;
   } else {
-    return await botScript();
+    await sleep(3000);
+    return await botScript(retries + 1);
   }
 };
 

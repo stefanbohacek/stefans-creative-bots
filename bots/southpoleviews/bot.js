@@ -5,11 +5,16 @@ import { getNextItem } from "../../modules/rotationQueue.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getWeather from "./../../modules/getWeather.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
+import sleep from "./../../modules/sleep.js";
 
 const { botID } = getBotInfo(import.meta.url);
 const hashtags = "#SouthPole #antarctica #view #webcam";
 
-const botScript = async () => {
+const botScript = async (retries = 0) => {
+  if (retries >= 10) {
+    console.log(`${botID}: max retries reached`);
+    return;
+  }
   try {
     await (async () => {
       const mastodon = new mastodonClient({
@@ -26,7 +31,7 @@ const botScript = async () => {
       if (imageFilePath) {
         const luminosity = await getImageLuminosity(imageFilePath);
 
-        if (luminosity > 40) {
+        if (luminosity > 20 && luminosity < 200) {
           let description = station.description
             ? station.description
             : `View from the ${station.name}.`;
@@ -52,11 +57,13 @@ const botScript = async () => {
           });
         } else {
           console.log(`@${botID}: image too dark, retrying...`);
-          await botScript();
+          await sleep(3000);
+          await botScript(retries + 1);
         }
       } else {
         console.log(`@${botID}: image not found, retrying...`);
-        await botScript();
+        await sleep(3000);
+        await botScript(retries + 1);
       }
     })();
   } catch (error) {

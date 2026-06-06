@@ -4,6 +4,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
+import sleep from "./../../modules/sleep.js";
 
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -13,7 +14,11 @@ const __dirname = dirname(__filename);
 
 const { botID } = getBotInfo(import.meta.url);
 
-const botScript = async () => {
+const botScript = async (retries = 0) => {
+  if (retries >= 10) {
+    console.log(`${botID}: max retries reached`);
+    return;
+  }
   await (async () => {
     const mastodon = new mastodonClient({
       // access_token: process.env.MASTODON_TEST_TOKEN,
@@ -153,7 +158,8 @@ const botScript = async () => {
               console.log(
                 `exoplanets: image luminosity out of range (${Math.round(luminosity)}), retrying...`,
               );
-              await botScript();
+              await sleep(3000);
+              await botScript(retries + 1);
             }
           } catch (err) {
             console.log(`Error: ${err.message}`);

@@ -143,7 +143,7 @@ const botScript = async () => {
             const luminosity = await getImageLuminosity(screenshotPath);
             console.log(`exoplanets: image luminosity`, luminosity);
 
-            if (luminosity > 40 && luminosity < 200) {
+            if (luminosity > 40 && luminosity < 150) {
               await mastodon.postImage({
                 status: `${description}\n\n${url}\n\n#space #exoplanets`,
                 image: screenshotPath,

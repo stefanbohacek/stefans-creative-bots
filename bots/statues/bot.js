@@ -1,6 +1,6 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache, resolveImageURL } from "./../../modules/wikidata.js";
 import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
@@ -88,8 +88,9 @@ const botScript = async () => {
   let imageUrl = "";
 
   if (item.image) {
+    const resolvedImageURL = await resolveImageURL(item.image);
     imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
-      item.image,
+      resolvedImageURL,
     )}(${item.long},${item.lat})/${item.long},${
       item.lat
     },5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
@@ -99,7 +100,13 @@ const botScript = async () => {
     item.description ? `${item.description}. ` : ""
   }\n\n${item.wikipediaUrl}\n\n#statue #history #map`;
 
-  const imgData = await downloadFileAsBase64(imageUrl);
+  let imgData;
+  try {
+    imgData = await downloadFileAsBase64(imageUrl);
+  } catch (err) {
+    console.log(`${botID}: failed to download image for ${item.label}:`, err.message);
+    throw new Error(`${botID}: failed to download image for ${item.label}\n${imageUrl}\n\n${err.message}`);
+  }
 
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,

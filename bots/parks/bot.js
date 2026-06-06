@@ -1,6 +1,6 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
+import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache, resolveImageURL } from "./../../modules/wikidata.js";
 import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
@@ -61,8 +61,9 @@ const botScript = async () => {
   let imageUrl = "";
 
   if (item.image) {
+    const resolvedImageURL = await resolveImageURL(item.image);
     imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
-      item.image,
+      resolvedImageURL,
     )}(${item.long},${item.lat})/${item.long},${
       item.lat
     },5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;

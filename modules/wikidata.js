@@ -3,6 +3,14 @@ import db from "./db.js";
 
 const TTL_48H = 48 * 60 * 60 * 1000;
 
+export const resolveImageURL = async (url) => {
+  const response = await fetch(url, {
+    method: "HEAD",
+    headers: { "User-Agent": getUserAgent() },
+  });
+  return response.url;
+};
+
 export const getWikidataLabel = async (item) => {
   const response = await fetch(
     `https://www.wikidata.org/entity/${item.wikidataId}.json`,
@@ -40,7 +48,9 @@ export const getWikidataCache = async (botId, ttl = TTL_48H) => {
 
     return { data: JSON.parse(rows[0].data), isStale };
   } catch (err) {
-    console.log("wikidata:getWikidataCache: DB unavailable, fetching live data");
+    console.log(
+      "wikidata:getWikidataCache: DB unavailable, fetching live data",
+    );
     return null;
   }
 };
@@ -53,7 +63,9 @@ export const saveWikidataCache = async (botId, items) => {
       [botId, JSON.stringify(items)],
     );
   } catch (err) {
-    console.log("wikidata:saveWikidataCache: DB unavailable, skipping cache save");
+    console.log(
+      "wikidata:saveWikidataCache: DB unavailable, skipping cache save",
+    );
   }
 };
 

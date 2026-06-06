@@ -39,6 +39,7 @@ const ignoreList = [
   "George Washington",
   "James Cook",
   "Joseph Bryan",
+  "Leopold II",
   "Margaret Thatcher",
   "Reiterdenkmal",
   "Raphael Semmes",

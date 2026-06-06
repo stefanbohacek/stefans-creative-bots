@@ -63,10 +63,10 @@ const updateScores = async (user) => {
         [user]
       );
     } catch (err) {
-      console.log("what_capital: failed to update scores:", err.message);
+      console.log(`${botID}: failed to update scores:`, err.message);
     }
   } else {
-    console.log("what_capital: skipping answer from admin");
+    console.log(`${botID}: skipping answer from admin`);
   }
 };
 
@@ -110,7 +110,7 @@ const pickNewCapital = async () => {
           [savedData.country, savedData.capital, data.id]
         );
       } catch (err) {
-        console.log("what_capital: failed to save question:", err.message);
+        console.log(`${botID}: failed to save question:`, err.message);
       }
     }
   );

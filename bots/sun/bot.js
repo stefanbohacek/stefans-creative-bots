@@ -55,7 +55,7 @@ const botScript = async () => {
         alt_text: camera.description,
       });
     } catch (error) {
-      console.log("sun:error", error);
+      console.log(`${botID} error:`, error);
       throw error;
     }
   })();

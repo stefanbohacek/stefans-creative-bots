@@ -4,6 +4,8 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import isBetween from "./../../modules/isBetween.js";
 import consoleLog from "./../../modules/consolelog.js";
 import { getData, makeDataMap } from "./../../modules/datasets.js";
+import sleep from "./../../modules/sleep.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
 const getLongLat = (datapoint) => {
   // console.log("getLongLat BEGIN");
@@ -61,7 +63,13 @@ const dataOptions = {
   offsetRange: [0, 10],
 };
 
-const botScript = async () => {
+const { botID } = getBotInfo(import.meta.url);
+
+const botScript = async (retries = 0) => {
+  if (retries >= 10) {
+    console.log(`${botID}: max retries reached`);
+    return;
+  }
   const result = await getData(dataOptions);
 
   if (!result) {
@@ -92,7 +100,8 @@ const botScript = async () => {
       alt_text: `A map with locations from the ${datasetName} dataset. Please visit the link for full details.`,
     });
   } else {
-    await botScript();
+    await sleep(3000);
+    await botScript(retries + 1);
   }
 };
 

@@ -2,6 +2,7 @@ import cheerio from "cheerio";
 import puppeteer from "puppeteer";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import db from "./../../modules/db.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
 const getItems = (html, statusLabel) => {
   let items = [];
@@ -29,6 +30,8 @@ const getItems = (html, statusLabel) => {
 
   return items;
 };
+
+const { botID } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   await (async () => {
@@ -74,7 +77,7 @@ const botScript = async () => {
             /* sql */ `SELECT item_id, category FROM mastodon_roadmap_items`,
           );
         } catch (err) {
-          console.log("mastodon_roadmap: failed to load saved items:", err.message);
+          console.log(`${botID}: failed to load saved items:`, err.message);
           return;
         }
 
@@ -159,7 +162,7 @@ const botScript = async () => {
               [item.id, item.category, item.label, item.description || ""],
             );
           } catch (err) {
-            console.log("mastodon_roadmap: failed to save item:", err.message);
+            console.log(`${botID}: failed to save item:`, err.message);
           }
         }
       });

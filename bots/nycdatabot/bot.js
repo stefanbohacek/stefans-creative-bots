@@ -4,6 +4,8 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import isBetween from "./../../modules/isBetween.js";
 import getZipCodeFromDataPoint from "./../../modules/getZipCodeFromDataPoint.js";
 import { getData, makeDataMap } from "./../../modules/datasets.js";
+import sleep from "./../../modules/sleep.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
 
 const getLongLat = (datapoint) => {
   let dp = false;
@@ -56,7 +58,13 @@ const dataOptions = {
   offsetRange: [0, 351],
 };
 
-const botScript = async () => {
+const { botID } = getBotInfo(import.meta.url);
+
+const botScript = async (retries = 0) => {
+  if (retries >= 10) {
+    console.log(`${botID}: max retries reached`);
+    return;
+  }
   const result = await getData(dataOptions);
 
   if (!result) {
@@ -108,7 +116,8 @@ const botScript = async () => {
         });
         await postMap();
       } else {
-        await botScript();
+        await sleep(3000);
+        await botScript(retries + 1);
       }
       break;
   }

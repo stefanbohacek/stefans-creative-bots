@@ -96,7 +96,7 @@ const botScript = async (retries = 0) => {
       await botScript(retries + 1);
     }
   } catch (error) {
-    console.log("error:@sea", error, "retrying...");
+    console.log(`${botID} error:`, error, "retrying...");
     await sleep(3000);
     await botScript(retries + 1);
   }

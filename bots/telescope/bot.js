@@ -129,7 +129,7 @@ const botScript = async () => {
       }
 
     } catch (error) {
-      console.log("telescope:error", error);
+      console.log(`${botID} error:`, error);
       throw error;
     } finally {
       if (browser) {

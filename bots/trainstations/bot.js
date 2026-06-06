@@ -39,7 +39,7 @@ const botScript = async () => {
       await saveWikidataCache(botID, freshItems);
       items = freshItems;
     } else if (cached) {
-      console.log("trainstations: live fetch failed, using stale cache");
+      console.log(`${botID}: live fetch failed, using stale cache`);
       items = cached.data;
     }
   } else {
@@ -49,7 +49,7 @@ const botScript = async () => {
   const item = randomFromArray(items);
 
   if (!item) {
-    console.log("trainstations: no items found");
+    console.log(`${botID}: no items found`);
     return;
   }
 

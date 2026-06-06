@@ -52,7 +52,7 @@ const botScript = async () => {
       });
     })();
   } catch (error) {
-    console.log("mteverest error:", error);
+    console.log(`${botID} error:`, error);
   }
 };
 

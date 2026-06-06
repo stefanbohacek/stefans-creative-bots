@@ -169,7 +169,7 @@ const botScript = async (retries = 0) => {
 
           // console.log(description);
         } catch (error) {
-          console.log("exoplanets error:", error);
+          console.log(`${botID} error:`, error);
         }
         return true;
       });

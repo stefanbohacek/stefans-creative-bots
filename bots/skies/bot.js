@@ -53,7 +53,7 @@ const botScript = async (retries = 0) => {
       alt_text: description,
     });
   } else {
-    console.log("skies: image too dark, retrying...");
+    console.log(`${botID}: image too dark, retrying...`);
     await sleep(3000);
     await botScript(retries + 1);
   }

@@ -42,7 +42,7 @@ const botScript = async () => {
       const imgPath = `${__dirname}/../../temp/${botID}.gif`;
       const resizedPath = `${__dirname}/../../temp/${botID}_resized.gif`;
       await downloadFile(camera.imageURL, imgPath);
-      await execAsync(`ffmpeg -y -i "${imgPath}" -vf "fps=10" -loop 0 "${resizedPath}"`);
+      await execAsync(`ffmpeg -y -r 10 -i "${imgPath}" -vf "fps=10" -loop 0 "${resizedPath}"`);
       let status = `${camera.url}\n\n#TheSun #space #astronomy #telescope`;
 
       const imgData = await fs.readFileSync(resizedPath, {

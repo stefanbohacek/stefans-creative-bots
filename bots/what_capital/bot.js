@@ -22,22 +22,26 @@ const mastodon = new mastodonClient({
 
 const clients = { mastodon };
 
-const [questionRows] = await db.execute(
-  /* sql */`SELECT country, capital, current_question FROM what_capital_question WHERE id = 1`
-);
+try {
+  const [questionRows] = await db.execute(
+    /* sql */`SELECT country, capital, current_question FROM what_capital_question WHERE id = 1`
+  );
 
-if (questionRows.length) {
-  savedData.country = questionRows[0].country;
-  savedData.capital = questionRows[0].capital;
-  savedData.current_question = questionRows[0].current_question;
-}
+  if (questionRows.length) {
+    savedData.country = questionRows[0].country;
+    savedData.capital = questionRows[0].capital;
+    savedData.current_question = questionRows[0].current_question;
+  }
 
-const [scoreRows] = await db.execute(
-  /* sql */`SELECT username, score FROM what_capital_scores`
-);
+  const [scoreRows] = await db.execute(
+    /* sql */`SELECT username, score FROM what_capital_scores`
+  );
 
-for (const row of scoreRows) {
-  savedData.scores[row.username] = row.score;
+  for (const row of scoreRows) {
+    savedData.scores[row.username] = row.score;
+  }
+} catch (err) {
+  console.log(`failed to load saved data for what_capital bot:`, err.message);
 }
 
 console.log(`loading saved data for @${botID}...`, savedData);

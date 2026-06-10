@@ -25,6 +25,11 @@ export default () => {
         console.log(url);
 
         const response = await fetch(url, { headers: { "User-Agent": getUserAgent() } });
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status} from ${url}`);
+        }
+
         const data = await response.json();
       } catch (err) {
         console.log("WikipediaTopEdits cron error:", err);

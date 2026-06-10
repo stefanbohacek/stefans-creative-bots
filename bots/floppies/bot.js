@@ -7,6 +7,7 @@ const { botID } = getBotInfo(import.meta.url);
 const hashtags = "#floppy #RetroTechnology";
 
 const botScript = async () => {
+  let floppy;
   try {
     await (async () => {
       const mastodon = new mastodonClient({
@@ -15,7 +16,7 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const floppy = randomFromArray(floppies);
+      floppy = randomFromArray(floppies);
       const imgData = await downloadFileAsBase64(floppy.img_url);
 
       await mastodon.postImage({

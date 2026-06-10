@@ -29,6 +29,14 @@ const botScript = async (retries = 0) => {
   const stationList = `https://www.ndbc.noaa.gov/buoycams.php`;
   const excludedStationIDs = ["44008", "46080", "46029", "42003"];
   const response = await fetch(stationList);
+
+  if (!response.ok) {
+    console.log(`${botID}: station list fetch failed (${response.status}), retrying...`);
+    await sleep(30000);
+    await botScript(retries + 1);
+    return;
+  }
+
   let stations = await response.json();
 
   stations = stations.filter(
@@ -43,6 +51,13 @@ const botScript = async (retries = 0) => {
     }
     return includeStation;
   });
+
+  if (!stations.length) {
+    console.log(`${botID}: no valid stations found, retrying...`);
+    await sleep(30000);
+    await botScript(retries + 1);
+    return;
+  }
 
   const station = randomFromArray(stations);
   // const station = stations.filter((station) => station.id === "46085");
@@ -92,12 +107,12 @@ const botScript = async (retries = 0) => {
       });
     } else {
       console.log("no good pictures, retrying...");
-      await sleep(3000);
+      await sleep(30000);
       await botScript(retries + 1);
     }
   } catch (error) {
     console.log(`${botID} error:`, error, "retrying...");
-    await sleep(3000);
+    await sleep(30000);
     await botScript(retries + 1);
   }
 

@@ -1,4 +1,4 @@
-import downloadFile from "../modules/downloadFile.js";
+import { file as downloadFile } from "../modules/fetch.js";
 import getImageLuminosity from "../modules/getImageLuminosity.js";
 import sleep from "../modules/sleep.js";
 

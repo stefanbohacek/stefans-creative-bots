@@ -3,7 +3,7 @@ import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
 import capitalizeFirstLetter from "./../../modules/capitalizeFirstLetter.js";
 import { getMainImage } from "./../../modules/wikipedia.js";
-import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { botID } = getBotInfo(import.meta.url);

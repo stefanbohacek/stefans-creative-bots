@@ -2,7 +2,7 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import webcams from "./../../data/webcams/trains.js";
 import extractVideoLive from "./../../modules/extractVideoLive.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import { file as downloadFile } from "./../../modules/fetch.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getBotInfo from "./../../modules/getBotInfo.js";

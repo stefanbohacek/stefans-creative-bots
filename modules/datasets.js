@@ -1,4 +1,4 @@
-import downloadFileAsBase64 from "./downloadFileAsBase64.js";
+import { base64 as downloadFileAsBase64 } from "./fetch.js";
 import randomFromArray from "./randomFromArray.js";
 import getRandomInt from "./getRandomInt.js";
 import sleep from "./sleep.js";

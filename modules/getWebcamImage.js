@@ -1,5 +1,5 @@
 ﻿import puppeteer from "puppeteer";
-import downloadFile from "./downloadFile.js";
+import { file as downloadFile } from "./fetch.js";
 
 export default async (botID, webcam) => {
   const browser = await puppeteer.connect({

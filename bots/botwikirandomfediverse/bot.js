@@ -1,6 +1,6 @@
 import he from "he";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import fetchJSON from "./../../modules/fetchJSON.js";
+import { json as fetchJSON } from "./../../modules/fetch.js";
 
 const botScript = async () => {
   const mastodon = new mastodonClient({

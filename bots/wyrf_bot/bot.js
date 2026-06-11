@@ -3,7 +3,7 @@ import pluralize from "pluralize";
 import animals from "./../../data/animals.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import { file as downloadFile } from "./../../modules/fetch.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 import runCommand from "./../../modules/runCommand.js";
 import { getWikipediaPage, getMainImage } from "./../../modules/wikipedia.js";

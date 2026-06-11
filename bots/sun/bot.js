@@ -3,7 +3,7 @@ import { exec } from "child_process";
 import { promisify } from "util";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import { file as downloadFile } from "./../../modules/fetch.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const execAsync = promisify(exec);

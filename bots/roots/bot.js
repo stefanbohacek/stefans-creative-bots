@@ -2,7 +2,7 @@
 import UnitConverter from "./../../modules/UnitConverter.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
 import { getWikipediaPage } from "./../../modules/wikipedia.js";
 
 const botScript = async () => {

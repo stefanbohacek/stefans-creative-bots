@@ -1,5 +1,5 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
-import fetchJSON from "./../../modules/fetchJSON.js";
+import { json as fetchJSON } from "./../../modules/fetch.js";
 import webcams from "./../../data/webcams/iss.js";
 import extractVideoLive from "./../../modules/extractVideoLive.js";
 import extractVideo from "./../../modules/extractVideo.js";

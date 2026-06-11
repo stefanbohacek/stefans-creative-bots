@@ -1,5 +1,5 @@
 import usZips from "us-zips";
-import fetchJSON from "./../../modules/fetchJSON.js";
+import { json as fetchJSON } from "./../../modules/fetch.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import isBetween from "./../../modules/isBetween.js";
 import getZipCodeFromDataPoint from "./../../modules/getZipCodeFromDataPoint.js";

@@ -1,7 +1,7 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache, resolveImageURL } from "./../../modules/wikidata.js";
-import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { botID } = getBotInfo(import.meta.url);

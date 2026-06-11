@@ -1,5 +1,5 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import { file as downloadFile } from "./../../modules/fetch.js";
 import getWeather from "./../../modules/getWeather.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import randomFromArray from "./../../modules/randomFromArray.js";

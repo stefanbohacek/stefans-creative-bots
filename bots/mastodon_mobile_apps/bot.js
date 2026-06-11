@@ -1,5 +1,5 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
-import fetchJSON from "./../../modules/fetchJSON.js";
+import { json as fetchJSON } from "./../../modules/fetch.js";
 import truncate from "./../../modules/truncate.js";
 import db from "./../../modules/db.js";
 import getBotInfo from "./../../modules/getBotInfo.js";

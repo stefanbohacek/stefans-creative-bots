@@ -1,7 +1,7 @@
 ﻿import puppeteer from "puppeteer";
 // import stations from "./../../data/webcams/south-pole-stations.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getWeather from "./../../modules/getWeather.js";

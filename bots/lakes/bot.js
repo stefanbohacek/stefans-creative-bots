@@ -1,7 +1,7 @@
 ﻿import webcams from "./../../data/webcams/lakes.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 
-import downloadFile from "./../../modules/downloadFile.js";
+import { file as downloadFile } from "./../../modules/fetch.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getWeather from "./../../modules/getWeather.js";

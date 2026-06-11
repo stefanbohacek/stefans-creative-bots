@@ -2,7 +2,7 @@
 import { parse as parseHLS } from "hls-parser";
 import { browserFetch, browserFetchBinary } from "./browserFetch.js";
 import convertToMP4 from "./convertToMP4.js";
-import downloadFile from "./downloadFile.js";
+import { file as downloadFile } from "./fetch.js";
 import fs from "fs";
 
 import { dirname } from "path";

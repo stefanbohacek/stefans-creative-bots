@@ -2,7 +2,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import makeCoverVideo from "./../../modules/makeCoverVideo.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import { file as downloadFile } from "./../../modules/fetch.js";
 import { dirname, extname } from "path";
 import { fileURLToPath } from "url";
 import getBotInfo from "./../../modules/getBotInfo.js";

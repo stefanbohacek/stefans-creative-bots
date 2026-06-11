@@ -10,7 +10,7 @@ import Canvas from "canvas";
 import GIFEncoder from "gifencoder";
 
 import getFilenameFromURL from "./../getFilenameFromUrl.js";
-import downloadFile from "./../downloadFile.js";
+import { file as downloadFile } from "./../fetch.js";
 
 export default (overlays, options, cb) => {
   return new Promise((resolve) => {

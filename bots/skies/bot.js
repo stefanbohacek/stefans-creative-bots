@@ -3,7 +3,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 
 import getWeather from "./../../modules/getWeather.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
-import downloadFile from "./../../modules/downloadFile.js";
+import { file as downloadFile } from "./../../modules/fetch.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 import sleep from "./../../modules/sleep.js";

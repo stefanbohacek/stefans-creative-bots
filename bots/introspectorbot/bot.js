@@ -1,5 +1,5 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
-import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
+import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
 
 
 const botScript = async () => {

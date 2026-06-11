@@ -24,7 +24,14 @@ export default () => {
         const url = `https://tools.stefanbohacek.com/wikipedia-top-edits/?date=${date}`;
         console.log(url);
 
-        const response = await fetch(url, { headers: { "User-Agent": getUserAgent() } });
+        const response = await fetch(url, {
+          headers: { "User-Agent": getUserAgent() },
+        });
+
+        if (response.status === 504) {
+          console.log("WikipediaTopEdits cron error: 504 (processing data?)");
+          return;
+        }
 
         if (!response.ok) {
           throw new Error(`HTTP ${response.status} from ${url}`);
@@ -33,27 +40,30 @@ export default () => {
         const data = await response.json();
       } catch (err) {
         console.log("WikipediaTopEdits cron error:", err);
-        await notifyAdmin("WikipediaTopEdits cron error", `<pre>${err?.stack || err}</pre>`);
+        await notifyAdmin(
+          "WikipediaTopEdits cron error",
+          `<pre>${err?.stack || err}</pre>`,
+        );
       }
     },
     null,
-    true
+    true,
   );
 
   const fediverseDataRefreshCronJob = new CronJob(
     cronSchedules.EVERY_HOUR,
     async () => {
       try {
-        await db.execute(
-          /* sql */`UPDATE fediverse_account_info SET fetching = 0
-           WHERE fetching = 1 AND fetched_at < NOW() - INTERVAL 10 MINUTE`
-        );
+        await db.execute(/* sql */ `UPDATE fediverse_account_info SET fetching = 0
+           WHERE fetching = 1 AND fetched_at < NOW() - INTERVAL 10 MINUTE`);
 
         const [accounts] = await db.execute(
-          /* sql */`SELECT username, server FROM fediverse_account_info`
+          /* sql */ `SELECT username, server FROM fediverse_account_info`,
         );
 
-        console.log(`fediverse data refresh: updating ${accounts.length} account(s)...`);
+        console.log(
+          `fediverse data refresh: updating ${accounts.length} account(s)...`,
+        );
 
         for (const { username, server } of accounts) {
           try {
@@ -64,7 +74,7 @@ export default () => {
             }
 
             await db.execute(
-              /* sql */`UPDATE fediverse_account_info SET
+              /* sql */ `UPDATE fediverse_account_info SET
                display_name = ?, avatar = ?, followers = ?, following_count = ?,
                posts = ?, last_status_at = ?, fetched_at = NOW(), fetching = 0
                WHERE username = ? AND server = ?`,
@@ -77,21 +87,27 @@ export default () => {
                 accountData.last_status_at,
                 username,
                 server,
-              ]
+              ],
             );
           } catch (err) {
-            console.log(`fediverse data refresh error: @${username}@${server}`, err);
+            console.log(
+              `fediverse data refresh error: @${username}@${server}`,
+              err,
+            );
           }
         }
 
         console.log("fediverse data refresh: done");
       } catch (err) {
         console.log("fediverse data refresh cron error:", err);
-        await notifyAdmin("Fediverse data refresh cron error", `<pre>${err?.stack || err}</pre>`);
+        await notifyAdmin(
+          "Fediverse data refresh cron error",
+          `<pre>${err?.stack || err}</pre>`,
+        );
       }
     },
     null,
-    true
+    true,
   );
 
   const followerStatsCronJob = new CronJob(
@@ -107,7 +123,7 @@ export default () => {
         ];
 
         const [accounts] = await db.execute(
-          /* sql */`SELECT username, server FROM fediverse_account_info`
+          /* sql */ `SELECT username, server FROM fediverse_account_info`,
         );
 
         const uniqueFollowers = new Set();
@@ -115,15 +131,22 @@ export default () => {
 
         for (const { username, server } of accounts) {
           try {
-            console.log(`follower stats: fetching followers for @${username}@${server}...`);
+            console.log(
+              `follower stats: fetching followers for @${username}@${server}...`,
+            );
 
-            const userData = await mastodonFetch(server, "accounts/lookup", { acct: username });
+            const userData = await mastodonFetch(server, "accounts/lookup", {
+              acct: username,
+            });
 
             if (!userData?.id) {
               continue;
             }
 
-            const followers = await mastodonFetch(server, `accounts/${userData.id}/followers`);
+            const followers = await mastodonFetch(
+              server,
+              `accounts/${userData.id}/followers`,
+            );
 
             for (const follower of followers) {
               if (myAccounts.includes(follower.acct)) {
@@ -138,29 +161,36 @@ export default () => {
               }
             }
 
-            console.log(`follower stats: @${username}@${server} — ${followers.length} followers`);
+            console.log(
+              `follower stats: @${username}@${server} — ${followers.length} followers`,
+            );
           } catch (err) {
             console.log(`follower stats error: @${username}@${server}`, err);
           }
         }
 
         await db.execute(
-          /* sql */`INSERT INTO follower_stats (id, unique_followers, unique_servers, calculated_at)
+          /* sql */ `INSERT INTO follower_stats (id, unique_followers, unique_servers, calculated_at)
            VALUES (1, ?, ?, NOW())
            ON DUPLICATE KEY UPDATE
              unique_followers = VALUES(unique_followers),
              unique_servers = VALUES(unique_servers),
              calculated_at = NOW()`,
-          [uniqueFollowers.size, uniqueServers.size]
+          [uniqueFollowers.size, uniqueServers.size],
         );
 
-        console.log(`follower stats: done — ${uniqueFollowers.size.toLocaleString()} unique followers across ${uniqueServers.size.toLocaleString()} servers`);
+        console.log(
+          `follower stats: done — ${uniqueFollowers.size.toLocaleString()} unique followers across ${uniqueServers.size.toLocaleString()} servers`,
+        );
       } catch (err) {
         console.log("follower stats cron error:", err);
-        await notifyAdmin("Follower stats cron error", `<pre>${err?.stack || err}</pre>`);
+        await notifyAdmin(
+          "Follower stats cron error",
+          `<pre>${err?.stack || err}</pre>`,
+        );
       }
     },
     null,
-    true
+    true,
   );
 };

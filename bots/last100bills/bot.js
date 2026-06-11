@@ -1,5 +1,6 @@
 ﻿import { ChartJSNodeCanvas } from "chartjs-node-canvas";
 import mastodonClient from "./../../modules/mastodon/index.js";
+import fetchJSON from "./../../modules/fetchJSON.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 
 const botScript = async () => {
@@ -14,8 +15,7 @@ const botScript = async () => {
   const datasetUrl = `https://api.congress.gov/v3/bill?api_key=${process.env.CONGRESS_GOV_API}&limit=100`;
   const datasetName = "Last 100 bills in the US government";
 
-  const response = await fetch(datasetUrl);
-  const data = await response.json();
+  const data = await fetchJSON(datasetUrl);
 
   const categorizeStatus = (actionText) => {
     const text = actionText.toLowerCase();

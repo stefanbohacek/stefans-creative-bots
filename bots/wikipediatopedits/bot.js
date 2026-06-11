@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
 import mastodonClient from "./../../modules/mastodon/index.js";
+import fetchJSON from "./../../modules/fetchJSON.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { botID } = getBotInfo(import.meta.url);
@@ -22,8 +22,7 @@ const botScript = async () => {
       const url = `https://tools.stefanbohacek.com/wikipedia-top-edits/?date=${date}`;
       console.log(url);
 
-      const response = await fetch(url);
-      const data = await response.json();
+      const data = await fetchJSON(url);
 
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
       let dateYesterdayFormatted = dateYesterday.toLocaleDateString('en-us', options);

@@ -1,10 +1,10 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
+import fetchJSON from "./../../modules/fetchJSON.js";
 
 const botScript = async () => {
-  const response = await fetch(
+  const milestones = await fetchJSON(
     "https://api.github.com/repos/mastodon/mastodon/milestones"
   );
-  const milestones = await response.json();
 
   const status = "Daily #mastodon #milestones update:\n\n";
   let statusUpdates = [];

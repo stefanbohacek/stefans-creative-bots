@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
 import mastodonClient from "./../../modules/mastodon/index.js";
+import fetchJSON from "./../../modules/fetchJSON.js";
 import truncate from "./../../modules/truncate.js";
 import db from "./../../modules/db.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
@@ -46,8 +46,7 @@ const botScript = async () => {
   await apps.reduce(async (prev, app) => {
     await prev;
 
-    const response = await fetch(`https://api.github.com/repos/${app.github_repo}/releases`);
-    const data = await response.json();
+    const data = await fetchJSON(`https://api.github.com/repos/${app.github_repo}/releases`);
 
     if (data && data.length) {
       const currentRelease = data[0];

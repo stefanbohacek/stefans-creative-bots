@@ -28,10 +28,19 @@ const botScript = async (retries = 0) => {
 
   const stationList = `https://www.ndbc.noaa.gov/buoycams.php`;
   const excludedStationIDs = ["44008", "46080", "46029", "42003"];
+
+  console.log(`${botID}: fetching stations...`, stationList);
+
   const response = await fetch(stationList);
 
+  console.log(`${botID}: response status`, response.status, response.statusText);
+
   if (!response.ok) {
-    console.log(`${botID}: station list fetch failed (${response.status}), retrying...`);
+    const body = await response.text();
+    console.log(`${botID}: response body`, body.slice(0, 500));
+    console.log(
+      `${botID}: station list fetch failed (${response.status}), retrying...`,
+    );
     await sleep(30000);
     await botScript(retries + 1);
     return;

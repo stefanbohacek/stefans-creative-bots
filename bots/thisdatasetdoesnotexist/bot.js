@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
 import mastodonClient from "./../../modules/mastodon/index.js";
+import fetchJSON from "./../../modules/fetchJSON.js";
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -10,8 +10,7 @@ const botScript = async () => {
 
   console.log("generating a dataset... ");
 
-  const response = await fetch("https://thisdatasetdoesnotexist.stefanbohacek.com/generate");
-  const responseJSON = await response.json();
+  const responseJSON = await fetchJSON("https://thisdatasetdoesnotexist.stefanbohacek.com/generate");
 
   if (responseJSON && responseJSON.dataset) {
     let status = `${responseJSON.dataset}\n\n#data #dataset #dataviz`;

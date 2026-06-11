@@ -1,4 +1,5 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
+import fetchJSON from "./../../modules/fetchJSON.js";
 import downloadFileAsBase64 from "./../../modules/downloadFileAsBase64.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
@@ -11,10 +12,9 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  const response = await fetch(
+  let map = await fetchJSON(
     "https://www.davidrumsey.com/luna/servlet/as/fetchMediaSearch?&lc=RUMSEY~8~1&q=WHAT=%22Atlas%20Map%22&bs=1&fullData=true&random=true"
   );
-  let map = await response.json();
   map = map[0];
 
   // console.log("openig a map...");

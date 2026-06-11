@@ -1,5 +1,6 @@
 import he from "he";
 import mastodonClient from "./../../modules/mastodon/index.js";
+import fetchJSON from "./../../modules/fetchJSON.js";
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -13,8 +14,7 @@ const botScript = async () => {
   const botwikiURL =
     "https://botwiki.org/wp-json/wp/v2/bot?filter[orderby]=rand&filter[posts_per_page]=1";
 
-  const response = await fetch(botwikiURL);
-  const data = await response.json();
+  const data = await fetchJSON(botwikiURL);
 
   const botUrlsMeta = data[0].meta.bot_url
     .split("\r\n")

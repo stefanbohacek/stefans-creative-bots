@@ -1,4 +1,5 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
+import fetchJSON from "./../../modules/fetchJSON.js";
 import webcams from "./../../data/webcams/iss.js";
 import extractVideoLive from "./../../modules/extractVideoLive.js";
 import extractVideo from "./../../modules/extractVideo.js";
@@ -34,8 +35,7 @@ const botScript = async () => {
 
         const apiURL = "http://api.open-notify.org/iss-now.json";
 
-        const response = await fetch(apiURL);
-        const data = await response.json();
+        const data = await fetchJSON(apiURL);
 
         if (
           data &&

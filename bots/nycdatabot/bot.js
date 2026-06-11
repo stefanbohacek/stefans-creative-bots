@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
 import usZips from "us-zips";
+import fetchJSON from "./../../modules/fetchJSON.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import isBetween from "./../../modules/isBetween.js";
 import getZipCodeFromDataPoint from "./../../modules/getZipCodeFromDataPoint.js";
@@ -78,8 +78,7 @@ const botScript = async (retries = 0) => {
 
   // console.log("loading data...", { datasetName, dataType, datasetPermalink });
 
-  const response = await fetch(datasetUrl);
-  const data = await response.json();
+  const data = await fetchJSON(datasetUrl);
 
   const postMap = async () => {
     const imgData = await makeDataMap(data, getLongLat);

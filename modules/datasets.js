@@ -57,6 +57,7 @@ const cleanupLocationData = (locationData) => {
 
 export const getData = async (options, retries = 5) => {
   const { dataSource, dataTypes, offsetRange } = options;
+  await sleep(1000);
 
   const dataType = Array.isArray(dataTypes)
     ? randomFromArray(dataTypes)

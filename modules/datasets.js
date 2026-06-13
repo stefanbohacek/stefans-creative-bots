@@ -70,7 +70,15 @@ export const getData = async (options, retries = 5) => {
   );
 
   const response = await fetch(discoveryUrl);
-  const body = await response.json();
+  const responseText = await response.text();
+  let body;
+  try {
+    body = JSON.parse(responseText);
+  } catch (err) {
+    throw new Error(
+      `${dataSource}: unable to parse data from ${discoveryUrl} (response: ${response.status}): ${responseText.slice(0, 300)}`
+    );
+  }
 
   if (!body.results) {
     console.log(`${dataSource}: no results in response, retrying...`);

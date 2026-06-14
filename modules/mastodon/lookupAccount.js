@@ -1,13 +1,13 @@
-export default async (username, server) => {
-  const resp = await fetch(
-    `https://${server}/api/v1/accounts/lookup?acct=${username}`,
-  );
+import { json as fetchJSON } from "../fetch.js";
 
-  if (!resp.ok) {
+export default async (username, server) => {
+  let data;
+  try {
+    data = await fetchJSON(`https://${server}/api/v1/accounts/lookup?acct=${username}`);
+  } catch (err) {
+    console.log(`lookupAccount error for @${username}@${server}:`, err.message);
     return null;
   }
-
-  const data = await resp.json();
 
   if (!data.id || typeof data.followers_count !== "number") {
     return null;

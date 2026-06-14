@@ -37,7 +37,13 @@ export default () => {
           throw new Error(`HTTP ${response.status} from ${url}`);
         }
 
-        const data = await response.json();
+        const responseText = await response.text();
+        let data;
+        try {
+          data = JSON.parse(responseText);
+        } catch (err) {
+          throw new Error(`failed to parse response from ${url} (HTTP ${response.status}): ${responseText.slice(0, 200)}`);
+        }
       } catch (err) {
         console.log("WikipediaTopEdits cron error:", err);
         await notifyAdmin(

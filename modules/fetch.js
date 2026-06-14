@@ -2,12 +2,20 @@ import fs from "fs";
 import getSCBUserAgent from "./getSCBUserAgent.js";
 import sleep from "./sleep.js";
 
+const fetchWithContext = async (url, options) => {
+  try {
+    return await fetch(url, options);
+  } catch (err) {
+    throw new Error(`fetch failed for ${url}: ${err.cause?.message || err.message}`);
+  }
+};
+
 export const json = async (url, options) => {
   options = options || {};
   options.headers = options.headers || {};
   options.headers["User-Agent"] = getSCBUserAgent();
 
-  const response = await fetch(url, options);
+  const response = await fetchWithContext(url, options);
   const responseText = await response.text();
   try {
     return JSON.parse(responseText);
@@ -21,14 +29,14 @@ export const json = async (url, options) => {
 export const file = async (url, path) => {
   console.log("downloading...", { url, path });
 
-  const response = await fetch(url, {
+  const response = await fetchWithContext(url, {
     headers: {
       "User-Agent": getSCBUserAgent(),
     },
   });
 
   if (!response.ok) {
-    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    throw new Error(`HTTP ${response.status}: ${response.statusText} (${url})`);
   }
 
   const buffer = Buffer.from(await response.arrayBuffer());
@@ -37,7 +45,7 @@ export const file = async (url, path) => {
 };
 
 export const base64 = async (url, retries = 3) => {
-  const response = await fetch(url, {
+  const response = await fetchWithContext(url, {
     headers: {
       "User-Agent": getSCBUserAgent(),
     },
@@ -49,7 +57,7 @@ export const base64 = async (url, retries = 3) => {
   }
 
   if (!response.ok) {
-    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    throw new Error(`HTTP ${response.status}: ${response.statusText} (${url})`);
   }
 
   const arrayBuffer = await response.arrayBuffer();

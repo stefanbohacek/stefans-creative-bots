@@ -13,17 +13,29 @@ const postPoll = async (client, status, options, params) => {
     optionsObj.in_reply_to_id = params.in_reply_to_id;
   }
 
-  const response = await fetch(`${client.config.api_url}/statuses`, {
-    method: "post",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + client.config.access_token,
-    },
-    body: JSON.stringify(optionsObj),
-  });
+  const pollUrl = `${client.config.api_url}/statuses`;
+  let response;
+  try {
+    response = await fetch(pollUrl, {
+      method: "post",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + client.config.access_token,
+      },
+      body: JSON.stringify(optionsObj),
+    });
+  } catch (err) {
+    throw new Error(`postPoll: fetch failed for ${pollUrl}: ${err.cause?.message || err.message}`);
+  }
 
-  const responseData = await response.json();
+  const responseText = await response.text();
+  let responseData;
+  try {
+    responseData = JSON.parse(responseText);
+  } catch (err) {
+    throw new Error(`postPoll: failed to parse response (HTTP ${response.status}): ${responseText.slice(0, 200)}`);
+  }
 
   if (!response.ok) {
     console.log("postPoll error:", responseData);

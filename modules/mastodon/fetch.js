@@ -4,18 +4,32 @@ const fetchPage = async (url) => {
   await sleep(1000);
   console.log(`mastodon fetch: ${url}`);
 
-  const resp = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${process.env.MASTODON_UTILITY_ACCESS_TOKEN}`,
-    },
-  });
-
-  if (!resp.ok) {
-    console.log(`mastodon fetch error: ${resp.status} ${resp.statusText}`);
+  let resp;
+  try {
+    resp = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${process.env.MASTODON_UTILITY_ACCESS_TOKEN}`,
+      },
+    });
+  } catch (err) {
+    console.log(`mastodon fetch error for ${url}:`, err.cause?.message || err.message);
     return [];
   }
 
-  const data = await resp.json();
+  if (!resp.ok) {
+    console.log(`mastodon fetch error: ${resp.status} ${resp.statusText} (${url})`);
+    return [];
+  }
+
+  const respText = await resp.text();
+  let data;
+  try {
+    data = JSON.parse(respText);
+  } catch (err) {
+    console.log(`mastodon fetch: failed to parse JSON from ${url} (HTTP ${resp.status}):`, respText.slice(0, 200));
+    return [];
+  }
+
   const linkHeader = resp.headers.get("link");
   let nextPage = null;
 

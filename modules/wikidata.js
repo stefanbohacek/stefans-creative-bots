@@ -5,11 +5,15 @@ import db from "./db.js";
 const TTL_48H = 48 * 60 * 60 * 1000;
 
 export const resolveImageURL = async (url) => {
-  const response = await fetch(url, {
-    method: "HEAD",
-    headers: { "User-Agent": getUserAgent() },
-  });
-  return response.url;
+  try {
+    const response = await fetch(url, {
+      method: "HEAD",
+      headers: { "User-Agent": getUserAgent() },
+    });
+    return response.url;
+  } catch (err) {
+    throw new Error(`resolveImageURL: fetch failed for ${url}: ${err.cause?.message || err.message}`);
+  }
 };
 
 export const getWikidataLabel = async (item) => {
@@ -64,14 +68,20 @@ export const queryWikidata = async (query, filterImage) => {
   const apiUrl = `https://query.wikidata.org/sparql?query=${encodeURIComponent(
     query,
   )}&format=json`;
-  const resp = await fetch(apiUrl, {
-    headers: {
-      "User-Agent": getUserAgent(),
-    },
-  });
+  let resp;
+  try {
+    resp = await fetch(apiUrl, {
+      headers: {
+        "User-Agent": getUserAgent(),
+      },
+    });
+  } catch (err) {
+    console.log(`queryWikidata: fetch failed for ${apiUrl}:`, err.cause?.message || err.message);
+    return [];
+  }
 
   if (!resp.ok) {
-    console.log(`queryWikidata error: ${resp.status} ${resp.statusText}`);
+    console.log(`queryWikidata error: ${resp.status} ${resp.statusText} (${apiUrl})`);
     return [];
   }
 

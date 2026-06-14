@@ -1,13 +1,12 @@
-﻿import fetch from 'node-fetch';
-import fahrenheitToCelsius from './fahrenheitToCelsius.js';
+﻿import fahrenheitToCelsius from './fahrenheitToCelsius.js';
+import { json as fetchJSON } from "./fetch.js";
 
 export default async (lat, long, locationName) => {
     console.log('looking up weather...', {lat, long, locationName});
     let weather = {};
     const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.OWM_APP_ID}`;
 
-    const response = await fetch(apiURL);
-    const data = await response.json();
+    const data = await fetchJSON(apiURL);
 
     if (data && data.main && data.main.temp){
         weather.temperature = {

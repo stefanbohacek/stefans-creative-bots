@@ -1,6 +1,7 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
+import { json as fetchJSON } from "./../../modules/fetch.js";
 
 const { botID } = getBotInfo(import.meta.url);
 
@@ -13,11 +14,8 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const resp = await fetch(
-        "https://archive.org/advancedsearch.php?q=collection:manualsplus&rows=20000&page=1&output=json",
-      );
-
-      const respJSON = await resp.json();
+      const manualsUrl = "https://archive.org/advancedsearch.php?q=collection:manualsplus&rows=20000&page=1&output=json";
+      const respJSON = await fetchJSON(manualsUrl);
 
       if (respJSON?.response?.docs) {
         const item = randomFromArray(respJSON?.response?.docs);

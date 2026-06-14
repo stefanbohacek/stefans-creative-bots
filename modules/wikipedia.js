@@ -4,6 +4,7 @@ import he from "he";
 import randomFromArray from "./randomFromArray.js";
 import sleep from "./sleep.js";
 import getUserAgent from "./getSCBUserAgent.js";
+import { json as fetchJSON } from "./fetch.js";
 
 const WIKIPEDIA_API_URL = "https://en.wikipedia.org/w/api.php";
 const headers = { "User-Agent": getUserAgent() };
@@ -18,8 +19,7 @@ export const getMainImage = async (wikipediaUrl) => {
       pithumbsize: "1000",
       format: "json",
     });
-    const resp = await fetch(`${WIKIPEDIA_API_URL}?${params}`, { headers });
-    const data = await resp.json();
+    const data = await fetchJSON(`${WIKIPEDIA_API_URL}?${params}`, { headers });
     const page = Object.values(data.query.pages)[0];
     return page?.thumbnail?.source || null;
   } catch (err) {
@@ -53,8 +53,7 @@ export const getWikipediaPage = async (title) => {
   try {
     const encodedTitle = encodeURIComponent(title);
     const url = `${WIKIPEDIA_API_URL}?action=query&titles=${encodedTitle}&format=json&formatversion=2`;
-    const response = await fetch(url, { headers });
-    const data = await response.json();
+    const data = await fetchJSON(url, { headers });
 
     if (data.query.pages[0].missing !== true) {
       const pageTitle = data.query.pages[0].title;
@@ -85,11 +84,10 @@ const getUserboxGalleries = async () => {
       params.cmcontinue = cmcontinue;
     }
 
-    const resp = await fetch(
+    const { query, continue: cont } = await fetchJSON(
       `${WIKIPEDIA_API_URL}?${new URLSearchParams(params)}`,
       { headers },
     );
-    const { query, continue: cont } = await resp.json();
 
     results.push(...query.categorymembers);
     cmcontinue = cont?.cmcontinue;
@@ -110,7 +108,7 @@ const getGalleryUserboxes = async (galleryTitle) => {
 };
 
 const renderUserbox = async (template) => {
-  const resp = await fetch(WIKIPEDIA_API_URL, {
+  const { parse: rendered } = await fetchJSON(WIKIPEDIA_API_URL, {
     method: "POST",
     headers,
     body: new URLSearchParams({
@@ -121,7 +119,6 @@ const renderUserbox = async (template) => {
       format: "json",
     }),
   });
-  const { parse: rendered } = await resp.json();
   const root = parse(rendered.text["*"]);
   const infoCell = root.querySelector(".userbox-info");
   infoCell?.querySelectorAll("sup").forEach((sup) => sup.remove());
@@ -132,7 +129,7 @@ const renderUserbox = async (template) => {
 };
 
 export const renderUserboxHTML = async (template) => {
-  const resp = await fetch(WIKIPEDIA_API_URL, {
+  const { parse: rendered } = await fetchJSON(WIKIPEDIA_API_URL, {
     method: "POST",
     headers,
     body: new URLSearchParams({
@@ -143,7 +140,6 @@ export const renderUserboxHTML = async (template) => {
       format: "json",
     }),
   });
-  const { parse: rendered } = await resp.json();
   return rendered.text["*"]
     .replace(/src="\/\//g, 'src="https://')
     .replace(/src="\//g, 'src="https://en.wikipedia.org/');

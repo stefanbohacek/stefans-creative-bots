@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 import convert from "xml-js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import isBetween from "./../../modules/isBetween.js";
@@ -88,7 +87,12 @@ const botScript = async (retries = 0) => {
   // const data = await response.json();
   const text = await response.text();
   // consoleLog({text});
-  const bodyJSON = JSON.parse(convert.xml2json(text, { compact: true, spaces: 4 }));
+  let bodyJSON;
+  try {
+    bodyJSON = JSON.parse(convert.xml2json(text, { compact: true, spaces: 4 }));
+  } catch (err) {
+    throw new Error(`njdatabot: failed to parse response from ${datasetUrl} (HTTP ${response.status}): ${text.slice(0, 300)}`);
+  }
   // consoleLog({bodyJSON});
   const data = bodyJSON.response.row.row;
 

@@ -27,7 +27,8 @@ const checkBotPoolFn = async (app) => {
         err?.error?.stack ||
         err?.message ||
         JSON.stringify(err, null, 2);
-      await notifyAdmin(`${botName} error`, `<pre>${errText}</pre>`);
+      const timestamp = new Date().toISOString();
+      await notifyAdmin(`${botName} error`, `<pre>[${timestamp}]\n\n${errText}</pre>`);
     }
 
     pool = [...new Set(pool)];

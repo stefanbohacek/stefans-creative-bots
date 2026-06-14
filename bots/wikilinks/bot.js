@@ -1,11 +1,10 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
-import fetch from 'node-fetch';
+import { json as fetchJSON } from "./../../modules/fetch.js";
 
 const queryWikipedia = async (query) => {
   console.log(`looking up "${query}...`);
   const wikipediaURL = `https://en.wikipedia.org/w/api.php?action=query&titles=${query}&prop=info&inprop=url&format=json`;
-  const resp = await fetch(wikipediaURL);
-  const respJSON = await resp.json();
+  const respJSON = await fetchJSON(wikipediaURL);
   let urls = [];
 
   if (respJSON && respJSON.query && respJSON.query.pages) {

@@ -176,7 +176,11 @@ const getLeaderboard = () => {
 };
 
 if (!savedData.capital) {
-  await pickNewCapital();
+  try {
+    await pickNewCapital();
+  } catch (err) {
+    console.log(`${botID}: failed to pick initial capital:`, err.message);
+  }
 }
 
 const reply = async (postID, from, messageText, fullMessage) => {

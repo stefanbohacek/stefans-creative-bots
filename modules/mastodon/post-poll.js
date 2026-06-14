@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 const postPoll = async (client, status, options, params) => {
   console.log("posting a poll...");
 

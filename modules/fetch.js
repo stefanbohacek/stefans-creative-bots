@@ -13,7 +13,7 @@ export const json = async (url, options) => {
     return JSON.parse(responseText);
   } catch (err) {
     throw new Error(
-      `Failed to parse response from ${url}: ${err.message}\n\nResponse body:\n${responseText.slice(0, 500)}`,
+      `Failed to parse response from ${url} (HTTP ${response.status}): ${err.message}\n\n${responseText.slice(0, 500)}`,
     );
   }
 };

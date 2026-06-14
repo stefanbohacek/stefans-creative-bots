@@ -2,7 +2,7 @@
 import UnitConverter from "./../../modules/UnitConverter.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
+import { base64 as downloadFileAsBase64, json as fetchJSON } from "./../../modules/fetch.js";
 import { getWikipediaPage } from "./../../modules/wikipedia.js";
 
 const botScript = async () => {
@@ -11,8 +11,7 @@ const botScript = async () => {
     1,
     12,
   )}/maxRecords/100`;
-  const resp = await fetch(apiURL);
-  const respJSON = await resp.json();
+  const respJSON = await fetchJSON(apiURL);
   const item = randomFromArray(respJSON.items);
   // console.log(item);
 

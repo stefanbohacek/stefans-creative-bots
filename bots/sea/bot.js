@@ -1,5 +1,8 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
-import { file as downloadFile } from "./../../modules/fetch.js";
+import {
+  file as downloadFile,
+  json as fetchJSON,
+} from "./../../modules/fetch.js";
 import getWeather from "./../../modules/getWeather.js";
 import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
@@ -31,22 +34,18 @@ const botScript = async (retries = 0) => {
 
   console.log(`${botID}: fetching stations...`, stationList);
 
-  const response = await fetch(stationList);
-
-  console.log(`${botID}: response status`, response.status, response.statusText);
-
-  if (!response.ok) {
-    const body = await response.text();
-    console.log(`${botID}: response body`, body.slice(0, 500));
+  let stations;
+  try {
+    stations = await fetchJSON(stationList);
+  } catch (err) {
     console.log(
-      `${botID}: station list fetch failed (${response.status}), retrying...`,
+      `${botID}: station list fetch failed, retrying...`,
+      err.message,
     );
     await sleep(30000);
     await botScript(retries + 1);
     return;
   }
-
-  let stations = await response.json();
 
   stations = stations.filter(
     (station) => !excludedStationIDs.includes(station.id),

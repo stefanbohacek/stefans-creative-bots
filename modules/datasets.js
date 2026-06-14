@@ -1,4 +1,4 @@
-import { base64 as downloadFileAsBase64 } from "./fetch.js";
+import { base64 as downloadFileAsBase64, json as fetchJSON } from "./fetch.js";
 import randomFromArray from "./randomFromArray.js";
 import getRandomInt from "./getRandomInt.js";
 import sleep from "./sleep.js";
@@ -70,16 +70,7 @@ export const getData = async (options, retries = 5) => {
     discoveryUrl,
   );
 
-  const response = await fetch(discoveryUrl);
-  const responseText = await response.text();
-  let body;
-  try {
-    body = JSON.parse(responseText);
-  } catch (err) {
-    throw new Error(
-      `${dataSource}: unable to parse data from ${discoveryUrl} (response: ${response.status}): ${responseText.slice(0, 300)}`
-    );
-  }
+  const body = await fetchJSON(discoveryUrl);
 
   if (!body.results) {
     console.log(`${dataSource}: no results in response, retrying...`);

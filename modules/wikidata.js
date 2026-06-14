@@ -1,4 +1,5 @@
 import getUserAgent from "./getSCBUserAgent.js";
+import { json as fetchJSON } from "./fetch.js";
 import db from "./db.js";
 
 const TTL_48H = 48 * 60 * 60 * 1000;
@@ -12,23 +13,13 @@ export const resolveImageURL = async (url) => {
 };
 
 export const getWikidataLabel = async (item) => {
-  const response = await fetch(
-    `https://www.wikidata.org/entity/${item.wikidataId}.json`,
-    {
-      headers: {
-        "User-Agent": getUserAgent(),
-      },
-    },
-  );
-
-  if (!response.ok) {
-    console.log(
-      `getWikidataLabel error: ${response.status} ${response.statusText}`,
-    );
+  let data;
+  try {
+    data = await fetchJSON(`https://www.wikidata.org/entity/${item.wikidataId}.json`);
+  } catch (err) {
+    console.log(`getWikidataLabel error for ${item.wikidataId}:`, err.message);
     return "";
   }
-
-  const data = await response.json();
   const entity = data.entities[item.wikidataId];
   return entity?.labels?.en?.value || entity?.labels?.mul?.value || "";
 };

@@ -1,6 +1,7 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import pluralize from "pluralize";
 import oxfordComma from "./../../modules/oxfordComma.js";
+import { json as fetchJSON } from "./../../modules/fetch.js";
 
 // Made with Nameday API
 // https://nameday.abalin.net/
@@ -14,10 +15,8 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const resp = await fetch(
-        "https://nameday.abalin.net/api/V2/today/New_York"
-      );
-      const respJSON = await resp.json();
+      const namedayUrl = "https://nameday.abalin.net/api/V2/today/New_York";
+      const respJSON = await fetchJSON(namedayUrl);
 
       console.log(respJSON);
 

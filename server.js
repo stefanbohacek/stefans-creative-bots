@@ -17,6 +17,9 @@ process.on("unhandledRejection", async (reason) => {
 
 process.on("uncaughtException", async (err) => {
   console.error("uncaughtException:", err);
+  if (err.message === "aborted" && err.stack?.includes("node:_http_client")) {
+    return;
+  }
   await notifyAdmin("Uncaught exception", `<pre>${err?.stack || err}</pre>`);
 });
 

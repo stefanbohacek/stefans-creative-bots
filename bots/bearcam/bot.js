@@ -15,6 +15,7 @@ const botScript = async () => {
       });
 
       let liveStreams = await getLiveStreams("explorebears");
+      // let liveStreams = await getLiveStreams("ExploreLiveNatureCams");
 
       if (liveStreams?.length) {
         liveStreams = liveStreams.filter((item) => {

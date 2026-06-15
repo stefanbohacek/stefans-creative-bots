@@ -1,9 +1,4 @@
-﻿import fs from "fs";
-import mastodonClient from "./../../modules/mastodon/index.js";
-import webcams from "./../../data/webcams/bearcams.js";
-import extractVideoLive from "./../../modules/extractVideoLive.js";
-import { file as downloadFile } from "./../../modules/fetch.js";
-import getRandomInt from "./../../modules/getRandomInt.js";
+﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { getLiveStreams } from "./../../modules/youtube.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
@@ -19,53 +14,28 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const liveStreams = await getLiveStreams("ExploreLiveNatureCams");
+      let liveStreams = await getLiveStreams("explorebears");
 
-      console.log("liveStreams", liveStreams);
-      //TODO: Finish when the bear season starts. 
+      if (liveStreams?.length) {
+        liveStreams = liveStreams.filter((item) => {
+          const title = item?.snippet?.title.toLowerCase();
+          return title.includes("live") && title.includes("bear cam");
+        });
+      }
 
-      
+      const liveStream = randomFromArray(liveStreams);
 
-      // const webcam = randomFromArray(webcams);
-      // const webcam = randomFromArray(
-      //   webcams.filter((webcam) => webcam.video_start === undefined)
-      // );
+      if (liveStream) {
+        const liveStreamURL = `https://www.youtube.com/watch?v=${liveStream.id.videoId}`;
+        const title = liveStream?.snippet?.title;
+        const status = `${title + "\n\n" || ""}${liveStreamURL}\n\n#bearcam #bears #live #LiveStream`;
 
-      // console.log(webcam);
-      // const status = `${webcam.name}: ${webcam.youtube_url}\n\n${webcam.tags}`;
-
-      // mastodon.post({
-      //   status
-      // });      
-
-      // if ("video_start" in webcam && "video_end" in webcam) {
-      //   const url = `https://tools.stefanbohacek.com/video-dl/?platform=youtube&id=${
-      //     webcam.youtube_id
-      //   }&start=${getRandomInt(
-      //     webcam.video_start,
-      //     webcam.video_end - 10
-      //   )}&length=10&token=${process.env.STEFANS_TOOLS_ACCESS_TOKEN}`;
-      //   console.log(url);
-      //   await downloadFile(url, __dirname + `/../../temp/${botID}.mp4`);
-      //   try {
-      //     fs.renameSync(
-      //       __dirname + `/../../temp/${botID}.mp4.mkv`,
-      //       __dirname + `/../../temp/${botID}.mp4`
-      //     );
-      //   } catch (err) {
-      //     /* noop */
-      //   }
-      // } else {
-      //   await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
-      // }
-
-      // mastodon.postImage({
-      //   status,
-      //   image: __dirname + `/../../temp/${botID}.mp4`,
-      //   alt_text: webcam.description,
-      // });
-    } catch (error) {
-      console.log(`${botID} error`, error);
+        mastodon.post({
+          status,
+        });
+      }
+    } catch (err) {
+      console.log(`${botID} error`, err);
     }
   })();
 };

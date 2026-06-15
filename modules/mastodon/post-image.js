@@ -19,11 +19,12 @@ const postImageFn = (client, options, cb) => {
       },
       (err, data, response) => {
         if (err) {
-          console.log("mastodon.postImage error:", err);
+          const contextErr = new Error(`postImage: media upload failed for status "${options.status}": ${err.message}`);
+          console.log("mastodon.postImage error:", contextErr.message);
           if (cb) {
-            cb(err, data);
+            cb(contextErr, data);
           }
-          reject(err);
+          reject(contextErr);
         } else {
           const statusObj = {
             status: options.status,
@@ -50,11 +51,12 @@ const postImageFn = (client, options, cb) => {
             }
 
             if (err) {
-              console.log("mastodon.postImage error:", err);
+              const contextErr = new Error(`postImage: status posting failed for "${options.status}": ${err.message}`);
+              console.log("mastodon.postImage error:", contextErr.message);
               if (cb) {
-                cb(err, data);
+                cb(contextErr, data);
               }
-              reject(err);
+              reject(contextErr);
             } else {
               console.log("posted", data.url);
               if (cb) {

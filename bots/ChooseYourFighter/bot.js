@@ -60,7 +60,7 @@ const getCharacterInfo = async (page, character, retries = 3) => {
       let origin = null;
       const pElements = document.querySelectorAll("p");
       for (const p of pElements) {
-        const text = p.textContent.toLowerCase();
+        const text = p.textContent.toLowerCase().replace(/\s+/g, " ");
         if (text.includes("origin:") || text.includes("featured appearance:")) {
           const link = p.querySelector("a");
           if (link) {
@@ -110,6 +110,7 @@ const getCharacterInfo = async (page, character, retries = 3) => {
       origin: info.origin || "Unknown",
       imageUrl,
       url: character.url,
+      candidates: info.candidates,
     };
   } catch (err) {
     console.log(`@${botID}:getCharacterInfo error:`, err.message);
@@ -139,6 +140,23 @@ const pickFighter = async (page, characters, exclude = null) => {
     retries--;
   }
   return null;
+};
+
+const downloadImage = async (fighter) => {
+  const urls = [
+    fighter.imageUrl,
+    ...fighter.candidates.filter((c) => c !== fighter.imageUrl),
+  ];
+  for (const url of urls) {
+    try {
+      return await downloadFileAsBase64(url);
+    } catch (err) {
+      console.log(
+        `@${botID}: download failed for ${url}, trying next candidate`,
+      );
+    }
+  }
+  throw new Error(`Unable to download images for ${fighter.name}`);
 };
 
 const botScript = async () => {
@@ -186,8 +204,8 @@ const botScript = async () => {
     });
 
     const [img1b64, img2b64] = await Promise.all([
-      downloadFileAsBase64(fighter1.imageUrl),
-      downloadFileAsBase64(fighter2.imageUrl),
+      downloadImage(fighter1),
+      downloadImage(fighter2),
     ]);
     const img1Buffer = Buffer.from(img1b64, "base64");
     const img2Buffer = Buffer.from(img2b64, "base64");

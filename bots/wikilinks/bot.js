@@ -25,32 +25,31 @@ const mastodon = new mastodonClient({
 const clients = { mastodon };
 
 const reply = async (postID, from, messageText, fullMessage) => {
-  console.log(
-    `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`
-  );
+  if (from !== "wikilinks") {
+    const statusVisibility = fullMessage.data.status.visibility;
+    const inReplyToId = fullMessage.data.status.in_reply_to_id;
+    let replyMessage = "";
 
-  if (from === "wikilinks") return;
+    const matches = messageText.match(regex);
 
-  const statusVisibility = fullMessage.data.status.visibility;
-  const inReplyToId = fullMessage.data.status.in_reply_to_id;
-  let replyMessage = "";
+    if (matches && matches.length) {
+      console.log(
+        `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`,
+      );
+      let urls = [];
+      matches.forEach(async (query) => {
+        const pages = await queryWikipedia(query);
+        urls = [...urls, ...pages];
 
-  const matches = messageText.match(regex);
-  
-  if (matches && matches.length) {
-    let urls = [];
-    matches.forEach(async (query) => {
-      const pages = await queryWikipedia(query);
-      urls = [...urls, ...pages];
-  
-      console.log("all urls", urls);
-  
-      if (urls.length) {
-        replyMessage = `Here's what I found:\n${urls.map(url => `\n- ${url}`)}`;
-        console.log(`reply: ${replyMessage}`);
-        mastodon.reply(fullMessage, replyMessage);
-      }
-    });
+        console.log("all urls", urls);
+
+        if (urls.length) {
+          replyMessage = `Here's what I found:\n${urls.map((url) => `\n- ${url}`)}`;
+          console.log(`reply: ${replyMessage}`);
+          mastodon.reply(fullMessage, replyMessage);
+        }
+      });
+    }
   }
 };
 

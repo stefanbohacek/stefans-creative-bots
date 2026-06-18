@@ -2,8 +2,8 @@
   This bot uses RiveScript to handle responses, see the rivescript/bartleby folder and learn more at rivescript.com.
 */
 
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -40,23 +40,23 @@ const clients = { mastodon };
 const reply = async (postID, from, messageText, fullMessage) => {
   const botUsername = "bartleby";
 
-  if (from === botUsername) return;
+  if (from !== botUsername) {
+    const mentions = fullMessage.data.status.mentions?.map(
+      (mention) => mention.username,
+    );
 
-  console.log(
-    `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`,
-    fullMessage
-  );
+    if (mentions.includes(botUsername)) {
+      console.log(
+        `new ${fullMessage.data.status.visibility} message from ${from}: ${messageText}`,
+        fullMessage,
+      );
 
-  const mentions = fullMessage.data.status.mentions?.map(
-    (mention) => mention.username
-  );
+      const messageTextLowercase = messageText.toLowerCase();
+      const reply = await bartleby.reply("local-user", messageTextLowercase);
+      console.log(`reply: ${reply}`);
+      mastodon.reply(fullMessage, reply);
+    }
+  }
+};
 
-  if (!mentions.includes(botUsername)) return;
-  
-  const messageTextLowercase = messageText.toLowerCase();
-  const reply = await bartleby.reply("local-user", messageTextLowercase);
-  console.log(`reply: ${reply}`);
-  mastodon.reply(fullMessage, reply);
-}
-
-export {reply, clients};
+export { reply, clients };

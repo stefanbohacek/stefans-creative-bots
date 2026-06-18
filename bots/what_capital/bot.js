@@ -24,7 +24,7 @@ const clients = { mastodon };
 
 try {
   const [questionRows] = await db.execute(
-    /* sql */`SELECT country, capital, current_question FROM what_capital_question WHERE id = 1`
+    /* sql */ `SELECT country, capital, current_question FROM what_capital_question WHERE id = 1`,
   );
 
   if (questionRows.length) {
@@ -34,7 +34,7 @@ try {
   }
 
   const [scoreRows] = await db.execute(
-    /* sql */`SELECT username, score FROM what_capital_scores`
+    /* sql */ `SELECT username, score FROM what_capital_scores`,
   );
 
   for (const row of scoreRows) {
@@ -62,9 +62,9 @@ const updateScores = async (user) => {
     }
     try {
       await db.execute(
-        /* sql */`INSERT INTO what_capital_scores (username, score) VALUES (?, 1)
+        /* sql */ `INSERT INTO what_capital_scores (username, score) VALUES (?, 1)
          ON DUPLICATE KEY UPDATE score = score + 1`,
-        [user]
+        [user],
       );
     } catch (err) {
       console.log(`${botID}: failed to update scores:`, err.message);
@@ -78,7 +78,7 @@ const pickNewCapital = async () => {
   const capital = randomFromArray(capitals);
   const flagUrl = `https://static.stefanbohacek.com/images/flags/${capital.country.replace(
     / /g,
-    "_"
+    "_",
   )}.png`;
 
   console.log("picking new capital", {
@@ -109,14 +109,14 @@ const pickNewCapital = async () => {
       savedData.current_question = data.id;
       try {
         await db.execute(
-          /* sql */`INSERT INTO what_capital_question (id, country, capital, current_question) VALUES (1, ?, ?, ?)
+          /* sql */ `INSERT INTO what_capital_question (id, country, capital, current_question) VALUES (1, ?, ?, ?)
            ON DUPLICATE KEY UPDATE country = VALUES(country), capital = VALUES(capital), current_question = VALUES(current_question)`,
-          [savedData.country, savedData.capital, data.id]
+          [savedData.country, savedData.capital, data.id],
         );
       } catch (err) {
         console.log(`${botID}: failed to save question:`, err.message);
       }
-    }
+    },
   );
 };
 
@@ -170,7 +170,7 @@ const getLeaderboard = () => {
       (top, index) =>
         `${medals[index]} ${top.accounts.map((a) => `${a}`).join(", ")}: ${
           top.score
-        } pt(s)`
+        } pt(s)`,
     )
     .join("\n")}`;
 };
@@ -186,48 +186,43 @@ if (!savedData.capital) {
 const reply = async (postID, from, messageText, fullMessage) => {
   const botUsername = "what_capital";
 
-  if (from === botUsername) return;
+  if (from !== botUsername) {
+    const status = fullMessage.data.status || fullMessage.data;
 
-  const status = fullMessage.data.status || fullMessage.data;
+    const mentions = status.mentions?.map((mention) => mention.username);
 
-  console.log(
-    `new ${status.visibility} message from ${from}: ${messageText}`,
-    fullMessage
-  );
+    if (mentions.includes(botUsername)) {
+      console.log(
+        `new ${status.visibility} message from ${from}: ${messageText}`,
+        fullMessage,
+      );
 
-  const mentions = status.mentions?.map(
-    (mention) => mention.username
-  );
+      let replyMessage = "";
 
-  if (!mentions.includes(botUsername)) return;
+      if (status.visibility === "public" || status.visibility === "unlisted") {
+        const inReplyToId = status.in_reply_to_id;
 
-  let replyMessage = "";
-
-  if (
-    status.visibility === "public" ||
-    status.visibility === "unlisted"
-  ) {
-    const inReplyToId = status.in_reply_to_id;
-
-    if (savedData.current_question !== inReplyToId) {
-      replyMessage = `Please make sure to reply directly to the latest question: https://stefanbohacek.online/@what_capital/${savedData.current_question}`;
-    } else {
-      if (checkAnswer(messageText)) {
-        await updateScores(from);
-        replyMessage = `Yes, ${savedData.capital} is the capital of ${
-          savedData.country
-        }, correct! ${getLeaderboard()}`;
-        await pickNewCapital();
+        if (savedData.current_question !== inReplyToId) {
+          replyMessage = `Please make sure to reply directly to the latest question: https://stefanbohacek.online/@what_capital/${savedData.current_question}`;
+        } else {
+          if (checkAnswer(messageText)) {
+            await updateScores(from);
+            replyMessage = `Yes, ${savedData.capital} is the capital of ${
+              savedData.country
+            }, correct! ${getLeaderboard()}`;
+            await pickNewCapital();
+          } else {
+            replyMessage = "That doesn't seem correct, sorry!";
+          }
+        }
       } else {
-        replyMessage = "That doesn't seem correct, sorry!";
+        replyMessage = "Sorry, do you mind responding publicly?";
       }
-    }
-  } else {
-    replyMessage = "Sorry, do you mind responding publicly?";
-  }
 
-  console.log(`reply: ${replyMessage}`);
-  mastodon.reply(fullMessage, replyMessage);
+      console.log(`reply: ${replyMessage}`);
+      mastodon.reply(fullMessage, replyMessage);
+    }
+  }
 };
 
 export { reply, clients };

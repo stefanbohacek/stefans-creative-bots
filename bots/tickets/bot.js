@@ -45,8 +45,9 @@ const findTicket = async (page) => {
 
     link = await page.evaluate((ticket) => ticket.getAttribute("href"), ticket);
     return link;
-  } catch (error) {
-    console.log("@tickets:findTicket error:", error);
+  } catch (err) {
+    console.log("@tickets:findTicket error:", err);
+    throw err;
   }
 };
 
@@ -82,8 +83,9 @@ const getTicket = async (page, url) => {
     );
 
     return { ticket, name, description };
-  } catch (error) {
-    console.log("@tickets:getTicket error:", error);
+  } catch (err) {
+    console.log("@tickets:getTicket error:", err);
+    throw err;
   }
 };
 

@@ -225,19 +225,18 @@ const botScript = async () => {
 
     const altText = `Two fighting videogame characters side by side: ${fighter1.name} from ${fighter1.origin} on the left and ${fighter2.name} from ${fighter2.origin} on the right.`;
 
-    const imagePost = await mastodon.postImage({
-      status,
+    const mediaId = await mastodon.uploadMedia({
       image: compositeImage,
       alt_text: altText,
     });
 
     await mastodon.postPoll(
-      "Who would win?\n\n#ChooseYourFighter #poll",
+      status,
       [
         truncate(`${fighter1.name} (${fighter1.origin})`, 50),
         truncate(`${fighter2.name} (${fighter2.origin})`, 50),
       ],
-      { in_reply_to_id: imagePost.id },
+      { media_ids: [mediaId] },
     );
   } catch (err) {
     console.error(`@${botID} error:`, err);

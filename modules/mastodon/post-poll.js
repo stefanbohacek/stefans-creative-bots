@@ -13,6 +13,10 @@ const postPoll = async (client, status, options, params) => {
     optionsObj.in_reply_to_id = params.in_reply_to_id;
   }
 
+  if (params?.media_ids) {
+    optionsObj.media_ids = params.media_ids;
+  }
+
   const pollUrl = `${client.config.api_url}/statuses`;
   let response;
   try {

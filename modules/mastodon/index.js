@@ -2,6 +2,7 @@ import Mastodon from "mastodon-api";
 
 import post from './post.js';
 import postImage from './post-image.js';
+import uploadMediaFn from './upload-media.js';
 import reply from './reply.js';
 import postPoll from './post-poll.js';
 
@@ -31,7 +32,11 @@ class MastodonClient {
   }
   
   postPoll(status, options, params) {
-    postPoll(this.client, status, options, params)
+    return postPoll(this.client, status, options, params);
+  }
+
+  uploadMedia(options) {
+    return uploadMediaFn(this.client, options);
   }
 
   getNotifications(cb) {

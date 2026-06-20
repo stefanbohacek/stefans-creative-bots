@@ -25,7 +25,7 @@ const botScript = async () => {
   const maxAttempts = 10;
 
   let animal1, animal2;
-  let imagePost = null;
+  let mediaId = null;
 
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     if (attempt > 0) {
@@ -65,10 +65,7 @@ const botScript = async () => {
         fileOut,
       ]);
 
-      const imageStatus = `Would you rather fight 100 ${animal1}-sized ${pluralize(animal2)} or 1 ${animal2}-sized ${animal1}?\n\n#WouldYouRatherFight`;
-
-      imagePost = await mastodon.postImage({
-        status: imageStatus,
+      mediaId = await mastodon.uploadMedia({
         image: fileOut,
         alt_text: `${getWordArticle(animal2).charAt(0).toUpperCase() + getWordArticle(animal2).slice(1)} ${animal2} on the left and ${getWordArticle(animal1)} ${animal1} on the right.`,
       });
@@ -84,12 +81,10 @@ const botScript = async () => {
   }
 
   const pollOptions = [`100 ${pluralize(animal2)}`, `1 ${animal1}`];
-  const pollStatus = `Would you rather fight 100 ${animal1}-sized ${pluralize(animal2)} or 1 ${animal2}-sized ${animal1}?\n\n#poll`;
+  const pollStatus = `Would you rather fight 100 ${animal1}-sized ${pluralize(animal2)} or 1 ${animal2}-sized ${animal1}?\n\n#WouldYouRatherFight #poll`;
 
-  if (imagePost) {
-    await mastodon.postPoll("#WouldYouRatherFight #poll", pollOptions, {
-      in_reply_to_id: imagePost.id,
-    });
+  if (mediaId) {
+    await mastodon.postPoll(pollStatus, pollOptions, { media_ids: [mediaId] });
   } else {
     await mastodon.postPoll(pollStatus, pollOptions);
   }

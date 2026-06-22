@@ -30,6 +30,19 @@ const updateFediverseLinks = (server, platform) => {
       server && getInteractionUrl(server, platform, link.dataset.fediverseUrl);
     link.href = url || link.dataset.fediverseUrl;
   });
+
+  document.querySelectorAll("[data-collection-url]").forEach((link) => {
+    let collectionUrl = link.dataset.collectionUrl;
+    // TODO: Use getInteractionUrl after Collections are more widely supported.
+
+    if (
+      server &&
+      ["mastodon", "hometown", "glitch-soc", "fedibird"].includes(platform)
+    ) {
+      collectionUrl = `https://${server}/authorize_interaction?uri=${collectionUrl}`;
+    }
+    link.href = collectionUrl;
+  });
 };
 
 const updateFsbInput = (server) => {
@@ -95,7 +108,7 @@ export default async () => {
     }
 
     const server = param || stored || "";
-    const cachedPlatform = (!param && server === stored) ? storedPlatform : null;
+    const cachedPlatform = !param && server === stored ? storedPlatform : null;
     input.value = server;
     if (server) {
       updateFollowLinks(server, cachedPlatform);

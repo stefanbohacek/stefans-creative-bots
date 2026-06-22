@@ -121,15 +121,18 @@
     class="category-section pb-5">
     <div class="row section-heading-row">
       <div class="col-sm-12">
-        <div class="container ml-auto mr-auto d-flex align-items-center justify-content-center gap-3">
+        <div class="container ml-auto mr-auto d-flex flex-column align-items-center justify-content-center gap-1">
           <h2 class="pt-3 pb-3 m-0"><a href="#{{this.slug}}">{{this.title}}</a></h2>
-          {{#if this.___collection_url}}
-          <a href="{{this.collection_url}}"
-            class="btn btn-sm btn-outline-secondary"
-            target="_blank"
-            rel="noopener">
-            View collection
-          </a>
+          {{#if this.collection_url}}
+          <p>
+            <a href="{{this.collection_url}}"
+              data-collection-url="{{this.collection_url}}"
+              class="btn btn-sm btn-outline-secondary"
+              target="_blank"
+              rel="noopener">
+              View collection
+            </a>
+          </p>
           {{/if}}
         </div>
       </div>

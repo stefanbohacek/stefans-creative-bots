@@ -11,7 +11,7 @@
     "build:critical": "node scripts/build-critical.js",
     "watch": "rollup -c --watch",
     "start": "node --trace-warnings server.js",
-    "dev": "concurrently \"sass --watch src/styles/styles.scss:public/styles/main.css --quiet-deps\" \"rollup -c --watch\" \"nodemon --trace-warnings server.js\"",
+    "dev": "concurrently \"sass --watch src/styles/styles.scss:public/styles/main.css --quiet-deps\" \"rollup -c --watch\" \"nodemon --trace-warnings --ext js,handlebars server.js\"",
     "dev:rebuild": "npm run build && npm run build:critical && npm run dev",
     "fetch-fediverse": "node scripts/fetch-fediverse-data.js",
     "test": "node scripts/testBot.js",

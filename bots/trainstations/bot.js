@@ -1,5 +1,6 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
+import sleep from "./../../modules/sleep.js";
 import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache, resolveImageURL } from "./../../modules/wikidata.js";
 import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
@@ -46,39 +47,9 @@ const botScript = async () => {
     items = cached.data;
   }
 
-  const item = randomFromArray(items);
-
-  if (!item) {
+  if (!items.length) {
     console.log(`${botID}: no items found`);
     return;
-  }
-
-  if (item.label === item.wikidataId) {
-    item.label = await getWikidataLabel(item);
-  }
-
-  console.log(item);
-  let imageUrl = "";
-
-  if (item.image) {
-    const resolvedImageURL = await resolveImageURL(item.image);
-    imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
-      resolvedImageURL,
-    )}(${item.long},${item.lat})/${item.long},${
-      item.lat
-    },5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
-  }
-
-  const status = `${item.label ? `${item.label}, ` : ""} ${
-    item.description ? `${item.description}. ` : ""
-  }\n\n${item.wikipediaUrl}\n\n#trains #TrainStations #map`;
-
-  let imgData;
-  try {
-    imgData = await downloadFileAsBase64(imageUrl);
-  } catch (err) {
-    console.log(`${botID}: failed to download image for ${item.label}:`, err.message);
-    throw new Error(`${botID}: failed to download image for ${item.label}\n${imageUrl}\n\n${err.message}`);
   }
 
   const mastodon = new mastodonClient({
@@ -87,14 +58,53 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  await mastodon.postImage({
-    status: status.replace("  ", " "),
-    image: imgData,
-    alt_text:
-      "A photo of or from a train station from the linked website, overlaid on a cropped world map where it's located.",
-  });
+  const maxRetries = 5;
 
-  return true;
+  for (let retry = 0; retry < maxRetries; retry++) {
+    if (retry > 0) {
+      await sleep(1000 * retry);
+    }
+
+    const item = randomFromArray(items);
+
+    if (item.label === item.wikidataId) {
+      item.label = await getWikidataLabel(item);
+    }
+
+    console.log(item);
+
+    try {
+      let imageUrl = "";
+
+      if (item.image) {
+        const resolvedImageURL = await resolveImageURL(item.image);
+        imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
+          resolvedImageURL,
+        )}(${item.long},${item.lat})/${item.long},${
+          item.lat
+        },5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
+      }
+
+      const status = `${item.label ? `${item.label}, ` : ""} ${
+        item.description ? `${item.description}. ` : ""
+      }\n\n${item.wikipediaUrl}\n\n#trains #TrainStations #map`;
+
+      const imgData = await downloadFileAsBase64(imageUrl);
+
+      await mastodon.postImage({
+        status: status.replace("  ", " "),
+        image: imgData,
+        alt_text:
+          "A photo of or from a train station from the linked website, overlaid on a cropped world map where it's located.",
+      });
+
+      return true;
+    } catch (err) {
+      console.log(`${botID}: attempt ${retry + 1} failed for ${item.wikipediaUrl}:`, err.message);
+    }
+  }
+
+  throw new Error(`${botID}: failed after ${maxRetries} attempts`);
 };
 
 export default botScript;

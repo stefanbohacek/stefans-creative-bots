@@ -1,0 +1,17 @@
+{
+  "active": true,
+  "name": "Trees",
+  "description": "“The true meaning of life is to plant trees under whose shade you do not expect to sit” ― Nelson Henderson",
+  "tags": [
+    "trees",
+    "nature"
+  ],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@trees"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS",
+  "fediverse_handle": "@trees@stefanbohacek.online"
+}

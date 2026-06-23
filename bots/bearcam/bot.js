@@ -31,7 +31,7 @@ const botScript = async () => {
         const title = liveStream?.snippet?.title;
         const status = `${title + "\n\n" || ""}${liveStreamURL}\n\n#bearcam #bears #live #LiveStream`;
 
-        mastodon.post({
+        await mastodon.post({
           status,
         });
       }

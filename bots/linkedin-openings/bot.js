@@ -44,7 +44,7 @@ const botScript = async () => {
       } a business opportunity.`;
       console.log(opening);
 
-      mastodon.post({
+      await mastodon.post({
         status: opening,
       });
     } catch (error) {

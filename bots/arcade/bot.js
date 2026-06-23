@@ -32,7 +32,7 @@ const botScript = async () => {
         status += `!\n\n${url}\n\n#arcade #videogames #InternetArchive`;
         console.log(status);
 
-        mastodon.post({
+        await mastodon.post({
           status,
         });
       }

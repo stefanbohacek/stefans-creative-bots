@@ -20,7 +20,7 @@ class MastodonClient {
   }
   
   post(status, cb) {
-    post(this.client, status, cb);
+    return post(this.client, status, cb);
   }
   
   postImage(options, cb) {

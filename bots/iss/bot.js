@@ -48,7 +48,7 @@ const botScript = async () => {
 
         status += `\n\n#iss #space #earth #live #nasa #esa #jaxa #csa`;
 
-        mastodon.post({
+        await mastodon.post({
           status,
         });
 

@@ -50,7 +50,7 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  const maxRetries = 5;
+  const maxRetries = 10;
 
   for (let retry = 0; retry < maxRetries; retry++) {
     if (retry > 0) {

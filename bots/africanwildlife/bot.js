@@ -28,7 +28,7 @@ const botScript = async () => {
           .replace(" powered by EXPLORE.org", "");
         const status = `${title + "\n\n" || ""}${liveStreamURL}\n\n#africa #wildlife #animals #live #LiveStream`;
 
-        mastodon.post({
+        await mastodon.post({
           status,
         });
 

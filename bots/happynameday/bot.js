@@ -46,7 +46,7 @@ const botScript = async () => {
         )}!\n\n#nameDay #HappyNameDay`;
         // console.log(status);
 
-        mastodon.post({
+        await mastodon.post({
           status,
         });
       }

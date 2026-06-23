@@ -42,7 +42,7 @@ const botScript = async () => {
         status += `\n\n#manuals #InternetArchive`;
         console.log(status);
 
-        mastodon.post({
+        await mastodon.post({
           status,
         });
       }

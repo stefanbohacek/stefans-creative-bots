@@ -1,13 +1,12 @@
 {
-  "active": false,
+  "active": true,
   "name": "@primestamp",
   "description": "Looking for timestamps that are prime numbers!",
-  "note": "Bot is too noisy.",
   "links": [
     {
-      "title": "Mastodon archive",
-      "url": "https://botsin.space/@primestamp"
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@primestamp"
     }
   ],
-  "interval": "EVERY_SECOND"
+  "interval": "EVERY_HOUR"
 }

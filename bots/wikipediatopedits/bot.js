@@ -29,7 +29,7 @@ const botScript = async () => {
 
       const status = `${dateYesterdayFormatted}\n\n` + data.map(item => `- ${item.title}: ${item.revisions} revisions ${item.url}`).join('\n') + '\n\n#wikipedia #stats';
       
-      mastodon.post({
+      await mastodon.post({
         status,
       });
     } catch (error) {

@@ -45,7 +45,7 @@ const botScript = async () => {
       const status = `You have ${past} your last ${noun}.`;
       console.log(status);
 
-      mastodon.post({
+      await mastodon.post({
         status,
         ...(nounFile.cw && { spoiler_text: nounFile.cw }),
       });

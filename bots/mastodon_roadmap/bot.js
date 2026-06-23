@@ -141,7 +141,7 @@ const botScript = async () => {
         console.log(text);
 
         if (text && text.length) {
-          mastodon.post({
+          await mastodon.post({
             status: `${text}\n\n#mastodon #roadmap`,
           });
         }

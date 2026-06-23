@@ -15,7 +15,7 @@ const botScript = async () => {
   });
 
   const status = randomFromArray(instructions) + "\n\n#pets #PetRock";
-  mastodon.post({ status });
+  await mastodon.post({ status });
 };
 
 export default botScript;

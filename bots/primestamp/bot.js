@@ -22,6 +22,7 @@ const botScript = async () => {
   });
 
   let rootStatus;
+
   if (primes.length === 0) {
     rootStatus = `There were no prime timestamps in the past hour.`;
   } else if (primes.length === 1) {
@@ -31,7 +32,7 @@ const botScript = async () => {
   }
 
   console.log(`${botID}: ${rootStatus}`);
-  const rootPost = await mastodon.post({ status: rootStatus });
+  const rootPost = await mastodon.post({ status: `${rootStatus}\n\n#math #PrimeNumbers #primes` });
 
   const list = primes.map((ts) => `- ${ts}`).join("\n");
   await mastodon.post({ status: list, in_reply_to_id: rootPost.id });

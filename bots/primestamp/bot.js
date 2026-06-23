@@ -35,7 +35,7 @@ const botScript = async () => {
   const rootPost = await mastodon.post({ status: `${rootStatus}\n\n#math #PrimeNumbers #primes` });
 
   const list = primes.map((ts) => `- ${ts}`).join("\n");
-  await mastodon.post({ status: list, in_reply_to_id: rootPost.id });
+  await mastodon.post({ status: list, in_reply_to_id: rootPost.id, visibility: "unlisted" });
 };
 
 export default botScript;

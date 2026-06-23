@@ -57,6 +57,7 @@
     "bots": [
       "@trees",
       "@roots",
+      "@parks",
       "@nationalparks",
       "@lakes",
       "@sea",

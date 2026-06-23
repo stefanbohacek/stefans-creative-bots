@@ -1,5 +1,8 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import isPrime from "./../../modules/isPrime.js";
+import getBotInfo from "./../../modules/getBotInfo.js";
+
+const { botID, getTempDirPath } = getBotInfo(import.meta.url);
 
 const botScript = async () => {
   const nowSeconds = Math.floor(Date.now() / 1000);
@@ -10,11 +13,6 @@ const botScript = async () => {
     if (isPrime(ts)) {
       primes.push(ts);
     }
-  }
-
-  if (primes.length === 0) {
-    console.log("No prime timestamps found in the past hour.");
-    return;
   }
 
   const mastodon = new mastodonClient({
@@ -31,8 +29,8 @@ const botScript = async () => {
   } else {
     rootStatus = `There were ${primes.length} prime timestamps in the past hour!`;
   }
-  console.log(rootStatus);
 
+  console.log(`${botID}: ${rootStatus}`);
   const rootPost = await mastodon.post({ status: rootStatus });
 
   const list = primes.map((ts) => `- ${ts}`).join("\n");

@@ -8,5 +8,9 @@
       "url": "https://stefanbohacek.online/@primestamp"
     }
   ],
-  "interval": "EVERY_HOUR"
+  "interval": "EVERY_HOUR",
+  "fediverse_handle": "@primestamp@stefanbohacek.online",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/868/143/196/490/original/5d91318fde44b909.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/868/143/196/490/original/5d91318fde44b909.png"
 }

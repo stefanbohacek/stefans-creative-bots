@@ -65,6 +65,7 @@ const botScript = async () => {
   });
 
   const maxRetries = 5;
+  const errorMessages = {};
 
   for (let retry = 0; retry < maxRetries; retry++) {
     if (retry > 0) {
@@ -110,10 +111,15 @@ const botScript = async () => {
         `${botID}: retry ${retry + 1} failed for ${item.wikipediaUrl}:`,
         err.message,
       );
+      errorMessages[err.message] = (errorMessages[err.message] || 0) + 1;
     }
   }
 
-  throw new Error(`${botID}: failed after ${maxRetries} retries...`);
+  const summary = Object.entries(errorMessages)
+    .map(([errMessage, count]) => `- ${count} x ${errMessage}`)
+    .join("\n");
+
+  throw new Error(`${botID}: failed after ${maxRetries} attempts\n${summary}`);
 };
 
 export default botScript;

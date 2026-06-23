@@ -13,5 +13,9 @@
     }
   ],
   "interval": "EVERY_SIX_HOURS",
-  "fediverse_handle": "@trees@stefanbohacek.online"
+  "fediverse_handle": "@trees@stefanbohacek.online",
+  "date_created": "2026-06-22T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/796/174/388/761/816/original/9cb904ed3d0adb3d.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/796/174/388/761/816/original/aafaa64dcfb8dbf2.png",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/796/174/388/761/816/original/9cb904ed3d0adb3d.png"
 }

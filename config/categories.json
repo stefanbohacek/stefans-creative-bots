@@ -51,6 +51,21 @@
     ]
   },
   {
+    "title": "Nature",
+    "description": "",
+    "collection_url": "https://stefanbohacek.online/collections/116796600077938089",
+    "bots": [
+      "@trees",
+      "@roots",
+      "@nationalparks",
+      "@lakes",
+      "@sea",
+      "@volcanoviews",
+      "@rain",
+      "@snow"
+    ]
+  },
+  {
     "title": "Maps and history",
     "description": "",
     "collection_url": "https://stefanbohacek.online/collections/116688675205223206",
@@ -131,6 +146,7 @@
     "collection_url": "https://stefanbohacek.online/collections/116688733689180990",
     "bots": [
       "@roots",
+      "@trees",
       "@maps",
       "@manuals",
       "@famicase"

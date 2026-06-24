@@ -3,7 +3,6 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import getImageLuminosity from "./../../modules/getImageLuminosity.js";
 import getWeather from "./../../modules/getWeather.js";
 import consoleLog from "./../../modules/consolelog.js";
 import getBotInfo from "./../../modules/getBotInfo.js";

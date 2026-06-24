@@ -2,7 +2,7 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 import getWebcamImage from "./../../modules/getWebcamImage.js";
 import { getNextItem } from "../../modules/rotationQueue.js";
-import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import { checkImageLuminosity } from "./../../modules/luminosity.js";
 import getWeather from "./../../modules/getWeather.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 import sleep from "./../../modules/sleep.js";
@@ -29,9 +29,7 @@ const botScript = async (retries = 0) => {
       const imageFilePath = await getWebcamImage(botID, station);
 
       if (imageFilePath) {
-        const luminosity = await getImageLuminosity(imageFilePath);
-
-        if (luminosity > 20 && luminosity < 200) {
+        if (await checkImageLuminosity(imageFilePath)) {
           let description = station.description
             ? station.description
             : `View from the ${station.name}.`;

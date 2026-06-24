@@ -3,7 +3,7 @@ import stations from "./../../data/webcams/north-pole-stations.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import { file as downloadFile } from "./../../modules/fetch.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import { checkImageLuminosity } from "./../../modules/luminosity.js";
 import getWeather from "./../../modules/getWeather.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 import sleep from "./../../modules/sleep.js";
@@ -28,7 +28,7 @@ const botScript = async (retries = 0) => {
       const station = randomFromArray(stations);
 
       console.log(`@${botID} station`, station);
-      console.log(process.env.BROWSERLESS_URL)
+      console.log(process.env.BROWSERLESS_URL);
 
       // const station = randomFromArray(stations.filter(s => s.name === "Troll research station"));
       // const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
@@ -38,15 +38,12 @@ const botScript = async (retries = 0) => {
 
       let imageURL;
 
-
       if (station.image_url) {
         imageURL = station.image_url;
       } else {
-
-
         const page = await browser.newPage();
         page.setUserAgent(
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
         );
 
         await page.setDefaultNavigationTimeout(120000);
@@ -63,7 +60,7 @@ const botScript = async (retries = 0) => {
 
         const image = await page.evaluate(
           (imageElement) => imageElement.getAttribute("src"),
-          imageElement
+          imageElement,
         );
 
         if (image) {
@@ -73,10 +70,7 @@ const botScript = async (retries = 0) => {
             imageURL = image;
           }
         } else {
-          console.log(
-            `@${botID} error: image element not found`,
-            station
-          );
+          console.log(`@${botID} error: image element not found`, station);
         }
       }
 
@@ -85,20 +79,25 @@ const botScript = async (retries = 0) => {
         try {
           await downloadFile(imageURL, filePath);
         } catch (err) {
-          console.log(`${botID}: failed to download image for ${station.name}:`, err.message);
-          throw new Error(`${botID}: failed to download image for ${station.name}\n${imageURL}\n\n${err.message}`);
+          console.log(
+            `${botID}: failed to download image for ${station.name}:`,
+            err.message,
+          );
+          throw new Error(
+            `${botID}: failed to download image for ${station.name}\n${imageURL}\n\n${err.message}`,
+          );
         }
 
-        const luminosity = await getImageLuminosity(filePath);
-
-        if (luminosity > 20 && luminosity < 200) {
-          let description = station.description ? station.description : `View from the ${station.name}.`;
+        if (await checkImageLuminosity(filePath)) {
+          let description = station.description
+            ? station.description
+            : `View from the ${station.name}.`;
           let weather;
 
           if (station.location) {
             weather = await getWeather(
               station.location.lat,
-              station.location.lon
+              station.location.lon,
             );
 
             if (weather && weather.description_full) {

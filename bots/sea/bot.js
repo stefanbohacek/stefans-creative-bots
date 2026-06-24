@@ -4,7 +4,7 @@ import {
   json as fetchJSON,
 } from "./../../modules/fetch.js";
 import getWeather from "./../../modules/getWeather.js";
-import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import { checkImageLuminosity } from "./../../modules/luminosity.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import runCommand from "./../../modules/runCommand.js";
 import sleep from "./../../modules/sleep.js";
@@ -93,9 +93,7 @@ const botScript = async (retries = 0) => {
     const forLoop = async (_) => {
       for (let i = 0; i <= 5; i++) {
         const croppedFilePath = `${__dirname}/../../temp/${fileName}-cropped-${i}.${fileExt}`;
-        const luminosity = await getImageLuminosity(croppedFilePath);
-
-        if (luminosity > 20 && luminosity < 200) {
+        if (await checkImageLuminosity(croppedFilePath)) {
           okayPictures.push(croppedFilePath);
         }
       }

@@ -2,7 +2,7 @@
 import mastodonClient from "./../../modules/mastodon/index.js";
 
 import getWeather from "./../../modules/getWeather.js";
-import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import { checkImageLuminosity } from "./../../modules/luminosity.js";
 import { file as downloadFile } from "./../../modules/fetch.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
@@ -34,9 +34,7 @@ const botScript = async (retries = 0) => {
 
   const filePath = getTempDirPath("jpg");
   await downloadFile(webcam.url, filePath);
-  const luminosity = await getImageLuminosity(filePath);
-
-  if (luminosity > 20 && luminosity < 200) {
+  if (await checkImageLuminosity(filePath)) {
     const weather = await getWeather(webcam.latitude, webcam.longitude);
     let description = webcam.description;
 

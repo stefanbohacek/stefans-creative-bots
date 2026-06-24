@@ -1,7 +1,7 @@
 ﻿import puppeteer from "puppeteer";
 import csv from "csvtojson";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import { checkImageLuminosity } from "./../../modules/luminosity.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 import sleep from "./../../modules/sleep.js";
@@ -145,10 +145,7 @@ const botScript = async (retries = 0) => {
             const screenshotPath = __dirname + `/../../temp/${botID}.jpg`;
             await page.screenshot({ path: screenshotPath });
 
-            const luminosity = await getImageLuminosity(screenshotPath);
-            console.log(`exoplanets: image luminosity`, luminosity);
-
-            if (luminosity > 40 && luminosity < 150) {
+            if (await checkImageLuminosity(screenshotPath, 40, 150)) {
               await mastodon.postImage({
                 status: `${description}\n\n${url}\n\n#space #exoplanets`,
                 image: screenshotPath,
@@ -156,7 +153,7 @@ const botScript = async (retries = 0) => {
               });
             } else {
               console.log(
-                `exoplanets: image luminosity out of range (${Math.round(luminosity)}), retrying...`,
+                `exoplanets: image luminosity out of range, retrying...`,
               );
               await sleep(3000);
               await botScript(retries + 1);

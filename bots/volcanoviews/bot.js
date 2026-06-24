@@ -3,7 +3,7 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import { file as downloadFile } from "./../../modules/fetch.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getWeather from "./../../modules/getWeather.js";
-import getImageLuminosity from "./../../modules/getImageLuminosity.js";
+import { checkImageLuminosity } from "./../../modules/luminosity.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 import sleep from "./../../modules/sleep.js";
 
@@ -24,9 +24,7 @@ const botScript = async (retries = 0) => {
   const filePath = getTempDirPath("jpg");
   await downloadFile(webcam.url, filePath);
 
-  const luminosity = await getImageLuminosity(filePath);
-
-  if (luminosity > 20 && luminosity < 200) {
+  if (await checkImageLuminosity(filePath)) {
     const status = `${webcam.name} via ${webcam.page_url} #volcano #nature`;
 
     await mastodon.postImage({

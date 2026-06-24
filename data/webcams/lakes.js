@@ -1,5 +1,6 @@
 export default [
   {
+    id: "lake_michigan",
     title:
       "Lake Michigan, borders of Michigan, Wisconsin, Illinois, and Indiana, United States.",
     description:
@@ -10,6 +11,7 @@ export default [
     longitude: -87.222015,
   },
   {
+    id: "thompson_lake",
     title: "Thompson Lake Marina, Casco, Maine, United States.",
     description:
       "This webcam usually shows a large lake with trees and a few houses in the distance.",
@@ -19,6 +21,7 @@ export default [
     longitude: -114.10844,
   },
   // {
+  //   id: "lake_tahoe_earthcam",
   //   title:
   //     "Lake Tahoe, along the borders of Nevada and California, United States.",
   //   description:
@@ -29,6 +32,7 @@ export default [
   //   longitude: -119.977219,
   // },
   {
+    id: "lake_tahoe",
     title:
       "Lake Tahoe, along the borders of Nevada and California, United States.",
     description:
@@ -39,6 +43,7 @@ export default [
     longitude: -119.977219,
   },
   {
+    id: "rainy_lake",
     title: "Rainy Lake, along the border between the United States and Canada.",
     description:
       "This webcam usually shows a large lake with a few trees in the foreground and the background.",
@@ -48,6 +53,7 @@ export default [
     longitude: -93.574463,
   },
   {
+    id: "blue_mountain_lake",
     title: "Blue Mountain Lake,	Adirondacks, New York, United States.",
     description:
       "This webcam usually shows a lake in the distance surrounded by trees.",
@@ -57,6 +63,7 @@ export default [
     longitude: -74.414528,
   },
   {
+    id: "lake_annecy_1",
     title: "Lake Annecy, France.",
     description:
       "This webcam usually shows a large lake, covered by trees in the foreground, and beautiful mountains in the back.",
@@ -66,6 +73,7 @@ export default [
     longitude: 6.12835,
   },
   {
+    id: "lake_annecy_2",
     title: "Lake Annecy, France.",
     description:
       "This webcam usually shows a large lake with houses on the further side away from the camera, and mountains behind it.",
@@ -75,6 +83,7 @@ export default [
     longitude: 6.12835,
   },
   {
+    id: "sebec_lake",
     title: "Sebec Lake, Maine, United States.",
     description:
       "This webcam usually shows a large lake with trees and mountains behind it.",
@@ -84,6 +93,7 @@ export default [
     longitude: -69.3383812,
   },
   {
+    id: "lake_constance",
     title:
       "Lake Constance at the borders of Germany, Switzerland, and Austria.",
     description:
@@ -94,6 +104,7 @@ export default [
     longitude: -84.144547,
   },
   {
+    id: "lake_walensee",
     title: "Lake Walensee, Switzerland.",
     description:
       "This webcam usually shows a view of the lake with a tall mountain behind it, with houses dispersed mostly along the shore. The image may be overlaid with text in German.",
@@ -104,6 +115,7 @@ export default [
   },
   // Image doesn't load fully.
   // {
+  //   id: "lake_naivasha",
   //   title: "Lake Naivasha, Kenya.",
   //   description:
   //     "This webcam usually shows a large lake with mountains in the distance.",
@@ -113,6 +125,7 @@ export default [
   //   longitude: 36.433651,
   // },
   {
+    id: "lake_lucerne",
     title: "Vierwaldstättersee (Lake Lucerne), Switzerland.",
     description:
       "This webcam usually shows a view from a steamship that travels around the lake.",
@@ -123,6 +136,7 @@ export default [
     via: "@ckae@swiss.social",
   },
   {
+    id: "schoodic_lake",
     title: "Schoodic Lake, Maine, United States.",
     description:
       "This webcam usually shows a large lake with hills and trees in the distance",
@@ -132,6 +146,7 @@ export default [
     longitude: -68.991524,
   },
   // {
+  //   id: "",
   //   title: "TITLE.",
   //   description: "This webcam usually shows DESCRIPTION",
   //   link: "WEBCAMPAGE",

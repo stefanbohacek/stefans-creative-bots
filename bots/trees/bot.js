@@ -31,7 +31,7 @@ const getTree = async (itemId, title) => {
 
   const wikipediaUrl = await getWikipediaPage(title);
   const wikipediaLink = wikipediaUrl ? `\n\n${wikipediaUrl}` : "";
-  const status = `${title}. https://images.wur.nl/digital/collection/coll5/id/${itemId}/${wikipediaLink}\n\n#plants #roots #illustration`;
+  const status = `${title}. https://images.wur.nl/digital/collection/coll5/id/${itemId}/${wikipediaLink}\n\n#trees`;
 
   return { imgData, status };
 };

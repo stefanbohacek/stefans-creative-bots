@@ -62,7 +62,7 @@ const getCharacterInfo = async (page, character, retries = 3) => {
       for (const p of pElements) {
         const text = p.textContent.toLowerCase().replace(/\s+/g, " ");
         if (text.includes("origin:") || text.includes("featured appearance:")) {
-          const link = p.querySelector("a");
+          const link = p.querySelector("a") || p.parentElement?.querySelector("a");
           if (link) {
             origin = link.textContent.trim().replace(/\s+/g, " ");
             break;

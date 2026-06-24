@@ -1,13 +1,9 @@
-import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/randomFromArray.js";
-import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
-import { getMainImage } from "./../../modules/wikipedia.js";
-import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
+import wikidataBot from "./../../modules/wikidataBot.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { botID } = getBotInfo(import.meta.url);
 
-const WIKIDATA_QUERY = /* sql */`
+const WIKIDATA_QUERY = /* sql */ `
   SELECT ?item ?itemLabel ?itemDescription ?article
   WHERE
   {
@@ -25,69 +21,21 @@ const WIKIDATA_QUERY = /* sql */`
 `;
 
 const botScript = async () => {
-  let items = [];
-  const cached = await getWikidataCache(botID);
-
-  if (!cached || cached.isStale) {
-    const freshItems = await queryWikidata(WIKIDATA_QUERY, false);
-    if (freshItems.length) {
-      await saveWikidataCache(botID, freshItems);
-      items = freshItems;
-    } else if (cached) {
-      console.log(`${botID}: live fetch failed, using stale cache`);
-      items = cached.data;
-    }
-  } else {
-    items = cached.data;
-  }
-
-  // TODO: Temporary fix until I can figure out the query.
-  const dinosaurs = items.filter(
-    (item) =>
-      item.description?.toLowerCase().includes("dinosaur") ||
-      item.description?.toLowerCase().includes("reptile"),
-  );
-
-  const item = randomFromArray(dinosaurs);
-
-  if (!item) {
-    console.log(`${botID}: no items found`);
-    return;
-  }
-
-  if (item.label === item.wikidataId) {
-    item.label = await getWikidataLabel(item);
-  }
-
-  // console.log("items", items);
-  // console.log("dinosaurs", dinosaurs);
-  // console.log("item", item);
-
-  const imageUrl = await getMainImage(item.wikipediaUrl);
-
-  if (!imageUrl) {
-    console.log(`${botID}: no image found for ${item.label}`);
-    return;
-  }
-
-  const status = `${item.label}.\n\n${item.wikipediaUrl}\n\n#dinosaur`;
-
-  const imgData = await downloadFileAsBase64(imageUrl);
-
-  const mastodon = new mastodonClient({
-    access_token: process.env.DINOSAURS_BOT_MASTODON_ACCESS_TOKEN,
-    // access_token: process.env.MASTODON_TEST_TOKEN,
-    api_url: process.env.MASTODON_API_URL,
-  });
-
-  await mastodon.postImage({
-    status: status.replace("  ", " "),
-    image: imgData,
-    alt_text:
+  return wikidataBot(botID, {
+    query: WIKIDATA_QUERY,
+    // accessToken: process.env.MASTODON_TEST_TOKEN,
+    accessToken: process.env.DINOSAURS_BOT_MASTODON_ACCESS_TOKEN,
+    altText:
       "A photo or drawing of a dinosaur or dinosaur remains from the linked Wikipedia page.",
+    status: (item) => `${item.label}.\n\n${item.wikipediaUrl}\n\n#dinosaur`,
+    // TODO: Temporary fix until I can figure out the query.
+    filterItems: (items) =>
+      items.filter(
+        (item) =>
+          item.description?.toLowerCase().includes("dinosaur") ||
+          item.description?.toLowerCase().includes("reptile"),
+      ),
   });
-
-  return true;
 };
 
 export default botScript;

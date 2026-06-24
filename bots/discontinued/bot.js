@@ -1,11 +1,9 @@
-import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/randomFromArray.js";
-import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache } from "./../../modules/wikidata.js";
+import wikidataBot from "./../../modules/wikidataBot.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { botID } = getBotInfo(import.meta.url);
 
-const WIKIDATA_QUERY = /* sql */`
+const WIKIDATA_QUERY = /* sql */ `
   SELECT DISTINCT ?item ?itemLabel ?itemDescription ?article
   WHERE
   {
@@ -24,49 +22,14 @@ const WIKIDATA_QUERY = /* sql */`
 `;
 
 const botScript = async () => {
-  let items = [];
-  const cached = await getWikidataCache(botID);
-
-  if (!cached || cached.isStale) {
-    const freshItems = await queryWikidata(WIKIDATA_QUERY, false);
-    if (freshItems.length) {
-      await saveWikidataCache(botID, freshItems);
-      items = freshItems;
-    } else if (cached) {
-      console.log(`${botID}: live fetch failed, using stale cache`);
-      items = cached.data;
-    }
-  } else {
-    items = cached.data;
-  }
-
-  // console.log(items);
-  const item = randomFromArray(items);
-  // const item = items.filter((i) => i.label === "Q1063978")[0];
-
-  if (!item) {
-    console.log(`${botID}: no items found`);
-    return;
-  }
-
-  if (item.label === item.wikidataId) {
-    item.label = await getWikidataLabel(item);
-  }
-
-  // console.log(item);
-
-  const status = `Hey, remember ${item.label}?\n\n${item.wikipediaUrl}\n\n#discontinued #nostalgia`;
-  const mastodon = new mastodonClient({
-    // access_token: process.env.MASTODON_TEST_TOKEN,
-    access_token: process.env.DISCONTINUED_BOT_MASTODON_ACCESS_TOKEN,
-    api_url: process.env.MASTODON_API_URL,
+  return wikidataBot(botID, {
+    query: WIKIDATA_QUERY,
+    // accessToken: process.env.MASTODON_TEST_TOKEN,
+    accessToken: process.env.DISCONTINUED_BOT_MASTODON_ACCESS_TOKEN,
+    altText: "An image related to the linked discontinued product or service.",
+    status: (item) =>
+      `Hey, remember ${item.label}?\n\n${item.wikipediaUrl}\n\n#discontinued #nostalgia`,
   });
-
-  await mastodon.post({
-    status: status.replace("  ", " "),
-  });
-
-  return true;
 };
 
 export default botScript;

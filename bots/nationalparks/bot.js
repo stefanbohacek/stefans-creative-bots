@@ -1,13 +1,9 @@
-import mastodonClient from "./../../modules/mastodon/index.js";
-import randomFromArray from "./../../modules/randomFromArray.js";
-import sleep from "./../../modules/sleep.js";
-import { queryWikidata, getWikidataLabel, getWikidataCache, saveWikidataCache, resolveImageURL } from "./../../modules/wikidata.js";
-import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
+import wikidataBot from "./../../modules/wikidataBot.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { botID } = getBotInfo(import.meta.url);
 
-const WIKIDATA_QUERY = /* sql */`
+const WIKIDATA_QUERY = /* sql */ `
   SELECT ?item ?itemLabel ?placeLabel ?itemDescription ?lon ?lat ?image ?article WHERE {
     ?item wdt:P31 wd:Q46169 .
     ?item wdt:P131 ?place .
@@ -31,88 +27,14 @@ const WIKIDATA_QUERY = /* sql */`
 `;
 
 const botScript = async () => {
-  let items = [];
-  const cached = await getWikidataCache(botID);
-
-  if (!cached || cached.isStale) {
-    const freshItems = await queryWikidata(WIKIDATA_QUERY, true);
-    if (freshItems.length) {
-      await saveWikidataCache(botID, freshItems);
-      items = freshItems;
-    } else if (cached) {
-      console.log(`${botID}: live fetch failed, using stale cache`);
-      items = cached.data;
-    }
-  } else {
-    items = cached.data;
-  }
-
-  if (!items.length) {
-    console.log(`${botID}: no items found`);
-    return;
-  }
-
-  const mastodon = new mastodonClient({
-    // access_token: process.env.MASTODON_TEST_TOKEN,
-    access_token: process.env.NATIONAL_PATKS_BOT_MASTODON_ACCESS_TOKEN,
-    api_url: process.env.MASTODON_API_URL,
+  return wikidataBot(botID, {
+    query: WIKIDATA_QUERY,
+    // accessToken: process.env.MASTODON_TEST_TOKEN,
+    accessToken: process.env.NATIONAL_PATKS_BOT_MASTODON_ACCESS_TOKEN,
+    hashtags: "#park #parks #NationalPark #NationalParks #outdoors #map",
+    altText:
+      "A photo of or from a national park from the linked website, overlaid on a cropped world map where it's located.",
   });
-
-  const maxRetries = 5;
-  const errorMessages = {};
-
-  for (let retry = 0; retry < maxRetries; retry++) {
-    if (retry > 0) {
-      await sleep(1000 * retry);
-    }
-
-    const item = randomFromArray(items);
-
-    if (item.label === item.wikidataId) {
-      item.label = await getWikidataLabel(item);
-    }
-
-    console.log(item);
-
-    try {
-      let imageUrl = "";
-
-      if (item.image) {
-        const resolvedImageURL = await resolveImageURL(item.image);
-        imageUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-${encodeURIComponent(
-          resolvedImageURL,
-        )}(${item.long},${item.lat})/${item.long},${
-          item.lat
-        },5/900x720?access_token=pk.eyJ1IjoiZm91cnRvbmZpc2giLCJhIjoiY2tvbjg3d283MDIycTJvcWgyeXh6bXExayJ9.oALSklpKZvB95noosnGNNA`;
-      }
-
-      const status = `${item.label ? `${item.label}, ` : ""} ${
-        item.description ? `${item.description}. ` : ""
-      }\n\n${
-        item.wikipediaUrl
-      }\n\n#park #parks #NationalPark #NationalParks #outdoors #map`;
-
-      const imgData = await downloadFileAsBase64(imageUrl);
-
-      await mastodon.postImage({
-        status: status.replace("  ", " "),
-        image: imgData,
-        alt_text:
-          "A photo of or from a national park from the linked website, overlaid on a cropped world map where it's located.",
-      });
-
-      return true;
-    } catch (err) {
-      console.log(`${botID}: attempt ${retry + 1} failed for ${item.wikipediaUrl}:`, err.message);
-      errorMessages[err.message] = (errorMessages[err.message] || 0) + 1;
-    }
-  }
-
-  const summary = Object.entries(errorMessages)
-    .map(([errMessage, count]) => `- ${count} x ${errMessage}`)
-    .join("\n");
-
-  throw new Error(`${botID}: failed after ${maxRetries} attempts\n${summary}`);
 };
 
 export default botScript;

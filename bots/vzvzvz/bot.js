@@ -7,6 +7,26 @@ import mastodonClient from "./../../modules/mastodon/index.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import { parse } from "csv-parse";
 
+const testSound = (languageCode, action, word = null) => {
+  const langData = languages.find(
+    (l) => l.two_letter && l.two_letter[0].split("-")[0] === languageCode,
+  );
+  const languageName = langData ? langData.language[0] : languageCode;
+
+  for (const category of onomatopoeias) {
+    const item = category.data.find(
+      (d) => d.language[0] === languageName && d[action],
+    );
+    if (item) {
+      return {
+        language: languageName,
+        sound: { [action]: word || item[action][0] },
+      };
+    }
+  }
+  return null;
+};
+
 const botScript = async () => {
   const mastodon = new mastodonClient({
     // access_token: process.env.MASTODON_TEST_TOKEN,
@@ -17,11 +37,11 @@ const botScript = async () => {
   const category = randomFromArray(onomatopoeias);
   // const item = randomFromArray(category.data);
   const item = randomFromArray(
-    category.data.filter((d) => !d.language.includes("Russian"))
+    category.data.filter((d) => !d.language.includes("Russian")),
   );
 
-  let language,
-    sounds = [];
+  let language;
+  let sounds = [];
 
   //   console.log('picking a random item...');
   //   console.log({item});
@@ -43,6 +63,9 @@ const botScript = async () => {
   //   console.log({language, sounds});
 
   const randomSound = randomFromArray(sounds);
+  // const testResult = testSound("ja", "laughter");
+  // const randomSound = testResult.sound;
+  // language = testResult.language;
   const action = Object.keys(randomSound)[0];
 
   const languageData = languages.filter((l) => l["language"][0] === language);
@@ -70,8 +93,8 @@ const botScript = async () => {
         helloTranslations.filter(
           (hello) =>
             hello[2] === languageData[0].two_letter[0] ||
-            hello[2] === languageData[0].two_letter[0].split("-")[0]
-        )
+            hello[2] === languageData[0].two_letter[0].split("-")[0],
+        ),
       );
 
       if (locationData && locationData.length) {
@@ -133,7 +156,7 @@ const botScript = async () => {
         if (randomSound[action].length > 5) {
           fontSize = Math.max(
             75,
-            Math.floor((5 / randomSound[action].length) * 200)
+            Math.floor((5 / randomSound[action].length) * 200),
           );
         }
 
@@ -156,7 +179,7 @@ const botScript = async () => {
               position: "center center",
             },
           ],
-          { width, height }
+          { width, height },
         );
 
         const status = `The sound of "${action}" in ${language}!\n#language #linguistics #onomatopoeia #maps`;

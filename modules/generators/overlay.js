@@ -43,6 +43,16 @@ export default (overlays, options, cb) => {
 
   const makeOverlayImage = (data) => {
     console.log({ data });
+
+    data.forEach((img) => {
+      if (img.fontFileName && img.fontFamily) {
+        Canvas.registerFont(
+          path.join(__dirname, "../../fonts", img.fontFileName),
+          { family: img.fontFamily }
+        );
+      }
+    });
+
     let canvas = Canvas.createCanvas(width, height),
       ctx = canvas.getContext("2d"),
       Image = Canvas.Image;
@@ -53,14 +63,6 @@ export default (overlays, options, cb) => {
 
         img.fontSize = img.fontSize || 14;
         img.fontFamily = img.fontFamily || "serif";
-
-        if (img.fontFileName) {
-          console.log(path.join(__dirname, "../../fonts", img.fontFileName));
-          Canvas.registerFont(
-            path.join(__dirname, "../../fonts", img.fontFileName),
-            { family: img.fontFamily }
-          );
-        }
 
         ctx.font = `${img.fontSize}px ${img.fontFamily}`;
         ctx.fillStyle = img.style;

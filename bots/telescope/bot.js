@@ -22,6 +22,7 @@ const botScript = async () => {
       });
 
       const page = await browser.newPage();
+      await page.setViewport({ width: 1280, height: 800 });
       page.setUserAgent(
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
       );
@@ -76,43 +77,48 @@ const botScript = async () => {
 
         let status = `What is ${telescope.name} observing?`;
 
-        // let element = await page.$(".telescope-header__desktop-target-info h2");
-        // let value;
+        await page
+          .waitForSelector(".telescope-header__desktop-target-info h2", {
+            timeout: 5000,
+          })
+          .catch(() => {});
 
-        // if (element) {
-        //   value = await page.evaluate(
-        //     (el) => el.textContent.replace("Target: ", "").trim(),
-        //     element,
-        //   );
-        //   if (value) {
-        //     status += `\nTarget: ${value}`;
-        //   }
-        // }
+        let element = await page.$(".telescope-header__desktop-target-info h2");
+        let value;
 
-        // const programElements = await page.$$(
-        //   ".telescope-header__desktop-program",
-        // );
+        if (element) {
+          value = await page.evaluate(
+            (el) => el.textContent.replace("Target: ", "").trim(),
+            element,
+          );
+          if (value) {
+            status += `\nTarget: ${value}`;
+          }
+        }
 
-        // if (programElements[0]) {
-        //   value = await page.evaluate(
-        //     (el) => el.textContent,
-        //     programElements[0],
-        //   );
-        //   if (value) {
-        //     status += `\n${value}`;
-        //   }
-        // }
+        const programElements = await page.$$(
+          ".telescope-header__desktop-program",
+        );
 
-        // if (programElements[1]) {
-        //   value = await page.evaluate(
-        //     (el) => el.textContent,
-        //     programElements[1],
-        //   );
-        //   if (value) {
-        //     status += `\n${value}`;
-        //   }
-        // }
+        if (programElements[0]) {
+          value = await page.evaluate(
+            (el) => el.textContent,
+            programElements[0],
+          );
+          if (value) {
+            status += `\n${value}`;
+          }
+        }
 
+        if (programElements[1]) {
+          value = await page.evaluate(
+            (el) => el.textContent,
+            programElements[1],
+          );
+          if (value) {
+            status += `\n${value}`;
+          }
+        }
 
         status += `\n\n${page.url() || telescope.url.split("?")[0]}\n\n #${telescope.name.toLowerCase()} #space #astronomy #telescope`;
 
@@ -127,7 +133,6 @@ const botScript = async () => {
             "A photo captured by a space telescope from the linked website, typically showing a wide image of distant galaxies with stars and interstellar gas.",
         });
       }
-
     } catch (error) {
       console.log(`${botID} error:`, error);
       throw error;

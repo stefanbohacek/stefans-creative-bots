@@ -92,7 +92,7 @@ const botScript = async () => {
             element,
           );
           if (value) {
-            status += `\nTarget: ${value}`;
+            status += `\n\nTarget: ${value}`;
           }
         }
 

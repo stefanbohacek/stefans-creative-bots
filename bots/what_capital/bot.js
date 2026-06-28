@@ -22,6 +22,8 @@ const mastodon = new mastodonClient({
 
 const clients = { mastodon };
 
+let dbConnected = false;
+
 try {
   const [questionRows] = await db.execute(
     /* sql */ `SELECT country, capital, current_question FROM what_capital_question WHERE id = 1`,
@@ -40,6 +42,8 @@ try {
   for (const row of scoreRows) {
     savedData.scores[row.username] = row.score;
   }
+
+  dbConnected = true;
 } catch (err) {
   console.log(`failed to load saved data for what_capital bot:`, err.message);
 }
@@ -175,7 +179,7 @@ const getLeaderboard = () => {
     .join("\n")}`;
 };
 
-if (!savedData.capital) {
+if (dbConnected && !savedData.capital) {
   try {
     await pickNewCapital();
   } catch (err) {

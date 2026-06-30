@@ -58,11 +58,12 @@ const botScript = async () => {
   const imageUrl = `https://images.nypl.org/index.php?id=${capture.imageID}&t=w`;
   const street = parseStreet(capture.title);
   const osmSearchUrl = `https://www.openstreetmap.org/search?query=${encodeURIComponent(`${street} Manhattan NYC`)}`;
+  const nyplUrl = `https://digitalcollections.nypl.org/items/${item.uuid}`;
 
   const imagePath = getTempDirPath("jpg");
   await fetchFile(imageUrl, imagePath);
 
-  const status = `${capture.title}\n\n${osmSearchUrl}\n\n#NYC #NewYorkCity #doors #photography`;
+  const status = `${capture.title}\n\nVia ${nyplUrl}\n\nMap: ${osmSearchUrl}\n\n#NYC #NewYorkCity #doors #photography`;
 
   await mastodon.postImage({
     status,

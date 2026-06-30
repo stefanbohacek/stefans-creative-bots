@@ -1,0 +1,953 @@
+[
+  {
+    "title": "West 52nd Street between 5th Avenue and 6th Avenue. Odd Numbers.",
+    "url": "https://api.repo.nypl.org/api/v2/collections/0fa57250-c5ae-012f-2c5e-58d385a7bc34/items"
+  },
+  {
+    "title": "5th Avenue between West 52nd Street and West 53rd Street",
+    "url": "https://api.repo.nypl.org/api/v2/collections/15a61700-c5ae-012f-ff06-58d385a7bc34/items"
+  },
+  {
+    "title": "East 7th Street between 2nd Avenue and Cooper Square Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/18deb130-c5ae-012f-0c22-58d385a7bc34/items"
+  },
+  {
+    "title": "2nd Avenue between East 7th Street and East 8th Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/23b6fe90-c5ae-012f-cf65-58d385a7bc34/items"
+  },
+  {
+    "title": "East 93rd Street between 1rt Avenue and 2nd Avenue Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/29051e20-c5ae-012f-244a-58d385a7bc34/items"
+  },
+  {
+    "title": "1st Avenue between East 92nd Street and East 93rd Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/310f9f40-c5ae-012f-6bc5-58d385a7bc34/items"
+  },
+  {
+    "title": "East 96th Street between 2nd Avenue and 3rd Avenue Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/33b02340-c5ae-012f-886d-58d385a7bc34/items"
+  },
+  {
+    "title": "2nd Avenue between East 95th Street and East 96th Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/3b311150-c5ae-012f-6d78-58d385a7bc34/items"
+  },
+  {
+    "title": "West 43rd Street between Broadway and 8th Avenue Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/3c83b8c0-c5ae-012f-6aed-58d385a7bc34/items"
+  },
+  {
+    "title": "8th Avenue between West 43rd Street and West 44th Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/44d36b20-c5ae-012f-7be0-58d385a7bc34/items"
+  },
+  {
+    "title": "West 44 Street between Broadway and 8th Avenue Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/47ba6fc0-c5ae-012f-c611-58d385a7bc34/items"
+  },
+  {
+    "title": "8th Avenue between West 44th Street and West 45th Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/518ebcb0-c5ae-012f-d727-58d385a7bc34/items"
+  },
+  {
+    "title": "Leonard Street between Church Street and Broadway Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/529b47a0-c5ae-012f-2da6-58d385a7bc34/items"
+  },
+  {
+    "title": "Broadway between Leonard Street and Franklin Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/5a6e9f40-c5ae-012f-3d42-58d385a7bc34/items"
+  },
+  {
+    "title": "Barclay Street between Broadway and Church Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/5e6b4730-c5ae-012f-9b04-58d385a7bc34/items"
+  },
+  {
+    "title": "Broadway between Barclay Street and Park Place Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/6464cfa0-c5ae-012f-a236-58d385a7bc34/items"
+  },
+  {
+    "title": "Grand Street between Thompson Street and 6th Avenue Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/665819a0-c5ae-012f-9854-58d385a7bc34/items"
+  },
+  {
+    "title": "Thompson Street between Canal Street and Grand Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/675f2530-c5ae-012f-cfd4-58d385a7bc34/items"
+  },
+  {
+    "title": "Watts Street between West Broadway and Thompson Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/690572a0-c5ae-012f-2b4c-58d385a7bc34/items"
+  },
+  {
+    "title": "Thompson Street between Grand Street and Watts Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/6a30abb0-c5ae-012f-9668-58d385a7bc34/items"
+  },
+  {
+    "title": "Spring Street between Thompson Street and Sullivan Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/6d841a00-c5ae-012f-c887-58d385a7bc34/items"
+  },
+  {
+    "title": "Thompson Street Between Spring Street and Prince Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/721d7c30-c5ae-012f-0ff7-58d385a7bc34/items"
+  },
+  {
+    "title": "Cornelia Street Between 6th Avenue and Bleecker Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/781c1970-c5ae-012f-724c-58d385a7bc34/items"
+  },
+  {
+    "title": "Bleecker Street Between Carmine Street and Cornelia Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/7ff5c5b0-c5ae-012f-f6cf-58d385a7bc34/items"
+  },
+  {
+    "title": "Rivington Street Between Bowery and Chrystie Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/867d84b0-c5ae-012f-0d94-58d385a7bc34/items"
+  },
+  {
+    "title": "Bowery between Rivington Street and Stanton Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/8a34ceb0-c5ae-012f-cd97-58d385a7bc34/items"
+  },
+  {
+    "title": "Stanton Street between Bowery and Chrystie Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/91c44010-c5ae-012f-b6f7-58d385a7bc34/items"
+  },
+  {
+    "title": "Bowery between Stanton Street and East Houston Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/952a2b00-c5ae-012f-0645-58d385a7bc34/items"
+  },
+  {
+    "title": "Spring Street between Elizabeth Street and Bowery even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/9be0b700-c5ae-012f-e492-58d385a7bc34/items"
+  },
+  {
+    "title": "Bowery between Spring Street and Prince Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/a05eb4b0-c5ae-012f-787d-58d385a7bc34/items"
+  },
+  {
+    "title": "Prince Street between Elizabeth Street and Bowery Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/a86fe4b0-c5ae-012f-3d8b-58d385a7bc34/items"
+  },
+  {
+    "title": "Bowery between Prince Street and East Houston Street even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/acae5180-c5ae-012f-2a74-58d385a7bc34/items"
+  },
+  {
+    "title": "Stanton Street between Allen Street and Lulow Street even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/b2cc7540-c5ae-012f-4397-58d385a7bc34/items"
+  },
+  {
+    "title": "Allen Street between Stanton Street and East Houston Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/b670bff0-c5ae-012f-dbcf-58d385a7bc34/items"
+  },
+  {
+    "title": "East 2nd Street between Avenue A and Avenue B even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/bb816c00-c5ae-012f-e32d-58d385a7bc34/items"
+  },
+  {
+    "title": "Avenue A between East 2nd Street and East 3rd Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/c21604a0-c5ae-012f-5755-58d385a7bc34/items"
+  },
+  {
+    "title": "East 3rd Street between Avenue A and Avenue B Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/c4dd6af0-c5ae-012f-b18f-58d385a7bc34/items"
+  },
+  {
+    "title": "Avenue A between East 3rd Street and East 4th Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/cf9f5610-c5ae-012f-e1b2-58d385a7bc34/items"
+  },
+  {
+    "title": "Bond Street between broadway and Lafayette Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d2877170-c5ae-012f-199f-58d385a7bc34/items"
+  },
+  {
+    "title": "Broadway between bond Street and Great Jones Street Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d6231980-c5ae-012f-97fe-58d385a7bc34/items"
+  },
+  {
+    "title": "Canal Street between Church Street and West Broadway. Even Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/da193b50-c5ae-012f-f0e3-58d385a7bc34/items"
+  },
+  {
+    "title": "Church Street between Lispenard Street and Canal Street. Even Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/dd8d1000-c5ae-012f-d60c-58d385a7bc34/items"
+  },
+  {
+    "title": "East 68th Street between 5th Avenue and Madison Avenue. Odd Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/de3f8870-c5ae-012f-4e52-58d385a7bc34/items"
+  },
+  {
+    "title": "Madison Avenue between East 68th Street and East 69th Street. Even Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/e0cef570-c5ae-012f-de07-58d385a7bc34/items"
+  },
+  {
+    "title": "East 69th Street between 5th Avenue and Madison Avenue. Odd Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/e51a8b70-c5ae-012f-bff4-58d385a7bc34/items"
+  },
+  {
+    "title": "Madison Avenue between East 69th Street and East 70th Street. Even Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/ea08dd30-c5ae-012f-5683-58d385a7bc34/items"
+  },
+  {
+    "title": "East 70th Street between 5th Avenue and Madison Avenue. Odd Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/edceb340-c5ae-012f-0374-58d385a7bc34/items"
+  },
+  {
+    "title": "Madison Avenue between East 70th Street and East 71st Street. Even Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/f185b240-c5ae-012f-bffa-58d385a7bc34/items"
+  },
+  {
+    "title": "East 72nd Street between 5th Avenue and Madison Avenue. Odd Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/f5f0d590-c5ae-012f-2ef8-58d385a7bc34/items"
+  },
+  {
+    "title": "Madison Avenue between East 72nd Street and East 73rd Street. Even Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/f9861da0-c5ae-012f-5edc-58d385a7bc34/items"
+  },
+  {
+    "title": "East 73rd Street between 5th Avenue and Madison Avenue. Odd Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/fdddcaf0-c5ae-012f-f899-58d385a7bc34/items"
+  },
+  {
+    "title": "Madison Avenue between East 73rd Street and East 74th Street. Even Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/02df9a60-c5af-012f-c171-58d385a7bc34/items"
+  },
+  {
+    "title": "East 74th Street between 5th Avenue and Madison Avenue. Odd Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/0826f080-c5af-012f-bbd8-58d385a7bc34/items"
+  },
+  {
+    "title": "Madison Avenue between East 74th Street and East 75th Street. Even Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/0ea6aca0-c5af-012f-09c8-58d385a7bc34/items"
+  },
+  {
+    "title": "East 97th Street between Park Avenue and Lexington Avenue. Odd Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/12a7e950-c5af-012f-d818-58d385a7bc34/items"
+  },
+  {
+    "title": "Lexington Avenue between East 97th Street and East 98th Street. Even Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/16e20710-c5af-012f-4a53-58d385a7bc34/items"
+  },
+  {
+    "title": "East 99th Street between Park Avenue and Lexington Avenue. Odd Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/1a692390-c5af-012f-fb65-58d385a7bc34/items"
+  },
+  {
+    "title": "Lexington Avenue between East 99th Street and East 100th Street. Even Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/1c6fe190-c5af-012f-32a0-58d385a7bc34/items"
+  },
+  {
+    "title": "East 102nd Street between Lexington Avenue and 3rd Avenue. Odd Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/1d7ec680-c5af-012f-1bfe-58d385a7bc34/items"
+  },
+  {
+    "title": "Lexington Avenue between East 102nd Street and East 103rd Street. Odd Numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/2212b900-c5af-012f-cfdf-58d385a7bc34/items"
+  },
+  {
+    "title": "East 106th Street between 2nd Avenue and 1st Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/2537c2a0-c5af-012f-a589-58d385a7bc34/items"
+  },
+  {
+    "title": "2nd Avenue between East 105th Street and East 106th Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/2a2a2570-c5af-012f-e173-58d385a7bc34/items"
+  },
+  {
+    "title": "Canal Street between Mulberry Street and Mott Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/2f7e40a0-c5af-012f-513e-58d385a7bc34/items"
+  },
+  {
+    "title": "Mulberry Street between Bayard Street and Canal Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/32ceb820-c5af-012f-05a8-58d385a7bc34/items"
+  },
+  {
+    "title": "Canal Street between Mott Street and Elizabeth Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/3c7548d0-c5af-012f-c2f2-58d385a7bc34/items"
+  },
+  {
+    "title": "Mott Street between Bayard Street and Canal Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/40463540-c5af-012f-c89a-58d385a7bc34/items"
+  },
+  {
+    "title": "Canal Street between Elizabeth Street and Bowery. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/4a42ef10-c5af-012f-ab93-58d385a7bc34/items"
+  },
+  {
+    "title": "Elizabeth Street between Bayard Street and Canal Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/4e0dc210-c5af-012f-28bc-58d385a7bc34/items"
+  },
+  {
+    "title": "White Street between Baxter Street and Centre Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/5576c860-c5af-012f-6644-58d385a7bc34/items"
+  },
+  {
+    "title": "Centre Street between Leonard Street and White Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/56a83480-c5af-012f-cec6-58d385a7bc34/items"
+  },
+  {
+    "url": "https://api.repo.nypl.org/api/v2/collections/58bd68d0-c5af-012f-434a-58d385a7bc34/items"
+  },
+  {
+    "title": "Chatham Green. 215 Park Row",
+    "url": "https://api.repo.nypl.org/api/v2/collections/65859060-c5af-012f-9e90-58d385a7bc34/items"
+  },
+  {
+    "title": "Maiden Lane between Broadway and Nassau Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/696b6fc0-c5af-012f-5808-58d385a7bc34/items"
+  },
+  {
+    "title": "Broadway between Maiden Lane and John Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/706babe0-c5af-012f-8a26-58d385a7bc34/items"
+  },
+  {
+    "title": "John Street between Broadway and Nassau Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/7309e1f0-c5af-012f-da78-58d385a7bc34/items"
+  },
+  {
+    "title": "Broadway between John Street and Fulton Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/7a750460-c5af-012f-96f5-58d385a7bc34/items"
+  },
+  {
+    "title": "Fulton Street between Broadway and Nassau Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/7e2dc280-c5af-012f-2d3e-58d385a7bc34/items"
+  },
+  {
+    "title": "Broadway between Fulton Street and Ann Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/85e17490-c5af-012f-9ed3-58d385a7bc34/items"
+  },
+  {
+    "title": "Chambers Street between Broadway and Church Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/869a0530-c5af-012f-63f7-58d385a7bc34/items"
+  },
+  {
+    "title": "Church Street between Chambers Street and Reade Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/8f46aea0-c5af-012f-a3ea-58d385a7bc34/items"
+  },
+  {
+    "title": "Chambers Street between Church Street and West Broadway. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/9210ae70-c5af-012f-707c-58d385a7bc34/items"
+  },
+  {
+    "title": "West Broadway between Church Street and Reade Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/987373d0-c5af-012f-7b60-58d385a7bc34/items"
+  },
+  {
+    "title": "East 14th Street between University Place and 5th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/9ae94830-c5af-012f-95f0-58d385a7bc34/items"
+  },
+  {
+    "title": "5th Avenue between West 13th Street and West 14th Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/9fcb67f0-c5af-012f-b61f-58d385a7bc34/items"
+  },
+  {
+    "title": "West 14th Street between 5th Avenue and 6th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/a35aceb0-c5af-012f-455f-58d385a7bc34/items"
+  },
+  {
+    "title": "6th Avenue between West 13th Street and West 14th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/b0e57470-c5af-012f-d836-58d385a7bc34/items"
+  },
+  {
+    "title": "West 14th Street between 6th Avenue and 7th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/b5ab9b50-c5af-012f-d463-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 13th Street and West 14th Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/c303d240-c5af-012f-5cbc-58d385a7bc34/items"
+  },
+  {
+    "title": "West 14th Street between 7th Avenue and 8th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/c4d56470-c5af-012f-9c51-58d385a7bc34/items"
+  },
+  {
+    "title": "8th Avenue between Greenwich Avenue and West 14th Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/cce9c240-c5af-012f-5d1e-58d385a7bc34/items"
+  },
+  {
+    "title": "Morton Street between West Street and Washington Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/ce477940-c5af-012f-9271-58d385a7bc34/items"
+  },
+  {
+    "title": "Washington Street between Morton Street and Barrow Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d09b8790-c5af-012f-a8f5-58d385a7bc34/items"
+  },
+  {
+    "title": "Barrow Street between West Street and Washington Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d21ea8d0-c5af-012f-f75e-58d385a7bc34/items"
+  },
+  {
+    "title": "Washington Street between Barrow Street and Christopher Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d47ae130-c5af-012f-d183-58d385a7bc34/items"
+  },
+  {
+    "title": "Perry Street between West Street and Washington Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d647dbf0-c5af-012f-1b01-58d385a7bc34/items"
+  },
+  {
+    "title": "Washington Street between Perry Street and West 11th Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d8754ce0-c5af-012f-32e9-58d385a7bc34/items"
+  },
+  {
+    "title": "Walker Street between Church Street and Broadway. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d9dd74a0-c5af-012f-ded1-58d385a7bc34/items"
+  },
+  {
+    "title": "Broadway between Walker Street and Lispenard Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/e4611870-c5af-012f-b713-58d385a7bc34/items"
+  },
+  {
+    "title": "Lispenard Street between Church Street and Broadway. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/e6c08660-c5af-012f-427e-58d385a7bc34/items"
+  },
+  {
+    "title": "Broadway between Lispenard Street and Canal Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/f0e73150-c5af-012f-def3-58d385a7bc34/items"
+  },
+  {
+    "title": "Canal Street between Church Street and Broadway. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/f1969600-c5af-012f-23ee-58d385a7bc34/items"
+  },
+  {
+    "title": "Broadway between Canal Street and Howard Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/f9463e60-c5af-012f-dcf1-58d385a7bc34/items"
+  },
+  {
+    "title": "Beach Street between Hudson Street and Greenwich Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/fce100a0-c5af-012f-b267-58d385a7bc34/items"
+  },
+  {
+    "title": "Hudson Street between Beach Street and Hubert Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/05b040c0-c5b0-012f-91d0-58d385a7bc34/items"
+  },
+  {
+    "title": "Laight Street between Hudson Street and Greenwich Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/07cd5260-c5b0-012f-e6e1-58d385a7bc34/items"
+  },
+  {
+    "title": "Hudson Street between Laight Street and Vestry Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/0f3aa7d0-c5b0-012f-e146-58d385a7bc34/items"
+  },
+  {
+    "title": "Vestry Street between Hudson Street and Greenwich Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/12dcf8e0-c5b0-012f-86cb-58d385a7bc34/items"
+  },
+  {
+    "title": "Hudson Street between Vestry Street and Desbrosses Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/156a7c90-c5b0-012f-71a0-58d385a7bc34/items"
+  },
+  {
+    "title": "Desbrosses Street between Hudson Street and Greenwich Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/172c2fa0-c5b0-012f-6a49-58d385a7bc34/items"
+  },
+  {
+    "title": "Hudson Street between Desbrosses Street and Canal Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/1c7c9110-c5b0-012f-98e9-58d385a7bc34/items"
+  },
+  {
+    "title": "East 89th Street between 2nd Avenue and 1st Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/1e614ca0-c5b0-012f-0d55-58d385a7bc34/items"
+  },
+  {
+    "title": "2nd Avenue between East 89th Street and East 90th Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/263cf370-c5b0-012f-fe17-58d385a7bc34/items"
+  },
+  {
+    "title": "East 90th Street between 2nd Avenue and 1st Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/2b76f8d0-c5b0-012f-2dfb-58d385a7bc34/items"
+  },
+  {
+    "title": "2nd Avenue between East 90th Street and East 91st Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/341b1290-c5b0-012f-d125-58d385a7bc34/items"
+  },
+  {
+    "title": "East 86th Street between 3rd Avenue and 2nd Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/39362590-c5b0-012f-700c-58d385a7bc34/items"
+  },
+  {
+    "title": "2nd Avenue between East 85th Street and East 86th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/47a055f0-c5b0-012f-94c3-58d385a7bc34/items"
+  },
+  {
+    "title": "West 160th Street between Fort Washington Avenue and Riverside Drive. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/4ae1a760-c5b0-012f-7d39-58d385a7bc34/items"
+  },
+  {
+    "title": "Riverside Drive between West 158th Street and West 159th Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/50a21750-c5b0-012f-4784-58d385a7bc34/items"
+  },
+  {
+    "title": "West 161st between Fort Washington Avenue and Riverside Drive. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/55673a40-c5b0-012f-c7a6-58d385a7bc34/items"
+  },
+  {
+    "title": "Riverside Drive between West 161st Street and West 162nd Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/59a63520-c5b0-012f-8baf-58d385a7bc34/items"
+  },
+  {
+    "title": "West 162nd Street between Fort Washington Avenue and Riverside Drive. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/5c4331b0-c5b0-012f-81fe-58d385a7bc34/items"
+  },
+  {
+    "title": "Riverside Drive between West 162nd Street and West 163rd Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/6198f3c0-c5b0-012f-53a9-58d385a7bc34/items"
+  },
+  {
+    "title": "West 170th Street between Broadway and Fort Washington Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/6335c040-c5b0-012f-ccbe-58d385a7bc34/items"
+  },
+  {
+    "title": "Fort Washington Avenue between 170th Street and West 171st Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/689cd7f0-c5b0-012f-c05d-58d385a7bc34/items"
+  },
+  {
+    "title": "West 173rd Street between Audubon Avenue and St.Nicholas Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/69fba1b0-c5b0-012f-e209-58d385a7bc34/items"
+  },
+  {
+    "title": "St.Nicholas Avenue between West 173rd Street and West 174th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/6f1cb6d0-c5b0-012f-43a5-58d385a7bc34/items"
+  },
+  {
+    "title": "West 173rd Street between Fort Washington Avenue and Haven Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/723c8790-c5b0-012f-2389-58d385a7bc34/items"
+  },
+  {
+    "title": "Fort Washington Avenue between West 172nd Street and West 173rd Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/776b1540-c5b0-012f-0a77-58d385a7bc34/items"
+  },
+  {
+    "title": "West 69th Street between Central Park West and Columbus Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/79bd62e0-c5b0-012f-1fe2-58d385a7bc34/items"
+  },
+  {
+    "title": "Central Park West between West 69th Street and West 70th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/8421af60-c5b0-012f-095b-58d385a7bc34/items"
+  },
+  {
+    "title": "West 70th Street between Central Park West and Columbus Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/8692ccc0-c5b0-012f-f51f-58d385a7bc34/items"
+  },
+  {
+    "title": "Central Park West between West 70th Street and West 71st Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/8ff15fe0-c5b0-012f-890c-58d385a7bc34/items"
+  },
+  {
+    "title": "West 72nd Street between Central Park West and Columbus Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/914c8010-c5b0-012f-0acc-58d385a7bc34/items"
+  },
+  {
+    "title": "West 73rd Street between Central Park West and Columbus Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/96acc320-c5b0-012f-f5bd-58d385a7bc34/items"
+  },
+  {
+    "title": "Central Park West between West 73rd Street and West 74th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/a36c8b70-c5b0-012f-5436-58d385a7bc34/items"
+  },
+  {
+    "title": "West 77th Street between Central Park West and Columbus Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/a4133f40-c5b0-012f-0d22-58d385a7bc34/items"
+  },
+  {
+    "title": "Central Park West between West 77th Street and West 81st Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/a66eab30-c5b0-012f-ced5-58d385a7bc34/items"
+  },
+  {
+    "title": "West 81st Street between Central Park West and Columbus Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/a9150a50-c5b0-012f-5458-58d385a7bc34/items"
+  },
+  {
+    "title": "Central Park West between West 81st Street and West 82nd Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/b2730280-c5b0-012f-d75a-58d385a7bc34/items"
+  },
+  {
+    "title": "Mulberry Street between Kenmare Street and Spring Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/b37e73d0-c5b0-012f-8d8d-58d385a7bc34/items"
+  },
+  {
+    "title": "Spring Street between Mulberry Street and Lafayette Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/b67b5a80-c5b0-012f-f973-58d385a7bc34/items"
+  },
+  {
+    "title": "Kenmare Street between Mulberry Street and Lafayette Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/ba0b69d0-c5b0-012f-a696-58d385a7bc34/items"
+  },
+  {
+    "title": "Lafayette Street between Kenmare Street and Spring Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/be278430-c5b0-012f-c8ae-58d385a7bc34/items"
+  },
+  {
+    "title": "Vesey Street between Washington Street and West Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/c3d771a0-c5b0-012f-ccf1-58d385a7bc34/items"
+  },
+  {
+    "title": "West Street between Vesey Street and Barclay Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/c658ba50-c5b0-012f-d3cd-58d385a7bc34/items"
+  },
+  {
+    "title": "Rector Street between Trinity Place and Greenwich Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/c985e620-c5b0-012f-e030-58d385a7bc34/items"
+  },
+  {
+    "title": "Trinity Place between Rector Street and Thames Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/cb2dcc10-c5b0-012f-52c7-58d385a7bc34/items"
+  },
+  {
+    "title": "Cedar Street between Broadway and Nassau Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d2cf98e0-c5b0-012f-201d-58d385a7bc34/items"
+  },
+  {
+    "title": "Nassau Street between Cedar Street and Liberty Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d4f32d40-c5b0-012f-dd34-58d385a7bc34/items"
+  },
+  {
+    "title": "Dey Street between Broadway and Church Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d59b0b10-c5b0-012f-c1d1-58d385a7bc34/items"
+  },
+  {
+    "title": "Broadway between Dey Street and Fulton Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d81a5f40-c5b0-012f-08f5-58d385a7bc34/items"
+  },
+  {
+    "title": "West Broadway between Barclay Street and Park Place. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d9d3e0d0-c5b0-012f-b902-58d385a7bc34/items"
+  },
+  {
+    "title": "Park Place between West Broadway and Greenwich Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/db6ebeb0-c5b0-012f-cc3e-58d385a7bc34/items"
+  },
+  {
+    "title": "Canal Street between Varick Street and Hudson Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/dc626c50-c5b0-012f-e1ef-58d385a7bc34/items"
+  },
+  {
+    "title": "Varick Street between Canal Street and Watts Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/e0932690-c5b0-012f-303e-58d385a7bc34/items"
+  },
+  {
+    "title": "King Street between 6th Avenue and Varick Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/e46d6da0-c5b0-012f-11de-58d385a7bc34/items"
+  },
+  {
+    "title": "6th Avenue between King Street and East Houston Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/ec3b5ba0-c5b0-012f-7fdb-58d385a7bc34/items"
+  },
+  {
+    "title": "Leroy Street between Bleecker Street and Bedford Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/ed60ec20-c5b0-012f-51ef-58d385a7bc34/items"
+  },
+  {
+    "title": "Bleecker Street between Leroy Street and Morton Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/f33266f0-c5b0-012f-d66a-58d385a7bc34/items"
+  },
+  {
+    "title": "West 11th Street between West 4th Street and Bleecker Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/f820a6e0-c5b0-012f-db39-58d385a7bc34/items"
+  },
+  {
+    "title": "West 4th Street between West 11th Street and Bank Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/fd3753d0-c5b0-012f-e507-58d385a7bc34/items"
+  },
+  {
+    "title": "Little West 12th Street between 9th Avenue and Washington Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/ff4d9a30-c5b0-012f-f8c0-58d385a7bc34/items"
+  },
+  {
+    "title": "9th Avenue between Little West 12th Street and West 13th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/085ac520-c5b1-012f-4e8b-58d385a7bc34/items"
+  },
+  {
+    "title": "West 14th Street between 9th Avenue and 10th Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/0b8423a0-c5b1-012f-64bb-58d385a7bc34/items"
+  },
+  {
+    "title": "9th Avenue between West 14th Street and West 15th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/165b1f60-c5b1-012f-2cf3-58d385a7bc34/items"
+  },
+  {
+    "title": "East 64th Street between Park Avenue and Lexington Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/17d43060-c5b1-012f-bf28-58d385a7bc34/items"
+  },
+  {
+    "title": "Lexington Avenue between East 64th Street and East 65th Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/1ee61ab0-c5b1-012f-0d6b-58d385a7bc34/items"
+  },
+  {
+    "title": "East 64th Street between Lexington Avenue and 3rd Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/22b6dd70-c5b1-012f-1899-58d385a7bc34/items"
+  },
+  {
+    "title": "3rd Avenue between East 64th Street and East 65th Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/2a84d4c0-c5b1-012f-e241-58d385a7bc34/items"
+  },
+  {
+    "title": "East 62nd Street between Park Avenue and Lexington Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/2bdf42d0-c5b1-012f-4778-58d385a7bc34/items"
+  },
+  {
+    "title": "Lexington Avenue between East 62nd Street and East 63rd Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/31ee9220-c5b1-012f-a527-58d385a7bc34/items"
+  },
+  {
+    "title": "East 61st Street between Park Avenue and Lexington Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/377d48c0-c5b1-012f-bf6a-58d385a7bc34/items"
+  },
+  {
+    "title": "Lexington Avenue between East 61st Street and East 62nd Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/3f03bad0-c5b1-012f-94de-58d385a7bc34/items"
+  },
+  {
+    "title": "East 61st Street between Lexington Avenue and 3rd Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/43854090-c5b1-012f-8ad9-58d385a7bc34/items"
+  },
+  {
+    "title": "3rd Avenue between East 61st Street and East 62nd Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/4b364920-c5b1-012f-f51a-58d385a7bc34/items"
+  },
+  {
+    "title": "East 61st Street between 3rd Avenue and 2nd Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/4eca9730-c5b1-012f-e4a6-58d385a7bc34/items"
+  },
+  {
+    "title": "2nd Avenue between East 61st Street and East 62nd Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/59502fd0-c5b1-012f-223a-58d385a7bc34/items"
+  },
+  {
+    "title": "West 49th Street between 6th Avenue and 7th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/5e85a450-c5b1-012f-60ef-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 49th Street and West 50th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/66c175a0-c5b1-012f-33b4-58d385a7bc34/items"
+  },
+  {
+    "title": "Canal Street between Mercer Street and Greene Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/699228c0-c5b1-012f-6afd-58d385a7bc34/items"
+  },
+  {
+    "title": "Greene Street between Canal Street and Grand Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/6ec6f130-c5b1-012f-16e2-58d385a7bc34/items"
+  },
+  {
+    "title": "Grand Street between Mercer Street and Greene Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/795a1a70-c5b1-012f-ed34-58d385a7bc34/items"
+  },
+  {
+    "title": "Greene Street between Grand Street and Broome Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/7da0ece0-c5b1-012f-28dc-58d385a7bc34/items"
+  },
+  {
+    "title": "Broome Street between Mercer Street and Greene Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/84105e30-c5b1-012f-78f3-58d385a7bc34/items"
+  },
+  {
+    "title": "Greene Street between Broome Street and Spring Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/892c11f0-c5b1-012f-2ef7-58d385a7bc34/items"
+  },
+  {
+    "title": "Spring Street between Mercer Street and Greene Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/928236b0-c5b1-012f-ba79-58d385a7bc34/items"
+  },
+  {
+    "title": "Greene Street between Spring Street and Prince Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/9666e310-c5b1-012f-ce68-58d385a7bc34/items"
+  },
+  {
+    "title": "Prince Street between Mercer Street and Greene Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/9db46170-c5b1-012f-e405-58d385a7bc34/items"
+  },
+  {
+    "title": "Greene Street between Prince Street and West Houston Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/a1a28770-c5b1-012f-688c-58d385a7bc34/items"
+  },
+  {
+    "title": "Howard Street between Broadway and Mercer Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/a8bfdfe0-c5b1-012f-aac3-58d385a7bc34/items"
+  },
+  {
+    "title": "Mercer Street between Howard Street and Grand Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/abe36c80-c5b1-012f-ec56-58d385a7bc34/items"
+  },
+  {
+    "title": "Grand Street between Broadway and Mercer Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/b5f047d0-c5b1-012f-6b1c-58d385a7bc34/items"
+  },
+  {
+    "title": "Mercer Street between Grand Street and Broome Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/b99a4020-c5b1-012f-05e1-58d385a7bc34/items"
+  },
+  {
+    "title": "Broome Street between Broadway and Mercer Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/bf4946b0-c5b1-012f-4d7f-58d385a7bc34/items"
+  },
+  {
+    "title": "Mercer Street between Broome Street and Spring Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/c1c166c0-c5b1-012f-f2aa-58d385a7bc34/items"
+  },
+  {
+    "title": "Spring Street between Broadway and Mercer Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/c8deefd0-c5b1-012f-0149-58d385a7bc34/items"
+  },
+  {
+    "title": "Mercer Street between Spring Street and Prince Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/cb11ac30-c5b1-012f-67ad-58d385a7bc34/items"
+  },
+  {
+    "title": "Prince Street between Broadway and Mercer Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d35b2710-c5b1-012f-6af0-58d385a7bc34/items"
+  },
+  {
+    "title": "Mercer Street between Prince Street and West Houston Street Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/d524b990-c5b1-012f-f47b-58d385a7bc34/items"
+  },
+  {
+    "title": "Hester Street between Essex Street and Ludlow Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/db31cd60-c5b1-012f-96bd-58d385a7bc34/items"
+  },
+  {
+    "title": "Essex Street between Hester Street and Grand Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/dd06c3f0-c5b1-012f-f8cd-58d385a7bc34/items"
+  },
+  {
+    "title": "Hester Street between Ludlow Street and Orchard Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/e336b070-c5b1-012f-3ab5-58d385a7bc34/items"
+  },
+  {
+    "title": "Ludlow Street between Hester Street and Grand Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/e49723d0-c5b1-012f-f53c-58d385a7bc34/items"
+  },
+  {
+    "title": "Hester Street between Orchard Street and Allen Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/ea6f2280-c5b1-012f-5742-58d385a7bc34/items"
+  },
+  {
+    "title": "Orchard Street between Hester Street and Grand Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/ec2f7c00-c5b1-012f-7d4c-58d385a7bc34/items"
+  },
+  {
+    "title": "Hester Street between Eldridge Street and Forsyth Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/f225ee50-c5b1-012f-a85e-58d385a7bc34/items"
+  },
+  {
+    "title": "Eldridge Street between Hester Street and Grand Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/f6ce6420-c5b1-012f-98ac-58d385a7bc34/items"
+  },
+  {
+    "title": "Hester Street between Chrystie Street and Bowery. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/0088b160-c5b2-012f-0df0-58d385a7bc34/items"
+  },
+  {
+    "title": "Chrystie Street between Hester Street and Grand Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/041453d0-c5b2-012f-2016-58d385a7bc34/items"
+  },
+  {
+    "title": "Hester Street between Bowery and Elizabeth Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/08ab33c0-c5b2-012f-45ca-58d385a7bc34/items"
+  },
+  {
+    "title": "Elizabeth Street between Hester Street and Grand Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/0aba5cb0-c5b2-012f-5ba6-58d385a7bc34/items"
+  },
+  {
+    "title": "Hester Street between Elizabeth Street and Mott Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/0eb0d370-c5b2-012f-d1e7-58d385a7bc34/items"
+  },
+  {
+    "title": "Mott Street between Hester Street and Grand Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/12eb3040-c5b2-012f-5d89-58d385a7bc34/items"
+  },
+  {
+    "title": "Hester Street between Mott Street and Mulberry Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/1a892ee0-c5b2-012f-e33b-58d385a7bc34/items"
+  },
+  {
+    "title": "Mulberry Street between Hester Street and Grand Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/1d669d60-c5b2-012f-331f-58d385a7bc34/items"
+  },
+  {
+    "title": "Hester Street between Mulberry Street and Baxter Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/2501a040-c5b2-012f-12aa-58d385a7bc34/items"
+  },
+  {
+    "title": "Baxter Street between Hester Street and Grand Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/27d6dfb0-c5b2-012f-1e67-58d385a7bc34/items"
+  },
+  {
+    "title": "West 50th Street between 6th Avenue and 7th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/2e5815b0-c5b2-012f-d520-58d385a7bc34/items"
+  },
+  {
+    "title": "Hester Street between Baxter Street and Centre Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/35bcf490-c5b2-012f-68c8-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 50th Street and West 51st Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/378fe3a0-c5b2-012f-6a3e-58d385a7bc34/items"
+  },
+  {
+    "title": "Centre Street between Hester Street and Grand Street. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/3a2bde60-c5b2-012f-cc86-58d385a7bc34/items"
+  },
+  {
+    "title": "West 51st Street between 6th Avenue and 7th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/4221e300-c5b2-012f-0823-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 51st Street and West 52nd Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/48eb9c20-c5b2-012f-407f-58d385a7bc34/items"
+  },
+  {
+    "title": "West 52nd Street between 6th Avenue and 7th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/4d3c7c20-c5b2-012f-78de-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 52nd Street and West 53rd Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/552fe500-c5b2-012f-7570-58d385a7bc34/items"
+  },
+  {
+    "title": "West 53rd Street between 6th Avenue and 7th Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/568a3740-c5b2-012f-40f0-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 53rd Street and West 54th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/5a6f9f40-c5b2-012f-908f-58d385a7bc34/items"
+  },
+  {
+    "title": "West 54th Street between 6th Avenue and 7th Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/5dd9fb30-c5b2-012f-8fbb-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 54th Street and West 55th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/65c81bd0-c5b2-012f-9302-58d385a7bc34/items"
+  },
+  {
+    "title": "West 55th Street between 6th Avenue and 7th Avenue. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/6a4515a0-c5b2-012f-434b-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 55th Street and West 56th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/71a6ec40-c5b2-012f-f860-58d385a7bc34/items"
+  },
+  {
+    "title": "West 56th Street between 6th Avenue and 7th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/7690cf20-c5b2-012f-a7d0-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 56th Street and West 57th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/82436610-c5b2-012f-0a96-58d385a7bc34/items"
+  },
+  {
+    "title": "West 57th Street between 6th Avenue and 7th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/85608230-c5b2-012f-0125-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 57th Street and West 58th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/92e2ef60-c5b2-012f-d35d-58d385a7bc34/items"
+  },
+  {
+    "title": "West 58th Street between 6th Avenue and 7th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/954eb7c0-c5b2-012f-e028-58d385a7bc34/items"
+  },
+  {
+    "title": "7th Avenue between West 58th Street and West 59th Street. Odd numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/9f6593b0-c5b2-012f-09d4-58d385a7bc34/items"
+  },
+  {
+    "title": "Central Park South between 6th Avenue and 7th Avenue. Even numbers",
+    "url": "https://api.repo.nypl.org/api/v2/collections/a087efb0-c5b2-012f-1d76-58d385a7bc34/items"
+  }
+]

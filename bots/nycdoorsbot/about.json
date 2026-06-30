@@ -1,0 +1,19 @@
+{
+  "active": true,
+  "name": "Doors of New York 🗽",
+  "description": "Explore the doors around the great city of NYC 🗽",
+  "tags": [
+    "photography",
+    "doors",
+    "nyc",
+    "new york"
+  ],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@nycdoorsbot"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS",
+  "fediverse_handle": "@nycdoorsbot@stefanbohacek.online"
+}

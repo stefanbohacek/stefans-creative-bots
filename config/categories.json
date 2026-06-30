@@ -126,6 +126,7 @@
     "collection_url": "https://stefanbohacek.online/collections/116688675375577173",
     "bots": [
       "@nycviewsbot",
+      "@nycdoorsbot",
       "@nycdatabot",
       "@mtaupdates"
     ]

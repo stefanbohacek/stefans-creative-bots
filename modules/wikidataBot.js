@@ -78,7 +78,7 @@ const wikidataBot = async (
       //   ).replace("  ", " "),
       // );
       const status = (
-        buildstatus
+        buildStatus
           ? buildStatus(item)
           : `${item.label ? `${item.label}, ` : ""}${
               addDescription ? `${item.description}. ` : ""

@@ -15,5 +15,9 @@
     }
   ],
   "interval": "EVERY_SIX_HOURS",
-  "fediverse_handle": "@nycdoorsbot@stefanbohacek.online"
+  "fediverse_handle": "@nycdoorsbot@stefanbohacek.online",
+  "date_created": "2026-06-30T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/838/925/329/858/044/original/94585faab413c18e.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/838/925/329/858/044/original/6cc4c1bea2b1a13e.png",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/838/925/329/858/044/original/94585faab413c18e.png"
 }

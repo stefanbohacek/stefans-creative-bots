@@ -17,7 +17,8 @@ const botScript = async () => {
   ];
 
   const selectedPrompt = randomFromArray(prompts);
-  const selectedEmoji = randomFromArray(emojiList, getRandomInt(4, 6));
+  const availableEmoji = emojiList.filter((item) => !item.skip);
+  const selectedEmoji = randomFromArray(availableEmoji, getRandomInt(4, 6));
   const selectedEmojiLines = selectedEmoji
     .map((item) => `${item.emoji}: ${item.name}`)
     .join("\n");

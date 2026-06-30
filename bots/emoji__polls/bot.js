@@ -10,7 +10,8 @@ const botScript = async () => {
     api_url: process.env.MASTODON_API_URL,
   });
 
-  const selected = randomFromArray(emojiList, 4);
+  const availableEmoji = emojiList.filter((item) => !item.skip);
+  const selected = randomFromArray(availableEmoji, 4);
   const status =
     selected.map((item) => item.emoji).join(" ") + "\n\n#emoji #poll";
   const options = selected.map((item) => `${item.emoji} ${item.name}`);

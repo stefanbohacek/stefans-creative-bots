@@ -1505,7 +1505,8 @@
   },
   {
     "emoji": "🫈",
-    "name": "hairy creature"
+    "name": "hairy creature",
+    "skip": true
   },
   {
     "emoji": "💆",
@@ -1681,7 +1682,8 @@
   },
   {
     "emoji": "🧑‍🩰",
-    "name": "ballet dancer"
+    "name": "ballet dancer",
+    "skip": true
   },
   {
     "emoji": "💃",
@@ -2505,7 +2507,8 @@
   },
   {
     "emoji": "🫍",
-    "name": "orca"
+    "name": "orca",
+    "skip": true
   },
   {
     "emoji": "🦭",
@@ -3301,7 +3304,8 @@
   },
   {
     "emoji": "🛘",
-    "name": "landslide"
+    "name": "landslide",
+    "skip": true
   },
   {
     "emoji": "🌋",
@@ -4697,7 +4701,8 @@
   },
   {
     "emoji": "🪊",
-    "name": "trombone"
+    "name": "trombone",
+    "skip": true
   },
   {
     "emoji": "🪗",
@@ -4961,7 +4966,8 @@
   },
   {
     "emoji": "🪎",
-    "name": "treasure chest"
+    "name": "treasure chest",
+    "skip": true
   },
   {
     "emoji": "💴",

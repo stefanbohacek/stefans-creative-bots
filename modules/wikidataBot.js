@@ -69,14 +69,21 @@ const wikidataBot = async (
         item.description &&
         !item.label?.toLowerCase().includes(item.description.toLowerCase());
 
-      const status = capitalizeFirstLetter(
-        (buildStatus
+      // const status = capitalizeFirstLetter(
+      //   (buildStatus
+      //     ? buildStatus(item)
+      //     : `${item.label ? `${item.label}, ` : ""}${
+      //         addDescription ? `${item.description}. ` : ""
+      //       }\n\n${item.wikipediaUrl}\n\n${hashtags}`
+      //   ).replace("  ", " "),
+      // );
+      const status = (
+        buildstatus
           ? buildStatus(item)
           : `${item.label ? `${item.label}, ` : ""}${
               addDescription ? `${item.description}. ` : ""
             }\n\n${item.wikipediaUrl}\n\n${hashtags}`
-        ).replace("  ", " "),
-      );
+      ).replace("  ", " ");
 
       let imageUrl = null;
 

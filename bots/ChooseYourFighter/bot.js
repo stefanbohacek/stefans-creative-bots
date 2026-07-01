@@ -57,16 +57,28 @@ const getCharacterInfo = async (page, character, retries = 3) => {
     });
 
     const info = await page.evaluate((name) => {
+      const norm = (s) => s.replace(/\s+/g, " ").trim().toLowerCase();
+      const HEADINGS = ["origin:", "featured appearance:"];
+
       let origin = null;
-      const pElements = document.querySelectorAll("p");
-      for (const p of pElements) {
-        const text = p.textContent.toLowerCase().replace(/\s+/g, " ");
-        if (text.includes("origin:") || text.includes("featured appearance:")) {
-          const link =
-            p.querySelector("a") || p.parentElement?.querySelector("a");
-          if (link) {
-            origin = link.textContent.trim().replace(/\s+/g, " ");
-            break;
+      const allElements = Array.from(document.querySelectorAll("*"));
+      const headingIndex = allElements.findIndex((el) => {
+        if (el.children.length > 0) {
+          return false;
+        } else {
+          return HEADINGS.includes(norm(el.textContent));
+        }
+      });
+
+      if (headingIndex !== -1) {
+        for (let i = headingIndex + 1; i < allElements.length; i++) {
+          const el = allElements[i];
+          if (el.tagName === "A") {
+            const text = el.textContent.replace(/\s+/g, " ").trim();
+            if (text) {
+              origin = text;
+              break;
+            }
           }
         }
       }

@@ -66,7 +66,8 @@ const getCharacterInfo = async (page, character, retries = 3) => {
         if (el.children.length > 0) {
           return false;
         } else {
-          return HEADINGS.includes(norm(el.textContent));
+          const text = norm(el.textContent);
+          return HEADINGS.some((heading) => text.includes(heading));
         }
       });
 
@@ -100,9 +101,17 @@ const getCharacterInfo = async (page, character, retries = 3) => {
 
       for (const img of images) {
         const link = img.closest("a");
-        if (link && urlContainsSlug(link.href) && !seen.has(link.href)) {
-          seen.add(link.href);
-          candidates.push(link.href);
+        let candidateUrl = null;
+
+        if (link && urlContainsSlug(link.href)) {
+          candidateUrl = link.href;
+        } else if (urlContainsSlug(img.src)) {
+          candidateUrl = img.src;
+        }
+
+        if (candidateUrl && !seen.has(candidateUrl)) {
+          seen.add(candidateUrl);
+          candidates.push(candidateUrl);
         }
       }
 
@@ -174,8 +183,8 @@ const downloadImage = async (fighter) => {
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
-    access_token: process.env.CHOOSE_YOUR_FIGHTER_BOT_ACCESS_TOKEN_SECRET,
-    // access_token: process.env.MASTODON_TEST_TOKEN,
+    // access_token: process.env.CHOOSE_YOUR_FIGHTER_BOT_ACCESS_TOKEN_SECRET,
+    access_token: process.env.MASTODON_TEST_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });
 
@@ -196,7 +205,7 @@ const botScript = async () => {
     }
 
     const fighter1 = await pickFighter(page, characters);
-    // const fighter1 = await pickFighterTest(page, "Dark Kahn", "https://www.fightersgeneration.com/characters4/darkkahn.html");
+    // const fighter1 = await pickFighterTest(page, "Musashi Akatsuki", "https://www.fightersgeneration.com/characters2/musashi.html");
 
     if (!fighter1) {
       console.log(`@${botID}: could not find fighter 1`);
@@ -204,7 +213,7 @@ const botScript = async () => {
     }
 
     const fighter2 = await pickFighter(page, characters, fighter1);
-    // const fighter2 = await pickFighterTest(page, "Dr. Fate", "https://www.fightersgeneration.com/characters5/dr-fate.html");
+    // const fighter2 = await pickFighterTest(page, "Yoshikage Kira", "https://www.fightersgeneration.com/characters5/yoshikage-kira.html");
 
     if (!fighter2) {
       console.log(`@${botID}: could not find fighter 2`);

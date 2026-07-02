@@ -1,0 +1,26 @@
+{
+  "active": true,
+  "name": "Penguins and puffins live!",
+  "description": "Watching some penguins and puffins.",
+  "tags": [
+    "webcam",
+    "live",
+    "view",
+    "nature",
+    "animals",
+    "wildlife",
+    "penguins",
+    "puffins"
+  ],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@PenguinsAndPuffins"
+    }
+  ],
+  "interval": "EVERY_FOUR_HOURS",
+  "fediverse_handle": "@PenguinsAndPuffins@stefanbohacek.online",
+  "date_created": "2026-07-02T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/851/232/575/922/215/original/2ddc7090203f87f8.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/851/232/575/922/215/original/2ddc7090203f87f8.png"
+}

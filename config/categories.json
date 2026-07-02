@@ -10,6 +10,7 @@
       "@nycviewsbot",
       "@iss",
       "@bearcam",
+      "@PenguinsAndPuffins",
       "@mteverest",
       "@lakes",
       "@sea",
@@ -45,6 +46,7 @@
     "collection_url": "https://stefanbohacek.online/collections/116688675169259794",
     "bots": [
       "@bearcam",
+      "@PenguinsAndPuffins",
       "@birds",
       "@dinosaurs",
       "@africanwildlife"

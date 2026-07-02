@@ -2,8 +2,12 @@
 import UnitConverter from "./../../modules/UnitConverter.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import { base64 as downloadFileAsBase64, json as fetchJSON } from "./../../modules/fetch.js";
+import {
+  base64 as downloadFileAsBase64,
+  json as fetchJSON,
+} from "./../../modules/fetch.js";
 import { getWikipediaPage } from "./../../modules/wikipedia.js";
+import { searchWikidata } from "./../../modules/wikidata.js";
 
 const botScript = async () => {
   //TODO: Pagination should work dynamically.
@@ -40,15 +44,29 @@ const botScript = async () => {
   const imageUrl = `https://images.wur.nl/digital/api/singleitem/image/coll13/${item.itemId}/default.jpg`;
   const imgData = await downloadFileAsBase64(imageUrl);
 
+  const [wikidataResult] = await searchWikidata(item.title);
+
+  let commonName;
+
+  if (wikidataResult) {
+    const entityData = await fetchJSON(
+      `https://www.wikidata.org/entity/${wikidataResult.id}.json`,
+    );
+    const aliases =
+      entityData?.entities?.[wikidataResult.id]?.aliases?.en || [];
+    commonName = aliases[0]?.value;
+  }
+  const commonNameText = commonName ? ` (${commonName})` : "";
+
   const wikipediaUrl = await getWikipediaPage(item.title);
   const wikipediaLink = wikipediaUrl ? `\n\n${wikipediaUrl}` : "";
-  const status = `${item.title}. https://images.wur.nl/digital/collection/coll13/id/${item.itemId}/${wikipediaLink}\n\n#plants #roots #illustration`;
+  const status = `${item.title}${commonNameText}. https://images.wur.nl/digital/collection/coll13/id/${item.itemId}/${wikipediaLink}\n\n#plants #roots #illustration`;
 
   // console.log(status);
 
   const mastodon = new mastodonClient({
-    // access_token: process.env.MASTODON_TEST_TOKEN,
-    access_token: process.env.ROOTS_BOT_MASTODON_ACCESS_TOKEN,
+    access_token: process.env.MASTODON_TEST_TOKEN,
+    // access_token: process.env.ROOTS_BOT_MASTODON_ACCESS_TOKEN,
     api_url: process.env.MASTODON_API_URL,
   });
 

@@ -12,20 +12,44 @@ export const resolveImageURL = async (url) => {
     });
     return response.url;
   } catch (err) {
-    throw new Error(`resolveImageURL: fetch failed for ${url}: ${err.cause?.message || err.message}`);
+    throw new Error(
+      `resolveImageURL: fetch failed for ${url}: ${err.cause?.message || err.message}`,
+    );
   }
 };
 
 export const getWikidataLabel = async (item) => {
   let data;
   try {
-    data = await fetchJSON(`https://www.wikidata.org/entity/${item.wikidataId}.json`);
+    data = await fetchJSON(
+      `https://www.wikidata.org/entity/${item.wikidataId}.json`,
+    );
   } catch (err) {
     console.log(`getWikidataLabel error for ${item.wikidataId}:`, err.message);
     return "";
   }
   const entity = data.entities[item.wikidataId];
   return entity?.labels?.en?.value || entity?.labels?.mul?.value || "";
+};
+
+export const searchWikidata = async (search) => {
+  const params = new URLSearchParams({
+    action: "wbsearchentities",
+    search,
+    language: "en",
+    format: "json",
+  });
+
+  let data;
+
+  try {
+    data = await fetchJSON(`https://www.wikidata.org/w/api.php?${params}`);
+  } catch (err) {
+    console.log(`searchWikidata error for "${search}":`, err.message);
+    return [];
+  }
+
+  return data.search || [];
 };
 
 export const getWikidataCache = async (botId, ttl = TTL_48H) => {
@@ -76,12 +100,17 @@ export const queryWikidata = async (query, filterImage) => {
       },
     });
   } catch (err) {
-    console.log(`queryWikidata: fetch failed for ${apiUrl}:`, err.cause?.message || err.message);
+    console.log(
+      `queryWikidata: fetch failed for ${apiUrl}:`,
+      err.cause?.message || err.message,
+    );
     return [];
   }
 
   if (!resp.ok) {
-    console.log(`queryWikidata error: ${resp.status} ${resp.statusText} (${apiUrl})`);
+    console.log(
+      `queryWikidata error: ${resp.status} ${resp.statusText} (${apiUrl})`,
+    );
     return [];
   }
 

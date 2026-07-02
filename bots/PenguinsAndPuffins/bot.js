@@ -21,7 +21,7 @@ const botScript = async () => {
 
       if (liveStreams?.length) {
         const liveStream = randomFromArray(liveStreams);
-        const hashtags = `#${liveStream.snippet.title.toLowerCase().includes("puffin") ? "puffin" : "penguin"} #live #LiveStream`;
+        const hashtags = `#${liveStream.snippet.title.toLowerCase().includes("puffin") ? "puffins" : "penguins"} #live #LiveStream`;
 
         if (liveStream) {
           const liveStreamURL = `https://www.youtube.com/watch?v=${liveStream.id.videoId}`;

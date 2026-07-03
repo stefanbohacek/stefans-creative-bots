@@ -16,14 +16,21 @@ const botScript = async () => {
 
   const data = await fetchJSON(botwikiURL);
 
-  const botUrlsMeta = data[0].meta.bot_url
-    .split("\r\n")
-    .filter(
-      (url) =>
-        !url.includes("twitter.com/") &&
-        !url.includes("x.com/") &&
-        !url.includes("botsin.space/")
-    );
+  let botUrlsMeta;
+
+  if (data[0].meta.bot_url) {
+    botUrlsMeta = data[0].meta.bot_url
+      .split("\r\n")
+      .filter(
+        (url) =>
+          !url.includes("twitter.com/") &&
+          !url.includes("x.com/") &&
+          !url.includes("botsin.space/"),
+      );
+  } else {
+    botUrlsMeta = [];
+  }
+
   let botUrls;
 
   if (botUrlsMeta.length === 0) {

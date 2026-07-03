@@ -54,7 +54,10 @@ const botScript = async () => {
     );
     const aliases =
       entityData?.entities?.[wikidataResult.id]?.aliases?.en || [];
-    commonName = aliases[0]?.value;
+    const otherAliases = aliases.filter(
+      (alias) => alias.value.toLowerCase() !== item.title.toLowerCase(),
+    );
+    commonName = otherAliases[0]?.value;
   }
   const commonNameText = commonName ? ` (${commonName})` : "";
 

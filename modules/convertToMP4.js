@@ -6,6 +6,7 @@ export default (inputPath, outputPath, maxSeconds = 5) =>
       .inputOptions(["-t", String(maxSeconds)])
       .videoCodec("copy")
       .noAudio()
+      .outputOptions(["-movflags", "+faststart"])
       .output(outputPath)
       .on("end", resolve)
       .on("error", reject)

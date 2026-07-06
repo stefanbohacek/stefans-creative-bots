@@ -626,7 +626,6 @@ become a Host on Zoom
 become a Journeyman Electrician (US)
 become a Known Drag Queen in Your Area
 become a Male Stripper
-become a Marksman (Snipe) With a Pistol
 become a Member of the YMCA
 become a Painting Contractor
 become a Pentecostal Christian
@@ -4686,7 +4685,6 @@ do the Cup Game
 Do the Dark Brotherhood quest line
 do the Figure Four Leg Lock
 do the Frog Pose in Yoga
-do the Grenade Launcher Glitch in Resident Evil
 do the Hustle
 do the Long Tail Cast On
 do the Perfect Step Overs in Soccer
@@ -7897,8 +7895,6 @@ load a Golf Bag
 load a Rushcard
 Load a saved game of the Sims 4
 Load a Sims 4 game and select a household to modify
-load and Fire a 9mm Pistol
-load and Fire a Muzzleloader
 load Dice
 load Images in Mail Automatically on an iPhone
 load Plugins in Pro Tools
@@ -7906,7 +7902,6 @@ Load Pokémon Platinum on your Nintendo DS or Nintendo 3DS/2DS
 Load the map in Singleplayer mode, or add the server information in multiplayer mode
 Load the resource pack
 Load this backup onto a new phone
-load Winchester Model 190
 locate a File in Premiere Pro
 Locate a horse in a plains biome
 Locate a river, lake, or ocean
@@ -8232,7 +8227,6 @@ make a Bog Garden
 make a Bohemian Vintage Style Bun
 make a Bologna Sandwich
 make a Bolster Pillow
-make a Bomb Bag
 make a Bonfire with Lighter Fluid
 make a Bong from a Liquor Bottle
 make a Book Cover
@@ -8619,7 +8613,6 @@ make a Hot Dog
 make a Hot Soothing Lemon Drink
 make a Huge and Cheap Plant Container
 make a Hula Hoop
-make a Jager Bomb
 make a Jam Sandwich
 make a JavaScript Image Rollover
 make a Jean Jacket Look Worn
@@ -8670,7 +8663,6 @@ make a Mask out of Tin Foil and Tape
 make a Masquerade Mask
 make a Mastectomy Bra from a Regular Bra
 make a Master Track in Pro Tools
-make a Match Head Tennis Ball Bomb
 make a Match Rocket
 make a Maxi Skirt
 make a McGangbang
@@ -8722,7 +8714,6 @@ make a No Sew Pillow Cover
 make a No Sew Tutu
 make a Notebook Cover
 make a One Balloon Cat
-make a Paintball Grenade
 make a Pair of "Vintage" Converse
 make a Palm Frond Cross
 make a Paper Bracelet
@@ -8826,7 +8817,6 @@ make a Royal Flush Drink
 make a Ruffle Skirt
 make a Rugby Kicking Tee
 make a Sail
-make a Sake Bomb
 make a Sally Costume from the Nightmare Before Christmas
 make a Salmon Omelette
 make a Salt Lick for Horses
@@ -8927,7 +8917,6 @@ make a Wallet
 make a Wand Out of Paper
 make a Water Clock (Clepsydra)
 make a Water Heater
-make a Waterbomb
 make a Website Responsive
 make a Website With Word
 make a Wedding Program
@@ -9002,7 +8991,6 @@ make an Avatar
 make an Avocado Mask for Hair
 make an Avocado Shake
 make an Easel
-make an Easy E Bomb Using Notepad
 make an Easy Sponge Cake
 make an Easy Teddy Bear
 make an Egg and Cheese Croissant Sandwich
@@ -11508,7 +11496,6 @@ Open a direct message or chat channel
 Open a document
 Open a document in Word
 Open a document with a table
-open a Door With a Knife
 open a Draw Io File
 Open a file
 Open a file in Adobe InDesign
@@ -13649,7 +13636,6 @@ Release your fingers when you see the power off slider
 Release your license
 relieve Back Pain
 relieve Breast Engorgement
-reload a Pistol
 remember a Person's Name
 remember Dreams
 remember those quiet evenings
@@ -15960,7 +15946,6 @@ shoot a Compound Bow
 shoot a Deer
 Shoot a photo or video snap
 shoot Accurately in Netball
-shoot an Assault Rifle
 Shoot down the ramp on the balcony behind Riftweald Manor
 Shoot from behind cover
 shoot in Netball
@@ -15977,7 +15962,6 @@ shorten Mini Blinds
 shorten Pants Without Hand Sewing
 shorten Shoe Laces
 shorten the Length of a Golf Club
-Shot for stripped/wrap and stripped/bomb combos
 shovel Snow
 show Battery Percentage on iPhone 11, 12, and XR
 show Dislikes on YouTube
@@ -17128,7 +17112,6 @@ tether Cellphone Internet to a Laptop
 tether With Android
 texas Rig a Plastic Worm
 Text another Android Messages or Samsung Messages user while connected to Wi-Fi or data
-text Bomb People
 text from a Computer to a Cell Phone
 text on Android
 text Someone
@@ -17173,7 +17156,6 @@ throw a Dog Party
 throw a Frisbee
 throw a Glow Party
 throw a Javelin
-throw a Knife
 throw a New Year's Eve Party
 throw a Paint Party
 throw a Pot

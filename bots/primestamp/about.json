@@ -1,5 +1,6 @@
 {
-  "active": true,
+  "active": false,
+  "note": "The bot is too noisy.",
   "name": "@primestamp",
   "description": "Looking for timestamps that are prime numbers!",
   "links": [

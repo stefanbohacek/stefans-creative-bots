@@ -7,7 +7,32 @@ import {
   json as fetchJSON,
 } from "./../../modules/fetch.js";
 import { getWikipediaPage } from "./../../modules/wikipedia.js";
-import { searchWikidata } from "./../../modules/wikidata.js";
+import { searchWikidata, getWikidataEntity } from "./../../modules/wikidata.js";
+
+const getCommonName = async (title) => {
+  const [wikidataResult] = await searchWikidata(title);
+
+  let commonName;
+
+  if (wikidataResult) {
+    const entity = await getWikidataEntity(wikidataResult.id);
+    const aliases = entity?.aliases?.en || [];
+    const otherAliases = aliases.filter(
+      (alias) => alias.value.toLowerCase() !== title.toLowerCase(),
+    );
+    commonName = otherAliases[0]?.value;
+
+    if (!commonName) {
+      const taxonCommonNames = entity?.claims?.P1843 || [];
+      const englishCommonName = taxonCommonNames.find(
+        (claim) => claim.mainsnak?.datavalue?.value?.language === "en",
+      );
+      commonName = englishCommonName?.mainsnak?.datavalue?.value?.text;
+    }
+  }
+
+  return commonName;
+};
 
 const botScript = async () => {
   //TODO: Pagination should work dynamically.
@@ -44,21 +69,8 @@ const botScript = async () => {
   const imageUrl = `https://images.wur.nl/digital/api/singleitem/image/coll13/${item.itemId}/default.jpg`;
   const imgData = await downloadFileAsBase64(imageUrl);
 
-  const [wikidataResult] = await searchWikidata(item.title);
-
-  let commonName;
-
-  if (wikidataResult) {
-    const entityData = await fetchJSON(
-      `https://www.wikidata.org/entity/${wikidataResult.id}.json`,
-    );
-    const aliases =
-      entityData?.entities?.[wikidataResult.id]?.aliases?.en || [];
-    const otherAliases = aliases.filter(
-      (alias) => alias.value.toLowerCase() !== item.title.toLowerCase(),
-    );
-    commonName = otherAliases[0]?.value;
-  }
+  const commonName = await getCommonName(item.title);
+  // const commonName = await getCommonName("Ornithopus perpusillus");
   const commonNameText = commonName ? ` (${commonName})` : "";
 
   const wikipediaUrl = await getWikipediaPage(item.title);

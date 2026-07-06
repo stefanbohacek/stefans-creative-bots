@@ -32,6 +32,16 @@ export const getWikidataLabel = async (item) => {
   return entity?.labels?.en?.value || entity?.labels?.mul?.value || "";
 };
 
+export const getWikidataEntity = async (id) => {
+  try {
+    const data = await fetchJSON(`https://www.wikidata.org/entity/${id}.json`);
+    return data?.entities?.[id] || null;
+  } catch (err) {
+    console.log(`getWikidataEntity error for ${id}:`, err.message);
+    return null;
+  }
+};
+
 export const searchWikidata = async (search) => {
   const params = new URLSearchParams({
     action: "wbsearchentities",

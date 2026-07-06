@@ -31,50 +31,56 @@ const botScript = async () => {
   ];
 
   let rows = [];
+  let dbAvailable = true;
   try {
     [rows] = await db.execute(
       /* sql */`SELECT app, platform, github_repo, app_download, current_version FROM mastodon_mobile_apps`
     );
   } catch (err) {
     console.log(`${botID}: failed to load apps from DB:`, err.message);
+    dbAvailable = false;
   }
 
-  const apps = rows.length ? rows : defaultApps;
+  if (!dbAvailable) {
+    console.log(`${botID}: DB unavailable, skipping...`);
+  } else {
+    const apps = rows.length ? rows : defaultApps;
 
-  console.log("checking Mastodon mobile app versions... ");
+    console.log("checking Mastodon mobile app versions... ");
 
-  await apps.reduce(async (prev, app) => {
-    await prev;
+    await apps.reduce(async (prev, app) => {
+      await prev;
 
-    const data = await fetchJSON(`https://api.github.com/repos/${app.github_repo}/releases`);
+      const data = await fetchJSON(`https://api.github.com/repos/${app.github_repo}/releases`);
 
-    if (data && data.length) {
-      const currentRelease = data[0];
+      if (data && data.length) {
+        const currentRelease = data[0];
 
-      if (app.current_version !== currentRelease.tag_name) {
-        console.log(`found new ${app.platform} version: ${currentRelease.tag_name} (current: ${app.current_version})`);
+        if (app.current_version !== currentRelease.tag_name) {
+          console.log(`found new ${app.platform} version: ${currentRelease.tag_name} (current: ${app.current_version})`);
 
-        app.current_version = currentRelease.tag_name;
-        let status = `New ${app.platform} release (${currentRelease.tag_name})!\n\n${currentRelease.body ? truncate(currentRelease.body, 400) : ""}`;
-        status += `\n\n- https://github.com/${app.github_repo}/releases\n- ${app.app_download}\n\n#mastodon #update #release #${app.platform.toLowerCase()}`;
-        // console.log(status);
-        await mastodon.post({ status });
+          app.current_version = currentRelease.tag_name;
+          let status = `New ${app.platform} release (${currentRelease.tag_name})!\n\n${currentRelease.body ? truncate(currentRelease.body, 400) : ""}`;
+          status += `\n\n- https://github.com/${app.github_repo}/releases\n- ${app.app_download}\n\n#mastodon #update #release #${app.platform.toLowerCase()}`;
+          // console.log(status);
+          await mastodon.post({ status });
 
-      } else {
-        console.log(`no new ${app.platform} version found (current: ${app.current_version})`);
+        } else {
+          console.log(`no new ${app.platform} version found (current: ${app.current_version})`);
+        }
       }
-    }
-  }, Promise.resolve());
+    }, Promise.resolve());
 
-  for (const app of apps) {
-    try {
-      await db.execute(
-        /* sql */`INSERT INTO mastodon_mobile_apps (app, platform, github_repo, app_download, current_version) VALUES (?, ?, ?, ?, ?)
-         ON DUPLICATE KEY UPDATE current_version = VALUES(current_version)`,
-        [app.app, app.platform, app.github_repo, app.app_download, app.current_version]
-      );
-    } catch (err) {
-      console.log(`${botID}: failed to save app version:`, err.message);
+    for (const app of apps) {
+      try {
+        await db.execute(
+          /* sql */`INSERT INTO mastodon_mobile_apps (app, platform, github_repo, app_download, current_version) VALUES (?, ?, ?, ?, ?)
+           ON DUPLICATE KEY UPDATE current_version = VALUES(current_version)`,
+          [app.app, app.platform, app.github_repo, app.app_download, app.current_version]
+        );
+      } catch (err) {
+        console.log(`${botID}: failed to save app version:`, err.message);
+      }
     }
   }
 };

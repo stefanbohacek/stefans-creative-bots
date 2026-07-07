@@ -27,12 +27,12 @@ export const loadBotInfo = (app) => {
           about.links.forEach((link, index) => {
             newLinks.push(link);
 
-            if (link.title === "Follow on Mastodon") {
-              newLinks.push({
-                title: "RSS feed",
-                url: link.url + ".rss",
-              });
-            }
+            // if (link.title === "Follow on Mastodon") {
+            //   newLinks.push({
+            //     title: "RSS feed",
+            //     url: link.url + ".rss",
+            //   });
+            // }
           });
           about.links = newLinks;
         }

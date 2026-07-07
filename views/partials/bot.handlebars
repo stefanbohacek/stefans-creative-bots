@@ -32,13 +32,14 @@
     <a href="{{about.fediverse_url}}"
       data-fediverse-url="{{about.fediverse_url}}"
       rel="me noopener noreferrer"
-      target="_blank">
+      target="_blank"
+      class="d-inline-block">
       {{/if}}
       {{#if about.avatar}}
       <img src="{{about.avatar}}"
         width="64"
         height="64"
-        class="rounded-circle bot-avatar"
+        class="rounded-circle bot-avatar d-block"
         alt="{{about.name}} avatar"
         loading="lazy">
       {{else}}
@@ -46,7 +47,7 @@
         src="https://generative-placeholders.stefanbohacek.com/image?width=200&height=200&style=cellular-automata&cells=10&colors={{@root.generative_placeholders_color}}&{{@key}}"
         width="64"
         height="64"
-        class="rounded-circle bot-avatar"
+        class="rounded-circle bot-avatar d-block"
         alt="{{about.name}} avatar"
         loading="lazy">
       {{/if}}

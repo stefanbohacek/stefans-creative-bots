@@ -42,6 +42,7 @@ const botScript = async () => {
   )}/maxRecords/100`;
   const respJSON = await fetchJSON(apiURL);
   const item = randomFromArray(respJSON.items);
+  item.title = item.title.trim();
   // console.log(item);
 
   let plantDescription = item.metadataFields.find(

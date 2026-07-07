@@ -135,6 +135,7 @@ router.get("/", async (req, res) => {
     categories.unshift({
       title: "Popular",
       slug: "popular",
+      collection_url: "https://stefanbohacek.online/collections/116688618583087767",
       bots: popularBots,
     });
   }

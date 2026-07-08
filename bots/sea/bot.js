@@ -104,7 +104,13 @@ const botScript = async (retries = 0) => {
     if (okayPictures.length) {
       const selectedImagePath = randomFromArray(okayPictures);
       const weather = await getWeather(station.lat, station.lng);
-      const status = `${station.name}\n\n${weather.description_full}\nStation: ${stationURL}\nLocation: http://www.openstreetmap.org/?mlat=${station.lat}&mlon=${station.lng}&zoom=2\n#sea #ocean #water #webcam`;
+      let status = `${station.name}\n\n`;
+
+      if (weather && weather.description_full) {
+        status += `${weather.description_full}\n`;
+      }
+
+      status += `Station: ${stationURL}\nLocation: http://www.openstreetmap.org/?mlat=${station.lat}&mlon=${station.lng}&zoom=2\n#sea #ocean #water #webcam`;
 
       await mastodon.postImage({
         status,

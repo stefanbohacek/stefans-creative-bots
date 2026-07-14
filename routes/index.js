@@ -131,20 +131,20 @@ router.get("/", async (req, res) => {
     console.log("Failed to load popular bots:", err.message);
   }
 
+  if (latestBots.length > 0) {
+    categories.unshift({
+      title: "Latest",
+      slug: "latest",
+      bots: latestBots,
+    });
+  }
+
   if (popularBots.length > 0) {
     categories.unshift({
       title: "Popular",
       slug: "popular",
       collection_url: "https://stefanbohacek.online/collections/116688618583087767",
       bots: popularBots,
-    });
-  }
-
-  if (latestBots.length > 0) {
-    categories.unshift({
-      title: "Latest",
-      slug: "latest",
-      bots: latestBots,
     });
   }
 

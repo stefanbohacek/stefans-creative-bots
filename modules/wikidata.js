@@ -124,7 +124,17 @@ export const queryWikidata = async (query, filterImage) => {
     return [];
   }
 
-  const respText = await resp.text();
+  let respText;
+  try {
+    respText = await resp.text();
+  } catch (err) {
+    console.log(
+      `queryWikidata error: ${apiUrl}:`,
+      err.cause?.message || err.message,
+    );
+    return [];
+  }
+
   let respJSON;
   try {
     respJSON = JSON.parse(respText);

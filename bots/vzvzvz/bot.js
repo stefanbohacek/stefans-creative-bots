@@ -146,6 +146,9 @@ const botScript = async () => {
         } else if (languageCode === "ka") {
           fontFileName = "Baloo_Tamma-400-1.ttf";
           fontFamily = "Baloo Tamma";
+        } else if (languageCode === "ko") {
+          fontFileName = "GoNotoKurrent-Regular.ttf";
+          fontFamily = "Go Noto Kurrent";
         } else {
           fontFileName = "Pridi-700-11.ttf";
           fontFamily = "Pridi";

@@ -1,7 +1,7 @@
 ﻿import mastodonClient from "./../../modules/mastodon/index.js";
 import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
-import emojiList from "./../../data/emoji-list.json" with { type: "json" };
+import emojiList from "./../../data/emoji/emoji-list.json" with { type: "json" };
 
 const botScript = async () => {
   const mastodon = new mastodonClient({

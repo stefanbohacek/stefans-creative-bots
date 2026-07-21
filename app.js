@@ -70,6 +70,7 @@ app.use("/fediverse-info", fediverseInfoRoute);
 app.use("/feed", rssFeedRoute);
 app.use("/bot-status", botStatusRoute);
 app.use("/images", express.static(__dirname + "/temp/"));
+app.use("/fonts", express.static(__dirname + "/fonts/"));
 
 app.use(express.static("public"));
 app.use(express.static("views"));

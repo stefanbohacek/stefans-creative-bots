@@ -1,0 +1,21 @@
+{
+  "active": true,
+  "name": "Voyagers",
+  "description": "Tracking NASAs Voyager 1 and Voyager 2 spacecrafts.",
+  "tags": [
+    "space",
+    "nasa"
+  ],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@voyagers"
+    }
+  ],
+  "interval": "EVERY_TWELVE_HOURS",
+  "fediverse_handle": "@voyagers@stefanbohacek.online",
+  "date_created": "2026-07-21T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/959/741/161/827/702/original/7c165dd177b429c8.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/959/741/161/827/702/original/518e9b367a2fae1c.png",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/959/741/161/827/702/original/7c165dd177b429c8.png"
+}

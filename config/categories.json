@@ -23,11 +23,12 @@
     "description": "",
     "collection_url": "https://stefanbohacek.online/collections/116688675122889640",
     "bots": [
-      "@AuroraForecast",
       "@iss",
       "@telescope",
       "@galaxy",
+      "@voyagers",
       "@exoplanets",
+      "@AuroraForecast",
       "@sun"
     ]
   },

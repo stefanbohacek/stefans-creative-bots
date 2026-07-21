@@ -30,6 +30,7 @@ const post = (client, options, cb) => {
       if (splitStatus) {
         options.status = statuses.join("");
         options.in_reply_to_id = data.id;
+        delete options.media_ids;
         await post(client, options, cb);
       } else {
         if (cb) {

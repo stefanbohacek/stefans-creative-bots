@@ -15,8 +15,8 @@ const imagePath = getTempDirPath("png");
 const botScript = async () => {
   try {
     const mastodon = new mastodonClient({
-      access_token: process.env.MASTODON_TEST_TOKEN,
-      // access_token: process.env.HELLOWORLDBOT_MASTODON_ACCESS_TOKEN,
+      // access_token: process.env.MASTODON_TEST_TOKEN,
+      access_token: process.env.HELLOWORLDBOT_MASTODON_ACCESS_TOKEN,
       api_url: process.env.MASTODON_API_URL,
     });
 

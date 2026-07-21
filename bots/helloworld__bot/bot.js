@@ -40,6 +40,9 @@ const botScript = async () => {
 
     const [, countryName, languageCode, helloEncoded] =
       randomFromArray(eligibleTranslations);
+    // const [, countryName, languageCode, helloEncoded] = helloTranslations.find(
+    //   (translation) => translation[0] === "kh",
+    // );
     const helloTranslation = he.decode(helloEncoded);
 
     const languageData = languages.find(

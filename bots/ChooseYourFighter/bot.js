@@ -62,14 +62,36 @@ const getCharacterInfo = async (page, character, retries = 3) => {
 
       let origin = null;
       const allElements = Array.from(document.querySelectorAll("*"));
-      const headingIndex = allElements.findIndex((el) => {
-        if (el.children.length > 0) {
-          return false;
-        } else {
+
+      const isLeaf = (el) => {
+        const nonBrChildren = Array.from(el.children).filter(
+          (child) => child.tagName !== "BR",
+        );
+        return nonBrChildren.length === 0;
+      };
+
+      const leaves = [];
+      allElements.forEach((el, index) => {
+        if (isLeaf(el)) {
           const text = norm(el.textContent);
-          return HEADINGS.some((heading) => text.includes(heading));
+          if (text) {
+            leaves.push({ index, text });
+          }
         }
       });
+
+      const HEADING_WINDOW = 4;
+      let headingIndex = -1;
+      for (let i = 0; i < leaves.length && headingIndex === -1; i++) {
+        let combined = "";
+        for (let j = i; j < Math.min(i + HEADING_WINDOW, leaves.length); j++) {
+          combined += leaves[j].text;
+          if (HEADINGS.some((heading) => combined.includes(heading))) {
+            headingIndex = leaves[j].index;
+            break;
+          }
+        }
+      }
 
       if (headingIndex !== -1) {
         for (let i = headingIndex + 1; i < allElements.length; i++) {

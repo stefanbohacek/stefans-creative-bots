@@ -28,24 +28,22 @@ const checkBotPoolFn = async (app) => {
         err?.message ||
         JSON.stringify(err, null, 2);
       const timestamp = new Date().toISOString();
-      await notifyAdmin(`${botName} error`, `<pre>[${timestamp}]\n\n${errText}</pre>`);
+      await notifyAdmin(
+        `${botName} error`,
+        `<pre>[${timestamp}]\n\n${errText}</pre>`,
+      );
     }
 
     pool = [...new Set(pool)];
     app.set("pool", pool);
 
     try {
-      await db.execute(/* sql */ `DELETE FROM bot_pool`);
-
-      for (const name of pool) {
-        await db.execute(
-          /* sql */ `INSERT IGNORE INTO bot_pool (bot_name) VALUES (?)`,
-          [name],
-        );
-      }
+      await db.execute(/* sql */ `DELETE FROM bot_pool WHERE bot_name = ?`, [
+        botName,
+      ]);
     } catch (err) {
       console.log(
-        "checkBotPool: DB unavailable, skipping pool persistence:",
+        "checkBotPool: DB unavailable, skipping bot pool persistence:",
         err.message,
       );
     }

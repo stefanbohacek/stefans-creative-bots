@@ -4,6 +4,7 @@ import moment from "moment";
 import cronSchedules from "./cronSchedules.js";
 import capitalizeFirstLetter from "./capitalizeFirstLetter.js";
 import { notifyAdmin } from "./email.js";
+import db from "./db.js";
 
 export default async (bot, app) => {
   try {
@@ -30,13 +31,16 @@ export default async (bot, app) => {
             //   account_display_name: message.data.account?.display_name,
             // });
             if (
-              (message.event === "notification" && message.data.type === "mention") ||
+              (message.event === "notification" &&
+                message.data.type === "mention") ||
               message.event === "update"
             ) {
               // console.log("message.data", message.data);
               const from = message.data.account.acct;
               const statusID = message.data.id;
-              const text = convert(message.data?.status?.content || message.data?.content || "");
+              const text = convert(
+                message.data?.status?.content || message.data?.content || "",
+              );
               await reply(statusID, from, text, message);
             }
           } catch (err) {
@@ -58,7 +62,10 @@ export default async (bot, app) => {
             await bot.script.default();
           } catch (err) {
             console.log(`${bot.about.name} error:`, err);
-            await notifyAdmin(`${bot.about.name} error`, `<pre>${err?.stack || err}</pre>`);
+            await notifyAdmin(
+              `${bot.about.name} error`,
+              `<pre>${err?.stack || err}</pre>`,
+            );
           }
         }, 1000);
       } else {
@@ -69,7 +76,7 @@ export default async (bot, app) => {
         }
 
         bot.about.interval_human = capitalizeFirstLetter(
-          bot.about.interval.replace(/_/g, " ")
+          bot.about.interval.replace(/_/g, " "),
         );
 
         console.log(`⌛ scheduling ${bot.about.name}: ${bot.about.interval}`);
@@ -81,6 +88,18 @@ export default async (bot, app) => {
             pool.push(bot.about.name);
             pool = [...new Set(pool)];
             app.set("pool", pool);
+
+            try {
+              await db.execute(
+                /* sql */ `INSERT IGNORE INTO bot_pool (bot_name) VALUES (?)`,
+                [bot.about.name],
+              );
+            } catch (err) {
+              console.log(
+                "scheduleBot: DB unavailable, skipping bot pool persistence:",
+                err.message,
+              );
+            }
           }
         });
 
@@ -93,6 +112,9 @@ export default async (bot, app) => {
     }
   } catch (error) {
     console.log(`${bot.about.name} error:`, error);
-    await notifyAdmin(`${bot.about.name} setup error`, `<pre>${error?.stack || error}</pre>`);
+    await notifyAdmin(
+      `${bot.about.name} setup error`,
+      `<pre>${error?.stack || error}</pre>`,
+    );
   }
 };

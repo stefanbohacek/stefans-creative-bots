@@ -9,6 +9,9 @@ const checkBotPoolFn = async (app) => {
 
   if (pool && pool.length) {
     const botName = pool.shift();
+    pool = [...new Set(pool)];
+    app.set("pool", pool);
+
     const bots = app.get("bots");
     try {
       const bot = bots.filter((bot) => bot.about.name === botName)[0];
@@ -33,9 +36,6 @@ const checkBotPoolFn = async (app) => {
         `<pre>[${timestamp}]\n\n${errText}</pre>`,
       );
     }
-
-    pool = [...new Set(pool)];
-    app.set("pool", pool);
 
     try {
       await db.execute(/* sql */ `DELETE FROM bot_pool WHERE bot_name = ?`, [

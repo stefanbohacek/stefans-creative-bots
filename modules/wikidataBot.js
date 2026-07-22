@@ -40,8 +40,7 @@ const wikidataBot = async (
   }
 
   if (!items.length) {
-    console.log(`${botID}: no items found`);
-    return;
+    throw new Error(`${botID}: no items found`);
   }
 
   const mastodon = new mastodonClient({

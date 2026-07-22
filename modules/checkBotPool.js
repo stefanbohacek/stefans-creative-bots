@@ -11,6 +11,7 @@ const checkBotPoolFn = async (app) => {
     const botName = pool.shift();
     pool = [...new Set(pool)];
     app.set("pool", pool);
+    console.log(`processing ${botName}:`, pool);
 
     const bots = app.get("bots");
     try {

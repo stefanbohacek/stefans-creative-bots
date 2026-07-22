@@ -88,6 +88,7 @@ export default async (bot, app) => {
             pool.push(bot.about.name);
             pool = [...new Set(pool)];
             app.set("pool", pool);
+            console.log(`adding ${bot.about.name} to the pool:`, pool);
 
             try {
               await db.execute(

@@ -118,24 +118,28 @@ const getCharacterInfo = async (page, character, retries = 3) => {
       };
 
       const images = Array.from(document.querySelectorAll("img"));
-      const candidates = [];
+      const linkedCandidates = [];
+      const unlinkedCandidates = [];
       const seen = new Set();
 
       for (const img of images) {
         const link = img.closest("a");
-        let candidateUrl = null;
 
         if (link && urlContainsSlug(link.href)) {
-          candidateUrl = link.href;
+          if (!seen.has(link.href)) {
+            seen.add(link.href);
+            linkedCandidates.push(link.href);
+          }
         } else if (urlContainsSlug(img.src)) {
-          candidateUrl = img.src;
-        }
-
-        if (candidateUrl && !seen.has(candidateUrl)) {
-          seen.add(candidateUrl);
-          candidates.push(candidateUrl);
+          if (!seen.has(img.src)) {
+            seen.add(img.src);
+            unlinkedCandidates.push(img.src);
+          }
         }
       }
+
+      const candidates =
+        linkedCandidates.length > 0 ? linkedCandidates : unlinkedCandidates;
 
       return { origin, candidates };
     }, character.name);

@@ -7,6 +7,7 @@ import sleep from "./../../modules/sleep.js";
 import createFighterSelectScreen from "./../../modules/generators/fighterSelectScreen.js";
 import { base64 as downloadFileAsBase64 } from "./../../modules/fetch.js";
 import truncate from "./../../modules/truncate.js";
+import extensionCheck from "./../../modules/extensionCheck.js";
 
 const { botID } = getBotInfo(import.meta.url);
 const BASE_URL = "https://www.fightersgeneration.com";
@@ -138,27 +139,30 @@ const getCharacterInfo = async (page, character, retries = 3) => {
         }
       }
 
-      const candidates =
-        linkedCandidates.length > 0 ? linkedCandidates : unlinkedCandidates;
-
-      return { origin, candidates };
+      return { origin, linkedCandidates, unlinkedCandidates };
     }, character.name);
 
-    if (info.candidates.length === 0) {
+    const linkedImages = info.linkedCandidates.filter(extensionCheck.isImage);
+    const unlinkedImages = info.unlinkedCandidates.filter(
+      extensionCheck.isImage,
+    );
+    const candidates = linkedImages.length > 0 ? linkedImages : unlinkedImages;
+
+    if (candidates.length === 0) {
       console.log(
         `@${botID}:getCharacterInfo: no image found for ${character.name}`,
       );
       return null;
     }
 
-    const imageUrl = randomFromArray(info.candidates);
+    const imageUrl = randomFromArray(candidates);
 
     return {
       name: character.name,
       origin: info.origin || "Unknown",
       imageUrl,
       url: character.url,
-      candidates: info.candidates,
+      candidates,
     };
   } catch (err) {
     console.log(`@${botID}:getCharacterInfo error:`, err.message);

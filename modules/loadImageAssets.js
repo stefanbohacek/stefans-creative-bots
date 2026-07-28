@@ -1,5 +1,6 @@
 import fs from 'fs';
 import loadAssets from 'load-assets.js';
+import extensionCheck from './extensionCheck.js';
 
 export default async () => {
     let assets = await loadAssets();
@@ -23,7 +24,7 @@ export default async () => {
         if (
           imageUrl &&
           deletedImages.indexOf(imageData.uuid) === -1 &&
-          extensionCheck(imageUrl)
+          extensionCheck.isImage(imageUrl)
         ) {
           let fileName = helpers
             .getFilenameFromURL(imageUrl)

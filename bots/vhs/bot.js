@@ -1,9 +1,8 @@
 ﻿import fs from "fs";
 import mastodonClient from "./../../modules/mastodon/index.js";
-import webcams from "./../../data/webcams/vhs.js";
+import videos from "./../../data/webcams/vhs.js";
 import extractVideoLive from "./../../modules/extractVideoLive.js";
 import { file as downloadFile } from "./../../modules/fetch.js";
-import getRandomInt from "./../../modules/getRandomInt.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
@@ -18,37 +17,41 @@ const botScript = async () => {
         api_url: process.env.MASTODON_API_URL,
       });
 
-      const webcam = randomFromArray(webcams);
-      const status = `${webcam.youtube_url}\n\n${webcam.tags}`;
+      const availableVideos = videos.filter(
+        (video) => video.direct_urls || video.direct_url,
+      );
 
-      if ("video_start" in webcam && "video_end" in webcam) {
-        const url = `https://tools.stefanbohacek.com/video-dl/?platform=youtube&id=${
-          webcam.youtube_id
-        }&start=${getRandomInt(
-          webcam.video_start,
-          webcam.video_end - 10
-        )}&length=10&token=${process.env.STEFANS_TOOLS_ACCESS_TOKEN}`;
+      const video = randomFromArray(availableVideos);
+      const status = `${video.youtube_url}\n\n${video.tags}`;
+
+      let url;
+
+      if (video.direct_urls) {
+        const directUrl = randomFromArray(video.direct_urls);
+        url = `https://tools.stefanbohacek.com/video-dl/?platform=direct&url=${directUrl}&random=true&length=10&token=${process.env.STEFANS_TOOLS_ACCESS_TOKEN}`;
+      } else if (video.direct_url) {
+        url = `https://tools.stefanbohacek.com/video-dl/?platform=direct&url=${video.direct_url}&random=true&length=10&token=${process.env.STEFANS_TOOLS_ACCESS_TOKEN}`;
+      }
+
+      if (url) {
         console.log(url);
         await downloadFile(url, getTempDirPath("mp4"));
         try {
-          fs.renameSync(
-            getTempDirPath("mp4.mkv"),
-            getTempDirPath("mp4")
-          );
+          fs.renameSync(getTempDirPath("mp4.mkv"), getTempDirPath("mp4"));
         } catch (err) {
           /* noop */
         }
       } else {
-        await extractVideoLive(webcam.youtube_url, `${botID}.mp4`, 10);
+        await extractVideoLive(video.youtube_url, `${botID}.mp4`, 10);
       }
-      
-      console.log({status, alt_text: webcam.description});
+
+      console.log({ status, alt_text: video.description });
 
       await mastodon.postImage({
         status,
         spoiler_text: "May contain flashing images.",
         image: getTempDirPath("mp4"),
-        alt_text: webcam.description,
+        alt_text: video.description,
       });
     } catch (error) {
       console.log(`${botID} error`, error);

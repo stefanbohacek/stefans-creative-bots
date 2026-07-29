@@ -1,14 +1,20 @@
 {
-  "active": false,
+  "active": true,
   "name": "@vhs",
   "description": "Analog noise.",
-  "tags": ["vintage", "retro"],
-  "note": "No longer able to generate 10-second preview clips from YouTube.",
+  "tags": [
+    "vintage",
+    "retro"
+  ],
   "links": [
     {
-      "title": "Mastodon archive",
-      "url": "https://botsin.space/@vhs"
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@vhs"
     }
   ],
-  "interval": "EVERY_SIX_HOURS"
+  "interval": "EVERY_SIX_HOURS",
+  "fediverse_handle": "@vhs@stefanbohacek.online",
+  "date_created": "2024-11-17T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/868/353/929/402/original/9f3b2b9ef41d800f.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/868/353/929/402/original/9f3b2b9ef41d800f.png"
 }

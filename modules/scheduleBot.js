@@ -82,6 +82,14 @@ export default async (bot, app) => {
         console.log(`⌛ scheduling ${bot.about.name}: ${bot.about.interval}`);
 
         const job = new CronJob(bot.about.interval_cron, async () => {
+          const runningBots = app.get("runningBots");
+          if (runningBots && runningBots.has(bot.about.name)) {
+            console.log(
+              `${bot.about.name} still running...`,
+            );
+            return;
+          }
+
           console.log(`adding ${bot.about.name} to the pool...`);
           let pool = app.get("pool");
           if (pool) {

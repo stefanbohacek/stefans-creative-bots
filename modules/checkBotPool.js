@@ -1,8 +1,16 @@
 import db from "./db.js";
 import { notifyAdmin } from "./email.js";
+import sleep from "./sleep.js";
 
 const poolCheckInterval = 60000;
 // const poolCheckInterval = 5000;
+const botRunTimeout = 360000;
+const dbCallTimeout = 10000;
+
+const timeoutAfter = async (ms, message) => {
+  await sleep(ms);
+  throw new Error(message);
+};
 
 const checkBotPoolFn = async (app) => {
   let pool = app.get("pool");
@@ -15,6 +23,7 @@ const checkBotPoolFn = async (app) => {
       console.log(`processing ${botName}:`, pool);
 
       const bots = app.get("bots");
+      const runningBots = app.get("runningBots");
       try {
         const bot = bots.filter((bot) => bot.about.name === botName)[0];
 
@@ -24,7 +33,26 @@ const checkBotPoolFn = async (app) => {
         //     bots: bots.map(bot => bot.about.name)
         // });
 
-        await bot.script.default();
+        if (runningBots) {
+          runningBots.add(botName);
+        }
+
+        const botPromise = bot.script.default();
+        botPromise
+          .catch(() => {})
+          .finally(() => {
+            if (runningBots) {
+              runningBots.delete(botName);
+            }
+          });
+
+        await Promise.race([
+          botPromise,
+          timeoutAfter(
+            botRunTimeout,
+            `${botName} timed out after ${botRunTimeout}ms`,
+          ),
+        ]);
       } catch (err) {
         console.log(`${botName} error:`, err);
         const errText =
@@ -36,22 +64,19 @@ const checkBotPoolFn = async (app) => {
             `<pre>[${timestamp}]\n\n${errText}</pre>`,
           );
         } catch (notifyErr) {
-          console.log(
-            "checkBotPool notfication error:",
-            notifyErr.message,
-          );
+          console.log("checkBotPool notfication error:", notifyErr.message);
         }
       }
 
       try {
-        await db.execute(/* sql */ `DELETE FROM bot_pool WHERE bot_name = ?`, [
-          botName,
+        await Promise.race([
+          db.execute(/* sql */ `DELETE FROM bot_pool WHERE bot_name = ?`, [
+            botName,
+          ]),
+          timeoutAfter(dbCallTimeout, "checkBotPool DELETE query timed out"),
         ]);
       } catch (err) {
-        console.log(
-          "checkBotPool DB error:",
-          err.message,
-        );
+        console.log("checkBotPool DB error:", err.message);
       }
     } else {
       console.log(`current pool (${pool ? pool.length : 0}):`, pool);
@@ -81,5 +106,6 @@ export default async (app) => {
   }
 
   app.set("pool", pool);
+  app.set("runningBots", new Set());
   checkBotPoolFn(app);
 };

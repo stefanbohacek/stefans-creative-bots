@@ -106,6 +106,7 @@ export const scheduleBots = async (bots, app) => {
   await Promise.all(
     botsWithDelay.map(async ({ botInfo, replyDelay }) => {
       const { about, script_path: scriptPath } = botInfo;
+      console.log(`checking ${scriptPath}...`);
       if (fs.existsSync(scriptPath)) {
         const botScript = await import(scriptPath);
         botInfo.script = botScript;

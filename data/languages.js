@@ -3998,9 +3998,9 @@ export default [
   },
   {
     "country": ["Taiwan"],
-    "language": ["Chinese"],
-    "two_letter": ["zh-tw"],
-    "three_letter": ["zh-twn"],
+    "language": ["Taiwanese"],
+    "two_letter": ["nan-tw"],
+    "three_letter": ["nan-twn"],
     "number_lcid": ["4096"]
   },
   {

@@ -95,10 +95,8 @@ const botScript = async () => {
 
     await writeFile(imagePath, imageBuffer);
 
-    const status = `Hello from ${countryName}! #HelloWorld #${countryName.replace(
-      /\s+/g,
-      "",
-    )} #language #linguistics`;
+    // const status = `Hello from ${countryName}! #HelloWorld #${countryName.replace(
+    const status = `#hello #HelloWorld #language #linguistics`;
 
     await mastodon.postImage({
       status,

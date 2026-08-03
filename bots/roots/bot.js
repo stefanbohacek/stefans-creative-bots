@@ -10,7 +10,15 @@ import { getWikipediaPage } from "./../../modules/wikipedia.js";
 import { searchWikidata, getWikidataEntity } from "./../../modules/wikidata.js";
 
 const getCommonName = async (title) => {
-  const [wikidataResult] = await searchWikidata(title);
+  const baseName = title.split(" ").slice(0, 2).join(" ");
+
+  let [wikidataResult] = await searchWikidata(title);
+  let searchTitle = title;
+
+  if (!wikidataResult && baseName !== title) {
+    [wikidataResult] = await searchWikidata(baseName);
+    searchTitle = baseName;
+  }
 
   let commonName;
 
@@ -18,7 +26,7 @@ const getCommonName = async (title) => {
     const entity = await getWikidataEntity(wikidataResult.id);
     const aliases = entity?.aliases?.en || [];
     const otherAliases = aliases.filter(
-      (alias) => alias.value.toLowerCase() !== title.toLowerCase(),
+      (alias) => alias.value.toLowerCase() !== searchTitle.toLowerCase(),
     );
     commonName = otherAliases[0]?.value;
 

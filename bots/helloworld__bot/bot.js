@@ -5,7 +5,7 @@ import { parse } from "csv-parse";
 import languages from "./../../data/languages.js";
 import peopleEmoji from "./../../data/emoji/people.json" with { type: "json" };
 import mastodonClient from "./../../modules/mastodon/index.js";
-import renderHtml from "./../../modules/renderHtml.js";
+import emojiCard from "./../../modules/generators/emojiCard.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
 import getBotInfo from "./../../modules/getBotInfo.js";
 
@@ -53,44 +53,18 @@ const botScript = async () => {
     const languageName = languageData ? languageData.language[0] : languageCode;
     const emoji = randomFromArray(peopleEmoji).emoji;
 
-    const html = /* html */ `
-      <div id="hello">${helloTranslation}</div>
-      <div id="language">(Hello in ${languageName})</div>
-      <div id="emoji">${emoji}</div>
-    `;
-
-    const imageBuffer = await renderHtml({
-      html,
-      cssInline: /* css */ `
-        @font-face {
-          font-family: "Go Noto Kurrent";
-          src: url("https://bots.stefanbohacek.com/fonts/GoNotoKurrent-Regular.ttf");
-        }
-        body {
-          margin: 0;
-          width: 400px;
-          height: 400px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          font-family: "Go Noto Kurrent", serif;
-          transform: scale(2);
-          transform-origin: top left;
-        }
-        #hello {
-          font-size: 48px;
-        }
-        #language {
-          margin-top: 16px;
-          font-size: 24px;
-        }
-        #emoji {
-          margin-top: 32px;
-          font-size: 80px;
-        }
-      `,
+    const imageBuffer = await emojiCard({
+      mainText: helloTranslation,
+      captionText: `(Hello in ${languageName})`,
+      emoji,
+      width: 400,
+      height: 400,
+      mainFontSize: 48,
+      captionFontSize: 24,
+      captionMarginTop: 16,
+      emojiFontSize: 80,
+      emojiMarginTop: 32,
+      scale: 2,
     });
 
     await writeFile(imagePath, imageBuffer);

@@ -71,20 +71,22 @@ const botScript = async () => {
   // language = testResult.language;
   const action = Object.keys(randomSound)[0];
   const emoji = onomatopoeiaEmoji[action];
+  const fullSound = randomSound[action];
+  const mainText = fullSound.split(/[([]/)[0].trim() || fullSound;
 
-  console.log({ language, action, sound: randomSound[action] });
+  console.log({ language, action, sound: fullSound, mainText });
 
   const width = 1280,
     height = 1280;
 
   let fontSize = 200;
 
-  if (randomSound[action].length > 5) {
-    fontSize = Math.max(75, Math.floor((5 / randomSound[action].length) * 200));
+  if (mainText.length > 5) {
+    fontSize = Math.max(75, Math.floor((5 / mainText.length) * 200));
   }
 
   const imageBuffer = await emojiCard({
-    mainText: randomSound[action],
+    mainText,
     captionText: `(The sound of "${action}" in ${language})`,
     emoji,
     width,
@@ -103,7 +105,7 @@ const botScript = async () => {
   await mastodon.postImage({
     status,
     image: imagePath,
-    alt_text: `"${randomSound[action]}" - the sound of ${action} in ${language}. ${emoji}`,
+    alt_text: `"${randomSound[action]}": the sound of ${action} in ${language}. ${emoji}`,
   });
 };
 

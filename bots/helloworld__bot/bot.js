@@ -34,9 +34,20 @@ const botScript = async () => {
 
     helloTranslations.shift();
 
-    const eligibleTranslations = helloTranslations.filter(
-      (translation) => !["il", "ru"].includes(translation[0]),
-    );
+    const findLanguageData = (languageCode) =>
+      languages.find(
+        (language) =>
+          language.two_letter &&
+          language.two_letter[0].split("-")[0] === languageCode.split("-")[0],
+      );
+
+    const eligibleTranslations = helloTranslations.filter((translation) => {
+      const [code, , languageCode] = translation;
+      if (["il", "ru"].includes(code)) {
+        return false;
+      }
+      return Boolean(findLanguageData(languageCode));
+    });
 
     const [, countryName, languageCode, helloEncoded] =
       randomFromArray(eligibleTranslations);
@@ -45,12 +56,8 @@ const botScript = async () => {
     // );
     const helloTranslation = he.decode(helloEncoded);
 
-    const languageData = languages.find(
-      (language) =>
-        language.two_letter &&
-        language.two_letter[0].split("-")[0] === languageCode.split("-")[0],
-    );
-    const languageName = languageData ? languageData.language[0] : languageCode;
+    const languageData = findLanguageData(languageCode);
+    const languageName = languageData.language[0];
     const emoji = randomFromArray(peopleEmoji).emoji;
 
     const imageBuffer = await emojiCard({

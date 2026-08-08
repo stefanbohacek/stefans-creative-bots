@@ -2,7 +2,6 @@ import fs from "fs";
 import { writeFile } from "fs/promises";
 import he from "he";
 import { parse } from "csv-parse";
-import languages from "./../../data/languages.js";
 import peopleEmoji from "./../../data/emoji/people.json" with { type: "json" };
 import mastodonClient from "./../../modules/mastodon/index.js";
 import emojiCard from "./../../modules/generators/emojiCard.js";
@@ -34,30 +33,18 @@ const botScript = async () => {
 
     helloTranslations.shift();
 
-    const findLanguageData = (languageCode) =>
-      languages.find(
-        (language) =>
-          language.two_letter &&
-          language.two_letter[0].split("-")[0] === languageCode.split("-")[0],
-      );
+    const availableTranslations = helloTranslations.filter(
+      (translation) => !["he", "ru"].includes(translation[0]),
+    );
 
-    const eligibleTranslations = helloTranslations.filter((translation) => {
-      const [code, , languageCode] = translation;
-      if (["il", "ru"].includes(code)) {
-        return false;
-      }
-      return Boolean(findLanguageData(languageCode));
-    });
-
-    const [, countryName, languageCode, helloEncoded] =
-      randomFromArray(eligibleTranslations);
-    // const [, countryName, languageCode, helloEncoded] = helloTranslations.find(
-    //   (translation) => translation[0] === "kh",
+    const [, languageName, helloEncoded] = randomFromArray(
+      availableTranslations,
+    );
+    // const [, languageName, helloEncoded] = helloTranslations.find(
+    //   (translation) => translation[0] === "en",
     // );
     const helloTranslation = he.decode(helloEncoded);
 
-    const languageData = findLanguageData(languageCode);
-    const languageName = languageData.language[0];
     const emoji = randomFromArray(peopleEmoji).emoji;
 
     const imageBuffer = await emojiCard({

@@ -1,7 +1,6 @@
 import { writeFile } from "fs/promises";
 import onomatopoeias from "./../../data/onomatopoeias.js";
 import onomatopoeiaEmoji from "./../../data/emoji/onomatopoeias.js";
-import languages from "./../../data/languages.js";
 import mastodonClient from "./../../modules/mastodon/index.js";
 import emojiCard from "./../../modules/generators/emojiCard.js";
 import randomFromArray from "./../../modules/randomFromArray.js";
@@ -9,26 +8,6 @@ import getBotInfo from "./../../modules/getBotInfo.js";
 
 const { getTempDirPath } = getBotInfo(import.meta.url);
 const imagePath = getTempDirPath("png");
-
-const testSound = (languageCode, action, word = null) => {
-  const langData = languages.find(
-    (l) => l.two_letter && l.two_letter[0].split("-")[0] === languageCode,
-  );
-  const languageName = langData ? langData.language[0] : languageCode;
-
-  for (const category of onomatopoeias) {
-    const item = category.data.find(
-      (d) => d.language[0] === languageName && d[action],
-    );
-    if (item) {
-      return {
-        language: languageName,
-        sound: { [action]: word || item[action][0] },
-      };
-    }
-  }
-  return null;
-};
 
 const botScript = async () => {
   const mastodon = new mastodonClient({
@@ -66,9 +45,6 @@ const botScript = async () => {
   //   console.log({language, sounds});
 
   const randomSound = randomFromArray(sounds);
-  // const testResult = testSound("ja", "laughter");
-  // const randomSound = testResult.sound;
-  // language = testResult.language;
   const action = Object.keys(randomSound)[0];
   const emoji = onomatopoeiaEmoji[action];
   const fullSound = randomSound[action];

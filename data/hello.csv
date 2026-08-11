@@ -1,73 +1,73 @@
-"code","language","hello"
-"ca","Catalan","Hola"
-"ar","Arabic","&#1605;&#1585;&#1581;&#1576;&#1575;"
-"fa","Persian","&#1587;&#1604;&#1575;&#1605;"
-"en","English","Hello"
-"sq","Albanian","Tungjatjeta"
-"hy","Armenian","&#1378;&#1377;&#1408;&#1415;"
-"pap","Papiamento","Halo"
-"pt","Portuguese","Ol&aacute;"
-"es","Spanish","Hola"
-"de","German","Gr&uuml;&szlig;gott"
-"nl","Dutch","Hallo"
-"az","Azerbaijani","Salam"
-"bs","Bosnian","Zdravo"
-"bn","Bangla","&#2489;&#2509;&#2479;&#2494;&#2482;&#2507;"
-"fr","French","Salut"
-"bg","Bulgarian","Zdravei"
-"ms","Malay","Hai"
-"dz","Dzongkha","Kuzuzangpo La"
-"no","Norwegian","Hei"
-"be","Belarusian","&#1042;i&#1090;&#1072;&#1102;"
-"de","German","Hallo"
-"mi","Maori","Kia orana"
-"zh","Chinese","&#20320;&#22909;"
-"es","Spanish","Que Bola"
-"el","Greek","&#915;&#949;&#953;&#945; &#963;&#959;&#965;"
-"cs","Czech","Ahoj"
-"so","Somali","&#1575;&#1607;&#1604;&#1575;"
-"da","Danish","Hej"
-"et","Estonian","Tere"
-"ar","Arabic","&#1575;&#1607;&#1604;&#1575;"
-"fi","Finnish","Moi"
-"fj","Fijian","Bula"
-"ka","Georgian","&#4306;&#4304;&#4315;&#4304;&#4320;&#4335;&#4317;&#4305;&#4304;"
-"hr","Croatian","Bok"
-"fr","French","Bonjou"
-"hu","Hungarian","Szia"
-"id","Indonesian","Halo"
-"en","English","Dia dhuit"
-"hi","Hindi","&#2344;&#2350;&#2360;&#2381;&#2340;&#2375;"
-"is","Icelandic","H&aelig;"
-"it","Italian","Ci&agrave;o"
-"ja","Japanese","&#12371;&#12435;&#12395;&#12385;&#12399;"
-"sw","Swahili","Hujambo"
-"km","Khmer","&#6023;&#6086;&#6042;&#6070;&#6036;&#6047;&#6077;&#6042;"
-"ko","Korean","&#50504;&#45397;&#54616;&#49464;&#50836;"
-"kk","Kazakh","Sälem"
-"lo","Lao","Sabaidee"
-"lt","Lithuanian","Labas"
-"lb","Luxembourgish","Mo&iuml;en"
-"lv","Latvian","Sveiki"
-"mk","Macedonian","&#1047;&#1076;&#1088;&#1072;&#1074;&#1086;"
-"my","Burmese","မင်္ဂလာပါ"
-"mn","Mongolian","&#1057;&#1072;&#1081;&#1085; &#1091;&#1091;?"
-"ne","Nepali","&#2332;&#2381;&#2357;&#2332;&#2354;&#2346;&#2366;"
-"en","English","Kia ora"
-"fil","Filipino","Kumusta"
-"ur","Urdu","&#1587;&#1604;&#1575;&#1605;"
-"pl","Polish","Cze&#347;&#263;"
-"ro","Romanian","Salut"
-"sr","Serbian","Zdravo"
-"sv","Swedish","Hej"
-"sl","Slovenian","Zdravo"
-"sk","Slovak","Ahoj"
-"th","Thai","&#3626;&#3623;&#3633;&#3626;&#3604;&#3637;"
-"tr","Turkish","Selam"
-"nan","Taiwanese","Lí hó!"
-"uk","Ukrainian","&#1087;&#1088;&#1080;&#1074;&#1110;&#1090;"
-"en","English","Hi"
-"uz","Uzbek","Salom"
-"vi","Vietnamese","Cha&#832;o"
-"bi","Bislama","Halo"
-"sm","Samoan","Talofa"
+code,language,hello,pronunciation
+ca,Catalan,Hola,
+ar,Arabic,&#1605;&#1585;&#1581;&#1576;&#1575;,
+fa,Persian,&#1587;&#1604;&#1575;&#1605;,
+en,English,Hello,
+sq,Albanian,Tungjatjeta,
+hy,Armenian,&#1378;&#1377;&#1408;&#1415;,
+pap,Papiamento,Halo,
+pt,Portuguese,Ol&aacute;,
+es,Spanish,Hola,
+de,German,Gr&uuml;&szlig;gott,
+nl,Dutch,Hallo,
+az,Azerbaijani,Salam,
+bs,Bosnian,Zdravo,
+bn,Bangla,&#2489;&#2509;&#2479;&#2494;&#2482;&#2507;,
+fr,French,Salut,
+bg,Bulgarian,Zdravei,
+ms,Malay,Hai,
+dz,Dzongkha,Kuzuzangpo La,
+no,Norwegian,Hei,
+be,Belarusian,&#1042;i&#1090;&#1072;&#1102;,
+de,German,Hallo,
+mi,Maori,Kia orana,
+zh,Chinese,&#20320;&#22909;,
+es,Spanish,Que Bola,
+el,Greek,&#915;&#949;&#953;&#945; &#963;&#959;&#965;,
+cs,Czech,Ahoj,
+so,Somali,&#1575;&#1607;&#1604;&#1575;,
+da,Danish,Hej,
+et,Estonian,Tere,
+ar,Arabic,&#1575;&#1607;&#1604;&#1575;,
+fi,Finnish,Moi,
+fj,Fijian,Bula,
+ka,Georgian,&#4306;&#4304;&#4315;&#4304;&#4320;&#4335;&#4317;&#4305;&#4304;,
+hr,Croatian,Bok,
+fr,French,Bonjou,
+hu,Hungarian,Szia,
+id,Indonesian,Halo,
+en,English,Dia dhuit,
+hi,Hindi,&#2344;&#2350;&#2360;&#2381;&#2340;&#2375;,
+is,Icelandic,H&aelig;,
+it,Italian,Ci&agrave;o,
+ja,Japanese,&#12371;&#12435;&#12395;&#12385;&#12399;,
+sw,Swahili,Hujambo,
+km,Khmer,&#6023;&#6086;&#6042;&#6070;&#6036;&#6047;&#6077;&#6042;,
+ko,Korean,&#50504;&#45397;&#54616;&#49464;&#50836;,
+kk,Kazakh,Sälem,
+lo,Lao,Sabaidee,
+lt,Lithuanian,Labas,
+lb,Luxembourgish,Mo&iuml;en,
+lv,Latvian,Sveiki,
+mk,Macedonian,&#1047;&#1076;&#1088;&#1072;&#1074;&#1086;,
+my,Burmese,မင်္ဂလာပါ,
+mn,Mongolian,&#1057;&#1072;&#1081;&#1085; &#1091;&#1091;?,
+ne,Nepali,&#2332;&#2381;&#2357;&#2332;&#2354;&#2346;&#2366;,
+en,English,Kia ora,
+fil,Filipino,Kumusta,
+ur,Urdu,&#1587;&#1604;&#1575;&#1605;,
+pl,Polish,Cze&#347;&#263;,
+ro,Romanian,Salut,
+sr,Serbian,Zdravo,
+sv,Swedish,Hej,
+sl,Slovenian,Zdravo,
+sk,Slovak,Ahoj,
+th,Thai,&#3626;&#3623;&#3633;&#3626;&#3604;&#3637;,
+tr,Turkish,Selam,
+nan,Taiwanese,Lí hó!,
+uk,Ukrainian,&#1087;&#1088;&#1080;&#1074;&#1110;&#1090;,
+en,English,Hi,
+uz,Uzbek,Salom,
+vi,Vietnamese,Cha&#832;o,
+bi,Bislama,Halo,
+sm,Samoan,Talofa,

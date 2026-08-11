@@ -558,7 +558,6 @@ bathe an Angry Cat With Minimal Damage
 batik
 Battle against the Gym Leader, and Elite Four member, or the Champion
 bavarian Crochet
-bBQ Brisket
 bBQ With Propane
 be a Good Guitar Player
 be a Good Gymnast
@@ -778,7 +777,6 @@ bowl a Strike in Grand Theft Auto IV
 bowl a Successful Inswinger
 bowl an Easy Bowling Strike in Wii Sports
 bowl with Reactive Bowling Balls
-braai Steak
 braid a Horse's Mane
 braid a Spiral Bracelet
 braid Leather
@@ -813,15 +811,9 @@ brew Kombucha
 brew White Tea
 bridge Subwoofers
 brighten Faded Carpet and Rugs
-brine a Fresh Ham
 Bring a friend
 Bring the watermark object to the front
 broadcast Radio from Your Computer
-broil Lobster
-broil Lobster Tails
-broil Steak
-brown Potatoes
-browse 4Chan
 Browse classic Flash content at https://archive.org/details/softwarelibrary_flash
 browse Files on Android
 Browse for a font
@@ -982,12 +974,10 @@ Burn the DBAN ISO file to a CD or USB drive
 Burn the image to a DVD
 burp Babies
 bury Valuables to Keep Them Safe
-butcher and Remove the Pin Feathers of a Turkey
 butcher Cattle
 butcher Deer
 butter a Brick
 butterfly Coil a Rope
-butterfly or Fillet a Pork Tenderloin
 buy a Game for Android
 Buy a laptop hood or sunscreen
 Buy a MoCA adapter if you have FIOS TV service
@@ -1002,8 +992,6 @@ Buy an Outdoor-View laptop
 buy and Clean Mussels
 Buy and download Sims 4
 buy Antiques
-buy Bitcoin on PayPal
-buy Bonds on E Trade
 buy Books for Your Kindle
 buy Books on the Kindle App
 buy Door Knobs
@@ -1017,7 +1005,6 @@ Buy resistances related to your origin country
 buy Scrap Gold
 buy Scrap Silver
 Buy Sponsored Product ads
-buy Stuff on Sweatcoin on iPhone or iPad
 Buy the amulet of Mara from Maramal
 buy Tinder Gold on iPhone or iPad
 buy Train Tickets in Italy
@@ -2476,7 +2463,6 @@ Click or tap a video that has the red icon that says "Live" in the upper-left co
 Click or tap Actions
 Click or tap Allow when prompted
 Click or tap Buy
-Click or tap Buy next to "Bitcoin."
 Click or tap Buy Now
 Click or tap Change Mobile Number
 Click or tap Click to Continue Registration in the email
@@ -3607,7 +3593,6 @@ Complete the report and click Send
 Complete the required fields to activate your Hulu account
 Complete the steps and click Finish to invite users to message your page
 Complete the transaction
-Complete three Daily Bonus activities per day for extra sweatcoins
 Complete your order
 Compose a message
 Compose a new email
@@ -4155,11 +4140,9 @@ cure Concrete
 cure Jock Itch
 cure Lycanthropy in Skyrim
 cure Olives
-cure Pork
 cure Postnasal Drip
 cure Salmon
 cure Severely Chapped Hands
-cure Turkey
 curl a Short Bob
 curl Bangs
 curl Hair with a Blow Dryer
@@ -4195,7 +4178,6 @@ Customize your settings in the Configuration menu
 customize Your Shoes
 Customize your wallpaper setup
 cut a Bob
-cut a Brisket
 cut a Cabbage Into Wedges
 cut a Cake Layer in Half
 cut a Ceramic Tile
@@ -4221,7 +4203,6 @@ cut a Pixie Cut
 cut a Plastic Bottle
 cut a Pompadour
 cut a Quartz Countertop
-cut a Salmon Steak
 cut a Shirt
 cut a SIM Card
 cut a Six Piece Skirt
@@ -4308,7 +4289,6 @@ cut Pears
 cut Peel-and-Stick Vinyl Tile
 cut Pex Tubing
 cut Potatoes Into Fries
-cut Prime Rib
 cut PVC Pipe
 cut Quarter Round
 cut Radishes
@@ -4334,7 +4314,6 @@ cut Tile Around a Toilet
 cut Tile Backsplash
 cut Tomatoes
 cut Triangle Bangs
-cut Tuna Steaks
 cut V Shaped Layers
 cut Videos on iMovie
 cut Wine Bottles for Crafts
@@ -4380,7 +4359,6 @@ deafen Members in Discord on Android
 deal With a Girl That Leads You On (for Guys)
 deal With a Pawn Shop
 deal With an Itch That Occurs Throughout the Night
-debone a Turkey Breast
 Debug to find errors
 Decide on a concept for a game based around your skills as a designer
 Decide on a design
@@ -5515,7 +5493,6 @@ Enter the address and tap CONTINUE
 Enter the admin username and password
 Enter the alt code number (e.g., 0128)
 Enter the amount
-Enter the amount of Bitcoin you want to purchase
 Enter the amount of remaining payments in the Periods row
 Enter the amount you want to request
 Enter the amount you want to send
@@ -5816,7 +5793,6 @@ fence a Garden
 ferment Vegetables
 fertilize Flowers
 fiberglass a Boat
-field Dress a Duck
 fight in L.A. Noire
 figure Concrete Yardage
 Figure out how to communicate the object of the game to the player
@@ -6266,7 +6242,6 @@ Get 100 gold from Brynjolf
 Get 24 expert staff ghosts in Time Trial mode to unlock the Sprinter kart
 Get 4 blocks of sand, 4 blocks of gravel, and 1 dye
 get 4G LTE
-Get 5 sweatcoins for each friend you invite
 Get 7 Iron Ingots
 get 99 Crafting in RuneScape
 get 99 Lives in New Super Mario Bros DS
@@ -6441,7 +6416,6 @@ give Yourself a Fade
 give Yourself a Manicure
 give Yourself a Scalp Massage
 glaze a Cake
-glaze a Ham
 glaze Pottery
 glitter Wine Glasses
 glue a Puzzle
@@ -6890,7 +6864,6 @@ If they claim to be your family member or friend, they should already be in your
 If two people of the same gender match, either can start the conversation
 If you are using an external display, rotate your phone horizontally and the display should automatically update
 If you blocked the site yourself, you can edit your Screen Time content restrictions or remove the blocked site from your Mac's hosts file
-If you bring 30 or more people to Sweatcoin, you'll get an unlimited amount of PayPal vouchers
 If you can see the server in search, it was not deleted
 If you can't find these options, try the methods below
 If you can't search for the server on Discord, it might have been deleted, or it might be set to not appear in search
@@ -7240,7 +7213,6 @@ install an iPhone Application
 install an Irrigation System
 install an ISO Game File on a Windows PC
 install an M.2 SSD on a Desktop
-Install an older version of Direct
 install an Operating System on a Brand New Computer
 install an Outdoor Motion Sensor Light
 install an Outdoor Outlet
@@ -7595,7 +7567,6 @@ join GroupMe on iPhone or iPad
 join Meetup
 join Multiple Slack Teams on PC or Mac
 Join or host a meeting
-Join races and complete goals to earn additional sweatcoins
 join the Dark Brotherhood in Skyrim
 join the French Foreign Legion
 join the Thieves Guild in Skyrim
@@ -7709,7 +7680,6 @@ keep Spiders Out of Your Gardening Boots
 keep Spinach Fresh
 keep Squirrels Away
 keep Squirrels from Eating Pumpkins
-keep Steak Warm While Resting
 keep Tablecloths Crease Free in Storage
 keep Text in One Cell in Excel
 Keep the battery charged above 2 bars
@@ -8225,7 +8195,6 @@ make a Blueberry Smoothie
 make a Blueberry Smoothie Bowl
 make a Bog Garden
 make a Bohemian Vintage Style Bun
-make a Bologna Sandwich
 make a Bolster Pillow
 make a Bonfire with Lighter Fluid
 make a Bong from a Liquor Bottle
@@ -8591,7 +8560,6 @@ make a Gypsy Skirt
 make a Hair Bow out of Ribbon
 make a Hair Protectant Spray
 make a Hair Puff
-make a Ham Panini on a George Foreman Grill
 make a Hamster Playground
 make a Hand Mask
 make a Hanging Rope Shelf
@@ -8609,7 +8577,6 @@ make a Homemade Nerf Sniper Scope
 make a Homemade Stethoscope
 make a Hoodie
 make a Horse Run Faster
-make a Hot Dog
 make a Hot Soothing Lemon Drink
 make a Huge and Cheap Plant Container
 make a Hula Hoop
@@ -8743,7 +8710,6 @@ make a Perfect Frisbee Catch
 make a Period Pouch
 make a Personal Collage
 make a Personalized Journal
-make a Philly Cheese Steak
 make a Philodendron Pole
 make a Photo Board
 make a Picture Skinnier
@@ -8772,7 +8738,6 @@ make a Pom Pom Without Cardboard
 make a Poodle Skirt Without a Pattern and With Minimal Sewing
 make a Poofy Ponytail
 make a Pop Tab Wristband
-make a Pork Roast in a Crock Pot
 make a Poster Using Microsoft Word
 make a Pot of Gold Candy Dish
 make a Pot of Lavender Potpourri
@@ -8926,7 +8891,6 @@ make a Werewolf in the Sims 2
 make a Whale on Apple Messages
 make a Whip
 make a White Russian
-make a Whopper Burger at Burger King
 make a Willow Whistle
 make a Window Screen
 make a Windows XP Bootable Disk Using a ISO File
@@ -9056,7 +9020,6 @@ make Antler Lamps
 Make any necessary changes to the document
 make Any Picture Your Computer's Wallpaper
 make Apple Cider
-make Apple Cider Pork Stew
 make Apple Cider Vinegar
 make Apple Crumble
 make Apple Jam
@@ -9478,7 +9441,6 @@ make Crate Shelves
 make Crayon Candles
 make Cream Cheese
 make Cream Eyeshadow
-make Cream of Mushroom Cube Steaks
 make Cream Soda
 make Cream Spinach
 make Creamed Honey
@@ -9775,7 +9737,6 @@ make Gingerbread Houses Using Graham Crackers
 make Gingko Tea
 make Glass
 make Glass Candy
-make Glaze for Ham
 make Glazed Strawberries
 make Glitter
 make Glitter Candles
@@ -9841,7 +9802,6 @@ make Half-Popped Popcorn
 make Halloween Decorations
 make Halloween Masks
 make Haloumi Cheese
-make Ham-Roasted Vegetables
 make Hand and Foot Cream
 make Hand Lotion
 make Handmade Greeting Cards
@@ -9973,7 +9933,6 @@ Make it the desired size
 make Italian Ice
 make Italian Mushroom Soup
 make Italian Peasant Soup
-make Italian Sausage
 make Itching Powder
 make Items for a Breyer Model Horse
 make Izal
@@ -10086,7 +10045,6 @@ make Liquid Polymer Clay Window Clings
 make Liquid Smoke
 make Liquid Soap from Soap Leftovers
 make Liquid Starch
-make Liver Cakes
 make Lo Mein
 make Loads of Money on Runescape Using the Grand Exchange
 make Lobster Sushi
@@ -10149,11 +10107,6 @@ make Microwave Popcorn Extra Buttery
 make Microwave Potato Chips
 make Migajon (Craft Dough)
 make Milanesa
-make Milk Paint
-make Milk Rice
-make Milk Soup
-make Milk Steak With Jelly Beans
-make Milk Tea
 make Millet Polenta
 make Millionaire Shortbread
 make Mini Cinnamon Roll Baked Doughnuts
@@ -10182,7 +10135,6 @@ make Money on Pinterest
 make Money on RuneScape with Bronze
 make Money on Sims 2
 make Money on Snapchat
-make Money with Sweatcoin
 make Money Writing on Medium
 make Monster Energy Drink Cupcakes
 make Moonshine
@@ -10209,7 +10161,6 @@ make Mushroom Sauce
 make Music Using a Computer
 make Musical Instruments with Recycled Materials
 make Mustard from Scratch
-make Mutton Pies
 make Nachos in the Oven
 make Nage
 make Nail Glue
@@ -10320,7 +10271,6 @@ make Pasta Sauce
 make Pastel De Papa
 make Pastillas
 make Pastillas de Leche (Candied Milk)
-make Pastrami
 make Patches with Cloth and Acrylic Paint
 make Peach Cobbler
 make Peanut Butter
@@ -10330,7 +10280,6 @@ make Pearl Earrings
 make Pemmican
 make Pempek Kapal Selam
 make Pepper Spray
-make Pepper Steak
 make Peppercorn Sauce
 make Peppermint Bark
 make Peppermint Oil
@@ -10392,9 +10341,6 @@ make Popcorn in a Pan
 make Popcorn on the Stove
 make Poppadoms
 make Popsicles
-make Pork Floss
-make Pork Gravy
-make Pork Rinds
 make Porridge
 make Porridge Using a Microwave
 make Portuguese Rice
@@ -10414,14 +10360,12 @@ make Pour Over Coffee
 make Powdered Sugar
 make Professional Looking Ripped Jeans
 make Prop Rope With Pool Noodles
-make Prosciutto
 make Protest Signs
 make Prune Juice
 make Puff Pastry
 make Puffed Rice
 make Puffy Paint
 make Pull Apart Potato Rolls
-make Pulled Pork Pizza
 make Pulled Sugar
 make Pumpkin Soup
 make Puppets
@@ -10537,7 +10481,6 @@ make Sassy Water
 make Sauerbraten
 make Sauerkraut
 make Sauerkraut Juice
-make Sausage Rolls
 make Sbiten
 make Scalloped Potatoes
 make Scented Candles
@@ -10662,8 +10605,6 @@ make Spun Sugar Cobwebs
 make Squishies
 make Stained Glass
 make Starbucks Coffee
-make Steak and Kidney Rag Pudding
-make Steak and Mashed Potatoes on a Budget
 make Steamed Rice
 make Stepping Stones
 make Stew
@@ -10787,7 +10728,6 @@ make Tej
 make Tekwan
 make Tempura
 make Thai Iced Tea
-make the "Bet It All On Black Garlic Burger" from Bob's Burgers
 make the Air Colder in a Swamp Cooler Home
 make the Chinese Staircase Bracelet
 make the Eraser Bigger in MS Paint
@@ -10844,9 +10784,6 @@ make Tulle Pom Poms
 make Tumblr Private
 make Tuna Helper
 make Tuna Pasta
-make Turkey Burgers
-make Turkey Jerky
-make Turkey Stock
 make Turkish Coffee
 make Turkish Tea
 make Turmeric Soap
@@ -10885,7 +10822,6 @@ make Vegetable Curry
 make Vegetable Glycerin
 make Vegetable Soup
 make Vegetarian Stuffed Grape Leaves
-make Venison Jerky
 make Vietnamese Coffee
 make Vietnamese Spring Rolls
 make Vinyl Signs
@@ -12077,7 +12013,6 @@ Open the Start Menu
 Open the Steam app on your computer
 Open the Story Reposter app
 Open the Swatch Library
-Open the Sweatcoin app
 Open the Tasks app
 Open the Telegram app
 Open the template in Excel
@@ -13016,7 +12951,6 @@ prepare Notes for Public Speaking
 prepare Okra
 prepare Plastic Bags for Knitting or Crochet
 prepare Soil for Fruit Trees
-prepare Steak Before Cooking
 prepare Textured Vegetable Protein
 prepare the Soil for Tomato Plants
 Prepare the textbook for trade-in
@@ -14335,12 +14269,10 @@ ripen Mangoes
 ripen Pears
 rivet Leather
 roast a Pumpkin
-roast a Turkey
 roast Acorn Squash
 roast Almonds in the Oven
 roast Asparagus
 roast Baby Potatoes
-roast Bone Marrow
 roast Brazil Nuts
 roast Butternut Squash
 roast Coffee Beans
@@ -14801,8 +14733,6 @@ search YouTube Videos by Date
 season a Blackstone Griddle
 season a Ceramic Dutch Oven
 season a Dutch Oven
-season a Prime Rib Roast
-season a Steak
 season a Wok
 season an Orgreenic Pan
 season Brown Rice
@@ -14811,7 +14741,6 @@ season Cast Iron BBQ Grills and Burners
 season Hamburgers
 season Pampered Chef Stoneware
 season Pinto Beans
-season Pork Chops
 season Salmon
 section Hair
 secure a Bookcase to a Wall
@@ -15762,9 +15691,7 @@ serve at a Dinner Party
 serve Boudin
 serve Boursin Cheese
 serve Cabernet Sauvignon
-serve Foie Gras
 serve Gnocchi
-serve Honey Baked Ham
 serve Tea
 service Brakes
 Set "Bass and Treble" to 10 or higher
@@ -16498,7 +16425,6 @@ store a Leather Jacket
 store a Quilt
 store a Rolex
 store American Girl Dolls Long Term
-store an Uncooked Turkey
 store Baked Muffins
 store Baking Soda
 store Baklava
@@ -16533,7 +16459,6 @@ store Furniture
 store Gift Bags
 store Ginger
 store Items in Destiny
-store Jerky
 store Kale
 store Knee High Boots
 store Large Amounts of Rice
@@ -16559,7 +16484,6 @@ store Scoby
 store Shallots
 store Sleeping Bags
 store Slime
-store Smoked Turkey
 store Strawberries
 store Sweet Corn
 store Sweet Potatoes
@@ -16594,7 +16518,6 @@ straighten Your Hair
 straighten Your Hair With a Flat Iron
 straighten Your Hair With Hair Bands
 straighten Your Hair With Volume
-strain and Freeze Turkey Broth and Drippings
 stream Nintendo Switch to Discord
 stream Now TV from Phone to TV
 stream Switch on Twitch
@@ -17037,7 +16960,6 @@ tell if One Leg Is Shorter
 tell if Ray Ban Sunglasses Are Fake
 tell if Someone Added You on Snapchat
 tell if Someone Saved Your Messages on Snapchat
-tell if Thanksgiving Turkey Is Done
 tell If Your Car Speakers Are Blown
 tell if Your Computer Is Infected by a Trojan Horse
 tell if Your Dog Has Fleas
@@ -17062,7 +16984,6 @@ temporarily Dye Your Hair
 temporarily Fix a Loose Wire on Your Braces
 temporarily Remove a Key from a Macbook
 ten Key
-tenderize Pork
 Tense arm and hand
 terminate an 8P8C (Rj45) Jack
 test
@@ -17320,7 +17241,6 @@ trellis Cucumbers
 trim a Sago Palm
 trim a Video on Samsung Galaxy
 trim an Audio Clip
-trim Lamb Chops
 trim Maple Trees
 trim Shrubs
 Trim the excess around the border

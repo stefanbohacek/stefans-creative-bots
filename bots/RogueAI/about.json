@@ -1,0 +1,20 @@
+{
+  "active": true,
+  "name": "ROGUE AI",
+  "description": "OH NO!",
+  "tags": [
+    "meme",
+    "technology"
+  ],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@RogueAI"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS",
+  "fediverse_handle": "@RogueAI@stefanbohacek.online",
+  "date_created": "2026-08-11T00:00:00Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/117/076/805/538/619/400/original/b346ba09a86f742e.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/117/076/805/538/619/400/original/b346ba09a86f742e.png"
+}

@@ -22,7 +22,7 @@ const botScript = async () => {
     const csvData = await fs.promises.readFile("data/hello.csv", "utf8");
 
     const helloTranslations = await new Promise((resolve, reject) => {
-      parse(csvData, { comment: "#" }, (err, data) => {
+      parse(csvData, (err, data) => {
         if (err) {
           reject(err);
         } else {
@@ -37,9 +37,8 @@ const botScript = async () => {
       (translation) => !["he", "ru"].includes(translation[0]),
     );
 
-    const [, languageName, helloEncoded] = randomFromArray(
-      availableTranslations,
-    );
+    const [languageCode, languageName, helloEncoded, helloPronunciation] =
+      randomFromArray(availableTranslations);
     // const [, languageName, helloEncoded] = helloTranslations.find(
     //   (translation) => translation[0] === "en",
     // );
@@ -47,9 +46,12 @@ const botScript = async () => {
 
     const emoji = randomFromArray(peopleEmoji).emoji;
 
+    const captionText =
+      languageCode === "en" ? "(In English)" : `(Hello in ${languageName})`;
+
     const imageBuffer = await emojiCard({
       mainText: helloTranslation,
-      captionText: `(Hello in ${languageName})`,
+      captionText,
       emoji,
       width: 400,
       height: 400,

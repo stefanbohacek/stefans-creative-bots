@@ -543,11 +543,8 @@ bake Camembert
 bake Cookies on Your Car Dashboard
 bake Cookies Without Butter
 bake Easy Oven Noodles
-bake Haddock
-bake Halibut
 bake in a Halogen Oven
 bake Roman Officers' Bread
-bake Scallops
 bake Soft Cookies
 bake Spaghetti Squash
 bake Your Makeup
@@ -558,7 +555,6 @@ bathe an Angry Cat With Minimal Damage
 batik
 Battle against the Gym Leader, and Elite Four member, or the Champion
 bavarian Crochet
-bBQ With Propane
 be a Good Guitar Player
 be a Good Gymnast
 be a Good Student Teacher
@@ -624,7 +620,6 @@ become a Hip Hop Music Producer
 become a Host on Zoom
 become a Journeyman Electrician (US)
 become a Known Drag Queen in Your Area
-become a Male Stripper
 become a Member of the YMCA
 become a Painting Contractor
 become a Pentecostal Christian
@@ -640,11 +635,9 @@ become a Rubik's Cube Speed Solver
 become a RuneScape Member
 become a Self Taught Gymnast
 become a Social Worker
-become a Stripper
 become a Successful Poet
 become a Superstar in the Sims Complete Collection
 become a Twitch Affiliate
-become a Vampire in Skyrim
 become a Vegan
 become a Witch on Sims 2
 become an Administrator on a Mac
@@ -742,9 +735,6 @@ blow up a Balloon With Baking Soda and Vinegar
 bluejack
 bluff in Poker
 boil an Egg So That It Peels Easily
-boil Clams
-boil Gammon
-boil Lobsters
 boil Moringa Leaves
 boil Noodles
 boil Peanuts Using Roasted Peanuts
@@ -974,9 +964,6 @@ Burn the DBAN ISO file to a CD or USB drive
 Burn the image to a DVD
 burp Babies
 bury Valuables to Keep Them Safe
-butcher Cattle
-butcher Deer
-butter a Brick
 butterfly Coil a Rope
 buy a Game for Android
 Buy a laptop hood or sunscreen
@@ -989,7 +976,6 @@ Buy a very cheap iPad
 buy Alpacas
 Buy an OEM license and locate your key
 Buy an Outdoor-View laptop
-buy and Clean Mussels
 Buy and download Sims 4
 buy Antiques
 buy Books for Your Kindle
@@ -1087,20 +1073,13 @@ catch a Baseball
 catch a Guinea Pig
 catch a Spider
 catch Mewtwo in Pokemon FireRed and LeafGreen
-catch Minnows
-catch Pompano
-catch Salmon
 catch Shaymin on Pokemon Diamond or Pearl
-catch Shiners
 catch Small Bugs
 catch Small Food Objects in Your Mouth
 catch Snorlax in Pokemon X and Y
 catch the Regis in Pokemon Omega Ruby and Alpha Sapphire
 catch the Three Regis in Pokemon Emerald
-catch Trout
 catch Virizion in Pokemon Black and White
-catch White Sea Bass
-catch Yellow Perch
 catch Zapdos in Pokemon Leaf Green
 caulk a Shower
 caulk Baseboards
@@ -1481,7 +1460,6 @@ clean a Burnt Pizza Stone
 clean a Camelbak Bladder
 clean a Candle Jar
 clean a Cartridge Type Swimming Pool Filter
-clean a Cast Iron BBQ Grill
 clean a Cast Iron Sink
 clean a CD Player
 clean a Charger Port
@@ -2355,10 +2333,7 @@ Click Next, and then Install
 Click Next, then Repair your computer, Troubleshoot, Advanced Options and Command Prompt
 Click No, I want to change my password
 Click Notifications
-Click NVIDIA graphics driver
-Click Object
-Click Off
-Click Ok
+Install NVIDIA graphics driver
 Click OK
 Click OK and reboot
 Click OK and then OK again
@@ -2448,9 +2423,6 @@ Click Open in the drop-down menu
 Click Open Network and Internet Settings
 Click Open or Import
 Click Open resource pack folder
-Click Open SQL Script
-Click Open with
-Click Open With
 Click Opt-out
 Click OPTIONS
 Click Options
@@ -2534,24 +2506,9 @@ Click Payment options
 Click PDF Document
 Click People
 Click Permissions
-Click Personal Information on the left menu
-Click Personal or Account
-Click Personalization
-Click Personalize
-Click Photos
-Click Photos to work with you photos
-Click Picture
-Click Picture in picture
-Click Pictures
-Click Pictures or Online Pictures
-Click Pie Graph Tool
-Click Place in the File tab
+Personalize
 Click Play
-Click Play ROM Online
-Click Play Selected World
-Click Play when it finishes installing
-Click Playback
-Click Post
+Post
 Click Post a Reply
 Click Power & sleep
 Click PowerPoint Template from Save File Type..
@@ -4131,7 +4088,6 @@ crystallize Organic Compounds
 cube Butternut Squash
 cube Sweet Potatoes
 cuff Jeans
-cull Cattle
 cultivate Compassion in Your Life
 culture Microworms
 curdle Milk
@@ -4141,7 +4097,6 @@ cure Jock Itch
 cure Lycanthropy in Skyrim
 cure Olives
 cure Postnasal Drip
-cure Salmon
 cure Severely Chapped Hands
 curl a Short Bob
 curl Bangs
@@ -4577,9 +4532,6 @@ dispose of Mercury
 dispose of Motor Oil
 dispose of Stool
 dispose of X Acto Blades
-dissect a Squid
-dissect a Worm
-Dissect and reconstruct the track
 distort time
 distress Jeans with a Razor
 distress Wood
@@ -5846,9 +5798,7 @@ Fill out your profile
 fill Salt and Pepper Shakers
 Fill the buckets with waters
 Fill the remaining squares with planks
-fillet a Mackerel
 fillet a Perch
-fillet Salmon
 Filter by "Reels"
 filter Fry Oil for Reuse
 Finalize the setup in your browser
@@ -6190,7 +6140,6 @@ freeze Parsnips
 freeze Pears
 freeze Pizza
 freeze Raspberries
-freeze Raw Salmon
 freeze Rice
 freeze Runner Beans
 freeze Spaghetti Squash
@@ -6662,7 +6611,6 @@ heal Blisters from Rowing
 heal from a Skin Biopsy
 hear Through Walls
 heat an Eyelash Curler
-heat Pre Cooked Cocktail Sausages in the Microwave
 heat Press a T-Shirt
 heat Sake
 heat Water Using Solar Energy
@@ -7624,7 +7572,6 @@ keep Bagged Salad Mix Fresh
 keep Birds Off Your Porch
 keep Black Clothes from Fading
 keep Bugs Away from a Porch Light
-keep Burgers Flat
 keep Car Doors from Freezing Shut
 keep Car Windows Fog Free Using a Potato
 keep Cheesecake from Cracking
@@ -8150,8 +8097,6 @@ make a Bathroom Cleaner
 make a Bathroom Mat
 make a Batman Mask
 make a Batman Utility Belt
-make a BBQ Hat and Apron
-make a Beach
 make a Beach Ball Party Arch
 make a Beaded Bracelet
 make a Beaded Lizard
@@ -8647,7 +8592,6 @@ make a Military Style Ghillie Suit
 make a Mini Crossbow
 make a Mini Pond
 make a Minion from Despicable Me
-make a Minnow Trap
 make a Mirror
 make a Mixtape
 make a Mixture to Clean Plastic
@@ -8783,7 +8727,6 @@ make a Ruffle Skirt
 make a Rugby Kicking Tee
 make a Sail
 make a Sally Costume from the Nightmare Before Christmas
-make a Salmon Omelette
 make a Salt Lick for Horses
 make a Sanding Block
 make a Sandvich Inspired by Team Fortress 2
@@ -8860,8 +8803,6 @@ make a Translation Tessellation
 make a Travel Brochure
 make a Treasure Hunt for Kids
 make a Trifle
-make a Tuna Egg Sandwich
-make a Tuna Omelet
 make a Tunnel Playground for Your Gerbils
 make a Tutu Dress
 make a TV Antenna with a Potato
@@ -8980,7 +8921,6 @@ make an Indian Costume
 make an Infinity Mirror
 make an Infinity Scarf
 make an Inflatable Cube Out of Paper
-make an Inside Out Cheeseburger
 make an Intranet
 make an Invisible Ink Message
 make an iPhone Louder in Headphones
@@ -9082,7 +9022,6 @@ make Bangles from Plastic Bottles
 make Bannock
 make Bar Graphs
 make Bar Soap
-make Barbecue Sauce
 make Barbie Doll Drinks
 make Basic Biscuits
 make Basic Cupcakes
@@ -9150,7 +9089,6 @@ make Blueberry Cheesecake
 make Blueberry Mousse
 make Blueberry Muffin Cake Pops
 make Blueberry Pancakes
-make Bluegill Bait
 make Blush
 make Body Butter
 make Body Oil
@@ -9265,7 +9203,6 @@ make Caramelized Onions
 make Carbon Fiber
 make Cardboard Armour
 make Caribbean Johnny Cakes
-make Carp Bait
 make Carrot Cake Doughnuts
 make Carrot Flowers
 make Carrot Juice
@@ -9381,8 +9318,6 @@ make Clothing
 make Clotted Cream
 make Cloud Slime
 make Clove Cigarettes or Kretek
-make CO?
-make Coca Cola Marinade
 make Coconut Cake
 make Coconut Candy
 make Coconut Flour
@@ -9546,7 +9481,6 @@ make Edible Sand
 make Edible Slime
 make Edible Teacups
 make Edible Water Bubbles
-make Eel Sauce
 make Egg Carton Chicks
 make Egg Drop Soup
 make Egg Rolls
@@ -9676,7 +9610,6 @@ make Fried Bean Curd
 make Fried Cauliflower
 make Fried Ice Cream
 make Fried Maggi Noodles (Malaysian Mamak Style)
-make Fried Octopus
 make Fried Oreos
 make Fried Pickles
 make Fried Rice with Soy Sauce
@@ -9962,7 +9895,6 @@ make Kahlua
 make Kaiser Rolls
 make Kaju Katli
 make Kakashi Hair
-make Kalbi Marinade
 make Kashmiri Veri Masala
 make Kecap Manis
 make Kefir
@@ -10045,9 +9977,7 @@ make Liquid Polymer Clay Window Clings
 make Liquid Smoke
 make Liquid Soap from Soap Leftovers
 make Liquid Starch
-make Lo Mein
 make Loads of Money on Runescape Using the Grand Exchange
-make Lobster Sushi
 make Lollipops
 make Longganisa
 make Loom Band Patterns Without the Loom
@@ -10237,7 +10167,6 @@ make Origami Paper Claws
 make Original Finger Gelatin (Knox Blox)
 make Outline Text in Word
 make Overnight Oats
-make Oyster Sauce
 make Pad Thai
 make Paint Colors
 make Pancake Batter
@@ -10494,7 +10423,6 @@ make Sea Glass
 make Sea Glass Jars
 make Sea Salt
 make Sea Salt Ice Cream from Kingdom Hearts
-make Seafood Sauce
 make Seasoned Pepper
 make Seaweed Salad
 make Seaweed Tea Liquid Fertiliser
@@ -10573,7 +10501,6 @@ make Soda
 make Sodium Acetate
 make Sodium Hydroxide Chemically
 make Soft Bread
-make Soft Plastic Lures
 make Soft Pretzels
 make Soft Serve Ice Cream
 make Solar Cell in Home
@@ -10607,7 +10534,6 @@ make Stained Glass
 make Starbucks Coffee
 make Steamed Rice
 make Stepping Stones
-make Stew
 make Stewed Fruit
 make Stewed Tomatoes
 make Stick Deodorant
@@ -10782,8 +10708,6 @@ make Tteokbokki
 make Tulips with Frosting
 make Tulle Pom Poms
 make Tumblr Private
-make Tuna Helper
-make Tuna Pasta
 make Turkish Coffee
 make Turkish Tea
 make Turmeric Soap
@@ -10997,7 +10921,6 @@ make Your Wireless Headset Wired
 make Your Wireless Network Invisible
 make YouTube Stop Buffering
 make Zaxby's Sauce
-make Zinger Burgers
 make Zobo Drink
 make Zucchini Noodles
 make Zuppa Toscana
@@ -11024,8 +10947,6 @@ Map actions to controls
 map for Garry's Mod With Source SDK
 map Lash Extensions
 march
-marinate a Pot Roast
-marinate Salmon
 mark All Emails As Read iPhone
 mark Messages As Read when Clicked on Outlook
 Mark your posts as metered
@@ -12381,8 +12302,6 @@ Pair your AirPods and phone
 palm a Coin
 pan for Gold
 pan Fry
-pan Fry Salmon
-pan Fry Scallops
 parboil Broccoli
 parboil Potatoes
 parchment Craft
@@ -12478,7 +12397,6 @@ permanently Erase Data Off a Hard Drive
 persuade Your Parents to Let You Get a Rat
 photograph Christmas Lights
 photograph the Eye Close Up
-photograph the Male Nude
 PHPMailer is installed in that location
 pick a Bowling Ball
 Pick an option from the menu
@@ -14146,7 +14064,6 @@ ride your Bike to School Safely
 riempie a Chair
 riffle and Bridge Shuffle
 rig a Laser Sailboat
-rig Live Bait
 right Click on a Mouse That Does Not Have Right Click
 right Click on iPad
 Right-click "IP Enable Router" and click Modify
@@ -14737,11 +14654,8 @@ season a Wok
 season an Orgreenic Pan
 season Brown Rice
 season Carrots
-season Cast Iron BBQ Grills and Burners
-season Hamburgers
 season Pampered Chef Stoneware
 season Pinto Beans
-season Salmon
 section Hair
 secure a Bookcase to a Wall
 Secure the hard drive in place with screws
@@ -15870,7 +15784,6 @@ ship Perishable Food
 Ship the item through a service that provides a tracking number
 shoe a Horse
 shoot a Compound Bow
-shoot a Deer
 Shoot a photo or video snap
 shoot Accurately in Netball
 Shoot down the ramp on the balcony behind Riftweald Manor
@@ -15922,8 +15835,6 @@ shrink Leather Gloves
 shrink Leather Shoes
 shrink Pants
 shrink Wrap a Boat
-shuck Clams
-shuck Oysters
 shuffle a Deck of Playing Cards
 shuffle and Deal Texas Holdem
 shut Down a Computer Using Notepad
@@ -16019,11 +15930,9 @@ size a Watch
 size an Overcoat
 Sketch out your concept
 skim Coat
-skin a Dead Animal
 skip on Omegle on iPhone or iPad
 skip on Omegle on PC or Mac
 Skip voting when in doubt
-Slaughter animals
 sled Without Snow
 Sleep in a bed
 sleeve Computer Cables
@@ -16095,7 +16004,6 @@ Smelt the iron in a furnace
 Smelt the iron ore in a furnace
 smile for Pictures
 smoke Cheese
-smoke Haddock
 smoke In Your Room Without Getting Caught
 smudge a House
 Snap a photo
@@ -16337,15 +16245,11 @@ steam Butternut Squash
 steam Cabbage
 steam Carrots
 steam Cauliflower
-steam Clams
 steam Clean
 steam Clean a Mattress
 steam Corn
-steam Crab
-steam Crab Legs
 steam Green Beans
 steam Kale
-steam Mussels
 steam Open an Envelope
 steam Press a Sweater or Other Knit Garment
 steam Vegetables
@@ -16437,12 +16341,10 @@ store Butter
 store Celery
 store Chestnuts
 store Cilantro
-store Clams
 store Clementines
 store Coconut Oil
 store Coffee Beans or Ground Coffee
 store Comic Books
-store Cooked Salmon
 store Cooking Oil
 store Croutons
 store Dahlia Bulbs
@@ -16454,7 +16356,6 @@ store Fresh Basil
 store Fresh Basil in Olive Oil
 store Fresh Green Beans
 store Fresh Lychees
-store Fresh Oysters
 store Furniture
 store Gift Bags
 store Ginger
@@ -16471,7 +16372,6 @@ store Mangoes
 store Marzipan
 store Meringues
 store Mint
-store Mussels
 store Nuts
 store Original Photos on Your iPhone Instead of iCloud
 store Peaches

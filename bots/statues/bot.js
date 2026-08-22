@@ -42,6 +42,7 @@ const ignoreList = [
   "Raphael Semmes",
   "Roger B. Taney",
   "Williams Carter Wickham",
+  "Winston Churchill",
   "confederate general",
 ];
 

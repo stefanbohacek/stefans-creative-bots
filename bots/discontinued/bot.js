@@ -7,7 +7,8 @@ const WIKIDATA_QUERY = /* sql */ `
   SELECT DISTINCT ?item ?itemLabel ?itemDescription ?article
   WHERE
   {
-    ?item wdt:P2669 ?cui.
+    ?item wdt:P2669 ?discontinuationDate.
+    FILTER(YEAR(?discontinuationDate) >= 1980)
     ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") .
     SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
     {

@@ -8,15 +8,15 @@ export default [
   //   latitude: 22.204241,
   //   longitude: -159.390030,
   // },  
-  {
-    "title": "Blefjell, Norway",
-    description:
-    "This webcam usually shows a view of the sky with a singular tree on the right side of the image, and more trees further in the distance.",
-    url: "https://glimmertoppen.no/Webcam/Blefjell/LastPicture/LastPicture.jpg",
-    link: "https://glimmertoppen.no/blefjell.html",
-    latitude: 59.7999968,
-    longitude: 9.2166658,
-  },
+  // {
+  //   "title": "Blefjell, Norway",
+  //   description:
+  //   "This webcam usually shows a view of the sky with a singular tree on the right side of the image, and more trees further in the distance.",
+  //   url: "https://glimmertoppen.no/Webcam/Blefjell/LastPicture/LastPicture.jpg",
+  //   link: "https://glimmertoppen.no/blefjell.html",
+  //   latitude: 59.7999968,
+  //   longitude: 9.2166658,
+  // },
   {
     "title": "Hampstead, London, England",
     description:
@@ -35,16 +35,6 @@ export default [
   //   latitude: 36.252990,
   //   longitude: -81.415600,
   // },
-  {
-    title:
-      "Appalachian State University's Dark Sky Observatory, North Carolina, facing South",
-    description:
-      "This webcam usually shows a view of the sky with trees in the foreground.",
-    url: "https://dsoftp.appstate.edu/dsoftp/NewSite/dsoftp/FosCams/DSO-SkyCams-2.jpg",
-    link: "https://dso.appstate.edu/webcams/dso-skycam-south",
-    latitude: 36.25299,
-    longitude: -81.4156,
-  },
   {
     title:
       "Appalachian State University's Dark Sky Observatory, North Carolina, facing South",

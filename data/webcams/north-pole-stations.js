@@ -3,13 +3,13 @@ Some sites don't use full URL for the img src attribute and need page_url to be 
 */
 
 export default [
-  {
-    name: "Point Hope, Alaska, USA (West Webcam)",
-    url: "https://weathercams.faa.gov/map/-167.68082,68.02561,-164.1542,68.66709/airport/PHO/details/camera/10650/full",
-    element: "img.four-thirds-img",
-    description:
-      "A webcam overseeing a beach with an ocean view, with a few small buildings and utility poles.",
-  },
+  // {
+  //   name: "Point Hope, Alaska, USA (West Webcam)",
+  //   url: "https://weathercams.faa.gov/map/-167.68082,68.02561,-164.1542,68.66709/airport/PHO/details/camera/10650/full",
+  //   element: "img.four-thirds-img",
+  //   description:
+  //     "A webcam overseeing a beach with an ocean view, with a few small buildings and utility poles.",
+  // },
   {
     name: "Wales, Alaska, USA (West Webcam)",
     url: "https://weathercams.faa.gov/map/-168.97638,65.26121,-165.44976,65.97883/airport/IWK/details/camera/10912/full",

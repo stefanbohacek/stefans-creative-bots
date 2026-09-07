@@ -14,6 +14,9 @@
     }
   ],
   "interval": "EVERY_THIRTY_MINUTES",
-  "date_created": "2024-11-17T00:00:00Z",
-  "fediverse_handle": "@exoplanets2@stefanbohacek.online"
+  "date_created": "2026-09-07T00:00:00.000Z",
+  "fediverse_handle": "@exoplanets2@stefanbohacek.online",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/117/229/741/266/262/537/original/371971618e10fe20.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/117/229/741/266/262/537/original/c8f928efeeaa8b6f.png",
+  "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/117/229/741/266/262/537/original/371971618e10fe20.png"
 }

@@ -3,35 +3,47 @@
   by fetching account info from Mastodon.
 
   Run with: node scripts/add-bot-info.js
+            node scripts/add-bot-info.js -- BotName
 */
 
+import "dotenv/config";
 import fs from "fs";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import sleep from "../modules/sleep.js";
+import { mastodonFetch } from "../modules/mastodon/fetch.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const botsDir = `${__dirname}/../bots`;
 
-function handleFromUrl(url) {
+const handleFromUrl = (url) => {
   const match = url.match(/https?:\/\/([^/]+)\/@([^/]+)/);
   return match ? `@${match[2]}@${match[1]}` : null;
+};
+
+const botNames = process.argv.slice(2).filter((arg) => arg !== "--");
+const refreshAll = botNames.length > 0;
+const botsToCheck = refreshAll ? botNames : fs.readdirSync(botsDir);
+
+if (refreshAll) {
+  console.log(`refreshing all fields for: ${botNames.join(", ")}...`);
 }
 
-for (const bot of fs.readdirSync(botsDir)) {
+for (const bot of botsToCheck) {
   const botPath = `${botsDir}/${bot}`;
 
-  if (fs.lstatSync(botPath).isDirectory()) {
+  if (!fs.existsSync(botPath)) {
+    console.log(`${bot}: no such bot directory, skipping...`);
+  } else if (fs.lstatSync(botPath).isDirectory()) {
     const aboutPath = `${botPath}/about.json`;
 
     if (fs.existsSync(aboutPath)) {
       const about = JSON.parse(fs.readFileSync(aboutPath, "utf8"));
 
-      const needsDateCreated = !about.date_created;
-      const needsThumbnail = !about.thumbnail;
-      const needsAvatar = !about.avatar;
-      const needsHeader = !about.header_image;
-      const needsHandle = !about.fediverse_handle;
+      const needsDateCreated = refreshAll || !about.date_created;
+      const needsThumbnail = refreshAll || !about.thumbnail;
+      const needsAvatar = refreshAll || !about.avatar;
+      const needsHeader = refreshAll || !about.header_image;
+      const needsHandle = refreshAll || !about.fediverse_handle;
 
       let needsUpdate = false;
 
@@ -72,55 +84,61 @@ for (const bot of fs.readdirSync(botsDir)) {
             needsAvatar ||
             needsHeader
           ) {
-            const jsonUrl = `${fediverseLink.url}.json`;
+            const accountMatch = fediverseLink.url.match(
+              /https?:\/\/([^/]+)\/@([^/]+)/,
+            );
 
-            try {
-              const response = await fetch(jsonUrl);
+            if (!accountMatch) {
+              console.log(
+                `${about.name}: could not parse ${fediverseLink.url}, skipping...`,
+              );
+            } else {
+              const server = accountMatch[1];
+              const username = accountMatch[2];
+              const account = await mastodonFetch(server, "accounts/lookup", {
+                acct: username,
+              });
 
-              if (response.ok) {
-                const data = await response.json();
+              if (!account || !account.id) {
+                console.log(
+                  `${about.name}: lookup failed for @${username}@${server}`,
+                );
+              } else {
+                const avatar = account.avatar?.includes("missing.png")
+                  ? null
+                  : account.avatar;
+                const header = account.header?.includes("missing.png")
+                  ? null
+                  : account.header;
 
-                if (needsDateCreated && data.published) {
-                  about.date_created = data.published;
+                if (needsDateCreated && account.created_at) {
+                  about.date_created = account.created_at;
                   console.log(
-                    `${about.name}: setting date_created to ${data.published}`,
+                    `${about.name}: setting date_created to ${account.created_at}`,
                   );
                   changed = true;
                 }
 
-                if (needsThumbnail) {
-                  const thumbnail = data.image?.url || data.icon?.url;
-                  if (thumbnail) {
-                    about.thumbnail = thumbnail;
-                    console.log(
-                      `${about.name}: setting thumbnail to ${thumbnail}`,
-                    );
-                    changed = true;
-                  }
+                if (needsThumbnail && (header || avatar)) {
+                  about.thumbnail = header || avatar;
+                  console.log(
+                    `${about.name}: setting thumbnail to ${about.thumbnail}`,
+                  );
+                  changed = true;
                 }
 
-                if (needsAvatar && data.icon?.url) {
-                  about.avatar = data.icon.url;
+                if (needsAvatar && avatar) {
+                  about.avatar = avatar;
                   console.log(`${about.name}: setting avatar`);
                   changed = true;
                 }
 
-                if (needsHeader && data.image?.url) {
-                  about.header_image = data.image.url;
+                if (needsHeader && header) {
+                  about.header_image = header;
                   console.log(`${about.name}: setting header_image`);
                   changed = true;
                 }
-
-                await sleep(300);
-              } else {
-                console.log(
-                  `${about.name}: HTTP ${response.status} from ${jsonUrl}`,
-                );
               }
-            } catch (err) {
-              console.log(
-                `${about.name}: error fetching ${jsonUrl}: ${err.message}`,
-              );
             }
           }
 

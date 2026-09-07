@@ -1,0 +1,19 @@
+{
+  "active": true,
+  "name": "Potentially Habitable Exoplanets",
+  "description": "Searching for life on distant worlds.",
+  "tags": [
+    "space",
+    "planets",
+    "nasa"
+  ],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@exoplanets2"
+    }
+  ],
+  "interval": "EVERY_THIRTY_MINUTES",
+  "date_created": "2024-11-17T00:00:00Z",
+  "fediverse_handle": "@exoplanets2@stefanbohacek.online"
+}

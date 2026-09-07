@@ -4,11 +4,12 @@ import getBotInfo from "./../../modules/getBotInfo.js";
 const { botID } = getBotInfo(import.meta.url);
 
 const WIKIDATA_QUERY = /* sql */ `
-  SELECT DISTINCT ?item ?itemLabel ?itemDescription ?article
+  SELECT DISTINCT ?item ?itemLabel ?itemDescription ?article ?date
   WHERE
   {
-    ?item wdt:P2669 ?discontinuationDate.
-    FILTER(YEAR(?discontinuationDate) >= 1980)
+    ?item wdt:P2669 ?date.
+    FILTER(YEAR(?date) >= 1980)
+    FILTER(?date <= NOW())
     ?item schema:description ?itemDescription FILTER (LANG(?itemDescription) = "en") .
     SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
     {
@@ -28,6 +29,8 @@ const botScript = async () => {
     // accessToken: process.env.MASTODON_TEST_TOKEN,
     accessToken: process.env.DISCONTINUED_BOT_MASTODON_ACCESS_TOKEN,
     altText: "An image related to the linked discontinued product or service.",
+    filterItems: (items) =>
+      items.filter((item) => item.date && new Date(item.date) <= new Date()),
     status: (item) =>
       `Hey, remember ${item.label}?\n\n${item.wikipediaUrl}\n\n#discontinued #nostalgia`,
   });

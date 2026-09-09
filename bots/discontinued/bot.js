@@ -17,8 +17,10 @@ const WIKIDATA_QUERY = /* sql */ `
       ?article schema:inLanguage "en" .
       ?article schema:isPartOf <https://en.wikipedia.org/>
     }
-
-    FILTER NOT EXISTS { ?item wdt:P31 wd:Q3231690 }
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q3231690 } # car model
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q18643213 }  # military equipment
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q357104 }  # military exercises
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q137188246 }  # military vehicle model
   }
   LIMIT 40000
 `;

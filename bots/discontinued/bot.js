@@ -22,7 +22,19 @@ const WIKIDATA_QUERY = /* sql */ `
     FILTER NOT EXISTS { ?item wdt:P31 wd:Q357104 }  # military exercises
     FILTER NOT EXISTS { ?item wdt:P31 wd:Q137188246 }  # military vehicle model
     FILTER NOT EXISTS { ?item wdt:P31 wd:Q15142894 }  # weapon model
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q1071902 }  # shock site
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q89290172 }  # "notorious market" website
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q622499 }  # refugee camp
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q10791 }  # nudity
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q849203 }  # electronic countermeasure
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q3545649 }  # decoy
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q80359036 }  # alcohol brand
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q281 }  # whisky
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q16917 }  # hospital
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q108325 }  # chapel
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q106651430 }  # communist newspaper
     FILTER NOT EXISTS { ?item wdt:P279* wd:Q728 }  # weapon
+    FILTER(?item NOT IN (wd:Q19867869, wd:Q3144635, wd:Q4048614))  # neo-Nazi site, prison, military exhibition
   }
   LIMIT 40000
 `;

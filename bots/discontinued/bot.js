@@ -21,6 +21,8 @@ const WIKIDATA_QUERY = /* sql */ `
     FILTER NOT EXISTS { ?item wdt:P31 wd:Q18643213 }  # military equipment
     FILTER NOT EXISTS { ?item wdt:P31 wd:Q357104 }  # military exercises
     FILTER NOT EXISTS { ?item wdt:P31 wd:Q137188246 }  # military vehicle model
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q15142894 }  # weapon model
+    FILTER NOT EXISTS { ?item wdt:P279* wd:Q728 }  # weapon
   }
   LIMIT 40000
 `;

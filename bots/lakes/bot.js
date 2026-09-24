@@ -40,6 +40,10 @@ const botScript = async () => {
         image = { path: filePath };
       } catch (err) {
         console.log(`${botID}: failed to download image:`, err.message);
+        if (err.status >= 400 && err.status < 500) {
+          console.log(`${botID}: ${webcam.url} returned HTTP ${err.status}`);
+          return;
+        }
       }
     }
 

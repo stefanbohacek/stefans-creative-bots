@@ -38,13 +38,21 @@ const botScript = async (retries = 0) => {
   try {
     stations = await fetchJSON(stationList);
   } catch (err) {
-    console.log(
-      `${botID}: station list fetch failed, retrying...`,
-      err.message,
-    );
-    await sleep(30000);
-    await botScript(retries + 1);
-    return;
+    if (err.status >= 400 && err.status < 500) {
+      console.log(
+        `${botID}: station list unavailable (HTTP ${err.status})`,
+        err.message,
+      );
+      return;
+    } else {
+      console.log(
+        `${botID}: station list fetch failed, retrying...`,
+        err.message,
+      );
+      await sleep(30000);
+      await botScript(retries + 1);
+      return;
+    }
   }
 
   stations = stations.filter(

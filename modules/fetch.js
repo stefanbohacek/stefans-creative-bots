@@ -20,9 +20,11 @@ export const json = async (url, options) => {
   try {
     return JSON.parse(responseText);
   } catch (err) {
-    throw new Error(
+    const parseError = new Error(
       `Failed to parse response from ${url} (HTTP ${response.status}): ${err.message}\n\n${responseText.slice(0, 500)}`,
     );
+    parseError.status = response.status;
+    throw parseError;
   }
 };
 
@@ -36,7 +38,11 @@ export const file = async (url, path) => {
   });
 
   if (!response.ok) {
-    throw new Error(`HTTP ${response.status}: ${response.statusText} (${url})`);
+    const err = new Error(
+      `HTTP ${response.status}: ${response.statusText} (${url})`,
+    );
+    err.status = response.status;
+    throw err;
   }
 
   const buffer = Buffer.from(await response.arrayBuffer());
@@ -57,7 +63,11 @@ export const base64 = async (url, retries = 3) => {
   }
 
   if (!response.ok) {
-    throw new Error(`HTTP ${response.status}: ${response.statusText} (${url})`);
+    const err = new Error(
+      `HTTP ${response.status}: ${response.statusText} (${url})`,
+    );
+    err.status = response.status;
+    throw err;
   }
 
   const arrayBuffer = await response.arrayBuffer();

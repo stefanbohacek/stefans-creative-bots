@@ -80,7 +80,7 @@ export default [
   },
   {
     name: "Train journey through the Alps, Switzerland",
-    description: "A short clip from a webcam at the front of a train.",
+    description: "A short clip from a webcam looking out of a train at an angle.",
     youtube_url: "https://www.youtube.com/watch?v=ADt_RisXY0U",
     direct_url: "https://sbstatic.nyc3.digitaloceanspaces.com/trains/ADt_RisXY0U.mp4",
     learn_more_url: null,

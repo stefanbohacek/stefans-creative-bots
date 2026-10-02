@@ -22,7 +22,7 @@ export default {
   flatulence: "💨",
   "frog croaking": "🐸",
   "goat bleating": "🐐",
-  "goose calling": "🦢",
+  "goose calling": "🪿",
   "heart beating": "💓",
   "horse galloping": "🏇",
   "horse trotting": "🐎",

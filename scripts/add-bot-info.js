@@ -95,9 +95,14 @@ for (const bot of botsToCheck) {
             } else {
               const server = accountMatch[1];
               const username = accountMatch[2];
-              const account = await mastodonFetch(server, "accounts/lookup", {
-                acct: username,
-              });
+              let account = null;
+              try {
+                account = await mastodonFetch(server, "accounts/lookup", {
+                  acct: username,
+                });
+              } catch (err) {
+                console.log(err.message);
+              }
 
               if (!account || !account.id) {
                 console.log(

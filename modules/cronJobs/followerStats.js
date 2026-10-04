@@ -23,6 +23,7 @@ export default () => {
 
         const uniqueFollowers = new Set();
         const uniqueServers = new Set();
+        const failedAccounts = [];
 
         for (const { username, server } of accounts) {
           try {
@@ -35,7 +36,7 @@ export default () => {
             });
 
             if (!userData?.id) {
-              continue;
+              throw new Error("account lookup returned no id");
             }
 
             const followers = await mastodonFetch(
@@ -61,22 +62,29 @@ export default () => {
             );
           } catch (err) {
             console.log(`follower stats error: @${username}@${server}`, err);
+            failedAccounts.push(`@${username}@${server}: ${err.message}`);
           }
         }
 
-        await db.execute(
-          /* sql */ `INSERT INTO follower_stats (id, unique_followers, unique_servers, calculated_at)
+        if (failedAccounts.length) {
+          console.log(
+            `follower stats: skipped saving, ${failedAccounts.length} account(s) failed`,
+          );
+        } else {
+          await db.execute(
+            /* sql */ `INSERT INTO follower_stats (id, unique_followers, unique_servers, calculated_at)
            VALUES (1, ?, ?, NOW())
            ON DUPLICATE KEY UPDATE
              unique_followers = VALUES(unique_followers),
              unique_servers = VALUES(unique_servers),
              calculated_at = NOW()`,
-          [uniqueFollowers.size, uniqueServers.size],
-        );
+            [uniqueFollowers.size, uniqueServers.size],
+          );
 
-        console.log(
-          `follower stats: done: ${uniqueFollowers.size.toLocaleString()} unique followers across ${uniqueServers.size.toLocaleString()} servers`,
-        );
+          console.log(
+            `follower stats: done: ${uniqueFollowers.size.toLocaleString()} unique followers across ${uniqueServers.size.toLocaleString()} servers`,
+          );
+        }
       } catch (err) {
         console.log("follower stats cron error:", err);
         await notifyAdmin(

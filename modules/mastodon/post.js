@@ -1,46 +1,45 @@
 import splitText from "./../splitText.js";
+import { apiRequest } from "./request.js";
 
-const post = (client, options, cb) => {
-  return new Promise((resolve) => {
-    console.log("posting...", options);
+const post = async (client, options) => {
+  console.log("posting...", options);
 
-    let { status } = options;
-    let splitStatus = false;
-    let statuses;
+  const statusOptions = { ...options };
+  let remainingText = null;
 
-    if (status.length > 500) {
-      splitStatus = true;
+  if (options.status.length > 500) {
+    const statuses = splitText(options.status, 490);
 
-      statuses = splitText(status, 490);
-
-      // console.log({ statuses });
-
-      if (statuses.length > 1) {
-        options.status = `${statuses.shift()}…`;
-      }
+    if (statuses.length > 1) {
+      statusOptions.status = `${statuses.shift()}…`;
+      remainingText = statuses.join(" ");
     }
+  }
 
-    client.post("statuses", options, async (err, data, response) => {
-      if (err) {
-        console.log("mastodon.post error", err);
-      } else {
-        console.log("posted", data.url);
-      }
-
-      if (splitStatus) {
-        options.status = statuses.join("");
-        options.in_reply_to_id = data.id;
-        delete options.media_ids;
-        await post(client, options, cb);
-      } else {
-        if (cb) {
-          cb(err, data);
-        }
-      }
-
-      resolve(data);
+  let data;
+  try {
+    data = await apiRequest(client, "statuses", {
+      method: "POST",
+      json: statusOptions,
     });
-  });
+  } catch (err) {
+    throw new Error(
+      `post: status posting failed for "${statusOptions.status}": ${err.message}`,
+    );
+  }
+
+  console.log("posted", data.url);
+
+  if (remainingText) {
+    const { media_ids, ...replyOptions } = statusOptions;
+    await post(client, {
+      ...replyOptions,
+      status: remainingText,
+      in_reply_to_id: data.id,
+    });
+  }
+
+  return data;
 };
 
 export default post;

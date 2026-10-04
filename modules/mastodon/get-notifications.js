@@ -1,11 +1,8 @@
-const getNotifications = async (client, cb) => {
-  console.log("retrieving notifications...");
-  client.get("notifications", (err, notifications) => {
-    if (cb) {
-      cb(err, notifications);
-    }
-  });
+import { apiRequest } from "./request.js";
 
+const getNotifications = async (client) => {
+  console.log("retrieving notifications...");
+  return await apiRequest(client, "notifications");
 };
 
 export default getNotifications;

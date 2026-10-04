@@ -1,103 +1,39 @@
-import fs from "fs";
-import getRandomInt from "../getRandomInt.js";
-import truncate from "../truncate.js";
+import uploadMedia from "./upload-media.js";
+import { apiRequest } from "./request.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+const postImage = async (client, options) => {
+  console.log("posting image...");
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+  const mediaId = await uploadMedia(client, options);
 
-const postImageFn = (client, options, cb) => {
-  return new Promise((resolve, reject) => {
-    client.post(
-      "media",
-      {
-        // filename: options.image,
-        file: fs.createReadStream(options.image),
-        description: truncate(options.alt_text, 1000),
-      },
-      (err, data, response) => {
-        if (err) {
-          const contextErr = new Error(`postImage: media upload failed for status "${options.status}": ${err.message}`);
-          console.log("mastodon.postImage error:", contextErr.message);
-          if (cb) {
-            cb(contextErr, data);
-          }
-          reject(contextErr);
-        } else {
-          const statusObj = {
-            status: options.status,
-            // media_ids: new Array(data.media_id_string)
-            media_ids: new Array(data.id),
-          };
+  const statusObj = {
+    status: options.status,
+    media_ids: [mediaId],
+  };
 
-          if (options.in_reply_to_id) {
-            statusObj.in_reply_to_id = options.in_reply_to_id;
-          }
+  if (options.in_reply_to_id) {
+    statusObj.in_reply_to_id = options.in_reply_to_id;
+  }
 
-          if (options.spoiler_text) {
-            statusObj.spoiler_text = options.spoiler_text;
-          }
+  if (options.spoiler_text) {
+    statusObj.spoiler_text = options.spoiler_text;
+  }
 
-          if (options.language) {
-            statusObj.language = options.language;
-          }
+  if (options.language) {
+    statusObj.language = options.language;
+  }
 
-          client.post("statuses", statusObj, (err, data, response) => {
-            if (options.image.includes("temp-")) {
-              console.log("deleting temp file...");
-              fs.unlinkSync(options.image);
-            }
-
-            if (err) {
-              const contextErr = new Error(`postImage: status posting failed for "${options.status}": ${err.message}`);
-              console.log("mastodon.postImage error:", contextErr.message);
-              if (cb) {
-                cb(contextErr, data);
-              }
-              reject(contextErr);
-            } else {
-              console.log("posted", data.url);
-              if (cb) {
-                cb(null, data);
-              }
-              resolve(data);
-            }
-          });
-        }
-      }
-    );
-  });
-};
-
-const postImage = (client, options, cb) => {
-  /* Support both image file path and image data */
-  if (fs.existsSync(options.image)) {
-    console.log("posting image...", options.image);
-    return postImageFn(client, options, cb);
-  } else if (fs.existsSync(`${options.image}.webm`)) {
-    options.image = `${options.image}.webm`;
-    console.log("posting image...", options.image);
-    return postImageFn(client, options, cb);
-  } else {
-    console.log("posting image...");
-
-    return new Promise((resolve, reject) => {
-      const imgFilePath = `${__dirname}/../../temp/temp-${Date.now()}-${getRandomInt(
-        1,
-        Number.MAX_SAFE_INTEGER
-      )}.png`;
-
-      fs.writeFile(imgFilePath, options.image, "base64", (err) => {
-        if (!err) {
-          options.image = imgFilePath;
-          postImageFn(client, options, cb).then(resolve).catch(reject);
-        } else {
-          reject(err);
-        }
-      });
+  try {
+    const data = await apiRequest(client, "statuses", {
+      method: "POST",
+      json: statusObj,
     });
+    console.log("posted", data.url);
+    return data;
+  } catch (err) {
+    throw new Error(
+      `postImage: status posting failed for "${options.status}": ${err.message}`,
+    );
   }
 };
 

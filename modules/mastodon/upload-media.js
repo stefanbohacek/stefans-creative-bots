@@ -1,54 +1,53 @@
 import fs from "fs";
-import getRandomInt from "../getRandomInt.js";
+import { basename, extname } from "path";
 import truncate from "../truncate.js";
+import { apiRequest } from "./request.js";
 
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const uploadMediaFn = (client, imagePath, altText) => {
-  return new Promise((resolve, reject) => {
-    client.post(
-      "media",
-      {
-        file: fs.createReadStream(imagePath),
-        description: truncate(altText, 1000),
-      },
-      (err, data) => {
-        if (err) {
-          reject(new Error(`uploadMedia: failed: ${err.message}`));
-        } else {
-          resolve(data.id);
-        }
-      },
-    );
-  });
+const mimeTypes = {
+  png: "image/png",
+  jpg: "image/jpeg",
+  jpeg: "image/jpeg",
+  gif: "image/gif",
+  webp: "image/webp",
+  mp4: "video/mp4",
+  webm: "video/webm",
 };
 
-const uploadMedia = (client, options) => {
-  if (fs.existsSync(options.image)) {
-    return uploadMediaFn(client, options.image, options.alt_text || "");
+const loadImage = async (image) => {
+  let filePath = null;
+
+  if (fs.existsSync(image)) {
+    filePath = image;
+  } else if (fs.existsSync(`${image}.webm`)) {
+    filePath = `${image}.webm`;
+  }
+
+  if (filePath) {
+    return {
+      buffer: await fs.promises.readFile(filePath),
+      filename: basename(filePath),
+    };
   } else {
-    return new Promise((resolve, reject) => {
-      const imgFilePath = `${__dirname}/../../temp/temp-${Date.now()}-${getRandomInt(1, Number.MAX_SAFE_INTEGER)}.png`;
-      fs.writeFile(imgFilePath, options.image, "base64", (err) => {
-        if (err) {
-          reject(err);
-        } else {
-          uploadMediaFn(client, imgFilePath, options.alt_text || "")
-            .then((id) => {
-              fs.unlinkSync(imgFilePath);
-              resolve(id);
-            })
-            .catch((uploadErr) => {
-              fs.unlinkSync(imgFilePath);
-              reject(uploadErr);
-            });
-        }
-      });
+    return { buffer: Buffer.from(image, "base64"), filename: "image.png" };
+  }
+};
+
+const uploadMedia = async (client, options) => {
+  const { buffer, filename } = await loadImage(options.image);
+  const mimeType = mimeTypes[extname(filename).slice(1).toLowerCase()];
+
+  const formData = new FormData();
+  formData.append("file", new Blob([buffer], { type: mimeType }), filename);
+  formData.append("description", truncate(options.alt_text || "", 1000));
+
+  try {
+    const data = await apiRequest(client, "media", {
+      method: "POST",
+      formData,
     });
+    return data.id;
+  } catch (err) {
+    throw new Error(`uploadMedia: failed: ${err.message}`);
   }
 };
 

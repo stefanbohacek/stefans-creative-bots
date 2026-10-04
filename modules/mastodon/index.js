@@ -5,6 +5,8 @@ import postImage from './post-image.js';
 import uploadMediaFn from './upload-media.js';
 import reply from './reply.js';
 import postPoll from './post-poll.js';
+import getNotifications from './get-notifications.js';
+import dismissNotification from './dismiss-notifications.js';
 
 class MastodonClient {
   constructor(keys) {
@@ -18,19 +20,19 @@ class MastodonClient {
 
     this.client = mastodonClientInstance;
   }
-  
-  post(status, cb) {
-    return post(this.client, status, cb);
-  }
-  
-  postImage(options, cb) {
-    return postImage(this.client, options, cb);
+
+  post(status) {
+    return post(this.client, status);
   }
 
-  reply(message, response, cb) {
-    reply(this.client, message, response, cb)
+  postImage(options) {
+    return postImage(this.client, options);
   }
-  
+
+  reply(message, response) {
+    return reply(this.client, message, response);
+  }
+
   postPoll(status, options, params) {
     return postPoll(this.client, status, options, params);
   }
@@ -39,12 +41,12 @@ class MastodonClient {
     return uploadMediaFn(this.client, options);
   }
 
-  getNotifications(cb) {
-    getNotifications(this.client, cb);
+  getNotifications() {
+    return getNotifications(this.client);
   }
 
-  dismissNotification(notification, cb) {
-    dismissNotification(this.client, notification, cb);
+  dismissNotification(notification) {
+    return dismissNotification(this.client, notification);
   }
 }
 

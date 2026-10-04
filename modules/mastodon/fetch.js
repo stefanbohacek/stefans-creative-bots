@@ -1,65 +1,15 @@
 import sleep from "../sleep.js";
-
-const MAX_ATTEMPTS = 5;
-const MAX_RATE_LIMIT_WAIT_MS = 5 * 60 * 1000;
-
-const getRetryDelay = (resp, attempt) => {
-  let delay = 5000 * attempt;
-
-  if (resp?.status === 429) {
-    const retryAfter = Number(resp.headers.get("retry-after"));
-    const resetTime = Date.parse(resp.headers.get("x-ratelimit-reset"));
-
-    if (retryAfter > 0) {
-      delay = retryAfter * 1000;
-    } else if (!Number.isNaN(resetTime)) {
-      delay = resetTime - Date.now();
-    } else {
-      delay = 60000;
-    }
-  }
-
-  return Math.min(Math.max(delay, 1000), MAX_RATE_LIMIT_WAIT_MS);
-};
+import { requestWithRetry } from "./request.js";
 
 const fetchPage = async (url) => {
-  let resp;
+  await sleep(1000);
+  console.log(`mastodon fetch: ${url}`);
 
-  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-    await sleep(1000);
-    console.log(`mastodon fetch: ${url}`);
-
-    let failure = null;
-    resp = null;
-
-    try {
-      resp = await fetch(url, {
-        headers: {
-          Authorization: `Bearer ${process.env.MASTODON_UTILITY_ACCESS_TOKEN}`,
-        },
-      });
-
-      if (!resp.ok) {
-        failure = new Error(`${resp.status} ${resp.statusText} (${url})`);
-        failure.retryable = resp.status === 429 || resp.status >= 500;
-      }
-    } catch (err) {
-      failure = new Error(`${err.cause?.message || err.message} (${url})`);
-      failure.retryable = true;
-    }
-
-    if (!failure) {
-      break;
-    } else if (!failure.retryable || attempt === MAX_ATTEMPTS) {
-      throw failure;
-    } else {
-      const delay = getRetryDelay(resp, attempt);
-      console.log(
-        `mastodon fetch: ${failure.message}, retrying in ${Math.round(delay / 1000)}s (attempt ${attempt}/${MAX_ATTEMPTS})`,
-      );
-      await sleep(delay);
-    }
-  }
+  const resp = await requestWithRetry(url, {
+    headers: {
+      Authorization: `Bearer ${process.env.MASTODON_UTILITY_ACCESS_TOKEN}`,
+    },
+  });
 
   const respText = await resp.text();
   let data;

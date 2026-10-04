@@ -1,18 +1,11 @@
-const dismissNotification = async (client, notification, cb) => {
-  console.log("clearing notifications...");
+import { apiRequest } from "./request.js";
 
-  client
-    .post("notifications/dismiss", {
-      id: notification.id,
-    })
-    .then((err, data, response) => {
-      if (cb) {
-        cb(err, data);
-      }
-    })
-    .catch((err) => {
-      console.log("mastodon.dismissNotification error:", err);
-    });
+const dismissNotification = async (client, notification) => {
+  console.log("clearing notifications...");
+  return await apiRequest(client, "notifications/dismiss", {
+    method: "POST",
+    json: { id: notification.id },
+  });
 };
 
 export default dismissNotification;

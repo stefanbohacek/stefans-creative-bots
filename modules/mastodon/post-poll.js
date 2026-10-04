@@ -1,3 +1,5 @@
+import { apiRequest } from "./request.js";
+
 const postPoll = async (client, status, options, params) => {
   console.log("posting a poll...");
 
@@ -17,38 +19,16 @@ const postPoll = async (client, status, options, params) => {
     optionsObj.media_ids = params.media_ids;
   }
 
-  const pollUrl = `${client.config.api_url}/statuses`;
-  let response;
   try {
-    response = await fetch(pollUrl, {
-      method: "post",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + client.config.access_token,
-      },
-      body: JSON.stringify(optionsObj),
+    const data = await apiRequest(client, "statuses", {
+      method: "POST",
+      json: optionsObj,
     });
+    console.log("poll posted", data.url);
+    return data;
   } catch (err) {
-    throw new Error(`postPoll: fetch failed for ${pollUrl}: ${err.cause?.message || err.message}`);
+    throw new Error(`postPoll: status posting failed: ${err.message}`);
   }
-
-  const responseText = await response.text();
-  let responseData;
-  try {
-    responseData = JSON.parse(responseText);
-  } catch (err) {
-    throw new Error(`postPoll: failed to parse response (HTTP ${response.status}): ${responseText.slice(0, 200)}`);
-  }
-
-  if (!response.ok) {
-    console.log("postPoll error:", responseData);
-    return responseData;
-  }
-
-  console.log("poll posted", responseData.url);
-
-  return responseData;
 };
 
 export default postPoll;

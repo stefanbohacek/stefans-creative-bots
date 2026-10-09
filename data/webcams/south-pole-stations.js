@@ -5,7 +5,7 @@ export default [
   {
     id: "neumayer_station_iii",
     name: "Neumayer Station III",
-    description: "Antarctic research station Neumayer Station III, a long white building with red and blue trim, on the top and bottom, respectively, is elevated on stilts above a snowy landscape.",
+    description: "Antarctic research station Neumayer Station III, a long white building with red and blue trim, on the top and bottom, respectively, is elevated on stilts above a snowy landscape. In front of the station can be seen a partially visible lid for the garage access ramp, when it's open.",
     image_url: "https://www.awi.de/NM_WebCam/neumayerW.0650.jpg",
     url: "https://www.awi.de/en/expedition/stations/neumayer-station-iii.html",
   },

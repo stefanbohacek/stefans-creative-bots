@@ -198,9 +198,6 @@
           const data = await resp.json();
 
           if (resp.ok) {
-            if (data.failed) {
-              alert(`Cleared ${data.cleared}, failed ${data.failed}.`);
-            }
             location.reload();
           } else {
             alert(`Failed: ${data.error}`);

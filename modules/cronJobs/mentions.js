@@ -10,6 +10,8 @@ export default (bots) => {
     async () => {
       console.log("mentions: starting...");
 
+      const oldestAllowed = Date.now() - 90 * 24 * 60 * 60 * 1000;
+
       for (const bot of bots) {
         const client = bot.about.fediverse_handle
           ? getMastodonClient(bot)
@@ -25,23 +27,29 @@ export default (bots) => {
             for (const notification of notifications) {
               const status = notification.status;
 
-              await db.execute(
-                /* sql */ `INSERT IGNORE INTO mentions
-                  (bot_handle, notification_id, status_id, from_acct, from_display_name, content, spoiler_text, visibility, status_url, mentioned_at)
-                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-                [
-                  bot.about.fediverse_handle,
-                  notification.id,
-                  status.id,
-                  notification.account.acct,
-                  notification.account.display_name,
-                  convert(status.content, { wordwrap: false }),
-                  status.spoiler_text,
-                  status.visibility,
-                  status.url,
-                  new Date(notification.created_at),
-                ],
-              );
+              if (new Date(notification.created_at).getTime() > oldestAllowed) {
+                await db.execute(
+                  /* sql */ `INSERT IGNORE INTO mentions
+                    (bot_handle, notification_id, status_id, from_acct, from_display_name, content, spoiler_text, visibility, status_url, mentioned_at)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                  [
+                    bot.about.fediverse_handle,
+                    notification.id,
+                    status.id,
+                    notification.account.acct,
+                    notification.account.display_name,
+                    convert(status.content, { wordwrap: false }),
+                    status.spoiler_text,
+                    status.visibility,
+                    status.url,
+                    new Date(notification.created_at),
+                  ],
+                );
+              }
+            }
+
+            if (notifications.length) {
+              await client.markNotificationsRead(notifications[0].id);
             }
           } catch (err) {
             console.log(
@@ -55,7 +63,9 @@ export default (bots) => {
         const [result] = await db.execute(
           /* sql */ `DELETE FROM mentions WHERE cleared = 1 AND mentioned_at < NOW() - INTERVAL 90 DAY`,
         );
-        console.log(`mentions: pruned ${result.affectedRows} cleared mention(s)`);
+        console.log(
+          `mentions: pruned ${result.affectedRows} cleared mention(s)`,
+        );
       } catch (err) {
         console.log(`mentions prune error: ${err.message}`);
       }

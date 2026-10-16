@@ -1,14 +1,15 @@
 import Mastodon from "mastodon-api";
 
-import post from './post.js';
-import postImage from './post-image.js';
-import uploadMediaFn from './upload-media.js';
-import reply from './reply.js';
-import postPoll from './post-poll.js';
-import getNotifications from './get-notifications.js';
-import dismissNotification from './dismiss-notifications.js';
-import boost from './boost.js';
-import favourite from './favourite.js';
+import post from "./post.js";
+import postImage from "./post-image.js";
+import uploadMediaFn from "./upload-media.js";
+import reply from "./reply.js";
+import postPoll from "./post-poll.js";
+import getNotifications from "./get-notifications.js";
+import dismissNotification from "./dismiss-notifications.js";
+import boost from "./boost.js";
+import favourite from "./favourite.js";
+import markNotificationsRead from "./mark-notifications-read.js";
 
 class MastodonClient {
   constructor(keys) {
@@ -49,6 +50,10 @@ class MastodonClient {
 
   dismissNotification(notification) {
     return dismissNotification(this.client, notification);
+  }
+
+  markNotificationsRead(lastReadId) {
+    return markNotificationsRead(this.client, lastReadId);
   }
 
   boost(statusId) {

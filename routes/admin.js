@@ -24,14 +24,6 @@ const findMentionedBot = (req, mention) =>
     .get("bots")
     .find((bot) => bot.about.fediverse_handle === mention.bot_handle);
 
-const clearMention = async (client, mention) => {
-  await client.dismissNotification({ id: mention.notification_id });
-
-  await db.execute(/* sql */ `UPDATE mentions SET cleared = 1 WHERE id = ?`, [
-    mention.id,
-  ]);
-};
-
 router.use((req, res, next) => {
   const adminAccess = process.env.ADMIN_ACCESS;
 
@@ -86,56 +78,33 @@ router.get("/dashboard", async (req, res) => {
   }
 });
 
-router.post(
-  "/dashboard/clear-:scope(responded|selected)",
-  async (req, res) => {
-    try {
-      let rows = [];
+router.post("/dashboard/clear-:scope(responded|selected)", async (req, res) => {
+  try {
+    let result = { affectedRows: 0 };
 
-      if (req.params.scope === "selected") {
-        const ids = Array.isArray(req.body.ids)
-          ? req.body.ids.map(Number).filter(Number.isInteger)
-          : [];
+    if (req.params.scope === "selected") {
+      const ids = Array.isArray(req.body.ids)
+        ? req.body.ids.map(Number).filter(Number.isInteger)
+        : [];
 
-        if (ids.length) {
-          [rows] = await db.query(
-            /* sql */ `SELECT * FROM mentions WHERE id IN (?) AND cleared = 0`,
-            [ids],
-          );
-        }
-      } else {
-        [rows] = await db.execute(
-          /* sql */ `SELECT * FROM mentions WHERE responded = 1 AND cleared = 0`,
+      if (ids.length) {
+        [result] = await db.query(
+          /* sql */ `UPDATE mentions SET cleared = 1 WHERE id IN (?) AND cleared = 0`,
+          [ids],
         );
       }
-
-      let cleared = 0;
-      let failed = 0;
-
-      for (const mention of rows) {
-        const bot = findMentionedBot(req, mention);
-        const client = bot ? getMastodonClient(bot) : null;
-
-        if (client) {
-          try {
-            await clearMention(client, mention);
-            cleared++;
-          } catch (err) {
-            console.log(`clear ${req.params.scope} error: ${err.message}`);
-            failed++;
-          }
-        } else {
-          failed++;
-        }
-      }
-
-      res.json({ cleared, failed });
-    } catch (err) {
-      console.log(`clear ${req.params.scope} error:`, err);
-      res.status(500).json({ error: err.message });
+    } else {
+      [result] = await db.execute(
+        /* sql */ `UPDATE mentions SET cleared = 1 WHERE responded = 1 AND cleared = 0`,
+      );
     }
-  },
-);
+
+    res.json({ cleared: result.affectedRows });
+  } catch (err) {
+    console.log(`clear ${req.params.scope} error:`, err);
+    res.status(500).json({ error: err.message });
+  }
+});
 
 router.post("/dashboard/:action", async (req, res) => {
   const { action } = req.params;
@@ -150,11 +119,19 @@ router.post("/dashboard/:action", async (req, res) => {
     const bot = mention ? findMentionedBot(req, mention) : null;
     const client = bot ? getMastodonClient(bot) : null;
 
-    if (!client) {
-      res.status(404).json({ error: "Mention or bot token not found" });
+    if (!mention) {
+      res.status(404).json({ error: "Mention not found" });
+    } else if (action === "clear") {
+      await db.execute(
+        /* sql */ `UPDATE mentions SET cleared = 1 WHERE id = ?`,
+        [mention.id],
+      );
+      res.json({ ok: true });
+    } else if (!client) {
+      res.status(404).json({ error: "Bot token not found" });
     } else if (action === "reply" && !text?.trim()) {
       res.status(400).json({ error: "Reply text is required" });
-    } else if (["reply", "boost", "like", "clear"].includes(action)) {
+    } else if (["reply", "boost", "like"].includes(action)) {
       if (action === "reply") {
         await client.post({
           status: `@${mention.from_acct} ${text.trim()}`,
@@ -168,14 +145,10 @@ router.post("/dashboard/:action", async (req, res) => {
         await client.favourite(mention.status_id);
       }
 
-      if (action === "clear") {
-        await clearMention(client, mention);
-      } else {
-        await db.execute(
-          /* sql */ `UPDATE mentions SET responded = 1 WHERE id = ?`,
-          [mention.id],
-        );
-      }
+      await db.execute(
+        /* sql */ `UPDATE mentions SET responded = 1 WHERE id = ?`,
+        [mention.id],
+      );
 
       res.json({ ok: true });
     } else {

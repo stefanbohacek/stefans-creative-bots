@@ -27,7 +27,7 @@ process.on("uncaughtException", async (err) => {
   const bots = loadBotInfo(app);
   app.set("bots", bots);
   const listener = app.listen(process.env.PORT || 3000, async () => {
-    cronJobs();
+    cronJobs(bots);
 
     console.log(`🖥️ running on port ${listener.address().port}`);
     console.log(`🕒 server time: ${new Date().toTimeString()}`);

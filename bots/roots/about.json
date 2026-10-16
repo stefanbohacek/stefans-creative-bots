@@ -16,6 +16,7 @@
   "date_created": "2025-09-19T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/115/232/417/974/472/890/original/66df9dbc94e27da5.jpeg",
   "fediverse_handle": "@roots@stefanbohacek.online",
+  "access_token_env": "ROOTS_BOT_MASTODON_ACCESS_TOKEN",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/115/232/417/974/472/890/original/eaeef080cb4a79b0.jpeg",
   "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/115/232/417/974/472/890/original/66df9dbc94e27da5.jpeg"
 }

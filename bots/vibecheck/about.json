@@ -16,5 +16,6 @@
   "date_created": "2024-11-17T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/844/711/454/217/original/b6cdfd22c11d0cc1.png",
   "fediverse_handle": "@vibecheck@stefanbohacek.online",
+  "access_token_env": "VIBECHECK_BOT_MASTODON_TOKEN",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/844/711/454/217/original/b6cdfd22c11d0cc1.png"
 }

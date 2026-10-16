@@ -16,5 +16,6 @@
   "date_created": "2024-11-17T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/849/539/637/588/original/e5a6f80b157295bc.png",
   "fediverse_handle": "@wikipediaOTD@stefanbohacek.online",
+  "access_token_env": "WIKIPEDIAOTD_BOT_MASTODON_ACCESS_TOKEN",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/849/539/637/588/original/e5a6f80b157295bc.png"
 }

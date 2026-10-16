@@ -7,6 +7,8 @@ import reply from './reply.js';
 import postPoll from './post-poll.js';
 import getNotifications from './get-notifications.js';
 import dismissNotification from './dismiss-notifications.js';
+import boost from './boost.js';
+import favourite from './favourite.js';
 
 class MastodonClient {
   constructor(keys) {
@@ -41,12 +43,20 @@ class MastodonClient {
     return uploadMediaFn(this.client, options);
   }
 
-  getNotifications() {
-    return getNotifications(this.client);
+  getNotifications(params) {
+    return getNotifications(this.client, params);
   }
 
   dismissNotification(notification) {
     return dismissNotification(this.client, notification);
+  }
+
+  boost(statusId) {
+    return boost(this.client, statusId);
+  }
+
+  favourite(statusId) {
+    return favourite(this.client, statusId);
   }
 }
 

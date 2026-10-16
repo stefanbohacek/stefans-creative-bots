@@ -15,6 +15,7 @@
   ],
   "interval": "EVERY_SIX_HOURS",
   "fediverse_handle": "@famicase@stefanbohacek.online",
+  "access_token_env": "FAMICASE_BOT_MASTODON_ACCESS_TOKEN",
   "date_created": "2026-05-27T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/647/833/410/694/829/original/59b674d98974b073.png",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/647/833/410/694/829/original/4ff973da3e76632c.png",

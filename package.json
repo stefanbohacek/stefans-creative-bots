@@ -47,6 +47,7 @@
     "get-mp3-duration": "^1.0.0",
     "gifencoder": "^2.0.1",
     "glitch-canvas": "^1.1.8",
+    "google-auth-library": "^11.2.0",
     "grant-express": "^4.7.0",
     "he": "^1.2.0",
     "hh-mm-ss": "^1.2.0",

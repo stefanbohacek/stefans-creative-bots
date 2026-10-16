@@ -1,8 +1,10 @@
 import { apiRequest } from "./request.js";
 
-const getNotifications = async (client) => {
+export default async (client, params = {}) => {
   console.log("retrieving notifications...");
-  return await apiRequest(client, "notifications");
+  const query = new URLSearchParams(params).toString();
+  return await apiRequest(
+    client,
+    query ? `notifications?${query}` : "notifications",
+  );
 };
-
-export default getNotifications;

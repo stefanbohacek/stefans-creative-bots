@@ -18,5 +18,6 @@
   "interval": "EVERY_DAY_MORNING",
   "date_created": "2024-11-17T00:00:00Z",
   "fediverse_handle": "@happynameday@stefanbohacek.online",
+  "access_token_env": "HAPPY_NAME_DAY_BOT_MASTODON_TOKEN",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/789/095/019/799/original/3b6745d447683b1c.png"
 }

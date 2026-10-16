@@ -22,6 +22,7 @@
   "interval": "EVERY_FOUR_HOURS",
   "date_created": "2024-11-17T00:00:00Z",
   "fediverse_handle": "@tropicalreefaquarium@stefanbohacek.online",
+  "access_token_env": "TROPICAL_REEF_AQUARIUM_ACCESS_TOKEN_SECRET",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/862/025/353/829/original/ce6f5b89b9dca7d9.png",
   "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/862/025/353/829/original/5e362fb6f9fa58bb.png"
 }

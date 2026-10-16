@@ -15,6 +15,7 @@
   ],
   "interval": "EVERY_SIX_HOURS",
   "fediverse_handle": "@ChooseYourFighter@stefanbohacek.online",
+  "access_token_env": "CHOOSE_YOUR_FIGHTER_BOT_ACCESS_TOKEN_SECRET",
   "date_created": "2026-06-13T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/743/283/183/790/476/original/571bfa5b452ced3b.png",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/743/283/183/790/476/original/571bfa5b452ced3b.png"

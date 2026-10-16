@@ -15,6 +15,7 @@
   ],
   "interval": "EVERY_SIX_HOURS",
   "fediverse_handle": "@AuroraForecast@stefanbohacek.online",
+  "access_token_env": "AURORAFORECAST_BOT_MASTODON_ACCESS_TOKEN",
   "date_created": "2026-05-25T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/116/635/422/943/455/097/original/601d143bedf3c5b0.png",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/635/422/943/455/097/original/e05ca51ec7fce4bb.png",

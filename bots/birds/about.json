@@ -20,5 +20,6 @@
   "date_created": "2025-09-01T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/115/129/311/052/705/120/original/015cca9fcaf2ef0f.png",
   "fediverse_handle": "@birds@stefanbohacek.online",
+  "access_token_env": "BIRDS_BOT_MASTODON_ACCESS_TOKEN",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/115/129/311/052/705/120/original/015cca9fcaf2ef0f.png"
 }

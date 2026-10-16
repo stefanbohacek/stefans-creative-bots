@@ -12,5 +12,6 @@
   "date_created": "2025-05-01T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/114/432/786/299/096/961/original/b13aac4168ff212e.png",
   "fediverse_handle": "@no@stefanbohacek.online",
+  "access_token_env": "NO_BOT_MASTODON_ACCESS_TOKEN",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/114/432/786/299/096/961/original/b13aac4168ff212e.png"
 }

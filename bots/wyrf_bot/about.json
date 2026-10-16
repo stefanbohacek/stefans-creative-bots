@@ -20,5 +20,6 @@
   "interval": "EVERY_SIX_HOURS",
   "date_created": "2024-11-17T00:00:00Z",
   "fediverse_handle": "@wouldyouratherfight@stefanbohacek.online",
+  "access_token_env": "WYRF_BOT_ACCESS_TOKEN_SECRET",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/865/798/264/846/original/3c3721e0986b4db7.png"
 }

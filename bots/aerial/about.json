@@ -13,5 +13,6 @@
   "date_created": "2024-11-17T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/715/654/893/865/original/d377657b6933928f.png",
   "fediverse_handle": "@aerial@stefanbohacek.online",
+  "access_token_env": "AERIAL_VIEWS_BOT_MASTODON_ACCESS_TOKEN",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/715/654/893/865/original/d377657b6933928f.png"
 }

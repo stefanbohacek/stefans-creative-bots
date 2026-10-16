@@ -18,5 +18,6 @@
   "date_created": "2025-10-24T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/115/430/552/159/857/384/original/0cc530c1e3248b4d.png",
   "fediverse_handle": "@statues@stefanbohacek.online",
+  "access_token_env": "STATUES_BOT_MASTODON_ACCESS_TOKEN",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/115/430/552/159/857/384/original/0cc530c1e3248b4d.png"
 }

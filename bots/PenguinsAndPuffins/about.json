@@ -18,6 +18,7 @@
   ],
   "interval": "EVERY_FOUR_HOURS",
   "fediverse_handle": "@PenguinsAndPuffins@stefanbohacek.online",
+  "access_token_env": "PENGUINS_AND_PUFFINS_BOT_ACCESS_TOKEN",
   "date_created": "2026-07-02T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/851/232/575/922/215/original/2ddc7090203f87f8.png",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/116/851/232/575/922/215/original/2ddc7090203f87f8.png"

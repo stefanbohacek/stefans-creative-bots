@@ -19,6 +19,7 @@
   "date_created": "2024-12-26T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/716/527/624/749/295/original/7f6bee63285c0e6c.png",
   "fediverse_handle": "@mteverest@stefanbohacek.online",
+  "access_token_env": "MTEVEREST_BOT_ACCESS_TOKEN_SECRET",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/716/527/624/749/295/original/b512ca38308a9397.png",
   "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/716/527/624/749/295/original/7f6bee63285c0e6c.png"
 }

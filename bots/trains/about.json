@@ -20,5 +20,6 @@
   "interval": "EVERY_FOUR_HOURS",
   "date_created": "2024-11-13T00:00:00Z",
   "fediverse_handle": "@trains@stefanbohacek.online",
+  "access_token_env": "TRAINS_BOT_ACCESS_TOKEN_SECRET",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/477/312/019/886/132/original/340702986b3606a5.png"
 }

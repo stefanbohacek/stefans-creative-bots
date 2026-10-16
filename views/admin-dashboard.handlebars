@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1" />
+  <meta name="robots"
+    content="noindex, nofollow" />
+  <title>Mentions dashboard</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 1rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #8884;
+      padding: 0.5rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .mention {
+      white-space: pre-wrap;
+      min-width: 20rem;
+    }
+
+    textarea {
+      width: 100%;
+      min-width: 16rem;
+      min-height: 4rem;
+      box-sizing: border-box;
+    }
+
+    .actions button {
+      margin: 0 0.25rem 0.25rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Mentions</h1>
+  <p>
+    <button id="clear-responded"
+      {{#unless
+      responded_count}}disabled{{/unless}}>Clear mentions with a response ({{responded_count}})</button>
+  </p>
+  {{#if mentions.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>Bot</th>
+        <th>From</th>
+        <th>Mention</th>
+        <th>Reply</th>
+        <th>Actions</th>
+        <th>Responded</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each mentions}}
+      <tr data-id="{{this.id}}">
+        <td>{{this.bot_name}}</td>
+        <td>{{this.from_display_name}}<br /><small>{{this.from_acct}}</small></td>
+        <td class="mention">{{#if this.spoiler_text}}[CW: {{this.spoiler_text}}]
+          {{/if}}{{this.content}}<br /><small>{{this.mentioned_at}}{{#if this.status_url}} · <a
+              href="{{this.status_url}}"
+              target="_blank"
+              rel="noopener noreferrer">open</a>{{/if}}</small></td>
+        <td><textarea aria-label="Reply text"></textarea></td>
+        <td class="actions">
+          <button data-action="reply">Reply</button>
+          <button data-action="boost">Boost</button>
+          <button data-action="like">Like</button>
+          <button data-action="clear">Clear</button>
+        </td>
+        <td>{{#if this.responded}}Yes{{else}}No{{/if}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+  <p>No mentions.</p>
+  {{/if}}
+
+  <script>
+    const confirmations = {
+      reply: "Send this reply?",
+      boost: "Boost this post?",
+      like: "Like this post?",
+      clear: "Clear this mention?"
+    };
+
+    const confirmClear = (message) => {
+      const answer = prompt(`${message}\n\nType CLEAR to confirm.`);
+      const confirmed = answer !== null && answer.trim().toLowerCase() === "clear";
+
+      if (answer !== null && !confirmed) {
+        alert("Text didn't match, nothing was cleared.");
+      }
+
+      return confirmed;
+    };
+
+    const send = async (url, body) => {
+      const resp = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body || {})
+      });
+      const data = await resp.json();
+
+      if (resp.ok) {
+        location.reload();
+      } else {
+        alert(`Failed: ${data.error}`);
+      }
+    };
+
+    document.querySelectorAll("tr[data-id] button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const row = button.closest("tr");
+        const action = button.dataset.action;
+        const text = row.querySelector("textarea").value;
+
+        if (action === "reply" && !text.trim()) {
+          alert("Reply text is empty.");
+        } else if (action === "clear" ? confirmClear(confirmations[action]) : confirm(confirmations[action])) {
+          send(`/admin/dashboard/${action}`, { id: row.dataset.id, text });
+        }
+      });
+    });
+
+    document.getElementById("clear-responded").addEventListener("click", async () => {
+      if (confirmClear("Clear all mentions with a response?")) {
+        const resp = await fetch("/admin/dashboard/clear-responded", { method: "POST" });
+        const data = await resp.json();
+
+        if (resp.ok) {
+          if (data.failed) {
+            alert(`Cleared ${data.cleared}, failed ${data.failed}.`);
+          }
+          location.reload();
+        } else {
+          alert(`Failed: ${data.error}`);
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -22,5 +22,6 @@
   "interval": "EVERY_FOUR_HOURS",
   "date_created": "2024-11-17T00:00:00Z",
   "fediverse_handle": "@africanwildlife@stefanbohacek.online",
+  "access_token_env": "AFRICAN_WILDLIFE_ACCESS_TOKEN_SECRET",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/716/779/310/184/original/44dd8092e20e7683.png"
 }

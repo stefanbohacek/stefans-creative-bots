@@ -19,5 +19,6 @@
   "date_created": "2025-11-07T00:00:00Z",
   "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/115/509/927/238/774/506/original/ca3cf72692f665df.png",
   "fediverse_handle": "@floppies@stefanbohacek.online",
+  "access_token_env": "FLOPPIES_BOT_MASTODON_ACCESS_TOKEN",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/115/509/927/238/774/506/original/ca3cf72692f665df.png"
 }

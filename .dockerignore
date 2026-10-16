@@ -2,3 +2,5 @@
 .env
 node_modules
 temp
+public/scripts/bundle.js
+public/styles/main.css

@@ -27,8 +27,10 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
 RUN npm install --no-audit --no-fund --ignore-engines
 COPY ./requirements.txt /usr/src/app/
 RUN pip3 install --break-system-packages -r requirements.txt
-COPY ./ /usr/src/app
+COPY ./rollup.config.js /usr/src/app/
+COPY ./src /usr/src/app/src
 RUN npm run build && npm prune --omit=dev && npm cache clean --force
+COPY ./ /usr/src/app
 ENV NODE_ENV production
 ENV PORT 3000
 EXPOSE 3000

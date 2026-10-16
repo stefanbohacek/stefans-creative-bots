@@ -70,7 +70,7 @@ router.get("/dashboard", async (req, res) => {
         ...row,
         bot_name: bot ? bot.about.name : row.bot_handle,
         status_url: row.status_url?.startsWith("https://")
-          ? row.status_url
+          ? `https://stefanbohacek.online/authorize_interaction?uri=${encodeURIComponent(row.status_url)}`
           : null,
         mentioned_at: new Date(row.mentioned_at).toLocaleString("en-US"),
       };

@@ -54,14 +54,26 @@
 <body>
   <h1>Mentions</h1>
   <p>
-    <button id="clear-responded"
+    <button class="clear-bulk"
+      data-scope="responded"
       {{#unless
       responded_count}}disabled{{/unless}}>Clear mentions with a response ({{responded_count}})</button>
+    <button class="clear-bulk"
+      data-scope="all"
+      {{#unless
+      mentions.length}}disabled{{/unless}}>Clear all mentions ({{mentions.length}})</button>
+    <button class="clear-bulk"
+      id="clear-selected"
+      data-scope="selected"
+      disabled>Clear selected mentions (0)</button>
   </p>
   {{#if mentions.length}}
   <table>
     <thead>
       <tr>
+        <th><input type="checkbox"
+            id="select-all"
+            aria-label="Select all mentions" /></th>
         <th>Bot</th>
         <th>From</th>
         <th>Mention</th>
@@ -73,6 +85,9 @@
     <tbody>
       {{#each mentions}}
       <tr data-id="{{this.id}}">
+        <td><input type="checkbox"
+            class="select-mention"
+            aria-label="Select mention" /></td>
         <td>{{this.bot_name}}</td>
         <td>{{this.from_display_name}}<br /><small>{{this.from_acct}}</small></td>
         <td class="mention">{{#if this.spoiler_text}}[CW: {{this.spoiler_text}}]
@@ -144,20 +159,59 @@
       });
     });
 
-    document.getElementById("clear-responded").addEventListener("click", async () => {
-      if (confirmClear("Clear all mentions with a response?")) {
-        const resp = await fetch("/admin/dashboard/clear-responded", { method: "POST" });
-        const data = await resp.json();
+    const bulkConfirmations = {
+      responded: "Clear all mentions with a response?",
+      all: "Clear ALL mentions, including ones you haven't responded to?",
+      selected: "Clear the selected mentions?"
+    };
 
-        if (resp.ok) {
-          if (data.failed) {
-            alert(`Cleared ${data.cleared}, failed ${data.failed}.`);
+    const getSelectedIds = () =>
+      [...document.querySelectorAll(".select-mention:checked")].map((checkbox) => checkbox.closest("tr").dataset.id);
+
+    const updateSelectedButton = () => {
+      const count = getSelectedIds().length;
+      const button = document.getElementById("clear-selected");
+      button.textContent = `Clear selected mentions (${count})`;
+      button.disabled = count === 0;
+    };
+
+    document.querySelectorAll(".select-mention").forEach((checkbox) => {
+      checkbox.addEventListener("change", updateSelectedButton);
+    });
+
+    const selectAll = document.getElementById("select-all");
+
+    if (selectAll) {
+      selectAll.addEventListener("change", () => {
+        document.querySelectorAll(".select-mention").forEach((checkbox) => {
+          checkbox.checked = selectAll.checked;
+        });
+        updateSelectedButton();
+      });
+    }
+
+    document.querySelectorAll(".clear-bulk").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const scope = button.dataset.scope;
+
+        if (confirmClear(bulkConfirmations[scope])) {
+          const resp = await fetch(`/admin/dashboard/clear-${scope}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ids: scope === "selected" ? getSelectedIds() : [] })
+          });
+          const data = await resp.json();
+
+          if (resp.ok) {
+            if (data.failed) {
+              alert(`Cleared ${data.cleared}, failed ${data.failed}.`);
+            }
+            location.reload();
+          } else {
+            alert(`Failed: ${data.error}`);
           }
-          location.reload();
-        } else {
-          alert(`Failed: ${data.error}`);
         }
-      }
+      });
     });
   </script>
 </body>

@@ -87,37 +87,58 @@ router.get("/dashboard", async (req, res) => {
   }
 });
 
-router.post("/dashboard/clear-responded", async (req, res) => {
-  try {
-    const [rows] = await db.execute(
-      /* sql */ `SELECT * FROM mentions WHERE responded = 1`,
-    );
-    let cleared = 0;
-    let failed = 0;
+router.post(
+  "/dashboard/clear-:scope(responded|all|selected)",
+  async (req, res) => {
+    try {
+      let rows = [];
 
-    for (const mention of rows) {
-      const bot = findMentionedBot(req, mention);
-      const client = bot ? getMastodonClient(bot) : null;
+      if (req.params.scope === "selected") {
+        const ids = Array.isArray(req.body.ids)
+          ? req.body.ids.map(Number).filter(Number.isInteger)
+          : [];
 
-      if (client) {
-        try {
-          await clearMention(client, mention);
-          cleared++;
-        } catch (err) {
-          console.log(`clear responded error: ${err.message}`);
-          failed++;
+        if (ids.length) {
+          [rows] = await db.query(
+            /* sql */ `SELECT * FROM mentions WHERE id IN (?)`,
+            [ids],
+          );
         }
       } else {
-        failed++;
+        [rows] = await db.execute(
+          req.params.scope === "responded"
+            ? /* sql */ `SELECT * FROM mentions WHERE responded = 1`
+            : /* sql */ `SELECT * FROM mentions`,
+        );
       }
-    }
 
-    res.json({ cleared, failed });
-  } catch (err) {
-    console.log("clear responded error:", err);
-    res.status(500).json({ error: err.message });
-  }
-});
+      let cleared = 0;
+      let failed = 0;
+
+      for (const mention of rows) {
+        const bot = findMentionedBot(req, mention);
+        const client = bot ? getMastodonClient(bot) : null;
+
+        if (client) {
+          try {
+            await clearMention(client, mention);
+            cleared++;
+          } catch (err) {
+            console.log(`clear ${req.params.scope} error: ${err.message}`);
+            failed++;
+          }
+        } else {
+          failed++;
+        }
+      }
+
+      res.json({ cleared, failed });
+    } catch (err) {
+      console.log(`clear ${req.params.scope} error:`, err);
+      res.status(500).json({ error: err.message });
+    }
+  },
+);
 
 router.post("/dashboard/:action", async (req, res) => {
   const { action } = req.params;

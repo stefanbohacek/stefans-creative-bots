@@ -8,20 +8,28 @@
   ],
   "thumbnail": "https://botwiki.org/wp-content/uploads/2022/12/book-dedications-bot-1669959321.png",
   "about_url": "https://botwiki.org/bot/book-dedications-bot/",
-  "source_url": "https://pipedream.com/new?h=tch_OL4f7g",
   "links": [
     {
       "title": "Follow on Mastodon",
       "url": "https://stefanbohacek.online/@dedication_bot"
     },
     {
-      "title": "Follow on Twitter",
+      "title": "Follow on Bluesky",
+      "url": "https://bsky.app/profile/dedication-bot.stefanbohacek.online.ap.brid.gy"
+    },
+    {
+      "title": "Twitter archive",
       "url": "https://twitter.com/dedication_bot"
+    },
+    {
+      "title": "View gallery",
+      "url": "https://dedicationbot.com"
     }
   ],
   "interval": "EVERY_FOUR_HOURS",
   "date_created": "2024-11-17T00:00:00Z",
   "fediverse_handle": "@dedication_bot@stefanbohacek.online",
+  "access_token_env": "BOOK_DEDICATION_BOT_MASTODON_ACCESS_TOKEN",
   "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/113/495/849/866/199/320/original/4f5084d408b1c280.jpg",
   "header_image": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/headers/113/495/849/866/199/320/original/468c5c6cc4088e8f.jpeg"
 }

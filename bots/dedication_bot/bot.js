@@ -25,7 +25,7 @@ const botScript = async () => {
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
 
-  const response = await fetch(process.env.DATA_URL_CSV);
+  const response = await fetch(process.env.BOOK_DEDICATION_BOT_DATA_URL_CSV);
   const rows = parse(await response.text(), { columns: true });
   console.log(`${botID}: found ${rows.length} item(s)`);
 
@@ -88,13 +88,13 @@ const botScript = async () => {
   });
 
   await sheets.request({
-    url: `${process.env.DATA_URL_API}!E${dedication.row}:E${dedication.row}?valueInputOption=USER_ENTERED`,
+    url: `${process.env.BOOK_DEDICATION_BOT_DATA_URL_API}!E${dedication.row}:E${dedication.row}?valueInputOption=USER_ENTERED`,
     method: "PUT",
     data: { values: [[dedication.posted + 1]] },
   });
 
   await sheets.request({
-    url: `${process.env.DATA_URL_API}!G${dedication.row}:G${dedication.row}?valueInputOption=USER_ENTERED`,
+    url: `${process.env.BOOK_DEDICATION_BOT_DATA_URL_API}!G${dedication.row}:G${dedication.row}?valueInputOption=USER_ENTERED`,
     method: "PUT",
     data: { values: [[""]] },
   });

@@ -59,10 +59,6 @@
       {{#unless
       responded_count}}disabled{{/unless}}>Clear mentions with a response ({{responded_count}})</button>
     <button class="clear-bulk"
-      data-scope="all"
-      {{#unless
-      mentions.length}}disabled{{/unless}}>Clear all mentions ({{mentions.length}})</button>
-    <button class="clear-bulk"
       id="clear-selected"
       data-scope="selected"
       disabled>Clear selected mentions (0)</button>
@@ -161,7 +157,6 @@
 
     const bulkConfirmations = {
       responded: "Clear all mentions with a response?",
-      all: "Clear ALL mentions, including ones you haven't responded to?",
       selected: "Clear the selected mentions?"
     };
 

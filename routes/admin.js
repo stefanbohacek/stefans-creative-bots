@@ -87,7 +87,7 @@ router.get("/dashboard", async (req, res) => {
 });
 
 router.post(
-  "/dashboard/clear-:scope(responded|all|selected)",
+  "/dashboard/clear-:scope(responded|selected)",
   async (req, res) => {
     try {
       let rows = [];
@@ -105,9 +105,7 @@ router.post(
         }
       } else {
         [rows] = await db.execute(
-          req.params.scope === "responded"
-            ? /* sql */ `SELECT * FROM mentions WHERE responded = 1 AND cleared = 0`
-            : /* sql */ `SELECT * FROM mentions WHERE cleared = 0`,
+          /* sql */ `SELECT * FROM mentions WHERE responded = 1 AND cleared = 0`,
         );
       }
 

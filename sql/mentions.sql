@@ -11,5 +11,6 @@ CREATE TABLE IF NOT EXISTS mentions (
   status_url VARCHAR(512),
   mentioned_at DATETIME NOT NULL,
   responded TINYINT(1) NOT NULL DEFAULT 0,
+  cleared TINYINT(1) NOT NULL DEFAULT 0,
   UNIQUE KEY bot_notification (bot_handle, notification_id)
 );

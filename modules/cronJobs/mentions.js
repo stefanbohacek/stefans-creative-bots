@@ -51,6 +51,15 @@ export default (bots) => {
         }
       }
 
+      try {
+        const [result] = await db.execute(
+          /* sql */ `DELETE FROM mentions WHERE cleared = 1 AND mentioned_at < NOW() - INTERVAL 90 DAY`,
+        );
+        console.log(`mentions: pruned ${result.affectedRows} cleared mention(s)`);
+      } catch (err) {
+        console.log(`mentions prune error: ${err.message}`);
+      }
+
       console.log("mentions: done");
     },
     null,

@@ -25,15 +25,11 @@ const findMentionedBot = (req, mention) =>
     .find((bot) => bot.about.fediverse_handle === mention.bot_handle);
 
 const clearMention = async (client, mention) => {
-  try {
-    await client.dismissNotification({ id: mention.notification_id });
-  } catch (err) {
-    if (err.status !== 404) {
-      throw err;
-    }
-  }
+  await client.dismissNotification({ id: mention.notification_id });
 
-  await db.execute(/* sql */ `DELETE FROM mentions WHERE id = ?`, [mention.id]);
+  await db.execute(/* sql */ `UPDATE mentions SET cleared = 1 WHERE id = ?`, [
+    mention.id,
+  ]);
 };
 
 router.use((req, res, next) => {
@@ -58,7 +54,7 @@ router.get("/dashboard", async (req, res) => {
   try {
     const bots = req.app.get("bots");
     const [rows] = await db.execute(
-      /* sql */ `SELECT * FROM mentions ORDER BY mentioned_at DESC`,
+      /* sql */ `SELECT * FROM mentions WHERE cleared = 0 ORDER BY mentioned_at DESC`,
     );
 
     const mentions = rows.map((row) => {
@@ -72,7 +68,10 @@ router.get("/dashboard", async (req, res) => {
         status_url: row.status_url?.startsWith("https://")
           ? `https://stefanbohacek.online/authorize_interaction?uri=${encodeURIComponent(row.status_url)}`
           : null,
-        mentioned_at: new Date(row.mentioned_at).toLocaleString("en-US"),
+        mentioned_at: new Date(row.mentioned_at).toLocaleString("en-US", {
+          timeZone: "America/New_York",
+          timeZoneName: "short",
+        }),
       };
     });
 
@@ -100,15 +99,15 @@ router.post(
 
         if (ids.length) {
           [rows] = await db.query(
-            /* sql */ `SELECT * FROM mentions WHERE id IN (?)`,
+            /* sql */ `SELECT * FROM mentions WHERE id IN (?) AND cleared = 0`,
             [ids],
           );
         }
       } else {
         [rows] = await db.execute(
           req.params.scope === "responded"
-            ? /* sql */ `SELECT * FROM mentions WHERE responded = 1`
-            : /* sql */ `SELECT * FROM mentions`,
+            ? /* sql */ `SELECT * FROM mentions WHERE responded = 1 AND cleared = 0`
+            : /* sql */ `SELECT * FROM mentions WHERE cleared = 0`,
         );
       }
 

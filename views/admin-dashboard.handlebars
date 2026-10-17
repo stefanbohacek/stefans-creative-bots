@@ -8,28 +8,18 @@
   <meta name="robots"
     content="noindex, nofollow" />
   <title>Stefan's Creative Bots | Admin Dashboard</title>
+  <script>
+    document.documentElement.setAttribute("data-bs-theme", window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  </script>
+  <link rel="stylesheet"
+    href="/styles/main.css" />
   <style>
-    :root {
-      color-scheme: light dark;
-    }
-
     body {
-      font-family: system-ui, sans-serif;
-      margin: 1rem;
+      padding: 1rem;
     }
 
     table {
-      border-collapse: collapse;
-      width: 100%;
       max-width: 100rem;
-    }
-
-    th,
-    td {
-      border: 1px solid #8884;
-      padding: 0.5rem;
-      text-align: left;
-      vertical-align: top;
     }
 
     .mention {
@@ -45,6 +35,15 @@
       box-sizing: border-box;
     }
 
+    tbody tr {
+      cursor: pointer;
+    }
+
+    .btn:disabled {
+      cursor: not-allowed;
+      pointer-events: auto;
+    }
+
     .actions button {
       margin: 0 0.25rem 0.25rem 0;
     }
@@ -52,22 +51,23 @@
 </head>
 
 <body>
-  <h1>Mentions</h1>
+  <h1 class="mb-4">Mentions and quotes</h1>
   <p>
-    <button class="clear-bulk"
+    <button class="clear-bulk btn btn-outline-danger"
       data-scope="responded"
       {{#unless
       responded_count}}disabled{{/unless}}>Clear mentions with a response ({{responded_count}})</button>
-    <button class="clear-bulk"
+    <button class="clear-bulk btn btn-outline-danger"
       id="clear-selected"
       data-scope="selected"
       disabled>Clear selected mentions (0)</button>
   </p>
   {{#if mentions.length}}
-  <table>
+  <table class="table table-striped table-hover">
     <thead>
       <tr>
         <th><input type="checkbox"
+            class="form-check-input"
             id="select-all"
             aria-label="Select all mentions" /></th>
         <th>Bot</th>
@@ -78,11 +78,11 @@
         <th>Responded</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="align-top">
       {{#each mentions}}
       <tr data-id="{{this.id}}">
         <td><input type="checkbox"
-            class="select-mention"
+            class="select-mention form-check-input"
             aria-label="Select mention" /></td>
         <td>{{this.bot_name}}</td>
         <td>{{this.from_display_name}}<br /><small>{{this.from_acct}}</small></td>
@@ -91,12 +91,17 @@
               href="{{this.status_url}}"
               target="_blank"
               rel="noopener noreferrer">open</a>{{/if}}</small></td>
-        <td><textarea aria-label="Reply text"></textarea></td>
+        <td><textarea class="form-control form-control-sm"
+            aria-label="Reply text"></textarea></td>
         <td class="actions">
-          <button data-action="reply">Reply</button>
-          <button data-action="boost">Boost</button>
-          <button data-action="like">Like</button>
-          <button data-action="clear">Clear</button>
+          <button class="btn btn-sm btn-primary"
+            data-action="reply">Reply</button>
+          <button class="btn btn-sm btn-outline-secondary"
+            data-action="boost">Boost</button>
+          <button class="btn btn-sm btn-outline-secondary"
+            data-action="like">Like</button>
+          <button class="btn btn-sm btn-outline-danger"
+            data-action="clear">Clear</button>
         </td>
         <td>{{#if this.responded}}Yes{{else}}No{{/if}}</td>
       </tr>
@@ -172,6 +177,16 @@
 
     document.querySelectorAll(".select-mention").forEach((checkbox) => {
       checkbox.addEventListener("change", updateSelectedButton);
+
+      checkbox.closest("tr").addEventListener("click", (ev) => {
+        const clickedControl = ev.target.closest("a, button, textarea, input");
+        const hasSelectedText = window.getSelection().toString() !== "";
+
+        if (!clickedControl && !hasSelectedText) {
+          checkbox.checked = !checkbox.checked;
+          updateSelectedButton();
+        }
+      });
     });
 
     const selectAll = document.getElementById("select-all");

@@ -139,15 +139,15 @@
       });
       const data = await resp.json();
 
-      if (resp.ok) {
-        location.reload();
-      } else {
+      if (!resp.ok) {
         alert(`Failed: ${data.error}`);
       }
+
+      return resp.ok;
     };
 
     document.querySelectorAll("tr[data-id] button").forEach((button) => {
-      button.addEventListener("click", () => {
+      button.addEventListener("click", async () => {
         const row = button.closest("tr");
         const action = button.dataset.action;
         const text = row.querySelector("textarea").value;
@@ -155,7 +155,15 @@
         if (action === "reply" && !text.trim()) {
           alert("Reply text is empty.");
         } else if (action === "clear" ? confirmClear(confirmations[action]) : confirm(confirmations[action])) {
-          send(`/admin/dashboard/${action}`, { id: row.dataset.id, text });
+          const succeeded = await send(`/admin/dashboard/${action}`, { id: row.dataset.id, text });
+
+          if (succeeded && action !== "clear" && confirm("Clear this mention now?")) {
+            await send("/admin/dashboard/clear", { id: row.dataset.id });
+          }
+
+          if (succeeded) {
+            location.reload();
+          }
         }
       });
     });

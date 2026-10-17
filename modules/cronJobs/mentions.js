@@ -19,10 +19,11 @@ export default (bots) => {
 
         if (client) {
           try {
-            const notifications = await client.getNotifications({
-              "types[]": "mention",
-              limit: 40,
-            });
+            const notifications = await client.getNotifications([
+              ["types[]", "mention"],
+              ["types[]", "quote"],
+              ["limit", 40],
+            ]);
 
             for (const notification of notifications) {
               const status = notification.status;

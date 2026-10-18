@@ -1,84 +1,92 @@
-import { CronJob } from "cron";
 import { convert } from "html-to-text";
-import cronSchedules from "../cronSchedules.js";
 import db from "../db.js";
 import getMastodonClient from "../getMastodonClient.js";
+import sleep from "../sleep.js";
 
-export default (bots) => {
-  const mentionsCronJob = new CronJob(
-    cronSchedules.EVERY_TEN_MINUTES,
-    async () => {
-      console.log("mentions: starting...");
+const DELAY_BETWEEN_BOTS_MS = 1000;
+const DELAY_BETWEEN_CYCLES_MS = 5000;
 
-      const oldestAllowed = Date.now() - 90 * 24 * 60 * 60 * 1000;
+const syncMentions = async (bots) => {
+  console.log("mentions: starting...");
 
-      for (const bot of bots) {
-        const client = bot.about.fediverse_handle
-          ? getMastodonClient(bot)
-          : null;
+  const oldestAllowed = Date.now() - 90 * 24 * 60 * 60 * 1000;
 
-        if (client) {
-          try {
-            const notifications = await client.getNotifications([
-              ["types[]", "mention"],
-              ["types[]", "quote"],
-              ["limit", 40],
-            ]);
+  for (const bot of bots) {
+    const client = bot.about.fediverse_handle ? getMastodonClient(bot) : null;
 
-            for (const notification of notifications) {
-              const status = notification.status;
+    if (client) {
+      try {
+        const notifications = await client.getNotifications([
+          ["types[]", "mention"],
+          ["types[]", "quote"],
+          ["limit", 40],
+        ]);
 
-              if (
-                status &&
-                new Date(notification.created_at).getTime() > oldestAllowed
-              ) {
-                await db.execute(
-                  /* sql */ `INSERT IGNORE INTO mentions
-                    (bot_handle, notification_id, status_id, from_acct, from_display_name, content, spoiler_text, visibility, status_url, mentioned_at)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-                  [
-                    bot.about.fediverse_handle,
-                    notification.id,
-                    status.id,
-                    notification.account.acct,
-                    notification.account.display_name,
-                    convert(status.content, { wordwrap: false }),
-                    status.spoiler_text,
-                    status.visibility,
-                    status.url,
-                    new Date(notification.created_at),
-                  ],
-                );
-              }
-            }
+        for (const notification of notifications) {
+          const status = notification.status;
 
-            if (notifications.length) {
-              await client.markNotificationsRead(notifications[0].id);
-            }
-          } catch (err) {
-            console.log(
-              `mentions error: ${bot.about.fediverse_handle}: ${err.message}`,
+          if (
+            status &&
+            new Date(notification.created_at).getTime() > oldestAllowed
+          ) {
+            await db.execute(
+              /* sql */ `INSERT IGNORE INTO mentions
+                (bot_handle, notification_id, status_id, from_acct, from_display_name, content, spoiler_text, visibility, status_url, mentioned_at)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+              [
+                bot.about.fediverse_handle,
+                notification.id,
+                status.id,
+                notification.account.acct,
+                notification.account.display_name,
+                convert(status.content, { wordwrap: false }),
+                status.spoiler_text,
+                status.visibility,
+                status.url,
+                new Date(notification.created_at),
+              ],
             );
           }
         }
-      }
 
-      try {
-        const [result] = await db.execute(
-          /* sql */ `DELETE FROM mentions WHERE cleared = 1 AND mentioned_at < NOW() - INTERVAL 90 DAY`,
-        );
-        console.log(
-          `mentions: pruned ${result.affectedRows} cleared mention(s)`,
-        );
+        if (notifications.length) {
+          await client.markNotificationsRead(notifications[0].id);
+        }
       } catch (err) {
-        console.log(`mentions prune error: ${err.message}`);
+        console.log(
+          `mentions error: ${bot.about.fediverse_handle}: ${err.message}`,
+        );
       }
 
-      console.log("mentions: done");
-    },
-    null,
-    true,
-  );
+      await sleep(DELAY_BETWEEN_BOTS_MS);
+    }
+  }
 
-  return mentionsCronJob;
+  try {
+    const [result] = await db.execute(
+      /* sql */ `DELETE FROM mentions WHERE cleared = 1 AND mentioned_at < NOW() - INTERVAL 90 DAY`,
+    );
+
+    if (result.affectedRows) {
+      console.log(`mentions: pruned ${result.affectedRows} cleared mention(s)`);
+    }
+  } catch (err) {
+    console.log(`mentions prune error: ${err.message}`);
+  }
+
+  console.log("mentions: done");
+};
+
+export default (bots) => {
+  (async () => {
+    while (true) {
+      try {
+        await syncMentions(bots);
+      } catch (err) {
+        console.log(`mentions cycle error: ${err.message}`);
+      }
+
+      await sleep(DELAY_BETWEEN_CYCLES_MS);
+    }
+  })();
 };

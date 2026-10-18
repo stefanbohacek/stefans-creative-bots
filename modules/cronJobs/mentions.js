@@ -2,6 +2,7 @@ import { convert } from "html-to-text";
 import db from "../db.js";
 import getMastodonClient from "../getMastodonClient.js";
 import sleep from "../sleep.js";
+import mentionsStatus from "../mentionsStatus.js";
 
 const DELAY_BETWEEN_BOTS_MS = 1000;
 const DELAY_BETWEEN_CYCLES_MS = 5000;
@@ -73,6 +74,8 @@ const syncMentions = async (bots) => {
   } catch (err) {
     console.log(`mentions prune error: ${err.message}`);
   }
+
+  mentionsStatus.lastCheckedAt = Date.now();
 
   console.log("mentions: done");
 };

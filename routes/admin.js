@@ -1,6 +1,7 @@
 import express from "express";
 import db from "../modules/db.js";
 import getMastodonClient from "../modules/getMastodonClient.js";
+import mentionsStatus from "../modules/mentionsStatus.js";
 
 const router = express.Router();
 const COOKIE_NAME = "admin_access";
@@ -71,6 +72,9 @@ router.get("/dashboard", async (req, res) => {
       layout: false,
       mentions,
       responded_count: mentions.filter((mention) => mention.responded).length,
+      last_checked_at: mentionsStatus.lastCheckedAt
+        ? new Date(mentionsStatus.lastCheckedAt).toISOString()
+        : null,
     });
   } catch (err) {
     console.log("admin dashboard error:", err);

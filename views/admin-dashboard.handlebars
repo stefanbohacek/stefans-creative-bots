@@ -53,6 +53,11 @@
 <body>
   <h1 class="mb-4">Mentions and quotes</h1>
   <p>
+    Last checked:
+    {{#if last_checked_at}}<time id="last-checked"
+      datetime="{{last_checked_at}}"></time>{{else}}waiting for the first check to finish{{/if}}
+  </p>
+  <p>
     <button class="clear-bulk btn btn-outline-danger"
       data-scope="responded"
       {{#unless
@@ -113,6 +118,33 @@
   {{/if}}
 
   <script>
+    const lastChecked = document.getElementById("last-checked");
+
+    if (lastChecked) {
+      const relativeTime = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+      const checkedAt = new Date(lastChecked.getAttribute("datetime")).getTime();
+
+      lastChecked.title = new Date(checkedAt).toLocaleString("en-US", {
+        timeZone: "America/New_York",
+        timeZoneName: "short"
+      });
+
+      const updateLastChecked = () => {
+        const seconds = Math.max(0, Math.round((Date.now() - checkedAt) / 1000));
+
+        if (seconds < 60) {
+          lastChecked.textContent = relativeTime.format(-seconds, "second");
+        } else if (seconds < 3600) {
+          lastChecked.textContent = relativeTime.format(-Math.floor(seconds / 60), "minute");
+        } else {
+          lastChecked.textContent = relativeTime.format(-Math.floor(seconds / 3600), "hour");
+        }
+      };
+
+      updateLastChecked();
+      setInterval(updateLastChecked, 1000);
+    }
+
     const confirmations = {
       reply: "Send this reply?",
       boost: "Boost this post?",

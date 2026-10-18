@@ -85,7 +85,9 @@
     </thead>
     <tbody class="align-top">
       {{#each mentions}}
-      <tr data-id="{{this.id}}">
+      <tr data-id="{{this.id}}"
+        data-bot="{{this.bot_name}}"
+        data-from="{{this.from_acct}}">
         <td><input type="checkbox"
             class="select-mention form-check-input"
             aria-label="Select mention" /></td>
@@ -147,8 +149,8 @@
 
     const confirmations = {
       reply: "Send this reply?",
-      boost: "Boost this post?",
-      like: "Like this post?",
+      boost: "Boost this post from {from} to {bot}?",
+      like: "Like this post from {from} to {bot}?",
       clear: "Clear this mention?"
     };
 
@@ -183,10 +185,13 @@
         const row = button.closest("tr");
         const action = button.dataset.action;
         const text = row.querySelector("textarea").value;
+        const message = confirmations[action]
+          .replace("{from}", () => row.dataset.from)
+          .replace("{bot}", () => row.dataset.bot);
 
         if (action === "reply" && !text.trim()) {
           alert("Reply text is empty.");
-        } else if (action === "clear" ? confirmClear(confirmations[action]) : confirm(confirmations[action])) {
+        } else if (action === "clear" ? confirmClear(message) : confirm(message)) {
           const succeeded = await send(`/admin/dashboard/${action}`, { id: row.dataset.id, text });
 
           if (succeeded && action !== "clear" && confirm("Clear this mention now?")) {

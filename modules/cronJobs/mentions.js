@@ -28,7 +28,10 @@ export default (bots) => {
             for (const notification of notifications) {
               const status = notification.status;
 
-              if (new Date(notification.created_at).getTime() > oldestAllowed) {
+              if (
+                status &&
+                new Date(notification.created_at).getTime() > oldestAllowed
+              ) {
                 await db.execute(
                   /* sql */ `INSERT IGNORE INTO mentions
                     (bot_handle, notification_id, status_id, from_acct, from_display_name, content, spoiler_text, visibility, status_url, mentioned_at)

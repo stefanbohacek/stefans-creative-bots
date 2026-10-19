@@ -24,7 +24,7 @@
     {{#if last_checked_at}}<time id="last-checked"
       datetime="{{last_checked_at}}"></time>{{else}}waiting for the first check to finish{{/if}}
   </p>
-  <p>
+  <p class="d-flex flex-wrap gap-2">
     <button class="clear-bulk btn btn-outline-danger"
       data-scope="responded"
       {{#unless

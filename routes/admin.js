@@ -135,7 +135,7 @@ router.post("/dashboard/:action", async (req, res) => {
       res.status(404).json({ error: "Bot token not found" });
     } else if (action === "reply" && !text?.trim()) {
       res.status(400).json({ error: "Reply text is required" });
-    } else if (["reply", "boost", "like"].includes(action)) {
+    } else if (["reply", "boost", "like", "boost-like"].includes(action)) {
       if (action === "reply") {
         await client.post({
           status: `@${mention.from_acct} ${text.trim()}`,
@@ -146,6 +146,9 @@ router.post("/dashboard/:action", async (req, res) => {
       } else if (action === "boost") {
         await client.boost(mention.status_id);
       } else if (action === "like") {
+        await client.favourite(mention.status_id);
+      } else if (action === "boost-like") {
+        await client.boost(mention.status_id);
         await client.favourite(mention.status_id);
       }
 

@@ -35,7 +35,7 @@ th:nth-child(6) {
   width: 6rem;
 }
 
-.mention {
+td {
   overflow-wrap: anywhere;
 }
 

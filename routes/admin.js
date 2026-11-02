@@ -71,6 +71,9 @@ router.get("/dashboard", async (req, res) => {
     res.render("admin-dashboard", {
       layout: false,
       mentions,
+      mentions_summary: mentions.length
+        ? `${mentions.length} ${mentions.length === 1 ? "reply" : "replies"}.`
+        : "No mentions.",
       responded_count: mentions.filter((mention) => mention.responded).length,
       last_checked_at: mentionsStatus.lastCheckedAt
         ? new Date(mentionsStatus.lastCheckedAt).toISOString()

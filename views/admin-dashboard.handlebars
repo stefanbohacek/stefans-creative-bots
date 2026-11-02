@@ -20,7 +20,7 @@
 <body>
   <h1 class="mb-4">Mentions and quotes</h1>
   <p>
-    Last checked:
+    {{mentions_summary}} Last checked:
     {{#if last_checked_at}}<time id="last-checked"
       datetime="{{last_checked_at}}"></time>{{else}}waiting for the first check to finish{{/if}}
   </p>
@@ -104,8 +104,6 @@
       {{/each}}
     </tbody>
   </table>
-  {{else}}
-  <p>No mentions.</p>
   {{/if}}
 
   <script src="/scripts/admin-dashboard.js"></script>

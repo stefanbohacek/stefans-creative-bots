@@ -112,7 +112,9 @@ router.post("/dashboard/clear-:scope(responded|selected)", async (req, res) => {
 
 router.post("/dashboard/:action", async (req, res) => {
   const { action } = req.params;
-  const { id, text } = req.body;
+  const { id, text, like, boost } = req.body;
+  let step = null;
+  let completedSteps = 0;
 
   try {
     const [rows] = await db.execute(
@@ -133,37 +135,60 @@ router.post("/dashboard/:action", async (req, res) => {
       res.json({ ok: true });
     } else if (!client) {
       res.status(404).json({ error: "Bot token not found" });
-    } else if (action === "reply" && !text?.trim()) {
-      res.status(400).json({ error: "Reply text is required" });
-    } else if (["reply", "boost", "like", "boost-like"].includes(action)) {
-      if (action === "reply") {
-        await client.post({
-          status: `@${mention.from_acct} ${text.trim()}`,
-          in_reply_to_id: mention.status_id,
-          visibility: mention.visibility,
-          spoiler_text: mention.spoiler_text,
-        });
-      } else if (action === "boost") {
-        await client.boost(mention.status_id);
-      } else if (action === "like") {
-        await client.favourite(mention.status_id);
-      } else if (action === "boost-like") {
-        await client.boost(mention.status_id);
-        await client.favourite(mention.status_id);
+    } else if (action === "respond") {
+      const replyText = text?.trim();
+      const shouldBoost = boost && !mention.reblogged;
+      const shouldLike = like && !mention.favourited;
+
+      if (!replyText && !shouldBoost && !shouldLike) {
+        res.status(400).json({ error: "Nothing to send" });
+      } else {
+        if (replyText) {
+          step = "Reply";
+          await client.post({
+            status: `@${mention.from_acct} ${replyText}`,
+            in_reply_to_id: mention.status_id,
+            visibility: mention.visibility,
+            spoiler_text: mention.spoiler_text,
+          });
+          await db.execute(
+            /* sql */ `UPDATE mentions SET responded = 1 WHERE id = ?`,
+            [mention.id],
+          );
+          completedSteps++;
+        }
+
+        if (shouldBoost) {
+          step = "Boost";
+          await client.boost(mention.status_id);
+          await db.execute(
+            /* sql */ `UPDATE mentions SET responded = 1, reblogged = 1 WHERE id = ?`,
+            [mention.id],
+          );
+          completedSteps++;
+        }
+
+        if (shouldLike) {
+          step = "Like";
+          await client.favourite(mention.status_id);
+          await db.execute(
+            /* sql */ `UPDATE mentions SET responded = 1, favourited = 1 WHERE id = ?`,
+            [mention.id],
+          );
+          completedSteps++;
+        }
+
+        res.json({ ok: true });
       }
-
-      await db.execute(
-        /* sql */ `UPDATE mentions SET responded = 1 WHERE id = ?`,
-        [mention.id],
-      );
-
-      res.json({ ok: true });
     } else {
       res.status(400).json({ error: "Unknown action" });
     }
   } catch (err) {
     console.log(`admin ${action} error:`, err);
-    res.status(500).json({ error: err.message });
+    res.status(500).json({
+      error: step ? `${step} failed: ${err.message}` : err.message,
+      partial: completedSteps > 0,
+    });
   }
 });
 

@@ -69,12 +69,6 @@
               rel="noopener noreferrer">{{this.mentioned_at}}</a>{{else}}{{this.mentioned_at}}{{/if}} ·
             {{this.visibility}}</small>
           <div class="actions mt-2">
-            <button class="btn btn-sm btn-outline-secondary"
-              data-action="boost">Boost</button>
-            <button class="btn btn-sm btn-outline-secondary"
-              data-action="like">Like</button>
-            <button class="btn btn-sm btn-outline-secondary"
-              data-action="boost-like">Boost + Like</button>
             <button class="btn btn-sm btn-outline-danger"
               data-action="clear">Clear</button>
           </div>
@@ -82,8 +76,28 @@
         <td data-label="Reply"><textarea class="form-control form-control-sm"
             rows="6"
             aria-label="Reply text"></textarea>
-          <button class="btn btn-sm btn-primary mt-2"
-            data-action="reply">Reply</button>
+          <div class="d-flex flex-wrap align-items-center gap-3 mt-2">
+            <div class="form-check m-0">
+              <input class="form-check-input respond-like"
+                type="checkbox"
+                id="like-{{this.id}}"
+                checked
+                {{#if this.favourited}}disabled{{/if}} />
+              <label class="form-check-label"
+                for="like-{{this.id}}">Like</label>
+            </div>
+            <div class="form-check m-0">
+              <input class="form-check-input respond-boost"
+                type="checkbox"
+                id="boost-{{this.id}}"
+                {{#if this.reblogged}}checked
+                disabled{{/if}} />
+              <label class="form-check-label"
+                for="boost-{{this.id}}">Boost</label>
+            </div>
+            <button class="btn btn-sm btn-primary respond"
+              disabled>Confirm</button>
+          </div>
         </td>
         <td data-label="Responded">{{#if this.responded}}Yes{{else}}No{{/if}}</td>
       </tr>

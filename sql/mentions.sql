@@ -12,5 +12,7 @@ CREATE TABLE IF NOT EXISTS mentions (
   mentioned_at DATETIME NOT NULL,
   responded TINYINT(1) NOT NULL DEFAULT 0,
   cleared TINYINT(1) NOT NULL DEFAULT 0,
+  favourited TINYINT(1) NOT NULL DEFAULT 0,
+  reblogged TINYINT(1) NOT NULL DEFAULT 0,
   UNIQUE KEY bot_notification (bot_handle, notification_id)
 );

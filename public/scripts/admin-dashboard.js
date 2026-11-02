@@ -54,13 +54,6 @@ document.querySelectorAll(".mention-text").forEach((element) => {
   element.replaceChildren(fragment);
 });
 
-const confirmations = {
-  reply: "Send this reply?",
-  boost: "Boost this post from {from} to {bot}?",
-  like: "Like this post from {from} to {bot}?",
-  "boost-like": "Boost and like this post from {from} to {bot}?",
-  clear: "Clear this mention?",
-};
 
 const confirmClear = (message) => {
   const answer = prompt(`${message}\n\nType CLEAR to confirm.`);
@@ -83,37 +76,93 @@ const send = async (url, body) => {
 
   if (!resp.ok) {
     alert(`Failed: ${data.error}`);
+
+    if (data.partial) {
+      location.reload();
+    }
   }
 
   return resp.ok;
 };
 
-document.querySelectorAll("tr[data-id] button").forEach((button) => {
-  button.addEventListener("click", async () => {
-    const row = button.closest("tr");
-    const action = button.dataset.action;
-    const text = row.querySelector("textarea").value;
-    const message = confirmations[action]
-      .replace("{from}", () => row.dataset.from)
-      .replace("{bot}", () => row.dataset.bot);
+const getResponseParts = (row) => {
+  const parts = [];
+  const like = row.querySelector(".respond-like");
+  const boost = row.querySelector(".respond-boost");
 
-    if (action === "reply" && !text.trim()) {
-      alert("Reply text is empty.");
-    } else if (action === "clear" ? confirmClear(message) : confirm(message)) {
-      const succeeded = await send(`/admin/dashboard/${action}`, {
+  if (row.querySelector("textarea").value.trim()) {
+    parts.push("Reply");
+  }
+
+  if (boost.checked && !boost.disabled) {
+    parts.push("Boost");
+  }
+
+  if (like.checked && !like.disabled) {
+    parts.push("Like");
+  }
+
+  return parts;
+};
+
+const formatParts = (parts) => {
+  const words = parts.map((part, index) =>
+    index === 0 ? part : part.toLowerCase(),
+  );
+
+  if (words.length === 3) {
+    words[0] = `${words[0]},`;
+    words[1] = `${words[1]},`;
+    words[2] = `and ${words[2]}`;
+  } else if (words.length === 2) {
+    words[1] = `and ${words[1]}`;
+  }
+
+  return words.join(" ");
+};
+
+const updateRespondButton = (row) => {
+  const parts = getResponseParts(row);
+  const button = row.querySelector(".respond");
+
+  button.textContent = parts.length ? formatParts(parts) : "Confirm";
+  button.disabled = parts.length === 0;
+};
+
+document.querySelectorAll("tr[data-id]").forEach((row) => {
+  row.querySelectorAll("textarea, .respond-like, .respond-boost").forEach(
+    (control) => {
+      control.addEventListener("input", () => updateRespondButton(row));
+    },
+  );
+
+  updateRespondButton(row);
+
+  row.querySelector(".respond").addEventListener("click", async () => {
+    const parts = getResponseParts(row);
+    const message = `${formatParts(parts)} for the post from ${row.dataset.from} to ${row.dataset.bot}?`;
+
+    if (confirm(message)) {
+      const succeeded = await send("/admin/dashboard/respond", {
         id: row.dataset.id,
-        text,
+        text: row.querySelector("textarea").value,
+        like: row.querySelector(".respond-like").checked,
+        boost: row.querySelector(".respond-boost").checked,
       });
 
-      if (
-        succeeded &&
-        action !== "clear" &&
-        confirm("Clear this mention now?")
-      ) {
+      if (succeeded && confirm("Clear this mention now?")) {
         await send("/admin/dashboard/clear", { id: row.dataset.id });
       }
 
       if (succeeded) {
+        location.reload();
+      }
+    }
+  });
+
+  row.querySelector("[data-action='clear']").addEventListener("click", async () => {
+    if (confirmClear("Clear this mention?")) {
+      if (await send("/admin/dashboard/clear", { id: row.dataset.id })) {
         location.reload();
       }
     }

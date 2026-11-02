@@ -32,8 +32,8 @@ const syncMentions = async (bots) => {
           ) {
             await db.execute(
               /* sql */ `INSERT IGNORE INTO mentions
-                (bot_handle, notification_id, status_id, from_acct, from_display_name, content, spoiler_text, visibility, status_url, mentioned_at)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                (bot_handle, notification_id, status_id, from_acct, from_display_name, content, spoiler_text, visibility, status_url, mentioned_at, favourited, reblogged)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
               [
                 bot.about.fediverse_handle,
                 notification.id,
@@ -45,6 +45,8 @@ const syncMentions = async (bots) => {
                 status.visibility,
                 status.url,
                 new Date(notification.created_at),
+                status.favourited ? 1 : 0,
+                status.reblogged ? 1 : 0,
               ],
             );
           }

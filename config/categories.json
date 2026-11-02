@@ -110,7 +110,18 @@
     "bots": [
       "@wikipediatopedits",
       "@wikipediaOTD",
-      "@userboxes"
+      "@userboxes",
+      "@birds",
+      "@computers",
+      "@currencies",
+      "@dinosaurs",
+      "@discontinued",
+      "@libraries",
+      "@lighthouses",
+      "@NationalParks",
+      "@parks",
+      "@statues",
+      "@trainstations"
     ]
   },
   {

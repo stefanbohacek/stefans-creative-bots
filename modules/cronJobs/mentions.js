@@ -5,7 +5,7 @@ import sleep from "../sleep.js";
 import mentionsStatus from "../mentionsStatus.js";
 
 const DELAY_BETWEEN_BOTS_MS = 1000;
-const DELAY_BETWEEN_CYCLES_MS = 5000;
+const DELAY_BETWEEN_CYCLES_MS = 5 * 60 * 1000;
 
 const syncMentions = async (bots) => {
   console.log("mentions: starting...");

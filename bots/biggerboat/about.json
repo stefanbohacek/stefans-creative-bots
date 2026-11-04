@@ -13,5 +13,8 @@
   ],
   "interval": "EVERY_SIX_HOURS",
   "fediverse_handle": "@BiggerBoat@stefanbohacek.online",
-  "access_token_env": "BIGGER_BOAT_BOT_ACCESS_TOKEN_SECRET"
+  "access_token_env": "BIGGER_BOAT_BOT_ACCESS_TOKEN_SECRET",
+  "date_created": "2026-11-04T00:00:00.000Z",
+  "thumbnail": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/117/560/206/813/104/518/original/86cc886be7ac7a1c.png",
+  "avatar": "https://sbonline.nyc3.digitaloceanspaces.com/accounts/avatars/117/560/206/813/104/518/original/86cc886be7ac7a1c.png"
 }

@@ -78,9 +78,13 @@ app.use(express.static("public"));
 app.use(express.static("views"));
 
 app.use(async (err, req, res, next) => {
-  console.error("express error:", err);
-  await notifyAdmin("Express error", `<pre>${err?.stack || err}</pre>`);
-  res.status(500).send("Internal server error");
+  if (err.status >= 400 && err.status < 500) {
+    res.status(err.status).send(err.message);
+  } else {
+    console.error("express error:", err);
+    await notifyAdmin("Express error", `<pre>${err?.stack || err}</pre>`);
+    res.status(500).send("Internal server error");
+  }
 });
 
 export default app;

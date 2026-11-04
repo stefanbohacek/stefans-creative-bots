@@ -60,10 +60,10 @@ const botScript = async () => {
     fontFileName,
   });
 
-  const status = `We're going to need ${article} ${adjective} ${noun}.`;
+  // const status = `We're going to need ${article} ${adjective} ${noun}.`;
 
   await mastodon.postImage({
-    status,
+    status: "",
     image,
     alt_text: `A scene from the 1975 American thriller "Jaws" showing police chief Martin Brody, a white man in his forties wearing glasses, with a stunned expression on his face, and a cigarette in his mouth, standing on the deck of a boat, captioned "${topText}" at the top and "${bottomText}" at the bottom.`,
   });

@@ -1,0 +1,17 @@
+{
+  "active": true,
+  "name": "BiggerBoat",
+  "description": "We're gonna need a bigger boat.",
+  "tags": [
+    "meme"
+  ],
+  "links": [
+    {
+      "title": "Follow on Mastodon",
+      "url": "https://stefanbohacek.online/@BiggerBoat"
+    }
+  ],
+  "interval": "EVERY_SIX_HOURS",
+  "fediverse_handle": "@BiggerBoat@stefanbohacek.online",
+  "access_token_env": "BIGGER_BOAT_BOT_ACCESS_TOKEN_SECRET"
+}

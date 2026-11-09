@@ -58,6 +58,10 @@ router.get("/dashboard", async (req, res) => {
       return {
         ...row,
         bot_name: bot ? bot.about.name : row.bot_handle,
+        bridgy_respond_url:
+          row.from_acct === "bsky.brid.gy@bsky.brid.gy"
+            ? row.content?.match(/respond\s+\[(https?:\/\/[^\s\[\]]+)\]/)?.[1]
+            : null,
         is_bridgy: row.from_acct === "bsky.brid.gy@bsky.brid.gy",
         status_url: row.status_url?.startsWith("https://")
           ? `https://stefanbohacek.online/authorize_interaction?uri=${encodeURIComponent(row.status_url)}`

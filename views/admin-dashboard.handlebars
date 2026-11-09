@@ -73,8 +73,8 @@
               data-action="clear">Clear</button>
           </div>
         </td>
-        <td data-label="Reply">{{#if this.is_bridgy}}{{#if this.status_url}}<a class="btn btn-sm btn-primary respond-bridgy"
-              href="{{this.status_url}}"
+        <td data-label="Reply">{{#if this.is_bridgy}}{{#if this.bridgy_respond_url}}<a class="btn btn-sm btn-primary respond-bridgy"
+              href="{{this.bridgy_respond_url}}"
               target="_blank"
               rel="noopener noreferrer">Respond on Bridgy Fed</a>{{/if}}{{else}}<textarea class="form-control form-control-sm"
             rows="6"

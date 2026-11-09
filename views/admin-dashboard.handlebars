@@ -73,7 +73,10 @@
               data-action="clear">Clear</button>
           </div>
         </td>
-        <td data-label="Reply"><textarea class="form-control form-control-sm"
+        <td data-label="Reply">{{#if this.is_bridgy}}{{#if this.status_url}}<a class="btn btn-sm btn-primary respond-bridgy"
+              href="{{this.status_url}}"
+              target="_blank"
+              rel="noopener noreferrer">Respond on Bridgy Fed</a>{{/if}}{{else}}<textarea class="form-control form-control-sm"
             rows="6"
             aria-label="Reply text"></textarea>
           <div class="d-flex flex-wrap align-items-center gap-3 mt-2">
@@ -97,7 +100,7 @@
             </div>
             <button class="btn btn-sm btn-primary respond"
               disabled>Confirm</button>
-          </div>
+          </div>{{/if}}
         </td>
         <td data-label="Responded">{{#if this.responded}}Yes{{else}}No{{/if}}</td>
       </tr>

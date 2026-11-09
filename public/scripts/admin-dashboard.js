@@ -130,35 +130,49 @@ const updateRespondButton = (row) => {
 };
 
 document.querySelectorAll("tr[data-id]").forEach((row) => {
-  row.querySelectorAll("textarea, .respond-like, .respond-boost").forEach(
-    (control) => {
-      control.addEventListener("input", () => updateRespondButton(row));
-    },
-  );
+  if (row.querySelector(".respond")) {
+    row.querySelectorAll("textarea, .respond-like, .respond-boost").forEach(
+      (control) => {
+        control.addEventListener("input", () => updateRespondButton(row));
+      },
+    );
 
-  updateRespondButton(row);
+    updateRespondButton(row);
 
-  row.querySelector(".respond").addEventListener("click", async () => {
-    const parts = getResponseParts(row);
-    const message = `${formatParts(parts)} for the post from ${row.dataset.from} to ${row.dataset.bot}?`;
+    row.querySelector(".respond").addEventListener("click", async () => {
+      const parts = getResponseParts(row);
+      const message = `${formatParts(parts)} for the post from ${row.dataset.from} to ${row.dataset.bot}?`;
 
-    if (confirm(message)) {
-      const succeeded = await send("/admin/dashboard/respond", {
-        id: row.dataset.id,
-        text: row.querySelector("textarea").value,
-        like: row.querySelector(".respond-like").checked,
-        boost: row.querySelector(".respond-boost").checked,
-      });
+      if (confirm(message)) {
+        const succeeded = await send("/admin/dashboard/respond", {
+          id: row.dataset.id,
+          text: row.querySelector("textarea").value,
+          like: row.querySelector(".respond-like").checked,
+          boost: row.querySelector(".respond-boost").checked,
+        });
 
-      if (succeeded && confirm("Clear this mention now?")) {
-        await send("/admin/dashboard/clear", { id: row.dataset.id });
+        if (succeeded && confirm("Clear this mention?")) {
+          await send("/admin/dashboard/clear", { id: row.dataset.id });
+        }
+
+        if (succeeded) {
+          location.reload();
+        }
       }
+    });
+  }
 
-      if (succeeded) {
-        location.reload();
+  const bridgyLink = row.querySelector(".respond-bridgy");
+
+  if (bridgyLink) {
+    bridgyLink.addEventListener("click", async () => {
+      if (confirm("Clear this mention?")) {
+        if (await send("/admin/dashboard/clear", { id: row.dataset.id })) {
+          location.reload();
+        }
       }
-    }
-  });
+    });
+  }
 
   row.querySelector("[data-action='clear']").addEventListener("click", async () => {
     if (confirmClear("Clear this mention?")) {

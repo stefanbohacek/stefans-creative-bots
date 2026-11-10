@@ -124,6 +124,22 @@ const botScript = async () => {
                   voyager1description += ` and will reach 1 light-day from Earth in ${days.toLocaleString()} ${pluralize("day", days)}, ${hours} ${pluralize("hour", hours)}`;
                 }
               }
+            } else {
+              const msElapsed = Date.now() - VOYAGER_1_LIGHT_DAY_DATE.getTime();
+              const hoursElapsed = msElapsed / (60 * 60 * 1000);
+
+              if (hoursElapsed < 1) {
+                voyager1description += ` and reached 1 light-day from Earth less than an hour ago`;
+              } else {
+                const days = Math.floor(hoursElapsed / 24);
+                const hours = Math.floor(hoursElapsed % 24);
+
+                if (days === 0) {
+                  voyager1description += ` and reached 1 light-day from Earth ${hours} ${pluralize("hour", hours)} ago`;
+                } else {
+                  voyager1description += ` and reached 1 light-day from Earth ${days.toLocaleString()} ${pluralize("day", days)}, ${hours} ${pluralize("hour", hours)} ago`;
+                }
+              }
             }
           }
 
